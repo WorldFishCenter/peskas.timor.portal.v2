@@ -4,11 +4,20 @@ import type { ApexOptions } from 'apexcharts'
 
 export default function Nutrients() {
   const { t } = useI18n()
-  const series = [{ name: 'RDI', data: [40, 55, 57, 52, 47, 60] }]
+  const series = [{ name: t('nutrients.rdi'), data: [40, 55, 57, 52, 47, 60] }]
   const options: ApexOptions = {
     chart: { type: 'bar', toolbar: { show: false } },
     dataLabels: { enabled: false },
-    xaxis: { categories: ['Protein', 'Iron', 'Zinc', 'Vit A', 'Omega-3', 'Vit D'] },
+    xaxis: {
+      categories: [
+        t('nutrients.categories.protein'),
+        t('nutrients.categories.iron'),
+        t('nutrients.categories.zinc'),
+        t('nutrients.categories.vita'),
+        t('nutrients.categories.omega3'),
+        t('nutrients.categories.vitd'),
+      ],
+    },
   }
 
   return (
