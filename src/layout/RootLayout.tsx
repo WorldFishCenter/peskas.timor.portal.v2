@@ -1,5 +1,5 @@
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
-import { useEffect, useMemo, useState, type MouseEvent } from 'react'
+import { useEffect, useState } from 'react'
 import { useI18n } from '../i18n'
 
 type ThemeMode = 'light' | 'dark'
@@ -25,11 +25,6 @@ export default function RootLayout() {
   }, [theme])
 
   const { t, lang, setLang } = useI18n()
-
-  const onNavToggle = (e: MouseEvent) => {
-    // purely to prevent navigation for toggles
-    e.preventDefault()
-  }
 
   return (
     <div className="page">
