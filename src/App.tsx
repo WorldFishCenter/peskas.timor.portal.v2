@@ -2,7 +2,7 @@ import './App.css'
 import { useEffect, useMemo, useState, type MouseEvent } from 'react'
 
 type TabKey = 'home' | 'users' | 'analytics' | 'settings'
-type ThemeMode = 'light' | 'dark' | 'auto'
+type ThemeMode = 'light' | 'dark'
 
 function App() {
   const initialTab: TabKey = useMemo(() => {
@@ -13,13 +13,13 @@ function App() {
 
   const [activeTab, setActiveTab] = useState<TabKey>(initialTab)
   const [theme, setTheme] = useState<ThemeMode>(() => {
-    if (typeof window === 'undefined') return 'auto'
+    if (typeof window === 'undefined') return 'light'
     const stored = window.localStorage.getItem('tablerTheme') as ThemeMode | null
-    return stored ?? 'auto'
+    return stored ?? 'light'
   })
 
   const applyTheme = (mode: ThemeMode) => {
-    const isDark = mode === 'dark' || (mode === 'auto' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    const isDark = mode === 'dark'
     document.documentElement.setAttribute('data-bs-theme', isDark ? 'dark' : 'light')
   }
 
@@ -29,15 +29,7 @@ function App() {
     window.localStorage.setItem('tablerTheme', theme)
   }, [theme])
 
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-    const media = window.matchMedia('(prefers-color-scheme: dark)')
-    const onChange = () => {
-      if (theme === 'auto') applyTheme('auto')
-    }
-    media.addEventListener?.('change', onChange)
-    return () => media.removeEventListener?.('change', onChange)
-  }, [theme])
+  // No auto mode; do not listen to system preference changes
 
   useEffect(() => {
     // Reflect tab in URL hash for shareable state without a router
@@ -82,16 +74,17 @@ function App() {
             </a>
           </h1>
           <div className="navbar-nav flex-row order-md-last">
-            <div className="nav-item dropdown d-none d-md-flex me-3">
-              <a href="#" className="nav-link px-0" data-bs-toggle="dropdown" aria-label="Toggle theme">
+            <div className="nav-item me-3">
+              <a
+                href="#"
+                className="nav-link px-0"
+                aria-label="Toggle theme"
+                title="Toggle theme"
+                onClick={(e) => { e.preventDefault(); setTheme((t) => (t === 'light' ? 'dark' : 'light')) }}
+              >
                 <svg xmlns="http://www.w3.org/2000/svg" className="icon hide-theme-dark" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3v2" /><path d="M12 19v2" /><path d="M3 12h2" /><path d="M19 12h2" /><path d="M5.6 5.6l1.4 1.4" /><path d="M17 17l1.4 1.4" /><path d="M5.6 18.4l1.4 -1.4" /><path d="M17 7l1.4 -1.4" /><path d="M12 8a4 4 0 1 0 0 8a4 4 0 0 0 0 -8" /></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" className="icon hide-theme-light" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
               </a>
-              <div className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                <a href="#" className={`dropdown-item ${theme === 'light' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); setTheme('light') }}>Light</a>
-                <a href="#" className={`dropdown-item ${theme === 'dark' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); setTheme('dark') }}>Dark</a>
-                <a href="#" className={`dropdown-item ${theme === 'auto' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); setTheme('auto') }}>Auto</a>
-              </div>
             </div>
             <div className="nav-item dropdown">
               <a href="#" className="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
