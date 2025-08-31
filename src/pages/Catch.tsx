@@ -5,14 +5,15 @@ import type { ApexOptions } from 'apexcharts'
 
 export default function Catch() {
   const { t } = useI18n()
-  const municipalities = ['All municipalities', 'Dili', 'Baucau', 'Bobonaro']
-  const [mun, setMun] = useState<string>(municipalities[0])
-  const series = [{ name: 'Catch', data: [10, 12, 9, 14, 11, 15, 13] }]
+  const municipalities = ['all', 'dili', 'baucau', 'bobonaro']
+  const [mun, setMun] = useState<string>('all')
+  const series = [{ name: t('catch.series_name'), data: [10, 12, 9, 14, 11, 15, 13] }]
+  const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul']
   const options: ApexOptions = {
     chart: { type: 'area', toolbar: { show: false } },
     dataLabels: { enabled: false },
     stroke: { curve: 'smooth' },
-    xaxis: { categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'] },
+    xaxis: { categories: months.map((m) => t(`common.months_short.${m}`)) },
   }
 
   return (
@@ -28,17 +29,17 @@ export default function Catch() {
               <div className="btn-list">
                 <div className="dropdown">
                   <a href="#" className="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    {mun}
+                    {t(`common.municipalities.${mun}`)}
                   </a>
                   <div className="dropdown-menu dropdown-menu-end">
-                    {municipalities.map((name) => (
+                    {municipalities.map((key) => (
                       <a
-                        key={name}
+                        key={key}
                         href="#"
-                        className={`dropdown-item${mun === name ? ' active' : ''}`}
-                        onClick={(e) => { e.preventDefault(); setMun(name) }}
+                        className={`dropdown-item${mun === key ? ' active' : ''}`}
+                        onClick={(e) => { e.preventDefault(); setMun(key) }}
                       >
-                        {name}
+                        {t(`common.municipalities.${key}`)}
                       </a>
                     ))}
                   </div>
@@ -65,7 +66,7 @@ export default function Catch() {
                   <div className="card card-sm">
                     <div className="card-body">
                       <div className="d-flex align-items-center">
-                        <div className="subheader">Trips</div>
+                        <div className="subheader">{t('home.trips')}</div>
                         <div className="ms-auto"><div className="h2 mb-0">1,245</div></div>
                       </div>
                       <div className="progress progress-sm"><div className="progress-bar" style={{ width: '64%' }}></div></div>
@@ -76,7 +77,7 @@ export default function Catch() {
                   <div className="card card-sm">
                     <div className="card-body">
                       <div className="d-flex align-items-center">
-                        <div className="subheader">Catch</div>
+                        <div className="subheader">{t('home.catch')}</div>
                         <div className="ms-auto"><div className="h2 mb-0">42t</div></div>
                       </div>
                       <div className="progress progress-sm"><div className="progress-bar bg-green" style={{ width: '52%' }}></div></div>
@@ -90,11 +91,11 @@ export default function Catch() {
                 <div className="card-header"><h3 className="card-title">{t('catch.table', {})}</h3></div>
                 <div className="table-responsive">
                   <table className="table table-vcenter">
-                    <thead><tr><th>Month</th><th>Catch (t)</th><th>Trips</th></tr></thead>
+                    <thead><tr><th>{t('catch.month')}</th><th>{t('catch.catch_t')}</th><th>{t('home.trips')}</th></tr></thead>
                     <tbody>
-                      <tr><td>Jan</td><td>10</td><td>120</td></tr>
-                      <tr><td>Feb</td><td>12</td><td>134</td></tr>
-                      <tr><td>Mar</td><td>9</td><td>101</td></tr>
+                      <tr><td>{t('common.months_short.jan')}</td><td>10</td><td>120</td></tr>
+                      <tr><td>{t('common.months_short.feb')}</td><td>12</td><td>134</td></tr>
+                      <tr><td>{t('common.months_short.mar')}</td><td>9</td><td>101</td></tr>
                     </tbody>
                   </table>
                 </div>

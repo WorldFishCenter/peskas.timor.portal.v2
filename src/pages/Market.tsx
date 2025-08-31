@@ -1,12 +1,14 @@
 import { useI18n } from '../i18n'
 import ReactApexChart from 'react-apexcharts'
+import { useState } from 'react'
 import type { ApexOptions } from 'apexcharts'
 
 export default function Market() {
   const { t } = useI18n()
-
+  const municipalities = ['all', 'dili', 'baucau', 'bobonaro']
+  const [mun, setMun] = useState<string>('all')
   const radar = {
-    series: [{ name: 'Price', data: [80, 50, 30, 40, 100, 20] }],
+    series: [{ name: t('market.series_name'), data: [80, 50, 30, 40, 100, 20] }],
     options: {
       chart: { type: 'radar', toolbar: { show: false } },
       xaxis: { categories: ['A', 'B', 'C', 'D', 'E', 'F'] },
@@ -21,6 +23,27 @@ export default function Market() {
             <div className="col">
               <div className="page-pretitle">{t('header.overview')}</div>
               <h2 className="page-title">{t('nav.market')}</h2>
+            </div>
+            <div className="col-auto ms-auto d-print-none">
+              <div className="btn-list">
+                <div className="dropdown">
+                  <a href="#" className="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    {t(`common.municipalities.${mun}`)}
+                  </a>
+                  <div className="dropdown-menu dropdown-menu-end">
+                    {municipalities.map((key) => (
+                      <a
+                        key={key}
+                        href="#"
+                        className={`dropdown-item${mun === key ? ' active' : ''}`}
+                        onClick={(e) => { e.preventDefault(); setMun(key) }}
+                      >
+                        {t(`common.municipalities.${key}`)}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -42,7 +65,7 @@ export default function Market() {
                   <div className="card card-sm">
                     <div className="card-body">
                       <div className="d-flex align-items-center">
-                        <div className="subheader">Avg price</div>
+                        <div className="subheader">{t('market.avg_price')}</div>
                         <div className="ms-auto"><div className="h2 mb-0">$2.8</div></div>
                       </div>
                       <div className="progress progress-sm"><div className="progress-bar" style={{ width: '67%' }}></div></div>

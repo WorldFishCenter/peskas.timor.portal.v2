@@ -29,6 +29,10 @@ export function useI18n() {
 
 // Dictionaries
 const en = {
+  brand: {
+    title: 'PESKAS Timor-Leste',
+    subtitle: 'Fisheries Dashboard',
+  },
   nav: {
     home: 'Home',
     catch: 'Catch',
@@ -50,6 +54,38 @@ const en = {
     analytics: 'Analytics',
     account: 'Account',
     settings: 'Settings',
+  },
+  footer: {
+    licence: 'Licence',
+    source: 'Source code',
+    last_updated: 'Last updated',
+    copyright: '© {year} WorldFish',
+  },
+  user_menu: {
+    profile: 'Profile',
+    settings: 'Settings',
+    logout: 'Logout',
+  },
+  actions: {
+    toggle_theme: 'Toggle theme',
+    toggle_language: 'Toggle language',
+  },
+  common: {
+    municipalities: {
+      all: 'All municipalities',
+      dili: 'Dili',
+      baucau: 'Baucau',
+      bobonaro: 'Bobonaro',
+    },
+    months_short: {
+      jan: 'Jan',
+      feb: 'Feb',
+      mar: 'Mar',
+      apr: 'Apr',
+      may: 'May',
+      jun: 'Jun',
+      jul: 'Jul',
+    },
   },
   users: {
     search_placeholder: 'Search users',
@@ -89,22 +125,55 @@ const en = {
     confirm_new_password: 'Confirm new password',
     update_password: 'Update password',
   },
-  home: { recent_activity: 'Recent Activity' },
-  catch: { series: 'Catch over time', table: 'Catch summary' },
-  market: { price_per_kg: 'Price per kg' },
+  home: {
+    recent_activity: 'Recent Activity',
+    fishing_map: 'Fishing map',
+    summary_table: 'Summary table',
+    indicator: 'Indicator',
+    value: 'Value',
+    change: 'Change',
+    trips: 'Trips',
+    revenue: 'Revenue',
+    catch: 'Catch',
+    marker: 'Peskas Timor-Leste',
+  },
+  catch: {
+    series: 'Catch over time',
+    table: 'Catch summary',
+    series_name: 'Catch',
+    month: 'Month',
+    catch_t: 'Catch (t)',
+  },
+  revenue: { series_name: 'Revenue' },
+  market: { price_per_kg: 'Price per kg', avg_price: 'Avg price', series_name: 'Price' },
   composition: {
     percent_heading: 'Species composition (%)',
     highlight_heading: 'Highlights',
     description: 'Description',
     description_text: 'Key notes about composition and methodology.'
   },
-  nutrients: { highlight: 'Nutrient highlight' },
+  nutrients: {
+    highlight: 'Nutrient highlight',
+    rdi: 'RDI',
+    categories: {
+      protein: 'Protein',
+      iron: 'Iron',
+      zinc: 'Zinc',
+      vita: 'Vit A',
+      omega3: 'Omega-3',
+      vitd: 'Vit D',
+    },
+  },
   about: { content: 'PESKAS Timor-Leste — data and methods overview.' },
 }
 
 // NOTE: Placeholder Tetum (Tetun) values currently mirror English.
 // Update these with proper translations as needed.
 const tet: typeof en = {
+  brand: {
+    title: 'PESKAS Timor-Leste',
+    subtitle: 'Dashboard Pesca',
+  },
   nav: {
     home: 'Uma',
     catch: 'Kaptura',
@@ -126,6 +195,38 @@ const tet: typeof en = {
     analytics: 'Analytics',
     account: 'Account',
     settings: 'Settings',
+  },
+  footer: {
+    licence: 'Licence',
+    source: 'Código fonte',
+    last_updated: 'Atualizadu ikus',
+    copyright: '© {year} WorldFish',
+  },
+  user_menu: {
+    profile: 'Profile',
+    settings: 'Settings',
+    logout: 'Sai',
+  },
+  actions: {
+    toggle_theme: 'Troka tema',
+    toggle_language: 'Troka lian',
+  },
+  common: {
+    municipalities: {
+      all: 'Municipiu hotu-hotu',
+      dili: 'Dili',
+      baucau: 'Baukau',
+      bobonaro: 'Bobonaru',
+    },
+    months_short: {
+      jan: 'Jan',
+      feb: 'Fev',
+      mar: 'Mar',
+      apr: 'Abr',
+      may: 'Mai',
+      jun: 'Jun',
+      jul: 'Jul',
+    },
   },
   users: {
     search_placeholder: 'Search users',
@@ -165,16 +266,45 @@ const tet: typeof en = {
     confirm_new_password: 'Konfirma senha foun',
     update_password: 'Atualiza senha',
   },
-  home: { recent_activity: 'Atividade Recenti' },
-  catch: { series: 'Kaptura iha tempu', table: 'Resumo kaptura' },
-  market: { price_per_kg: 'Presu ba kg' },
+  home: {
+    recent_activity: 'Atividade Recenti',
+    fishing_map: 'Mapa Peska',
+    summary_table: 'Tabela rezumu',
+    indicator: 'Indicador',
+    value: 'Valor',
+    change: 'Mudansa',
+    trips: 'Liafuan',
+    revenue: 'Renda',
+    catch: 'Kaptura',
+    marker: 'Peskas Timor-Leste',
+  },
+  catch: {
+    series: 'Kaptura iha tempu',
+    table: 'Resumo kaptura',
+    series_name: 'Kaptura',
+    month: 'Fulan',
+    catch_t: 'Kaptura (t)',
+  },
+  revenue: { series_name: 'Renda' },
+  market: { price_per_kg: 'Presu ba kg', avg_price: 'Presu média', series_name: 'Presu' },
   composition: {
     percent_heading: 'Kompozisaun espécie (%)',
     highlight_heading: 'Destaque',
     description: 'Deskrisaun',
     description_text: 'Nota sira kona-ba kompozisaun no metodologia.'
   },
-  nutrients: { highlight: 'Destaque nutriente' },
+  nutrients: {
+    highlight: 'Destaque nutriente',
+    rdi: 'RDI',
+    categories: {
+      protein: 'Proteína',
+      iron: 'Ferru',
+      zinc: 'Zinku',
+      vita: 'Vit A',
+      omega3: 'Omega-3',
+      vitd: 'Vit D',
+    },
+  },
   about: { content: 'PESKAS Timor-Leste — dadus no metodu.' },
 }
 
