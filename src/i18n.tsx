@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useMemo, useState, type ReactNode
 
 export type Lang = 'en' | 'tet'
 
-type Dict = Record<string, any>
+type Dict = Record<string, unknown>
 
 function get(obj: Dict, path: string) {
   return path.split('.').reduce<unknown>((acc, key) => (acc as Dict)?.[key], obj)
@@ -21,6 +21,7 @@ export type I18nContextValue = {
 
 const I18nContext = createContext<I18nContextValue | undefined>(undefined)
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useI18n() {
   const ctx = useContext(I18nContext)
   if (!ctx) throw new Error('useI18n must be used within I18nProvider')

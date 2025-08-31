@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import {
   ColumnDef,
   flexRender,
@@ -14,30 +14,36 @@ interface SummaryRow {
   change: number
 }
 
-const data: SummaryRow[] = [
-  { indicator: 'Trips', value: 1245, change: 4.5 },
-  { indicator: 'Revenue', value: 12300, change: 3.2 },
-  { indicator: 'Catch', value: 42, change: 0.8 },
-]
-
-const columns: ColumnDef<SummaryRow>[] = [
-  {
-    accessorKey: 'indicator',
-    header: () => 'Indicator',
-  },
-  {
-    accessorKey: 'value',
-    header: () => 'Value',
-    cell: (info) => info.getValue<number>().toLocaleString(),
-  },
-  {
-    accessorKey: 'change',
-    header: () => 'Change',
-    cell: (info) => `${info.getValue<number>() > 0 ? '+' : ''}${info.getValue<number>()}%`,
-  },
-]
-
 export default function SummaryTable() {
+  const data = useMemo<SummaryRow[]>(
+    () => [
+      { indicator: 'Trips', value: 1245, change: 4.5 },
+      { indicator: 'Revenue', value: 12300, change: -3.2 },
+      { indicator: 'Catch', value: 42, change: 0 },
+    ],
+    []
+  )
+
+  const columns = useMemo<ColumnDef<SummaryRow>[]>(
+    () => [
+      {
+        accessorKey: 'indicator',
+        header: () => 'Indicator',
+      },
+      {
+        accessorKey: 'value',
+        header: () => 'Value',
+        cell: (info) => info.getValue<number>().toLocaleString(),
+      },
+      {
+        accessorKey: 'change',
+        header: () => 'Change',
+        cell: (info) => `${info.getValue<number>() > 0 ? '+' : ''}${info.getValue<number>()}%`,
+      },
+    ],
+    []
+  )
+
   const [sorting, setSorting] = useState<SortingState>([])
 
   const table = useReactTable({
