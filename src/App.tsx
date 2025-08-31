@@ -1,5 +1,6 @@
 import './App.css'
 import { useEffect, useMemo, useState, type MouseEvent } from 'react'
+import { useI18n } from './i18n'
 
 type TabKey = 'home' | 'users' | 'analytics' | 'settings'
 type ThemeMode = 'light' | 'dark'
@@ -61,6 +62,8 @@ function App() {
     setActiveTab(tab)
   }
 
+  const { t, lang, setLang } = useI18n()
+
   return (
     <div className="page">
       <header className="navbar navbar-expand-md d-print-none">
@@ -84,6 +87,17 @@ function App() {
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="icon hide-theme-dark" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3v2" /><path d="M12 19v2" /><path d="M3 12h2" /><path d="M19 12h2" /><path d="M5.6 5.6l1.4 1.4" /><path d="M17 17l1.4 1.4" /><path d="M5.6 18.4l1.4 -1.4" /><path d="M17 7l1.4 -1.4" /><path d="M12 8a4 4 0 1 0 0 8a4 4 0 0 0 0 -8" /></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" className="icon hide-theme-light" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
+              </a>
+            </div>
+            <div className="nav-item me-3">
+              <a
+                href="#"
+                className="nav-link"
+                aria-label="Toggle language"
+                title="Toggle language"
+                onClick={(e) => { e.preventDefault(); setLang(lang === 'en' ? 'tet' : 'en') }}
+              >
+                {lang === 'en' ? 'EN' : 'TET'}
               </a>
             </div>
             <div className="nav-item dropdown">
@@ -116,7 +130,7 @@ function App() {
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="m0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
                     </span>
-                    <span className="nav-link-title">Home</span>
+                    <span className="nav-link-title">{t('nav.home')}</span>
                   </a>
                 </li>
                 <li className={`nav-item ${activeTab === 'users' ? 'active' : ''}`}>
@@ -124,7 +138,7 @@ function App() {
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="m0 0h24v24H0z" fill="none"/><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
                     </span>
-                    <span className="nav-link-title">Users</span>
+                    <span className="nav-link-title">{t('nav.users')}</span>
                   </a>
                 </li>
                 <li className={`nav-item ${activeTab === 'analytics' ? 'active' : ''}`}>
@@ -132,7 +146,7 @@ function App() {
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="m0 0h24v24H0z" fill="none"/><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /><path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /><path d="M3 6l0 13" /><path d="M12 6l0 13" /><path d="M21 6l0 13" /></svg>
                     </span>
-                    <span className="nav-link-title">Analytics</span>
+                    <span className="nav-link-title">{t('nav.analytics')}</span>
                   </a>
                 </li>
                 <li className={`nav-item ${activeTab === 'settings' ? 'active' : ''}`}>
@@ -140,7 +154,7 @@ function App() {
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="m0 0h24v24H0z" fill="none"/><path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /></svg>
                     </span>
-                    <span className="nav-link-title">Settings</span>
+                    <span className="nav-link-title">{t('nav.settings')}</span>
                   </a>
                 </li>
               </ul>
@@ -154,8 +168,8 @@ function App() {
             <div className="container-xl">
               <div className="row g-2 align-items-center">
                 <div className="col">
-                  <div className="page-pretitle">Overview</div>
-                  <h2 className="page-title">Dashboard</h2>
+                  <div className="page-pretitle">{t('header.overview')}</div>
+                  <h2 className="page-title">{t('header.dashboard')}</h2>
                 </div>
               </div>
             </div>
@@ -254,7 +268,7 @@ function App() {
                 <div className="col-12">
                   <div className="card">
                     <div className="card-header">
-                      <h3 className="card-title">Recent Activity</h3>
+                      <h3 className="card-title">{t('home.recent_activity')}</h3>
                     </div>
                     <div className="card-body">
                       <div className="divide-y">
@@ -300,8 +314,8 @@ function App() {
             <div className="container-xl">
               <div className="row g-2 align-items-center">
                 <div className="col">
-                  <div className="page-pretitle">Directory</div>
-                  <h2 className="page-title">Users</h2>
+                  <div className="page-pretitle">{t('header.directory')}</div>
+                  <h2 className="page-title">{t('header.users')}</h2>
                 </div>
                 <div className="col-auto ms-auto d-print-none">
                   <div className="d-flex">
@@ -310,12 +324,12 @@ function App() {
                         <span className="input-icon-addon">
                           <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
                         </span>
-                        <input type="text" className="form-control" placeholder="Search users" />
+                        <input type="text" className="form-control" placeholder={t('users.search_placeholder')} />
                       </div>
                     </div>
                     <a href="#" className="btn btn-primary">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
-                      New user
+                      {t('users.new_user')}
                     </a>
                   </div>
                 </div>
@@ -329,10 +343,10 @@ function App() {
                   <table className="table table-vcenter">
                     <thead>
                       <tr>
-                        <th>Name</th>
-                        <th>Role</th>
-                        <th>Status</th>
-                        <th>Email</th>
+                        <th>{t('users.table.name')}</th>
+                        <th>{t('users.table.role')}</th>
+                        <th>{t('users.table.status')}</th>
+                        <th>{t('users.table.email')}</th>
                         <th className="w-1"></th>
                       </tr>
                     </thead>
@@ -348,7 +362,7 @@ function App() {
                           </div>
                         </td>
                         <td>Designer</td>
-                        <td><span className="badge bg-green-lt text-green">Active</span></td>
+                        <td><span className="badge bg-green-lt text-green">{t('users.status.active')}</span></td>
                         <td>jane.pearson@example.com</td>
                         <td className="text-end">
                           <a href="#" className="btn btn-ghost-secondary btn-icon" aria-label="Actions">
@@ -367,7 +381,7 @@ function App() {
                           </div>
                         </td>
                         <td>Engineer</td>
-                        <td><span className="badge bg-green-lt text-green">Active</span></td>
+                        <td><span className="badge bg-green-lt text-green">{t('users.status.active')}</span></td>
                         <td>john.doe@example.com</td>
                         <td className="text-end"><a href="#" className="btn btn-ghost-secondary btn-icon" aria-label="Actions"><svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l.01 0" /><path d="M12 12l.01 0" /><path d="M19 12l.01 0" /></svg></a></td>
                       </tr>
@@ -382,7 +396,7 @@ function App() {
                           </div>
                         </td>
                         <td>Analyst</td>
-                        <td><span className="badge bg-yellow-lt text-yellow">Pending</span></td>
+                        <td><span className="badge bg-yellow-lt text-yellow">{t('users.status.pending')}</span></td>
                         <td>alice.summers@example.com</td>
                         <td className="text-end"><a href="#" className="btn btn-ghost-secondary btn-icon" aria-label="Actions"><svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l.01 0" /><path d="M12 12l.01 0" /><path d="M19 12l.01 0" /></svg></a></td>
                       </tr>
@@ -397,7 +411,7 @@ function App() {
                           </div>
                         </td>
                         <td>QA</td>
-                        <td><span className="badge bg-green-lt text-green">Active</span></td>
+                        <td><span className="badge bg-green-lt text-green">{t('users.status.active')}</span></td>
                         <td>brian.taylor@example.com</td>
                         <td className="text-end"><a href="#" className="btn btn-ghost-secondary btn-icon" aria-label="Actions"><svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l.01 0" /><path d="M12 12l.01 0" /><path d="M19 12l.01 0" /></svg></a></td>
                       </tr>
@@ -412,7 +426,7 @@ function App() {
                           </div>
                         </td>
                         <td>PM</td>
-                        <td><span className="badge bg-red-lt text-red">Suspended</span></td>
+                        <td><span className="badge bg-red-lt text-red">{t('users.status.suspended')}</span></td>
                         <td>marta.livingston@example.com</td>
                         <td className="text-end"><a href="#" className="btn btn-ghost-secondary btn-icon" aria-label="Actions"><svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l.01 0" /><path d="M12 12l.01 0" /><path d="M19 12l.01 0" /></svg></a></td>
                       </tr>
@@ -427,7 +441,7 @@ function App() {
                           </div>
                         </td>
                         <td>Support</td>
-                        <td><span className="badge bg-green-lt text-green">Active</span></td>
+                        <td><span className="badge bg-green-lt text-green">{t('users.status.active')}</span></td>
                         <td>robert.smith@example.com</td>
                         <td className="text-end"><a href="#" className="btn btn-ghost-secondary btn-icon" aria-label="Actions"><svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l.01 0" /><path d="M12 12l.01 0" /><path d="M19 12l.01 0" /></svg></a></td>
                       </tr>
@@ -435,17 +449,13 @@ function App() {
                   </table>
                 </div>
                 <div className="card-footer d-flex align-items-center">
-                  <p className="m-0 text-muted">Showing 1 to 6 of 42 users</p>
+                  <p className="m-0 text-muted">{t('users.table.showing', { start: 1, end: 6, total: 42 })}</p>
                   <ul className="pagination m-0 ms-auto">
-                    <li className="page-item disabled">
-                      <a className="page-link" href="#" tabIndex={-1} aria-disabled="true">
-                        Prev
-                      </a>
-                    </li>
+                    <li className="page-item disabled"><a className="page-link" href="#" tabIndex={-1} aria-disabled="true">{t('users.table.prev')}</a></li>
                     <li className="page-item active"><a className="page-link" href="#">1</a></li>
                     <li className="page-item"><a className="page-link" href="#">2</a></li>
                     <li className="page-item"><a className="page-link" href="#">3</a></li>
-                    <li className="page-item"><a className="page-link" href="#">Next</a></li>
+                    <li className="page-item"><a className="page-link" href="#">{t('users.table.next')}</a></li>
                   </ul>
                 </div>
               </div>
@@ -460,13 +470,11 @@ function App() {
             <div className="container-xl">
               <div className="row g-2 align-items-center">
                 <div className="col">
-                  <div className="page-pretitle">Reports</div>
-                  <h2 className="page-title">Analytics</h2>
+                  <div className="page-pretitle">{t('header.reports')}</div>
+                  <h2 className="page-title">{t('header.analytics')}</h2>
                 </div>
                 <div className="col-auto d-print-none">
-                  <a href="#" className="btn btn-outline-primary">
-                    Export CSV
-                  </a>
+                  <a href="#" className="btn btn-outline-primary">{t('analytics.export_csv')}</a>
                 </div>
               </div>
             </div>
@@ -478,7 +486,7 @@ function App() {
                   <div className="card card-sm">
                     <div className="card-body">
                       <div className="d-flex align-items-center">
-                        <div className="subheader">Sales</div>
+                        <div className="subheader">{t('analytics.kpi.sales')}</div>
                         <div className="ms-auto">
                           <div className="h2 mb-0">$12.3k</div>
                         </div>
@@ -493,7 +501,7 @@ function App() {
                   <div className="card card-sm">
                     <div className="card-body">
                       <div className="d-flex align-items-center">
-                        <div className="subheader">New Users</div>
+                        <div className="subheader">{t('analytics.kpi.new_users')}</div>
                         <div className="ms-auto">
                           <div className="h2 mb-0">+842</div>
                         </div>
@@ -508,7 +516,7 @@ function App() {
                   <div className="card card-sm">
                     <div className="card-body">
                       <div className="d-flex align-items-center">
-                        <div className="subheader">Active Sessions</div>
+                        <div className="subheader">{t('analytics.kpi.active_sessions')}</div>
                         <div className="ms-auto">
                           <div className="h2 mb-0">1,245</div>
                         </div>
@@ -523,7 +531,7 @@ function App() {
                   <div className="card card-sm">
                     <div className="card-body">
                       <div className="d-flex align-items-center">
-                        <div className="subheader">Conversion</div>
+                        <div className="subheader">{t('analytics.kpi.conversion')}</div>
                         <div className="ms-auto">
                           <div className="h2 mb-0">4.2%</div>
                         </div>
@@ -540,22 +548,22 @@ function App() {
                 <div className="col-md-6">
                   <div className="card">
                     <div className="card-header">
-                      <h3 className="card-title">Traffic Sources</h3>
+                      <h3 className="card-title">{t('analytics.traffic_sources')}</h3>
                     </div>
                     <div className="card-body">
-                      <div className="mb-2">Organic</div>
+                      <div className="mb-2">{t('analytics.channels.organic')}</div>
                       <div className="progress progress-sm mb-3">
                         <div className="progress-bar" style={{width: '55%'}}></div>
                       </div>
-                      <div className="mb-2">Direct</div>
+                      <div className="mb-2">{t('analytics.channels.direct')}</div>
                       <div className="progress progress-sm mb-3">
                         <div className="progress-bar bg-green" style={{width: '23%'}}></div>
                       </div>
-                      <div className="mb-2">Referral</div>
+                      <div className="mb-2">{t('analytics.channels.referral')}</div>
                       <div className="progress progress-sm mb-3">
                         <div className="progress-bar bg-azure" style={{width: '12%'}}></div>
                       </div>
-                      <div className="mb-2">Social</div>
+                      <div className="mb-2">{t('analytics.channels.social')}</div>
                       <div className="progress progress-sm">
                         <div className="progress-bar bg-yellow" style={{width: '10%'}}></div>
                       </div>
@@ -565,15 +573,15 @@ function App() {
                 <div className="col-md-6">
                   <div className="card">
                     <div className="card-header">
-                      <h3 className="card-title">Top Pages</h3>
+                      <h3 className="card-title">{t('analytics.top_pages')}</h3>
                     </div>
                     <div className="table-responsive">
                       <table className="table card-table table-vcenter">
                         <thead>
                           <tr>
-                            <th>Page</th>
-                            <th>Views</th>
-                            <th>Bounce</th>
+                            <th>{t('analytics.columns.page')}</th>
+                            <th>{t('analytics.columns.views')}</th>
+                            <th>{t('analytics.columns.bounce')}</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -614,11 +622,11 @@ function App() {
             <div className="container-xl">
               <div className="row g-2 align-items-center">
                 <div className="col">
-                  <div className="page-pretitle">Account</div>
-                  <h2 className="page-title">Settings</h2>
+                  <div className="page-pretitle">{t('header.account')}</div>
+                  <h2 className="page-title">{t('header.settings')}</h2>
                 </div>
                 <div className="col-auto">
-                  <a href="#" className="btn btn-primary">Save changes</a>
+                  <a href="#" className="btn btn-primary">{t('settings.save_changes')}</a>
                 </div>
               </div>
             </div>
@@ -628,18 +636,18 @@ function App() {
               <div className="row row-cards">
                 <div className="col-md-6">
                   <div className="card">
-                    <div className="card-header"><h3 className="card-title">Profile</h3></div>
+                    <div className="card-header"><h3 className="card-title">{t('settings.profile')}</h3></div>
                     <div className="card-body">
                       <div className="mb-3">
-                        <label className="form-label">Full name</label>
+                        <label className="form-label">{t('settings.full_name')}</label>
                         <input type="text" className="form-control" placeholder="Your name" defaultValue="Jane Pearson" />
                       </div>
                       <div className="mb-3">
-                        <label className="form-label">Email</label>
+                        <label className="form-label">{t('settings.email')}</label>
                         <input type="email" className="form-control" placeholder="you@company.com" defaultValue="jane.pearson@example.com" />
                       </div>
                       <div className="mb-3">
-                        <label className="form-label">Company</label>
+                        <label className="form-label">{t('settings.company')}</label>
                         <input type="text" className="form-control" placeholder="Company" defaultValue="WorldFish" />
                       </div>
                     </div>
@@ -647,40 +655,40 @@ function App() {
                 </div>
                 <div className="col-md-6">
                   <div className="card">
-                    <div className="card-header"><h3 className="card-title">Notifications</h3></div>
+                    <div className="card-header"><h3 className="card-title">{t('settings.notifications')}</h3></div>
                     <div className="card-body">
                       <label className="form-check form-switch mb-2">
                         <input className="form-check-input" type="checkbox" defaultChecked />
-                        <span className="form-check-label">Email me when someone assigns me</span>
+                        <span className="form-check-label">{t('settings.notify_assign')}</span>
                       </label>
                       <label className="form-check form-switch mb-2">
                         <input className="form-check-input" type="checkbox" />
-                        <span className="form-check-label">Push notifications for mentions</span>
+                        <span className="form-check-label">{t('settings.notify_mentions')}</span>
                       </label>
                       <label className="form-check form-switch">
                         <input className="form-check-input" type="checkbox" defaultChecked />
-                        <span className="form-check-label">Weekly summary email</span>
+                        <span className="form-check-label">{t('settings.notify_weekly')}</span>
                       </label>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-6">
                   <div className="card">
-                    <div className="card-header"><h3 className="card-title">Change Password</h3></div>
+                    <div className="card-header"><h3 className="card-title">{t('settings.change_password')}</h3></div>
                     <div className="card-body">
                       <div className="mb-3">
-                        <label className="form-label">Current password</label>
-                        <input type="password" className="form-control" placeholder="Current password" />
+                        <label className="form-label">{t('settings.current_password')}</label>
+                        <input type="password" className="form-control" placeholder={t('settings.current_password')} />
                       </div>
                       <div className="mb-3">
-                        <label className="form-label">New password</label>
-                        <input type="password" className="form-control" placeholder="New password" />
+                        <label className="form-label">{t('settings.new_password')}</label>
+                        <input type="password" className="form-control" placeholder={t('settings.new_password')} />
                       </div>
                       <div className="mb-3">
-                        <label className="form-label">Confirm new password</label>
-                        <input type="password" className="form-control" placeholder="Confirm new password" />
+                        <label className="form-label">{t('settings.confirm_new_password')}</label>
+                        <input type="password" className="form-control" placeholder={t('settings.confirm_new_password')} />
                       </div>
-                      <a href="#" className="btn btn-primary">Update password</a>
+                      <a href="#" className="btn btn-primary">{t('settings.update_password')}</a>
                     </div>
                   </div>
                 </div>
