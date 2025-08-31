@@ -29,7 +29,18 @@ export function useI18n() {
 
 // Dictionaries
 const en = {
-  nav: { home: 'Home', users: 'Users', analytics: 'Analytics', settings: 'Settings' },
+  nav: {
+    home: 'Home',
+    catch: 'Catch',
+    revenue: 'Revenue',
+    market: 'Market',
+    composition: 'Composition',
+    nutrients: 'Nutrients',
+    about: 'About',
+    users: 'Users',
+    analytics: 'Analytics',
+    settings: 'Settings',
+  },
   header: {
     overview: 'Overview',
     dashboard: 'Dashboard',
@@ -79,12 +90,33 @@ const en = {
     update_password: 'Update password',
   },
   home: { recent_activity: 'Recent Activity' },
+  catch: { series: 'Catch over time', table: 'Catch summary' },
+  market: { price_per_kg: 'Price per kg' },
+  composition: {
+    percent_heading: 'Species composition (%)',
+    highlight_heading: 'Highlights',
+    description: 'Description',
+    description_text: 'Key notes about composition and methodology.'
+  },
+  nutrients: { highlight: 'Nutrient highlight' },
+  about: { content: 'PESKAS Timor-Leste — data and methods overview.' },
 }
 
 // NOTE: Placeholder Tetum (Tetun) values currently mirror English.
 // Update these with proper translations as needed.
 const tet: typeof en = {
-  nav: { home: 'Home', users: 'Users', analytics: 'Analytics', settings: 'Settings' },
+  nav: {
+    home: 'Uma',
+    catch: 'Kaptura',
+    revenue: 'Renda',
+    market: 'Merkadu',
+    composition: 'Kompozisaun',
+    nutrients: 'Nutriente',
+    about: 'Konaba',
+    users: 'Users',
+    analytics: 'Analytics',
+    settings: 'Settings',
+  },
   header: {
     overview: 'Overview',
     dashboard: 'Dashboard',
@@ -134,6 +166,16 @@ const tet: typeof en = {
     update_password: 'Atualiza senha',
   },
   home: { recent_activity: 'Atividade Recenti' },
+  catch: { series: 'Kaptura iha tempu', table: 'Resumo kaptura' },
+  market: { price_per_kg: 'Presu ba kg' },
+  composition: {
+    percent_heading: 'Kompozisaun espécie (%)',
+    highlight_heading: 'Destaque',
+    description: 'Deskrisaun',
+    description_text: 'Nota sira kona-ba kompozisaun no metodologia.'
+  },
+  nutrients: { highlight: 'Destaque nutriente' },
+  about: { content: 'PESKAS Timor-Leste — dadus no metodu.' },
 }
 
 const DICTS: Record<Lang, Dict> = { en, tet }
@@ -166,4 +208,3 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>
 }
-
