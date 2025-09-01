@@ -1,53 +1,34 @@
-import { useState, useMemo } from 'react'
-import {
-  ColumnDef,
-  CellContext,
-  flexRender,
-  getCoreRowModel,
-  getSortedRowModel,
-  SortingState,
-  useReactTable,
-} from '@tanstack/react-table'
+import { useState } from 'react'
+import { flexRender, getCoreRowModel, getSortedRowModel, useReactTable } from '@tanstack/react-table'
+import type { ColumnDef, SortingState } from '@tanstack/react-table'
 
-interface SummaryRow {
+type SummaryRow = {
   indicator: string
   value: number
   change: number
 }
 
+const data: SummaryRow[] = [
+  { indicator: 'Trips', value: 1245, change: 4.5 },
+  { indicator: 'Revenue', value: 12300, change: 3.2 },
+  { indicator: 'Catch', value: 42, change: 0.8 },
+]
+
+const columns: ColumnDef<SummaryRow>[] = [
+  { accessorKey: 'indicator', header: () => 'Indicator' },
+  {
+    accessorKey: 'value',
+    header: () => 'Value',
+    cell: (info) => info.getValue<number>().toLocaleString(),
+  },
+  {
+    accessorKey: 'change',
+    header: () => 'Change',
+    cell: (info) => `${info.getValue<number>() > 0 ? '+' : ''}${info.getValue<number>()}%`,
+  },
+]
+
 export default function SummaryTable() {
-  const data = useMemo<SummaryRow[]>(
-    () => [
-      { indicator: 'Trips', value: 1245, change: 4.5 },
-      { indicator: 'Revenue', value: 12300, change: -3.2 },
-      { indicator: 'Catch', value: 42, change: 0 },
-    ],
-    []
-  )
-
-  const columns = useMemo<ColumnDef<SummaryRow>[]>(
-    () => [
-      {
-        accessorKey: 'indicator',
-        header: () => 'Indicator',
-      },
-      {
-        accessorKey: 'value',
-        header: () => 'Value',
-        cell: (info: CellContext<SummaryRow, number>) => info.getValue().toLocaleString(),
-      },
-      {
-        accessorKey: 'change',
-        header: () => 'Change',
-        cell: (info: CellContext<SummaryRow, number>) => {
-          const value = info.getValue()
-          return `${value > 0 ? '+' : ''}${value}%`
-        },
-      },
-    ],
-    []
-  )
-
   const [sorting, setSorting] = useState<SortingState>([])
 
   const table = useReactTable({
@@ -59,8 +40,12 @@ export default function SummaryTable() {
     getSortedRowModel: getSortedRowModel(),
   })
 
-  const getChangeBg = (value: number) =>
-    value > 0 ? 'bg-green-lt text-green' : value < 0 ? 'bg-red-lt text-red' : 'bg-yellow-lt text-yellow'
+  const getChangeBadge = (value: number) => (
+    <span className={`badge ${value > 0 ? 'bg-green-lt text-green' : value < 0 ? 'bg-red-lt text-red' : 'bg-yellow-lt text-yellow'}`}>
+      {value > 0 ? '+' : ''}
+      {value}%
+    </span>
+  )
 
   return (
     <table className="table table-vcenter">
@@ -74,10 +59,7 @@ export default function SummaryTable() {
                 style={{ cursor: header.column.getCanSort() ? 'pointer' : 'default' }}
               >
                 {flexRender(header.column.columnDef.header, header.getContext())}
-                {{
-                  asc: ' \u25B2',
-                  desc: ' \u25BC',
-                }[header.column.getIsSorted() as string] ?? null}
+                {{ asc: ' \u25B2', desc: ' \u25BC' }[header.column.getIsSorted() as string] ?? null}
               </th>
             ))}
           </tr>
@@ -86,15 +68,13 @@ export default function SummaryTable() {
       <tbody>
         {table.getRowModel().rows.map((row) => (
           <tr key={row.id}>
-            {row.getVisibleCells().map((cell) => {
-              const value = cell.column.id === 'change' ? (cell.getValue<number>()) : undefined
-              const bg = value !== undefined ? getChangeBg(value) : ''
-              return (
-                <td key={cell.id} className={bg}>
-                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                </td>
-              )
-            })}
+            {row.getVisibleCells().map((cell) => (
+              <td key={cell.id}>
+                {cell.column.id === 'change'
+                  ? getChangeBadge(cell.getValue<number>())
+                  : flexRender(cell.column.columnDef.cell, cell.getContext())}
+              </td>
+            ))}
           </tr>
         ))}
       </tbody>
