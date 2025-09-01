@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import {
   ColumnDef,
+  CellContext,
   flexRender,
   getCoreRowModel,
   getSortedRowModel,
@@ -33,12 +34,15 @@ export default function SummaryTable() {
       {
         accessorKey: 'value',
         header: () => 'Value',
-        cell: (info) => info.getValue<number>().toLocaleString(),
+        cell: (info: CellContext<SummaryRow, number>) => info.getValue().toLocaleString(),
       },
       {
         accessorKey: 'change',
         header: () => 'Change',
-        cell: (info) => `${info.getValue<number>() > 0 ? '+' : ''}${info.getValue<number>()}%`,
+        cell: (info: CellContext<SummaryRow, number>) => {
+          const value = info.getValue()
+          return `${value > 0 ? '+' : ''}${value}%`
+        },
       },
     ],
     []

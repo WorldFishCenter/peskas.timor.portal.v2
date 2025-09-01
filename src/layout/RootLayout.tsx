@@ -36,7 +36,7 @@ export default function RootLayout() {
           </button>
           <h1 className="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
             <a href=".">
-              <img src="https://preview.tabler.io/static/logo.svg" width="110" height="32" alt="Tabler" className="navbar-brand-image"/>
+              <img src="/logo.svg" width="110" height="32" alt="Peskas" className="navbar-brand-image"/>
             </a>
           </h1>
           <div className="navbar-nav flex-row order-md-last">

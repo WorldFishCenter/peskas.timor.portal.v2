@@ -3,6 +3,7 @@ import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { useEffect, useRef } from 'react'
 import L from 'leaflet'
+import SummaryTable from '../components/SummaryTable'
 
 export default function Home() {
   const { t } = useI18n()
@@ -84,34 +85,7 @@ export default function Home() {
               <div className="card">
                 <div className="card-header"><h3 className="card-title">Summary table</h3></div>
                 <div className="card-body">
-                  <div className="table-responsive">
-                    <table className="table table-vcenter">
-                      <thead>
-                        <tr>
-                          <th>Indicator</th>
-                          <th>Value</th>
-                          <th>Change</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Trips</td>
-                          <td>1,245</td>
-                          <td><span className="badge bg-green-lt text-green">+4.5%</span></td>
-                        </tr>
-                        <tr>
-                          <td>Revenue</td>
-                          <td>$12,300</td>
-                          <td><span className="badge bg-green-lt text-green">+3.2%</span></td>
-                        </tr>
-                        <tr>
-                          <td>Catch</td>
-                          <td>42 t</td>
-                          <td><span className="badge bg-yellow-lt text-yellow">+0.8%</span></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                  <SummaryTable />
                 </div>
               </div>
             </div>
