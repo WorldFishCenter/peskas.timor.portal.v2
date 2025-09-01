@@ -36,7 +36,6 @@ export default function RootLayout() {
           </button>
           <h1 className="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
             <a href=".">
-              <img src="https://preview.tabler.io/static/logo.svg" width="110" height="32" alt={t('brand.title')} className="navbar-brand-image"/>
               <span className="ms-2 d-none d-lg-inline-block">
                 <span className="fw-bold">{t('brand.title')}</span>
                 <span className="d-block text-muted text-sm">{t('brand.subtitle')}</span>
