@@ -2,13 +2,15 @@ import { useI18n } from '../i18n'
 import ReactApexChart from 'react-apexcharts'
 import { useState } from 'react'
 import type { ApexOptions } from 'apexcharts'
+import MunicipalityFilter from '../components/MunicipalityFilter'
+import { MONTHS_SHORT } from '../constants'
+import type { Municipality } from '../constants'
 
 export default function Catch() {
   const { t } = useI18n()
-  const municipalities = ['all', 'dili', 'baucau', 'bobonaro']
-  const [mun, setMun] = useState<string>('all')
+  const [mun, setMun] = useState<Municipality>('all')
   const series = [{ name: t('catch.series_name'), data: [10, 12, 9, 14, 11, 15, 13] }]
-  const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul']
+  const months = MONTHS_SHORT.slice(0, 7)
   const options: ApexOptions = {
     chart: { type: 'area', toolbar: { show: false } },
     dataLabels: { enabled: false },
@@ -27,23 +29,7 @@ export default function Catch() {
             </div>
             <div className="col-auto ms-auto d-print-none">
               <div className="btn-list">
-                <div className="dropdown">
-                  <a href="#" className="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    {t(`common.municipalities.${mun}`)}
-                  </a>
-                  <div className="dropdown-menu dropdown-menu-end">
-                    {municipalities.map((key) => (
-                      <a
-                        key={key}
-                        href="#"
-                        className={`dropdown-item${mun === key ? ' active' : ''}`}
-                        onClick={(e) => { e.preventDefault(); setMun(key) }}
-                      >
-                        {t(`common.municipalities.${key}`)}
-                      </a>
-                    ))}
-                  </div>
-                </div>
+                <MunicipalityFilter value={mun} onChange={setMun} />
               </div>
             </div>
           </div>

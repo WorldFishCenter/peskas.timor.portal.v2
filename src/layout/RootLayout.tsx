@@ -1,17 +1,24 @@
-import { NavLink, Outlet, useLocation } from 'react-router-dom'
-import { useEffect, useMemo, useState } from 'react'
+import { NavLink, Outlet } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import { useI18n } from '../i18n'
 
 type ThemeMode = 'light' | 'dark'
 
 export default function RootLayout() {
-  const location = useLocation()
-  const isActive = (to: string) => (location.pathname === to ? ' active' : '')
   // Theme toggle
   const [theme, setTheme] = useState<ThemeMode>(() => {
     if (typeof window === 'undefined') return 'light'
     return (window.localStorage.getItem('tablerTheme') as ThemeMode) || 'light'
   })
+
+  const [lastUpdated, setLastUpdated] = useState<string>('2025-01-01 00:00')
+
+  useEffect(() => {
+    fetch('/data/data_last_updated.json')
+      .then(res => res.json())
+      .then((timestamp: string) => setLastUpdated(timestamp))
+      .catch(() => setLastUpdated('2025-01-01 00:00'))
+  }, [])
 
   const applyTheme = (mode: ThemeMode) => {
     const isDark = mode === 'dark'
@@ -80,56 +87,56 @@ export default function RootLayout() {
           <div className="navbar">
             <div className="container-xl">
               <ul className="navbar-nav">
-                <li className={`nav-item${isActive('/home')}`}>
-                  <NavLink to="/home" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}> 
+                <li className="nav-item">
+                  <NavLink to="/home" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="m0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
                     </span>
                     <span className="nav-link-title">{t('nav.home')}</span>
                   </NavLink>
                 </li>
-                <li className={`nav-item${isActive('/catch')}`}>
-                  <NavLink to="/catch" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}> 
+                <li className="nav-item">
+                  <NavLink to="/catch" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="m0 0h24v24H0z" fill="none"/><path d="M7 10l5 -6l5 6" /><path d="M7 14l5 6l5 -6" /></svg>
                     </span>
                     <span className="nav-link-title">{t('nav.catch')}</span>
                   </NavLink>
                 </li>
-                <li className={`nav-item${isActive('/revenue')}`}>
-                  <NavLink to="/revenue" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}> 
+                <li className="nav-item">
+                  <NavLink to="/revenue" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 9l4 0" /><path d="M3 9l12 0" /><path d="M7 12l-4 0" /><path d="M21 12l-12 0" /><path d="M17 15l4 0" /><path d="M3 15l12 0" /></svg>
                     </span>
                     <span className="nav-link-title">{t('nav.revenue')}</span>
                   </NavLink>
                 </li>
-                <li className={`nav-item${isActive('/market')}`}>
-                  <NavLink to="/market" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}> 
+                <li className="nav-item">
+                  <NavLink to="/market" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 -6l5 6" /><path d="M5 10h14v10a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" /></svg>
                     </span>
                     <span className="nav-link-title">{t('nav.market')}</span>
                   </NavLink>
                 </li>
-                <li className={`nav-item${isActive('/composition')}`}>
-                  <NavLink to="/composition" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}> 
+                <li className="nav-item">
+                  <NavLink to="/composition" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3v18" /><path d="M3 12h18" /></svg>
                     </span>
                     <span className="nav-link-title">{t('nav.composition')}</span>
                   </NavLink>
                 </li>
-                <li className={`nav-item${isActive('/nutrients')}`}>
-                  <NavLink to="/nutrients" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}> 
+                <li className="nav-item">
+                  <NavLink to="/nutrients" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 21a9 9 0 1 0 0 -18a9 9 0 0 0 0 18z" /></svg>
                     </span>
                     <span className="nav-link-title">{t('nav.nutrients')}</span>
                   </NavLink>
                 </li>
-                <li className={`nav-item${isActive('/about')}`}>
-                  <NavLink to="/about" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}> 
+                <li className="nav-item">
+                  <NavLink to="/about" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 9h8" /><path d="M8 13h6" /><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /></svg>
                     </span>
@@ -156,7 +163,7 @@ export default function RootLayout() {
               </div>
               <div className="col-12 col-lg-auto mt-3 mt-lg-0">
                 <ul className="list-inline list-inline-dots mb-0">
-                  <li className="list-inline-item">{t('footer.last_updated')}: <span className="text-muted">2025-01-01 00:00</span></li>
+                  <li className="list-inline-item">{t('footer.last_updated')}: <span className="text-muted">{lastUpdated}</span></li>
                   <li className="list-inline-item">{t('footer.copyright', { year: new Date().getFullYear() })}</li>
                 </ul>
               </div>

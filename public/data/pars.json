@@ -1,0 +1,435 @@
+{
+  "vars": {
+    "n_landings": {
+      "short_name": "Surveyed landings",
+      "long_name": "The number of landings that were",
+      "format": ","
+    },
+    "n_tracks": {
+      "short_name": "Tracked trips",
+      "long_name": "Number of trips tracked by boats installed with vessel trackers",
+      "format": ","
+    },
+    "n_matched": {
+      "short_name": "Matched tracks",
+      "description": "Number of matched tracks",
+      "format": ","
+    },
+    "revenue": {
+      "short_name": "Estimated revenue",
+      "description": "The estimated total revenue  from fishing trips. To illustrate the uncertainty around this estimate, values are rounded to two significant digits.",
+      "problems": "Not assessed",
+      "methods": "The total value is estimated by multiplying the estimated value per trip by the average number of trips per boat and by the number of boats.",
+      "format": "$,.2r",
+      "quality": "medium"
+    },
+    "recorded_revenue": {
+      "short_name": "Recorded revenue",
+      "format": "$,.2r",
+      "description": "The recorded total value from fishing trips. To illustrate the uncertainty around this estimate, values are rounded to two significant digits.",
+      "methods": "The recorded value is calculated by aggregating the catch value reported by fishermen the in survey forms.",
+      "quality": "high",
+      "problems": "Not assessed"
+    },
+    "catch": {
+      "short_name": "Estimated catch",
+      "format": ",.2r",
+      "description": "The estimated total catch from fishing trips. To illustrate the uncertainty around this estimate, values are rounded to two significant digits.",
+      "methods": "The total catch is estimated by multiplying the estimated catch per trip (nationally or per taxa) by the average number of trips per boat and by the number of boats.",
+      "multiplier": 0.001,
+      "suffix": " t",
+      "quality": "medium",
+      "problems": "Not assessed"
+    },
+    "recorded_catch": {
+      "short_name": "Recorded catch",
+      "format": ",.2r",
+      "suffix": " t",
+      "multiplier": 0.001,
+      "description": "The recorded total catch from fishing trips. To illustrate the uncertainty around this estimate, values are rounded to two significant digits.",
+      "methods": "The recorded catch is calculated by aggregating the catch weight estimated for each fishing trip.",
+      "quality": "high",
+      "problems": "Not assessed"
+    },
+    "price_kg": {
+      "short_name": "Price per Kg",
+      "format": "$,.2r",
+      "description": "The estimated price per Kg from fishing trips. To illustrate the uncertainty around this estimate, values are rounded to two significant digits.",
+      "methods": "The price per Kg is estimated by dividing the estimated revenue by the estimated catch in Kg.",
+      "quality": "medium",
+      "problems": "Not assessed"
+    },
+    "landing_revenue": {
+      "short_name": "Average trip value",
+      "format": "$,.2r",
+      "description": "The average trip value is obtained from landing surveys at multiple sites around the country. Fishers are asked for the estimated price of their catch at the landing site regardless of whether the catch is deemed for sale or consumption. Prices may change throughout the year and across landing sites. We then obtain monthly estimates using a random-effect statistical model.",
+      "problems": "Occasionally, and especially before 2019, the total selling price of the catch has been recorded incorrectly. This problem is likely to occur when the price is entered per fish or only for part of the catch. There may be a delay of up to several weeks between the time a landing occurs and the time information enters the system.",
+      "methods": "Survey answers are filtered for outliers. We consider outliers to be those values that are beyond 3 times the median absolute deviation of the log-transformed landing selling prices.",
+      "quality": "medium"
+    },
+    "landing_weight": {
+      "short_name": "Average catch per trip",
+      "format": ",.3r",
+      "description": "The average catch per trip is obtained from landing surveys at multiple sites around the country. Enumerators observe the catch and record the length distribution for each taxon caught. We then use the length data to estimate the equivalent weight using publicly available length-weight relationship coefficients. Finally, we obtain monthly estimates using a random-effect statistical model.",
+      "problems": "The length and number of caught individuals can be imprecise. Taxa are not always correctly identified by enumerators. In addition, taxa are generally grouped at the family or genus level whereas length-weight coefficients are generally available at the species level. This greatly reduces the accuracy of the species-based length-weight coefficients used.",
+      "methods": "Catch lengths and the number of individuals are filtered for outliers. We consider outliers those values that are beyond 3 and 7 times the median absolute deviation of the log-transformed lengths and number of individuals respectively. Length-weight relationships are obtained from [FishBase](https://www.fishbase.de/). For each taxon, we use the average for all species present in East Timor or Indonesia.",
+      "suffix": " kg",
+      "quality": "medium"
+    },
+    "n_landings_per_boat": {
+      "short_name": "Trips per boat",
+      "format": ",.3r",
+      "quality": "low",
+      "description": "The number of trips per boat is obtained from the [Pelagic Data Systems](https://www.pelagicdata.com/) tracking data. Boat movements are tracked, and a proprietary algorithm is used to determine when a trip occurs. Estimates are obtained by averaging the number of trips a boat makes over a month.",
+      "problems": "There are known problems with the Pelagic Data systems algorithm. On some occasions, trips are not detected by the system, multiple trips are merged into one, or a single trip is split into several. In addition, poor network coverage might delay or prevent information from being transferred from the tracking devices. The extent or severity of these problems is unknown. Currently, it is not possible to distinguish fishing trips (that result in a landing) from non-fishing trips.",
+      "methods": "Trips are filtered for outliers and some potential algorithm errors. Specifically, we do not take into account trips where the presumed duration is longer than 18 hours or covers a distance over 60km."
+    },
+    "n_boats": {
+      "short_name": "Number of boats",
+      "format": ",",
+      "description": "The number of boats is derived from the 2021 East-Timor census. The number of boats in each municipality level is added together to form the national total.",
+      "problems": "Not assessed",
+      "methods": "None",
+      "quality": "high"
+    },
+    "taxa": {
+      "short_name": "Taxa (species)",
+      "format": "",
+      "description": "The taxa (species or groups of species) are recorded by enumerators at the landing site.",
+      "problems": "The categorisation of taxa has changed over time. Prior to April 2019, taxa were recorded at the species level. Later, taxa were grouped into about 60 categories that loosely correspond to the species family or genus. It is not known how this change might affect the estimates.",
+      "methods": "We calculate national catch for the eleven most common taxa by weight. ",
+      "quality": "medium"
+    },
+    "prop_landings_woman": {
+      "short_name": "Trips with women",
+      "format": ".1%"
+    },
+    "pds_tracks_trips": {
+      "short_name": "Number of trips",
+      "format": ",.3r",
+      "description": "The number of trips indicates the total number of fishing trips recorded in a specific area.",
+      "problems": "There are known problems with the Pelagic Data systems algorithm. On some occasions, trips are not detected by the system, multiple trips are merged into one, or a single trip is split into several. In addition, poor network coverage might delay or prevent information from being transferred from the tracking devices. The extent or severity of these problems is unknown. Currently, it is not possible to distinguish fishing trips from the non-fishing trips.",
+      "methods": "The tracks are filtered for outliers and some potential algorithm errors. Specifically, we do not take into account geo-referenced tracks characterized by large anomalies in the quality of the tracking, in the speed of the boats, and in the distance and time travelled.",
+      "quality": "low"
+    },
+    "pds_tracks_cpe": {
+      "short_name": "Catch per unit effort",
+      "format": ",.3r",
+      "description": "The catch per unit effort (CPE) indicates the average catch in Kg per fishing unit (fisherman) by fishing trip. The CPE is standardised one on trip hour.",
+      "problems": "The categorisation of taxa has changed over time. Prior to April 2019, taxa were recorded at the species level. Later, taxa were grouped into about 60 categories that loosely correspond to the species family or genus. Both the categorization itself and its change result in estimates with a certain margin of error that is not entirely defined.",
+      "methods": "Catch weights are subjected to a validation process. Outliers are recognized based on the overall catch-weight statistical distribution and on the quality of linear models relating the catch-weight and number of individuals for each fish group.",
+      "quality": "medium"
+    },
+    "pds_tracks_rpe": {
+      "short_name": "Revenue per unit effort",
+      "format": ",.3r",
+      "quality": "high",
+      "description": "The revenue per unit effort (RPE) indicates the average revenue in USD per fishing unit (fisherman) by fishing trip. The RPE is standardised one on trip hour.",
+      "problems": "No known limitations.",
+      "methods": "The catch revenue associated to each trip is subjected to a validation process based on the recognition of anomalous revenue values from the overall statistical distribution."
+    },
+    "nut_supply": {
+      "short_name": "Nutrients supply",
+      "format": ",.3r",
+      "multiplier": 0.001,
+      "suffix": " Kg",
+      "description": "Nutritional values are obtained by integrating the weight estimates for each fish-group with modelled concentrations of seven nutrients according to [Hicks et al., (2019)](https://www.nature.com/articles/s41586-019-1592-6)."
+    },
+    "nut_rdi": {
+      "short_name": "Number of people meeting the daily intake recommendation",
+      "format": ",.3r",
+      "multiplier": 0.001,
+      "suffix": " k",
+      "description": "The number of people that meets daily requirements for the six nutrients is calculated based on the Recommended Nutrient Intake (RNI) tables conforming to [World Health Organization (2004)](https://apps.who.int/iris/handle/10665/42716) and other UN references. We obtained these  estimates by integrating the weight estimates for each group of fish with the associated nutritional values obtained from [Hicks et al., (2019)](https://www.nature.com/articles/s41586-019-1592-6).",
+      "problems": "The nutrient concentrations for each group of fish are the result of a model, this reduces the accuracy of the estimates.",
+      "methods": "The estimations were calculated referring to the RNI of a woman between 19 and 50 years old.",
+      "quality": "medium"
+    }
+  },
+  "taxa": {
+    "to_display": ["CLP", "FLY", "TUN", "SDX", "GZP", "SNA", "CGX", "CJX", "BEN", "MOO", "RAX", "LWX", "MZZ"],
+    "taxa": {
+      "CLP": {
+        "short_name": "Sardines and herrings"
+      },
+      "FLY": {
+        "short_name": "Flying fishes"
+      },
+      "TUN": {
+        "short_name": "Tunas"
+      },
+      "SDX": {
+        "short_name": "Mackerel scads"
+      },
+      "GZP": {
+        "short_name": "Garfishes"
+      },
+      "SNA": {
+        "short_name": "Snappers and seaperches"
+      },
+      "CGX": {
+        "short_name": "Jacks and trevalies"
+      },
+      "CJX": {
+        "short_name": "Fusiliers"
+      },
+      "BEN": {
+        "short_name": "Needlefishes"
+      },
+      "MOO": {
+        "short_name": "Moonfishes"
+      },
+      "RAX": {
+        "short_name": "Short bodied mackerels"
+      },
+      "LWX": {
+        "short_name": "Jobfishes"
+      },
+      "MZZ": {
+        "short_name": "Other"
+      }
+    }
+  },
+  "conservation": {
+    "names": ["Box", "Ice box", "Open", "Shade"]
+  },
+  "header": {
+    "subtitle": {
+      "text": "Management Dashboard"
+    },
+    "nav": {
+      "home": {
+        "text": "Home"
+      },
+      "catch": {
+        "text": "Catch"
+      },
+      "revenue": {
+        "text": "Revenue"
+      },
+      "composition": {
+        "text": "Composition"
+      },
+      "pds_tracks": {
+        "text": "Fishery indicators"
+      },
+      "nutrients": {
+        "text": "Nutrients"
+      },
+      "market": {
+        "text": "Market"
+      },
+      "about": {
+        "text": "About"
+      }
+    }
+  },
+  "footer": {
+    "nav": {
+      "license": {
+        "text": "License"
+      },
+      "code": {
+        "text": "Source code"
+      },
+      "project": {
+        "text": "The project"
+      }
+    },
+    "copyright": {
+      "text": "Copyright © 2021 Peskas. All rights reserved."
+    },
+    "update_time": {
+      "text": "Last update"
+    }
+  },
+  "home": {
+    "title": {
+      "text": "National overview"
+    },
+    "subtitle": {
+      "text": "Small scale fisheries report"
+    },
+    "report": {
+      "text": "Download full report"
+    },
+    "intro": {
+      "title": "Automated analytics system for small scale fisheries in Timor-Leste",
+      "content": "Peskas is an open-source web portal that provides data and insights on fisheries in Timor-Leste. The platform uses catch data collected by local enumerators and vessel tracking data to show fishing trends over time and space. The project was initiated in 2016 in partnership with the Timor-Leste Ministry of Agriculture and Fisheries and has been funded by various organizations. Peskas is a near-real-time monitoring system that is low-cost and open-access, with a focus on small-scale fisheries. Its application in fisheries research and management has been documented in several publications."
+    },
+    "table": {
+      "title": "Fishery General Statistics",
+      "caption": "Explore the main fishery indicators in Timor-Leste. The table shows the aggregated values of the estimated revenue and catch, along with the median values of landings per boat, revenue per trip, catch per trip and price per kg."
+    },
+    "map": {
+      "title": "Fishing Trips Around Timor-Leste Island",
+      "caption": "Explore fishing trips around the Timor Island coast with our interactive map. The map shows the density of movements recorded by PDS devices installed on small-scale fishing vessels."
+    }
+  },
+  "revenue": {
+    "warning_1": {
+      "heading": {
+        "text": "Estimates are provisional"
+      },
+      "content": {
+        "text": "These estimates have not been validated and might be inaccurate. Use with caution."
+      },
+      "more": {
+        "text": "Learn more"
+      }
+    },
+    "area_dropdown": {
+      "text": "Select area"
+    },
+    "treemap": {
+      "title": "Revenue rate per habitat and gear type",
+      "description": "Each box represents the average hourly revenue for an individual fisherman for each habitat and gear type."
+    },
+    "table": {
+      "heading": {
+        "text": "Annual summary"
+      },
+      "period_col": {
+        "text": "period"
+      }
+    },
+    "description": {
+      "heading": {
+        "text": "About the data"
+      },
+      "subheading": {
+        "text": "Indicator information"
+      },
+      "content": {
+        "text": "These estimates have not been thoroughly validated and might be inaccurate. There is some uncertainty on all data used in the calculations. Estimates, even from previous years, may be updated whenever new data is available. Indicators only include data from artisanal and subsistence fisheries."
+      }
+    }
+  },
+  "catch": {
+    "subtitle": {
+      "text": "Small scale fisheries"
+    },
+    "treemap": {
+      "title": "Catch rate per habitat and gear type",
+      "description": "Each box represents the average hourly catch for an individual fisherman for each habitat and gear type."
+    }
+  },
+  "composition": {
+    "title": {
+      "text": "Catch composition"
+    },
+    "highlight": {
+      "heading": {
+        "text": "Total catch"
+      }
+    },
+    "percent": {
+      "heading": {
+        "text": "Relative composition"
+      }
+    },
+    "table": {
+      "heading": {
+        "text": "Total catch"
+      },
+      "footer": {
+        "text": "*Pictures by FAO"
+      }
+    }
+  },
+  "market": {
+    "title": {
+      "text": "Market"
+    },
+    "description": {
+      "footer": {
+        "text": "* All values in metric tonnes. Totals only include data after April 2018."
+      }
+    },
+    "conservation": {
+      "region_barplot": {
+        "title": "Catch preservation practices",
+        "description": "Distribution of fish storage methods on boats across Timor-Leste municipalities"
+      }
+    }
+  },
+  "pds_tracks": {
+    "description": {
+      "content": {
+        "text": "The dynamic map is the result of the data-crossing between boats' GPS tracks (Pelagic Data Systems) and fishing information derived from survey landings (KoBo toolbox). The fishery indicators are aggregated on a geographic grid with a resolution of 0.1 x 0.1 degrees (approximately 11 x 11 kilometres)."
+      },
+      "map": {
+        "caption": "Explore fishing trips and associated statistics around the Timor Island coast with our interactive map. Select fishery indicators, fishing gear type, and fish group to filter the results. Click on a trip point to see detailed fishery statistics for that point and the associated municipality.",
+        "note": "The map displays only the fishing trips for which we have geolocation data, these represent about 5% of the total fishing trips recorded."
+      }
+    }
+  },
+  "nutrients": {
+    "to_display": ["omega3", "protein", "zinc", "calcium", "vitaminA", "iron"],
+    "nutrients": {
+      "protein": {
+        "short_name": "Protein",
+        "conversion_fact": 46
+      },
+      "omega3": {
+        "short_name": "Omega-3",
+        "conversion_fact": 2.939
+      },
+      "calcium": {
+        "short_name": "Calcium",
+        "conversion_fact": 1
+      },
+      "zinc": {
+        "short_name": "Zinc",
+        "conversion_fact": 0.0049
+      },
+      "iron": {
+        "short_name": "Iron",
+        "conversion_fact": 0.0294
+      },
+      "vitaminA": {
+        "short_name": "Vitamin A",
+        "conversion_fact": 0.0005
+      }
+    },
+    "title": {
+      "text": "Nutritional metrics"
+    },
+    "treemap_average": {
+      "title": "Nutrients intake by average catch",
+      "description": "Every box shows the count of people meeting the daily intake recommendation from an average catch in Timor-Leste."
+    },
+    "treemap_kg": {
+      "title": "Habitats' nutrient intake from 1 Kg of catch description: Every box shows the count of people meeting the daily intake recommendation from 1 Kg of catch in each habitat for each nutrient."
+    }
+  },
+  "indicators": {
+    "processing": {
+      "text": "Data processing and validation:"
+    },
+    "limitations": {
+      "text": "Known problems and limitations:"
+    },
+    "quality": {
+      "text": "Data quality:"
+    }
+  },
+  "settings": {
+    "title": {
+      "text": "Settings"
+    },
+    "language_select": {
+      "label": {
+        "text": "Language"
+      }
+    },
+    "buttons": {
+      "close": {
+        "label": "Close"
+      }
+    }
+  },
+  "about": {
+    "text": "\n## Contents\n\n<ul>\n  <li><a href=\"#about-peskas\">About Peskas<\/a><\/li>\n  <li><a href=\"#methodological-information\">Methodological Information<\/a>\n    <ul>\n      <li><a href=\"#workflow\">Workflow Steps<\/a><\/li>\n    <\/ul>\n  <\/li>\n  <li><a href=\"#download-data\">Download data<\/a>\n<\/ul>\n\n<h1 id=\"about-peskas\">About Peskas™<\/h1>\n\n[Peskas](https://peskas.org/) is a web portal displaying data and insights on the fisheries of Timor-Leste. It is the official fisheries national monitoring system of Timor-Leste.\n\nPeskas relies on a team of Timorese enumerators collecting catch data from fishers around Timor-Leste. Catch data are matched with vessel tracking data to show fishing trends over time and space.\n\nPeskas was built with the objectives of being low cost, open source, open access and near-real time.\n\nPeskas is the result of an ongoing partnership between WorldFish and the Timor-Leste Ministry of Agriculture and Fisheries' Department of Fisheries, Aquaculture and Marine Resources since 2016.\n\nPeskas was made possible with the generous donations of The Royal Norwegian Embassy in Jakarta, The Minderoo Foundation, The CGIAR Big Data Platform and the Schmidt Foundation.\n\nPeskas is funded by the Government of Timor-Leste since 2021 with technical support from WorldFish and Pelagic Data Systems Inc.\n\nInformation about the process and user-centred design of the Peskas pipeline and initial analytics, and its application in fisheries research & management can be found in the following publications:\n\n- [PeskAAS: A near real-time monitoring system for small-scale fisheries in Timor-Leste](http://www.fao.org/documents/card/en/c/cb2030en). In A. Tilley & M. B. Roscher (Eds.), Information and communication technologies for small-scale fisheries (ICT4SSF) - A handbook for fisheries stakeholders. In support of the implementation of the Voluntary Guidelines for Securing Sustainable Small-Scale Fisheries in the Context of Food Security and Poverty Eradication (pp. 11–18). FAO; WorldFish.\n- [PeskAAS: A near-real-time, open-source monitoring and analytics system for small-scale fisheries](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0234760). PloS One, 15(11), e0234760.\n- [Nearshore Fish Aggregating Devices Show Positive Outcomes for Sustainable Fisheries Development in Timor-Leste](https://www.frontiersin.org/articles/10.3389/fmars.2019.00487/full). Frontiers in Marine Science, 6, 487.\"\n\n<h1 id=\"methodological-information\">Methodological Information<\/h1>\n\nThe whole Peskas process returns a significant amount of information of different types, from the people involved in the project, the properties of the boats, the species caught, the temporal and spatial information related to fishing trips. This heterogeneous complex of information needs to be tracked, organized and cleaned to be understandable and usable by the community. For this purpose, the path from raw to final data combines the use of many software tools to guarantee that the Peskas data workflow is processed according to the principles of traceability, reproducibility and transparency of the data.\n\nPeskas was designed to be expanded and eventually distributed in different contexts. One of the biggest issues associated with the distribution of software products is represented by the compatibility between different platforms and different operating systems, as a product developed under a certain platform and version’ dependencies may not work in other platforms. Peskas' workflow uses containerization technology to face this problem, and specifically Docker, which provides an isolated environment containing all the libraries, dependencies and configurations necessary for the correct functioning of the application.\n\nThe [source code](https://github.com/WorldFishCenter/peskas.timor.data.pipeline) regulating the several steps of data workflow is maintained in an R package that bundles together the code, the documentation, the tests, increasing the general manageability and shareability of the whole platform. Furthermore, the code was conceived and developed in a modular and functional-oriented way.\n\nGiven the complexity of the data that compose Peskas, any change to the code must be regularly tested and tracked, a practice called version control. Peskas’ data pipeline relies on the GitHub version control service which guarantees an active and reversible register of the changes made to Peskas as well as improves and speeds up the integration process of new features. All the data pipeline' steps are organized and triggered according to a specific plan through Github Actions, a service provided by GitHub which automates the data workflow and facilitates the identification of any errors during the progress of the pipeline.\n\nThe final steps of the pipeline produce data products that will be processed by other tools for distribution. Currently, the final products constitute a dashboard web application developed with Shiny, a data report generated with Rmarkdown, and the actual data, distributed through the open-source Dataverse portal.\n\nBelow a schematic representation of Peskas digital infrastructure.\n\n<img src=\"www/peskas-infrastructure.png\" width=\"600\" style=\"display: block; margin: 0 auto; margin-bottom: 30px;\">\n\n<h2 id=\"workflow\">Workflow Steps<\/h2>\n\nThe following workflow runs on a daily scale through GitHub actions, automatically updating all the input data and the respective outputs.\n\n1. **Build Docker container**\n\nThe first step consists in building the virtual space in which the data pipeline application runs (the container). All subsequent steps operate in this container, which can be run on any host platform.\n\n2. **Raw data acquisition**\n\nIn this phase, the raw data associated with the survey landings and the spatial and temporal information of the fishing trips are retrieved through the services provided by the KoBo toolbox and Pelagic data system (PDS) respectively. These data are accessed through the APIs of the respective services and are uploaded and stored on Google Cloud. Data from the SSF project and more recent Peskas data are uploaded separately as they are characterised by a different structure. Each file is assigned with an ID to make each uploaded object unique and easy to recall.\n\n3. **Data preprocessing**\n\nThe latest versions of survey landings' and PDS raw data are downloaded from Google Cloud and elaborated to return an appropriate format for subsequent processing. Specifically, the structure of the raw data tables is reorganized and compacted, date formats are homogenized, and data tables are converted into a binary format that is easier to deal with in R. SSF-project raw data are subjected to a more intensive preprocessing as information including the species' codes, habitats' types and gear' types are defined under a different syntax from that of recent Peskas data.\n\n4. **Landings merging and weight calculation**\n\nThis phase involves merging the SSF and recent Peskas data into a single preprocessed dataframe. From this dataframe, we estimate the weight associated with each fishing trip by referring to the length-weight tables provided by the FishBase database. Specifically, we use the API service offered by FishBase to associate both the length-length and length-weight conversion tables with the species captured in Peskas and return an accurate measurement of the catchweight. Since not all species were covered by the FishBase databases, we manually extracted some conversion tables from the SeaLifeBase database.\n\n5. **Data validation**\n\nThe data collected by Peskas are not always accurate and may contain many types of errors such as temporal inconsistencies, typo errors, altered numerical values. In this step, the preprocessed data are checked, cleaned and validated. We use the absolute deviation around the median (MAD) for the identification of outliers in the distribution of the numerical values as the number of individuals, catch values and weight. Moreover, the variables are renamed according to a specific ontology developed for small-scale fisheries.\n\n6. **Data modelling**\n\nIn this phase the validated data estimate summary statistics of landing value, catches and landings per unit by modelling validated data using a random-effect statistical model (glmmTMB)\n\n7. **Data export**\n\nThis step encompasses data preparation and distribution across various platforms. Initially, the data is anonymized to ensure the privacy of fishermen associated with Peskas. Subsequently, we generate daily, monthly, and annual summaries of Peskas' key descriptors. Each month, these summaries are uploaded to the open-source Dataverse portal via an API service.\n\n<h1 id=\"download-data\">Download Data<\/h1>\n\nDownload the PeskAAS data for Timor-Leste using the following Dataverse portal.\n"
+  }
+}

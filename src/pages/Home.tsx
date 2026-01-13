@@ -37,7 +37,7 @@ export default function Home() {
       mapRef.current?.remove()
       mapRef.current = null
     }
-  }, [])
+  }, [t])
 
   return (
     <>
