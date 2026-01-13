@@ -1,5 +1,5 @@
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useI18n } from '../i18n'
 
 type ThemeMode = 'light' | 'dark'
@@ -36,20 +36,23 @@ export default function RootLayout() {
           </button>
           <h1 className="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
             <a href=".">
-              <img src="/logo.svg" width="110" height="32" alt="Peskas" className="navbar-brand-image"/>
+              <span className="ms-2 d-none d-lg-inline-block">
+                <span className="fw-bold">{t('brand.title')}</span>
+                <span className="d-block text-muted text-sm">{t('brand.subtitle')}</span>
+              </span>
             </a>
           </h1>
           <div className="navbar-nav flex-row order-md-last">
             {/* Theme toggle */}
             <div className="nav-item me-3">
-              <a href="#" className="nav-link px-0" aria-label="Toggle theme" title="Toggle theme" onClick={(e) => { e.preventDefault(); setTheme((t) => (t === 'light' ? 'dark' : 'light')) }}>
+              <a href="#" className="nav-link px-0" aria-label={t('actions.toggle_theme')} title={t('actions.toggle_theme')} onClick={(e) => { e.preventDefault(); setTheme((t) => (t === 'light' ? 'dark' : 'light')) }}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="icon hide-theme-dark" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3v2" /><path d="M12 19v2" /><path d="M3 12h2" /><path d="M19 12h2" /><path d="M5.6 5.6l1.4 1.4" /><path d="M17 17l1.4 1.4" /><path d="M5.6 18.4l1.4 -1.4" /><path d="M17 7l1.4 -1.4" /><path d="M12 8a4 4 0 1 0 0 8a4 4 0 0 0 0 -8" /></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" className="icon hide-theme-light" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
               </a>
             </div>
             {/* Language toggle */}
             <div className="nav-item me-3">
-              <a href="#" className="nav-link" aria-label="Toggle language" title="Toggle language" onClick={(e) => { e.preventDefault(); setLang(lang === 'en' ? 'tet' : 'en') }}>{lang === 'en' ? 'EN' : 'TET'}</a>
+              <a href="#" className="nav-link" aria-label={t('actions.toggle_language')} title={t('actions.toggle_language')} onClick={(e) => { e.preventDefault(); setLang(lang === 'en' ? 'tet' : 'en') }}>{lang === 'en' ? 'EN' : 'TET'}</a>
             </div>
             {/* User menu placeholder */}
             <div className="nav-item dropdown">
@@ -61,10 +64,10 @@ export default function RootLayout() {
                 </div>
               </a>
               <div className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                <a href="#" className="dropdown-item">Profile</a>
-                <a href="#" className="dropdown-item">Settings</a>
+                <a href="#" className="dropdown-item">{t('user_menu.profile')}</a>
+                <a href="#" className="dropdown-item">{t('user_menu.settings')}</a>
                 <div className="dropdown-divider"></div>
-                <a href="#" className="dropdown-item">Logout</a>
+                <a href="#" className="dropdown-item">{t('user_menu.logout')}</a>
               </div>
             </div>
           </div>
@@ -78,7 +81,7 @@ export default function RootLayout() {
             <div className="container-xl">
               <ul className="navbar-nav">
                 <li className={`nav-item${isActive('/home')}`}>
-                  <NavLink to="/home" className={({isActive}) => `nav-link${isActive ? ' active' : ''}`}>
+                  <NavLink to="/home" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}> 
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="m0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
                     </span>
@@ -86,7 +89,7 @@ export default function RootLayout() {
                   </NavLink>
                 </li>
                 <li className={`nav-item${isActive('/catch')}`}>
-                  <NavLink to="/catch" className={({isActive}) => `nav-link${isActive ? ' active' : ''}`}>
+                  <NavLink to="/catch" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}> 
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="m0 0h24v24H0z" fill="none"/><path d="M7 10l5 -6l5 6" /><path d="M7 14l5 6l5 -6" /></svg>
                     </span>
@@ -94,7 +97,7 @@ export default function RootLayout() {
                   </NavLink>
                 </li>
                 <li className={`nav-item${isActive('/revenue')}`}>
-                  <NavLink to="/revenue" className={({isActive}) => `nav-link${isActive ? ' active' : ''}`}>
+                  <NavLink to="/revenue" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}> 
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 9l4 0" /><path d="M3 9l12 0" /><path d="M7 12l-4 0" /><path d="M21 12l-12 0" /><path d="M17 15l4 0" /><path d="M3 15l12 0" /></svg>
                     </span>
@@ -102,7 +105,7 @@ export default function RootLayout() {
                   </NavLink>
                 </li>
                 <li className={`nav-item${isActive('/market')}`}>
-                  <NavLink to="/market" className={({isActive}) => `nav-link${isActive ? ' active' : ''}`}>
+                  <NavLink to="/market" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}> 
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 -6l5 6" /><path d="M5 10h14v10a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" /></svg>
                     </span>
@@ -110,7 +113,7 @@ export default function RootLayout() {
                   </NavLink>
                 </li>
                 <li className={`nav-item${isActive('/composition')}`}>
-                  <NavLink to="/composition" className={({isActive}) => `nav-link${isActive ? ' active' : ''}`}>
+                  <NavLink to="/composition" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}> 
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3v18" /><path d="M3 12h18" /></svg>
                     </span>
@@ -118,7 +121,7 @@ export default function RootLayout() {
                   </NavLink>
                 </li>
                 <li className={`nav-item${isActive('/nutrients')}`}>
-                  <NavLink to="/nutrients" className={({isActive}) => `nav-link${isActive ? ' active' : ''}`}>
+                  <NavLink to="/nutrients" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}> 
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 21a9 9 0 1 0 0 -18a9 9 0 0 0 0 18z" /></svg>
                     </span>
@@ -126,7 +129,7 @@ export default function RootLayout() {
                   </NavLink>
                 </li>
                 <li className={`nav-item${isActive('/about')}`}>
-                  <NavLink to="/about" className={({isActive}) => `nav-link${isActive ? ' active' : ''}`}>
+                  <NavLink to="/about" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}> 
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 9h8" /><path d="M8 13h6" /><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /></svg>
                     </span>
@@ -147,13 +150,14 @@ export default function RootLayout() {
             <div className="row text-center align-items-center flex-row-reverse">
               <div className="col-lg-auto ms-lg-auto">
                 <ul className="list-inline list-inline-dots mb-0">
-                  <li className="list-inline-item"><a className="link-secondary" href="https://github.com/WorldFishCenter/peskas.timor.portal/blob/main/LICENSE.md">Licence</a></li>
-                  <li className="list-inline-item"><a className="link-secondary" href="https://github.com/WorldFishCenter/peskas.timor.portal">Source code</a></li>
+                  <li className="list-inline-item"><a className="link-secondary" href="https://github.com/WorldFishCenter/peskas.timor.portal/blob/main/LICENSE.md">{t('footer.licence')}</a></li>
+                  <li className="list-inline-item"><a className="link-secondary" href="https://github.com/WorldFishCenter/peskas.timor.portal">{t('footer.source')}</a></li>
                 </ul>
               </div>
               <div className="col-12 col-lg-auto mt-3 mt-lg-0">
                 <ul className="list-inline list-inline-dots mb-0">
-                  <li className="list-inline-item">Last updated: <span className="text-muted">2025-01-01 00:00</span></li>
+                  <li className="list-inline-item">{t('footer.last_updated')}: <span className="text-muted">2025-01-01 00:00</span></li>
+                  <li className="list-inline-item">{t('footer.copyright', { year: new Date().getFullYear() })}</li>
                 </ul>
               </div>
             </div>

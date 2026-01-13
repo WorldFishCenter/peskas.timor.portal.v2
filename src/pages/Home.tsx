@@ -3,7 +3,6 @@ import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { useEffect, useRef } from 'react'
 import L from 'leaflet'
-import SummaryTable from '../components/SummaryTable'
 
 export default function Home() {
   const { t } = useI18n()
@@ -12,7 +11,7 @@ export default function Home() {
     series: [44, 33, 23],
     options: {
       chart: { type: 'donut' },
-      labels: ['Trips', 'Revenue', 'Catch'],
+      labels: [t('home.trips'), t('home.revenue'), t('home.catch')],
       legend: { show: true },
       dataLabels: { enabled: false },
       stroke: { width: 0 },
@@ -32,7 +31,7 @@ export default function Home() {
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors',
       }).addTo(mapRef.current)
-      L.marker([-8.56, 125.56]).addTo(mapRef.current).bindPopup('Peskas Timor-Leste')
+      L.marker([-8.56, 125.56]).addTo(mapRef.current).bindPopup(t('home.marker'))
     }
     return () => {
       mapRef.current?.remove()
@@ -57,7 +56,7 @@ export default function Home() {
           <div className="row row-cards">
             <div className="col-lg-8 col-xl-8">
               <div className="card">
-                <div className="card-header"><h3 className="card-title">Fishing map</h3></div>
+                <div className="card-header"><h3 className="card-title">{t('home.fishing_map')}</h3></div>
                 <div className="card-body">
                   <div ref={containerRef} style={{ height: 420, width: '100%' }} />
                 </div>
@@ -83,9 +82,24 @@ export default function Home() {
             </div>
             <div className="col-12">
               <div className="card">
-                <div className="card-header"><h3 className="card-title">Summary table</h3></div>
+                <div className="card-header"><h3 className="card-title">{t('home.summary_table')}</h3></div>
                 <div className="card-body">
-                  <SummaryTable />
+                  <div className="table-responsive">
+                    <table className="table table-vcenter">
+                      <thead>
+                        <tr>
+                          <th>{t('home.indicator')}</th>
+                          <th>{t('home.value')}</th>
+                          <th>{t('home.change')}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><td>{t('home.trips')}</td><td>1,245</td><td><span className="text-green">+4.5%</span></td></tr>
+                        <tr><td>{t('home.revenue')}</td><td>$12.3k</td><td><span className="text-green">+3.2%</span></td></tr>
+                        <tr><td>{t('home.catch')}</td><td>42t</td><td><span className="text-yellow">+0.8%</span></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
