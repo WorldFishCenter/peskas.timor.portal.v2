@@ -74,7 +74,7 @@
         "Intro text loaded from pars.json i18n",
         "No TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003b",

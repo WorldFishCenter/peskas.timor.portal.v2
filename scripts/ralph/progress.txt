@@ -65,3 +65,17 @@ Thread: https://ampcode.com/threads/T-019bbaf4-bdd8-7766-9239-6226b088fbc7
   - DataTest component is a good template for new data-driven components
   - useMultipleData returns data as an object keyed by file name
 ---
+
+## 2026-01-14 - US-003a
+Thread: https://ampcode.com/threads/T-019bbaf7-ad46-760a-b183-f101507c9656
+- Created Home page structure matching Shiny tab_home_content.R layout
+- Intro section with title, content from pars.json, and download report button
+- Grid layout: full-width map card, 3 donut chart cards (col-md-4), full-width summary table
+- Used useData hook to load pars.json for intro text
+- Placeholders for map (US-003b), donut charts (US-003c), and summary table (US-003d)
+- Files changed: src/pages/Home.tsx
+- **Learnings for future iterations:**
+  - Shiny uses `home_text()` for intro section - separate from page_cards
+  - Download report links to external Google Storage URL
+  - Donut chart height in Shiny is "16rem" (apex_height parameter)
+---
