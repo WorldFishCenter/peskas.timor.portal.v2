@@ -8,6 +8,7 @@ Started: 2026-01-13
 - Color palettes defined in `app_server.R`: habitat_palette, tab_palette
 - i18n text comes from `pars.json` with nested key structure (e.g., `pars.header.nav.home.text`)
 - Map center: `lat: -8.75, lng: 125.7`, zoom: `8`
+- Map basemap: CartoDB.Positron → `https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png` (subdomains: abcd)
 - Build command: `npm run build` (runs tsc -b && vite build)
 - tsconfig has `erasableSyntaxOnly` - don't use parameter properties in class constructors
 - Data loading: use `useData('filename')` hook for type-safe loading with loading/error states
@@ -134,4 +135,17 @@ Thread: https://ampcode.com/threads/T-019bbb19-02eb-7299-9139-b68efea0e3d6
 - **Learnings for future iterations:**
   - FishingMap component has sensible defaults so explicit props optional
   - Component already uses correct Timor-Leste center coordinates from Codebase Patterns
+---
+
+## 2026-01-14 - US-003b4
+Thread: https://ampcode.com/threads/T-019bbb1b-03ef-715f-86f4-430ca6790053
+- Updated FishingMap component to use CartoDB.Positron basemap (matching Shiny's provider_tiles)
+- Changed TileLayer URL from OpenStreetMap to CARTO light_all tiles
+- Added subdomains and maxZoom props for proper tile loading
+- Build passes with no TypeScript errors
+- Files changed: src/components/FishingMap.tsx
+- **Learnings for future iterations:**
+  - Shiny uses `CartoDB.Positron` provider tiles → use `https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png`
+  - CartoDB tiles require subdomains "abcd" and support maxZoom 20
+  - Map styling in Shiny is in `mod_leaflet_map.R` function `leaflet_map_server`
 ---

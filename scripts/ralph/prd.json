@@ -121,7 +121,7 @@
         "Map is responsive within grid",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003c1",
