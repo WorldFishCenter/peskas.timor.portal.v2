@@ -498,7 +498,7 @@
         "Styling matches Shiny",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-011a",

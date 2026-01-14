@@ -137,3 +137,20 @@ Thread: https://ampcode.com/threads/T-019bbc25-e1dd-72c6-95b2-b47ba04cd08d
   - Viridis comes from d3-scale-chromatic, not a static palette
   - Use interpolateViridis(i/n) to generate n colors dynamically
 ---
+
+## 2026-01-14 - US-010a
+Thread: https://ampcode.com/threads/T-019bbc34-63c2-777f-93fd-ddfaf2e8f8af
+- Verified Conservation region visualization already implemented in Market.tsx
+- Implementation details:
+  - StackedBarChart component at src/components/charts/StackedBarChart.tsx
+  - Data loaded from summary_data.json (conservation array)
+  - Uses viridis colors via interpolateViridis (5 colors for 5 preservation types)
+  - Shows catch preservation methods (Box, Ice box, Open, Other, Shade) by municipality
+  - i18n key: market.conservation_title = "Catch Preservation by Region"
+- No code changes needed - already fully functional
+- Build passes with no TypeScript errors
+- **Learnings for future iterations:**
+  - Conservation data is part of summary_data.json, not a separate file
+  - Preservation types: Box, Ice box, Open, Other, Shade
+  - Data includes municipality, catch_preservation, count, and perc (percentage)
+---
