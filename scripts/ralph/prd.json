@@ -620,7 +620,7 @@
         "Data loads correctly from summary_data.json",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-016a",

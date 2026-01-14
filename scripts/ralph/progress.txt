@@ -226,3 +226,18 @@ Thread: https://ampcode.com/threads/T-019bbc96-9bdf-7592-aeb8-34ea2eeb2263
   - Use row-cards (not row-deck row-cards) for nested card grids in side panels
   - Card headers already provide titles - don't duplicate in card-body
 ---
+
+## 2026-01-14 - US-015b
+Thread: https://ampcode.com/threads/T-019bbc9c-22d6-779a-9835-f3b471500952
+- Fixed Home page donut chart colors for Fish chart
+- Added viridis5 color constant to src/constants/colors.ts
+- Updated Fish donut chart in Home.tsx to use viridis5 instead of donutBlue
+- Trips and Revenue donuts remain with donutBlue colors (correct)
+- Fish donut now uses viridis(5) palette: #440154, #3b528b, #21918c, #5ec962, #fde725
+- Build passes with no TypeScript errors
+- Files changed: src/constants/colors.ts, src/pages/Home.tsx
+- **Learnings for future iterations:**
+  - viridis5 is a static 5-color array for the fish donut chart
+  - Trips/Revenue donuts use donutBlue (3 regions), Fish donut uses viridis5 (5 fish groups)
+  - viridis hex values from R viridis(5) function
+---
