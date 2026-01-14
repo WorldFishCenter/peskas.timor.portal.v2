@@ -1,9 +1,8 @@
 import { useI18n } from '../i18n'
-import ReactApexChart from 'react-apexcharts'
 import { useMemo } from 'react'
-import type { ApexOptions } from 'apexcharts'
 import MunicipalityFilter from '../components/MunicipalityFilter'
 import StackedBarChart from '../components/charts/StackedBarChart'
+import RadarChart from '../components/charts/RadarChart'
 import { useData } from '../hooks'
 import { interpolateViridis } from 'd3-scale-chromatic'
 import { useFilters } from '../context/FilterContext'
@@ -12,6 +11,7 @@ export default function Market() {
   const { t } = useI18n()
   const { municipality, setMunicipality } = useFilters()
   const { data: summaryData, loading } = useData('summary_data')
+  const { data: municipalData, loading: municipalLoading } = useData('municipal_aggregated')
 
   const conservationColors = useMemo(() => {
     return Array.from({ length: 5 }, (_, i) => interpolateViridis(i / 4)).map((c) =>
@@ -19,13 +19,42 @@ export default function Market() {
     )
   }, [])
 
-  const radar = {
-    series: [{ name: t('market.series_name'), data: [80, 50, 30, 40, 100, 20] }],
-    options: {
-      chart: { type: 'radar', toolbar: { show: false } },
-      xaxis: { categories: ['A', 'B', 'C', 'D', 'E', 'F'] },
-    } as ApexOptions,
-  }
+  const radarData = useMemo(() => {
+    if (!municipalData) return { series: [], categories: [] }
+    
+    const regions = [...new Set(municipalData.map(d => d.region))].sort()
+    
+    const allTimeMedians: number[] = []
+    const latestMedians: number[] = []
+    
+    for (const region of regions) {
+      const regionData = municipalData.filter(d => d.region === region)
+      const prices = regionData.map(d => d.price_kg).filter(p => p > 0).sort((a, b) => a - b)
+      
+      if (prices.length > 0) {
+        const median = prices[Math.floor(prices.length / 2)]
+        allTimeMedians.push(median)
+      } else {
+        allTimeMedians.push(0)
+      }
+      
+      const latestData = regionData.slice(-2)
+      const latestPrices = latestData.map(d => d.price_kg).filter(p => p > 0).sort((a, b) => a - b)
+      if (latestPrices.length > 0) {
+        latestMedians.push(latestPrices[Math.floor(latestPrices.length / 2)])
+      } else {
+        latestMedians.push(0)
+      }
+    }
+    
+    return {
+      series: [
+        { name: t('market.all_data'), data: allTimeMedians },
+        { name: t('market.latest_month'), data: latestMedians },
+      ],
+      categories: regions,
+    }
+  }, [municipalData, t])
 
   return (
     <>
@@ -47,33 +76,21 @@ export default function Market() {
       <div className="page-body">
         <div className="container-xl">
           <div className="row row-deck row-cards">
-            <div className="col-lg-8 col-xl-8">
+            <div className="col-12">
               <div className="card">
                 <div className="card-header"><h3 className="card-title">{t('market.price_per_kg')}</h3></div>
                 <div className="card-body">
-                  <ReactApexChart options={radar.options} series={radar.series} type="radar" height="21rem" />
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-xl-4">
-              <div className="row row-cards">
-                <div className="col-12">
-                  <div className="card">
-                    <div className="card-body">
-                      <ReactApexChart options={radar.options} series={radar.series} type="radar" height="22rem" />
+                  {municipalLoading ? (
+                    <div className="d-flex justify-content-center py-5">
+                      <div className="spinner-border text-primary" role="status" />
                     </div>
-                  </div>
-                </div>
-                <div className="col-12">
-                  <div className="card card-sm">
-                    <div className="card-body">
-                      <div className="d-flex align-items-center">
-                        <div className="subheader">{t('market.avg_price')}</div>
-                        <div className="ms-auto"><div className="h2 mb-0">$2.8</div></div>
-                      </div>
-                      <div className="progress progress-sm"><div className="progress-bar" style={{ width: '67%' }}></div></div>
-                    </div>
-                  </div>
+                  ) : radarData.categories.length > 0 ? (
+                    <RadarChart
+                      series={radarData.series}
+                      categories={radarData.categories}
+                      height="21rem"
+                    />
+                  ) : null}
                 </div>
               </div>
             </div>
