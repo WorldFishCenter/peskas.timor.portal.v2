@@ -171,7 +171,7 @@ export function SummaryTable() {
       {
         accessorKey: 'landing_weight',
         header: t('table.catch_per_trip'),
-        cell: info => `${(info.getValue() as number).toFixed(2)} kg`,
+        cell: info => `${(info.getValue() as number).toFixed(2)} ${t('units.kg', { defaultValue: 'kg' })}`,
         meta: {
           getCellStyle: (value: number) => getCellStyle(value, columnValues.landing_weight),
         },
@@ -179,7 +179,7 @@ export function SummaryTable() {
       {
         accessorKey: 'revenue',
         header: t('table.total_revenue'),
-        cell: info => `$${(info.getValue() as number).toFixed(2)} M`,
+        cell: info => `$${(info.getValue() as number).toFixed(2)} ${t('units.million_short', { defaultValue: 'M' })}`,
         meta: {
           getCellStyle: (value: number) => getCellStyle(value, columnValues.revenue),
         },
@@ -187,7 +187,7 @@ export function SummaryTable() {
       {
         accessorKey: 'catch',
         header: t('table.total_catch'),
-        cell: info => `${(info.getValue() as number).toFixed(2)} t`,
+        cell: info => `${(info.getValue() as number).toFixed(2)} ${t('units.t', { defaultValue: 't' })}`,
         meta: {
           getCellStyle: (value: number) => getCellStyle(value, columnValues.catch),
         },

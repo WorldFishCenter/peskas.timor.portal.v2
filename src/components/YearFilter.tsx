@@ -1,3 +1,5 @@
+import { useI18n } from '../i18n'
+
 interface YearFilterProps {
   value: string
   onChange: (year: string) => void
@@ -11,6 +13,7 @@ export default function YearFilter({
   startYear = 2018,
   endYear = new Date().getFullYear() 
 }: YearFilterProps) {
+  const { t } = useI18n()
   const years: string[] = ['all']
   for (let y = endYear; y >= startYear; y--) {
     years.push(y.toString())
@@ -25,7 +28,7 @@ export default function YearFilter({
     >
       {years.map((year) => (
         <option key={year} value={year}>
-          {year === 'all' ? 'All data' : year}
+          {year === 'all' ? t('common.all_data', { defaultValue: 'All data' }) : year}
         </option>
       ))}
     </select>

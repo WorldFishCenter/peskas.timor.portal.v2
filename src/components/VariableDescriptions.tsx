@@ -26,7 +26,11 @@ export default function VariableDescriptions({ variables, type }: VariableDescri
   }
 
   const getQualityText = (quality?: string) => {
-    if (!quality || quality === '') return 'Not assessed'
+    if (!quality || quality === '') return t('indicators.not_assessed', { defaultValue: 'Not assessed' })
+    const normalized = quality.toLowerCase()
+    if (normalized === 'low') return t('indicators.quality_low', { defaultValue: 'Low' })
+    if (normalized === 'medium') return t('indicators.quality_medium', { defaultValue: 'Medium' })
+    if (normalized === 'high') return t('indicators.quality_high', { defaultValue: 'High' })
     return quality.charAt(0).toUpperCase() + quality.slice(1).toLowerCase()
   }
 

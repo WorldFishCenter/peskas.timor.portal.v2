@@ -2,6 +2,7 @@ import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { donutBlue } from '../../constants/colors'
 import { useTheme } from '../../hooks/useTheme'
+import { useI18n } from '../../i18n'
 
 export interface DonutChartData {
   label: string
@@ -22,6 +23,7 @@ export default function DonutChart({
   height = 280,
 }: DonutChartProps) {
   const theme = useTheme()
+  const { t } = useI18n()
 
   if (!data || data.length === 0) {
     return (
@@ -34,7 +36,7 @@ export default function DonutChart({
           color: '#999',
         }}
       >
-        No data available
+        {t('common.no_data', { defaultValue: 'No data available' })}
       </div>
     )
   }

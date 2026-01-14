@@ -8,7 +8,7 @@ import type { ApexOptions } from 'apexcharts'
 import { habitatPalette } from '../constants/colors'
 
 export default function Nutrients() {
-  const { t } = useI18n()
+  const { t, lang } = useI18n()
   const { municipality, setMunicipality } = useFilters()
   const { data: nutrientsData, loading } = useData('nutrients_aggregated')
   const { data: pars } = useData('pars')
@@ -63,7 +63,10 @@ export default function Nutrients() {
     },
     dataLabels: { 
       enabled: true,
-      formatter: (val: number) => `${val.toLocaleString()}k`,
+      formatter: (val: number) => t('nutrients.people_count_short', {
+        value: val.toLocaleString(lang),
+        defaultValue: '{value}k',
+      }),
     },
     legend: { show: false },
     xaxis: {
@@ -81,7 +84,10 @@ export default function Nutrients() {
     },
     tooltip: {
       y: {
-        formatter: (val: number) => `${val.toLocaleString()}k people`,
+        formatter: (val: number) => t('nutrients.people_count_tooltip', {
+          value: val.toLocaleString(lang),
+          defaultValue: '{value}k people',
+        }),
       },
     },
   }

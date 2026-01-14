@@ -1,7 +1,9 @@
+import { useMemo } from 'react'
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { timeSeriesColors } from '../../constants/colors'
 import { useTheme } from '../../hooks/useTheme'
+import { useI18n } from '../../i18n'
 
 export interface TimeSeriesDataPoint {
   date: string
@@ -33,6 +35,17 @@ export default function TimeSeriesChart({
   chartType = 'area',
 }: TimeSeriesChartProps) {
   const theme = useTheme()
+  const { t, lang } = useI18n()
+  const locale = lang === 'tet' ? 'tet' : 'en-US'
+  const monthYearFormatter = useMemo(
+    () => new Intl.DateTimeFormat(locale, { month: 'short', year: 'numeric' }),
+    [locale]
+  )
+  const formatMonthYear = (value: string | number) => {
+    const date = new Date(value)
+    if (Number.isNaN(date.getTime())) return String(value)
+    return monthYearFormatter.format(date)
+  }
 
   const hasValidData =
     series &&
@@ -50,7 +63,7 @@ export default function TimeSeriesChart({
           color: '#999',
         }}
       >
-        No data available
+        {t('common.no_data', { defaultValue: 'No data available' })}
       </div>
     )
   }
@@ -92,6 +105,7 @@ export default function TimeSeriesChart({
       type: 'datetime',
       labels: {
         datetimeUTC: false,
+        formatter: (value: string, _timestamp?: number) => formatMonthYear(value),
       },
     },
     yaxis: {
@@ -100,7 +114,9 @@ export default function TimeSeriesChart({
       },
     },
     tooltip: {
-      x: { format: 'MMM yyyy' },
+      x: {
+        formatter: (value: string | number) => formatMonthYear(value),
+      },
       y: {
         formatter: (val: number) => val.toLocaleString(),
       },

@@ -145,7 +145,7 @@ export default function Catch() {
                         <div className="ms-auto text-muted small">{t('common.last_12_months')}</div>
                       </div>
                       <div className="d-flex align-items-baseline">
-                        <div className="h1 mb-0">{loading ? '...' : `${metrics.totalCatch} t`}</div>
+                        <div className="h1 mb-0">{loading ? t('common.loading_short', { defaultValue: '...' }) : `${metrics.totalCatch} ${t('units.t', { defaultValue: 't' })}`}</div>
                         <span
                           className={`ms-2 ${metrics.catchTrend.direction === 'up' ? 'text-green' : metrics.catchTrend.direction === 'down' ? 'text-red' : 'text-muted'}`}
                         >
@@ -163,7 +163,7 @@ export default function Catch() {
                         <div className="ms-auto text-muted small">{t('common.avg')}</div>
                       </div>
                       <div className="d-flex align-items-baseline">
-                        <div className="h1 mb-0">{loading ? '...' : `${metrics.avgLandingWeight} kg`}</div>
+                        <div className="h1 mb-0">{loading ? t('common.loading_short', { defaultValue: '...' }) : `${metrics.avgLandingWeight} ${t('units.kg', { defaultValue: 'kg' })}`}</div>
                         <span
                           className={`ms-2 ${metrics.weightTrend.direction === 'up' ? 'text-green' : metrics.weightTrend.direction === 'down' ? 'text-red' : 'text-muted'}`}
                         >
@@ -209,7 +209,7 @@ export default function Catch() {
                             <div className="ms-auto lh-1 text-muted small">{t('common.last_month')}</div>
                           </div>
                           <div className="d-flex align-items-center">
-                            <div className="h1 mb-0">{loading ? '...' : metrics.nBoats}</div>
+                            <div className="h1 mb-0">{loading ? t('common.loading_short', { defaultValue: '...' }) : metrics.nBoats}</div>
                             <span
                               className={`ms-2 ${metrics.boatsTrend.direction === 'up' ? 'text-green' : metrics.boatsTrend.direction === 'down' ? 'text-red' : 'text-muted'}`}
                             >

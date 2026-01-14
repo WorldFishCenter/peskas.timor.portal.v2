@@ -33,12 +33,18 @@ export default function RootLayout() {
 
   const { t, lang, setLang } = useI18n()
 
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.title = t('brand.title')
+    }
+  }, [t, lang])
+
   return (
     <div className="page">
       {/* Top header */}
       <header className="navbar navbar-expand-md d-print-none">
         <div className="container-xl">
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label={t('actions.toggle_navigation', { defaultValue: 'Toggle navigation' })}>
             <span className="navbar-toggler-icon"></span>
           </button>
           <h1 className="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
@@ -63,11 +69,11 @@ export default function RootLayout() {
             </div>
             {/* User menu placeholder */}
             <div className="nav-item dropdown">
-              <a href="#" className="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
+              <a href="#" className="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label={t('actions.open_user_menu', { defaultValue: 'Open user menu' })}>
                 <span className="avatar avatar-sm" style={{backgroundImage: "url(https://preview.tabler.io/static/avatars/000m.jpg)"}}></span>
                 <div className="d-none d-xl-block ps-2">
-                  <div>Jane Pearson</div>
-                  <div className="mt-1 small text-muted">UI Designer</div>
+                  <div>{t('user_menu.name', { defaultValue: 'Jane Pearson' })}</div>
+                  <div className="mt-1 small text-muted">{t('user_menu.role', { defaultValue: 'UI Designer' })}</div>
                 </div>
               </a>
               <div className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">

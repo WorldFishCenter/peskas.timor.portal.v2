@@ -2,6 +2,7 @@ import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { habitatPalette } from '../../constants/colors'
 import { useTheme } from '../../hooks/useTheme'
+import { useI18n } from '../../i18n'
 
 export interface TreemapDataItem {
   x: string
@@ -27,6 +28,8 @@ export default function TreemapChart({
   height = 450,
 }: TreemapChartProps) {
   const theme = useTheme()
+  const { t } = useI18n()
+  const kgUnit = t('units.kg', { defaultValue: 'kg' })
 
   if (!data || data.length === 0) {
     return (
@@ -39,7 +42,7 @@ export default function TreemapChart({
           color: '#999',
         }}
       >
-        No data available
+        {t('common.no_data', { defaultValue: 'No data available' })}
       </div>
     )
   }
@@ -73,7 +76,7 @@ export default function TreemapChart({
         fontSize: '12px',
       },
       formatter: function (text: string, op: any) {
-        return [text, op.value.toFixed(2) + ' Kg']
+        return [text, `${op.value.toFixed(2)} ${kgUnit}`]
       },
     },
     plotOptions: {

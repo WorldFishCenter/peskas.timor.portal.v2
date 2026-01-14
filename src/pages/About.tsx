@@ -22,7 +22,7 @@ export default function About() {
                 <div className="card-body markdown">
                   <p>{t('about.content')}</p>
                   <div className="mt-3">
-                    <iframe title="Dataverse" src="https://dataverse.harvard.edu/resources/js/widgets.js?alias=peskas&dvUrl=https://dataverse.harvard.edu&widgetScope=peskas&widget=iframe&heightPx=500" style={{ width: '100%', height: 520, border: 0 }} />
+                    <iframe title={t('about.dataverse_title', { defaultValue: 'Dataverse' })} src="https://dataverse.harvard.edu/resources/js/widgets.js?alias=peskas&dvUrl=https://dataverse.harvard.edu&widgetScope=peskas&widget=iframe&heightPx=500" style={{ width: '100%', height: 520, border: 0 }} />
                   </div>
                 </div>
               </div>
@@ -33,4 +33,3 @@ export default function About() {
     </>
   )
 }
-

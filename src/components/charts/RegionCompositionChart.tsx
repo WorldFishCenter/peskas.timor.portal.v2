@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
+import { useI18n } from '../../i18n'
 
 interface MunicipalTaxaRecord {
   region: string
@@ -25,6 +26,7 @@ export default function RegionCompositionChart({
   colors = [],
   height = 450
 }: RegionCompositionChartProps) {
+  const { t } = useI18n()
   const chartData = useMemo(() => {
     // Filter by year
     const filtered = year === 'all'
@@ -95,7 +97,7 @@ export default function RegionCompositionChart({
       },
     },
     yaxis: {
-      title: { text: 'Percentage (%)' },
+      title: { text: t('units.percentage_label', { defaultValue: 'Percentage (%)' }) },
       labels: {
         formatter: (val: number) => `${val.toFixed(1)}%`
       },

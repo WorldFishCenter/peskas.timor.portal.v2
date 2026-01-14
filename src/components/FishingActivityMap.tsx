@@ -5,6 +5,7 @@ import { HexagonLayer } from '@deck.gl/aggregation-layers'
 import type { PickingInfo } from '@deck.gl/core'
 import { useData } from '../hooks'
 import { useTheme } from '../hooks/useTheme'
+import { useI18n } from '../i18n'
 import 'maplibre-gl/dist/maplibre-gl.css'
 
 interface PredictedTrack {
@@ -41,6 +42,7 @@ const COLOR_RANGE: [number, number, number][] = [
 
 export default function FishingActivityMap({ height = 650 }: FishingActivityMapProps) {
   const theme = useTheme()
+  const { t } = useI18n()
   const { data: tracks, loading } = useData('predicted_tracks')
 
   // Get unique gear types and year range
@@ -172,13 +174,13 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
         }}
       >
         <div>
-          <strong>Location:</strong> {position[1].toFixed(4)}, {position[0].toFixed(4)}
+          <strong>{t('home.map_tooltip_location', { defaultValue: 'Location' })}:</strong> {position[1].toFixed(4)}, {position[0].toFixed(4)}
         </div>
         <div>
-          <strong>Total Activities:</strong> {totalActivities}
+          <strong>{t('home.map_tooltip_total_activities', { defaultValue: 'Total Activities' })}:</strong> {totalActivities}
         </div>
         <div style={{ marginTop: '5px' }}>
-          <strong>Gear Types:</strong>
+          <strong>{t('home.map_gear_types', { defaultValue: 'Gear Types' })}:</strong>
         </div>
         {Object.entries(gearCounts).map(([gear, count]) => (
           <div key={gear}>
@@ -223,13 +225,13 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
             }}
           >
             <div className="card-body">
-              <h3 className="card-title mb-2">Fishing Activity Heatmap</h3>
+              <h3 className="card-title mb-2">{t('home.map_title', { defaultValue: 'Fishing Activity Heatmap' })}</h3>
               <p className="text-muted small mb-3">
-                Visualizing fishing vessel density in Timor-Leste waters
+                {t('home.map_description', { defaultValue: 'Visualizing fishing vessel density in Timor-Leste waters' })}
                 <span
                   className="ms-1"
                   style={{ cursor: 'help' }}
-                  title="This heatmap shows the fishing vessel density along the Timor-Leste coasts. The data is based on a sample of 440 vessels equipped with GPS trackers, representing a subset of the total fishery. The gear type was predicted using a machine learning model analyzing the vessels' movement patterns."
+                  title={t('home.map_info', { defaultValue: 'This heatmap shows the fishing vessel density along the Timor-Leste coasts. The data is based on a sample of 440 vessels equipped with GPS trackers, representing a subset of the total fishery. The gear type was predicted using a machine learning model analyzing the vessels\' movement patterns.' })}
                 >
                   ℹ️
                 </span>
@@ -249,14 +251,14 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
                   ))}
                 </div>
                 <div className="d-flex justify-content-between small text-muted mt-1">
-                  <span>Low Density</span>
-                  <span>High Density</span>
+                  <span>{t('home.map_low_density', { defaultValue: 'Low Density' })}</span>
+                  <span>{t('home.map_high_density', { defaultValue: 'High Density' })}</span>
                 </div>
               </div>
 
               {/* Gear Type Selection */}
               <div className="mb-3">
-                <label className="form-label fw-bold">Gear Types</label>
+                <label className="form-label fw-bold">{t('home.map_gear_types', { defaultValue: 'Gear Types' })}</label>
                 <div>
                   {gearTypes.map(gear => (
                     <label key={gear} className="form-check form-check-inline">
@@ -275,7 +277,7 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
               {/* Year Range Slider */}
               <div className="mb-3">
                 <label className="form-label fw-bold">
-                  Time Range: {yearRange[0]} - {yearRange[1]}
+                  {t('home.map_time_range', { start: yearRange[0], end: yearRange[1], defaultValue: 'Time Range: {start} - {end}' })}
                 </label>
                 <div className="d-flex gap-2 align-items-center">
                   <input
@@ -302,7 +304,7 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
               {/* Radius Slider */}
               <div className="mb-3">
                 <label className="form-label fw-bold">
-                  Radius: {radius}m
+                  {t('home.map_radius', { value: radius, defaultValue: 'Radius: {value}m' })}
                 </label>
                 <input
                   type="range"
@@ -316,7 +318,7 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
               </div>
 
               <p className="small text-muted mb-0">
-                Hover over a hexagon to view detailed fishing activity information.
+                {t('home.map_hover_hint', { defaultValue: 'Hover over a hexagon to view detailed fishing activity information.' })}
               </p>
             </div>
           </div>

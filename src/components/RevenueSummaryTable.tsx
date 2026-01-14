@@ -17,7 +17,8 @@ interface RevenueTableRow {
 }
 
 export default function RevenueSummaryTable() {
-  const { t } = useI18n()
+  const { t, lang } = useI18n()
+  const locale = lang === 'tet' ? 'tet' : 'en-US'
   const { data: aggregated, loading } = useData('aggregated')
   const [selectedYear, setSelectedYear] = useState<string>('all')
 
@@ -36,13 +37,13 @@ export default function RevenueSummaryTable() {
       .sort((a, b) => new Date(b.date_bin_start).getTime() - new Date(a.date_bin_start).getTime())
       .slice(0, 12)
       .map(row => ({
-        month: new Date(row.date_bin_start).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }),
+        month: new Date(row.date_bin_start).toLocaleDateString(locale, { month: 'long', year: 'numeric' }),
         revenue: (row.revenue ?? 0) / 1000000,
         recorded_revenue: (row.recorded_revenue ?? 0) / 1000000,
         landing_revenue: row.landing_revenue ?? 0,
         n_landings_per_boat: row.n_landings_per_boat ?? 0,
       }))
-  }, [aggregated, selectedYear])
+  }, [aggregated, selectedYear, locale])
 
   const years = useMemo(() => {
     if (!aggregated?.month) return []
@@ -157,8 +158,8 @@ export default function RevenueSummaryTable() {
         <div className="card-footer">
           <div className="d-flex justify-content-end text-muted small">
             <span>
-              {t('vars.revenue.short_name', { defaultValue: 'Revenue' })}: ${totals.revenue.toFixed(2)}M ; {' '}
-              {t('vars.recorded_revenue.short_name', { defaultValue: 'Recorded revenue' })}: ${totals.recorded_revenue.toFixed(2)}M
+              {t('vars.revenue.short_name', { defaultValue: 'Revenue' })}: ${totals.revenue.toFixed(2)}{t('units.million_short', { defaultValue: 'M' })} ; {' '}
+              {t('vars.recorded_revenue.short_name', { defaultValue: 'Recorded revenue' })}: ${totals.recorded_revenue.toFixed(2)}{t('units.million_short', { defaultValue: 'M' })}
             </span>
           </div>
         </div>

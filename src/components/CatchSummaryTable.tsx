@@ -17,7 +17,8 @@ interface CatchTableRow {
 }
 
 export default function CatchSummaryTable() {
-  const { t } = useI18n()
+  const { t, lang } = useI18n()
+  const locale = lang === 'tet' ? 'tet' : 'en-US'
   const { data: aggregated, loading } = useData('aggregated')
   const [selectedYear, setSelectedYear] = useState<string>('all')
 
@@ -36,13 +37,13 @@ export default function CatchSummaryTable() {
       .sort((a, b) => new Date(b.date_bin_start).getTime() - new Date(a.date_bin_start).getTime())
       .slice(0, 12)
       .map(row => ({
-        month: new Date(row.date_bin_start).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }),
+        month: new Date(row.date_bin_start).toLocaleDateString(locale, { month: 'long', year: 'numeric' }),
         catch: (row.catch ?? 0) / 1000,
         recorded_catch: (row.recorded_catch ?? 0) / 1000,
         landing_weight: row.landing_weight ?? 0,
         n_landings_per_boat: row.n_landings_per_boat ?? 0,
       }))
-  }, [aggregated, selectedYear])
+  }, [aggregated, selectedYear, locale])
 
   const years = useMemo(() => {
     if (!aggregated?.month) return []
@@ -157,8 +158,8 @@ export default function CatchSummaryTable() {
         <div className="card-footer">
           <div className="d-flex justify-content-end text-muted small">
             <span>
-              {t('vars.catch.short_name', { defaultValue: 'Catch' })}: {totals.catch.toFixed(1)} t ; {' '}
-              {t('vars.recorded_catch.short_name', { defaultValue: 'Recorded catch' })}: {totals.recorded_catch.toFixed(1)} t
+              {t('vars.catch.short_name', { defaultValue: 'Catch' })}: {totals.catch.toFixed(1)} {t('units.t', { defaultValue: 't' })} ; {' '}
+              {t('vars.recorded_catch.short_name', { defaultValue: 'Recorded catch' })}: {totals.recorded_catch.toFixed(1)} {t('units.t', { defaultValue: 't' })}
             </span>
           </div>
         </div>

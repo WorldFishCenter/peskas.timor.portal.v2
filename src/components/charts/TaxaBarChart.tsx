@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
+import { useI18n } from '../../i18n'
 
 interface TaxaRecord {
   grouped_taxa: string
@@ -23,6 +24,7 @@ export default function TaxaBarChart({
   colors = [],
   height = 400
 }: TaxaBarChartProps) {
+  const { t } = useI18n()
   const chartData = useMemo(() => {
     // Filter by year if needed
     const filtered = year === 'all' ? data : data.filter(d => d.year === year)
@@ -47,8 +49,11 @@ export default function TaxaBarChart({
     return sorted
   }, [data, taxaNameMap, year])
 
+  const catchLabel = t('catch.catch_t', { defaultValue: 'Catch (tons)' })
+  const tonsLabel = t('units.tons', { defaultValue: 'tons' })
+
   const series = [{
-    name: 'Catch (tons)',
+    name: catchLabel,
     data: chartData.map(d => d.catch)
   }]
 
@@ -85,7 +90,7 @@ export default function TaxaBarChart({
       }
     },
     yaxis: {
-      title: { text: 'Catch (tons)' },
+      title: { text: catchLabel },
       labels: {
         formatter: (val: number) => val.toLocaleString()
       }
@@ -93,7 +98,7 @@ export default function TaxaBarChart({
     legend: { show: false },
     tooltip: {
       y: {
-        formatter: (val: number) => `${val.toLocaleString()} tons`
+        formatter: (val: number) => `${val.toLocaleString()} ${tonsLabel}`
       }
     },
     grid: {

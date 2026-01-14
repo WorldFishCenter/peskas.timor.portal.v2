@@ -3,6 +3,7 @@ import { createContext, useContext, useEffect, useMemo, useState, type ReactNode
 export type Lang = 'en' | 'tet'
 
 type Dict = Record<string, unknown>
+type I18nParams = { defaultValue?: string } & Record<string, string | number>
 
 function get(obj: Dict, path: string) {
   return path.split('.').reduce<unknown>((acc, key) => (acc as Dict)?.[key], obj)
@@ -16,7 +17,7 @@ function interpolate(template: string, params?: Record<string, string | number>)
 export type I18nContextValue = {
   lang: Lang
   setLang: (l: Lang) => void
-  t: (key: string, params?: Record<string, string | number>) => string
+  t: (key: string, params?: I18nParams) => string
 }
 
 const I18nContext = createContext<I18nContextValue | undefined>(undefined)
@@ -55,17 +56,25 @@ const en = {
     copyright: 'Copyright © {year} Peskas. All rights reserved.',
   },
   user_menu: {
+    name: 'Jane Pearson',
+    role: 'UI Designer',
     profile: 'Profile',
     settings: 'Settings',
     logout: 'Logout',
   },
   actions: {
+    toggle_navigation: 'Toggle navigation',
     toggle_theme: 'Toggle theme',
     toggle_language: 'Toggle language',
+    open_user_menu: 'Open user menu',
   },
   common: {
     loading: 'Loading...',
+    loading_short: '...',
     error_loading: 'Error loading data',
+    no_data: 'No data available',
+    all_years: 'All years',
+    all_data: 'All data',
     last_12_months: 'Last 12 months',
     last_month: 'Last month',
     avg: 'Avg',
@@ -114,22 +123,38 @@ const en = {
     revenue: 'Revenue',
     catch: 'Catch',
     marker: 'Peskas Timor-Leste',
+    map_title: 'Fishing Activity Heatmap',
+    map_description: 'Visualizing fishing vessel density in Timor-Leste waters',
+    map_info: 'This heatmap shows the fishing vessel density along the Timor-Leste coasts. The data is based on a sample of 440 vessels equipped with GPS trackers, representing a subset of the total fishery. The gear type was predicted using a machine learning model analyzing the vessels\' movement patterns.',
+    map_low_density: 'Low Density',
+    map_high_density: 'High Density',
+    map_gear_types: 'Gear Types',
+    map_time_range: 'Time Range: {start} - {end}',
+    map_radius: 'Radius: {value}m',
+    map_hover_hint: 'Hover over a hexagon to view detailed fishing activity information.',
+    map_tooltip_location: 'Location',
+    map_tooltip_total_activities: 'Total Activities',
   },
   catch: {
     subtitle: 'Small scale fisheries',
     series: 'Catch over time',
     table: 'Catch summary',
+    summary_table: 'Summary Table',
     series_name: 'Catch',
     month: 'Month',
-    catch_t: 'Catch (t)',
+    catch_t: 'Catch (tons)',
+    habitat_treemap: 'Catch by Habitat and Gear',
     treemap_title: 'Catch rate per habitat and gear type',
     treemap_description: 'Each box represents the average hourly catch for an individual fisherman for each habitat and gear type.',
   },
   revenue: {
     series_name: 'Revenue',
+    million_usd: 'Revenue (M USD)',
     warning_heading: 'Estimates are provisional',
     warning_content: 'These estimates have not been validated and might be inaccurate. Use with caution.',
     warning_more: 'Learn more',
+    summary_table: 'Summary Table',
+    habitat_treemap: 'Revenue by Habitat and Gear',
     treemap_title: 'Revenue rate per habitat and gear type',
     treemap_description: 'Each box represents the average hourly revenue for an individual fisherman for each habitat and gear type.',
     table_heading: 'Annual summary',
@@ -142,10 +167,14 @@ const en = {
     price_per_kg: 'Price per kg',
     avg_price: 'Avg price',
     series_name: 'Price',
+    price_series: 'Price over time',
+    price_usd: 'Price (USD/kg)',
+    price_by_region: 'Price per kg by Region',
     all_data: 'All data',
     latest_month: 'Latest month',
     conservation_title: 'Catch Preservation by Region',
     conservation_description: 'Distribution of fish storage methods on boats across Timor-Leste municipalities',
+    summary_table: 'Market Summary by Municipality',
     description_footer: '* All values in metric tonnes. Totals only include data after April 2018.',
   },
   composition: {
@@ -164,6 +193,9 @@ const en = {
     title: 'Nutritional metrics',
     highlight: 'Nutrient highlight',
     rdi: 'RDI',
+    people_count: 'Number of people',
+    people_count_short: '{value}k',
+    people_count_tooltip: '{value}k people',
     treemap_average_title: 'Nutrients intake by average catch',
     treemap_average_description: 'Every box shows the count of people meeting the daily intake recommendation from an average catch in Timor-Leste.',
     treemap_kg_title: 'Habitats\' nutrient intake from 1 Kg of catch',
@@ -187,6 +219,7 @@ const en = {
   },
   about: {
     content: 'PESKAS Timor-Leste — data and methods overview.',
+    dataverse_title: 'Dataverse',
   },
   table: {
     municipality: 'Municipality',
@@ -199,11 +232,22 @@ const en = {
     loading: 'Loading table data...',
     error: 'Error loading table data',
   },
+  units: {
+    kg: 'kg',
+    t: 't',
+    tons: 'tons',
+    m: 'm',
+    million_short: 'M',
+    thousand_short: 'k',
+    people: 'people',
+    percentage_label: 'Percentage (%)',
+  },
   vars: {
     n_landings: { short_name: 'Surveyed landings' },
     n_tracks: { short_name: 'Tracked trips' },
     n_matched: { short_name: 'Matched tracks' },
     revenue: { short_name: 'Estimated revenue' },
+    total_revenue: { short_name: 'Total revenue' },
     recorded_revenue: { short_name: 'Recorded revenue' },
     catch: { short_name: 'Estimated catch' },
     recorded_catch: { short_name: 'Recorded catch' },
@@ -224,6 +268,55 @@ const en = {
     processing: 'Data processing and validation:',
     limitations: 'Known problems and limitations:',
     quality: 'Data quality:',
+    not_assessed: 'Not assessed',
+    quality_low: 'Low',
+    quality_medium: 'Medium',
+    quality_high: 'High',
+  },
+  data_test: {
+    pretitle: 'Development',
+    title: 'Data Loading Test',
+    alert_title: 'Data Loading Examples',
+    alert_description_lead: 'This page demonstrates loading data from {count} JSON files using the',
+    alert_description_middle: 'and',
+    alert_description_tail: 'hooks. All data is type-safe with TypeScript interfaces.',
+    loading: 'Loading data files...',
+    error_title: 'Error loading data',
+    error_file: '{file}: {message}',
+    error_multiple: 'Multiple files: {message}',
+    retry: 'Retry',
+    cards: {
+      aggregated_title: 'aggregated.json',
+      summary_title: 'summary_data.json',
+      pars_title: 'pars.json',
+      taxa_title: 'taxa_names.json ({count} taxa)',
+    },
+    aggregated: {
+      daily_records: 'Daily records',
+      weekly_records: 'Weekly records',
+      monthly_records: 'Monthly records',
+      yearly_records: 'Yearly records',
+      latest_month: 'Latest month:',
+    },
+    summary: {
+      survey_areas: 'Survey areas',
+      fish_groups: 'Fish groups',
+      habitat_series: 'Habitat series',
+      portfolio_items: 'Portfolio items',
+      fish_groups_label: 'Fish groups:',
+    },
+    pars: {
+      variables: 'Variables',
+      taxa_display: 'Taxa to display',
+      nutrients: 'Nutrients',
+      nav_items: 'Nav items',
+      home_title: 'Home title:',
+    },
+    taxa: {
+      code: 'Code',
+      name: 'Name',
+      more: '... and {count} more taxa',
+    },
   },
   settings: {
     title: 'Settings',
@@ -259,17 +352,25 @@ const tet: typeof en = {
     copyright: 'Direitu autór © {year} Peskas. Direitu hotu reservadu.',
   },
   user_menu: {
+    name: 'Jane Pearson',
+    role: 'Dezenhadór UI',
     profile: 'Perfil',
     settings: 'Konfigurasaun',
     logout: 'Sai',
   },
   actions: {
+    toggle_navigation: 'Troka navegasaun',
     toggle_theme: 'Troka tema',
     toggle_language: 'Troka lian',
+    open_user_menu: 'Loke menu utilizadór',
   },
   common: {
     loading: 'Karrega...',
+    loading_short: '...',
     error_loading: 'Erru karrega dadus',
+    no_data: 'Sei la iha dadus',
+    all_years: 'Tinan hotu-hotu',
+    all_data: 'Dadus hotu',
     last_12_months: 'Fulan 12 ikus',
     last_month: 'Fulan ikus',
     avg: 'Média',
@@ -318,22 +419,38 @@ const tet: typeof en = {
     revenue: 'Renda',
     catch: 'Kaptura',
     marker: 'Peskas Timor-Leste',
+    map_title: 'Mapa Kalor Atividade Peska',
+    map_description: 'Hatudu densidade ro\'o peska iha bee Timor-Leste',
+    map_info: 'Mapa kalor ne\'e hatudu densidade ro\'o peska iha kosta Timor-Leste. Dadus ne\'e basa ba amostru ro\'o 440 ho rastreadór GPS, ne\'ebé reprezenta parte husi peska tomak. Tipu ekipamentu peska previzu uza modelu aprendizajen makinal ne\'ebé analiza padraun movimentu ro\'o sira.',
+    map_low_density: 'Densidade ki\'ik',
+    map_high_density: 'Densidade aas',
+    map_gear_types: 'Tipu Ekipamentu',
+    map_time_range: 'Intervalu Tempu: {start} - {end}',
+    map_radius: 'Raiu: {value}m',
+    map_hover_hint: 'Tau mouse iha hexagon ida atu haree informasaun atividade peska detalyadu.',
+    map_tooltip_location: 'Lokalizasaun',
+    map_tooltip_total_activities: 'Atividade Totál',
   },
   catch: {
     subtitle: 'Peska eskala ki\'ik',
     series: 'Kaptura iha tempu',
     table: 'Resumo kaptura',
+    summary_table: 'Tabela Resumu',
     series_name: 'Kaptura',
     month: 'Fulan',
-    catch_t: 'Kaptura (t)',
+    catch_t: 'Kaptura (tonelada)',
+    habitat_treemap: 'Kaptura tuir Habitat no Ekipamentu',
     treemap_title: 'Taxa kaptura ba habitat no tipu ekipamentu',
     treemap_description: 'Kada kaixa reprezenta kaptura média ba oras ida ba peskador ida-idak ba habitat no tipu ekipamentu ida-idak.',
   },
   revenue: {
     series_name: 'Renda',
+    million_usd: 'Renda (M USD)',
     warning_heading: 'Estimativa provizóriu',
     warning_content: 'Estimativa sira ne\'e seidauk validadu no bele loos. Uza ho kuidadu.',
     warning_more: 'Hatene liutan',
+    summary_table: 'Tabela Resumu',
+    habitat_treemap: 'Renda tuir Habitat no Ekipamentu',
     treemap_title: 'Taxa renda ba habitat no tipu ekipamentu',
     treemap_description: 'Kada kaixa reprezenta renda média ba oras ida ba peskador ida-idak ba habitat no tipu ekipamentu ida-idak.',
     table_heading: 'Resumo anuál',
@@ -346,10 +463,14 @@ const tet: typeof en = {
     price_per_kg: 'Presu ba kg',
     avg_price: 'Presu média',
     series_name: 'Presu',
+    price_series: 'Presu iha tempu',
+    price_usd: 'Presu (USD/kg)',
+    price_by_region: 'Presu ba kg tuir Rejiaun',
     all_data: 'Dadus hotu',
     latest_month: 'Fulan ikus',
     conservation_title: 'Preservasaun Kaptura tuir Rejiaun',
     conservation_description: 'Distribuisaun métodu armazenamentu ikan iha ro\'o iha municipiu Timor-Leste',
+    summary_table: 'Resumo Merkadu tuir Municipiu',
     description_footer: '* Valor hotu iha tonelada métrika. Total inklui de\'it dadus depois Abril 2018.',
   },
   composition: {
@@ -368,6 +489,9 @@ const tet: typeof en = {
     title: 'Métrika nutrisaun',
     highlight: 'Destaque nutriente',
     rdi: 'RDI',
+    people_count: 'Numeru ema',
+    people_count_short: '{value}k',
+    people_count_tooltip: '{value}k ema',
     treemap_average_title: 'Intake nutriente tuir kaptura média',
     treemap_average_description: 'Kada kaixa hatudu ema nia kontajen ne\'ebé satisfaz rekomendásaun intake loroloron husi kaptura média iha Timor-Leste.',
     treemap_kg_title: 'Intake nutriente habitat husi 1 Kg kaptura',
@@ -391,6 +515,7 @@ const tet: typeof en = {
   },
   about: {
     content: 'PESKAS Timor-Leste — dadus no metodu.',
+    dataverse_title: 'Dataverse',
   },
   table: {
     municipality: 'Municipiu',
@@ -403,11 +528,22 @@ const tet: typeof en = {
     loading: 'Karrega dadus tabela...',
     error: 'Erru karrega dadus tabela',
   },
+  units: {
+    kg: 'kg',
+    t: 't',
+    tons: 'tonelada',
+    m: 'm',
+    million_short: 'M',
+    thousand_short: 'k',
+    people: 'ema',
+    percentage_label: 'Percentajen (%)',
+  },
   vars: {
     n_landings: { short_name: 'Landing ne\'ebé survey' },
     n_tracks: { short_name: 'Viajen ne\'ebé track' },
     n_matched: { short_name: 'Track ne\'ebé match' },
     revenue: { short_name: 'Renda estimadu' },
+    total_revenue: { short_name: 'Renda totál' },
     recorded_revenue: { short_name: 'Renda registadu' },
     catch: { short_name: 'Kaptura estimadu' },
     recorded_catch: { short_name: 'Kaptura registadu' },
@@ -428,6 +564,55 @@ const tet: typeof en = {
     processing: 'Prosesamentu no validasaun dadus:',
     limitations: 'Problema no limitasaun ne\'ebé hatene:',
     quality: 'Kualidade dadus:',
+    not_assessed: 'Sei la avalia',
+    quality_low: 'Kraik',
+    quality_medium: 'Médiu',
+    quality_high: 'Aas',
+  },
+  data_test: {
+    pretitle: 'Dezenvolvimentu',
+    title: 'Teste Karrega Dadus',
+    alert_title: 'Ezemplu Karrega Dadus',
+    alert_description_lead: 'Pájina ne\'e hatudu karrega dadus husi ficheiru JSON {count} uza hook',
+    alert_description_middle: 'no',
+    alert_description_tail: 'hooks. Dadus hotu iha tipu-seguru ho interface TypeScript.',
+    loading: 'Karrega ficheiru dadus...',
+    error_title: 'Erru karrega dadus',
+    error_file: '{file}: {message}',
+    error_multiple: 'Ficheiru barak: {message}',
+    retry: 'Koko fali',
+    cards: {
+      aggregated_title: 'aggregated.json',
+      summary_title: 'summary_data.json',
+      pars_title: 'pars.json',
+      taxa_title: 'taxa_names.json ({count} taxa)',
+    },
+    aggregated: {
+      daily_records: 'Rekordu loroloron',
+      weekly_records: 'Rekordu semanál',
+      monthly_records: 'Rekordu fulan',
+      yearly_records: 'Rekordu tinan',
+      latest_month: 'Fulan ikus:',
+    },
+    summary: {
+      survey_areas: 'Área survey',
+      fish_groups: 'Grupu ikan',
+      habitat_series: 'Seri habitat',
+      portfolio_items: 'Item portfólio',
+      fish_groups_label: 'Grupu ikan:',
+    },
+    pars: {
+      variables: 'Variavel',
+      taxa_display: 'Taxa atu hatudu',
+      nutrients: 'Nutriente',
+      nav_items: 'Item navegasaun',
+      home_title: 'Titulu Uma:',
+    },
+    taxa: {
+      code: 'Kódigu',
+      name: 'Naran',
+      more: '... no {count} taxa tan',
+    },
   },
   settings: {
     title: 'Konfigurasaun',
@@ -456,9 +641,13 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
   const t = useMemo(() => {
     const dict = DICTS[lang]
-    return (key: string, params?: Record<string, string | number>) => {
-      const raw = (get(dict, key) as string) ?? (get(DICTS.en, key) as string) ?? key
-      return typeof raw === 'string' ? interpolate(raw, params) : key
+    return (key: string, params?: I18nParams) => {
+      const { defaultValue, ...interpolations } = params ?? {}
+      const raw = (get(dict, key) as string)
+        ?? (get(DICTS.en, key) as string)
+        ?? defaultValue
+        ?? key
+      return typeof raw === 'string' ? interpolate(raw, interpolations) : String(raw)
     }
   }, [lang])
 

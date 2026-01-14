@@ -8,6 +8,7 @@
  * - Type-safe data access
  */
 import { useData, useMultipleData } from '../hooks';
+import { useI18n } from '../i18n';
 import type {
   AggregatedData,
   SummaryData,
@@ -16,6 +17,7 @@ import type {
 } from '../types/data';
 
 export default function DataTest() {
+  const { t } = useI18n();
   // Example 1: Load single file with useData
   const aggregatedResult = useData('aggregated');
 
@@ -32,7 +34,7 @@ export default function DataTest() {
         <div className="card-body">
           <div className="d-flex align-items-center">
             <div className="spinner-border spinner-border-sm me-2" role="status" />
-            <span>Loading data files...</span>
+            <span>{t('data_test.loading', { defaultValue: 'Loading data files...' })}</span>
           </div>
         </div>
       </div>
@@ -44,9 +46,24 @@ export default function DataTest() {
       <div className="card">
         <div className="card-body">
           <div className="alert alert-danger mb-0">
-            <h4>Error loading data</h4>
-            {aggregatedResult.error && <p>aggregated.json: {aggregatedResult.error.message}</p>}
-            {multipleResult.error && <p>Multiple files: {multipleResult.error.message}</p>}
+            <h4>{t('data_test.error_title', { defaultValue: 'Error loading data' })}</h4>
+            {aggregatedResult.error && (
+              <p>
+                {t('data_test.error_file', {
+                  file: t('data_test.cards.aggregated_title', { defaultValue: 'aggregated.json' }),
+                  message: aggregatedResult.error.message,
+                  defaultValue: '{file}: {message}',
+                })}
+              </p>
+            )}
+            {multipleResult.error && (
+              <p>
+                {t('data_test.error_multiple', {
+                  message: multipleResult.error.message,
+                  defaultValue: 'Multiple files: {message}',
+                })}
+              </p>
+            )}
             <button 
               className="btn btn-outline-danger btn-sm mt-2"
               onClick={() => {
@@ -54,7 +71,7 @@ export default function DataTest() {
                 multipleResult.refetch();
               }}
             >
-              Retry
+              {t('data_test.retry', { defaultValue: 'Retry' })}
             </button>
           </div>
         </div>
@@ -74,22 +91,24 @@ export default function DataTest() {
       <div className="col-md-6 col-lg-4">
         <div className="card">
           <div className="card-header">
-            <h3 className="card-title">aggregated.json</h3>
+            <h3 className="card-title">
+              {t('data_test.cards.aggregated_title', { defaultValue: 'aggregated.json' })}
+            </h3>
           </div>
           <div className="card-body">
             <dl className="row mb-0">
-              <dt className="col-6">Daily records</dt>
+              <dt className="col-6">{t('data_test.aggregated.daily_records', { defaultValue: 'Daily records' })}</dt>
               <dd className="col-6">{aggregated.day.length}</dd>
-              <dt className="col-6">Weekly records</dt>
+              <dt className="col-6">{t('data_test.aggregated.weekly_records', { defaultValue: 'Weekly records' })}</dt>
               <dd className="col-6">{aggregated.week.length}</dd>
-              <dt className="col-6">Monthly records</dt>
+              <dt className="col-6">{t('data_test.aggregated.monthly_records', { defaultValue: 'Monthly records' })}</dt>
               <dd className="col-6">{aggregated.month.length}</dd>
-              <dt className="col-6">Yearly records</dt>
+              <dt className="col-6">{t('data_test.aggregated.yearly_records', { defaultValue: 'Yearly records' })}</dt>
               <dd className="col-6">{aggregated.year.length}</dd>
             </dl>
             {aggregated.month.length > 0 && (
               <div className="mt-3">
-                <small className="text-muted">Latest month:</small>
+                <small className="text-muted">{t('data_test.aggregated.latest_month', { defaultValue: 'Latest month:' })}</small>
                 <br />
                 <code>{aggregated.month[aggregated.month.length - 1].date_bin_start}</code>
               </div>
@@ -102,21 +121,23 @@ export default function DataTest() {
       <div className="col-md-6 col-lg-4">
         <div className="card">
           <div className="card-header">
-            <h3 className="card-title">summary_data.json</h3>
+            <h3 className="card-title">
+              {t('data_test.cards.summary_title', { defaultValue: 'summary_data.json' })}
+            </h3>
           </div>
           <div className="card-body">
             <dl className="row mb-0">
-              <dt className="col-6">Survey areas</dt>
+              <dt className="col-6">{t('data_test.summary.survey_areas', { defaultValue: 'Survey areas' })}</dt>
               <dd className="col-6">{summaryData.n_surveys.length}</dd>
-              <dt className="col-6">Fish groups</dt>
+              <dt className="col-6">{t('data_test.summary.fish_groups', { defaultValue: 'Fish groups' })}</dt>
               <dd className="col-6">{summaryData.estimated_tons.length}</dd>
-              <dt className="col-6">Habitat series</dt>
+              <dt className="col-6">{t('data_test.summary.habitat_series', { defaultValue: 'Habitat series' })}</dt>
               <dd className="col-6">{summaryData.catch_habitat.length}</dd>
-              <dt className="col-6">Portfolio items</dt>
+              <dt className="col-6">{t('data_test.summary.portfolio_items', { defaultValue: 'Portfolio items' })}</dt>
               <dd className="col-6">{summaryData.portfolio_data.length}</dd>
             </dl>
             <div className="mt-3">
-              <small className="text-muted">Fish groups:</small>
+              <small className="text-muted">{t('data_test.summary.fish_groups_label', { defaultValue: 'Fish groups:' })}</small>
               <br />
               <code className="text-wrap">
                 {summaryData.estimated_tons.map(t => t.fish_group).join(', ')}
@@ -130,21 +151,23 @@ export default function DataTest() {
       <div className="col-md-6 col-lg-4">
         <div className="card">
           <div className="card-header">
-            <h3 className="card-title">pars.json</h3>
+            <h3 className="card-title">
+              {t('data_test.cards.pars_title', { defaultValue: 'pars.json' })}
+            </h3>
           </div>
           <div className="card-body">
             <dl className="row mb-0">
-              <dt className="col-6">Variables</dt>
+              <dt className="col-6">{t('data_test.pars.variables', { defaultValue: 'Variables' })}</dt>
               <dd className="col-6">{Object.keys(pars.vars).length}</dd>
-              <dt className="col-6">Taxa to display</dt>
+              <dt className="col-6">{t('data_test.pars.taxa_display', { defaultValue: 'Taxa to display' })}</dt>
               <dd className="col-6">{pars.taxa.to_display.length}</dd>
-              <dt className="col-6">Nutrients</dt>
+              <dt className="col-6">{t('data_test.pars.nutrients', { defaultValue: 'Nutrients' })}</dt>
               <dd className="col-6">{pars.nutrients.to_display.length}</dd>
-              <dt className="col-6">Nav items</dt>
+              <dt className="col-6">{t('data_test.pars.nav_items', { defaultValue: 'Nav items' })}</dt>
               <dd className="col-6">{Object.keys(pars.header.nav).length}</dd>
             </dl>
             <div className="mt-3">
-              <small className="text-muted">Home title:</small>
+              <small className="text-muted">{t('data_test.pars.home_title', { defaultValue: 'Home title:' })}</small>
               <br />
               <code>{pars.home.title.text}</code>
             </div>
@@ -156,15 +179,20 @@ export default function DataTest() {
       <div className="col-12">
         <div className="card">
           <div className="card-header">
-            <h3 className="card-title">taxa_names.json ({taxaNames.length} taxa)</h3>
+            <h3 className="card-title">
+              {t('data_test.cards.taxa_title', {
+                count: taxaNames.length,
+                defaultValue: 'taxa_names.json ({count} taxa)',
+              })}
+            </h3>
           </div>
           <div className="card-body">
             <div className="table-responsive">
               <table className="table table-sm table-vcenter">
                 <thead>
                   <tr>
-                    <th>Code</th>
-                    <th>Name</th>
+                    <th>{t('data_test.taxa.code', { defaultValue: 'Code' })}</th>
+                    <th>{t('data_test.taxa.name', { defaultValue: 'Name' })}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -177,7 +205,10 @@ export default function DataTest() {
                   {taxaNames.length > 10 && (
                     <tr>
                       <td colSpan={2} className="text-muted">
-                        ... and {taxaNames.length - 10} more taxa
+                        {t('data_test.taxa.more', {
+                          count: taxaNames.length - 10,
+                          defaultValue: '... and {count} more taxa',
+                        })}
                       </td>
                     </tr>
                   )}

@@ -189,7 +189,7 @@ export default function Market() {
                         <div className="ms-auto text-muted small">{t('common.avg', { defaultValue: 'Avg' })}</div>
                       </div>
                       <div className="d-flex align-items-baseline">
-                        <div className="h1 mb-0">{loading ? '...' : `$${metrics.avgPrice}`}</div>
+                        <div className="h1 mb-0">{loading ? t('common.loading_short', { defaultValue: '...' }) : `$${metrics.avgPrice}`}</div>
                         <span
                           className={`ms-2 ${metrics.priceTrend.direction === 'up' ? 'text-green' : metrics.priceTrend.direction === 'down' ? 'text-red' : 'text-muted'}`}
                         >
@@ -207,7 +207,7 @@ export default function Market() {
                         <div className="ms-auto text-muted small">{t('common.avg', { defaultValue: 'Avg' })}</div>
                       </div>
                       <div className="d-flex align-items-baseline">
-                        <div className="h1 mb-0">{loading ? '...' : `${metrics.avgWeight} kg`}</div>
+                        <div className="h1 mb-0">{loading ? t('common.loading_short', { defaultValue: '...' }) : `${metrics.avgWeight} ${t('units.kg', { defaultValue: 'kg' })}`}</div>
                         <span
                           className={`ms-2 ${metrics.weightTrend.direction === 'up' ? 'text-green' : metrics.weightTrend.direction === 'down' ? 'text-red' : 'text-muted'}`}
                         >
@@ -253,7 +253,7 @@ export default function Market() {
                             <div className="ms-auto lh-1 text-muted small">{t('common.avg', { defaultValue: 'Avg' })}</div>
                           </div>
                           <div className="d-flex align-items-center">
-                            <div className="h1 mb-0">{loading ? '...' : metrics.avgLandings}</div>
+                            <div className="h1 mb-0">{loading ? t('common.loading_short', { defaultValue: '...' }) : metrics.avgLandings}</div>
                             <span
                               className={`ms-2 ${metrics.landingsTrend.direction === 'up' ? 'text-green' : metrics.landingsTrend.direction === 'down' ? 'text-red' : 'text-muted'}`}
                             >
