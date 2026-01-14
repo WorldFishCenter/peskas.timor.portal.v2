@@ -14,6 +14,16 @@ Started: 2026-01-13
 - Data loading: use `useData('filename')` hook for type-safe loading with loading/error states
 - Chart components: place in `src/components/charts/`, use ApexOptions type, disable animations for perf
 
+## Story Complexity Rules (Ralph Timeout Prevention)
+- 15-minute timeout per iteration - stories MUST be <10 minutes
+- **1 file edit + 1 build + browser check = 1 story maximum**
+- Split "read + create + update" into 3 separate stories
+- "Extract X" ≠ "Apply X" (separate stories)
+- "Create component" ≠ "Add to page" ≠ "Style component" (3 stories)
+- Library install = separate story (npm can be slow)
+- Browser verification adds 2-3 minutes - factor into estimate
+- If task involves >1 major step, split it
+
 ---
 
 ## 2026-01-13 - US-001
