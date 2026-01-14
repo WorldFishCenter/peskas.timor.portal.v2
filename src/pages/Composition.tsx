@@ -3,11 +3,14 @@ import { useData } from '../hooks/useData'
 import TreemapChart from '../components/charts/TreemapChart'
 import type { TreemapDataItem } from '../components/charts/TreemapChart'
 import YearFilter from '../components/YearFilter'
+import MunicipalityFilter from '../components/MunicipalityFilter'
 import { habitatPalette } from '../constants/colors'
 import { useI18n } from '../i18n'
+import { useFilters } from '../context/FilterContext'
 
 export default function Composition() {
   const { t } = useI18n()
+  const { municipality, setMunicipality } = useFilters()
   const [selectedYear, setSelectedYear] = useState<string>('all')
   const { data: pars, loading: parsLoading } = useData('pars')
   const { data: taxaAggregated, loading: taxaLoading } = useData('taxa_aggregated')
@@ -65,6 +68,11 @@ export default function Composition() {
                   <h2 className="page-title">{title}</h2>
                 </>
               )}
+            </div>
+            <div className="col-auto ms-auto d-print-none">
+              <div className="btn-list">
+                <MunicipalityFilter value={municipality} onChange={setMunicipality} />
+              </div>
             </div>
           </div>
         </div>

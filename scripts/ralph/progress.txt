@@ -56,3 +56,18 @@ Thread: https://ampcode.com/threads/T-019bbc25-e1dd-72c6-95b2-b47ba04cd08d
   - Always verify code exists before starting implementation
   - The codebase is quite advanced with most core features done
 ---
+
+## 2026-01-14 - US-004b4, US-004c1
+Thread: https://ampcode.com/threads/T-019bbc25-e1dd-72c6-95b2-b47ba04cd08d
+- US-004b4: Verified treemap already uses habitatPalette colors with hover interactions
+  - ApexCharts treemap provides built-in hover/tooltip functionality
+  - Colors correctly applied via habitatPalette constant
+- US-004c1: Added MunicipalityFilter to Composition page
+  - Imported MunicipalityFilter component and useFilters context
+  - Added filter dropdown in page header
+  - Year filter already existed from previous iteration
+- Files changed: src/pages/Composition.tsx
+- **Learnings for future iterations:**
+  - ApexCharts provides built-in interactions, no custom implementation needed
+  - Pages should use FilterContext from src/context/FilterContext.tsx for global filters
+---
