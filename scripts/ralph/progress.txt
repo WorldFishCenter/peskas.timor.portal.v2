@@ -102,3 +102,22 @@ Thread: https://ampcode.com/threads/T-019bbc25-e1dd-72c6-95b2-b47ba04cd08d
   - Donut charts show regional breakdown (by Area), not municipality-filtered data
   - Use card-actions div in card-header for inline filter controls
 ---
+
+## 2026-01-14 - US-011b3
+Thread: https://ampcode.com/threads/T-019bbc25-e1dd-72c6-95b2-b47ba04cd08d
+- Connected remaining pages (Nutrients, Tracks) to global filters
+- Nutrients page:
+  - Complete rewrite to load real data from nutrients_aggregated.json
+  - Added MunicipalityFilter from FilterContext
+  - Horizontal bar chart showing people meeting RDI by nutrient type
+  - Uses habitatPalette colors
+- Tracks page:
+  - Added YearFilter to filter hexagon layer by year
+  - Filter applies to predicted_tracks data before rendering
+- Files changed: src/pages/Nutrients.tsx, src/pages/Tracks.tsx
+- Market and Revenue already used FilterContext
+- **Learnings for future iterations:**
+  - nutrients_aggregated.json structure: day/week/month/year arrays with nutrient, nut_supply, nut_rdi fields
+  - pars.nutrients.to_display defines which nutrients to show in order
+  - Tracks data has year field for filtering, no municipality
+---

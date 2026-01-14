@@ -546,7 +546,7 @@
         "Performance is acceptable",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-012a1",
