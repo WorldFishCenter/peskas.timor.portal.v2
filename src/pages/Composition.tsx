@@ -19,14 +19,16 @@ export default function Composition() {
     })
   }
 
-  // Aggregate taxa data for treemap - sum catch by grouped_taxa across all months
+  // Aggregate taxa data for treemap - sum catch by grouped_taxa, filtered by year
   const treemapData: TreemapDataItem[] = []
   if (taxaAggregated?.month) {
     const catchByTaxa: Record<string, number> = {}
-    taxaAggregated.month.forEach((row) => {
-      const taxa = row.grouped_taxa
-      catchByTaxa[taxa] = (catchByTaxa[taxa] || 0) + (row.catch || 0)
-    })
+    taxaAggregated.month
+      .filter((row) => selectedYear === 'all' || row.year === selectedYear)
+      .forEach((row) => {
+        const taxa = row.grouped_taxa
+        catchByTaxa[taxa] = (catchByTaxa[taxa] || 0) + (row.catch || 0)
+      })
     Object.entries(catchByTaxa)
       .sort((a, b) => b[1] - a[1])
       .forEach(([taxa, total]) => {
@@ -75,6 +77,9 @@ export default function Composition() {
               <div className="card">
                 <div className="card-header">
                   <h3 className="card-title">{tableHeading}</h3>
+                  <div className="card-actions">
+                    <YearFilter value={selectedYear} onChange={setSelectedYear} />
+                  </div>
                 </div>
                 <div className="card-body">
                   {taxaLoading ? (
