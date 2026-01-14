@@ -186,3 +186,23 @@ Thread: https://ampcode.com/threads/T-019bbc93-f91d-719e-897d-81c244de0442
   - FishingMap uses Carto light basemap URL: https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png
   - Note: US-003b2 description mentions Home should use DeckGL hexagon heatmap - see US-015a for replacement
 ---
+
+## 2026-01-14 - US-015a
+Thread: https://ampcode.com/threads/T-019bbc93-f91d-719e-897d-81c244de0442
+- Replaced Leaflet FishingMap with DeckGL hexagon heatmap on Home page
+- Created reusable HexagonMap component at src/components/HexagonMap.tsx
+- Component reuses same pattern from Tracks.tsx:
+  - DeckGL with HexagonLayer
+  - Loads predicted_tracks.json data
+  - Uses heatmapColors palette from constants
+  - MapLibre GL basemap (Carto positron)
+- Updated Home.tsx to import HexagonMap instead of FishingMap
+- Changed card-body padding to p-0 for proper map edge-to-edge display
+- Build passes with no TypeScript errors
+- Files created: src/components/HexagonMap.tsx
+- Files changed: src/pages/Home.tsx
+- **Learnings for future iterations:**
+  - HexagonMap is a reusable component for DeckGL hexagon heatmaps
+  - Accepts height and year props for flexibility
+  - FishingMap.tsx still exists if Leaflet maps needed elsewhere
+---

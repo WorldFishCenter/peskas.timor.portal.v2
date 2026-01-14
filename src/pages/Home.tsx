@@ -1,6 +1,6 @@
 import { useI18n } from '../i18n'
 import { useData } from '../hooks/useData'
-import FishingMap from '../components/FishingMap'
+import HexagonMap from '../components/HexagonMap'
 import DonutChart from '../components/charts/DonutChart'
 import { SummaryTable } from '../components/SummaryTable'
 import { donutBlue } from '../constants/colors'
@@ -98,8 +98,8 @@ export default function Home() {
                 <div className="card-header">
                   <h3 className="card-title">{mapTitle}</h3>
                 </div>
-                <div className="card-body">
-                  <FishingMap center={[-8.75, 125.7]} zoom={8} />
+                <div className="card-body p-0">
+                  <HexagonMap height={420} />
                 </div>
               </div>
             </div>
