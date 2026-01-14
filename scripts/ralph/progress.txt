@@ -344,3 +344,15 @@ Thread: https://ampcode.com/threads/T-019bbb84-6299-7711-b253-1de515f871a4
     - habitatPalette now in src/constants/colors.ts alongside donutBlue and tabPalette
     - ApexCharts treemap has built-in hover/tooltip interactions - no extra config needed
   ---
+
+## 2026-01-14 - US-004c1
+Thread: https://ampcode.com/threads/T-019bbb87-f69b-76c7-bb2a-08765a1cd819
+- Created src/components/YearFilter.tsx with year dropdown (2018 to current year + "All data")
+- Added YearFilter to Composition page in region composition card header
+- Added selectedYear state to Composition page for filter state management
+- Files changed: src/components/YearFilter.tsx, src/pages/Composition.tsx
+- **Learnings for future iterations:**
+  - Shiny region composition module uses year filter in card header top-right
+  - YearFilter component is reusable for other pages needing date filtering
+  - Tabler card-actions class positions elements in card header right side
+---
