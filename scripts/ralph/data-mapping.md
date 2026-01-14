@@ -96,67 +96,67 @@ App configuration and i18n text:
 
 ## Data Loading Utilities
 
-### Basic fetch
+### Basic fetch (async function)
 
 ```typescript
-import { fetchData } from '@/data';
+import { fetchData } from '../utils/dataLoader';
 
-const aggregated = await fetchData('aggregated');
-// Type: AggregatedData
+async function loadData() {
+  const aggregated = await fetchData('aggregated');
+  // Type: AggregatedData - automatically inferred from file name
+  console.log(aggregated.month.length); // Type-safe access
+}
 ```
 
-### With caching
+### React hook - Single file
 
 ```typescript
-import { fetchDataCached } from '@/data';
-
-const data = await fetchDataCached('summary_data');
-// Cached for 5 minutes
-```
-
-### React hook
-
-```typescript
-import { useData } from '@/data';
+import { useData } from '../hooks';
 
 function MyComponent() {
   const { data, loading, error, refetch } = useData('aggregated');
   
-  if (loading) return <Spinner />;
-  if (error) return <Error message={error.message} />;
+  if (loading) return <div className="spinner-border" />;
+  if (error) return <div className="alert alert-danger">{error.message}</div>;
   
+  // data is AggregatedData - type-safe!
   return <Chart data={data.month} />;
 }
 ```
 
-### Multiple files
+### React hook - Multiple files
 
 ```typescript
-import { useMultipleData } from '@/data';
+import { useMultipleData } from '../hooks';
 
 function HomePage() {
-  const { data, loading } = useMultipleData([
+  const { data, loading, error, refetch } = useMultipleData([
     'summary_data',
     'pars',
     'aggregated'
   ]);
   
-  if (loading) return <Spinner />;
+  if (loading) return <div className="spinner-border" />;
+  if (error) return <div className="alert alert-danger">{error.message}</div>;
   
-  // Access: data.summary_data, data.pars, data.aggregated
+  // All data is type-safe
+  const { summary_data, pars, aggregated } = data;
+  // summary_data is SummaryData
+  // pars is ParsData  
+  // aggregated is AggregatedData
 }
 ```
 
-### Page-level data
+### Complete Example Component
 
-```typescript
-import { usePageData } from '@/data';
+See [src/components/DataTest.tsx](file:///Users/lore/Desktop/work/wf_projects/peskas.timor.portal.v2/src/components/DataTest.tsx) for a complete working example that:
+- Loads data from 4 different JSON files (aggregated, summary_data, pars, taxa_names)
+- Shows loading spinner while fetching
+- Handles errors with retry button
+- Displays data in a type-safe manner
+- Uses Tabler UI components
 
-function CatchPage() {
-  const { data, loading } = usePageData('catch');
-  // Loads: aggregated, taxa_aggregated, municipal_aggregated, pars
-}
-```
+Access the test page at `/data-test` in the development server.
 
 ## Value Formatting
 

@@ -8,6 +8,7 @@ import Market from './pages/Market'
 import Composition from './pages/Composition'
 import Nutrients from './pages/Nutrients'
 import About from './pages/About'
+import DataTestPage from './pages/DataTestPage'
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="composition" element={<Composition />} />
           <Route path="nutrients" element={<Nutrients />} />
           <Route path="about" element={<About />} />
+          <Route path="data-test" element={<DataTestPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
