@@ -93,3 +93,36 @@
 .page-body + .page-body {
     padding-top: 0;
 }
+
+/* Row cards spacing to match Shiny Tabler grid gutter */
+.row-deck > .col,
+.row-deck > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-deck > .col > .card,
+.row-deck > [class*="col-"] > .card {
+    flex: 1;
+}
+
+/* Nested row-cards inside columns (for side panels like Market/Revenue) */
+.row-cards {
+    --tblr-gutter-y: 1rem;
+}
+
+/* Card body padding consistency for charts */
+.card > .card-body .apexcharts-canvas {
+    margin: 0 auto;
+}
+
+/* Filter dropdowns in page header */
+.page-header .btn-list {
+    gap: 0.5rem;
+}
+
+/* Summary table responsive scroll */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}

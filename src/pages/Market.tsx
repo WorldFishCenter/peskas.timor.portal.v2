@@ -51,12 +51,19 @@ export default function Market() {
               <div className="card">
                 <div className="card-header"><h3 className="card-title">{t('market.price_per_kg')}</h3></div>
                 <div className="card-body">
-                  <ReactApexChart options={radar.options} series={radar.series} type="radar" height={320} />
+                  <ReactApexChart options={radar.options} series={radar.series} type="radar" height="21rem" />
                 </div>
               </div>
             </div>
             <div className="col-lg-4 col-xl-4">
-              <div className="row row-deck row-cards">
+              <div className="row row-cards">
+                <div className="col-12">
+                  <div className="card">
+                    <div className="card-body">
+                      <ReactApexChart options={radar.options} series={radar.series} type="radar" height="22rem" />
+                    </div>
+                  </div>
+                </div>
                 <div className="col-12">
                   <div className="card card-sm">
                     <div className="card-body">
@@ -83,7 +90,7 @@ export default function Market() {
                   ) : summaryData?.conservation ? (
                     <StackedBarChart
                       data={summaryData.conservation}
-                      height={320}
+                      height="20rem"
                       colors={conservationColors}
                       yFormatter={(val: number) => `${val}%`}
                     />

@@ -45,15 +45,22 @@ export default function Revenue() {
           <div className="row row-deck row-cards">
             <div className="col-lg-8 col-xl-8">
               <div className="card">
+                <div className="card-header">
+                  <h3 className="card-title">{t('vars.revenue.short_name')}</h3>
+                </div>
                 <div className="card-body">
-                  <ReactApexChart options={options} series={series} type="bar" height={320} />
+                  <ReactApexChart options={options} series={series} type="bar" height="21rem" />
                 </div>
               </div>
             </div>
             <div className="col-lg-4 col-xl-4">
-              <div className="card">
-                <div className="card-body">
-                  <ReactApexChart options={treemapOptions} series={[{ data: [{ x: 'A', y: 11 }, { x: 'B', y: 7 }, { x: 'C', y: 5 }] }]} type="treemap" height={320} />
+              <div className="row row-cards">
+                <div className="col-12">
+                  <div className="card">
+                    <div className="card-body">
+                      <ReactApexChart options={treemapOptions} series={[{ data: [{ x: 'A', y: 11 }, { x: 'B', y: 7 }, { x: 'C', y: 5 }] }]} type="treemap" height="22rem" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

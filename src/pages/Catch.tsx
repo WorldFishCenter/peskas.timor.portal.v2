@@ -111,7 +111,7 @@ export default function Catch() {
                   ) : (
                     <TimeSeriesChart
                       series={chartSeries}
-                      height={320}
+                      height="21rem"
                       yAxisTitle={t('catch.catch_t')}
                     />
                   )}

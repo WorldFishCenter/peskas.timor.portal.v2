@@ -153,12 +153,10 @@ export function SummaryTable({ municipality = 'all' }: SummaryTableProps) {
     );
   }
 
-  const tableTitle = pars?.home?.table?.title ?? 'Fishery General Statistics';
   const tableCaption = pars?.home?.table?.caption ?? '';
 
   return (
     <div>
-      <h3 className="mb-2" style={{ color: '#666a70' }}>{tableTitle}</h3>
       {tableCaption && (
         <p className="text-muted mb-3" style={{ fontSize: '0.875rem' }}>{tableCaption}</p>
       )}

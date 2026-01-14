@@ -5,7 +5,7 @@ import type { ConservationRecord } from '../../types/data'
 
 interface StackedBarChartProps {
   data: ConservationRecord[]
-  height?: number
+  height?: string | number
   colors?: string[]
   yFormatter?: (val: number) => string
 }

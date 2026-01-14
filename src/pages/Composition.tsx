@@ -131,7 +131,7 @@ export default function Composition() {
                       data={treemapData}
                       title={t('composition.treemap_title')}
                       colors={habitatPalette}
-                      height="20rem"
+                      height="28rem"
                     />
                   )}
                   <div className="small text-muted mt-2">{tableFooter}</div>
@@ -148,9 +148,9 @@ export default function Composition() {
                     <YearFilter value={selectedYear} onChange={setSelectedYear} />
                   </div>
                 </div>
-                <div className="card-body" style={{ height: '30rem' }}>
+                <div className="card-body">
                   {/* TODO: StackedBarChart component for region composition */}
-                  <div className="d-flex align-items-center justify-content-center h-100 bg-secondary-lt rounded">
+                  <div className="d-flex align-items-center justify-content-center bg-secondary-lt rounded" style={{ height: '28rem' }}>
                     <span className="text-muted">{t('composition.placeholder_region')}</span>
                   </div>
                 </div>

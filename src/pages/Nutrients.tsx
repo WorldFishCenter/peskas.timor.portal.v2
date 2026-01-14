@@ -124,7 +124,7 @@ export default function Nutrients() {
                       options={options} 
                       series={chartData.series} 
                       type="bar" 
-                      height={350} 
+                      height="20rem" 
                     />
                   )}
                 </div>
