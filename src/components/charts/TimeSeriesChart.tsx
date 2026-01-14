@@ -21,7 +21,7 @@ interface TimeSeriesChartProps {
   chartType?: 'line' | 'area'
 }
 
-const DEFAULT_COLORS = ['#206bc4', '#4299e1', '#79c0ff']
+const DEFAULT_COLORS = ['#206bc4', '#aaaaaa']
 
 export default function TimeSeriesChart({
   series,
@@ -46,12 +46,13 @@ export default function TimeSeriesChart({
       animations: { enabled: false },
       toolbar: { show: false },
       zoom: { enabled: false },
+      selection: { enabled: false },
     },
     colors,
     dataLabels: { enabled: false },
     stroke: {
       curve: 'smooth',
-      width: 2,
+      width: 1.5,
     },
     fill: {
       type: chartType === 'area' ? 'gradient' : 'solid',
@@ -62,19 +63,32 @@ export default function TimeSeriesChart({
         stops: [50, 100],
       },
     },
+    grid: {
+      strokeDashArray: 4,
+      padding: {
+        top: -20,
+        right: 0,
+        left: -4,
+        bottom: -4,
+      },
+    },
     xaxis: {
       type: 'datetime',
       labels: {
+        rotate: 0,
+        datetimeUTC: false,
         datetimeFormatter: {
           year: 'yyyy',
           month: "MMM 'yy",
           day: 'dd MMM',
         },
       },
+      axisBorder: { show: false },
       title: xAxisTitle ? { text: xAxisTitle } : undefined,
     },
     yaxis: {
       labels: {
+        padding: 4,
         formatter: (val: number) => val.toLocaleString(),
       },
       title: yAxisTitle ? { text: yAxisTitle } : undefined,
@@ -87,8 +101,21 @@ export default function TimeSeriesChart({
     },
     legend: {
       position: 'top',
-      horizontalAlign: 'left',
+      fontSize: '15px',
     },
+    plotOptions: {
+      bar: {
+        columnWidth: '50%',
+      },
+    },
+    responsive: [
+      {
+        breakpoint: 576,
+        options: {
+          yaxis: { show: false },
+        },
+      },
+    ],
     title: title
       ? {
           text: title,

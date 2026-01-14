@@ -411,3 +411,19 @@ Thread: https://ampcode.com/threads/T-019bbb8d-388e-74b2-8d77-09e8ace15e98
   - Catch is stored in kg, divide by 1000 for tons display
   - AggregatedRecord type needed to be updated to include all fields from JSON
 ---
+
+## 2026-01-14 - US-005a4
+Thread: https://ampcode.com/threads/T-019bbb8d-388e-74b2-8d77-09e8ace15e98
+- Updated TimeSeriesChart to match Shiny plot_timeseries.R styling
+- Colors: #206bc4 primary, #aaaaaa secondary (matching Shiny defaults)
+- Added: grid.strokeDashArray=4, grid.padding matching Shiny
+- Added: responsive breakpoint at 576px (hide y-axis on mobile)
+- Added: plotOptions.bar.columnWidth=50%, selection=disabled
+- Stroke width: 1.5 (matches Shiny)
+- Build passes with no TypeScript errors
+- Files changed: src/components/charts/TimeSeriesChart.tsx
+- **Learnings for future iterations:**
+  - Shiny plot_timeseries defaults: colors=["#206bc4", "#aaaaaa"], strokeDashArray=4, strokeWidth=1.5
+  - Grid padding: top=-20, right=0, left=-4, bottom=-4
+  - Hide y-axis on mobile (breakpoint 576px)
+---
