@@ -292,3 +292,18 @@ Thread: https://ampcode.com/threads/T-019bbd0e-4822-750e-9188-40142a2795d5
   - SummaryTable component accepts municipality prop for filtering
   - Treemap uses habitatPalette colors, flattens habitat.data items with "Habitat: Gear" labels
 ---
+
+## 2026-01-14 - US-017a
+Thread: https://ampcode.com/threads/T-019bbd11-5ea7-70a8-b044-9e8152a5262f
+- Replaced placeholder radar chart on Market page with real data
+- Imported RadarChart component and municipal_aggregated data
+- Radar chart shows price_kg by region (same pattern as Revenue page)
+- Two series: "All data" (historical median) and "Latest month" (last 2 months median)
+- Uses spiderColors palette from constants
+- Added i18n keys: market.all_data, market.latest_month (EN and Tetum)
+- Files changed: src/pages/Market.tsx, src/i18n.tsx
+- **Learnings for future iterations:**
+  - RadarChart component is reusable across pages (Market, Revenue)
+  - useData hook auto-types from DataFileName, no need to pass generic type param
+  - Market radar shows price_kg by region, same data source as Revenue radar
+---
