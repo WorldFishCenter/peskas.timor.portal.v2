@@ -32,7 +32,7 @@ export function useI18n() {
 // Dictionaries
 const en = {
   brand: {
-    title: 'PESKAS Timor-Leste',
+    title: 'PESKAS | Timor-Leste',
     subtitle: 'Management Dashboard',
   },
   nav: {

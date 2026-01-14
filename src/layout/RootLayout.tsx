@@ -51,7 +51,7 @@ export default function RootLayout() {
             <a href=".">
               <span className="ms-2 d-none d-lg-inline-block">
                 <span className="fw-bold">{t('brand.title')}</span>
-                <span className="d-block text-muted text-sm">{t('brand.subtitle')}</span>
+                <span className="d-block text-muted" style={{ fontSize: '0.8rem', lineHeight: '2' }}>{t('brand.subtitle')}</span>
               </span>
             </a>
           </h1>
