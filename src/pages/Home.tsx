@@ -3,7 +3,7 @@ import { useData } from '../hooks/useData'
 import HexagonMap from '../components/HexagonMap'
 import DonutChart from '../components/charts/DonutChart'
 import { SummaryTable } from '../components/SummaryTable'
-import { donutBlue } from '../constants/colors'
+import { donutBlue, viridis5 } from '../constants/colors'
 import { useFilters } from '../context/FilterContext'
 import MunicipalityFilter from '../components/MunicipalityFilter'
 
@@ -133,7 +133,7 @@ export default function Home() {
                   <h3 className="card-title">{t('home.catch')}</h3>
                 </div>
                 <div className="card-body">
-                  <DonutChart data={fishData} colors={donutBlue} height="16rem" />
+                  <DonutChart data={fishData} colors={viridis5} height="16rem" />
                 </div>
               </div>
             </div>

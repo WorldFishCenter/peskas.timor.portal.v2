@@ -27,3 +27,6 @@ export const timeSeriesColors = ['#206bc4', '#79a6dc'];
 
 // Revenue bar chart colors (single color scheme)
 export const revenueBarColors = ['#206bc4'];
+
+// Viridis 5 colors for fish donut chart (matching R viridis(5))
+export const viridis5 = ['#440154', '#3b528b', '#21918c', '#5ec962', '#fde725'];
