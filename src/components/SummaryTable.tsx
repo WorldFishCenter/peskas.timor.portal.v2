@@ -1,7 +1,16 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
+import {
+  useReactTable,
+  getCoreRowModel,
+  getSortedRowModel,
+  flexRender,
+  type ColumnDef,
+  type SortingState,
+} from '@tanstack/react-table';
 import { useData } from '../hooks';
 import { tabPalette } from '../constants/colors';
 import { useI18n } from '../i18n';
+import { useTheme } from '../hooks/useTheme';
 
 interface MunicipalSummary {
   region: string;
@@ -13,27 +22,27 @@ interface MunicipalSummary {
   price_kg: number;
 }
 
-function interpolateColor(colors: string[], t: number): string {
+function interpolateColor(colors: string[], t: number, opacity: number = 1): string {
   const n = colors.length - 1;
   const i = Math.min(Math.floor(t * n), n - 1);
   const f = t * n - i;
-  
+
   const c1 = colors[i];
   const c2 = colors[i + 1];
-  
+
   const r1 = parseInt(c1.slice(1, 3), 16);
   const g1 = parseInt(c1.slice(3, 5), 16);
   const b1 = parseInt(c1.slice(5, 7), 16);
-  
+
   const r2 = parseInt(c2.slice(1, 3), 16);
   const g2 = parseInt(c2.slice(3, 5), 16);
   const b2 = parseInt(c2.slice(5, 7), 16);
-  
+
   const r = Math.round(r1 + f * (r2 - r1));
   const g = Math.round(g1 + f * (g2 - g1));
   const b = Math.round(b1 + f * (b2 - b1));
-  
-  return `rgb(${r}, ${g}, ${b})`;
+
+  return `rgba(${r}, ${g}, ${b}, ${opacity})`;
 }
 
 function normalize(value: number, values: number[]): number {
@@ -51,22 +60,15 @@ function biasedNormalize(value: number, values: number[], bias: number = 2): num
   return Math.pow(n, 1 / bias);
 }
 
-interface SummaryTableProps {
-  municipality?: string;
-}
-
-export function SummaryTable({ municipality = 'all' }: SummaryTableProps) {
+export function SummaryTable() {
   const { t } = useI18n();
+  const theme = useTheme();
   const { data: municipalData, loading, error } = useData('municipal_aggregated');
   const { data: pars } = useData('pars');
+  const [sorting, setSorting] = useState<SortingState>([]);
 
   const summaryData = useMemo(() => {
     if (!municipalData) return [];
-
-    // Filter by municipality if specified
-    const filteredData = municipality === 'all' 
-      ? municipalData 
-      : municipalData.filter((record) => record.region.toLowerCase() === municipality.toLowerCase());
 
     type GroupedData = Record<string, {
       landing_revenues: number[];
@@ -78,7 +80,7 @@ export function SummaryTable({ municipality = 'all' }: SummaryTableProps) {
     }>;
 
     const grouped: GroupedData = {};
-    for (const record of filteredData) {
+    for (const record of municipalData) {
       if (!grouped[record.region]) {
         grouped[record.region] = {
           landing_revenues: [],
@@ -120,8 +122,8 @@ export function SummaryTable({ municipality = 'all' }: SummaryTableProps) {
       price_kg: Math.round(mean(values.price_kgs) * 100) / 100,
     }));
 
-    return result.sort((a, b) => a.region.localeCompare(b.region));
-  }, [municipalData, municipality]);
+    return result;
+  }, [municipalData]);
 
   const columnValues = useMemo(() => ({
     landing_revenue: summaryData.map(r => r.landing_revenue),
@@ -134,8 +136,84 @@ export function SummaryTable({ municipality = 'all' }: SummaryTableProps) {
 
   const getCellStyle = (value: number, values: number[]) => {
     const t = biasedNormalize(value, values);
-    return { backgroundColor: interpolateColor(tabPalette, t) };
+    // Higher opacity for better visibility in both themes
+    const opacity = theme === 'dark' ? 0.5 : 0.6;
+    return {
+      backgroundColor: interpolateColor(tabPalette, t, opacity),
+      // Ensure text remains readable with proper contrast
+      color: theme === 'dark' ? '#fff' : 'inherit',
+    };
   };
+
+  const columns = useMemo<ColumnDef<MunicipalSummary>[]>(
+    () => [
+      {
+        accessorKey: 'region',
+        header: t('table.municipality'),
+        cell: info => <span className="text-capitalize">{info.getValue() as string}</span>,
+      },
+      {
+        accessorKey: 'landing_revenue',
+        header: t('table.revenue_per_trip'),
+        cell: info => `$${(info.getValue() as number).toFixed(2)}`,
+        meta: {
+          getCellStyle: (value: number) => getCellStyle(value, columnValues.landing_revenue),
+        },
+      },
+      {
+        accessorKey: 'n_landings_per_boat',
+        header: t('table.landings_per_boat'),
+        cell: info => (info.getValue() as number).toFixed(2),
+        meta: {
+          getCellStyle: (value: number) => getCellStyle(value, columnValues.n_landings_per_boat),
+        },
+      },
+      {
+        accessorKey: 'landing_weight',
+        header: t('table.catch_per_trip'),
+        cell: info => `${(info.getValue() as number).toFixed(2)} kg`,
+        meta: {
+          getCellStyle: (value: number) => getCellStyle(value, columnValues.landing_weight),
+        },
+      },
+      {
+        accessorKey: 'revenue',
+        header: t('table.total_revenue'),
+        cell: info => `$${(info.getValue() as number).toFixed(2)} M`,
+        meta: {
+          getCellStyle: (value: number) => getCellStyle(value, columnValues.revenue),
+        },
+      },
+      {
+        accessorKey: 'catch',
+        header: t('table.total_catch'),
+        cell: info => `${(info.getValue() as number).toFixed(2)} t`,
+        meta: {
+          getCellStyle: (value: number) => getCellStyle(value, columnValues.catch),
+        },
+      },
+      {
+        accessorKey: 'price_kg',
+        header: t('table.price_per_kg'),
+        cell: info => `$${(info.getValue() as number).toFixed(2)}`,
+        meta: {
+          getCellStyle: (value: number) => getCellStyle(value, columnValues.price_kg),
+        },
+      },
+    ],
+    [t, columnValues, theme]
+  );
+
+  const table = useReactTable({
+    data: summaryData,
+    columns,
+    state: {
+      sorting,
+    },
+    onSortingChange: setSorting,
+    getCoreRowModel: getCoreRowModel(),
+    getSortedRowModel: getSortedRowModel(),
+  });
 
   if (loading) {
     return (
@@ -162,43 +240,60 @@ export function SummaryTable({ municipality = 'all' }: SummaryTableProps) {
       )}
       <div className="table-responsive">
         <table className="table table-vcenter table-hover" style={{ fontSize: '0.875rem' }}>
-        <thead>
-          <tr>
-            <th style={{ minWidth: 140 }}>{t('table.municipality')}</th>
-            <th className="text-center" style={{ minWidth: 100 }}>{t('table.revenue_per_trip')}</th>
-            <th className="text-center" style={{ minWidth: 100 }}>{t('table.landings_per_boat')}</th>
-            <th className="text-center" style={{ minWidth: 100 }}>{t('table.catch_per_trip')}</th>
-            <th className="text-center" style={{ minWidth: 100 }}>{t('table.total_revenue')}</th>
-            <th className="text-center" style={{ minWidth: 100 }}>{t('table.total_catch')}</th>
-            <th className="text-center" style={{ minWidth: 100 }}>{t('table.price_per_kg')}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {summaryData.map((row) => (
-            <tr key={row.region}>
-              <td className="text-center">{row.region}</td>
-              <td className="text-center" style={getCellStyle(row.landing_revenue, columnValues.landing_revenue)}>
-                ${row.landing_revenue.toFixed(2)}
-              </td>
-              <td className="text-center" style={getCellStyle(row.n_landings_per_boat, columnValues.n_landings_per_boat)}>
-                {row.n_landings_per_boat.toFixed(2)}
-              </td>
-              <td className="text-center" style={getCellStyle(row.landing_weight, columnValues.landing_weight)}>
-                {row.landing_weight.toFixed(2)} kg
-              </td>
-              <td className="text-center" style={getCellStyle(row.revenue, columnValues.revenue)}>
-                ${row.revenue.toFixed(2)} M
-              </td>
-              <td className="text-center" style={getCellStyle(row.catch, columnValues.catch)}>
-                {row.catch.toFixed(2)} t
-              </td>
-              <td className="text-center" style={getCellStyle(row.price_kg, columnValues.price_kg)}>
-                ${row.price_kg.toFixed(2)}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+          <thead>
+            {table.getHeaderGroups().map(headerGroup => (
+              <tr key={headerGroup.id}>
+                {headerGroup.headers.map(header => (
+                  <th
+                    key={header.id}
+                    className="text-center"
+                    style={{ minWidth: header.id === 'region' ? 140 : 100, cursor: 'pointer', userSelect: 'none' }}
+                    onClick={header.column.getToggleSortingHandler()}
+                  >
+                    <div className="d-flex align-items-center justify-content-center gap-1">
+                      {flexRender(header.column.columnDef.header, header.getContext())}
+                      {header.column.getIsSorted() && (
+                        <span>
+                          {header.column.getIsSorted() === 'asc' ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-up" width="16" height="16" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M6 15l6 -6l6 6"></path>
+                            </svg>
+                          ) : (
+                            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-down" width="16" height="16" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M6 9l6 6l6 -6"></path>
+                            </svg>
+                          )}
+                        </span>
+                      )}
+                    </div>
+                  </th>
+                ))}
+              </tr>
+            ))}
+          </thead>
+          <tbody>
+            {table.getRowModel().rows.map(row => (
+              <tr key={row.id}>
+                {row.getVisibleCells().map(cell => {
+                  const cellMeta = cell.column.columnDef.meta as { getCellStyle?: (value: number) => React.CSSProperties };
+                  const cellStyle = cellMeta?.getCellStyle ? cellMeta.getCellStyle(cell.getValue() as number) : {};
+
+                  return (
+                    <td
+                      key={cell.id}
+                      className="text-center"
+                      style={cellStyle}
+                    >
+                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

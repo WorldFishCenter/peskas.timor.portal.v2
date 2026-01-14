@@ -4,12 +4,9 @@ import FishingActivityMap from '../components/FishingActivityMap'
 import DonutChart from '../components/charts/DonutChart'
 import { SummaryTable } from '../components/SummaryTable'
 import { donutBlue, viridis5 } from '../constants/colors'
-import { useFilters } from '../context/FilterContext'
-import MunicipalityFilter from '../components/MunicipalityFilter'
 
 export default function Home() {
   const { t } = useI18n()
-  const { municipality, setMunicipality } = useFilters()
   const { data: pars, loading: parsLoading } = useData('pars')
   const { data: summaryData, loading: summaryLoading } = useData('summary_data')
 
@@ -139,12 +136,9 @@ export default function Home() {
               <div className="card">
                 <div className="card-header">
                   <h3 className="card-title">{tableTitle}</h3>
-                  <div className="card-actions">
-                    <MunicipalityFilter value={municipality} onChange={setMunicipality} />
-                  </div>
                 </div>
                 <div className="card-body">
-                  <SummaryTable municipality={municipality} />
+                  <SummaryTable />
                 </div>
               </div>
             </div>
