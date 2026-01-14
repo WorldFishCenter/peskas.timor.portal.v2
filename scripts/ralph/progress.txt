@@ -241,3 +241,19 @@ Thread: https://ampcode.com/threads/T-019bbc9c-22d6-779a-9835-f3b471500952
   - Trips/Revenue donuts use donutBlue (3 regions), Fish donut uses viridis5 (5 fish groups)
   - viridis hex values from R viridis(5) function
 ---
+
+## 2026-01-14 - US-016a
+Thread: https://ampcode.com/threads/T-019bbd07-ccba-7501-a535-fd3f2ad368c6
+- Verified Revenue page time series chart already implemented
+- Fixed TypeScript errors: removed unused imports (ReactApexChart, ApexOptions, habitatPalette)
+- Removed unused treemapOptions variable
+- Revenue page has complete implementation:
+  - TimeSeriesChart component with revenue data from aggregated.json
+  - Y-axis formatted as currency (M USD)
+  - Uses revenueBarColors from constants
+  - Metric cards showing total revenue, revenue per trip, price per kg with trends
+- Files changed: src/pages/Revenue.tsx (cleanup)
+- **Learnings for future iterations:**
+  - Revenue page was already feature-complete, just had leftover unused code
+  - Always run build to catch unused variable errors before committing
+---

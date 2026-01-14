@@ -634,7 +634,7 @@
         "Chart colors match Shiny",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-016b",

@@ -2,14 +2,17 @@ import { useI18n } from '../i18n'
 import { useMemo } from 'react'
 import MunicipalityFilter from '../components/MunicipalityFilter'
 import TimeSeriesChart from '../components/charts/TimeSeriesChart'
+import RadarChart from '../components/charts/RadarChart'
 import { useData } from '../hooks'
 import { useFilters } from '../context/FilterContext'
-import { revenueBarColors } from '../constants/colors'
+import { revenueBarColors, spiderColors } from '../constants/colors'
+import type { MunicipalAggregatedRecord } from '../types/data'
 
 export default function Revenue() {
   const { t } = useI18n()
   const { municipality, setMunicipality } = useFilters()
   const { data: aggregated, loading, error } = useData('aggregated')
+  const { data: municipalAggregated } = useData('municipal_aggregated')
 
   const chartSeries = useMemo(() => {
     if (!aggregated?.month) return []
@@ -78,6 +81,44 @@ export default function Revenue() {
       priceTrend: getTrend(priceChange),
     }
   }, [aggregated])
+
+  const radarData = useMemo(() => {
+    if (!municipalAggregated || !Array.isArray(municipalAggregated)) {
+      return { series: [], categories: [] }
+    }
+    const data = municipalAggregated as MunicipalAggregatedRecord[]
+
+    const regions = [...new Set(data.map((d) => d.region))].sort()
+
+    const allDataByRegion = regions.map((region) => {
+      const regionData = data.filter((d) => d.region === region)
+      const prices = regionData.map((d) => d.price_kg).filter((p) => p != null && p > 0)
+      if (prices.length === 0) return 0
+      prices.sort((a, b) => a - b)
+      const mid = Math.floor(prices.length / 2)
+      return prices.length % 2 !== 0 ? prices[mid] : (prices[mid - 1] + prices[mid]) / 2
+    })
+
+    const latestByRegion = regions.map((region) => {
+      const regionData = data
+        .filter((d) => d.region === region)
+        .sort((a, b) => new Date(a.date_bin_start).getTime() - new Date(b.date_bin_start).getTime())
+      const latest = regionData.slice(-2)
+      const prices = latest.map((d) => d.price_kg).filter((p) => p != null && p > 0)
+      if (prices.length === 0) return 0
+      prices.sort((a, b) => a - b)
+      const mid = Math.floor(prices.length / 2)
+      return prices.length % 2 !== 0 ? prices[mid] : (prices[mid - 1] + prices[mid]) / 2
+    })
+
+    return {
+      series: [
+        { name: t('revenue.all_data', { defaultValue: 'All data' }), data: allDataByRegion.map((v) => Math.round(v * 100) / 100) },
+        { name: t('revenue.latest_month', { defaultValue: 'Latest month' }), data: latestByRegion.map((v) => Math.round(v * 100) / 100) },
+      ],
+      categories: regions,
+    }
+  }, [municipalAggregated, t])
 
   if (error) {
     return <div className="alert alert-danger">{error.message}</div>
@@ -209,6 +250,27 @@ export default function Revenue() {
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-6 col-xl-6">
+              <div className="card">
+                <div className="card-header">
+                  <h3 className="card-title">{t('revenue.price_by_region', { defaultValue: 'Price per Kg by Region' })}</h3>
+                </div>
+                <div className="card-body">
+                  {radarData.categories.length > 0 ? (
+                    <RadarChart
+                      series={radarData.series}
+                      categories={radarData.categories}
+                      height="22rem"
+                      colors={spiderColors}
+                    />
+                  ) : (
+                    <div className="d-flex justify-content-center py-5">
+                      <div className="spinner-border text-primary" role="status" />
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
