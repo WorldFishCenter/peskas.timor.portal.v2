@@ -192,7 +192,7 @@
         "Basic table structure renders",
         "No TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003d2",

@@ -249,3 +249,18 @@ Thread: https://ampcode.com/threads/T-019bbb34-a8ba-7248-8b25-14ff37a0a830
   - DonutChart component accepts colors prop as string array
   - Color constants should be imported from src/constants/colors.ts for consistency
 ---
+
+## 2026-01-14 - US-003d1
+Thread: https://ampcode.com/threads/T-019bbb44-dcfd-74b8-ad30-b673f675ad6f
+- Created src/components/SummaryTable.tsx with basic Tabler table structure
+- Loads data from municipal_aggregated.json (NOTE: PRD says indicators_grid.json but Shiny uses municipal_aggregated)
+- Groups by region and calculates: median(landing_revenue, landing_weight, n_landings_per_boat), sum(revenue)/1M, sum(catch)/1000, mean(price_kg)
+- 7 columns: Municipality, Revenue per trip, Landings per boat, Catch per trip, Total revenue, Total catch, Price per kg
+- Build passes with no TypeScript errors
+- Files changed: src/components/SummaryTable.tsx
+- **Learnings for future iterations:**
+  - Home summary table uses municipal_aggregated.json, NOT indicators_grid.json (PRD needs correction)
+  - useData hook takes DataFileName string directly: `useData('municipal_aggregated')` not `useData<Type>('file')`
+  - Table calculations match Shiny mod_home_table.R: median for per-trip values, sum for totals, mean for price_kg
+  - Revenue is divided by 1M and displayed as "$X M", catch divided by 1000 and displayed as "X t"
+---
