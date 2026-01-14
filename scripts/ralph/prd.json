@@ -204,7 +204,7 @@
         "Build passes with no TypeScript errors",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003d3",

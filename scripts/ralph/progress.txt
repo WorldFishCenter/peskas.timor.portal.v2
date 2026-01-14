@@ -264,3 +264,15 @@ Thread: https://ampcode.com/threads/T-019bbb44-dcfd-74b8-ad30-b673f675ad6f
   - Table calculations match Shiny mod_home_table.R: median for per-trip values, sum for totals, mean for price_kg
   - Revenue is divided by 1M and displayed as "$X M", catch divided by 1000 and displayed as "X t"
 ---
+
+## 2026-01-14 - US-003d2
+Thread: https://ampcode.com/threads/T-019bbb47-7e50-71cf-a04a-00637f46e53c
+- Imported SummaryTable component into Home.tsx
+- Replaced placeholder div with SummaryTable component
+- Table displays in grid below donut charts
+- Build passes with no TypeScript errors
+- Files changed: src/pages/Home.tsx
+- **Learnings for future iterations:**
+  - SummaryTable is a named export, use `{ SummaryTable }` import syntax
+  - Component handles its own loading/error states internally
+---

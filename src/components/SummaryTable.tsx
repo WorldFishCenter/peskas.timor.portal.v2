@@ -11,6 +11,46 @@ interface MunicipalSummary {
   price_kg: number;
 }
 
+const TAB_PALETTE = ['#ffffff', '#f2fbd2', '#c9ecb4', '#93d3ab', '#35b0ab'];
+
+function interpolateColor(colors: string[], t: number): string {
+  const n = colors.length - 1;
+  const i = Math.min(Math.floor(t * n), n - 1);
+  const f = t * n - i;
+  
+  const c1 = colors[i];
+  const c2 = colors[i + 1];
+  
+  const r1 = parseInt(c1.slice(1, 3), 16);
+  const g1 = parseInt(c1.slice(3, 5), 16);
+  const b1 = parseInt(c1.slice(5, 7), 16);
+  
+  const r2 = parseInt(c2.slice(1, 3), 16);
+  const g2 = parseInt(c2.slice(3, 5), 16);
+  const b2 = parseInt(c2.slice(5, 7), 16);
+  
+  const r = Math.round(r1 + f * (r2 - r1));
+  const g = Math.round(g1 + f * (g2 - g1));
+  const b = Math.round(b1 + f * (b2 - b1));
+  
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+function normalize(value: number, values: number[]): number {
+  const valid = values.filter(v => !isNaN(v));
+  if (valid.length === 0) return 0.5;
+  const min = Math.min(...valid);
+  const max = Math.max(...valid);
+  if (min === max) return 0.5;
+  const normalized = (value - min) / (max - min);
+  return Math.max(0, Math.min(1, isNaN(normalized) ? 0.5 : normalized));
+}
+
+function biasedNormalize(value: number, values: number[], bias: number = 2): number {
+  const n = normalize(value, values);
+  return Math.pow(n, 1 / bias);
+}
+
 export function SummaryTable() {
   const { data: municipalData, loading, error } = useData('municipal_aggregated');
 
@@ -64,13 +104,27 @@ export function SummaryTable() {
       landing_revenue: Math.round(median(values.landing_revenues) * 100) / 100,
       landing_weight: Math.round(median(values.landing_weights) * 100) / 100,
       n_landings_per_boat: Math.round(median(values.n_landings_per_boats) * 100) / 100,
-      revenue: Math.round(sum(values.revenues) / 1000000 * 100) / 100, // Convert to millions
-      catch: Math.round(sum(values.catches) / 1000 * 100) / 100, // Convert to tons
+      revenue: Math.round(sum(values.revenues) / 1000000 * 100) / 100,
+      catch: Math.round(sum(values.catches) / 1000 * 100) / 100,
       price_kg: Math.round(mean(values.price_kgs) * 100) / 100,
     }));
 
     return result.sort((a, b) => a.region.localeCompare(b.region));
   }, [municipalData]);
+
+  const columnValues = useMemo(() => ({
+    landing_revenue: summaryData.map(r => r.landing_revenue),
+    landing_weight: summaryData.map(r => r.landing_weight),
+    n_landings_per_boat: summaryData.map(r => r.n_landings_per_boat),
+    revenue: summaryData.map(r => r.revenue),
+    catch: summaryData.map(r => r.catch),
+    price_kg: summaryData.map(r => r.price_kg),
+  }), [summaryData]);
+
+  const getCellStyle = (value: number, values: number[]) => {
+    const t = biasedNormalize(value, values);
+    return { backgroundColor: interpolateColor(TAB_PALETTE, t) };
+  };
 
   if (loading) {
     return (
@@ -90,28 +144,40 @@ export function SummaryTable() {
 
   return (
     <div className="table-responsive">
-      <table className="table table-vcenter">
+      <table className="table table-vcenter table-hover" style={{ fontSize: '0.875rem' }}>
         <thead>
           <tr>
-            <th>Municipality</th>
-            <th className="text-center">Revenue per trip</th>
-            <th className="text-center">Landings per boat</th>
-            <th className="text-center">Catch per trip</th>
-            <th className="text-center">Total revenue</th>
-            <th className="text-center">Total catch</th>
-            <th className="text-center">Price per kg</th>
+            <th style={{ minWidth: 140 }}>Municipality</th>
+            <th className="text-center" style={{ minWidth: 100 }}>Revenue per trip</th>
+            <th className="text-center" style={{ minWidth: 100 }}>Landings per boat</th>
+            <th className="text-center" style={{ minWidth: 100 }}>Catch per trip</th>
+            <th className="text-center" style={{ minWidth: 100 }}>Total revenue</th>
+            <th className="text-center" style={{ minWidth: 100 }}>Total catch</th>
+            <th className="text-center" style={{ minWidth: 100 }}>Price per kg</th>
           </tr>
         </thead>
         <tbody>
           {summaryData.map((row) => (
             <tr key={row.region}>
-              <td>{row.region}</td>
-              <td className="text-center">${row.landing_revenue}</td>
-              <td className="text-center">{row.n_landings_per_boat}</td>
-              <td className="text-center">{row.landing_weight} kg</td>
-              <td className="text-center">${row.revenue} M</td>
-              <td className="text-center">{row.catch} t</td>
-              <td className="text-center">${row.price_kg}</td>
+              <td className="text-center">{row.region}</td>
+              <td className="text-center" style={getCellStyle(row.landing_revenue, columnValues.landing_revenue)}>
+                ${row.landing_revenue.toFixed(2)}
+              </td>
+              <td className="text-center" style={getCellStyle(row.n_landings_per_boat, columnValues.n_landings_per_boat)}>
+                {row.n_landings_per_boat.toFixed(2)}
+              </td>
+              <td className="text-center" style={getCellStyle(row.landing_weight, columnValues.landing_weight)}>
+                {row.landing_weight.toFixed(2)} kg
+              </td>
+              <td className="text-center" style={getCellStyle(row.revenue, columnValues.revenue)}>
+                ${row.revenue.toFixed(2)} M
+              </td>
+              <td className="text-center" style={getCellStyle(row.catch, columnValues.catch)}>
+                {row.catch.toFixed(2)} t
+              </td>
+              <td className="text-center" style={getCellStyle(row.price_kg, columnValues.price_kg)}>
+                ${row.price_kg.toFixed(2)}
+              </td>
             </tr>
           ))}
         </tbody>
