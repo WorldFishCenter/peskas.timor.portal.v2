@@ -72,13 +72,13 @@ export default function TimeSeriesChart({
     )
   }
 
-  const apexSeries = series.map((s) => ({
+  const apexSeries = useMemo(() => series.map((s) => ({
     name: s.name,
     data: s.data.map((d) => ({
       x: d.date,
       y: d.value,
     })),
-  }))
+  })), [series])
 
   const annotations = useMemo(() => {
     const lines: any[] = []

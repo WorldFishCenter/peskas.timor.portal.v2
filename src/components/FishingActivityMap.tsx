@@ -225,7 +225,6 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
             initialViewState={INITIAL_VIEW_STATE}
             controller={true}
             layers={layers}
-            useDevicePixels={true} // Reverting to true to avoid WebGL dimension mismatches
           >
             <Map mapStyle={mapStyle} mapLib={maplibregl} />
           </DeckGL>

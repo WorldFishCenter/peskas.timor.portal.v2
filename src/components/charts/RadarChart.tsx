@@ -22,6 +22,17 @@ export default function RadarChart({
   colors = spiderColors,
   yFormatter = (val) => `$${val.toFixed(2)}`,
 }: RadarChartProps) {
+  if (!series || series.length === 0 || !categories || categories.length === 0) {
+    return (
+      <div
+        className="d-flex align-items-center justify-content-center"
+        style={{ height: `${height}px`, color: '#999' }}
+      >
+        No data available
+      </div>
+    )
+  }
+
   const options: ApexOptions = {
     chart: {
       type: 'radar',

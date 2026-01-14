@@ -17,6 +17,8 @@ export default function StackedBarChart({
   yFormatter = (val: number) => `${val}%`,
 }: StackedBarChartProps) {
   const chartData = useMemo(() => {
+    if (!data || data.length === 0) return { series: [], categories: [] }
+
     // Get unique municipalities and catch_preservation types
     const municipalities = [...new Set(data.map((d) => d.municipality))].sort()
     const preservationTypes = [...new Set(data.map((d) => d.catch_preservation))].sort()
@@ -35,7 +37,15 @@ export default function StackedBarChart({
     return { series, categories: municipalities }
   }, [data])
 
-  const options: ApexOptions = {
+  if (chartData.series.length === 0) {
+    return (
+      <div className="d-flex align-items-center justify-content-center" style={{ height: `${height}px` }}>
+        <div className="text-muted small">No data available</div>
+      </div>
+    )
+  }
+
+  const options: ApexOptions = useMemo(() => ({
     chart: {
       type: 'bar',
       stacked: true,
@@ -72,12 +82,14 @@ export default function StackedBarChart({
         formatter: yFormatter,
       },
     },
-  }
+  }), [chartData.categories, yFormatter, colors])
+
+  const series = useMemo(() => chartData.series, [chartData.series])
 
   return (
     <ReactApexChart
       options={options}
-      series={chartData.series}
+      series={series}
       type="bar"
       height={height}
     />

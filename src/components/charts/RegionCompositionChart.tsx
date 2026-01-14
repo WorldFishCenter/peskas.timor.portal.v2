@@ -74,6 +74,17 @@ export default function RegionCompositionChart({
     return { series: sortedSeries, categories: regions }
   }, [data, taxaNameMap, year])
 
+  if (chartData.series.length === 0) {
+    return (
+      <div
+        className="d-flex align-items-center justify-content-center"
+        style={{ height: `${height}px`, color: '#999' }}
+      >
+        {t('common.no_data', { defaultValue: 'No data available' })}
+      </div>
+    )
+  }
+
   const options: ApexOptions = {
     chart: {
       type: 'bar',

@@ -45,6 +45,17 @@ export default function TaxaBarChart({
       .sort((a, b) => b.catch - a.catch)
   }, [data, taxaNameMap, year])
 
+  if (chartData.length === 0) {
+    return (
+      <div
+        className="d-flex align-items-center justify-content-center"
+        style={{ height: `${height}px`, color: '#999' }}
+      >
+        {t('common.no_data', { defaultValue: 'No data available' })}
+      </div>
+    )
+  }
+
   const catchLabel = t('catch.catch_t', { defaultValue: 'Catch (tons)' })
   const tonsLabel = t('units.tons', { defaultValue: 'tons' })
 
