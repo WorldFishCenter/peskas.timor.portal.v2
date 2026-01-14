@@ -51,13 +51,22 @@ function biasedNormalize(value: number, values: number[], bias: number = 2): num
   return Math.pow(n, 1 / bias);
 }
 
-export function SummaryTable() {
+interface SummaryTableProps {
+  municipality?: string;
+}
+
+export function SummaryTable({ municipality = 'all' }: SummaryTableProps) {
   const { t } = useI18n();
   const { data: municipalData, loading, error } = useData('municipal_aggregated');
   const { data: pars } = useData('pars');
 
   const summaryData = useMemo(() => {
     if (!municipalData) return [];
+
+    // Filter by municipality if specified
+    const filteredData = municipality === 'all' 
+      ? municipalData 
+      : municipalData.filter((record) => record.region.toLowerCase() === municipality.toLowerCase());
 
     type GroupedData = Record<string, {
       landing_revenues: number[];
@@ -69,7 +78,7 @@ export function SummaryTable() {
     }>;
 
     const grouped: GroupedData = {};
-    for (const record of municipalData) {
+    for (const record of filteredData) {
       if (!grouped[record.region]) {
         grouped[record.region] = {
           landing_revenues: [],
@@ -112,7 +121,7 @@ export function SummaryTable() {
     }));
 
     return result.sort((a, b) => a.region.localeCompare(b.region));
-  }, [municipalData]);
+  }, [municipalData, municipality]);
 
   const columnValues = useMemo(() => ({
     landing_revenue: summaryData.map(r => r.landing_revenue),

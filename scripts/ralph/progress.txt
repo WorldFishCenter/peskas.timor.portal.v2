@@ -85,3 +85,20 @@ Thread: https://ampcode.com/threads/T-019bbc25-e1dd-72c6-95b2-b47ba04cd08d
   - Use useMemo for derived data that depends on filters
   - Dropdown filters don't need debounce (only text inputs do)
 ---
+
+## 2026-01-14 - US-011b1, US-011b2
+Thread: https://ampcode.com/threads/T-019bbc25-e1dd-72c6-95b2-b47ba04cd08d
+- US-011b1: Connected Home page to global filters
+  - Added useFilters hook to Home.tsx
+  - Added MunicipalityFilter to summary table card header
+  - Updated SummaryTable component to accept municipality prop
+  - SummaryTable now filters data by municipality when not 'all'
+- US-011b2: Verified Composition and Catch already use FilterContext
+  - Composition page updated in US-004c2 to filter treemap by municipality
+  - Catch page already had FilterContext from previous iteration
+- Files changed: src/pages/Home.tsx, src/components/SummaryTable.tsx
+- **Learnings for future iterations:**
+  - SummaryTable accepts optional municipality prop to filter displayed rows
+  - Donut charts show regional breakdown (by Area), not municipality-filtered data
+  - Use card-actions div in card-header for inline filter controls
+---

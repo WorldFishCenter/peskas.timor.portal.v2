@@ -523,7 +523,7 @@
         "Filter behavior matches Shiny",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-011b2",
@@ -534,7 +534,7 @@
         "Charts respond to filter changes",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-011b3",
