@@ -7,6 +7,9 @@ import {
 } from '@tanstack/react-table'
 import { useData } from '../hooks/useData'
 import { useI18n } from '../i18n'
+import { useTheme } from '../hooks/useTheme'
+import { tabPalette } from '../constants/colors'
+import { getHeatmapStyle } from '../utils/table'
 
 interface CatchTableRow {
   month: string
@@ -18,6 +21,7 @@ interface CatchTableRow {
 
 export default function CatchSummaryTable() {
   const { t, lang } = useI18n()
+  const theme = useTheme()
   const locale = lang === 'tet' ? 'tet' : 'en-US'
   const { data: aggregated, loading } = useData('aggregated')
   const [selectedYear, setSelectedYear] = useState<string>('all')
@@ -45,6 +49,13 @@ export default function CatchSummaryTable() {
       }))
   }, [aggregated, selectedYear, locale])
 
+  const columnValues = useMemo(() => ({
+    catch: tableData.map(r => r.catch),
+    recorded_catch: tableData.map(r => r.recorded_catch),
+    landing_weight: tableData.map(r => r.landing_weight),
+    n_landings_per_boat: tableData.map(r => r.n_landings_per_boat),
+  }), [tableData])
+
   const years = useMemo(() => {
     if (!aggregated?.month) return []
     const uniqueYears = [...new Set(aggregated.month.map(row =>
@@ -64,24 +75,36 @@ export default function CatchSummaryTable() {
         accessorKey: 'catch',
         header: t('vars.catch.short_name', { defaultValue: 'Catch (t)' }),
         cell: info => (info.getValue() as number).toFixed(1),
+        meta: {
+          style: (value: number) => getHeatmapStyle(value, columnValues.catch, theme, tabPalette),
+        },
       },
       {
         accessorKey: 'recorded_catch',
         header: t('vars.recorded_catch.short_name', { defaultValue: 'Recorded catch (t)' }),
         cell: info => (info.getValue() as number).toFixed(1),
+        meta: {
+          style: (value: number) => getHeatmapStyle(value, columnValues.recorded_catch, theme, tabPalette),
+        },
       },
       {
         accessorKey: 'landing_weight',
         header: t('vars.landing_weight.short_name', { defaultValue: 'Catch per trip (kg)' }),
         cell: info => (info.getValue() as number).toFixed(1),
+        meta: {
+          style: (value: number) => getHeatmapStyle(value, columnValues.landing_weight, theme, tabPalette),
+        },
       },
       {
         accessorKey: 'n_landings_per_boat',
         header: t('vars.n_landings_per_boat.short_name', { defaultValue: 'Trips per boat' }),
         cell: info => (info.getValue() as number).toFixed(1),
+        meta: {
+          style: (value: number) => getHeatmapStyle(value, columnValues.n_landings_per_boat, theme, tabPalette),
+        },
       },
     ],
-    [t]
+    [t, columnValues, theme]
   )
 
   const table = useReactTable({
@@ -143,14 +166,20 @@ export default function CatchSummaryTable() {
               <tbody>
                 {table.getRowModel().rows.map(row => (
                   <tr key={row.id}>
-                    {row.getVisibleCells().map(cell => (
-                      <td key={cell.id}>
-                        {flexRender(
-                          cell.column.columnDef.cell,
-                          cell.getContext()
-                        )}
-                      </td>
-                    ))}
+                    {row.getVisibleCells().map(cell => {
+                      const value = cell.getValue();
+                      const meta = cell.column.columnDef.meta as { style?: (val: any) => React.CSSProperties };
+                      const style = meta?.style ? meta.style(value) : {};
+                      
+                      return (
+                        <td key={cell.id} style={style}>
+                          {flexRender(
+                            cell.column.columnDef.cell,
+                            cell.getContext()
+                          )}
+                        </td>
+                      )
+                    })}
                   </tr>
                 ))}
               </tbody>

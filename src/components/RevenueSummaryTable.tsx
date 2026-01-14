@@ -7,6 +7,9 @@ import {
 } from '@tanstack/react-table'
 import { useData } from '../hooks/useData'
 import { useI18n } from '../i18n'
+import { useTheme } from '../hooks/useTheme'
+import { tabPalette } from '../constants/colors'
+import { getHeatmapStyle } from '../utils/table'
 
 interface RevenueTableRow {
   month: string
@@ -18,6 +21,7 @@ interface RevenueTableRow {
 
 export default function RevenueSummaryTable() {
   const { t, lang } = useI18n()
+  const theme = useTheme()
   const locale = lang === 'tet' ? 'tet' : 'en-US'
   const { data: aggregated, loading } = useData('aggregated')
   const [selectedYear, setSelectedYear] = useState<string>('all')
@@ -45,6 +49,13 @@ export default function RevenueSummaryTable() {
       }))
   }, [aggregated, selectedYear, locale])
 
+  const columnValues = useMemo(() => ({
+    revenue: tableData.map(r => r.revenue),
+    recorded_revenue: tableData.map(r => r.recorded_revenue),
+    landing_revenue: tableData.map(r => r.landing_revenue),
+    n_landings_per_boat: tableData.map(r => r.n_landings_per_boat),
+  }), [tableData])
+
   const years = useMemo(() => {
     if (!aggregated?.month) return []
     const uniqueYears = [...new Set(aggregated.month.map(row =>
@@ -62,26 +73,38 @@ export default function RevenueSummaryTable() {
       },
       {
         accessorKey: 'revenue',
-        header: t('vars.revenue.short_name', { defaultValue: 'Revenue (M USD)' }),
-        cell: info => '$' + (info.getValue() as number).toFixed(2),
+        header: t('vars.revenue.short_name', { defaultValue: 'Revenue ($M)' }),
+        cell: info => (info.getValue() as number).toFixed(2),
+        meta: {
+          style: (value: number) => getHeatmapStyle(value, columnValues.revenue, theme, tabPalette),
+        },
       },
       {
         accessorKey: 'recorded_revenue',
-        header: t('vars.recorded_revenue.short_name', { defaultValue: 'Recorded revenue (M USD)' }),
-        cell: info => '$' + (info.getValue() as number).toFixed(2),
+        header: t('vars.recorded_revenue.short_name', { defaultValue: 'Recorded ($M)' }),
+        cell: info => (info.getValue() as number).toFixed(2),
+        meta: {
+          style: (value: number) => getHeatmapStyle(value, columnValues.recorded_revenue, theme, tabPalette),
+        },
       },
       {
         accessorKey: 'landing_revenue',
-        header: t('vars.landing_revenue.short_name', { defaultValue: 'Revenue per trip (USD)' }),
-        cell: info => '$' + (info.getValue() as number).toFixed(1),
+        header: t('vars.landing_revenue.short_name', { defaultValue: 'Revenue per trip ($)' }),
+        cell: info => (info.getValue() as number).toFixed(2),
+        meta: {
+          style: (value: number) => getHeatmapStyle(value, columnValues.landing_revenue, theme, tabPalette),
+        },
       },
       {
         accessorKey: 'n_landings_per_boat',
         header: t('vars.n_landings_per_boat.short_name', { defaultValue: 'Trips per boat' }),
-        cell: info => (info.getValue() as number).toFixed(1),
+        cell: info => (info.getValue() as number).toFixed(2),
+        meta: {
+          style: (value: number) => getHeatmapStyle(value, columnValues.n_landings_per_boat, theme, tabPalette),
+        },
       },
     ],
-    [t]
+    [t, columnValues, theme]
   )
 
   const table = useReactTable({
@@ -143,14 +166,20 @@ export default function RevenueSummaryTable() {
               <tbody>
                 {table.getRowModel().rows.map(row => (
                   <tr key={row.id}>
-                    {row.getVisibleCells().map(cell => (
-                      <td key={cell.id}>
-                        {flexRender(
-                          cell.column.columnDef.cell,
-                          cell.getContext()
-                        )}
-                      </td>
-                    ))}
+                    {row.getVisibleCells().map(cell => {
+                      const value = cell.getValue();
+                      const meta = cell.column.columnDef.meta as { style?: (val: any) => React.CSSProperties };
+                      const style = meta?.style ? meta.style(value) : {};
+                      
+                      return (
+                        <td key={cell.id} style={style}>
+                          {flexRender(
+                            cell.column.columnDef.cell,
+                            cell.getContext()
+                          )}
+                        </td>
+                      )
+                    })}
                   </tr>
                 ))}
               </tbody>

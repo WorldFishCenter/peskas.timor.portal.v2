@@ -11,6 +11,7 @@ import { useData } from '../hooks';
 import { tabPalette } from '../constants/colors';
 import { useI18n } from '../i18n';
 import { useTheme } from '../hooks/useTheme';
+import { getHeatmapStyle } from '../utils/table';
 
 interface MunicipalSummary {
   region: string;
@@ -25,44 +26,6 @@ interface MunicipalSummary {
 interface SummaryTableProps {
   title?: string;
   caption?: string;
-}
-
-function interpolateColor(colors: string[], t: number, opacity: number = 1): string {
-  const n = colors.length - 1;
-  const i = Math.min(Math.floor(t * n), n - 1);
-  const f = t * n - i;
-
-  const c1 = colors[i];
-  const c2 = colors[i + 1];
-
-  const r1 = parseInt(c1.slice(1, 3), 16);
-  const g1 = parseInt(c1.slice(3, 5), 16);
-  const b1 = parseInt(c1.slice(5, 7), 16);
-
-  const r2 = parseInt(c2.slice(1, 3), 16);
-  const g2 = parseInt(c2.slice(3, 5), 16);
-  const b2 = parseInt(c2.slice(5, 7), 16);
-
-  const r = Math.round(r1 + f * (r2 - r1));
-  const g = Math.round(g1 + f * (g2 - g1));
-  const b = Math.round(b1 + f * (b2 - b1));
-
-  return `rgba(${r}, ${g}, ${b}, ${opacity})`;
-}
-
-function normalize(value: number, values: number[]): number {
-  const valid = values.filter(v => !isNaN(v));
-  if (valid.length === 0) return 0.5;
-  const min = Math.min(...valid);
-  const max = Math.max(...valid);
-  if (min === max) return 0.5;
-  const normalized = (value - min) / (max - min);
-  return Math.max(0, Math.min(1, isNaN(normalized) ? 0.5 : normalized));
-}
-
-function biasedNormalize(value: number, values: number[], bias: number = 2): number {
-  const n = normalize(value, values);
-  return Math.pow(n, 1 / bias);
 }
 
 export function SummaryTable({ title, caption }: SummaryTableProps) {
@@ -146,15 +109,6 @@ export function SummaryTable({ title, caption }: SummaryTableProps) {
     price_kg: summaryData.map(r => r.price_kg),
   }), [summaryData]);
 
-  const getCellStyle = (value: number, values: number[]) => {
-    const t = biasedNormalize(value, values);
-    const opacity = theme === 'dark' ? 0.5 : 0.6;
-    return {
-      backgroundColor: interpolateColor(tabPalette, t, opacity),
-      color: theme === 'dark' ? '#fff' : 'inherit',
-    };
-  };
-
   const columns = useMemo<ColumnDef<MunicipalSummary>[]>(
     () => [
       {
@@ -167,7 +121,7 @@ export function SummaryTable({ title, caption }: SummaryTableProps) {
         header: t('table.revenue_per_trip'),
         cell: info => `$${(info.getValue() as number).toFixed(2)}`,
         meta: {
-          getCellStyle: (value: number) => getCellStyle(value, columnValues.landing_revenue),
+          style: (value: number) => getHeatmapStyle(value, columnValues.landing_revenue, theme, tabPalette),
         },
       },
       {
@@ -175,7 +129,7 @@ export function SummaryTable({ title, caption }: SummaryTableProps) {
         header: t('table.landings_per_boat'),
         cell: info => (info.getValue() as number).toFixed(2),
         meta: {
-          getCellStyle: (value: number) => getCellStyle(value, columnValues.n_landings_per_boat),
+          style: (value: number) => getHeatmapStyle(value, columnValues.n_landings_per_boat, theme, tabPalette),
         },
       },
       {
@@ -183,7 +137,7 @@ export function SummaryTable({ title, caption }: SummaryTableProps) {
         header: t('table.catch_per_trip'),
         cell: info => `${(info.getValue() as number).toFixed(2)} ${t('units.kg', { defaultValue: 'kg' })}`,
         meta: {
-          getCellStyle: (value: number) => getCellStyle(value, columnValues.landing_weight),
+          style: (value: number) => getHeatmapStyle(value, columnValues.landing_weight, theme, tabPalette),
         },
       },
       {
@@ -191,7 +145,7 @@ export function SummaryTable({ title, caption }: SummaryTableProps) {
         header: t('table.total_revenue'),
         cell: info => `$${(info.getValue() as number).toFixed(2)} ${t('units.million_short', { defaultValue: 'M' })}`,
         meta: {
-          getCellStyle: (value: number) => getCellStyle(value, columnValues.revenue),
+          style: (value: number) => getHeatmapStyle(value, columnValues.revenue, theme, tabPalette),
         },
       },
       {
@@ -199,7 +153,7 @@ export function SummaryTable({ title, caption }: SummaryTableProps) {
         header: t('table.total_catch'),
         cell: info => `${(info.getValue() as number).toFixed(2)} ${t('units.t', { defaultValue: 't' })}`,
         meta: {
-          getCellStyle: (value: number) => getCellStyle(value, columnValues.catch),
+          style: (value: number) => getHeatmapStyle(value, columnValues.catch, theme, tabPalette),
         },
       },
       {
@@ -207,7 +161,7 @@ export function SummaryTable({ title, caption }: SummaryTableProps) {
         header: t('table.price_per_kg'),
         cell: info => `$${(info.getValue() as number).toFixed(2)}`,
         meta: {
-          getCellStyle: (value: number) => getCellStyle(value, columnValues.price_kg),
+          style: (value: number) => getHeatmapStyle(value, columnValues.price_kg, theme, tabPalette),
         },
       },
     ],
@@ -227,16 +181,21 @@ export function SummaryTable({ title, caption }: SummaryTableProps) {
 
   if (loading) {
     return (
-      <div className="text-muted text-center py-4">
-        {t('table.loading')}
+      <div className="card shadow-sm border-0">
+        <div className="card-body py-5 text-center">
+          <div className="spinner-border text-primary" role="status" />
+          <div className="text-muted mt-2">{t('table.loading')}</div>
+        </div>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="text-danger text-center py-4">
-        {t('table.error')}
+      <div className="card shadow-sm border-0">
+        <div className="card-body py-5 text-center text-danger">
+          {t('table.error')}
+        </div>
       </div>
     );
   }
@@ -248,7 +207,7 @@ export function SummaryTable({ title, caption }: SummaryTableProps) {
           <div>
             <h3 className="card-title fw-bold">{title}</h3>
             {caption && (
-              <div className="text-muted mt-1" style={{ fontSize: '0.75rem', lineHeight: '1.4' }}>
+              <div className="text-muted mt-1" style={{ fontSize: '0.7rem', lineHeight: '1.4' }}>
                 {caption}
               </div>
             )}
@@ -295,8 +254,8 @@ export function SummaryTable({ title, caption }: SummaryTableProps) {
               {table.getRowModel().rows.map(row => (
                 <tr key={row.id}>
                   {row.getVisibleCells().map(cell => {
-                    const cellMeta = cell.column.columnDef.meta as { getCellStyle?: (value: number) => React.CSSProperties };
-                    const cellStyle = cellMeta?.getCellStyle ? cellMeta.getCellStyle(cell.getValue() as number) : {};
+                    const cellMeta = cell.column.columnDef.meta as { style?: (value: number) => React.CSSProperties };
+                    const cellStyle = cellMeta?.style ? cellMeta.style(cell.getValue() as number) : {};
 
                     return (
                       <td
