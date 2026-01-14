@@ -361,7 +361,7 @@
         "Cards responsive in grid",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-006a1",
@@ -373,7 +373,7 @@
         "Grid structure for charts",
         "No TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-006a2",
@@ -386,7 +386,7 @@
         "Colors match Shiny palette",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-007a1",
@@ -398,7 +398,7 @@
         "Grid structure for charts",
         "No TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-007a2",
@@ -411,7 +411,7 @@
         "Colors match Shiny",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-008a1",
@@ -423,7 +423,7 @@
         "Grid structure for charts",
         "No TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-008a2",
@@ -436,7 +436,7 @@
         "Data formatting correct (currency, multipliers)",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-009a1",
@@ -448,7 +448,7 @@
         "No TypeScript errors after installation",
         "Build passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-009a2",
