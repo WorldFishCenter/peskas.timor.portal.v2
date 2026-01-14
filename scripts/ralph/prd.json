@@ -180,7 +180,7 @@
         "All 3 donut charts use donutBlue palette",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003d1",

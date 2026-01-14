@@ -238,3 +238,14 @@ Thread: https://ampcode.com/threads/T-019bbb33-8ee5-763c-8a91-f5ae5b059e71
   - Color constants file created at src/constants/colors.ts for all chart color palettes
   - Other palettes (habitatPalette, tabPalette, spiderColors, viridis, heatmapColors) to be added in US-012a2
 ---
+
+## 2026-01-14 - US-003c5
+Thread: https://ampcode.com/threads/T-019bbb34-a8ba-7248-8b25-14ff37a0a830
+- Imported donutBlue colors from src/constants/colors.ts into Home.tsx
+- Applied donutBlue palette to all 3 DonutChart components (trips, revenue, catch)
+- Build passes with no TypeScript errors
+- Files changed: src/pages/Home.tsx
+- **Learnings for future iterations:**
+  - DonutChart component accepts colors prop as string array
+  - Color constants should be imported from src/constants/colors.ts for consistency
+---
