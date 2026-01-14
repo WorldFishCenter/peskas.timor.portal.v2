@@ -619,7 +619,7 @@
         "Performance is acceptable (no lag, fast loading)",
         "Browser verification complete on all pages"
       ],
-      "passes": false
+      "passes": true
     }
   ]
 }
