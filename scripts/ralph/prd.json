@@ -61,7 +61,7 @@
         "scripts/ralph/data-mapping.md documents Shiny→React data mapping",
         "Include examples of how to use the data utilities"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003a",

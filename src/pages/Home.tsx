@@ -1,104 +1,189 @@
 import { useI18n } from '../i18n'
-import ReactApexChart from 'react-apexcharts'
-import type { ApexOptions } from 'apexcharts'
-import { useEffect, useRef } from 'react'
-import L from 'leaflet'
+import { useData } from '../hooks/useData'
 
 export default function Home() {
   const { t } = useI18n()
+  const { data: pars, loading } = useData('pars')
 
-  const donut = {
-    series: [44, 33, 23],
-    options: {
-      chart: { type: 'donut' },
-      labels: [t('home.trips'), t('home.revenue'), t('home.catch')],
-      legend: { show: true },
-      dataLabels: { enabled: false },
-      stroke: { width: 0 },
-    } as ApexOptions,
-  }
-
-  const mapRef = useRef<L.Map | null>(null)
-  const containerRef = useRef<HTMLDivElement | null>(null)
-
-  useEffect(() => {
-    if (!mapRef.current && containerRef.current) {
-      mapRef.current = L.map(containerRef.current, {
-        center: [-8.5569, 125.5603],
-        zoom: 8,
-        scrollWheelZoom: false,
-      })
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors',
-      }).addTo(mapRef.current)
-      L.marker([-8.56, 125.56]).addTo(mapRef.current).bindPopup(t('home.marker'))
-    }
-    return () => {
-      mapRef.current?.remove()
-      mapRef.current = null
-    }
-  }, [t])
+  const introTitle = pars?.home?.intro?.title ?? ''
+  const introContent = pars?.home?.intro?.content ?? ''
+  const reportText = pars?.home?.report?.text ?? t('home.download_report')
+  const mapTitle = pars?.home?.map?.title ?? t('home.fishing_map')
+  const tableTitle = pars?.home?.table?.title ?? t('home.summary_table')
 
   return (
     <>
-      <div className="page-header d-print-none">
+      {/* Intro Section */}
+      <div className="page-body">
         <div className="container-xl">
-          <div className="row g-2 align-items-center">
-            <div className="col">
-              <div className="page-pretitle">{t('header.overview')}</div>
-              <h2 className="page-title">{t('nav.home')}</h2>
+          <div className="row align-items-center">
+            <div className="col-10">
+              {loading ? (
+                <div className="placeholder-glow">
+                  <span className="placeholder col-6"></span>
+                </div>
+              ) : (
+                <>
+                  <h3 className="h1">{introTitle}</h3>
+                  <div className="markdown text-muted">
+                    {introContent}
+                  </div>
+                  <div className="mt-3">
+                    <a
+                      href="https://storage.googleapis.com/public-timor/data_report.html"
+                      className="btn btn-primary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="icon icon-tabler icon-tabler-download me-1"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        strokeWidth="2"
+                        stroke="currentColor"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                        <path d="M7 11l5 5l5 -5" />
+                        <path d="M12 4l0 12" />
+                      </svg>
+                      {reportText}
+                    </a>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>
       </div>
-      <div className="page-body">
+
+      {/* Main Content Grid */}
+      <div className="page-body pt-0">
         <div className="container-xl">
           <div className="row row-cards">
-            <div className="col-lg-8 col-xl-8">
-              <div className="card">
-                <div className="card-header"><h3 className="card-title">{t('home.fishing_map')}</h3></div>
-                <div className="card-body">
-                  <div ref={containerRef} style={{ height: 420, width: '100%' }} />
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-xl-4">
-              <div className="row row-cards">
-                <div className="col-12">
-                  <div className="card">
-                    <div className="card-body">
-                      <ReactApexChart options={donut.options} series={donut.series} type="donut" height={220} />
-                    </div>
-                  </div>
-                </div>
-                <div className="col-12">
-                  <div className="card">
-                    <div className="card-body">
-                      <ReactApexChart options={donut.options} series={donut.series} type="donut" height={220} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {/* Fishing Map - Full width card */}
             <div className="col-12">
               <div className="card">
-                <div className="card-header"><h3 className="card-title">{t('home.summary_table')}</h3></div>
+                <div className="card-header">
+                  <h3 className="card-title">{mapTitle}</h3>
+                </div>
                 <div className="card-body">
-                  <div className="table-responsive">
-                    <table className="table table-vcenter">
-                      <thead>
-                        <tr>
-                          <th>{t('home.indicator')}</th>
-                          <th>{t('home.value')}</th>
-                          <th>{t('home.change')}</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr><td>{t('home.trips')}</td><td>1,245</td><td><span className="text-green">+4.5%</span></td></tr>
-                        <tr><td>{t('home.revenue')}</td><td>$12.3k</td><td><span className="text-green">+3.2%</span></td></tr>
-                        <tr><td>{t('home.catch')}</td><td>42t</td><td><span className="text-yellow">+0.8%</span></td></tr>
-                      </tbody>
-                    </table>
+                  {/* Map placeholder - will be implemented in US-003b */}
+                  <div
+                    style={{
+                      height: 420,
+                      width: '100%',
+                      background: '#f4f6fa',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      borderRadius: 4,
+                    }}
+                  >
+                    <span className="text-muted">
+                      Map will be implemented in US-003b
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 3 Donut Charts Row */}
+            <div className="col-md-4">
+              <div className="card">
+                <div className="card-header">
+                  <h3 className="card-title">{t('home.trips')}</h3>
+                </div>
+                <div className="card-body">
+                  {/* Donut chart placeholder - will be implemented in US-003c */}
+                  <div
+                    style={{
+                      height: '16rem',
+                      background: '#f4f6fa',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      borderRadius: 4,
+                    }}
+                  >
+                    <span className="text-muted">Trips Donut</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-4">
+              <div className="card">
+                <div className="card-header">
+                  <h3 className="card-title">{t('home.revenue')}</h3>
+                </div>
+                <div className="card-body">
+                  {/* Donut chart placeholder - will be implemented in US-003c */}
+                  <div
+                    style={{
+                      height: '16rem',
+                      background: '#f4f6fa',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      borderRadius: 4,
+                    }}
+                  >
+                    <span className="text-muted">Revenue Donut</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-4">
+              <div className="card">
+                <div className="card-header">
+                  <h3 className="card-title">{t('home.catch')}</h3>
+                </div>
+                <div className="card-body">
+                  {/* Donut chart placeholder - will be implemented in US-003c */}
+                  <div
+                    style={{
+                      height: '16rem',
+                      background: '#f4f6fa',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      borderRadius: 4,
+                    }}
+                  >
+                    <span className="text-muted">Catch Donut</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Summary Table - Full width */}
+            <div className="col-12">
+              <div className="card">
+                <div className="card-header">
+                  <h3 className="card-title">{tableTitle}</h3>
+                </div>
+                <div className="card-body">
+                  {/* Table placeholder - will be implemented in US-003d */}
+                  <div
+                    style={{
+                      height: 200,
+                      background: '#f4f6fa',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      borderRadius: 4,
+                    }}
+                  >
+                    <span className="text-muted">
+                      Summary table will be implemented in US-003d
+                    </span>
                   </div>
                 </div>
               </div>

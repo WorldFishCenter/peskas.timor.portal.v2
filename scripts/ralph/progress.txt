@@ -51,3 +51,17 @@ Thread: https://ampcode.com/threads/T-019bbaf1-802a-73fc-919d-6f72e06ece45
   - tsconfig has erasableSyntaxOnly enabled - don't use parameter properties in class constructors
   - Data files are in /data/ path (public/data/ in source, served as /data/)
 ---
+
+## 2026-01-14 - US-002d
+Thread: https://ampcode.com/threads/T-019bbaf4-bdd8-7766-9239-6226b088fbc7
+- Created src/components/DataTest.tsx with complete data loading example
+- Created src/pages/DataTestPage.tsx to display the test component
+- Added /data-test route to App.tsx
+- Updated scripts/ralph/data-mapping.md with correct import paths and examples
+- Test component loads 4 files: aggregated, summary_data, pars, taxa_names
+- Files changed: src/components/DataTest.tsx, src/pages/DataTestPage.tsx, src/App.tsx, scripts/ralph/data-mapping.md
+- **Learnings for future iterations:**
+  - Import hooks from '../hooks' not '@/data'
+  - DataTest component is a good template for new data-driven components
+  - useMultipleData returns data as an object keyed by file name
+---
