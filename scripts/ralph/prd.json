@@ -162,12 +162,22 @@
     },
     {
       "id": "US-003c4",
-      "title": "Apply donutBlue color palette to charts",
-      "description": "Extract donutBlue palette from shiny-analysis.md. Create colors constant. Apply to all 3 donut charts. Verify colors match Shiny exactly.",
+      "title": "Extract and document donutBlue color palette",
+      "description": "Read shiny-analysis.md to find donutBlue palette hex values. Create src/constants/colors.ts file with donutBlue palette constant. No chart updates yet.",
       "acceptanceCriteria": [
-        "donutBlue palette extracted and documented",
-        "Colors applied to all 3 donut charts",
-        "Colors match Shiny exactly",
+        "src/constants/colors.ts created",
+        "donutBlue palette constant with hex values",
+        "Build passes with no TypeScript errors"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-003c5",
+      "title": "Apply donutBlue colors to Home donut charts",
+      "description": "Import donutBlue colors from src/constants/colors.ts. Update all 3 DonutChart components on Home page to use donutBlue palette. Verify in browser.",
+      "acceptanceCriteria": [
+        "Colors imported from src/constants/colors.ts",
+        "All 3 donut charts use donutBlue palette",
         "Browser verification passes"
       ],
       "passes": false
@@ -186,12 +196,23 @@
     },
     {
       "id": "US-003d2",
-      "title": "Add SummaryTable to Home and apply formatting",
-      "description": "Import SummaryTable into Home.tsx. Add to grid. Apply number formatting using pars.json multipliers. Match Shiny table styling and column layout.",
+      "title": "Add SummaryTable to Home page",
+      "description": "Import SummaryTable into Home.tsx. Add to grid below donut charts. Verify table displays. No formatting changes yet.",
       "acceptanceCriteria": [
-        "Summary table displays on Home page",
-        "Table layout matches Shiny exactly",
+        "Summary table imported and added to Home.tsx",
+        "Table displays in grid below donut charts",
+        "Build passes with no TypeScript errors",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-003d3",
+      "title": "Apply formatting and styling to SummaryTable",
+      "description": "Apply number formatting using pars.json multipliers. Match Shiny table column layout and styling exactly.",
+      "acceptanceCriteria": [
         "Number formatting with correct units (using pars.json multipliers)",
+        "Table layout matches Shiny exactly",
         "Table styling matches Shiny",
         "Browser verification passes"
       ],
@@ -258,14 +279,25 @@
       "passes": false
     },
     {
-      "id": "US-004c",
-      "title": "Add filters to Composition page",
-      "description": "Implement filters for Composition page (municipality, date, habitat type). Filter state updates treemaps. Match Shiny filter behavior and styling.",
+      "id": "US-004c1",
+      "title": "Create filter components for Composition page",
+      "description": "Create filter UI components (municipality, date, habitat type) on Composition page. Use Tabler form components. No filter logic yet, just UI.",
       "acceptanceCriteria": [
-        "All filters render correctly",
-        "Filters update treemap data",
-        "Filter behavior matches Shiny",
+        "Filter UI components render on Composition page",
+        "Municipality, date, and habitat filters display",
+        "Filters styled with Tabler components",
+        "No TypeScript errors"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-004c2",
+      "title": "Connect filters to treemap data",
+      "description": "Add filter state management. Connect filter changes to treemap data updates. Implement 500ms debounce for municipality filter. Match Shiny filter behavior.",
+      "acceptanceCriteria": [
+        "Filters update treemap data when changed",
         "Municipality filter uses 500ms debounce",
+        "Filter behavior matches Shiny",
         "Browser verification passes"
       ],
       "passes": false
@@ -482,28 +514,70 @@
       "passes": false
     },
     {
-      "id": "US-011b",
-      "title": "Connect all pages to global filters",
-      "description": "Update all page components to consume global filter state and update their visualizations accordingly. Ensure filter behavior matches Shiny exactly.",
+      "id": "US-011b1",
+      "title": "Connect Home page to global filters",
+      "description": "Update Home page to consume global filter context. Apply filters to donut charts and summary table. Verify filter updates work.",
       "acceptanceCriteria": [
+        "Home page consumes FilterContext",
+        "Donut charts and table respond to filter changes",
+        "Filter behavior matches Shiny",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-011b2",
+      "title": "Connect Composition and Catch pages to global filters",
+      "description": "Update Composition and Catch pages to consume global filter context. Apply filters to visualizations. Verify updates work.",
+      "acceptanceCriteria": [
+        "Composition and Catch pages consume FilterContext",
+        "Charts respond to filter changes",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-011b3",
+      "title": "Connect remaining pages to global filters",
+      "description": "Update Market, Revenue, Nutrients, Tracks pages to consume global filter context. Verify all pages work with filters.",
+      "acceptanceCriteria": [
+        "All remaining pages consume FilterContext",
         "All pages respond to filter changes",
-        "Filter behavior matches Shiny (debounce, defaults)",
-        "Data updates correctly when filters change",
         "Performance is acceptable",
         "Browser verification passes"
       ],
       "passes": false
     },
     {
-      "id": "US-012a",
-      "title": "Create color palette reference and verify charts",
-      "description": "Document all color palettes in a reference file. Audit all charts to ensure they use exact Shiny colors. Create scripts/ralph/color-palettes.md with hex values.",
+      "id": "US-012a1",
+      "title": "Extract all color palettes from Shiny",
+      "description": "Read shiny-analysis.md and Shiny R files. Extract all 6 color palettes (habitatPalette, tabPalette, donutBlue, spiderColors, viridis, heatmapColors). Document in scripts/ralph/color-palettes.md with hex values.",
       "acceptanceCriteria": [
-        "scripts/ralph/color-palettes.md created with all 6 palettes",
-        "All charts audited for color accuracy",
-        "Color constants file created (src/constants/colors.ts)",
-        "Side-by-side color comparison documented",
-        "All charts updated to use correct colors"
+        "scripts/ralph/color-palettes.md created",
+        "All 6 palettes documented with hex values",
+        "Source files noted for each palette"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-012a2",
+      "title": "Add remaining color palettes to constants file",
+      "description": "Update src/constants/colors.ts with all remaining palettes (habitatPalette, tabPalette, spiderColors, viridis, heatmapColors). donutBlue already exists from US-003c4.",
+      "acceptanceCriteria": [
+        "All 6 palettes in src/constants/colors.ts",
+        "Palettes exported as constants",
+        "Build passes with no TypeScript errors"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-012a3",
+      "title": "Audit and update chart colors",
+      "description": "Audit all existing charts (donut, treemap, time series, etc). Update charts to use color constants from src/constants/colors.ts. Verify colors match Shiny.",
+      "acceptanceCriteria": [
+        "All charts use color constants from src/constants/colors.ts",
+        "Colors match Shiny exactly",
+        "Browser verification passes"
       ],
       "passes": false
     },

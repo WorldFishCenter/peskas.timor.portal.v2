@@ -181,3 +181,18 @@ Thread: https://ampcode.com/threads/T-019bbb1f-82c0-741f-b2ef-966842e27f67
   - Placeholder data structure: `{ label: string, value: number }[]`
   - Real data integration will happen in US-003c3 using aggregated.json
 ---
+
+## 2026-01-14 - US-003c3
+Thread: https://ampcode.com/threads/T-019bbb21-11a2-7596-83ba-5d1f26a876a3
+- Loaded real data from summary_data.json for all 3 donut charts
+- Trips chart: uses `summary_data.n_surveys` (Area → n surveys count)
+- Revenue chart: uses `summary_data.estimated_revenue` (Area → Estimated revenue)
+- Catch/Fish chart: uses `summary_data.estimated_tons` (fish_group → tons)
+- Removed placeholder data arrays, replaced with useData hook calls
+- Build passes with no TypeScript errors
+- Files changed: src/pages/Home.tsx
+- **Learnings for future iterations:**
+  - Home donut charts use summary_data.json NOT aggregated.json (despite PRD description)
+  - Data mapping: n_surveys for trips, estimated_revenue for revenue, estimated_tons for fish
+  - summary_data uses different field names: 'Area' (capital A), 'Estimated revenue' (with space)
+---
