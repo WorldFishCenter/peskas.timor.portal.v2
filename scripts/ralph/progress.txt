@@ -121,3 +121,19 @@ Thread: https://ampcode.com/threads/T-019bbc25-e1dd-72c6-95b2-b47ba04cd08d
   - pars.nutrients.to_display defines which nutrients to show in order
   - Tracks data has year field for filtering, no municipality
 ---
+
+## 2026-01-14 - US-012a1
+Thread: https://ampcode.com/threads/T-019bbc25-e1dd-72c6-95b2-b47ba04cd08d
+- Created scripts/ralph/color-palettes.md documenting all 6 color palettes
+- Palettes documented with:
+  - Source file references (app_server.R, tab_home_content.R)
+  - Exact hex/RGB values
+  - Usage context (which charts/pages)
+  - React implementation locations
+- Implementation status summary: All 6 palettes implemented in src/constants/colors.ts
+- Files created: scripts/ralph/color-palettes.md
+- **Learnings for future iterations:**
+  - DeckGL requires RGB arrays [r, g, b], not hex strings
+  - Viridis comes from d3-scale-chromatic, not a static palette
+  - Use interpolateViridis(i/n) to generate n colors dynamically
+---

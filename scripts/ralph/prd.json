@@ -557,7 +557,7 @@
         "All 6 palettes documented with hex values",
         "Source files noted for each palette"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-012a2",
