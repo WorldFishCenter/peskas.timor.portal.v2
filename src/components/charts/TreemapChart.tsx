@@ -79,7 +79,7 @@ export default function TreemapChart({
       show: true,
       position: 'top',
       horizontalAlign: 'right',
-      fontSize: '11px',
+      fontSize: '15px',
       fontFamily: 'inherit',
       labels: {
         colors: theme === 'dark' ? '#6c7a91' : '#656d77',
@@ -101,7 +101,7 @@ export default function TreemapChart({
         fontFamily: 'inherit',
       },
       formatter: function (text: string, op: any) {
-        return [text, `${op.value.toLocaleString()} ${kgUnit}`]
+        return `${text}: ${op.value.toLocaleString()} ${kgUnit}`
       },
     },
     stroke: {

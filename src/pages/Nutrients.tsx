@@ -120,9 +120,10 @@ export default function Nutrients() {
                 <div className="card-header border-0 pb-0">
                   <div>
                     <h3 className="card-title text-muted fw-bold">{treemapTitle}</h3>
-                    <div className="card-subtitle">{t('nutrients.subtitle', { defaultValue: 'Number of people meeting daily nutritional requirements' })}</div>
                     {pars?.nutrients?.treemap_average?.description && (
-                      <div className="text-muted small mt-2">{pars.nutrients.treemap_average.description}</div>
+                      <div className="text-muted mt-1" style={{ fontSize: '0.75rem', lineHeight: '1.4' }}>
+                        {pars.nutrients.treemap_average.description}
+                      </div>
                     )}
                   </div>
                 </div>

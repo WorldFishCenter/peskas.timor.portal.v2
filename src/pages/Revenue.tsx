@@ -240,9 +240,10 @@ export default function Revenue() {
                     <h3 className="card-title text-muted fw-bold">
                       {pars?.revenue?.treemap?.title ?? t('revenue.habitat_treemap', { defaultValue: 'Revenue Distribution' })}
                     </h3>
-                    <div className="card-subtitle">{t('revenue.habitat_subtitle', { defaultValue: 'Economic value by habitat and gear' })}</div>
                     {pars?.revenue?.treemap?.description && (
-                      <div className="text-muted small mt-2">{pars.revenue.treemap.description}</div>
+                      <div className="text-muted mt-1" style={{ fontSize: '0.75rem', lineHeight: '1.4' }}>
+                        {pars.revenue.treemap.description}
+                      </div>
                     )}
                   </div>
                 </div>

@@ -284,7 +284,6 @@ export default function Market() {
                     <h3 className="card-title text-muted fw-bold">
                       {t('market.price_by_region', { defaultValue: 'Regional Price Comparison' })}
                     </h3>
-                    <div className="card-subtitle">{t('market.radar_subtitle', { defaultValue: 'Median price comparison across regions' })}</div>
                   </div>
                 </div>
                 <div className="card-body">
@@ -312,9 +311,10 @@ export default function Market() {
                     <h3 className="card-title text-muted fw-bold">
                       {t('market.conservation_title', { defaultValue: 'Fish Conservation' })}
                     </h3>
-                    <div className="card-subtitle">{t('market.stacked_subtitle', { defaultValue: 'Preservation methods used by region' })}</div>
                     {pars?.market?.conservation?.region_barplot?.description && (
-                      <div className="text-muted small mt-2">{pars.market.conservation.region_barplot.description}</div>
+                      <div className="text-muted mt-1" style={{ fontSize: '0.75rem', lineHeight: '1.4' }}>
+                        {pars.market.conservation.region_barplot.description}
+                      </div>
                     )}
                   </div>
                 </div>
@@ -337,14 +337,7 @@ export default function Market() {
 
             {/* Summary Table - Full width */}
             <div className="col-12">
-              <div className="card shadow-sm border-0">
-                <div className="card-header border-0 pb-0">
-                  <h3 className="card-title text-muted fw-bold">{t('market.summary_table', { defaultValue: 'Market Summary by Municipality' })}</h3>
-                </div>
-                <div className="card-body">
-                  <SummaryTable />
-                </div>
-              </div>
+              <SummaryTable title={t('market.summary_table', { defaultValue: 'Market Summary by Municipality' })} />
             </div>
           </div>
         </div>

@@ -22,6 +22,11 @@ interface MunicipalSummary {
   price_kg: number;
 }
 
+interface SummaryTableProps {
+  title?: string;
+  caption?: string;
+}
+
 function interpolateColor(colors: string[], t: number, opacity: number = 1): string {
   const n = colors.length - 1;
   const i = Math.min(Math.floor(t * n), n - 1);
@@ -60,7 +65,7 @@ function biasedNormalize(value: number, values: number[], bias: number = 2): num
   return Math.pow(n, 1 / bias);
 }
 
-export function SummaryTable() {
+export function SummaryTable({ title, caption }: SummaryTableProps) {
   const { t } = useI18n();
   const theme = useTheme();
   const { data: municipalData, loading, error } = useData('municipal_aggregated');
@@ -123,6 +128,14 @@ export function SummaryTable() {
 
     return result;
   }, [municipalData]);
+
+  const totals = useMemo(() => {
+    if (summaryData.length === 0) return null;
+    return {
+      revenue: summaryData.reduce((acc, row) => acc + row.revenue, 0),
+      catch: summaryData.reduce((acc, row) => acc + row.catch, 0),
+    };
+  }, [summaryData]);
 
   const columnValues = useMemo(() => ({
     landing_revenue: summaryData.map(r => r.landing_revenue),
@@ -229,62 +242,100 @@ export function SummaryTable() {
   }
 
   return (
-    <div className="table-responsive">
-      <table className="table table-vcenter table-hover" style={{ fontSize: '0.875rem' }}>
-        <thead>
-          {table.getHeaderGroups().map(headerGroup => (
-            <tr key={headerGroup.id}>
-              {headerGroup.headers.map(header => (
-                <th
-                  key={header.id}
-                  className="text-center"
-                  style={{ minWidth: header.id === 'region' ? 140 : 100, cursor: 'pointer', userSelect: 'none' }}
-                  onClick={header.column.getToggleSortingHandler()}
-                >
-                  <div className="d-flex align-items-center justify-content-center gap-1">
-                    {flexRender(header.column.columnDef.header, header.getContext())}
-                    {header.column.getIsSorted() && (
-                      <span>
-                        {header.column.getIsSorted() === 'asc' ? (
-                          <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-up" width="16" height="16" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                            <path d="M6 15l6 -6l6 6"></path>
-                          </svg>
-                        ) : (
-                          <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-down" width="16" height="16" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                            <path d="M6 9l6 6l6 -6"></path>
-                          </svg>
+    <div className="card shadow-sm border-0">
+      {title && (
+        <div className="card-header border-0 pb-0">
+          <div>
+            <h3 className="card-title text-muted fw-bold">{title}</h3>
+            {caption && (
+              <div className="text-muted mt-1" style={{ fontSize: '0.75rem', lineHeight: '1.4' }}>
+                {caption}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+      <div className="card-body p-0">
+        <div className="table-responsive">
+          <table className="table table-vcenter table-hover card-table" style={{ fontSize: '0.875rem' }}>
+            <thead>
+              {table.getHeaderGroups().map(headerGroup => (
+                <tr key={headerGroup.id}>
+                  {headerGroup.headers.map(header => (
+                    <th
+                      key={header.id}
+                      className="text-center"
+                      style={{ minWidth: header.id === 'region' ? 140 : 100, cursor: 'pointer', userSelect: 'none' }}
+                      onClick={header.column.getToggleSortingHandler()}
+                    >
+                      <div className="d-flex align-items-center justify-content-center gap-1">
+                        {flexRender(header.column.columnDef.header, header.getContext())}
+                        {header.column.getIsSorted() && (
+                          <span>
+                            {header.column.getIsSorted() === 'asc' ? (
+                              <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-up" width="16" height="16" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M6 15l6 -6l6 6"></path>
+                              </svg>
+                            ) : (
+                              <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-down" width="16" height="16" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M6 9l6 6l6 -6"></path>
+                              </svg>
+                            )}
+                          </span>
                         )}
-                      </span>
-                    )}
-                  </div>
-                </th>
+                      </div>
+                    </th>
+                  ))}
+                </tr>
               ))}
-            </tr>
-          ))}
-        </thead>
-        <tbody>
-          {table.getRowModel().rows.map(row => (
-            <tr key={row.id}>
-              {row.getVisibleCells().map(cell => {
-                const cellMeta = cell.column.columnDef.meta as { getCellStyle?: (value: number) => React.CSSProperties };
-                const cellStyle = cellMeta?.getCellStyle ? cellMeta.getCellStyle(cell.getValue() as number) : {};
+            </thead>
+            <tbody>
+              {table.getRowModel().rows.map(row => (
+                <tr key={row.id}>
+                  {row.getVisibleCells().map(cell => {
+                    const cellMeta = cell.column.columnDef.meta as { getCellStyle?: (value: number) => React.CSSProperties };
+                    const cellStyle = cellMeta?.getCellStyle ? cellMeta.getCellStyle(cell.getValue() as number) : {};
 
-                return (
-                  <td
-                    key={cell.id}
-                    className="text-center"
-                    style={cellStyle}
-                  >
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </td>
-                );
-              })}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+                    return (
+                      <td
+                        key={cell.id}
+                        className="text-center"
+                        style={cellStyle}
+                      >
+                        {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      {totals && (
+        <div className="card-footer bg-light-lt border-top-0 py-2">
+          <div className="d-flex align-items-center justify-content-end gap-4">
+            <div className="d-flex align-items-center gap-2">
+              <span className="text-muted small fw-bold text-uppercase" style={{ fontSize: '0.65rem' }}>
+                {t('vars.revenue.short_name', { defaultValue: 'Revenue' })}
+              </span>
+              <span className="text-primary fw-bold">
+                ${totals.revenue.toFixed(2)}{t('units.million_short', { defaultValue: 'M' })}
+              </span>
+            </div>
+            <div className="d-flex align-items-center gap-2">
+              <span className="text-muted small fw-bold text-uppercase" style={{ fontSize: '0.65rem' }}>
+                {t('vars.catch.short_name', { defaultValue: 'Catch' })}
+              </span>
+              <span className="text-azure fw-bold">
+                {totals.catch.toFixed(1)} {t('units.t', { defaultValue: 't' })}
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

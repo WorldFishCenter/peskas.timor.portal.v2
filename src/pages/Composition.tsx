@@ -128,8 +128,11 @@ export default function Composition() {
                 <div className="card-header border-0 pb-0">
                   <div>
                     <h3 className="card-title text-muted fw-bold">{tableHeading}</h3>
-                    <div className="card-subtitle">{t('composition.treemap_subtitle', { defaultValue: 'Catch volume by fish group' })}</div>
-                    {tableFooter && <div className="text-muted small mt-2">{tableFooter}</div>}
+                    {tableFooter && (
+                      <div className="text-muted mt-1" style={{ fontSize: '0.75rem', lineHeight: '1.4' }}>
+                        {tableFooter}
+                      </div>
+                    )}
                   </div>
                   <div className="card-actions ms-auto">
                     <YearFilter value={selectedYear} onChange={setSelectedYear} />

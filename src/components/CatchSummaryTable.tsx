@@ -103,12 +103,6 @@ export default function CatchSummaryTable() {
       <div className="card-header border-0 pb-0">
         <div>
           <h3 className="card-title text-muted fw-bold">{t('catch.summary_table', { defaultValue: 'Annual Summary' })}</h3>
-          {totals && (
-            <div className="text-muted small mt-1">
-              {t('vars.catch.short_name', { defaultValue: 'Catch' })}: {totals.catch.toFixed(1)} {t('units.t', { defaultValue: 't' })} ; {' '}
-              {t('vars.recorded_catch.short_name', { defaultValue: 'Recorded catch' })}: {totals.recorded_catch.toFixed(1)} {t('units.t', { defaultValue: 't' })}
-            </div>
-          )}
         </div>
         <div className="ms-auto card-actions">
           <select
@@ -164,6 +158,28 @@ export default function CatchSummaryTable() {
           )}
         </div>
       </div>
+      {totals && (
+        <div className="card-footer bg-light-lt border-top-0 py-2">
+          <div className="d-flex align-items-center justify-content-end gap-4">
+            <div className="d-flex align-items-center gap-2">
+              <span className="text-muted small fw-bold text-uppercase" style={{ fontSize: '0.65rem' }}>
+                {t('vars.catch.short_name', { defaultValue: 'Catch' })}
+              </span>
+              <span className="text-primary fw-bold">
+                {totals.catch.toFixed(1)} {t('units.t', { defaultValue: 't' })}
+              </span>
+            </div>
+            <div className="d-flex align-items-center gap-2">
+              <span className="text-muted small fw-bold text-uppercase" style={{ fontSize: '0.65rem' }}>
+                {t('vars.recorded_catch.short_name', { defaultValue: 'Recorded catch' })}
+              </span>
+              <span className="text-azure fw-bold">
+                {totals.recorded_catch.toFixed(1)} {t('units.t', { defaultValue: 't' })}
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

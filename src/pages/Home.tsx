@@ -134,17 +134,7 @@ export default function Home() {
 
             {/* Summary Table - Full width */}
             <div className="col-12">
-              <div className="card shadow-sm border-0">
-                <div className="card-header border-0 pb-0">
-                  <div>
-                    <h3 className="card-title text-muted fw-bold">{tableTitle}</h3>
-                    {tableCaption && <div className="card-subtitle">{tableCaption}</div>}
-                  </div>
-                </div>
-                <div className="card-body">
-                  <SummaryTable />
-                </div>
-              </div>
+              <SummaryTable title={tableTitle} caption={tableCaption} />
             </div>
           </div>
         </div>

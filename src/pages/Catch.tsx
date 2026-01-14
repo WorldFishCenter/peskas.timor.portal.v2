@@ -239,9 +239,10 @@ export default function Catch() {
                     <h3 className="card-title text-muted fw-bold">
                       {pars?.catch?.treemap?.title ?? t('catch.habitat_treemap', { defaultValue: 'Catch Distribution' })}
                     </h3>
-                    <div className="card-subtitle">{t('catch.habitat_subtitle', { defaultValue: 'Breakdown by habitat and fishing gear' })}</div>
                     {pars?.catch?.treemap?.description && (
-                      <div className="text-muted small mt-2">{pars.catch.treemap.description}</div>
+                      <div className="text-muted mt-1" style={{ fontSize: '0.75rem', lineHeight: '1.4' }}>
+                        {pars.catch.treemap.description}
+                      </div>
                     )}
                   </div>
                 </div>

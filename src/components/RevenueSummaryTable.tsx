@@ -103,12 +103,6 @@ export default function RevenueSummaryTable() {
       <div className="card-header border-0 pb-0">
         <div>
           <h3 className="card-title text-muted fw-bold">{t('revenue.summary_table', { defaultValue: 'Annual Summary' })}</h3>
-          {totals && (
-            <div className="text-muted small mt-1">
-              {t('vars.revenue.short_name', { defaultValue: 'Revenue' })}: ${totals.revenue.toFixed(2)}{t('units.million_short', { defaultValue: 'M' })} ; {' '}
-              {t('vars.recorded_revenue.short_name', { defaultValue: 'Recorded revenue' })}: ${totals.recorded_revenue.toFixed(2)}{t('units.million_short', { defaultValue: 'M' })}
-            </div>
-          )}
         </div>
         <div className="ms-auto card-actions">
           <select
@@ -164,6 +158,28 @@ export default function RevenueSummaryTable() {
           )}
         </div>
       </div>
+      {totals && (
+        <div className="card-footer bg-light-lt border-top-0 py-2">
+          <div className="d-flex align-items-center justify-content-end gap-4">
+            <div className="d-flex align-items-center gap-2">
+              <span className="text-muted small fw-bold text-uppercase" style={{ fontSize: '0.65rem' }}>
+                {t('vars.revenue.short_name', { defaultValue: 'Revenue' })}
+              </span>
+              <span className="text-primary fw-bold">
+                ${totals.revenue.toFixed(2)}{t('units.million_short', { defaultValue: 'M' })}
+              </span>
+            </div>
+            <div className="d-flex align-items-center gap-2">
+              <span className="text-muted small fw-bold text-uppercase" style={{ fontSize: '0.65rem' }}>
+                {t('vars.recorded_revenue.short_name', { defaultValue: 'Recorded revenue' })}
+              </span>
+              <span className="text-azure fw-bold">
+                ${totals.recorded_revenue.toFixed(2)}{t('units.million_short', { defaultValue: 'M' })}
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
