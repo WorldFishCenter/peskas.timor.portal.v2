@@ -319,3 +319,16 @@ Thread: https://ampcode.com/threads/T-019bbb74-43d7-715f-9d07-691f86ec1818
   - Supports colorScale, enableShades, distributed colors options
   - Can use plotOptions.treemap for customization (colorScale.ranges, enableShades, etc.)
 ---
+
+## 2026-01-14 - US-004b3
+Thread: https://ampcode.com/threads/T-019bbb84-6299-7711-b253-1de515f871a4
+- Added TreemapChart to Composition page with real data from taxa_aggregated.json
+- Aggregates catch by grouped_taxa across all months, converts to tons (/ 1000)
+- Uses taxa_names.json to map 3-letter codes (CLP, TUN, etc.) to full names
+- Replaced placeholder with loading spinner + TreemapChart component
+- Files changed: src/pages/Composition.tsx
+- **Learnings for future iterations:**
+  - taxa_aggregated.json has day/week/month arrays - use .month for aggregated data
+  - taxa_names.json maps grouped_taxa codes to grouped_taxa_names
+  - Treemap title should indicate units (tons) for clarity
+---

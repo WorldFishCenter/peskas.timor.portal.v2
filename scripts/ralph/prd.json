@@ -264,7 +264,7 @@
         "Treemap shows correct hierarchical data",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-004b4",
