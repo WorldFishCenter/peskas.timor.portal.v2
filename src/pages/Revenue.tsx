@@ -3,16 +3,19 @@ import { useMemo } from 'react'
 import MunicipalityFilter from '../components/MunicipalityFilter'
 import TimeSeriesChart from '../components/charts/TimeSeriesChart'
 import RadarChart from '../components/charts/RadarChart'
+import TreemapChart from '../components/charts/TreemapChart'
+import { SummaryTable } from '../components/SummaryTable'
 import { useData } from '../hooks'
 import { useFilters } from '../context/FilterContext'
-import { revenueBarColors, spiderColors } from '../constants/colors'
-import type { MunicipalAggregatedRecord } from '../types/data'
+import { revenueBarColors, spiderColors, habitatPalette } from '../constants/colors'
+import type { MunicipalAggregatedRecord, SummaryData } from '../types/data'
 
 export default function Revenue() {
   const { t } = useI18n()
   const { municipality, setMunicipality } = useFilters()
   const { data: aggregated, loading, error } = useData('aggregated')
   const { data: municipalAggregated } = useData('municipal_aggregated')
+  const { data: summaryData } = useData('summary_data')
 
   const chartSeries = useMemo(() => {
     if (!aggregated?.month) return []
@@ -119,6 +122,19 @@ export default function Revenue() {
       categories: regions,
     }
   }, [municipalAggregated, t])
+
+  const treemapData = useMemo(() => {
+    if (!summaryData) return []
+    const data = summaryData as SummaryData
+    if (!data.revenue_habitat) return []
+    // Flatten treemap data: each habitat's gear types
+    return data.revenue_habitat.flatMap((habitat) =>
+      habitat.data.map((item) => ({
+        x: `${habitat.name}: ${item.x}`,
+        y: item.y,
+      }))
+    )
+  }, [summaryData])
 
   if (error) {
     return <div className="alert alert-danger">{error.message}</div>
@@ -271,6 +287,36 @@ export default function Revenue() {
                       <div className="spinner-border text-primary" role="status" />
                     </div>
                   )}
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-6 col-xl-6">
+              <div className="card">
+                <div className="card-header">
+                  <h3 className="card-title">{t('revenue.by_habitat', { defaultValue: 'Revenue by Habitat & Gear' })}</h3>
+                </div>
+                <div className="card-body">
+                  {treemapData.length > 0 ? (
+                    <TreemapChart
+                      data={treemapData}
+                      height="22rem"
+                      colors={habitatPalette}
+                    />
+                  ) : (
+                    <div className="d-flex justify-content-center py-5">
+                      <div className="spinner-border text-primary" role="status" />
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+            <div className="col-12">
+              <div className="card">
+                <div className="card-header">
+                  <h3 className="card-title">{t('revenue.summary_table', { defaultValue: 'Revenue Summary by Municipality' })}</h3>
+                </div>
+                <div className="card-body">
+                  <SummaryTable municipality={municipality} />
                 </div>
               </div>
             </div>
