@@ -158,7 +158,7 @@
         "Data values match aggregated.json",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003c4",
