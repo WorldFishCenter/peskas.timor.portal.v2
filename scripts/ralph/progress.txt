@@ -277,3 +277,18 @@ Thread: https://ampcode.com/threads/T-019bbd09-aa20-72c8-b6ce-86f88bf997ac
   - Spider chart in Shiny shows price_kg by region, not multiple dimensions per region
   - Use slice(-2) to get the "latest month" data points (last 2 records per region)
 ---
+
+## 2026-01-14 - US-016c
+Thread: https://ampcode.com/threads/T-019bbd0e-4822-750e-9188-40142a2795d5
+- Added Revenue summary cards, treemap, and summary table
+- Implementation:
+  - Added TreemapChart showing revenue by habitat & gear from summary_data.revenue_habitat
+  - Added SummaryTable component filtered by municipality
+  - Summary cards already existed from previous iterations (totalRevenue, revenuePerTrip, pricePerKg with trends)
+- Files changed: src/pages/Revenue.tsx
+- Build passes with no TypeScript errors
+- **Learnings for future iterations:**
+  - revenue_habitat in summary_data.json provides treemap data (habitat → gear types)
+  - SummaryTable component accepts municipality prop for filtering
+  - Treemap uses habitatPalette colors, flattens habitat.data items with "Habitat: Gear" labels
+---
