@@ -461,7 +461,7 @@
         "No TypeScript errors",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-009a3",

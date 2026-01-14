@@ -35,7 +35,7 @@ export default function Revenue() {
       </div>
       <div className="page-body">
         <div className="container-xl">
-          <div className="row row-cards">
+          <div className="row row-deck row-cards">
             <div className="col-lg-8 col-xl-8">
               <div className="card">
                 <div className="card-body">

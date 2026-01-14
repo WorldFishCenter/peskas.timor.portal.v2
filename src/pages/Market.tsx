@@ -46,7 +46,7 @@ export default function Market() {
       </div>
       <div className="page-body">
         <div className="container-xl">
-          <div className="row row-cards">
+          <div className="row row-deck row-cards">
             <div className="col-lg-8 col-xl-8">
               <div className="card">
                 <div className="card-header"><h3 className="card-title">{t('market.price_per_kg')}</h3></div>
@@ -56,7 +56,7 @@ export default function Market() {
               </div>
             </div>
             <div className="col-lg-4 col-xl-4">
-              <div className="row row-cards">
+              <div className="row row-deck row-cards">
                 <div className="col-12">
                   <div className="card card-sm">
                     <div className="card-body">

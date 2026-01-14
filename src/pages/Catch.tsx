@@ -97,7 +97,7 @@ export default function Catch() {
       </div>
       <div className="page-body">
         <div className="container-xl">
-          <div className="row row-cards">
+          <div className="row row-deck row-cards">
             <div className="col-lg-8 col-xl-8">
               <div className="card">
                 <div className="card-header">
@@ -119,7 +119,7 @@ export default function Catch() {
               </div>
             </div>
             <div className="col-lg-4 col-xl-4">
-              <div className="row row-cards">
+              <div className="row row-deck row-cards">
                 <div className="col-12">
                   <div className="card" style={{ minHeight: '8rem' }}>
                     <div className="card-body">

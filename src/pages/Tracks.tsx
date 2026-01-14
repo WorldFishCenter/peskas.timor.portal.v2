@@ -50,7 +50,7 @@ export default function Tracks() {
       </div>
       <div className="page-body">
         <div className="container-xl">
-          <div className="row row-cards">
+          <div className="row row-deck row-cards">
             <div className="col-12">
               <div className="card">
                 <div className="card-header">

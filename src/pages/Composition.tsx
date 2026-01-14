@@ -71,7 +71,7 @@ export default function Composition() {
       {/* Page Body */}
       <div className="page-body">
         <div className="container-xl">
-          <div className="row row-cards">
+          <div className="row row-deck row-cards">
             {/* Taxa Treemap - Full width */}
             <div className="col-12">
               <div className="card">
