@@ -196,3 +196,24 @@ Thread: https://ampcode.com/threads/T-019bbb21-11a2-7596-83ba-5d1f26a876a3
   - Data mapping: n_surveys for trips, estimated_revenue for revenue, estimated_tons for fish
   - summary_data uses different field names: 'Area' (capital A), 'Estimated revenue' (with space)
 ---
+
+## 2026-01-14 - Second PRD Refactoring (After Iteration 7 Timeout)
+Thread: https://ampcode.com/threads/$AMP_CURRENT_THREAD_ID
+- Ralph timed out on iteration 7 while working on US-003c4
+- US-003c3 completed successfully (loaded real data into donut charts)
+- Further split 6 complex stories into smaller atomic tasks
+- US-003c4 (apply colors) → 2 stories: extract palette (US-003c4), apply to charts (US-003c5)
+- US-003d2 (table + formatting) → 2 stories: add to page (US-003d2), apply formatting (US-003d3)
+- US-004c (filters) → 2 stories: create UI (US-004c1), connect logic (US-004c2)
+- US-011b (connect all pages to filters) → 3 stories: Home (US-011b1), Composition/Catch (US-011b2), remaining (US-011b3)
+- US-012a (color audit) → 3 stories: extract palettes (US-012a1), add to constants (US-012a2), update charts (US-012a3)
+- Total stories: 44 → 51 (target: 3-5 minutes each)
+- **Learnings for future iterations:**
+  - Even "simple" tasks like "apply colors to 3 charts" can timeout if they involve multiple files + browser verification
+  - Split ANY task that involves reading + creating + updating into separate stories
+  - "Extract X" should be separate from "Apply X"
+  - "Create component" should be separate from "Add component to page"
+  - "Add to page" should be separate from "Apply formatting/styling"
+  - Browser verification adds 2-3 minutes - factor into complexity estimate
+  - Rule of thumb: 1 file edit + 1 build + browser check = 1 story max
+---
