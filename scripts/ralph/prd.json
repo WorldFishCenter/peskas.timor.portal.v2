@@ -324,7 +324,7 @@
         "Accepts data, title, colors props",
         "No TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-005a3",

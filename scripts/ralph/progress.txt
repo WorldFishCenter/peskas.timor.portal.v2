@@ -381,3 +381,18 @@ Thread: https://ampcode.com/threads/T-019bbb8d-388e-74b2-8d77-09e8ace15e98
   - Catch page layout: 8-col chart area, 4-col metric cards, full-width table
   - Catch tab uses same layout structure as Revenue tab (per shiny-analysis.md)
 ---
+
+## 2026-01-14 - US-005a2
+Thread: https://ampcode.com/threads/T-019bbb8d-388e-74b2-8d77-09e8ace15e98
+- Created src/components/charts/TimeSeriesChart.tsx using ApexCharts
+- Component accepts: series (name + data points), title, colors, height, yAxisTitle, xAxisTitle, chartType (line/area)
+- Uses datetime x-axis with date string input
+- Default chartType is 'area' with gradient fill
+- Animations disabled for performance
+- Build passes with no TypeScript errors
+- Files changed: src/components/charts/TimeSeriesChart.tsx
+- **Learnings for future iterations:**
+  - TimeSeriesChart data format: `{ date: string, value: number }[]` per series
+  - Uses x/y format for ApexCharts datetime axis: `{ x: dateString, y: value }`
+  - Area chart with gradient fill matches Shiny apexcharter defaults
+---
