@@ -331,4 +331,16 @@ Thread: https://ampcode.com/threads/T-019bbb84-6299-7711-b253-1de515f871a4
   - taxa_aggregated.json has day/week/month arrays - use .month for aggregated data
   - taxa_names.json maps grouped_taxa codes to grouped_taxa_names
   - Treemap title should indicate units (tons) for clarity
----
+  ---
+
+  ## 2026-01-14 - US-004b4
+  Thread: https://ampcode.com/threads/T-019bbb86-403a-70fc-a29b-8ba795a7832b
+  - Added habitatPalette to src/constants/colors.ts (extracted from shiny-analysis.md)
+  - Updated Composition.tsx to import and use habitatPalette for TreemapChart
+  - Colors: ["#440154", "#30678D", "#35B778", "#FDE725", "#FCA35D", "#D32F2F", "#67001F"]
+  - TreemapChart already has hover/tooltip interactions built-in via ApexCharts
+  - Files changed: src/constants/colors.ts, src/pages/Composition.tsx
+  - **Learnings for future iterations:**
+    - habitatPalette now in src/constants/colors.ts alongside donutBlue and tabPalette
+    - ApexCharts treemap has built-in hover/tooltip interactions - no extra config needed
+  ---
