@@ -119,7 +119,7 @@ export default function Revenue() {
               <div className="card shadow-sm border-0">
                 <div className="card-header d-flex align-items-center">
                   <div>
-                    <h3 className="card-title text-muted fw-bold">
+                    <h3 className="card-title fw-bold">
                       {t('vars.revenue.short_name', { defaultValue: 'Revenue Trends' })}
                     </h3>
                     <div className="card-subtitle">{t('revenue.trend_subtitle', { defaultValue: 'Monthly revenue in million USD' })}</div>
@@ -237,7 +237,7 @@ export default function Revenue() {
               <div className="card shadow-sm border-0">
                 <div className="card-header border-0 pb-0">
                   <div>
-                    <h3 className="card-title text-muted fw-bold">
+                    <h3 className="card-title fw-bold">
                       {pars?.revenue?.treemap?.title ?? t('revenue.habitat_treemap', { defaultValue: 'Revenue Distribution' })}
                     </h3>
                     {pars?.revenue?.treemap?.description && (

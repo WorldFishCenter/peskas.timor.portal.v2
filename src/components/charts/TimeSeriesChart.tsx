@@ -167,9 +167,11 @@ export default function TimeSeriesChart({
     fill: {
       type: chartType === 'area' ? 'gradient' : 'solid',
       gradient: {
-        shadeIntensity: 1,
-        opacityFrom: theme === 'dark' ? 0.3 : 0.4,
-        opacityTo: 0.5,
+        shade: 'light',
+        shadeIntensity: 0.5,
+        inverseColors: false,
+        opacityFrom: theme === 'dark' ? 0.6 : 0.5,
+        opacityTo: theme === 'dark' ? 0.1 : 0.1,
         stops: [0, 100],
       },
     },

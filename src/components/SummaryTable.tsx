@@ -246,7 +246,7 @@ export function SummaryTable({ title, caption }: SummaryTableProps) {
       {title && (
         <div className="card-header border-0 pb-0">
           <div>
-            <h3 className="card-title text-muted fw-bold">{title}</h3>
+            <h3 className="card-title fw-bold">{title}</h3>
             {caption && (
               <div className="text-muted mt-1" style={{ fontSize: '0.75rem', lineHeight: '1.4' }}>
                 {caption}

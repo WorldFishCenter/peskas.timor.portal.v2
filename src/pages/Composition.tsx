@@ -127,7 +127,7 @@ export default function Composition() {
               <div className="card shadow-sm border-0">
                 <div className="card-header border-0 pb-0">
                   <div>
-                    <h3 className="card-title text-muted fw-bold">{tableHeading}</h3>
+                    <h3 className="card-title fw-bold">{tableHeading}</h3>
                     {tableFooter && (
                       <div className="text-muted mt-1" style={{ fontSize: '0.75rem', lineHeight: '1.4' }}>
                         {tableFooter}
@@ -161,7 +161,7 @@ export default function Composition() {
               <div className="card shadow-sm border-0">
                 <div className="card-header border-0 pb-0">
                   <div>
-                    <h3 className="card-title text-muted fw-bold">{percentHeading}</h3>
+                    <h3 className="card-title fw-bold">{percentHeading}</h3>
                     <div className="card-subtitle">{t('composition.stacked_subtitle', { defaultValue: 'Regional catch distribution by taxa' })}</div>
                   </div>
                   <div className="card-actions ms-auto">
@@ -196,7 +196,7 @@ export default function Composition() {
             <div className="col-12 col-lg-7">
               <div className="card shadow-sm border-0">
                 <div className="card-header border-0 pb-0">
-                  <h3 className="card-title text-muted fw-bold">{highlightHeading}</h3>
+                  <h3 className="card-title fw-bold">{highlightHeading}</h3>
                 </div>
                 <div className="card-body">
                   {taxaLoading ? (
@@ -226,7 +226,7 @@ export default function Composition() {
             <div className="col-12 col-lg-5">
               <div className="card shadow-sm border-0">
                 <div className="card-header border-0 pb-0">
-                  <h3 className="card-title text-muted fw-bold">{descriptionHeading}</h3>
+                  <h3 className="card-title fw-bold">{descriptionHeading}</h3>
                 </div>
                 <div className="card-body">
                   <div className="markdown text-muted">

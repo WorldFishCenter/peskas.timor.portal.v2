@@ -161,7 +161,7 @@ export default function Market() {
               <div className="card shadow-sm border-0">
                 <div className="card-header d-flex align-items-center">
                   <div>
-                    <h3 className="card-title text-muted fw-bold">
+                    <h3 className="card-title fw-bold">
                       {t('market.price_series', { defaultValue: 'Price Trends' })}
                     </h3>
                     <div className="card-subtitle">{t('market.price_subtitle', { defaultValue: 'Average price per kilogram in USD' })}</div>
@@ -281,7 +281,7 @@ export default function Market() {
               <div className="card shadow-sm border-0">
                 <div className="card-header border-0 pb-0">
                   <div>
-                    <h3 className="card-title text-muted fw-bold">
+                    <h3 className="card-title fw-bold">
                       {t('market.price_by_region', { defaultValue: 'Regional Price Comparison' })}
                     </h3>
                   </div>
@@ -308,7 +308,7 @@ export default function Market() {
               <div className="card shadow-sm border-0">
                 <div className="card-header border-0 pb-0">
                   <div>
-                    <h3 className="card-title text-muted fw-bold">
+                    <h3 className="card-title fw-bold">
                       {t('market.conservation_title', { defaultValue: 'Fish Conservation' })}
                     </h3>
                     {pars?.market?.conservation?.region_barplot?.description && (

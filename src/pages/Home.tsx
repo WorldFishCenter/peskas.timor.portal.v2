@@ -102,7 +102,7 @@ export default function Home() {
             <div className="col-md-4">
               <div className="card shadow-sm border-0">
                 <div className="card-header border-0 pb-0">
-                  <h3 className="card-title text-muted fw-bold">{t('home.trips')}</h3>
+                  <h3 className="card-title fw-bold">{t('home.trips')}</h3>
                 </div>
                 <div className="card-body">
                   <DonutChart data={tripsData} colors={donutBlue} height={280} />
@@ -113,7 +113,7 @@ export default function Home() {
             <div className="col-md-4">
               <div className="card shadow-sm border-0">
                 <div className="card-header border-0 pb-0">
-                  <h3 className="card-title text-muted fw-bold">{t('home.revenue')}</h3>
+                  <h3 className="card-title fw-bold">{t('home.revenue')}</h3>
                 </div>
                 <div className="card-body">
                   <DonutChart data={revenueData} colors={donutBlue} height={280} />
@@ -124,7 +124,7 @@ export default function Home() {
             <div className="col-md-4">
               <div className="card shadow-sm border-0">
                 <div className="card-header border-0 pb-0">
-                  <h3 className="card-title text-muted fw-bold">{t('home.catch')}</h3>
+                  <h3 className="card-title fw-bold">{t('home.catch')}</h3>
                 </div>
                 <div className="card-body">
                   <DonutChart data={fishData} colors={viridis5} height={280} />

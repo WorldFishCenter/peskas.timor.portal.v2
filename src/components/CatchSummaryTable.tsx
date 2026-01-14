@@ -102,7 +102,7 @@ export default function CatchSummaryTable() {
     <div className="card shadow-sm border-0">
       <div className="card-header border-0 pb-0">
         <div>
-          <h3 className="card-title text-muted fw-bold">{t('catch.summary_table', { defaultValue: 'Annual Summary' })}</h3>
+          <h3 className="card-title fw-bold">{t('catch.summary_table', { defaultValue: 'Annual Summary' })}</h3>
         </div>
         <div className="ms-auto card-actions">
           <select

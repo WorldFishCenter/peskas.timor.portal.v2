@@ -114,21 +114,38 @@
 
 .card-title {
     font-size: 0.875rem;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.025em;
-    color: #495057;
+    letter-spacing: 0.04em;
+    color: #1d273b;
     margin-bottom: 0;
 }
 
 [data-bs-theme='dark'] .card-title {
-    color: #a3aab5;
+    color: #f5f7f9;
 }
 
 .card-subtitle {
-    font-size: 0.75rem;
-    color: #6c757d;
+    font-size: 0.725rem;
+    color: #495057;
     margin-top: 0.25rem;
+    line-height: 1.4;
+}
+
+[data-bs-theme='dark'] .card-subtitle {
+    color: #d1d5db;
+}
+
+[data-bs-theme='dark'] .text-muted {
+    color: #a3aab5 !important;
+}
+
+[data-bs-theme='dark'] .subheader {
+    color: #9ca3af;
+}
+
+[data-bs-theme='dark'] .markdown {
+    color: #f3f4f6;
 }
 
 /* Page body spacing consistency */
