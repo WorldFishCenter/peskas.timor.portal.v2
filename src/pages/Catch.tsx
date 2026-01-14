@@ -125,7 +125,7 @@ export default function Catch() {
                     <div className="card-body">
                       <div className="d-flex align-items-center">
                         <div className="subheader">{t('vars.catch.short_name', { defaultValue: 'Total catch' })}</div>
-                        <div className="ms-auto text-muted small">Last 12 months</div>
+                        <div className="ms-auto text-muted small">{t('common.last_12_months')}</div>
                       </div>
                       <div className="d-flex align-items-baseline">
                         <div className="h1 mb-0">{loading ? '...' : `${metrics.totalCatch} t`}</div>
@@ -143,7 +143,7 @@ export default function Catch() {
                     <div className="card-body">
                       <div className="d-flex align-items-center">
                         <div className="subheader">{t('vars.landing_weight.short_name', { defaultValue: 'Catch per trip' })}</div>
-                        <div className="ms-auto text-muted small">Avg</div>
+                        <div className="ms-auto text-muted small">{t('common.avg')}</div>
                       </div>
                       <div className="d-flex align-items-baseline">
                         <div className="h1 mb-0">{loading ? '...' : `${metrics.avgLandingWeight} kg`}</div>
@@ -189,7 +189,7 @@ export default function Catch() {
                         <div className="col">
                           <div className="d-flex align-items-center">
                             <div className="font-weight-medium">{t('vars.n_boats.short_name', { defaultValue: 'Active boats' })}</div>
-                            <div className="ms-auto lh-1 text-muted small">Last month</div>
+                            <div className="ms-auto lh-1 text-muted small">{t('common.last_month')}</div>
                           </div>
                           <div className="d-flex align-items-center">
                             <div className="h1 mb-0">{loading ? '...' : metrics.nBoats}</div>

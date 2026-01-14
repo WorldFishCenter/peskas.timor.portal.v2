@@ -592,7 +592,7 @@
         "Responsive breakpoints work correctly",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-013a",
@@ -605,7 +605,7 @@
         "All pages use i18n for text (no hardcoded strings)",
         "Text matches Shiny exactly in both languages"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-014a",

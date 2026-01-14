@@ -4,8 +4,10 @@ import TreemapChart from '../components/charts/TreemapChart'
 import type { TreemapDataItem } from '../components/charts/TreemapChart'
 import YearFilter from '../components/YearFilter'
 import { habitatPalette } from '../constants/colors'
+import { useI18n } from '../i18n'
 
 export default function Composition() {
+  const { t } = useI18n()
   const [selectedYear, setSelectedYear] = useState<string>('all')
   const { data: pars, loading: parsLoading } = useData('pars')
   const { data: taxaAggregated, loading: taxaLoading } = useData('taxa_aggregated')
@@ -85,13 +87,13 @@ export default function Composition() {
                   {taxaLoading ? (
                     <div className="d-flex align-items-center justify-content-center" style={{ height: '20rem' }}>
                       <div className="spinner-border text-primary" role="status">
-                        <span className="visually-hidden">Loading...</span>
+                        <span className="visually-hidden">{t('common.loading')}</span>
                       </div>
                     </div>
                   ) : (
                     <TreemapChart
                       data={treemapData}
-                      title="Catch by Taxa (tons)"
+                      title={t('composition.treemap_title')}
                       colors={habitatPalette}
                       height="20rem"
                     />
@@ -113,7 +115,7 @@ export default function Composition() {
                 <div className="card-body" style={{ height: '30rem' }}>
                   {/* TODO: StackedBarChart component for region composition */}
                   <div className="d-flex align-items-center justify-content-center h-100 bg-secondary-lt rounded">
-                    <span className="text-muted">Region composition chart placeholder</span>
+                    <span className="text-muted">{t('composition.placeholder_region')}</span>
                   </div>
                 </div>
               </div>
@@ -128,7 +130,7 @@ export default function Composition() {
                 <div className="card-body">
                   {/* TODO: TaxaBarChart component */}
                   <div className="ratio ratio-4x3 bg-secondary-lt rounded d-flex align-items-center justify-content-center">
-                    <span className="text-muted">Taxa bar highlight chart placeholder</span>
+                    <span className="text-muted">{t('composition.placeholder_taxa')}</span>
                   </div>
                 </div>
               </div>

@@ -440,3 +440,19 @@ Thread: https://ampcode.com/threads/T-019bbc00-9a11-72a0-966b-4cd2a6094c7b
   - DeckGL map uses maplibre-gl for base map rendering
   - HexagonLayer from @deck.gl/aggregation-layers for density visualization
 ---
+
+## 2026-01-14 - US-013a
+Thread: https://ampcode.com/threads/T-019bbc10-4d45-7308-a1ab-3d5707363ed3
+- Added comprehensive i18n keys to src/i18n.tsx for both English (en) and Tetum (tet)
+- Added 150+ new translation keys covering all pages and components
+- Updated pages to use t() function: Catch.tsx, Composition.tsx, Market.tsx, Tracks.tsx
+- Updated SummaryTable.tsx to use i18n for all column headers and messages
+- Added translations for: nav.tracks, common (loading, last_12_months, etc.), home (title, subtitle, etc.), catch, revenue, market, composition, nutrients, tracks, table, vars, indicators, settings
+- All text from Shiny pars.json now available in i18n dictionaries
+- Files changed: src/i18n.tsx, src/pages/Catch.tsx, src/pages/Composition.tsx, src/pages/Market.tsx, src/pages/Tracks.tsx, src/components/SummaryTable.tsx
+- **Learnings for future iterations:**
+  - i18n dictionaries support nested keys like `vars.catch.short_name`
+  - Use t() function from useI18n() hook in all components
+  - Tetum translations (tet) should be reviewed by native speaker
+  - Some pages still load text from pars.json directly for dynamic content - that's acceptable
+---

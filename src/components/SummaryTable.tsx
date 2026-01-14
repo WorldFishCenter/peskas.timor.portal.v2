@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 import { useData } from '../hooks';
 import { tabPalette } from '../constants/colors';
+import { useI18n } from '../i18n';
 
 interface MunicipalSummary {
   region: string;
@@ -51,6 +52,7 @@ function biasedNormalize(value: number, values: number[], bias: number = 2): num
 }
 
 export function SummaryTable() {
+  const { t } = useI18n();
   const { data: municipalData, loading, error } = useData('municipal_aggregated');
   const { data: pars } = useData('pars');
 
@@ -129,7 +131,7 @@ export function SummaryTable() {
   if (loading) {
     return (
       <div className="text-muted text-center py-4">
-        Loading table data...
+        {t('table.loading')}
       </div>
     );
   }
@@ -137,7 +139,7 @@ export function SummaryTable() {
   if (error) {
     return (
       <div className="text-danger text-center py-4">
-        Error loading table data
+        {t('table.error')}
       </div>
     );
   }
@@ -155,13 +157,13 @@ export function SummaryTable() {
         <table className="table table-vcenter table-hover" style={{ fontSize: '0.875rem' }}>
         <thead>
           <tr>
-            <th style={{ minWidth: 140 }}>Municipality</th>
-            <th className="text-center" style={{ minWidth: 100 }}>Revenue per trip</th>
-            <th className="text-center" style={{ minWidth: 100 }}>Landings per boat</th>
-            <th className="text-center" style={{ minWidth: 100 }}>Catch per trip</th>
-            <th className="text-center" style={{ minWidth: 100 }}>Total revenue</th>
-            <th className="text-center" style={{ minWidth: 100 }}>Total catch</th>
-            <th className="text-center" style={{ minWidth: 100 }}>Price per kg</th>
+            <th style={{ minWidth: 140 }}>{t('table.municipality')}</th>
+            <th className="text-center" style={{ minWidth: 100 }}>{t('table.revenue_per_trip')}</th>
+            <th className="text-center" style={{ minWidth: 100 }}>{t('table.landings_per_boat')}</th>
+            <th className="text-center" style={{ minWidth: 100 }}>{t('table.catch_per_trip')}</th>
+            <th className="text-center" style={{ minWidth: 100 }}>{t('table.total_revenue')}</th>
+            <th className="text-center" style={{ minWidth: 100 }}>{t('table.total_catch')}</th>
+            <th className="text-center" style={{ minWidth: 100 }}>{t('table.price_per_kg')}</th>
           </tr>
         </thead>
         <tbody>

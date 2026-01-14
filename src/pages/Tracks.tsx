@@ -54,7 +54,7 @@ export default function Tracks() {
             <div className="col-12">
               <div className="card">
                 <div className="card-header">
-                  <h3 className="card-title">Fishing Track Density</h3>
+                  <h3 className="card-title">{t('tracks.map_title')}</h3>
                 </div>
                 <div className="card-body p-0">
                   <div style={{ height: 650, width: '100%' }}>
