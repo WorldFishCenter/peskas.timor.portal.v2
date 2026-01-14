@@ -169,7 +169,7 @@
         "donutBlue palette constant with hex values",
         "Build passes with no TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003c5",

@@ -227,3 +227,14 @@ Thread: https://ampcode.com/threads/$AMP_CURRENT_THREAD_ID
   - Browser verification adds 2-3 minutes - factor into complexity estimate
   - Rule of thumb: 1 file edit + 1 build + browser check = 1 story max
 ---
+
+## 2026-01-14 - US-003c4
+Thread: https://ampcode.com/threads/T-019bbb33-8ee5-763c-8a91-f5ae5b059e71
+- Created src/constants/colors.ts with donutBlue palette constant
+- Extracted hex values from shiny-analysis.md: ["#d7eaf3", "#77b5d9", "#14397d"]
+- Build passes with no TypeScript errors
+- Files changed: src/constants/colors.ts
+- **Learnings for future iterations:**
+  - Color constants file created at src/constants/colors.ts for all chart color palettes
+  - Other palettes (habitatPalette, tabPalette, spiderColors, viridis, heatmapColors) to be added in US-012a2
+---

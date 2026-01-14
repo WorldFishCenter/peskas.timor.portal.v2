@@ -2,6 +2,7 @@ import { useI18n } from '../i18n'
 import { useData } from '../hooks/useData'
 import FishingMap from '../components/FishingMap'
 import DonutChart from '../components/charts/DonutChart'
+import { donutBlue } from '../constants/colors'
 
 export default function Home() {
   const { t } = useI18n()
@@ -106,7 +107,7 @@ export default function Home() {
                   <h3 className="card-title">{t('home.trips')}</h3>
                 </div>
                 <div className="card-body">
-                  <DonutChart data={tripsData} height="16rem" />
+                  <DonutChart data={tripsData} colors={donutBlue} height="16rem" />
                 </div>
               </div>
             </div>
@@ -117,7 +118,7 @@ export default function Home() {
                   <h3 className="card-title">{t('home.revenue')}</h3>
                 </div>
                 <div className="card-body">
-                  <DonutChart data={revenueData} height="16rem" />
+                  <DonutChart data={revenueData} colors={donutBlue} height="16rem" />
                 </div>
               </div>
             </div>
@@ -128,7 +129,7 @@ export default function Home() {
                   <h3 className="card-title">{t('home.catch')}</h3>
                 </div>
                 <div className="card-body">
-                  <DonutChart data={fishData} height="16rem" />
+                  <DonutChart data={fishData} colors={donutBlue} height="16rem" />
                 </div>
               </div>
             </div>
