@@ -131,6 +131,8 @@ export default function Revenue() {
                       height={336}
                       yAxisTitle={t('revenue.million_usd', { defaultValue: 'Revenue (M USD)' })}
                       colors={revenueBarColors}
+                      showMean={true}
+                      showMax={true}
                     />
                   )}
                 </div>

@@ -23,6 +23,8 @@ interface TimeSeriesChartProps {
   yAxisTitle?: string
   xAxisTitle?: string
   chartType?: 'line' | 'area'
+  showMean?: boolean
+  showMax?: boolean
 }
 
 export default function TimeSeriesChart({
@@ -33,6 +35,8 @@ export default function TimeSeriesChart({
   yAxisTitle,
   xAxisTitle,
   chartType = 'area',
+  showMean = false,
+  showMax = false,
 }: TimeSeriesChartProps) {
   const theme = useTheme()
   const { t, lang } = useI18n()
@@ -76,6 +80,63 @@ export default function TimeSeriesChart({
     })),
   }))
 
+  const annotations = useMemo(() => {
+    const lines: any[] = []
+    
+    if ((showMean || showMax) && series.length > 0) {
+      // Use the first series for reference metrics if multiple exist
+      const data = series[0].data
+      const values = data.map(d => d.value)
+      
+      if (showMean) {
+        const mean = values.reduce((a, b) => a + b, 0) / values.length
+        lines.push({
+          y: mean,
+          borderColor: theme === 'dark' ? 'rgba(255, 255, 255, 0.4)' : 'rgba(0, 0, 0, 0.4)',
+          strokeDashArray: 4,
+          label: {
+            borderColor: 'transparent',
+            style: {
+              color: theme === 'dark' ? '#f5f7f9' : '#1d273b',
+              background: theme === 'dark' ? '#2c333f' : '#f1f3f5',
+              fontSize: '10px',
+              padding: { left: 4, right: 4, top: 2, bottom: 2 }
+            },
+            text: `${t('common.mean', { defaultValue: 'Mean' })}: ${mean.toLocaleString(undefined, { maximumFractionDigits: 1 })}`,
+            position: 'left',
+            textAnchor: 'start',
+            offsetX: 10
+          }
+        })
+      }
+
+      if (showMax) {
+        const max = Math.max(...values)
+        lines.push({
+          y: max,
+          borderColor: '#d63939', // Tabler red
+          strokeDashArray: 2,
+          opacity: 0.5,
+          label: {
+            borderColor: 'transparent',
+            style: {
+              color: '#fff',
+              background: '#d63939',
+              fontSize: '10px',
+              padding: { left: 4, right: 4, top: 2, bottom: 2 }
+            },
+            text: `${t('common.max', { defaultValue: 'Max' })}: ${max.toLocaleString()}`,
+            position: 'right',
+            textAnchor: 'end',
+            offsetX: -10
+          }
+        })
+      }
+    }
+    
+    return { yaxis: lines }
+  }, [series, showMean, showMax, theme, t])
+
   const options: ApexOptions = {
     chart: {
       type: chartType,
@@ -95,6 +156,7 @@ export default function TimeSeriesChart({
     theme: {
       mode: theme,
     },
+    annotations: annotations,
     colors: colors,
     dataLabels: { enabled: false },
     stroke: {

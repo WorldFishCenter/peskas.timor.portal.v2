@@ -172,6 +172,8 @@ export default function Market() {
                       height={350}
                       yAxisTitle={t('market.price_usd', { defaultValue: 'Price (USD/kg)' })}
                       colors={timeSeriesColors}
+                      showMean={true}
+                      showMax={true}
                     />
                   )}
                 </div>

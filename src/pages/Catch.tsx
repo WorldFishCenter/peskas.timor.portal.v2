@@ -130,6 +130,8 @@ export default function Catch() {
                       series={chartSeries}
                       height={336}
                       yAxisTitle={t('catch.catch_t', { defaultValue: 'Catch (tons)' })}
+                      showMean={true}
+                      showMax={true}
                     />
                   )}
                 </div>
