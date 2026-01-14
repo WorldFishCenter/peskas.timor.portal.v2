@@ -1,9 +1,12 @@
+import { useState } from 'react'
 import { useData } from '../hooks/useData'
 import TreemapChart from '../components/charts/TreemapChart'
 import type { TreemapDataItem } from '../components/charts/TreemapChart'
+import YearFilter from '../components/YearFilter'
 import { habitatPalette } from '../constants/colors'
 
 export default function Composition() {
+  const [selectedYear, setSelectedYear] = useState<string>('all')
   const { data: pars, loading: parsLoading } = useData('pars')
   const { data: taxaAggregated, loading: taxaLoading } = useData('taxa_aggregated')
   const { data: taxaNames } = useData('taxa_names')
@@ -98,6 +101,9 @@ export default function Composition() {
               <div className="card">
                 <div className="card-header">
                   <h3 className="card-title">{percentHeading}</h3>
+                  <div className="card-actions">
+                    <YearFilter value={selectedYear} onChange={setSelectedYear} />
+                  </div>
                 </div>
                 <div className="card-body" style={{ height: '30rem' }}>
                   {/* TODO: StackedBarChart component for region composition */}
