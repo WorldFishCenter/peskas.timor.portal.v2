@@ -1,6 +1,7 @@
 import { useData } from '../hooks/useData'
 import TreemapChart from '../components/charts/TreemapChart'
 import type { TreemapDataItem } from '../components/charts/TreemapChart'
+import { habitatPalette } from '../constants/colors'
 
 export default function Composition() {
   const { data: pars, loading: parsLoading } = useData('pars')
@@ -83,6 +84,7 @@ export default function Composition() {
                     <TreemapChart
                       data={treemapData}
                       title="Catch by Taxa (tons)"
+                      colors={habitatPalette}
                       height="20rem"
                     />
                   )}
