@@ -77,37 +77,119 @@
       "passes": true
     },
     {
-      "id": "US-003b",
-      "title": "Add fishing map to Home page",
-      "description": "Implement the fishing map using Leaflet or MapLibre. Center at lat:-8.75, lng:125.7, zoom:8. Match Shiny map styling and basemap.",
+      "id": "US-003b1",
+      "title": "Install and configure React Leaflet library",
+      "description": "Install react-leaflet and leaflet packages. Create basic type declarations if needed. Verify library loads without errors.",
       "acceptanceCriteria": [
-        "Map component displays on Home page",
-        "Correct center coordinates and zoom level",
+        "react-leaflet and leaflet installed via npm",
+        "No TypeScript errors after installation",
+        "Build passes with new dependencies"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-003b2",
+      "title": "Create basic FishingMap component",
+      "description": "Create src/components/FishingMap.tsx with a simple Leaflet map component. Use placeholder center/zoom. No styling yet, just get basic map rendering.",
+      "acceptanceCriteria": [
+        "src/components/FishingMap.tsx created",
+        "Component renders a basic Leaflet map",
+        "No TypeScript errors",
+        "Component exports properly"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-003b3",
+      "title": "Add FishingMap to Home page with correct coordinates",
+      "description": "Import FishingMap into Home.tsx, add to map card. Set center to lat:-8.75, lng:125.7, zoom:8. Verify in browser.",
+      "acceptanceCriteria": [
+        "Map displays on Home page in map card",
+        "Correct center coordinates: lat:-8.75, lng:125.7",
+        "Zoom level: 8",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-003b4",
+      "title": "Style FishingMap to match Shiny basemap",
+      "description": "Apply basemap tile layer to match Shiny. Check tab_home_content.R for basemap URL. Apply map styling (height, responsive container).",
+      "acceptanceCriteria": [
         "Basemap matches Shiny styling",
+        "Map height matches Shiny",
         "Map is responsive within grid",
         "Browser verification passes"
       ],
       "passes": false
     },
     {
-      "id": "US-003c",
-      "title": "Add 3 donut charts to Home page",
-      "description": "Create 3 ApexCharts donut charts (trips, revenue, fish) using data from aggregated.json. Use exact colors from Shiny: donutBlue palette. Match chart sizes and spacing.",
+      "id": "US-003c1",
+      "title": "Create reusable DonutChart component",
+      "description": "Create src/components/charts/DonutChart.tsx using ApexCharts. Accept props for data, title, colors. Simple placeholder data to test rendering.",
       "acceptanceCriteria": [
-        "3 donut charts display with correct data",
-        "Colors match Shiny donutBlue palette exactly",
-        "Chart sizes and spacing match Shiny",
-        "Data loads from aggregated.json",
+        "src/components/charts/DonutChart.tsx created",
+        "Component accepts title, data, colors props",
+        "Renders a basic donut chart with placeholder data",
+        "No TypeScript errors"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-003c2",
+      "title": "Add 3 donut chart instances to Home page",
+      "description": "Import DonutChart into Home.tsx. Add 3 instances in the grid (trips, revenue, fish). Use placeholder data. Match card layout from Shiny.",
+      "acceptanceCriteria": [
+        "3 donut chart cards display on Home page",
+        "Cards positioned correctly in grid (col-md-4 each)",
+        "Titles: Trips, Revenue, Fish",
+        "Chart height: 16rem (from Shiny)",
         "Browser verification passes"
       ],
       "passes": false
     },
     {
-      "id": "US-003d",
-      "title": "Add summary table to Home page",
-      "description": "Create summary indicators table using indicators_grid.json data. Match Shiny table styling, column layout, and formatting. Apply correct number formatting and units.",
+      "id": "US-003c3",
+      "title": "Load aggregated data into donut charts",
+      "description": "Use useData hook to load aggregated.json. Extract trip, revenue, and catch data. Pass to DonutChart components. Verify data displays correctly.",
       "acceptanceCriteria": [
-        "Summary table displays all indicators",
+        "Data loaded from aggregated.json",
+        "Donut charts display real data (not placeholder)",
+        "Data values match aggregated.json",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-003c4",
+      "title": "Apply donutBlue color palette to charts",
+      "description": "Extract donutBlue palette from shiny-analysis.md. Create colors constant. Apply to all 3 donut charts. Verify colors match Shiny exactly.",
+      "acceptanceCriteria": [
+        "donutBlue palette extracted and documented",
+        "Colors applied to all 3 donut charts",
+        "Colors match Shiny exactly",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-003d1",
+      "title": "Create SummaryTable component structure",
+      "description": "Create src/components/SummaryTable.tsx. Load indicators_grid.json. Create basic table structure with Tabler table component. No formatting yet.",
+      "acceptanceCriteria": [
+        "src/components/SummaryTable.tsx created",
+        "Data loaded from indicators_grid.json",
+        "Basic table structure renders",
+        "No TypeScript errors"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-003d2",
+      "title": "Add SummaryTable to Home and apply formatting",
+      "description": "Import SummaryTable into Home.tsx. Add to grid. Apply number formatting using pars.json multipliers. Match Shiny table styling and column layout.",
+      "acceptanceCriteria": [
+        "Summary table displays on Home page",
         "Table layout matches Shiny exactly",
         "Number formatting with correct units (using pars.json multipliers)",
         "Table styling matches Shiny",
@@ -128,11 +210,46 @@
       "passes": false
     },
     {
-      "id": "US-004b",
-      "title": "Add treemaps to Composition page",
-      "description": "Implement treemap visualizations using ApexCharts or D3. Load data from taxa_aggregated.json. Use habitat_palette colors from Shiny. Match treemap styling and interactions.",
+      "id": "US-004b1",
+      "title": "Research and install treemap library",
+      "description": "Research ApexCharts treemap support. If not supported, install alternative (e.g., recharts, d3-hierarchy). Verify library works with TypeScript.",
       "acceptanceCriteria": [
-        "Treemaps display with correct data",
+        "Treemap library decision documented",
+        "Library installed via npm",
+        "No TypeScript errors after installation",
+        "Build passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-004b2",
+      "title": "Create TreemapChart component",
+      "description": "Create src/components/charts/TreemapChart.tsx. Accept props for data, colors. Render basic treemap with placeholder data.",
+      "acceptanceCriteria": [
+        "src/components/charts/TreemapChart.tsx created",
+        "Component renders basic treemap",
+        "Accepts data and colors props",
+        "No TypeScript errors"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-004b3",
+      "title": "Add TreemapChart to Composition page with data",
+      "description": "Import TreemapChart into Composition.tsx. Load taxa_aggregated.json. Add treemap to page grid. Verify data displays.",
+      "acceptanceCriteria": [
+        "Treemap displays on Composition page",
+        "Data loaded from taxa_aggregated.json",
+        "Treemap shows correct hierarchical data",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-004b4",
+      "title": "Apply habitat_palette colors and interactions",
+      "description": "Extract habitat_palette from shiny-analysis.md. Apply to treemap. Add hover/click interactions to match Shiny.",
+      "acceptanceCriteria": [
         "Colors match habitat_palette from Shiny",
         "Treemap interactions work (hover, click)",
         "Layout matches Shiny",
@@ -154,14 +271,49 @@
       "passes": false
     },
     {
-      "id": "US-005a",
-      "title": "Setup Catch page with time series",
-      "description": "Create Catch page with ApexCharts time series. Load catch data from aggregated.json. Match Shiny chart styling and colors.",
+      "id": "US-005a1",
+      "title": "Create Catch page structure",
+      "description": "Create src/pages/Catch.tsx with Tabler layout. Add page heading, intro text. Create grid structure for time series chart and metric cards. No charts yet.",
       "acceptanceCriteria": [
         "src/pages/Catch.tsx created",
-        "Time series chart displays catch over time",
+        "Page heading and intro text",
+        "Grid structure for chart + cards",
+        "No TypeScript errors"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-005a2",
+      "title": "Create TimeSeriesChart component",
+      "description": "Create src/components/charts/TimeSeriesChart.tsx using ApexCharts. Accept props for data, title, colors. Render basic line chart with placeholder data.",
+      "acceptanceCriteria": [
+        "src/components/charts/TimeSeriesChart.tsx created",
+        "Component renders basic ApexCharts line chart",
+        "Accepts data, title, colors props",
+        "No TypeScript errors"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-005a3",
+      "title": "Add time series to Catch page with data",
+      "description": "Import TimeSeriesChart into Catch.tsx. Load aggregated.json. Add chart to page. Pass catch over time data. Verify displays correctly.",
+      "acceptanceCriteria": [
+        "Time series chart displays on Catch page",
+        "Data loaded from aggregated.json",
+        "Chart shows catch over time",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-005a4",
+      "title": "Style time series chart to match Shiny",
+      "description": "Apply Shiny colors to time series. Format axes and labels to match Shiny. Verify chart styling matches exactly.",
+      "acceptanceCriteria": [
         "Chart colors match Shiny",
         "Axes and labels formatted correctly",
+        "Chart height and spacing match Shiny",
         "Browser verification passes"
       ],
       "passes": false
@@ -180,25 +332,49 @@
       "passes": false
     },
     {
-      "id": "US-006a",
-      "title": "Setup Market page with price visualizations",
-      "description": "Create Market page with price charts. Load data from aggregated.json or market-specific data. Match Shiny market visualizations.",
+      "id": "US-006a1",
+      "title": "Create Market page structure",
+      "description": "Create src/pages/Market.tsx with Tabler layout. Add page heading, intro text. Create grid structure for price charts. No charts yet.",
       "acceptanceCriteria": [
         "src/pages/Market.tsx created",
+        "Page heading and intro text",
+        "Grid structure for charts",
+        "No TypeScript errors"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-006a2",
+      "title": "Add price charts to Market page",
+      "description": "Create price visualizations (bar/line charts) using ApexCharts. Load data from aggregated.json. Match Shiny chart types and colors.",
+      "acceptanceCriteria": [
         "Price charts display correctly",
         "Chart types match Shiny (bar/line)",
+        "Data loaded from aggregated.json",
         "Colors match Shiny palette",
         "Browser verification passes"
       ],
       "passes": false
     },
     {
-      "id": "US-007a",
-      "title": "Setup Nutrients page with bar charts",
-      "description": "Create Nutrients page with horizontal bar charts showing nutrient composition. Load from nutrients_aggregated.json. Include highlight interaction on hover.",
+      "id": "US-007a1",
+      "title": "Create Nutrients page structure",
+      "description": "Create src/pages/Nutrients.tsx with Tabler layout. Add page heading, intro text. Create grid structure for nutrient bar charts. No charts yet.",
       "acceptanceCriteria": [
         "src/pages/Nutrients.tsx created",
+        "Page heading and intro text",
+        "Grid structure for charts",
+        "No TypeScript errors"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-007a2",
+      "title": "Add nutrient bar charts with interactions",
+      "description": "Create horizontal bar charts showing nutrient composition using ApexCharts. Load from nutrients_aggregated.json. Add hover highlighting. Match Shiny colors.",
+      "acceptanceCriteria": [
         "Nutrient bars display correctly",
+        "Data loaded from nutrients_aggregated.json",
         "Hover highlighting works",
         "Colors match Shiny",
         "Browser verification passes"
@@ -206,12 +382,24 @@
       "passes": false
     },
     {
-      "id": "US-008a",
-      "title": "Setup Revenue page with charts",
-      "description": "Create Revenue page with revenue time series and breakdown charts. Load from aggregated.json. Match Shiny revenue visualizations.",
+      "id": "US-008a1",
+      "title": "Create Revenue page structure",
+      "description": "Create src/pages/Revenue.tsx with Tabler layout. Add page heading, intro text. Create grid structure for time series and breakdown charts. No charts yet.",
       "acceptanceCriteria": [
         "src/pages/Revenue.tsx created",
+        "Page heading and intro text",
+        "Grid structure for charts",
+        "No TypeScript errors"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-008a2",
+      "title": "Add revenue charts with formatting",
+      "description": "Create revenue time series and breakdown charts using ApexCharts. Load from aggregated.json. Apply currency formatting and multipliers. Match Shiny styling.",
+      "acceptanceCriteria": [
         "Revenue charts display correctly",
+        "Data loaded from aggregated.json",
         "Chart styling matches Shiny",
         "Data formatting correct (currency, multipliers)",
         "Browser verification passes"
@@ -219,14 +407,50 @@
       "passes": false
     },
     {
-      "id": "US-009a",
-      "title": "Setup Tracks page with hexagon heatmap",
-      "description": "Create Tracks page with DeckGL hexagon heatmap showing fishing track density. Load from predicted_tracks.json. Match Shiny heatmap colors (viridis/heatmapColors).",
+      "id": "US-009a1",
+      "title": "Install and configure DeckGL libraries",
+      "description": "Install deck.gl, @deck.gl/layers, @deck.gl/react. Install map provider (MapLibre or React Map GL). Verify libraries work with TypeScript.",
+      "acceptanceCriteria": [
+        "deck.gl and required layers installed",
+        "Map provider library installed",
+        "No TypeScript errors after installation",
+        "Build passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-009a2",
+      "title": "Create Tracks page structure with basic map",
+      "description": "Create src/pages/Tracks.tsx with Tabler layout. Add page heading. Create basic DeckGL map component with basemap. No hexagon layer yet.",
       "acceptanceCriteria": [
         "src/pages/Tracks.tsx created",
-        "DeckGL hexagon layer displays correctly",
+        "Page heading and intro text",
+        "Basic DeckGL map displays with basemap",
+        "No TypeScript errors",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-009a3",
+      "title": "Add hexagon layer to Tracks map",
+      "description": "Load predicted_tracks.json. Create HexagonLayer using DeckGL. Add layer to map. Use placeholder colors. Verify hexagons render.",
+      "acceptanceCriteria": [
+        "Data loaded from predicted_tracks.json",
+        "HexagonLayer added to DeckGL map",
+        "Hexagons display fishing track density",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-009a4",
+      "title": "Apply viridis/heatmap colors to hexagons",
+      "description": "Extract viridis or heatmapColors palette from shiny-analysis.md. Apply to HexagonLayer. Add map interactions. Match Shiny styling exactly.",
+      "acceptanceCriteria": [
         "Colors match Shiny viridis/heatmap palette",
-        "Map interactions work",
+        "Map interactions work (hover, zoom, pan)",
+        "Hexagon styling matches Shiny",
         "Browser verification passes"
       ],
       "passes": false
