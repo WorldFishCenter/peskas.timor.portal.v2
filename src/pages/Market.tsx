@@ -1,13 +1,24 @@
 import { useI18n } from '../i18n'
 import ReactApexChart from 'react-apexcharts'
-import { useState } from 'react'
+import { useMemo } from 'react'
 import type { ApexOptions } from 'apexcharts'
 import MunicipalityFilter from '../components/MunicipalityFilter'
-import type { Municipality } from '../constants'
+import StackedBarChart from '../components/charts/StackedBarChart'
+import { useData } from '../hooks'
+import { interpolateViridis } from 'd3-scale-chromatic'
+import { useFilters } from '../context/FilterContext'
 
 export default function Market() {
   const { t } = useI18n()
-  const [mun, setMun] = useState<Municipality>('all')
+  const { municipality, setMunicipality } = useFilters()
+  const { data: summaryData, loading } = useData('summary_data')
+
+  const conservationColors = useMemo(() => {
+    return Array.from({ length: 5 }, (_, i) => interpolateViridis(i / 4)).map((c) =>
+      c.substring(0, 7)
+    )
+  }, [])
+
   const radar = {
     series: [{ name: t('market.series_name'), data: [80, 50, 30, 40, 100, 20] }],
     options: {
@@ -27,7 +38,7 @@ export default function Market() {
             </div>
             <div className="col-auto ms-auto d-print-none">
               <div className="btn-list">
-                <MunicipalityFilter value={mun} onChange={setMun} />
+                <MunicipalityFilter value={municipality} onChange={setMunicipality} />
               </div>
             </div>
           </div>
@@ -56,6 +67,29 @@ export default function Market() {
                       <div className="progress progress-sm"><div className="progress-bar" style={{ width: '67%' }}></div></div>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-12">
+              <div className="card">
+                <div className="card-header">
+                  <h3 className="card-title">
+                    {t('market.conservation.title', { defaultValue: 'Catch Preservation by Region' })}
+                  </h3>
+                </div>
+                <div className="card-body">
+                  {loading ? (
+                    <div className="d-flex justify-content-center py-5">
+                      <div className="spinner-border text-primary" role="status" />
+                    </div>
+                  ) : summaryData?.conservation ? (
+                    <StackedBarChart
+                      data={summaryData.conservation}
+                      height={320}
+                      colors={conservationColors}
+                      yFormatter={(val: number) => `${val}%`}
+                    />
+                  ) : null}
                 </div>
               </div>
             </div>

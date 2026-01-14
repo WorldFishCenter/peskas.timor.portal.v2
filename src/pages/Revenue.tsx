@@ -1,14 +1,13 @@
 import { useI18n } from '../i18n'
 import ReactApexChart from 'react-apexcharts'
-import { useState } from 'react'
 import type { ApexOptions } from 'apexcharts'
 import MunicipalityFilter from '../components/MunicipalityFilter'
 import { MONTHS_SHORT } from '../constants'
-import type { Municipality } from '../constants'
+import { useFilters } from '../context/FilterContext'
 
 export default function Revenue() {
   const { t } = useI18n()
-  const [mun, setMun] = useState<Municipality>('all')
+  const { municipality, setMunicipality } = useFilters()
   const months = MONTHS_SHORT.slice(0, 7)
   const series = [{ name: t('revenue.series_name'), data: [2.1, 2.7, 2.3, 3.1, 2.9, 3.6, 3.2] }]
   const options: ApexOptions = {
@@ -28,7 +27,7 @@ export default function Revenue() {
             </div>
             <div className="col-auto ms-auto d-print-none">
               <div className="btn-list">
-                <MunicipalityFilter value={mun} onChange={setMun} />
+                <MunicipalityFilter value={municipality} onChange={setMunicipality} />
               </div>
             </div>
           </div>

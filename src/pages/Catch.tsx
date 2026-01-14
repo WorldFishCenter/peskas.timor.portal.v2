@@ -1,13 +1,13 @@
 import { useI18n } from '../i18n'
-import { useState, useMemo } from 'react'
+import { useMemo } from 'react'
 import MunicipalityFilter from '../components/MunicipalityFilter'
 import TimeSeriesChart from '../components/charts/TimeSeriesChart'
 import { useData } from '../hooks'
-import type { Municipality } from '../constants'
+import { useFilters } from '../context/FilterContext'
 
 export default function Catch() {
   const { t } = useI18n()
-  const [mun, setMun] = useState<Municipality>('all')
+  const { municipality, setMunicipality } = useFilters()
   const { data: aggregated, loading, error } = useData('aggregated')
 
   const chartSeries = useMemo(() => {
@@ -89,7 +89,7 @@ export default function Catch() {
             </div>
             <div className="col-auto ms-auto d-print-none">
               <div className="btn-list">
-                <MunicipalityFilter value={mun} onChange={setMun} />
+                <MunicipalityFilter value={municipality} onChange={setMunicipality} />
               </div>
             </div>
           </div>

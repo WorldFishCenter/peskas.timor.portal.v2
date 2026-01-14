@@ -473,7 +473,7 @@
         "Hexagons display fishing track density",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-009a4",
@@ -485,7 +485,7 @@
         "Hexagon styling matches Shiny",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-010a",
@@ -498,7 +498,7 @@
         "Styling matches Shiny",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-011a",
@@ -511,7 +511,7 @@
         "Reset filters functionality works",
         "No TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-011b1",
@@ -523,7 +523,7 @@
         "Filter behavior matches Shiny",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-011b2",
@@ -534,7 +534,7 @@
         "Charts respond to filter changes",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-011b3",
@@ -546,7 +546,7 @@
         "Performance is acceptable",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-012a1",
@@ -557,7 +557,7 @@
         "All 6 palettes documented with hex values",
         "Source files noted for each palette"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-012a2",
@@ -568,7 +568,7 @@
         "Palettes exported as constants",
         "Build passes with no TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-012a3",
@@ -579,7 +579,7 @@
         "Colors match Shiny exactly",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-012b",

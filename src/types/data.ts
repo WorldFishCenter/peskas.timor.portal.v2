@@ -153,6 +153,13 @@ export interface ConservationMethods {
   landings: number;
 }
 
+export interface ConservationRecord {
+  municipality: string;
+  catch_preservation: string;
+  count: number;
+  perc: number;
+}
+
 export interface PortfolioData {
   habitat: string;
   mean_catch: number;
@@ -170,6 +177,7 @@ export interface SummaryData {
   regional_landings_donut: RegionalDonut[];
   habitat_radar: HabitatRadar[];
   conservation_methods: ConservationMethods[];
+  conservation: ConservationRecord[];
   portfolio_data: PortfolioData[];
   map_center?: [number, number][];
 }
