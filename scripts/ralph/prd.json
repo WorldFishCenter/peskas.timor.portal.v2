@@ -133,7 +133,7 @@
         "Renders a basic donut chart with placeholder data",
         "No TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003c2",

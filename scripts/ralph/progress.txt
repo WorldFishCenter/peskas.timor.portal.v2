@@ -12,6 +12,7 @@ Started: 2026-01-13
 - Build command: `npm run build` (runs tsc -b && vite build)
 - tsconfig has `erasableSyntaxOnly` - don't use parameter properties in class constructors
 - Data loading: use `useData('filename')` hook for type-safe loading with loading/error states
+- Chart components: place in `src/components/charts/`, use ApexOptions type, disable animations for perf
 
 ---
 
@@ -148,4 +149,20 @@ Thread: https://ampcode.com/threads/T-019bbb1b-03ef-715f-86f4-430ca6790053
   - Shiny uses `CartoDB.Positron` provider tiles → use `https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png`
   - CartoDB tiles require subdomains "abcd" and support maxZoom 20
   - Map styling in Shiny is in `mod_leaflet_map.R` function `leaflet_map_server`
+---
+
+## 2026-01-14 - US-003c1
+Thread: https://ampcode.com/threads/T-019bbb1d-7ddc-74ed-aaee-38db4ac3cd90
+- Created src/components/charts/DonutChart.tsx using ApexCharts
+- Component accepts props: data (label/value pairs), title (optional), colors (optional), height (optional)
+- Uses ApexOptions typed config for donut chart
+- Default colors from donutBlue palette: ["#d7eaf3", "#77b5d9", "#14397d"]
+- Default height: 16rem (matching Shiny)
+- Build passes with no TypeScript errors
+- Files changed: src/components/charts/DonutChart.tsx
+- **Learnings for future iterations:**
+  - Chart components go in src/components/charts/
+  - Import type { ApexOptions } from 'apexcharts' for type-safe chart config
+  - Disable animations in ApexCharts for production performance: `animations: { enabled: false }`
+  - Shiny donut chart height is "16rem"
 ---
