@@ -356,3 +356,16 @@ Thread: https://ampcode.com/threads/T-019bbb87-f69b-76c7-bb2a-08765a1cd819
   - YearFilter component is reusable for other pages needing date filtering
   - Tabler card-actions class positions elements in card header right side
 ---
+
+## 2026-01-14 - US-004c2
+Thread: https://ampcode.com/threads/T-019bbb8b-82fa-7141-b560-987569d65977
+- Connected YearFilter to treemap data filtering on Composition page
+- Added filter on taxa_aggregated.month rows: `selectedYear === 'all' || row.year === selectedYear`
+- Added YearFilter to Taxa Treemap card header (in addition to Region Composition card)
+- Treemap now updates dynamically when year filter changes
+- Files changed: src/pages/Composition.tsx
+- **Learnings for future iterations:**
+  - taxa_aggregated.json has `year` field for filtering by year
+  - YearFilter can be reused across multiple cards on same page with shared state
+  - Filter state lives in page component, passed down to filter UI and used in data processing
+---
