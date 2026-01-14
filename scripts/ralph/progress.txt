@@ -79,3 +79,23 @@ Thread: https://ampcode.com/threads/T-019bbaf7-ad46-760a-b183-f101507c9656
   - Download report links to external Google Storage URL
   - Donut chart height in Shiny is "16rem" (apex_height parameter)
 ---
+## 2026-01-14 - PRD Refactoring (Story Decomposition)
+Thread: https://ampcode.com/threads/$AMP_CURRENT_THREAD_ID
+- Split 9 complex visualization stories into 30+ atomic tasks
+- US-003b (map) → 4 stories: library install, component, integration, styling
+- US-003c (donut charts) → 4 stories: reusable component, 3 instances, data loading, colors
+- US-003d (table) → 2 stories: component structure, integration + formatting
+- US-004b (treemaps) → 4 stories: library research, component, data, interactions
+- US-005a (time series) → 4 stories: page structure, chart component, data, styling
+- US-006a, US-007a, US-008a (Market, Nutrients, Revenue) → 2 stories each: structure, charts
+- US-009a (DeckGL heatmap) → 4 stories: library install, basic map, hexagon layer, colors
+- Total stories increased: 25 → 44
+- **Learnings for future iterations:**
+  - Ralph timeout issue: stories must complete in <15 minutes
+  - Complex visualization stories need 4-step breakdown: library → component → data → styling
+  - Library installation should be separate story (npm install can be slow)
+  - Component creation with placeholder data should be separate from real data integration
+  - Styling/color matching should be final step after component works
+  - Each story should have single clear focus (avoid "install library + create component + add data + style")
+  - Story complexity rule: if it involves >2 major steps, split it
+---
