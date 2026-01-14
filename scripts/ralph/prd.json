@@ -25,7 +25,7 @@
         "All nested structures properly typed",
         "No TypeScript errors when building"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-002b",
@@ -37,7 +37,7 @@
         "Array types correctly defined",
         "No TypeScript errors when building"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-002c",
@@ -49,7 +49,7 @@
         "Error handling and loading states included",
         "Generic type support for type-safe data loading"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-002d",
@@ -58,10 +58,10 @@
       "acceptanceCriteria": [
         "Test component created showing data loading from 3+ files",
         "Data correctly typed and displays without errors",
-        "scripts/ralph/data-mapping.md documents Shiny→React data mapping",
+        "scripts/ralph/data-mapping.md documents Shiny\u2192React data mapping",
         "Include examples of how to use the data utilities"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003a",
@@ -74,7 +74,7 @@
         "Intro text loaded from pars.json i18n",
         "No TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003b1",
@@ -85,7 +85,7 @@
         "No TypeScript errors after installation",
         "Build passes with new dependencies"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003b2",
@@ -97,7 +97,7 @@
         "No TypeScript errors",
         "Component exports properly"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003b3",
@@ -109,7 +109,7 @@
         "Zoom level: 8",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003b4",
@@ -121,7 +121,7 @@
         "Map is responsive within grid",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003c1",
@@ -133,7 +133,7 @@
         "Renders a basic donut chart with placeholder data",
         "No TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003c2",
@@ -146,7 +146,7 @@
         "Chart height: 16rem (from Shiny)",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003c3",
@@ -158,7 +158,7 @@
         "Data values match aggregated.json",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003c4",
@@ -169,7 +169,7 @@
         "donutBlue palette constant with hex values",
         "Build passes with no TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003c5",
@@ -180,7 +180,7 @@
         "All 3 donut charts use donutBlue palette",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003d1",
@@ -192,7 +192,7 @@
         "Basic table structure renders",
         "No TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003d2",
@@ -204,7 +204,7 @@
         "Build passes with no TypeScript errors",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003d3",
@@ -216,7 +216,7 @@
         "Table styling matches Shiny",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-004a",
@@ -228,7 +228,7 @@
         "Layout structure for filters + treemaps",
         "No TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-004b1",
@@ -240,7 +240,7 @@
         "No TypeScript errors after installation",
         "Build passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-004b2",
@@ -252,7 +252,7 @@
         "Accepts data and colors props",
         "No TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-004b3",
@@ -264,7 +264,7 @@
         "Treemap shows correct hierarchical data",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-004b4",
@@ -312,7 +312,7 @@
         "Grid structure for chart + cards",
         "No TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-005a2",
@@ -324,7 +324,7 @@
         "Accepts data, title, colors props",
         "No TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-005a3",
@@ -336,7 +336,7 @@
         "Chart shows catch over time",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-005a4",
@@ -348,7 +348,7 @@
         "Chart height and spacing match Shiny",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-005b",
@@ -361,7 +361,7 @@
         "Cards responsive in grid",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-006a1",
@@ -373,7 +373,7 @@
         "Grid structure for charts",
         "No TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-006a2",
@@ -386,7 +386,7 @@
         "Colors match Shiny palette",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-007a1",
@@ -398,7 +398,7 @@
         "Grid structure for charts",
         "No TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-007a2",
@@ -411,7 +411,7 @@
         "Colors match Shiny",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-008a1",
@@ -423,7 +423,7 @@
         "Grid structure for charts",
         "No TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-008a2",
@@ -436,7 +436,7 @@
         "Data formatting correct (currency, multipliers)",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-009a1",
@@ -448,7 +448,7 @@
         "No TypeScript errors after installation",
         "Build passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-009a2",
@@ -461,7 +461,7 @@
         "No TypeScript errors",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-009a3",
@@ -473,7 +473,7 @@
         "Hexagons display fishing track density",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-009a4",
@@ -485,7 +485,7 @@
         "Hexagon styling matches Shiny",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-010a",
@@ -511,7 +511,7 @@
         "Reset filters functionality works",
         "No TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-011b1",
@@ -568,7 +568,7 @@
         "Palettes exported as constants",
         "Build passes with no TypeScript errors"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-012a3",
