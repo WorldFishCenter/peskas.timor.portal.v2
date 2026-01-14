@@ -2,6 +2,7 @@ import { useI18n } from '../i18n'
 import { useData } from '../hooks/useData'
 import FishingMap from '../components/FishingMap'
 import DonutChart from '../components/charts/DonutChart'
+import { SummaryTable } from '../components/SummaryTable'
 import { donutBlue } from '../constants/colors'
 
 export default function Home() {
@@ -141,21 +142,7 @@ export default function Home() {
                   <h3 className="card-title">{tableTitle}</h3>
                 </div>
                 <div className="card-body">
-                  {/* Table placeholder - will be implemented in US-003d */}
-                  <div
-                    style={{
-                      height: 200,
-                      background: '#f4f6fa',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      borderRadius: 4,
-                    }}
-                  >
-                    <span className="text-muted">
-                      Summary table will be implemented in US-003d
-                    </span>
-                  </div>
+                  <SummaryTable />
                 </div>
               </div>
             </div>
