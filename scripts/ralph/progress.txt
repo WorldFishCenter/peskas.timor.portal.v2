@@ -99,3 +99,13 @@ Thread: https://ampcode.com/threads/$AMP_CURRENT_THREAD_ID
   - Each story should have single clear focus (avoid "install library + create component + add data + style")
   - Story complexity rule: if it involves >2 major steps, split it
 ---
+
+## 2026-01-14 - US-003b1
+Thread: https://ampcode.com/threads/T-019bbb16-2fb9-7724-8bb7-9347d3babdba
+- Installed react-leaflet package (leaflet and @types/leaflet already in package.json)
+- Build passes with no TypeScript errors
+- Files changed: package.json, package-lock.json
+- **Learnings for future iterations:**
+  - react-leaflet requires leaflet as peer dependency (already installed)
+  - @types/leaflet provides TypeScript types (already installed)
+---
