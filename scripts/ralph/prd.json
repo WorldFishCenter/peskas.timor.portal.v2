@@ -1,0 +1,327 @@
+{
+  "branchName": "ralph/shiny-to-react-conversion",
+  "projectName": "Shiny to React Conversion - Peskas Timor Portal",
+  "description": "Convert the Golem Shiny app to React while maintaining exact visual appearance, layout, colors, and functionality",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "Analyze Shiny app structure and create component mapping",
+      "description": "Read all Shiny R files, document the app structure, tabs, modules, and create a mapping document of Shiny modules to React components. Identify all color palettes, chart types, and layouts used.",
+      "acceptanceCriteria": [
+        "Complete list of all Shiny tabs and their modules",
+        "Document all chart types and visualization libraries used",
+        "Extract color palettes from Shiny code",
+        "Create mapping document in scripts/ralph/shiny-analysis.md"
+      ],
+      "passes": true
+    },
+    {
+      "id": "US-002a",
+      "title": "Create TypeScript interfaces for core data files",
+      "description": "Sample JSON files in public/data/ and create TypeScript interfaces for: aggregated.json, pars.json, summary_data.json, indicators_grid.json. Focus only on type definitions, no utilities yet.",
+      "acceptanceCriteria": [
+        "TypeScript interface file created at src/types/data.ts",
+        "Interfaces for 4 core data files: Aggregated, Pars, SummaryData, IndicatorsGrid",
+        "All nested structures properly typed",
+        "No TypeScript errors when building"
+      ],
+      "passes": true
+    },
+    {
+      "id": "US-002b",
+      "title": "Create TypeScript interfaces for remaining data files",
+      "description": "Complete TypeScript interfaces for remaining data files: municipal_aggregated.json, municipal_taxa.json, nutrients_aggregated.json, taxa_aggregated.json, taxa_names.json, predicted_tracks.json, data_last_updated.json, label_groups_list.json, var_dictionary.json",
+      "acceptanceCriteria": [
+        "All 9 remaining interfaces added to src/types/data.ts",
+        "Complex nested structures properly typed (taxa, nutrients, tracks)",
+        "Array types correctly defined",
+        "No TypeScript errors when building"
+      ],
+      "passes": true
+    },
+    {
+      "id": "US-002c",
+      "title": "Create data loading utilities and hooks",
+      "description": "Create reusable utilities for loading JSON data. Include: fetchData utility function, useData custom hook for React components, error handling, loading states.",
+      "acceptanceCriteria": [
+        "src/utils/dataLoader.ts created with fetchData function",
+        "src/hooks/useData.ts created with useData hook",
+        "Error handling and loading states included",
+        "Generic type support for type-safe data loading"
+      ],
+      "passes": true
+    },
+    {
+      "id": "US-002d",
+      "title": "Test data loading and create mapping documentation",
+      "description": "Test data loading with 3-4 different data files, create examples, and document the data mapping from Shiny R to TypeScript in scripts/ralph/data-mapping.md",
+      "acceptanceCriteria": [
+        "Test component created showing data loading from 3+ files",
+        "Data correctly typed and displays without errors",
+        "scripts/ralph/data-mapping.md documents Shiny→React data mapping",
+        "Include examples of how to use the data utilities"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-003a",
+      "title": "Setup Home page structure and layout",
+      "description": "Create Home page component with correct Tabler UI grid layout matching Shiny. Include page heading, intro text section (from pars.json), and grid structure for map + charts + table. No data loading yet, just layout.",
+      "acceptanceCriteria": [
+        "src/pages/Home.tsx created with Tabler grid layout",
+        "Page heading matches Shiny",
+        "Grid structure ready for: map, 3 donut charts, summary table",
+        "Intro text loaded from pars.json i18n",
+        "No TypeScript errors"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-003b",
+      "title": "Add fishing map to Home page",
+      "description": "Implement the fishing map using Leaflet or MapLibre. Center at lat:-8.75, lng:125.7, zoom:8. Match Shiny map styling and basemap.",
+      "acceptanceCriteria": [
+        "Map component displays on Home page",
+        "Correct center coordinates and zoom level",
+        "Basemap matches Shiny styling",
+        "Map is responsive within grid",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-003c",
+      "title": "Add 3 donut charts to Home page",
+      "description": "Create 3 ApexCharts donut charts (trips, revenue, fish) using data from aggregated.json. Use exact colors from Shiny: donutBlue palette. Match chart sizes and spacing.",
+      "acceptanceCriteria": [
+        "3 donut charts display with correct data",
+        "Colors match Shiny donutBlue palette exactly",
+        "Chart sizes and spacing match Shiny",
+        "Data loads from aggregated.json",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-003d",
+      "title": "Add summary table to Home page",
+      "description": "Create summary indicators table using indicators_grid.json data. Match Shiny table styling, column layout, and formatting. Apply correct number formatting and units.",
+      "acceptanceCriteria": [
+        "Summary table displays all indicators",
+        "Table layout matches Shiny exactly",
+        "Number formatting with correct units (using pars.json multipliers)",
+        "Table styling matches Shiny",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-004a",
+      "title": "Setup Composition page structure",
+      "description": "Create Composition page component with Tabler layout. Add page heading, filter section placeholder, and grid for treemaps. Reference tab_catch_composition.R for layout.",
+      "acceptanceCriteria": [
+        "src/pages/Composition.tsx created",
+        "Page heading and intro text",
+        "Layout structure for filters + treemaps",
+        "No TypeScript errors"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-004b",
+      "title": "Add treemaps to Composition page",
+      "description": "Implement treemap visualizations using ApexCharts or D3. Load data from taxa_aggregated.json. Use habitat_palette colors from Shiny. Match treemap styling and interactions.",
+      "acceptanceCriteria": [
+        "Treemaps display with correct data",
+        "Colors match habitat_palette from Shiny",
+        "Treemap interactions work (hover, click)",
+        "Layout matches Shiny",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-004c",
+      "title": "Add filters to Composition page",
+      "description": "Implement filters for Composition page (municipality, date, habitat type). Filter state updates treemaps. Match Shiny filter behavior and styling.",
+      "acceptanceCriteria": [
+        "All filters render correctly",
+        "Filters update treemap data",
+        "Filter behavior matches Shiny",
+        "Municipality filter uses 500ms debounce",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-005a",
+      "title": "Setup Catch page with time series",
+      "description": "Create Catch page with ApexCharts time series. Load catch data from aggregated.json. Match Shiny chart styling and colors.",
+      "acceptanceCriteria": [
+        "src/pages/Catch.tsx created",
+        "Time series chart displays catch over time",
+        "Chart colors match Shiny",
+        "Axes and labels formatted correctly",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-005b",
+      "title": "Add metrics cards to Catch page",
+      "description": "Create summary metric cards for Catch page showing totals, averages, trends. Use Tabler card components. Match Shiny styling.",
+      "acceptanceCriteria": [
+        "Metric cards display key catch statistics",
+        "Card layout matches Shiny",
+        "Numbers formatted with correct units",
+        "Cards responsive in grid",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-006a",
+      "title": "Setup Market page with price visualizations",
+      "description": "Create Market page with price charts. Load data from aggregated.json or market-specific data. Match Shiny market visualizations.",
+      "acceptanceCriteria": [
+        "src/pages/Market.tsx created",
+        "Price charts display correctly",
+        "Chart types match Shiny (bar/line)",
+        "Colors match Shiny palette",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-007a",
+      "title": "Setup Nutrients page with bar charts",
+      "description": "Create Nutrients page with horizontal bar charts showing nutrient composition. Load from nutrients_aggregated.json. Include highlight interaction on hover.",
+      "acceptanceCriteria": [
+        "src/pages/Nutrients.tsx created",
+        "Nutrient bars display correctly",
+        "Hover highlighting works",
+        "Colors match Shiny",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-008a",
+      "title": "Setup Revenue page with charts",
+      "description": "Create Revenue page with revenue time series and breakdown charts. Load from aggregated.json. Match Shiny revenue visualizations.",
+      "acceptanceCriteria": [
+        "src/pages/Revenue.tsx created",
+        "Revenue charts display correctly",
+        "Chart styling matches Shiny",
+        "Data formatting correct (currency, multipliers)",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-009a",
+      "title": "Setup Tracks page with hexagon heatmap",
+      "description": "Create Tracks page with DeckGL hexagon heatmap showing fishing track density. Load from predicted_tracks.json. Match Shiny heatmap colors (viridis/heatmapColors).",
+      "acceptanceCriteria": [
+        "src/pages/Tracks.tsx created",
+        "DeckGL hexagon layer displays correctly",
+        "Colors match Shiny viridis/heatmap palette",
+        "Map interactions work",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-010a",
+      "title": "Add Conservation region visualizations",
+      "description": "Implement conservation region module with region-specific charts and data displays. Match mod_region_conservation.R functionality.",
+      "acceptanceCriteria": [
+        "Conservation region component created",
+        "Region visualizations display correctly",
+        "Data accuracy verified",
+        "Styling matches Shiny",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-011a",
+      "title": "Implement global filter state management",
+      "description": "Create React Context or state management for filters (municipality, date range) that persists across pages. Share filter state between all pages.",
+      "acceptanceCriteria": [
+        "Filter context created (src/context/FilterContext.tsx)",
+        "Municipality and date filters available globally",
+        "Filter state persists when navigating between pages",
+        "Reset filters functionality works",
+        "No TypeScript errors"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-011b",
+      "title": "Connect all pages to global filters",
+      "description": "Update all page components to consume global filter state and update their visualizations accordingly. Ensure filter behavior matches Shiny exactly.",
+      "acceptanceCriteria": [
+        "All pages respond to filter changes",
+        "Filter behavior matches Shiny (debounce, defaults)",
+        "Data updates correctly when filters change",
+        "Performance is acceptable",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-012a",
+      "title": "Create color palette reference and verify charts",
+      "description": "Document all color palettes in a reference file. Audit all charts to ensure they use exact Shiny colors. Create scripts/ralph/color-palettes.md with hex values.",
+      "acceptanceCriteria": [
+        "scripts/ralph/color-palettes.md created with all 6 palettes",
+        "All charts audited for color accuracy",
+        "Color constants file created (src/constants/colors.ts)",
+        "Side-by-side color comparison documented",
+        "All charts updated to use correct colors"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-012b",
+      "title": "Verify spacing and layout consistency",
+      "description": "Audit all pages for spacing, margins, padding to match Shiny exactly. Use browser dev tools to compare. Adjust as needed.",
+      "acceptanceCriteria": [
+        "All page layouts match Shiny spacing",
+        "Card margins and padding correct",
+        "Chart spacing within grid correct",
+        "Responsive breakpoints work correctly",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-013a",
+      "title": "Extract and implement all i18n text keys",
+      "description": "Extract all text from Shiny R files and pars.json. Add to React i18n files. Ensure language switching works.",
+      "acceptanceCriteria": [
+        "All Shiny text keys identified and documented",
+        "Text keys added to src/i18n.tsx or locale files",
+        "Language switching tested and works",
+        "All pages use i18n for text (no hardcoded strings)",
+        "Text matches Shiny exactly in both languages"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-014a",
+      "title": "Final visual QA and polish",
+      "description": "Side-by-side comparison of Shiny app and React app. Create checklist. Fix any remaining visual differences, spacing issues, or missing elements. Test all interactions.",
+      "acceptanceCriteria": [
+        "QA checklist created and all items passing",
+        "All pages visually match Shiny",
+        "No layout differences",
+        "All interactive elements work",
+        "Performance is acceptable (no lag, fast loading)",
+        "Browser verification complete on all pages"
+      ],
+      "passes": false
+    }
+  ]
+}

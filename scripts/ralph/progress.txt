@@ -1,0 +1,53 @@
+# Ralph Progress Log
+Started: 2026-01-13
+
+## Codebase Patterns
+- Shiny app source is at `~/Desktop/work/wf_projects/peskas.timor.portal/R/`
+- All data already converted to JSON in `public/data/` - no need to convert RDA files
+- Main visualization library: ApexCharts (consistent between Shiny and React)
+- Color palettes defined in `app_server.R`: habitat_palette, tab_palette
+- i18n text comes from `pars.json` with nested key structure (e.g., `pars.header.nav.home.text`)
+- Map center: `lat: -8.75, lng: 125.7`, zoom: `8`
+- Build command: `npm run build` (runs tsc -b && vite build)
+- tsconfig has `erasableSyntaxOnly` - don't use parameter properties in class constructors
+- Data loading: use `useData('filename')` hook for type-safe loading with loading/error states
+
+---
+
+## 2026-01-13 - US-001
+Thread: https://ampcode.com/threads/T-019bb96e-1ad0-735a-b606-81bd430327b9
+- Created comprehensive Shiny analysis document at scripts/ralph/shiny-analysis.md
+- Documented all 7 tabs (home, catch, revenue, market, composition, nutrients, about) + disabled tracks tab
+- Mapped all Shiny modules to proposed React components
+- Extracted 6 color palettes: habitatPalette, tabPalette, donutBlue, spiderColors, viridis, heatmapColors
+- Documented chart types: Donut, Bar, Treemap, Radar, Stacked Bar, Time Series (all ApexCharts), Hexagon Heatmap (DeckGL)
+- Mapped all 14 data files from Shiny R objects to JSON files
+- **Learnings for future iterations:**
+  - Shiny uses ApexCharts via `apexcharter` R package - easy to match in React
+  - DeckGL hexagon map for fishing tracks heatmap, not Leaflet
+  - Leaflet map in tracks tab is disabled in production
+  - Municipality filter uses 500ms debounce
+  - Data multipliers in pars.json (e.g., catch multiplier: 0.001 for tons)
+---
+
+## 2026-01-14 - US-002a, US-002b (already complete)
+Thread: https://ampcode.com/threads/T-019bbaf1-802a-73fc-919d-6f72e06ece45
+- Verified existing TypeScript interfaces in src/types/data.ts cover all 13 data files
+- Interfaces for all core files (aggregated, pars, summary_data, indicators_grid) already exist
+- Interfaces for all remaining files (municipal_aggregated, municipal_taxa, nutrients_aggregated, taxa_aggregated, taxa_names, predicted_tracks, data_last_updated, label_groups_list, var_dictionary) already exist
+- Build passes with no TypeScript errors
+- Marked both US-002a and US-002b as passing
+---
+
+## 2026-01-14 - US-002c
+Thread: https://ampcode.com/threads/T-019bbaf1-802a-73fc-919d-6f72e06ece45
+- Created src/utils/dataLoader.ts with fetchData and fetchMultipleData functions
+- Created src/hooks/useData.ts with useData and useMultipleData hooks
+- Implemented DataLoadError class for error handling
+- Generic type support for type-safe data loading using DataTypeMap
+- Loading states and error states included in hooks
+- Files changed: src/utils/dataLoader.ts, src/utils/index.ts, src/hooks/useData.ts, src/hooks/index.ts
+- **Learnings for future iterations:**
+  - tsconfig has erasableSyntaxOnly enabled - don't use parameter properties in class constructors
+  - Data files are in /data/ path (public/data/ in source, served as /data/)
+---
