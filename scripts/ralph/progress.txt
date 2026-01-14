@@ -276,3 +276,18 @@ Thread: https://ampcode.com/threads/T-019bbb47-7e50-71cf-a04a-00637f46e53c
   - SummaryTable is a named export, use `{ SummaryTable }` import syntax
   - Component handles its own loading/error states internally
 ---
+
+## 2026-01-14 - US-003d3
+Thread: https://ampcode.com/threads/T-019bbb6f-7716-738f-9ac6-6c131ce7c4d5
+- Added table title and caption from pars.json (pars.home.table.title, pars.home.table.caption)
+- Moved TAB_PALETTE to src/constants/colors.ts as tabPalette for consistency
+- Updated SummaryTable to import tabPalette from centralized colors file
+- Added pars data loading to SummaryTable for i18n text
+- Styling matches Shiny fivethirtyeight theme with color gradients
+- Build passes with no TypeScript errors
+- Files changed: src/components/SummaryTable.tsx, src/constants/colors.ts
+- **Learnings for future iterations:**
+  - Table title/caption come from pars.home.table (not a separate i18n file)
+  - Color palettes should be centralized in src/constants/colors.ts
+  - Shiny uses reactablefmtr::fivethirtyeight theme - we approximate with Tabler table classes
+---
