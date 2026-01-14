@@ -48,23 +48,84 @@ export default function DonutChart({
     chart: {
       type: 'donut',
       background: 'transparent',
+      fontFamily: 'inherit',
+      animations: {
+        enabled: true,
+        easing: 'easeinout',
+        speed: 800,
+      },
     },
     theme: {
       mode: theme,
     },
     labels: labels,
     colors: colors,
+    stroke: {
+      show: true,
+      width: 2,
+      colors: [theme === 'dark' ? '#1b2434' : '#fff'],
+    },
     legend: {
+      show: true,
       position: 'bottom',
+      fontSize: '11px',
+      fontFamily: 'inherit',
+      labels: {
+        colors: theme === 'dark' ? '#6c7a91' : '#656d77',
+      },
+      markers: {
+        size: 4,
+        strokeWidth: 0,
+      },
+      itemMargin: {
+        horizontal: 8,
+        vertical: 4,
+      },
     },
     dataLabels: {
-      enabled: true,
+      enabled: false,
     },
     plotOptions: {
       pie: {
+        expandOnClick: true,
         donut: {
-          size: '65%',
+          size: '75%',
+          labels: {
+            show: true,
+            name: {
+              show: true,
+              fontSize: '12px',
+              fontWeight: 400,
+              color: theme === 'dark' ? '#6c7a91' : '#656d77',
+              offsetY: -10,
+            },
+            value: {
+              show: true,
+              fontSize: '16px',
+              fontWeight: 600,
+              color: theme === 'dark' ? '#f5f7f9' : '#1d273b',
+              offsetY: 10,
+              formatter: (val: string) => parseInt(val).toLocaleString(),
+            },
+            total: {
+              show: true,
+              label: t('common.total', { defaultValue: 'Total' }),
+              fontSize: '12px',
+              fontWeight: 400,
+              color: theme === 'dark' ? '#6c7a91' : '#656d77',
+              formatter: (w) => {
+                const total = w.globals.seriesTotals.reduce((a: number, b: number) => a + b, 0)
+                return total.toLocaleString()
+              },
+            },
+          },
         },
+      },
+    },
+    tooltip: {
+      theme: theme,
+      y: {
+        formatter: (val: number) => val.toLocaleString(),
       },
     },
   }

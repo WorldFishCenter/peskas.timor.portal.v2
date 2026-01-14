@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { useI18n } from '../../i18n'
+import { useTheme } from '../../hooks/useTheme'
 
 interface TaxaRecord {
   grouped_taxa: string
@@ -25,28 +26,23 @@ export default function TaxaBarChart({
   height = 400
 }: TaxaBarChartProps) {
   const { t } = useI18n()
+  const theme = useTheme()
   const chartData = useMemo(() => {
-    // Filter by year if needed
+    // ... filtering and grouping logic ...
     const filtered = year === 'all' ? data : data.filter(d => d.year === year)
-
-    // Group by taxa and sum catch
     const grouped: Record<string, number> = {}
     filtered.forEach(row => {
       const taxa = row.grouped_taxa
       if (!grouped[taxa]) grouped[taxa] = 0
       grouped[taxa] += row.catch || 0
     })
-
-    // Sort by catch descending and convert to tons
-    const sorted = Object.entries(grouped)
+    return Object.entries(grouped)
       .map(([taxa, catchValue]) => ({
         taxa,
         displayName: taxaNameMap[taxa] || taxa,
-        catch: Math.round(catchValue / 1000) // Convert to tons
+        catch: Math.round(catchValue / 1000)
       }))
       .sort((a, b) => b.catch - a.catch)
-
-    return sorted
   }, [data, taxaNameMap, year])
 
   const catchLabel = t('catch.catch_t', { defaultValue: 'Catch (tons)' })
@@ -61,13 +57,23 @@ export default function TaxaBarChart({
     chart: {
       type: 'bar',
       toolbar: { show: false },
-      animations: { enabled: false },
+      background: 'transparent',
+      fontFamily: 'inherit',
+      animations: {
+        enabled: true,
+        easing: 'easeinout',
+        speed: 800,
+      },
+    },
+    theme: {
+      mode: theme,
     },
     plotOptions: {
       bar: {
         borderRadius: 4,
         horizontal: false,
         distributed: true,
+        columnWidth: '60%',
         dataLabels: {
           position: 'top'
         }
@@ -79,36 +85,46 @@ export default function TaxaBarChart({
     },
     xaxis: {
       categories: chartData.map(d => d.displayName),
+      axisBorder: { show: false },
+      axisTicks: { show: false },
       labels: {
         rotate: -45,
-        rotateAlways: true,
+        rotateAlways: chartData.length > 5,
         style: {
-          fontSize: '11px'
+          fontSize: '11px',
+          colors: theme === 'dark' ? '#6c7a91' : '#656d77',
         },
         trim: true,
         maxHeight: 120,
       }
     },
     yaxis: {
-      title: { text: catchLabel },
       labels: {
+        style: {
+          fontSize: '11px',
+          colors: theme === 'dark' ? '#6c7a91' : '#656d77',
+        },
         formatter: (val: number) => val.toLocaleString()
       }
     },
     legend: { show: false },
     tooltip: {
+      theme: theme,
       y: {
         formatter: (val: number) => `${val.toLocaleString()} ${tonsLabel}`
       }
     },
     grid: {
       strokeDashArray: 4,
+      borderColor: theme === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.05)',
       padding: {
         top: -20,
         right: 0,
         left: -4,
         bottom: 0,
       },
+      xaxis: { lines: { show: false } },
+      yaxis: { lines: { show: true } },
     },
   }
 

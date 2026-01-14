@@ -82,6 +82,15 @@ export default function TimeSeriesChart({
       background: 'transparent',
       toolbar: { show: false },
       zoom: { enabled: false },
+      fontFamily: 'inherit',
+      animations: {
+        enabled: true,
+        easing: 'easeinout',
+        speed: 800,
+      },
+      sparkline: {
+        enabled: false,
+      },
     },
     theme: {
       mode: theme,
@@ -90,39 +99,109 @@ export default function TimeSeriesChart({
     dataLabels: { enabled: false },
     stroke: {
       curve: 'smooth',
-      width: 2,
+      width: 2.5,
+      lineCap: 'round',
     },
     fill: {
       type: chartType === 'area' ? 'gradient' : 'solid',
       gradient: {
         shadeIntensity: 1,
-        opacityFrom: 0.45,
-        opacityTo: 0.05,
-        stops: [50, 100],
+        opacityFrom: theme === 'dark' ? 0.3 : 0.4,
+        opacityTo: 0.5,
+        stops: [0, 100],
+      },
+    },
+    grid: {
+      padding: {
+        top: -20,
+        right: 0,
+        left: -4,
+        bottom: 0,
+      },
+      strokeDashArray: 4,
+      borderColor: theme === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.05)',
+      xaxis: {
+        lines: {
+          show: false,
+        },
+      },
+      yaxis: {
+        lines: {
+          show: true,
+        },
+      },
+    },
+    markers: {
+      size: 0,
+      strokeColors: theme === 'dark' ? '#1b2434' : '#fff',
+      strokeWidth: 2,
+      hover: {
+        size: 5,
       },
     },
     xaxis: {
       type: 'datetime',
       labels: {
         datetimeUTC: false,
+        style: {
+          fontSize: '11px',
+          colors: theme === 'dark' ? '#6c7a91' : '#656d77',
+        },
         formatter: (value: string, _timestamp?: number) => formatMonthYear(value),
+      },
+      axisBorder: {
+        show: false,
+      },
+      axisTicks: {
+        show: false,
       },
     },
     yaxis: {
       labels: {
-        formatter: (val: number) => val.toLocaleString(),
+        style: {
+          fontSize: '11px',
+          colors: theme === 'dark' ? '#6c7a91' : '#656d77',
+        },
+        formatter: (val: number) => {
+          if (val >= 1000000) return `${(val / 1000000).toFixed(1)}M`
+          if (val >= 1000) return `${(val / 1000).toFixed(1)}k`
+          return val.toLocaleString()
+        },
       },
     },
     tooltip: {
+      theme: theme,
       x: {
+        show: true,
         formatter: (value: string | number) => formatMonthYear(value),
       },
       y: {
         formatter: (val: number) => val.toLocaleString(),
       },
+      style: {
+        fontSize: '12px',
+      },
     },
     legend: {
+      show: true,
       position: 'top',
+      horizontalAlign: 'right',
+      fontSize: '12px',
+      fontFamily: 'inherit',
+      fontWeight: 400,
+      labels: {
+        colors: theme === 'dark' ? '#6c7a91' : '#656d77',
+      },
+      markers: {
+        size: 4,
+        strokeWidth: 0,
+        offsetX: 0,
+        offsetY: 0,
+      },
+      itemMargin: {
+        horizontal: 8,
+        vertical: 0,
+      },
     },
   }
 
@@ -130,15 +209,43 @@ export default function TimeSeriesChart({
     options.title = {
       text: title,
       align: 'left',
+      style: {
+        fontSize: '14px',
+        fontWeight: 600,
+        color: theme === 'dark' ? '#f5f7f9' : '#1d273b',
+      },
     }
   }
 
-  if (yAxisTitle && options.yaxis) {
-    options.yaxis.title = { text: yAxisTitle }
+  if (yAxisTitle && Array.isArray(options.yaxis)) {
+    options.yaxis[0].title = {
+      text: yAxisTitle,
+      style: {
+        fontSize: '11px',
+        fontWeight: 500,
+        color: theme === 'dark' ? '#6c7a91' : '#656d77',
+      },
+    }
+  } else if (yAxisTitle && options.yaxis && !Array.isArray(options.yaxis)) {
+    options.yaxis.title = {
+      text: yAxisTitle,
+      style: {
+        fontSize: '11px',
+        fontWeight: 500,
+        color: theme === 'dark' ? '#6c7a91' : '#656d77',
+      },
+    }
   }
 
   if (xAxisTitle && options.xaxis) {
-    options.xaxis.title = { text: xAxisTitle }
+    options.xaxis.title = {
+      text: xAxisTitle,
+      style: {
+        fontSize: '11px',
+        fontWeight: 500,
+        color: theme === 'dark' ? '#6c7a91' : '#656d77',
+      },
+    }
   }
 
   return (

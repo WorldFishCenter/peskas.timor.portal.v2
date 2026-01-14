@@ -62,6 +62,15 @@ export default function TreemapChart({
     chart: {
       type: 'treemap',
       background: 'transparent',
+      fontFamily: 'inherit',
+      animations: {
+        enabled: true,
+        easing: 'easeinout',
+        speed: 800,
+      },
+      toolbar: {
+        show: false,
+      },
     },
     theme: {
       mode: theme,
@@ -69,15 +78,36 @@ export default function TreemapChart({
     legend: {
       show: true,
       position: 'top',
+      horizontalAlign: 'right',
+      fontSize: '11px',
+      fontFamily: 'inherit',
+      labels: {
+        colors: theme === 'dark' ? '#6c7a91' : '#656d77',
+      },
+      markers: {
+        size: 4,
+        strokeWidth: 0,
+      },
+      itemMargin: {
+        horizontal: 8,
+        vertical: 0,
+      },
     },
     dataLabels: {
       enabled: true,
       style: {
-        fontSize: '12px',
+        fontSize: '11px',
+        fontWeight: 600,
+        fontFamily: 'inherit',
       },
       formatter: function (text: string, op: any) {
-        return [text, `${op.value.toFixed(2)} ${kgUnit}`]
+        return [text, `${op.value.toLocaleString()} ${kgUnit}`]
       },
+    },
+    stroke: {
+      show: true,
+      width: 2,
+      colors: [theme === 'dark' ? '#1b2434' : '#fff'],
     },
     plotOptions: {
       treemap: {
@@ -87,6 +117,12 @@ export default function TreemapChart({
       },
     },
     colors: colors,
+    tooltip: {
+      theme: theme,
+      y: {
+        formatter: (val: number) => `${val.toLocaleString()} ${kgUnit}`,
+      },
+    },
   }
 
   if (title) {
