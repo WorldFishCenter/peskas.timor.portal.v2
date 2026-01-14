@@ -1,6 +1,26 @@
 import { useI18n } from '../i18n'
 import { useData } from '../hooks/useData'
 import FishingMap from '../components/FishingMap'
+import DonutChart from '../components/charts/DonutChart'
+
+// Placeholder data for donut charts (will be replaced with real data in US-003c3)
+const tripsPlaceholderData = [
+  { label: 'Type A', value: 45 },
+  { label: 'Type B', value: 30 },
+  { label: 'Type C', value: 25 },
+]
+
+const revenuePlaceholderData = [
+  { label: 'Category 1', value: 50 },
+  { label: 'Category 2', value: 35 },
+  { label: 'Category 3', value: 15 },
+]
+
+const fishPlaceholderData = [
+  { label: 'Species A', value: 40 },
+  { label: 'Species B', value: 35 },
+  { label: 'Species C', value: 25 },
+]
 
 export default function Home() {
   const { t } = useI18n()
@@ -86,19 +106,7 @@ export default function Home() {
                   <h3 className="card-title">{t('home.trips')}</h3>
                 </div>
                 <div className="card-body">
-                  {/* Donut chart placeholder - will be implemented in US-003c */}
-                  <div
-                    style={{
-                      height: '16rem',
-                      background: '#f4f6fa',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      borderRadius: 4,
-                    }}
-                  >
-                    <span className="text-muted">Trips Donut</span>
-                  </div>
+                  <DonutChart data={tripsPlaceholderData} height="16rem" />
                 </div>
               </div>
             </div>
@@ -109,19 +117,7 @@ export default function Home() {
                   <h3 className="card-title">{t('home.revenue')}</h3>
                 </div>
                 <div className="card-body">
-                  {/* Donut chart placeholder - will be implemented in US-003c */}
-                  <div
-                    style={{
-                      height: '16rem',
-                      background: '#f4f6fa',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      borderRadius: 4,
-                    }}
-                  >
-                    <span className="text-muted">Revenue Donut</span>
-                  </div>
+                  <DonutChart data={revenuePlaceholderData} height="16rem" />
                 </div>
               </div>
             </div>
@@ -132,19 +128,7 @@ export default function Home() {
                   <h3 className="card-title">{t('home.catch')}</h3>
                 </div>
                 <div className="card-body">
-                  {/* Donut chart placeholder - will be implemented in US-003c */}
-                  <div
-                    style={{
-                      height: '16rem',
-                      background: '#f4f6fa',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      borderRadius: 4,
-                    }}
-                  >
-                    <span className="text-muted">Catch Donut</span>
-                  </div>
+                  <DonutChart data={fishPlaceholderData} height="16rem" />
                 </div>
               </div>
             </div>
