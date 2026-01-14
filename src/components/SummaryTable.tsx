@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { useData } from '../hooks';
+import { tabPalette } from '../constants/colors';
 
 interface MunicipalSummary {
   region: string;
@@ -10,8 +11,6 @@ interface MunicipalSummary {
   catch: number;
   price_kg: number;
 }
-
-const TAB_PALETTE = ['#ffffff', '#f2fbd2', '#c9ecb4', '#93d3ab', '#35b0ab'];
 
 function interpolateColor(colors: string[], t: number): string {
   const n = colors.length - 1;
@@ -53,6 +52,7 @@ function biasedNormalize(value: number, values: number[], bias: number = 2): num
 
 export function SummaryTable() {
   const { data: municipalData, loading, error } = useData('municipal_aggregated');
+  const { data: pars } = useData('pars');
 
   const summaryData = useMemo(() => {
     if (!municipalData) return [];
@@ -123,7 +123,7 @@ export function SummaryTable() {
 
   const getCellStyle = (value: number, values: number[]) => {
     const t = biasedNormalize(value, values);
-    return { backgroundColor: interpolateColor(TAB_PALETTE, t) };
+    return { backgroundColor: interpolateColor(tabPalette, t) };
   };
 
   if (loading) {
@@ -142,9 +142,17 @@ export function SummaryTable() {
     );
   }
 
+  const tableTitle = pars?.home?.table?.title ?? 'Fishery General Statistics';
+  const tableCaption = pars?.home?.table?.caption ?? '';
+
   return (
-    <div className="table-responsive">
-      <table className="table table-vcenter table-hover" style={{ fontSize: '0.875rem' }}>
+    <div>
+      <h3 className="mb-2" style={{ color: '#666a70' }}>{tableTitle}</h3>
+      {tableCaption && (
+        <p className="text-muted mb-3" style={{ fontSize: '0.875rem' }}>{tableCaption}</p>
+      )}
+      <div className="table-responsive">
+        <table className="table table-vcenter table-hover" style={{ fontSize: '0.875rem' }}>
         <thead>
           <tr>
             <th style={{ minWidth: 140 }}>Municipality</th>
@@ -182,6 +190,7 @@ export function SummaryTable() {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 }
