@@ -157,9 +157,17 @@ export default function Market() {
           <div className="row row-deck row-cards">
             {/* Time Series Chart - 8 columns */}
             <div className="col-lg-8 col-xl-8">
-              <div className="card">
-                <div className="card-header">
-                  <h3 className="card-title">{t('market.price_series', { defaultValue: 'Price over time' })}</h3>
+              <div className="card shadow-sm border-0">
+                <div className="card-header d-flex align-items-center">
+                  <div>
+                    <h3 className="card-title text-muted fw-bold">
+                      {t('market.price_series', { defaultValue: 'Price Trends' })}
+                    </h3>
+                    <div className="card-subtitle">{t('market.price_subtitle', { defaultValue: 'Average price per kilogram in USD' })}</div>
+                  </div>
+                  <div className="card-actions ms-auto">
+                    <span className="badge badge-outline text-blue fw-medium">{t('common.historical_data', { defaultValue: 'Historical Price Data' })}</span>
+                  </div>
                 </div>
                 <div className="card-body">
                   {aggregatedLoading ? (
@@ -272,9 +280,14 @@ export default function Market() {
 
             {/* Radar Chart - 6 columns */}
             <div className="col-lg-6 col-xl-6">
-              <div className="card">
-                <div className="card-header">
-                  <h3 className="card-title">{t('market.price_by_region', { defaultValue: 'Price per kg by Region' })}</h3>
+              <div className="card shadow-sm border-0">
+                <div className="card-header border-0 pb-0">
+                  <div>
+                    <h3 className="card-title text-muted fw-bold">
+                      {t('market.price_by_region', { defaultValue: 'Regional Price Comparison' })}
+                    </h3>
+                    <div className="card-subtitle">{t('market.radar_subtitle', { defaultValue: 'Median price comparison across regions' })}</div>
+                  </div>
                 </div>
                 <div className="card-body">
                   {municipalLoading ? (
@@ -295,9 +308,14 @@ export default function Market() {
 
             {/* Conservation Stacked Bar - 6 columns */}
             <div className="col-lg-6 col-xl-6">
-              <div className="card">
-                <div className="card-header">
-                  <h3 className="card-title">{t('market.conservation_title', { defaultValue: 'Fish Conservation by Region' })}</h3>
+              <div className="card shadow-sm border-0">
+                <div className="card-header border-0 pb-0">
+                  <div>
+                    <h3 className="card-title text-muted fw-bold">
+                      {t('market.conservation_title', { defaultValue: 'Fish Conservation' })}
+                    </h3>
+                    <div className="card-subtitle">{t('market.stacked_subtitle', { defaultValue: 'Preservation methods used by region' })}</div>
+                  </div>
                 </div>
                 <div className="card-body">
                   {summaryLoading ? (

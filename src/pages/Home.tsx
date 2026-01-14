@@ -90,7 +90,7 @@ export default function Home() {
           <div className="row row-deck row-cards">
             {/* Fishing Map - Full width card */}
             <div className="col-12">
-              <div className="card">
+              <div className="card shadow-sm border-0 overflow-hidden">
                 <div className="card-body p-0">
                   <FishingActivityMap height={650} />
                 </div>
@@ -99,9 +99,9 @@ export default function Home() {
 
             {/* 3 Donut Charts Row */}
             <div className="col-md-4">
-              <div className="card">
-                <div className="card-header">
-                  <h3 className="card-title">{t('home.trips')}</h3>
+              <div className="card shadow-sm border-0">
+                <div className="card-header border-0 pb-0">
+                  <h3 className="card-title text-muted fw-bold">{t('home.trips')}</h3>
                 </div>
                 <div className="card-body">
                   <DonutChart data={tripsData} colors={donutBlue} height={280} />
@@ -110,9 +110,9 @@ export default function Home() {
             </div>
 
             <div className="col-md-4">
-              <div className="card">
-                <div className="card-header">
-                  <h3 className="card-title">{t('home.revenue')}</h3>
+              <div className="card shadow-sm border-0">
+                <div className="card-header border-0 pb-0">
+                  <h3 className="card-title text-muted fw-bold">{t('home.revenue')}</h3>
                 </div>
                 <div className="card-body">
                   <DonutChart data={revenueData} colors={donutBlue} height={280} />
@@ -121,9 +121,9 @@ export default function Home() {
             </div>
 
             <div className="col-md-4">
-              <div className="card">
-                <div className="card-header">
-                  <h3 className="card-title">{t('home.catch')}</h3>
+              <div className="card shadow-sm border-0">
+                <div className="card-header border-0 pb-0">
+                  <h3 className="card-title text-muted fw-bold">{t('home.catch')}</h3>
                 </div>
                 <div className="card-body">
                   <DonutChart data={fishData} colors={viridis5} height={280} />
@@ -133,9 +133,9 @@ export default function Home() {
 
             {/* Summary Table - Full width */}
             <div className="col-12">
-              <div className="card">
+              <div className="card shadow-sm border-0">
                 <div className="card-header">
-                  <h3 className="card-title">{tableTitle}</h3>
+                  <h3 className="card-title text-muted fw-bold">{tableTitle}</h3>
                 </div>
                 <div className="card-body">
                   <SummaryTable />

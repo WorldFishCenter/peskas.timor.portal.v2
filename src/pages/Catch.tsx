@@ -116,9 +116,17 @@ export default function Catch() {
           <div className="row row-deck row-cards">
             {/* Row 1: Time series + 3 cards */}
             <div className="col-lg-8 col-xl-8">
-              <div className="card">
-                <div className="card-header">
-                  <h3 className="card-title">{t('vars.catch.short_name', { defaultValue: 'Catch' })}</h3>
+              <div className="card shadow-sm border-0">
+                <div className="card-header d-flex align-items-center">
+                  <div>
+                    <h3 className="card-title text-muted fw-bold">
+                      {t('vars.catch.short_name', { defaultValue: 'Catch Trends' })}
+                    </h3>
+                    <div className="card-subtitle">{t('catch.trend_subtitle', { defaultValue: 'Monthly catch volume in tons' })}</div>
+                  </div>
+                  <div className="card-actions ms-auto">
+                    <span className="badge badge-outline text-blue fw-medium">{t('common.last_3_years', { defaultValue: '3 Year Overview' })}</span>
+                  </div>
                 </div>
                 <div className="card-body">
                   {loading ? (
@@ -228,11 +236,14 @@ export default function Catch() {
 
             {/* Row 2: Full width treemap */}
             <div className="col-12">
-              <div className="card">
-                <div className="card-header">
-                  <h3 className="card-title">
-                    {pars?.catch?.treemap?.title ?? t('catch.habitat_treemap', { defaultValue: 'Catch by Habitat and Gear' })}
-                  </h3>
+              <div className="card shadow-sm border-0">
+                <div className="card-header border-0 pb-0">
+                  <div>
+                    <h3 className="card-title text-muted fw-bold">
+                      {pars?.catch?.treemap?.title ?? t('catch.habitat_treemap', { defaultValue: 'Catch Distribution' })}
+                    </h3>
+                    <div className="card-subtitle">{t('catch.habitat_subtitle', { defaultValue: 'Breakdown by habitat and fishing gear' })}</div>
+                  </div>
                 </div>
                 <div className="card-body">
                   {treemapData.length > 0 ? (
@@ -248,8 +259,8 @@ export default function Catch() {
                   )}
                 </div>
                 {pars?.catch?.treemap?.description && (
-                  <div className="card-body">
-                    <div className="text-muted">{pars.catch.treemap.description}</div>
+                  <div className="card-footer bg-transparent border-0 pt-0">
+                    <div className="text-muted small">{pars.catch.treemap.description}</div>
                   </div>
                 )}
               </div>

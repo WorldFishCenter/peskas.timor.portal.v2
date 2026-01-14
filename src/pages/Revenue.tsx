@@ -116,9 +116,17 @@ export default function Revenue() {
           <div className="row row-deck row-cards">
             {/* Row 1: Time series + 3 cards */}
             <div className="col-lg-8 col-xl-8">
-              <div className="card">
-                <div className="card-header">
-                  <h3 className="card-title">{t('vars.revenue.short_name', { defaultValue: 'Revenue' })}</h3>
+              <div className="card shadow-sm border-0">
+                <div className="card-header d-flex align-items-center">
+                  <div>
+                    <h3 className="card-title text-muted fw-bold">
+                      {t('vars.revenue.short_name', { defaultValue: 'Revenue Trends' })}
+                    </h3>
+                    <div className="card-subtitle">{t('revenue.trend_subtitle', { defaultValue: 'Monthly revenue in million USD' })}</div>
+                  </div>
+                  <div className="card-actions ms-auto">
+                    <span className="badge badge-outline text-blue fw-medium">{t('common.last_3_years', { defaultValue: '3 Year Overview' })}</span>
+                  </div>
                 </div>
                 <div className="card-body">
                   {loading ? (
@@ -229,11 +237,14 @@ export default function Revenue() {
 
             {/* Row 2: Full width treemap */}
             <div className="col-12">
-              <div className="card">
-                <div className="card-header">
-                  <h3 className="card-title">
-                    {pars?.revenue?.treemap?.title ?? t('revenue.habitat_treemap', { defaultValue: 'Revenue by Habitat and Gear' })}
-                  </h3>
+              <div className="card shadow-sm border-0">
+                <div className="card-header border-0 pb-0">
+                  <div>
+                    <h3 className="card-title text-muted fw-bold">
+                      {pars?.revenue?.treemap?.title ?? t('revenue.habitat_treemap', { defaultValue: 'Revenue Distribution' })}
+                    </h3>
+                    <div className="card-subtitle">{t('revenue.habitat_subtitle', { defaultValue: 'Economic value by habitat and gear' })}</div>
+                  </div>
                 </div>
                 <div className="card-body">
                   {treemapData.length > 0 ? (
@@ -249,8 +260,8 @@ export default function Revenue() {
                   )}
                 </div>
                 {pars?.revenue?.treemap?.description && (
-                  <div className="card-body">
-                    <div className="text-muted">{pars.revenue.treemap.description}</div>
+                  <div className="card-footer bg-transparent border-0 pt-0">
+                    <div className="text-muted small">{pars.revenue.treemap.description}</div>
                   </div>
                 )}
               </div>
