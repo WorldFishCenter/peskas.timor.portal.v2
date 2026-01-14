@@ -166,3 +166,18 @@ Thread: https://ampcode.com/threads/T-019bbb1d-7ddc-74ed-aaee-38db4ac3cd90
   - Disable animations in ApexCharts for production performance: `animations: { enabled: false }`
   - Shiny donut chart height is "16rem"
 ---
+
+## 2026-01-14 - US-003c2
+Thread: https://ampcode.com/threads/T-019bbb1f-82c0-741f-b2ef-966842e27f67
+- Imported DonutChart component into Home.tsx
+- Replaced 3 donut chart placeholders with actual DonutChart components
+- Added placeholder data for Trips, Revenue, and Catch charts
+- All 3 charts positioned in col-md-4 grid layout
+- Chart height set to 16rem matching Shiny
+- Build passes with no TypeScript errors
+- Files changed: src/pages/Home.tsx
+- **Learnings for future iterations:**
+  - DonutChart component is already well-configured with defaults (height, colors)
+  - Placeholder data structure: `{ label: string, value: number }[]`
+  - Real data integration will happen in US-003c3 using aggregated.json
+---

@@ -146,7 +146,7 @@
         "Chart height: 16rem (from Shiny)",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-003c3",
