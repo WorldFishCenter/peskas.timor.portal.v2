@@ -15,6 +15,12 @@ export interface AggregatedRecord {
   n_tracks: number;
   n_matched: number;
   prop_matched: number;
+  landing_revenue?: number;
+  landing_weight?: number;
+  n_landings_per_boat?: number;
+  revenue?: number;
+  catch?: number;
+  price_kg?: number;
   recorded_revenue?: number;
   recorded_catch?: number;
   n_boats: number;

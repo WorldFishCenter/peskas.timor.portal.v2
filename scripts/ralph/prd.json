@@ -336,7 +336,7 @@
         "Chart shows catch over time",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-005a4",

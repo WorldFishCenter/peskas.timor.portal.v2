@@ -1,21 +1,48 @@
 import { useI18n } from '../i18n'
-import ReactApexChart from 'react-apexcharts'
-import { useState } from 'react'
-import type { ApexOptions } from 'apexcharts'
+import { useState, useMemo } from 'react'
 import MunicipalityFilter from '../components/MunicipalityFilter'
-import { MONTHS_SHORT } from '../constants'
+import TimeSeriesChart from '../components/charts/TimeSeriesChart'
+import { useData } from '../hooks'
 import type { Municipality } from '../constants'
 
 export default function Catch() {
   const { t } = useI18n()
   const [mun, setMun] = useState<Municipality>('all')
-  const series = [{ name: t('catch.series_name'), data: [10, 12, 9, 14, 11, 15, 13] }]
-  const months = MONTHS_SHORT.slice(0, 7)
-  const options: ApexOptions = {
-    chart: { type: 'area', toolbar: { show: false } },
-    dataLabels: { enabled: false },
-    stroke: { curve: 'smooth' },
-    xaxis: { categories: months.map((m) => t(`common.months_short.${m}`)) },
+  const { data: aggregated, loading, error } = useData('aggregated')
+
+  const chartSeries = useMemo(() => {
+    if (!aggregated?.month) return []
+    const sortedData = [...aggregated.month].sort(
+      (a, b) => new Date(a.date_bin_start).getTime() - new Date(b.date_bin_start).getTime()
+    )
+    return [
+      {
+        name: t('nav.catch'),
+        data: sortedData.map((row) => ({
+          date: row.date_bin_start,
+          value: (row.catch ?? 0) / 1000,
+        })),
+      },
+    ]
+  }, [aggregated, t])
+
+  const totals = useMemo(() => {
+    if (!aggregated?.month) return { catch: 0, landings: 0 }
+    const total = aggregated.month.reduce(
+      (acc, row) => ({
+        catch: acc.catch + (row.catch ?? 0),
+        landings: acc.landings + (row.n_landings ?? 0),
+      }),
+      { catch: 0, landings: 0 }
+    )
+    return {
+      catch: (total.catch / 1000).toFixed(0),
+      landings: total.landings.toLocaleString(),
+    }
+  }, [aggregated])
+
+  if (error) {
+    return <div className="alert alert-danger">{error.message}</div>
   }
 
   return (
@@ -40,9 +67,21 @@ export default function Catch() {
           <div className="row row-cards">
             <div className="col-lg-8 col-xl-8">
               <div className="card">
-                <div className="card-header"><h3 className="card-title">{t('catch.series', { })}</h3></div>
+                <div className="card-header">
+                  <h3 className="card-title">{t('catch.series', {})}</h3>
+                </div>
                 <div className="card-body">
-                  <ReactApexChart options={options} series={series} type="area" height={320} />
+                  {loading ? (
+                    <div className="d-flex justify-content-center py-5">
+                      <div className="spinner-border text-primary" role="status" />
+                    </div>
+                  ) : (
+                    <TimeSeriesChart
+                      series={chartSeries}
+                      height={320}
+                      yAxisTitle={t('catch.catch_t')}
+                    />
+                  )}
                 </div>
               </div>
             </div>
@@ -53,9 +92,13 @@ export default function Catch() {
                     <div className="card-body">
                       <div className="d-flex align-items-center">
                         <div className="subheader">{t('home.trips')}</div>
-                        <div className="ms-auto"><div className="h2 mb-0">1,245</div></div>
+                        <div className="ms-auto">
+                          <div className="h2 mb-0">{loading ? '...' : totals.landings}</div>
+                        </div>
                       </div>
-                      <div className="progress progress-sm"><div className="progress-bar" style={{ width: '64%' }}></div></div>
+                      <div className="progress progress-sm">
+                        <div className="progress-bar" style={{ width: '64%' }}></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -64,9 +107,13 @@ export default function Catch() {
                     <div className="card-body">
                       <div className="d-flex align-items-center">
                         <div className="subheader">{t('home.catch')}</div>
-                        <div className="ms-auto"><div className="h2 mb-0">42t</div></div>
+                        <div className="ms-auto">
+                          <div className="h2 mb-0">{loading ? '...' : `${totals.catch}t`}</div>
+                        </div>
                       </div>
-                      <div className="progress progress-sm"><div className="progress-bar bg-green" style={{ width: '52%' }}></div></div>
+                      <div className="progress progress-sm">
+                        <div className="progress-bar bg-green" style={{ width: '52%' }}></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -74,14 +121,36 @@ export default function Catch() {
             </div>
             <div className="col-12">
               <div className="card">
-                <div className="card-header"><h3 className="card-title">{t('catch.table', {})}</h3></div>
+                <div className="card-header">
+                  <h3 className="card-title">{t('catch.table', {})}</h3>
+                </div>
                 <div className="table-responsive">
                   <table className="table table-vcenter">
-                    <thead><tr><th>{t('catch.month')}</th><th>{t('catch.catch_t')}</th><th>{t('home.trips')}</th></tr></thead>
+                    <thead>
+                      <tr>
+                        <th>{t('catch.month')}</th>
+                        <th>{t('catch.catch_t')}</th>
+                        <th>{t('home.trips')}</th>
+                      </tr>
+                    </thead>
                     <tbody>
-                      <tr><td>{t('common.months_short.jan')}</td><td>10</td><td>120</td></tr>
-                      <tr><td>{t('common.months_short.feb')}</td><td>12</td><td>134</td></tr>
-                      <tr><td>{t('common.months_short.mar')}</td><td>9</td><td>101</td></tr>
+                      {loading ? (
+                        <tr>
+                          <td colSpan={3} className="text-center">
+                            <div className="spinner-border spinner-border-sm" />
+                          </td>
+                        </tr>
+                      ) : (
+                        aggregated?.month
+                          ?.slice(0, 12)
+                          .map((row) => (
+                            <tr key={row.date_bin_start}>
+                              <td>{row.month}</td>
+                              <td>{((row.catch ?? 0) / 1000).toFixed(1)}</td>
+                              <td>{row.n_landings?.toLocaleString()}</td>
+                            </tr>
+                          ))
+                      )}
                     </tbody>
                   </table>
                 </div>

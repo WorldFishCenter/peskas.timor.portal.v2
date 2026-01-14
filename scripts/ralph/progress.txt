@@ -396,3 +396,18 @@ Thread: https://ampcode.com/threads/T-019bbb8d-388e-74b2-8d77-09e8ace15e98
   - Uses x/y format for ApexCharts datetime axis: `{ x: dateString, y: value }`
   - Area chart with gradient fill matches Shiny apexcharter defaults
 ---
+
+## 2026-01-14 - US-005a3
+Thread: https://ampcode.com/threads/T-019bbb8d-388e-74b2-8d77-09e8ace15e98
+- Updated Catch page to use TimeSeriesChart with real data from aggregated.json
+- Added missing fields to AggregatedRecord type (catch, revenue, landing_revenue, landing_weight, n_landings_per_boat, price_kg)
+- Chart displays catch over time in tons (catch / 1000)
+- Metric cards now show real totals from aggregated.month
+- Data table shows last 12 months with real catch and landings data
+- Build passes with no TypeScript errors
+- Files changed: src/pages/Catch.tsx, src/types/data.ts
+- **Learnings for future iterations:**
+  - aggregated.json month records have: catch, revenue, landing_revenue, landing_weight, n_landings_per_boat, price_kg
+  - Catch is stored in kg, divide by 1000 for tons display
+  - AggregatedRecord type needed to be updated to include all fields from JSON
+---
