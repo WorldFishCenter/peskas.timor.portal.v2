@@ -124,9 +124,6 @@ export default function Catch() {
                     </h3>
                     <div className="card-subtitle">{t('catch.trend_subtitle', { defaultValue: 'Monthly catch volume in tons' })}</div>
                   </div>
-                  <div className="card-actions ms-auto">
-                    <span className="badge badge-outline text-blue fw-medium">{t('common.last_3_years', { defaultValue: '3 Year Overview' })}</span>
-                  </div>
                 </div>
                 <div className="card-body">
                   {loading ? (
@@ -243,6 +240,9 @@ export default function Catch() {
                       {pars?.catch?.treemap?.title ?? t('catch.habitat_treemap', { defaultValue: 'Catch Distribution' })}
                     </h3>
                     <div className="card-subtitle">{t('catch.habitat_subtitle', { defaultValue: 'Breakdown by habitat and fishing gear' })}</div>
+                    {pars?.catch?.treemap?.description && (
+                      <div className="text-muted small mt-2">{pars.catch.treemap.description}</div>
+                    )}
                   </div>
                 </div>
                 <div className="card-body">
@@ -258,11 +258,6 @@ export default function Catch() {
                     </div>
                   )}
                 </div>
-                {pars?.catch?.treemap?.description && (
-                  <div className="card-footer bg-transparent border-0 pt-0">
-                    <div className="text-muted small">{pars.catch.treemap.description}</div>
-                  </div>
-                )}
               </div>
             </div>
 

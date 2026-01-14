@@ -13,6 +13,7 @@ import { timeSeriesColors, spiderColors } from '../constants/colors'
 export default function Market() {
   const { t } = useI18n()
   const { municipality, setMunicipality } = useFilters()
+  const { data: pars } = useData('pars')
   const { data: summaryData, loading: summaryLoading } = useData('summary_data')
   const { data: municipalData, loading: municipalLoading } = useData('municipal_aggregated')
   const { data: aggregated, loading: aggregatedLoading } = useData('aggregated')
@@ -165,9 +166,6 @@ export default function Market() {
                     </h3>
                     <div className="card-subtitle">{t('market.price_subtitle', { defaultValue: 'Average price per kilogram in USD' })}</div>
                   </div>
-                  <div className="card-actions ms-auto">
-                    <span className="badge badge-outline text-blue fw-medium">{t('common.historical_data', { defaultValue: 'Historical Price Data' })}</span>
-                  </div>
                 </div>
                 <div className="card-body">
                   {aggregatedLoading ? (
@@ -315,6 +313,9 @@ export default function Market() {
                       {t('market.conservation_title', { defaultValue: 'Fish Conservation' })}
                     </h3>
                     <div className="card-subtitle">{t('market.stacked_subtitle', { defaultValue: 'Preservation methods used by region' })}</div>
+                    {pars?.market?.conservation?.region_barplot?.description && (
+                      <div className="text-muted small mt-2">{pars.market.conservation.region_barplot.description}</div>
+                    )}
                   </div>
                 </div>
                 <div className="card-body">
@@ -336,12 +337,12 @@ export default function Market() {
 
             {/* Summary Table - Full width */}
             <div className="col-12">
-              <div className="card">
-                <div className="card-header">
-                  <h3 className="card-title">{t('market.summary_table', { defaultValue: 'Market Summary by Municipality' })}</h3>
+              <div className="card shadow-sm border-0">
+                <div className="card-header border-0 pb-0">
+                  <h3 className="card-title text-muted fw-bold">{t('market.summary_table', { defaultValue: 'Market Summary by Municipality' })}</h3>
                 </div>
                 <div className="card-body">
-                  <SummaryTable municipality={municipality} />
+                  <SummaryTable />
                 </div>
               </div>
             </div>

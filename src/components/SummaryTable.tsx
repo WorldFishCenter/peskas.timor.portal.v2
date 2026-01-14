@@ -64,7 +64,6 @@ export function SummaryTable() {
   const { t } = useI18n();
   const theme = useTheme();
   const { data: municipalData, loading, error } = useData('municipal_aggregated');
-  const { data: pars } = useData('pars');
   const [sorting, setSorting] = useState<SortingState>([]);
 
   const summaryData = useMemo(() => {
@@ -136,11 +135,9 @@ export function SummaryTable() {
 
   const getCellStyle = (value: number, values: number[]) => {
     const t = biasedNormalize(value, values);
-    // Higher opacity for better visibility in both themes
     const opacity = theme === 'dark' ? 0.5 : 0.6;
     return {
       backgroundColor: interpolateColor(tabPalette, t, opacity),
-      // Ensure text remains readable with proper contrast
       color: theme === 'dark' ? '#fff' : 'inherit',
     };
   };
@@ -231,70 +228,63 @@ export function SummaryTable() {
     );
   }
 
-  const tableCaption = pars?.home?.table?.caption ?? '';
-
   return (
-    <div>
-      {tableCaption && (
-        <p className="text-muted mb-3" style={{ fontSize: '0.875rem' }}>{tableCaption}</p>
-      )}
-      <div className="table-responsive">
-        <table className="table table-vcenter table-hover" style={{ fontSize: '0.875rem' }}>
-          <thead>
-            {table.getHeaderGroups().map(headerGroup => (
-              <tr key={headerGroup.id}>
-                {headerGroup.headers.map(header => (
-                  <th
-                    key={header.id}
-                    className="text-center"
-                    style={{ minWidth: header.id === 'region' ? 140 : 100, cursor: 'pointer', userSelect: 'none' }}
-                    onClick={header.column.getToggleSortingHandler()}
-                  >
-                    <div className="d-flex align-items-center justify-content-center gap-1">
-                      {flexRender(header.column.columnDef.header, header.getContext())}
-                      {header.column.getIsSorted() && (
-                        <span>
-                          {header.column.getIsSorted() === 'asc' ? (
-                            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-up" width="16" height="16" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                              <path d="M6 15l6 -6l6 6"></path>
-                            </svg>
-                          ) : (
-                            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-down" width="16" height="16" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                              <path d="M6 9l6 6l6 -6"></path>
-                            </svg>
-                          )}
-                        </span>
-                      )}
-                    </div>
-                  </th>
-                ))}
-              </tr>
-            ))}
-          </thead>
-          <tbody>
-            {table.getRowModel().rows.map(row => (
-              <tr key={row.id}>
-                {row.getVisibleCells().map(cell => {
-                  const cellMeta = cell.column.columnDef.meta as { getCellStyle?: (value: number) => React.CSSProperties };
-                  const cellStyle = cellMeta?.getCellStyle ? cellMeta.getCellStyle(cell.getValue() as number) : {};
+    <div className="table-responsive">
+      <table className="table table-vcenter table-hover" style={{ fontSize: '0.875rem' }}>
+        <thead>
+          {table.getHeaderGroups().map(headerGroup => (
+            <tr key={headerGroup.id}>
+              {headerGroup.headers.map(header => (
+                <th
+                  key={header.id}
+                  className="text-center"
+                  style={{ minWidth: header.id === 'region' ? 140 : 100, cursor: 'pointer', userSelect: 'none' }}
+                  onClick={header.column.getToggleSortingHandler()}
+                >
+                  <div className="d-flex align-items-center justify-content-center gap-1">
+                    {flexRender(header.column.columnDef.header, header.getContext())}
+                    {header.column.getIsSorted() && (
+                      <span>
+                        {header.column.getIsSorted() === 'asc' ? (
+                          <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-up" width="16" height="16" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M6 15l6 -6l6 6"></path>
+                          </svg>
+                        ) : (
+                          <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-down" width="16" height="16" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M6 9l6 6l6 -6"></path>
+                          </svg>
+                        )}
+                      </span>
+                    )}
+                  </div>
+                </th>
+              ))}
+            </tr>
+          ))}
+        </thead>
+        <tbody>
+          {table.getRowModel().rows.map(row => (
+            <tr key={row.id}>
+              {row.getVisibleCells().map(cell => {
+                const cellMeta = cell.column.columnDef.meta as { getCellStyle?: (value: number) => React.CSSProperties };
+                const cellStyle = cellMeta?.getCellStyle ? cellMeta.getCellStyle(cell.getValue() as number) : {};
 
-                  return (
-                    <td
-                      key={cell.id}
-                      className="text-center"
-                      style={cellStyle}
-                    >
-                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                    </td>
-                  );
-                })}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+                return (
+                  <td
+                    key={cell.id}
+                    className="text-center"
+                    style={cellStyle}
+                  >
+                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }

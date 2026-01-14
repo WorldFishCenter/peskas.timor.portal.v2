@@ -32,6 +32,7 @@ export default function Home() {
   const introContent = pars?.home?.intro?.content ?? ''
   const reportText = pars?.home?.report?.text ?? t('home.download_report')
   const tableTitle = pars?.home?.table?.title ?? t('home.summary_table')
+  const tableCaption = pars?.home?.table?.caption ?? ''
 
   return (
     <>
@@ -134,8 +135,11 @@ export default function Home() {
             {/* Summary Table - Full width */}
             <div className="col-12">
               <div className="card shadow-sm border-0">
-                <div className="card-header">
-                  <h3 className="card-title text-muted fw-bold">{tableTitle}</h3>
+                <div className="card-header border-0 pb-0">
+                  <div>
+                    <h3 className="card-title text-muted fw-bold">{tableTitle}</h3>
+                    {tableCaption && <div className="card-subtitle">{tableCaption}</div>}
+                  </div>
                 </div>
                 <div className="card-body">
                   <SummaryTable />

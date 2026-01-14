@@ -99,12 +99,20 @@ export default function CatchSummaryTable() {
   }, [tableData])
 
   return (
-    <div className="card">
-      <div className="card-header">
-        <h3 className="card-title">{t('catch.summary_table', { defaultValue: 'Summary Table' })}</h3>
-        <div className="ms-auto">
+    <div className="card shadow-sm border-0">
+      <div className="card-header border-0 pb-0">
+        <div>
+          <h3 className="card-title text-muted fw-bold">{t('catch.summary_table', { defaultValue: 'Annual Summary' })}</h3>
+          {totals && (
+            <div className="text-muted small mt-1">
+              {t('vars.catch.short_name', { defaultValue: 'Catch' })}: {totals.catch.toFixed(1)} {t('units.t', { defaultValue: 't' })} ; {' '}
+              {t('vars.recorded_catch.short_name', { defaultValue: 'Recorded catch' })}: {totals.recorded_catch.toFixed(1)} {t('units.t', { defaultValue: 't' })}
+            </div>
+          )}
+        </div>
+        <div className="ms-auto card-actions">
           <select
-            className="form-select"
+            className="form-select form-select-sm"
             value={selectedYear}
             onChange={(e) => setSelectedYear(e.target.value)}
           >
@@ -116,54 +124,46 @@ export default function CatchSummaryTable() {
           </select>
         </div>
       </div>
-      <div className="card-table table-responsive">
-        {loading ? (
-          <div className="d-flex justify-content-center py-5">
-            <div className="spinner-border text-primary" role="status" />
-          </div>
-        ) : (
-          <table className="table table-vcenter">
-            <thead>
-              {table.getHeaderGroups().map(headerGroup => (
-                <tr key={headerGroup.id}>
-                  {headerGroup.headers.map(header => (
-                    <th key={header.id}>
-                      {flexRender(
-                        header.column.columnDef.header,
-                        header.getContext()
-                      )}
-                    </th>
-                  ))}
-                </tr>
-              ))}
-            </thead>
-            <tbody>
-              {table.getRowModel().rows.map(row => (
-                <tr key={row.id}>
-                  {row.getVisibleCells().map(cell => (
-                    <td key={cell.id}>
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext()
-                      )}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        )}
-      </div>
-      {totals && (
-        <div className="card-footer">
-          <div className="d-flex justify-content-end text-muted small">
-            <span>
-              {t('vars.catch.short_name', { defaultValue: 'Catch' })}: {totals.catch.toFixed(1)} {t('units.t', { defaultValue: 't' })} ; {' '}
-              {t('vars.recorded_catch.short_name', { defaultValue: 'Recorded catch' })}: {totals.recorded_catch.toFixed(1)} {t('units.t', { defaultValue: 't' })}
-            </span>
-          </div>
+      <div className="card-body p-0">
+        <div className="table-responsive">
+          {loading ? (
+            <div className="d-flex justify-content-center py-5">
+              <div className="spinner-border text-primary" role="status" />
+            </div>
+          ) : (
+            <table className="table table-vcenter card-table">
+              <thead>
+                {table.getHeaderGroups().map(headerGroup => (
+                  <tr key={headerGroup.id}>
+                    {headerGroup.headers.map(header => (
+                      <th key={header.id}>
+                        {flexRender(
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
+                      </th>
+                    ))}
+                  </tr>
+                ))}
+              </thead>
+              <tbody>
+                {table.getRowModel().rows.map(row => (
+                  <tr key={row.id}>
+                    {row.getVisibleCells().map(cell => (
+                      <td key={cell.id}>
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext()
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
         </div>
-      )}
+      </div>
     </div>
   )
 }

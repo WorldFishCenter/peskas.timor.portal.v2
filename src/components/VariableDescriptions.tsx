@@ -35,9 +35,9 @@ export default function VariableDescriptions({ variables, type }: VariableDescri
   }
 
   return (
-    <div className="card">
+    <div className="card shadow-sm border-0">
       <div className="card-body markdown">
-        <h3 className="card-title mb-0">{heading}</h3>
+        <h3 className="card-title text-muted fw-bold mb-3">{heading}</h3>
         {content && (
           <div className="mt-3">
             <p className="text-secondary">{content}</p>

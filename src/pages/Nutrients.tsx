@@ -116,9 +116,15 @@ export default function Nutrients() {
         <div className="container-xl">
           <div className="row row-deck row-cards">
             <div className="col-12">
-              <div className="card">
-                <div className="card-header">
-                  <h3 className="card-title">{treemapTitle}</h3>
+              <div className="card shadow-sm border-0">
+                <div className="card-header border-0 pb-0">
+                  <div>
+                    <h3 className="card-title text-muted fw-bold">{treemapTitle}</h3>
+                    <div className="card-subtitle">{t('nutrients.subtitle', { defaultValue: 'Number of people meeting daily nutritional requirements' })}</div>
+                    {pars?.nutrients?.treemap_average?.description && (
+                      <div className="text-muted small mt-2">{pars.nutrients.treemap_average.description}</div>
+                    )}
+                  </div>
                 </div>
                 <div className="card-body">
                   {loading ? (

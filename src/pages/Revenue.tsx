@@ -124,9 +124,6 @@ export default function Revenue() {
                     </h3>
                     <div className="card-subtitle">{t('revenue.trend_subtitle', { defaultValue: 'Monthly revenue in million USD' })}</div>
                   </div>
-                  <div className="card-actions ms-auto">
-                    <span className="badge badge-outline text-blue fw-medium">{t('common.last_3_years', { defaultValue: '3 Year Overview' })}</span>
-                  </div>
                 </div>
                 <div className="card-body">
                   {loading ? (
@@ -244,6 +241,9 @@ export default function Revenue() {
                       {pars?.revenue?.treemap?.title ?? t('revenue.habitat_treemap', { defaultValue: 'Revenue Distribution' })}
                     </h3>
                     <div className="card-subtitle">{t('revenue.habitat_subtitle', { defaultValue: 'Economic value by habitat and gear' })}</div>
+                    {pars?.revenue?.treemap?.description && (
+                      <div className="text-muted small mt-2">{pars.revenue.treemap.description}</div>
+                    )}
                   </div>
                 </div>
                 <div className="card-body">
@@ -259,11 +259,6 @@ export default function Revenue() {
                     </div>
                   )}
                 </div>
-                {pars?.revenue?.treemap?.description && (
-                  <div className="card-footer bg-transparent border-0 pt-0">
-                    <div className="text-muted small">{pars.revenue.treemap.description}</div>
-                  </div>
-                )}
               </div>
             </div>
 

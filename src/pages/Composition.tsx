@@ -124,10 +124,14 @@ export default function Composition() {
           <div className="row row-deck row-cards">
             {/* Taxa Treemap - Full width */}
             <div className="col-12">
-              <div className="card">
-                <div className="card-header">
-                  <h3 className="card-title">{tableHeading}</h3>
-                  <div className="card-actions">
+              <div className="card shadow-sm border-0">
+                <div className="card-header border-0 pb-0">
+                  <div>
+                    <h3 className="card-title text-muted fw-bold">{tableHeading}</h3>
+                    <div className="card-subtitle">{t('composition.treemap_subtitle', { defaultValue: 'Catch volume by fish group' })}</div>
+                    {tableFooter && <div className="text-muted small mt-2">{tableFooter}</div>}
+                  </div>
+                  <div className="card-actions ms-auto">
                     <YearFilter value={selectedYear} onChange={setSelectedYear} />
                   </div>
                 </div>
@@ -141,22 +145,23 @@ export default function Composition() {
                   ) : (
                     <TreemapChart
                       data={treemapData}
-                      title={t('composition.treemap_title')}
                       colors={habitatPalette}
                       height={450}
                     />
                   )}
-                  <div className="small text-muted mt-2">{tableFooter}</div>
                 </div>
               </div>
             </div>
 
             {/* Region Composition Stacked Bar - Full width */}
             <div className="col-12">
-              <div className="card">
-                <div className="card-header">
-                  <h3 className="card-title">{percentHeading}</h3>
-                  <div className="card-actions">
+              <div className="card shadow-sm border-0">
+                <div className="card-header border-0 pb-0">
+                  <div>
+                    <h3 className="card-title text-muted fw-bold">{percentHeading}</h3>
+                    <div className="card-subtitle">{t('composition.stacked_subtitle', { defaultValue: 'Regional catch distribution by taxa' })}</div>
+                  </div>
+                  <div className="card-actions ms-auto">
                     <YearFilter value={selectedYear} onChange={setSelectedYear} />
                   </div>
                 </div>
@@ -186,9 +191,9 @@ export default function Composition() {
 
             {/* Taxa Bar Highlight Chart - 7 columns */}
             <div className="col-12 col-lg-7">
-              <div className="card">
-                <div className="card-header">
-                  <h3 className="card-title">{highlightHeading}</h3>
+              <div className="card shadow-sm border-0">
+                <div className="card-header border-0 pb-0">
+                  <h3 className="card-title text-muted fw-bold">{highlightHeading}</h3>
                 </div>
                 <div className="card-body">
                   {taxaLoading ? (
@@ -216,9 +221,9 @@ export default function Composition() {
 
             {/* Variable Descriptions - Remaining columns */}
             <div className="col-12 col-lg-5">
-              <div className="card">
-                <div className="card-header">
-                  <h3 className="card-title">{descriptionHeading}</h3>
+              <div className="card shadow-sm border-0">
+                <div className="card-header border-0 pb-0">
+                  <h3 className="card-title text-muted fw-bold">{descriptionHeading}</h3>
                 </div>
                 <div className="card-body">
                   <div className="markdown text-muted">
