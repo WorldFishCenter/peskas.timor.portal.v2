@@ -257,3 +257,23 @@ Thread: https://ampcode.com/threads/T-019bbd07-ccba-7501-a535-fd3f2ad368c6
   - Revenue page was already feature-complete, just had leftover unused code
   - Always run build to catch unused variable errors before committing
 ---
+
+## 2026-01-14 - US-016b
+Thread: https://ampcode.com/threads/T-019bbd09-aa20-72c8-b6ce-86f88bf997ac
+- Created reusable RadarChart component at src/components/charts/RadarChart.tsx
+- Added spider/radar chart to Revenue page showing Price per Kg by Region
+- Chart shows two series: "All data" (median across all time) and "Latest month" (last 2 months)
+- Data loaded from municipal_aggregated.json, grouped by region
+- Uses spiderColors palette from constants
+- Implementation matches Shiny's apex_spider function:
+  - Calculates median price_kg per region
+  - Compares historical median vs latest month median
+  - Uses ApexCharts radar type with markers and legend
+- Files created: src/components/charts/RadarChart.tsx
+- Files changed: src/pages/Revenue.tsx
+- **Learnings for future iterations:**
+  - RadarChart component is reusable with series, categories, height, colors props
+  - MunicipalAggregatedRecord type (not MunicipalAggregated) for municipal_aggregated data
+  - Spider chart in Shiny shows price_kg by region, not multiple dimensions per region
+  - Use slice(-2) to get the "latest month" data points (last 2 records per region)
+---

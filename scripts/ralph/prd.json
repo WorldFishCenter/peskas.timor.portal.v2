@@ -648,7 +648,7 @@
         "Chart matches Shiny styling",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-016c",
