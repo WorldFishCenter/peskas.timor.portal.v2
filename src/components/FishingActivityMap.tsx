@@ -44,6 +44,7 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
   const theme = useTheme()
   const { t } = useI18n()
   const { data: tracks, loading } = useData('predicted_tracks')
+  const [showInfo, setShowInfo] = useState(false)
 
   // Get unique gear types and year range
   const { gearTypes, minYear, maxYear } = useMemo(() => {
@@ -214,77 +215,110 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
 
           {/* Control Panel */}
           <div
-            className="card position-absolute"
+            className="card position-absolute shadow-lg"
             style={{
               top: '1rem',
               right: '1rem',
-              maxWidth: '20rem',
+              maxWidth: '18rem',
               zIndex: 1000,
+              backgroundColor: isDark ? 'rgba(30, 30, 35, 0.5)' : 'rgba(255, 255, 255, 0.5)',
+              backdropFilter: 'blur(4px)',
             }}
           >
-            <div className="card-header">
-              <h3 className="card-title">{t('home.map_title', { defaultValue: 'Fishing Activity Heatmap' })}</h3>
-            </div>
-            <div className="card-body">
-              <p className="text-muted small mb-3">
-                {t('home.map_description', { defaultValue: 'Visualizing fishing vessel density in Timor-Leste waters' })}
-                <button
-                  type="button"
-                  className="btn btn-sm btn-icon btn-link text-muted ms-1"
-                  title={t('home.map_info', { defaultValue: 'This heatmap shows the fishing vessel density along the Timor-Leste coasts. The data is based on a sample of 440 vessels equipped with GPS trackers, representing a subset of the total fishery. The gear type was predicted using a machine learning model analyzing the vessels\' movement patterns.' })}
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="16" height="16" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <circle cx="12" cy="12" r="9"/>
-                    <line x1="12" y1="8" x2="12.01" y2="8"/>
-                    <polyline points="11 12 12 12 12 16 13 16"/>
-                  </svg>
-                </button>
-              </p>
-
-              {/* Color Legend */}
-              <div className="mb-4">
-                <label className="form-label small fw-bold mb-2">{t('home.map_legend', { defaultValue: 'Density' })}</label>
-                <div className="d-flex rounded overflow-hidden" style={{ height: '1.25rem' }}>
-                  {COLOR_RANGE.map((color, i) => (
-                    <div
-                      key={i}
+            <div className="card-body p-3">
+              <div className="d-flex align-items-center justify-content-between mb-2">
+                <h3 className="card-title mb-0 fw-bold text-uppercase" style={{ fontSize: '0.75rem', letterSpacing: '0.05em' }}>
+                  {t('home.map_title', { defaultValue: 'Fishing Activity' })}
+                </h3>
+                <div className="position-relative">
+                  <button
+                    type="button"
+                    className="btn btn-sm btn-icon btn-link text-muted p-0"
+                    onMouseEnter={() => setShowInfo(true)}
+                    onMouseLeave={() => setShowInfo(false)}
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-xs" width="16" height="16" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <circle cx="12" cy="12" r="9"/>
+                      <line x1="12" y1="8" x2="12.01" y2="8"/>
+                      <polyline points="11 12 12 12 12 16 13 16"/>
+                    </svg>
+                  </button>
+                  {showInfo && (
+                    <div 
+                      className="position-absolute bg-dark text-white p-2 rounded shadow-sm"
                       style={{
-                        flex: 1,
-                        backgroundColor: `rgb(${color.join(',')})`,
+                        right: '100%',
+                        top: '50%',
+                        transform: 'translateY(-50%)',
+                        marginRight: '10px',
+                        width: '200px',
+                        zIndex: 1100,
+                        fontSize: '0.65rem',
+                        lineHeight: '1.4',
+                        pointerEvents: 'none'
                       }}
-                    />
-                  ))}
-                </div>
-                <div className="d-flex justify-content-between mt-1">
-                  <span className="text-muted small">{t('home.map_low_density', { defaultValue: 'Low' })}</span>
-                  <span className="text-muted small">{t('home.map_high_density', { defaultValue: 'High' })}</span>
+                    >
+                      {t('home.map_info', { defaultValue: 'This heatmap shows the fishing vessel density along the Timor-Leste coasts. The data is based on a sample of 440 vessels equipped with GPS trackers, representing a subset of the total fishery. The gear type was predicted using a machine learning model analyzing the vessels\' movement patterns.' })}
+                    </div>
+                  )}
                 </div>
               </div>
 
+              <div className="text-muted mb-3" style={{ fontSize: '0.7rem', lineHeight: '1.2' }}>
+                {t('home.map_description', { defaultValue: 'Density of fishing vessels in Timor-Leste waters' })}
+              </div>
+
+              <hr className="my-2" />
+
+              {/* Color Legend */}
+              <div className="mb-3">
+                <div className="d-flex justify-content-between mb-1" style={{ fontSize: '0.65rem' }}>
+                  <span className="text-muted fw-bold text-uppercase">{t('home.map_legend', { defaultValue: 'Density' })}</span>
+                  <div className="d-flex gap-2">
+                    <span className="text-muted">{t('home.map_low_density', { defaultValue: 'Low' })}</span>
+                    <span className="text-muted">{t('home.map_high_density', { defaultValue: 'High' })}</span>
+                  </div>
+                </div>
+                <div 
+                  className="rounded-pill" 
+                  style={{ 
+                    height: '6px', 
+                    background: `linear-gradient(to right, ${COLOR_RANGE.map(c => `rgb(${c.join(',')})`).join(', ')})` 
+                  }} 
+                />
+              </div>
+
               {/* Gear Type Selection */}
-              <div className="mb-4">
-                <label className="form-label small fw-bold mb-2">{t('home.map_gear_types', { defaultValue: 'Gear Types' })}</label>
-                <div className="d-flex flex-wrap gap-2">
+              <div className="mb-3">
+                <label className="form-label mb-2 fw-bold text-muted text-uppercase" style={{ fontSize: '0.65rem' }}>
+                  {t('home.map_gear_types', { defaultValue: 'Gear Types' })}
+                </label>
+                <div className="form-selectgroup form-selectgroup-pills">
                   {gearTypes.map(gear => (
-                    <label key={gear} className="form-check">
+                    <label key={gear} className="form-selectgroup-item">
                       <input
-                        className="form-check-input"
+                        className="form-selectgroup-input"
                         type="checkbox"
                         checked={selectedGears.includes(gear)}
                         onChange={() => handleGearToggle(gear)}
                       />
-                      <span className="form-check-label small">{gear}</span>
+                      <span className="form-selectgroup-label py-1 px-2" style={{ fontSize: '0.65rem' }}>{gear}</span>
                     </label>
                   ))}
                 </div>
               </div>
 
               {/* Year Range Slider */}
-              <div className="mb-4">
-                <label className="form-label small fw-bold mb-2">
-                  {t('home.map_time_range', { start: yearRange[0], end: yearRange[1], defaultValue: 'Time Range: {start} - {end}' })}
-                </label>
+              <div className="mb-3">
+                <div className="d-flex justify-content-between mb-1">
+                  <label className="form-label mb-0 fw-bold text-muted text-uppercase" style={{ fontSize: '0.65rem' }}>
+                    {t('home.map_time_range_label', { defaultValue: 'Time Range' })}
+                  </label>
+                  <span className="badge badge-outline text-muted fw-normal" style={{ fontSize: '0.65rem' }}>
+                    {yearRange[0]} - {yearRange[1]}
+                  </span>
+                </div>
                 <div className="d-flex gap-2 align-items-center">
                   <input
                     type="range"
@@ -306,10 +340,15 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
               </div>
 
               {/* Radius Slider */}
-              <div className="mb-3">
-                <label className="form-label small fw-bold mb-2">
-                  {t('home.map_radius', { value: radius, defaultValue: 'Radius: {value}m' })}
-                </label>
+              <div className="mb-0">
+                <div className="d-flex justify-content-between mb-1">
+                  <label className="form-label mb-0 fw-bold text-muted text-uppercase" style={{ fontSize: '0.65rem' }}>
+                    {t('home.map_radius_label', { defaultValue: 'Radius' })}
+                  </label>
+                  <span className="badge badge-outline text-muted fw-normal" style={{ fontSize: '0.65rem' }}>
+                    {radius}m
+                  </span>
+                </div>
                 <input
                   type="range"
                   className="form-range"
@@ -320,11 +359,6 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
                   onChange={e => setRadius(parseInt(e.target.value))}
                 />
               </div>
-            </div>
-            <div className="card-footer bg-transparent">
-              <p className="text-muted small mb-0">
-                {t('home.map_hover_hint', { defaultValue: 'Hover over a hexagon to view detailed fishing activity information.' })}
-              </p>
             </div>
           </div>
 
