@@ -89,7 +89,7 @@ export default function Home() {
       </div>
 
       {/* Main Content Grid */}
-      <div className="page-body pt-0">
+      <div className="page-body">
         <div className="container-xl">
           <div className="row row-deck row-cards">
             {/* Fishing Map - Full width card */}

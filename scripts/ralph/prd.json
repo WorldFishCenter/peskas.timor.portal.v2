@@ -90,7 +90,7 @@
     {
       "id": "US-003b2",
       "title": "Create basic FishingMap component",
-      "description": "Create src/components/FishingMap.tsx with a simple Leaflet map component. Use placeholder center/zoom. No styling yet, just get basic map rendering.",
+      "description": "Create src/components/FishingMap.tsx with a simple Leaflet map component. Use placeholder center/zoom. No styling yet, just get basic map rendering. NOTE: This is wrong - Home should use DeckGL hexagon heatmap, not Leaflet!",
       "acceptanceCriteria": [
         "src/components/FishingMap.tsx created",
         "Component renders a basic Leaflet map",
@@ -579,7 +579,7 @@
         "Colors match Shiny exactly",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-012b",
@@ -590,6 +590,158 @@
         "Card margins and padding correct",
         "Chart spacing within grid correct",
         "Responsive breakpoints work correctly",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-015a",
+      "title": "CRITICAL: Replace Home page Leaflet map with DeckGL hexagon heatmap",
+      "description": "The Home page currently uses a basic Leaflet map (FishingMap component) but should use a DeckGL hexagon heatmap showing fishing track density, identical to the Tracks page. Replace the map component.",
+      "acceptanceCriteria": [
+        "Remove Leaflet FishingMap from Home page",
+        "Add DeckGL HexagonLayer with predicted_tracks data",
+        "Map shows hexagon density heatmap",
+        "Uses heatmapColors palette",
+        "Map height and styling matches Shiny",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-015b",
+      "title": "Fix Home page donut chart visibility and colors",
+      "description": "User reports donut charts not visible on Home page. Verify charts render correctly, data loads, and colors are applied. Fish donut should use viridis(5), not donutBlue.",
+      "acceptanceCriteria": [
+        "All 3 donut charts visible and rendering",
+        "Trips donut uses donutBlue colors",
+        "Revenue donut uses donutBlue colors",
+        "Fish donut uses viridis(5) colors (NOT donutBlue)",
+        "Data loads correctly from summary_data.json",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-016a",
+      "title": "Build complete Revenue page with time series chart",
+      "description": "Revenue page currently only has placeholder radar chart. Build complete page with revenue time series chart showing revenue over time from aggregated.json.",
+      "acceptanceCriteria": [
+        "Revenue time series chart created and displays",
+        "Data loaded from aggregated.json (revenue field)",
+        "Chart uses ApexCharts line/area chart",
+        "Y-axis formatted as currency",
+        "Chart colors match Shiny",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-016b",
+      "title": "Add spider/radar chart to Revenue page with real data",
+      "description": "Replace placeholder radar chart on Revenue page with real spider/radar chart using municipal_aggregated data. Show price_kg, landing_weight, n_landings_per_boat dimensions.",
+      "acceptanceCriteria": [
+        "Spider/radar chart displays with real data",
+        "Data from municipal_aggregated.json",
+        "Shows 3 dimensions: price_kg, landing_weight, n_landings_per_boat",
+        "Uses spiderColors palette",
+        "Chart matches Shiny styling",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-016c",
+      "title": "Add Revenue summary cards and table",
+      "description": "Add summary metric cards showing key revenue statistics and a summary table below charts on Revenue page. Match Shiny layout.",
+      "acceptanceCriteria": [
+        "Summary cards display key revenue metrics",
+        "Cards show trends and comparisons",
+        "Summary table displays revenue data by period",
+        "Table uses municipality filter",
+        "Layout matches Shiny",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-017a",
+      "title": "Build Market page spider/radar chart with real data",
+      "description": "Market page has placeholder radar chart. Replace with real spider/radar chart using municipal_aggregated data showing market dimensions.",
+      "acceptanceCriteria": [
+        "Spider/radar chart displays with real data",
+        "Data from municipal_aggregated.json",
+        "Shows market-related dimensions",
+        "Uses spiderColors palette",
+        "Chart matches Shiny styling",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-017b",
+      "title": "Add Market page summary cards and table",
+      "description": "Add summary metric cards and table to Market page showing key market statistics. Match Shiny layout.",
+      "acceptanceCriteria": [
+        "Summary cards display market metrics",
+        "Summary table shows market data",
+        "Table uses municipality filter",
+        "Layout matches Shiny",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-018a",
+      "title": "Build Composition region stacked bar chart",
+      "description": "Composition page has placeholder for region composition chart. Build stacked bar chart showing taxa composition by region using municipal_taxa data.",
+      "acceptanceCriteria": [
+        "Stacked bar chart displays regional composition",
+        "Data from municipal_taxa.json",
+        "Chart shows taxa breakdown by region",
+        "Uses viridis colors for taxa",
+        "Chart height and styling match Shiny",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-018b",
+      "title": "Build Composition taxa bar highlight chart",
+      "description": "Composition page has placeholder for taxa bar chart. Build taxa bar chart with hover highlighting showing individual taxa performance.",
+      "acceptanceCriteria": [
+        "Taxa bar chart displays",
+        "Data from taxa_aggregated.json",
+        "Hover highlighting works",
+        "Uses viridis colors",
+        "Chart matches Shiny styling",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-019a",
+      "title": "Verify and fix Catch page data loading",
+      "description": "Catch page exists but user reports time series and metrics may not display correctly. Verify data loads and displays properly.",
+      "acceptanceCriteria": [
+        "Time series chart loads real data from aggregated.json",
+        "Chart displays catch over time",
+        "Metric cards show correct calculations",
+        "Summary table displays correctly",
+        "Municipality filter works",
+        "Browser verification passes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-019b",
+      "title": "Complete About page content",
+      "description": "About page has basic structure but may be incomplete. Verify all content loads from pars.json and add any missing sections.",
+      "acceptanceCriteria": [
+        "About text loads from pars.json",
+        "Harvard Dataverse iframe displays",
+        "All text sections present",
+        "Layout matches Shiny",
         "Browser verification passes"
       ],
       "passes": false

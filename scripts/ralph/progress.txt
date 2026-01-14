@@ -5,6 +5,7 @@
 - Data files stored in `public/data/*.json` (converted from R RDA files)
 - All text uses i18n from `pars.json` with keys like `pars.header.nav.home.text`
 - Map center coordinates: lat `-8.75`, lng `125.7`, zoom `8`
+- All chart components must import default colors from `src/constants/colors.ts` - never hardcode color arrays
 
 ---
 
@@ -153,4 +154,35 @@ Thread: https://ampcode.com/threads/T-019bbc34-63c2-777f-93fd-ddfaf2e8f8af
   - Conservation data is part of summary_data.json, not a separate file
   - Preservation types: Box, Ice box, Open, Other, Shade
   - Data includes municipality, catch_preservation, count, and perc (percentage)
+---
+
+## 2026-01-14 - US-012a3
+Thread: https://ampcode.com/threads/T-019bbc44-8869-7069-9e56-9b0f865dde93
+- Audited all chart components and pages for color usage
+- Updated chart components to use color constants from src/constants/colors.ts:
+  - DonutChart: Now imports and defaults to donutBlue
+  - TreemapChart: Now imports and defaults to habitatPalette
+  - TimeSeriesChart: Now imports and defaults to timeSeriesColors
+- Updated Revenue.tsx to use revenueBarColors and habitatPalette
+- Added new color constants: timeSeriesColors, revenueBarColors
+- Files changed: DonutChart.tsx, TreemapChart.tsx, TimeSeriesChart.tsx, Revenue.tsx, colors.ts
+- **Learnings for future iterations:**
+  - All chart defaults should import from src/constants/colors.ts
+  - Never hardcode color arrays in components - use named constants
+  - Color palette summary: donutBlue (home donuts), habitatPalette (treemaps), timeSeriesColors (Catch), heatmapColors (Tracks), spiderColors (Market)
+---
+
+## 2026-01-14 - US-003b2
+Thread: https://ampcode.com/threads/T-019bbc93-f91d-719e-897d-81c244de0442
+- Verified FishingMap component already exists at src/components/FishingMap.tsx
+- Component already meets all acceptance criteria:
+  - Renders basic Leaflet map with MapContainer and TileLayer
+  - Uses Carto light basemap
+  - Accepts center, zoom, height props with defaults
+  - Exports properly
+- No code changes needed - component was implemented in previous iteration
+- Build passes with no TypeScript errors
+- **Learnings for future iterations:**
+  - FishingMap uses Carto light basemap URL: https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png
+  - Note: US-003b2 description mentions Home should use DeckGL hexagon heatmap - see US-015a for replacement
 ---
