@@ -214,32 +214,38 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
 
           {/* Control Panel */}
           <div
-            className="card"
+            className="card position-absolute"
             style={{
-              position: 'absolute',
-              top: '20px',
-              right: '20px',
-              maxWidth: '320px',
+              top: '1rem',
+              right: '1rem',
+              maxWidth: '20rem',
               zIndex: 1000,
-              opacity: 0.95,
             }}
           >
+            <div className="card-header">
+              <h3 className="card-title">{t('home.map_title', { defaultValue: 'Fishing Activity Heatmap' })}</h3>
+            </div>
             <div className="card-body">
-              <h3 className="card-title mb-2">{t('home.map_title', { defaultValue: 'Fishing Activity Heatmap' })}</h3>
               <p className="text-muted small mb-3">
                 {t('home.map_description', { defaultValue: 'Visualizing fishing vessel density in Timor-Leste waters' })}
-                <span
-                  className="ms-1"
-                  style={{ cursor: 'help' }}
+                <button
+                  type="button"
+                  className="btn btn-sm btn-icon btn-link text-muted ms-1"
                   title={t('home.map_info', { defaultValue: 'This heatmap shows the fishing vessel density along the Timor-Leste coasts. The data is based on a sample of 440 vessels equipped with GPS trackers, representing a subset of the total fishery. The gear type was predicted using a machine learning model analyzing the vessels\' movement patterns.' })}
                 >
-                  ℹ️
-                </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="16" height="16" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="12" r="9"/>
+                    <line x1="12" y1="8" x2="12.01" y2="8"/>
+                    <polyline points="11 12 12 12 12 16 13 16"/>
+                  </svg>
+                </button>
               </p>
 
               {/* Color Legend */}
-              <div className="mb-3">
-                <div className="d-flex" style={{ height: '20px', borderRadius: '3px', overflow: 'hidden' }}>
+              <div className="mb-4">
+                <label className="form-label small fw-bold mb-2">{t('home.map_legend', { defaultValue: 'Density' })}</label>
+                <div className="d-flex rounded overflow-hidden" style={{ height: '1.25rem' }}>
                   {COLOR_RANGE.map((color, i) => (
                     <div
                       key={i}
@@ -250,18 +256,18 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
                     />
                   ))}
                 </div>
-                <div className="d-flex justify-content-between small text-muted mt-1">
-                  <span>{t('home.map_low_density', { defaultValue: 'Low Density' })}</span>
-                  <span>{t('home.map_high_density', { defaultValue: 'High Density' })}</span>
+                <div className="d-flex justify-content-between mt-1">
+                  <span className="text-muted small">{t('home.map_low_density', { defaultValue: 'Low' })}</span>
+                  <span className="text-muted small">{t('home.map_high_density', { defaultValue: 'High' })}</span>
                 </div>
               </div>
 
               {/* Gear Type Selection */}
-              <div className="mb-3">
-                <label className="form-label fw-bold">{t('home.map_gear_types', { defaultValue: 'Gear Types' })}</label>
-                <div>
+              <div className="mb-4">
+                <label className="form-label small fw-bold mb-2">{t('home.map_gear_types', { defaultValue: 'Gear Types' })}</label>
+                <div className="d-flex flex-wrap gap-2">
                   {gearTypes.map(gear => (
-                    <label key={gear} className="form-check form-check-inline">
+                    <label key={gear} className="form-check">
                       <input
                         className="form-check-input"
                         type="checkbox"
@@ -275,8 +281,8 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
               </div>
 
               {/* Year Range Slider */}
-              <div className="mb-3">
-                <label className="form-label fw-bold">
+              <div className="mb-4">
+                <label className="form-label small fw-bold mb-2">
                   {t('home.map_time_range', { start: yearRange[0], end: yearRange[1], defaultValue: 'Time Range: {start} - {end}' })}
                 </label>
                 <div className="d-flex gap-2 align-items-center">
@@ -287,7 +293,6 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
                     max={maxYear}
                     value={yearRange[0]}
                     onChange={e => setYearRange([parseInt(e.target.value), yearRange[1]])}
-                    style={{ flex: 1 }}
                   />
                   <input
                     type="range"
@@ -296,14 +301,13 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
                     max={maxYear}
                     value={yearRange[1]}
                     onChange={e => setYearRange([yearRange[0], parseInt(e.target.value)])}
-                    style={{ flex: 1 }}
                   />
                 </div>
               </div>
 
               {/* Radius Slider */}
               <div className="mb-3">
-                <label className="form-label fw-bold">
+                <label className="form-label small fw-bold mb-2">
                   {t('home.map_radius', { value: radius, defaultValue: 'Radius: {value}m' })}
                 </label>
                 <input
@@ -316,8 +320,9 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
                   onChange={e => setRadius(parseInt(e.target.value))}
                 />
               </div>
-
-              <p className="small text-muted mb-0">
+            </div>
+            <div className="card-footer bg-transparent">
+              <p className="text-muted small mb-0">
                 {t('home.map_hover_hint', { defaultValue: 'Hover over a hexagon to view detailed fishing activity information.' })}
               </p>
             </div>

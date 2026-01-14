@@ -68,7 +68,7 @@ export default function RootLayout() {
               <a href="#" className="nav-link" aria-label={t('actions.toggle_language')} title={t('actions.toggle_language')} onClick={(e) => { e.preventDefault(); setLang(lang === 'en' ? 'tet' : 'en') }}>{lang === 'en' ? 'EN' : 'TET'}</a>
             </div>
             {/* User menu placeholder */}
-            <div className="nav-item dropdown">
+            {/* <div className="nav-item dropdown">
               <a href="#" className="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label={t('actions.open_user_menu', { defaultValue: 'Open user menu' })}>
                 <span className="avatar avatar-sm" style={{backgroundImage: "url(https://preview.tabler.io/static/avatars/000m.jpg)"}}></span>
                 <div className="d-none d-xl-block ps-2">
@@ -82,7 +82,7 @@ export default function RootLayout() {
                 <div className="dropdown-divider"></div>
                 <a href="#" className="dropdown-item">{t('user_menu.logout')}</a>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </header>
