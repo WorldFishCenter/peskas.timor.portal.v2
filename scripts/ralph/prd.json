@@ -300,7 +300,7 @@
         "Filter behavior matches Shiny",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-005a1",

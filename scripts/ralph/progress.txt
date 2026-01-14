@@ -71,3 +71,17 @@ Thread: https://ampcode.com/threads/T-019bbc25-e1dd-72c6-95b2-b47ba04cd08d
   - ApexCharts provides built-in interactions, no custom implementation needed
   - Pages should use FilterContext from src/context/FilterContext.tsx for global filters
 ---
+
+## 2026-01-14 - US-004c2
+Thread: https://ampcode.com/threads/T-019bbc25-e1dd-72c6-95b2-b47ba04cd08d
+- Connected municipality filter to treemap data on Composition page
+- Added municipal_taxa.json data loading for municipality-specific filtering
+- Used useMemo for efficient recomputation when filters change
+- When municipality is 'all', uses taxa_aggregated.json (national data)
+- When specific municipality selected, uses municipal_taxa.json filtered by region
+- Files changed: src/pages/Composition.tsx
+- **Learnings for future iterations:**
+  - municipal_taxa.json contains region-specific data with 'region' field
+  - Use useMemo for derived data that depends on filters
+  - Dropdown filters don't need debounce (only text inputs do)
+---

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useData } from '../hooks/useData'
 import TreemapChart from '../components/charts/TreemapChart'
 import type { TreemapDataItem } from '../components/charts/TreemapChart'
@@ -14,33 +14,61 @@ export default function Composition() {
   const [selectedYear, setSelectedYear] = useState<string>('all')
   const { data: pars, loading: parsLoading } = useData('pars')
   const { data: taxaAggregated, loading: taxaLoading } = useData('taxa_aggregated')
+  const { data: municipalTaxa } = useData('municipal_taxa')
   const { data: taxaNames } = useData('taxa_names')
 
   // Create taxa name lookup map
-  const taxaNameMap: Record<string, string> = {}
-  if (taxaNames) {
-    taxaNames.forEach((t) => {
-      taxaNameMap[t.grouped_taxa] = t.grouped_taxa_names
-    })
-  }
+  const taxaNameMap: Record<string, string> = useMemo(() => {
+    const map: Record<string, string> = {}
+    if (taxaNames) {
+      taxaNames.forEach((t) => {
+        map[t.grouped_taxa] = t.grouped_taxa_names
+      })
+    }
+    return map
+  }, [taxaNames])
 
-  // Aggregate taxa data for treemap - sum catch by grouped_taxa, filtered by year
-  const treemapData: TreemapDataItem[] = []
-  if (taxaAggregated?.month) {
-    const catchByTaxa: Record<string, number> = {}
-    taxaAggregated.month
-      .filter((row) => selectedYear === 'all' || row.year === selectedYear)
-      .forEach((row) => {
-        const taxa = row.grouped_taxa
-        catchByTaxa[taxa] = (catchByTaxa[taxa] || 0) + (row.catch || 0)
-      })
-    Object.entries(catchByTaxa)
-      .sort((a, b) => b[1] - a[1])
-      .forEach(([taxa, total]) => {
-        const name = taxaNameMap[taxa] || taxa
-        treemapData.push({ x: name, y: Math.round(total / 1000) }) // Convert to tons
-      })
-  }
+  // Aggregate taxa data for treemap - sum catch by grouped_taxa, filtered by year and municipality
+  const treemapData: TreemapDataItem[] = useMemo(() => {
+    const result: TreemapDataItem[] = []
+    
+    // Use municipal_taxa when filtering by municipality, otherwise use taxa_aggregated
+    if (municipality !== 'all' && municipalTaxa) {
+      const catchByTaxa: Record<string, number> = {}
+      municipalTaxa
+        .filter((row) => {
+          const regionMatch = row.region.toLowerCase() === municipality.toLowerCase()
+          const yearMatch = selectedYear === 'all' || row.year === selectedYear
+          return regionMatch && yearMatch
+        })
+        .forEach((row) => {
+          const taxa = row.grouped_taxa
+          catchByTaxa[taxa] = (catchByTaxa[taxa] || 0) + (row.catch || 0)
+        })
+      Object.entries(catchByTaxa)
+        .sort((a, b) => b[1] - a[1])
+        .forEach(([taxa, total]) => {
+          const name = taxaNameMap[taxa] || taxa
+          result.push({ x: name, y: Math.round(total / 1000) })
+        })
+    } else if (taxaAggregated?.month) {
+      const catchByTaxa: Record<string, number> = {}
+      taxaAggregated.month
+        .filter((row) => selectedYear === 'all' || row.year === selectedYear)
+        .forEach((row) => {
+          const taxa = row.grouped_taxa
+          catchByTaxa[taxa] = (catchByTaxa[taxa] || 0) + (row.catch || 0)
+        })
+      Object.entries(catchByTaxa)
+        .sort((a, b) => b[1] - a[1])
+        .forEach(([taxa, total]) => {
+          const name = taxaNameMap[taxa] || taxa
+          result.push({ x: name, y: Math.round(total / 1000) })
+        })
+    }
+    
+    return result
+  }, [taxaAggregated, municipalTaxa, taxaNameMap, selectedYear, municipality])
 
   const pretitle = pars?.catch?.subtitle?.text ?? ''
   const title = pars?.composition?.title?.text ?? ''
