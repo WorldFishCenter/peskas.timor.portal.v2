@@ -1,6 +1,7 @@
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { donutBlue } from '../../constants/colors'
+import { useTheme } from '../../hooks/useTheme'
 
 export interface DonutChartData {
   label: string
@@ -11,51 +12,66 @@ interface DonutChartProps {
   data: DonutChartData[]
   title?: string
   colors?: string[]
-  height?: string | number
+  height?: number
 }
 
 export default function DonutChart({
   data,
   title,
   colors = donutBlue,
-  height = '16rem',
+  height = 280,
 }: DonutChartProps) {
+  const theme = useTheme()
+
+  if (!data || data.length === 0) {
+    return (
+      <div
+        style={{
+          height: `${height}px`,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          color: '#999',
+        }}
+      >
+        No data available
+      </div>
+    )
+  }
+
   const series = data.map((d) => d.value)
   const labels = data.map((d) => d.label)
 
   const options: ApexOptions = {
     chart: {
       type: 'donut',
-      animations: { enabled: false },
+      background: 'transparent',
     },
-    labels,
-    colors,
+    theme: {
+      mode: theme,
+    },
+    labels: labels,
+    colors: colors,
     legend: {
       position: 'bottom',
-      fontSize: '12px',
     },
     dataLabels: {
-      enabled: false,
+      enabled: true,
     },
     plotOptions: {
       pie: {
         donut: {
-          size: '55%',
+          size: '65%',
         },
       },
     },
-    tooltip: {
-      y: {
-        formatter: (val: number) => val.toLocaleString(),
-      },
-    },
-    title: title
-      ? {
-          text: title,
-          align: 'center',
-          style: { fontSize: '14px', fontWeight: 500 },
-        }
-      : undefined,
+  }
+
+  if (title) {
+    options.title = {
+      text: title,
+      align: 'center',
+    }
   }
 
   return (

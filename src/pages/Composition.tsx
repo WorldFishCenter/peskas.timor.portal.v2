@@ -1,12 +1,15 @@
 import { useState, useMemo } from 'react'
 import { useData } from '../hooks/useData'
 import TreemapChart from '../components/charts/TreemapChart'
+import RegionCompositionChart from '../components/charts/RegionCompositionChart'
+import TaxaBarChart from '../components/charts/TaxaBarChart'
 import type { TreemapDataItem } from '../components/charts/TreemapChart'
 import YearFilter from '../components/YearFilter'
 import MunicipalityFilter from '../components/MunicipalityFilter'
 import { habitatPalette } from '../constants/colors'
 import { useI18n } from '../i18n'
 import { useFilters } from '../context/FilterContext'
+import { interpolateViridis } from 'd3-scale-chromatic'
 
 export default function Composition() {
   const { t } = useI18n()
@@ -14,8 +17,17 @@ export default function Composition() {
   const [selectedYear, setSelectedYear] = useState<string>('all')
   const { data: pars, loading: parsLoading } = useData('pars')
   const { data: taxaAggregated, loading: taxaLoading } = useData('taxa_aggregated')
-  const { data: municipalTaxa } = useData('municipal_taxa')
+  const { data: municipalTaxa, loading: municipalTaxaLoading } = useData('municipal_taxa')
   const { data: taxaNames } = useData('taxa_names')
+
+  // Generate viridis colors for taxa
+  const taxaColors = useMemo(() => {
+    if (!taxaAggregated?.month) return []
+    const allTaxa = [...new Set(taxaAggregated.month.map(r => r.grouped_taxa))]
+    return Array.from({ length: allTaxa.length }, (_, i) =>
+      interpolateViridis(i / Math.max(allTaxa.length - 1, 1))
+    ).map(c => c.substring(0, 7))
+  }, [taxaAggregated])
 
   // Create taxa name lookup map
   const taxaNameMap: Record<string, string> = useMemo(() => {
@@ -131,7 +143,7 @@ export default function Composition() {
                       data={treemapData}
                       title={t('composition.treemap_title')}
                       colors={habitatPalette}
-                      height="28rem"
+                      height={450}
                     />
                   )}
                   <div className="small text-muted mt-2">{tableFooter}</div>
@@ -149,10 +161,25 @@ export default function Composition() {
                   </div>
                 </div>
                 <div className="card-body">
-                  {/* TODO: StackedBarChart component for region composition */}
-                  <div className="d-flex align-items-center justify-content-center bg-secondary-lt rounded" style={{ height: '28rem' }}>
-                    <span className="text-muted">{t('composition.placeholder_region')}</span>
-                  </div>
+                  {municipalTaxaLoading ? (
+                    <div className="d-flex align-items-center justify-content-center" style={{ height: '28rem' }}>
+                      <div className="spinner-border text-primary" role="status">
+                        <span className="visually-hidden">{t('common.loading')}</span>
+                      </div>
+                    </div>
+                  ) : municipalTaxa && municipalTaxa.length > 0 ? (
+                    <RegionCompositionChart
+                      data={municipalTaxa}
+                      taxaNameMap={taxaNameMap}
+                      year={selectedYear}
+                      colors={taxaColors}
+                      height={450}
+                    />
+                  ) : (
+                    <div className="d-flex align-items-center justify-content-center bg-secondary-lt rounded" style={{ height: '28rem' }}>
+                      <span className="text-muted">{t('common.no_data', { defaultValue: 'No data available' })}</span>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -164,10 +191,25 @@ export default function Composition() {
                   <h3 className="card-title">{highlightHeading}</h3>
                 </div>
                 <div className="card-body">
-                  {/* TODO: TaxaBarChart component */}
-                  <div className="ratio ratio-4x3 bg-secondary-lt rounded d-flex align-items-center justify-content-center">
-                    <span className="text-muted">{t('composition.placeholder_taxa')}</span>
-                  </div>
+                  {taxaLoading ? (
+                    <div className="ratio ratio-4x3 bg-secondary-lt rounded d-flex align-items-center justify-content-center">
+                      <div className="spinner-border text-primary" role="status">
+                        <span className="visually-hidden">{t('common.loading')}</span>
+                      </div>
+                    </div>
+                  ) : taxaAggregated?.month && taxaAggregated.month.length > 0 ? (
+                    <TaxaBarChart
+                      data={taxaAggregated.month}
+                      taxaNameMap={taxaNameMap}
+                      year={selectedYear}
+                      colors={taxaColors}
+                      height={400}
+                    />
+                  ) : (
+                    <div className="ratio ratio-4x3 bg-secondary-lt rounded d-flex align-items-center justify-content-center">
+                      <span className="text-muted">{t('common.no_data', { defaultValue: 'No data available' })}</span>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

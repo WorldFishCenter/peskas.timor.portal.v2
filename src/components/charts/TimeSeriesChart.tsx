@@ -1,6 +1,7 @@
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { timeSeriesColors } from '../../constants/colors'
+import { useTheme } from '../../hooks/useTheme'
 
 export interface TimeSeriesDataPoint {
   date: string
@@ -16,7 +17,7 @@ interface TimeSeriesChartProps {
   series: TimeSeriesSeries[]
   title?: string
   colors?: string[]
-  height?: string | number
+  height?: number
   yAxisTitle?: string
   xAxisTitle?: string
   chartType?: 'line' | 'area'
@@ -26,11 +27,34 @@ export default function TimeSeriesChart({
   series,
   title,
   colors = timeSeriesColors,
-  height = 320,
+  height = 350,
   yAxisTitle,
   xAxisTitle,
   chartType = 'area',
 }: TimeSeriesChartProps) {
+  const theme = useTheme()
+
+  const hasValidData =
+    series &&
+    series.length > 0 &&
+    series.some((s) => s.data && s.data.length > 0)
+
+  if (!hasValidData) {
+    return (
+      <div
+        style={{
+          height: `${height}px`,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          color: '#999',
+        }}
+      >
+        No data available
+      </div>
+    )
+  }
+
   const apexSeries = series.map((s) => ({
     name: s.name,
     data: s.data.map((d) => ({
@@ -42,16 +66,18 @@ export default function TimeSeriesChart({
   const options: ApexOptions = {
     chart: {
       type: chartType,
-      animations: { enabled: false },
+      background: 'transparent',
       toolbar: { show: false },
       zoom: { enabled: false },
-      selection: { enabled: false },
     },
-    colors,
+    theme: {
+      mode: theme,
+    },
+    colors: colors,
     dataLabels: { enabled: false },
     stroke: {
       curve: 'smooth',
-      width: 1.5,
+      width: 2,
     },
     fill: {
       type: chartType === 'area' ? 'gradient' : 'solid',
@@ -62,35 +88,16 @@ export default function TimeSeriesChart({
         stops: [50, 100],
       },
     },
-    grid: {
-      strokeDashArray: 4,
-      padding: {
-        top: -20,
-        right: 0,
-        left: -4,
-        bottom: -4,
-      },
-    },
     xaxis: {
       type: 'datetime',
       labels: {
-        rotate: 0,
         datetimeUTC: false,
-        datetimeFormatter: {
-          year: 'yyyy',
-          month: "MMM 'yy",
-          day: 'dd MMM',
-        },
       },
-      axisBorder: { show: false },
-      title: xAxisTitle ? { text: xAxisTitle } : undefined,
     },
     yaxis: {
       labels: {
-        padding: 4,
         formatter: (val: number) => val.toLocaleString(),
       },
-      title: yAxisTitle ? { text: yAxisTitle } : undefined,
     },
     tooltip: {
       x: { format: 'MMM yyyy' },
@@ -100,28 +107,22 @@ export default function TimeSeriesChart({
     },
     legend: {
       position: 'top',
-      fontSize: '15px',
     },
-    plotOptions: {
-      bar: {
-        columnWidth: '50%',
-      },
-    },
-    responsive: [
-      {
-        breakpoint: 576,
-        options: {
-          yaxis: { show: false },
-        },
-      },
-    ],
-    title: title
-      ? {
-          text: title,
-          align: 'left',
-          style: { fontSize: '14px', fontWeight: 500 },
-        }
-      : undefined,
+  }
+
+  if (title) {
+    options.title = {
+      text: title,
+      align: 'left',
+    }
+  }
+
+  if (yAxisTitle && options.yaxis) {
+    options.yaxis.title = { text: yAxisTitle }
+  }
+
+  if (xAxisTitle && options.xaxis) {
+    options.xaxis.title = { text: xAxisTitle }
   }
 
   return (

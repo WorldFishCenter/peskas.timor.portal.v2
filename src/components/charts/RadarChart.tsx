@@ -10,7 +10,7 @@ export interface RadarChartSeries {
 interface RadarChartProps {
   series: RadarChartSeries[]
   categories: string[]
-  height?: string | number
+  height?: number
   colors?: string[]
   yFormatter?: (val: number) => string
 }
@@ -18,7 +18,7 @@ interface RadarChartProps {
 export default function RadarChart({
   series,
   categories,
-  height = '22rem',
+  height = 380,
   colors = spiderColors,
   yFormatter = (val) => `$${val.toFixed(2)}`,
 }: RadarChartProps) {

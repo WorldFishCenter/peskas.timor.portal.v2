@@ -1,6 +1,7 @@
 @import '@tabler/core/dist/css/tabler.min.css';
 @import '@tabler/core/dist/css/tabler-themes.min.css';
 @import 'leaflet/dist/leaflet.css';
+@import 'apexcharts/dist/apexcharts.css';
 
 /* Custom styles matching Shiny app custom.css */
 
@@ -40,10 +41,6 @@
 }
 
 /* Accordion styling */
-.accordion-item, .accordion-button {
-    background-color: #fff;
-}
-
 .accordion-button:not(.collapsed) {
     box-shadow: none;
 }

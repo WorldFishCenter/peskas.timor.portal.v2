@@ -2,13 +2,21 @@ import { useI18n } from '../i18n'
 import { useMemo } from 'react'
 import MunicipalityFilter from '../components/MunicipalityFilter'
 import TimeSeriesChart from '../components/charts/TimeSeriesChart'
+import TreemapChart from '../components/charts/TreemapChart'
+import CatchSummaryTable from '../components/CatchSummaryTable'
+import VariableDescriptions from '../components/VariableDescriptions'
 import { useData } from '../hooks'
+import { useMunicipalData } from '../hooks/useMunicipalData'
 import { useFilters } from '../context/FilterContext'
+import { habitatPalette } from '../constants/colors'
+import type { SummaryData } from '../types/data'
 
 export default function Catch() {
   const { t } = useI18n()
   const { municipality, setMunicipality } = useFilters()
-  const { data: aggregated, loading, error } = useData('aggregated')
+  const { data: aggregated, loading, error } = useMunicipalData()
+  const { data: summaryData } = useData('summary_data')
+  const { data: pars } = useData('pars')
 
   const chartSeries = useMemo(() => {
     if (!aggregated?.month) return []
@@ -74,6 +82,14 @@ export default function Catch() {
     }
   }, [aggregated])
 
+  const treemapData = useMemo(() => {
+    if (!summaryData) return []
+    const data = summaryData as SummaryData
+    if (!data.catch_habitat) return []
+    // Keep hierarchical structure for treemap grouping by habitat
+    return data.catch_habitat
+  }, [summaryData])
+
   if (error) {
     return <div className="alert alert-danger">{error.message}</div>
   }
@@ -98,10 +114,11 @@ export default function Catch() {
       <div className="page-body">
         <div className="container-xl">
           <div className="row row-deck row-cards">
+            {/* Row 1: Time series + 3 cards */}
             <div className="col-lg-8 col-xl-8">
               <div className="card">
                 <div className="card-header">
-                  <h3 className="card-title">{t('catch.series', {})}</h3>
+                  <h3 className="card-title">{t('vars.catch.short_name', { defaultValue: 'Catch' })}</h3>
                 </div>
                 <div className="card-body">
                   {loading ? (
@@ -111,8 +128,8 @@ export default function Catch() {
                   ) : (
                     <TimeSeriesChart
                       series={chartSeries}
-                      height="21rem"
-                      yAxisTitle={t('catch.catch_t')}
+                      height={336}
+                      yAxisTitle={t('catch.catch_t', { defaultValue: 'Catch (tons)' })}
                     />
                   )}
                 </div>
@@ -121,7 +138,7 @@ export default function Catch() {
             <div className="col-lg-4 col-xl-4">
               <div className="row row-deck row-cards">
                 <div className="col-12">
-                  <div className="card" style={{ minHeight: '8rem' }}>
+                  <div className="card">
                     <div className="card-body">
                       <div className="d-flex align-items-center">
                         <div className="subheader">{t('vars.catch.short_name', { defaultValue: 'Total catch' })}</div>
@@ -139,7 +156,7 @@ export default function Catch() {
                   </div>
                 </div>
                 <div className="col-12">
-                  <div className="card" style={{ minHeight: '8rem' }}>
+                  <div className="card">
                     <div className="card-body">
                       <div className="d-flex align-items-center">
                         <div className="subheader">{t('vars.landing_weight.short_name', { defaultValue: 'Catch per trip' })}</div>
@@ -157,7 +174,7 @@ export default function Catch() {
                   </div>
                 </div>
                 <div className="col-12">
-                  <div className="card" style={{ minHeight: '4rem' }}>
+                  <div className="card">
                     <div className="card-body">
                       <div className="row align-items-center">
                         <div className="col-auto">
@@ -206,42 +223,45 @@ export default function Catch() {
                 </div>
               </div>
             </div>
+
+            {/* Row 2: Full width treemap */}
             <div className="col-12">
               <div className="card">
                 <div className="card-header">
-                  <h3 className="card-title">{t('catch.table', {})}</h3>
+                  <h3 className="card-title">
+                    {pars?.catch?.treemap?.title ?? t('catch.habitat_treemap', { defaultValue: 'Catch by Habitat and Gear' })}
+                  </h3>
                 </div>
-                <div className="table-responsive">
-                  <table className="table table-vcenter">
-                    <thead>
-                      <tr>
-                        <th>{t('catch.month')}</th>
-                        <th>{t('catch.catch_t')}</th>
-                        <th>{t('home.trips')}</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {loading ? (
-                        <tr>
-                          <td colSpan={3} className="text-center">
-                            <div className="spinner-border spinner-border-sm" />
-                          </td>
-                        </tr>
-                      ) : (
-                        aggregated?.month
-                          ?.slice(0, 12)
-                          .map((row) => (
-                            <tr key={row.date_bin_start}>
-                              <td>{row.month}</td>
-                              <td>{((row.catch ?? 0) / 1000).toFixed(1)}</td>
-                              <td>{row.n_landings?.toLocaleString()}</td>
-                            </tr>
-                          ))
-                      )}
-                    </tbody>
-                  </table>
+                <div className="card-body">
+                  {treemapData.length > 0 ? (
+                    <TreemapChart
+                      data={treemapData}
+                      height={448}
+                      colors={habitatPalette}
+                    />
+                  ) : (
+                    <div className="d-flex justify-content-center py-5">
+                      <div className="spinner-border text-primary" role="status" />
+                    </div>
+                  )}
                 </div>
+                {pars?.catch?.treemap?.description && (
+                  <div className="card-body">
+                    <div className="text-muted">{pars.catch.treemap.description}</div>
+                  </div>
+                )}
               </div>
+            </div>
+
+            {/* Row 3: Summary table + Variable descriptions */}
+            <div className="col-lg-7 col-xl-auto order-lg-last">
+              <CatchSummaryTable />
+            </div>
+            <div className="col">
+              <VariableDescriptions
+                variables={['catch', 'recorded_catch', 'landing_weight', 'n_landings_per_boat', 'n_boats']}
+                type="catch"
+              />
             </div>
           </div>
         </div>

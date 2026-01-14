@@ -1,6 +1,6 @@
 import { useI18n } from '../i18n'
 import { useData } from '../hooks/useData'
-import HexagonMap from '../components/HexagonMap'
+import FishingActivityMap from '../components/FishingActivityMap'
 import DonutChart from '../components/charts/DonutChart'
 import { SummaryTable } from '../components/SummaryTable'
 import { donutBlue, viridis5 } from '../constants/colors'
@@ -34,7 +34,6 @@ export default function Home() {
   const introTitle = pars?.home?.intro?.title ?? ''
   const introContent = pars?.home?.intro?.content ?? ''
   const reportText = pars?.home?.report?.text ?? t('home.download_report')
-  const mapTitle = pars?.home?.map?.title ?? t('home.fishing_map')
   const tableTitle = pars?.home?.table?.title ?? t('home.summary_table')
 
   return (
@@ -95,11 +94,8 @@ export default function Home() {
             {/* Fishing Map - Full width card */}
             <div className="col-12">
               <div className="card">
-                <div className="card-header">
-                  <h3 className="card-title">{mapTitle}</h3>
-                </div>
                 <div className="card-body p-0">
-                  <HexagonMap height={420} />
+                  <FishingActivityMap height={650} />
                 </div>
               </div>
             </div>
@@ -111,7 +107,7 @@ export default function Home() {
                   <h3 className="card-title">{t('home.trips')}</h3>
                 </div>
                 <div className="card-body">
-                  <DonutChart data={tripsData} colors={donutBlue} height="16rem" />
+                  <DonutChart data={tripsData} colors={donutBlue} height={280} />
                 </div>
               </div>
             </div>
@@ -122,7 +118,7 @@ export default function Home() {
                   <h3 className="card-title">{t('home.revenue')}</h3>
                 </div>
                 <div className="card-body">
-                  <DonutChart data={revenueData} colors={donutBlue} height="16rem" />
+                  <DonutChart data={revenueData} colors={donutBlue} height={280} />
                 </div>
               </div>
             </div>
@@ -133,7 +129,7 @@ export default function Home() {
                   <h3 className="card-title">{t('home.catch')}</h3>
                 </div>
                 <div className="card-body">
-                  <DonutChart data={fishData} colors={viridis5} height="16rem" />
+                  <DonutChart data={fishData} colors={viridis5} height={280} />
                 </div>
               </div>
             </div>

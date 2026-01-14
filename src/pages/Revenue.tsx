@@ -2,20 +2,21 @@ import { useI18n } from '../i18n'
 import { useMemo } from 'react'
 import MunicipalityFilter from '../components/MunicipalityFilter'
 import TimeSeriesChart from '../components/charts/TimeSeriesChart'
-import RadarChart from '../components/charts/RadarChart'
 import TreemapChart from '../components/charts/TreemapChart'
-import { SummaryTable } from '../components/SummaryTable'
+import RevenueSummaryTable from '../components/RevenueSummaryTable'
+import VariableDescriptions from '../components/VariableDescriptions'
 import { useData } from '../hooks'
+import { useMunicipalData } from '../hooks/useMunicipalData'
 import { useFilters } from '../context/FilterContext'
-import { revenueBarColors, spiderColors, habitatPalette } from '../constants/colors'
-import type { MunicipalAggregatedRecord, SummaryData } from '../types/data'
+import { revenueBarColors, habitatPalette } from '../constants/colors'
+import type { SummaryData } from '../types/data'
 
 export default function Revenue() {
   const { t } = useI18n()
   const { municipality, setMunicipality } = useFilters()
-  const { data: aggregated, loading, error } = useData('aggregated')
-  const { data: municipalAggregated } = useData('municipal_aggregated')
+  const { data: aggregated, loading, error } = useMunicipalData()
   const { data: summaryData } = useData('summary_data')
+  const { data: pars } = useData('pars')
 
   const chartSeries = useMemo(() => {
     if (!aggregated?.month) return []
@@ -24,7 +25,7 @@ export default function Revenue() {
     )
     return [
       {
-        name: t('revenue.series_name'),
+        name: t('revenue.series_name', { defaultValue: 'Revenue' }),
         data: sortedData.map((row) => ({
           date: row.date_bin_start,
           value: (row.revenue ?? 0) / 1000000,
@@ -38,10 +39,10 @@ export default function Revenue() {
       return {
         totalRevenue: '0',
         avgRevenuePerTrip: '0',
-        pricePerKg: '0',
+        nBoats: '0',
         revenueTrend: { value: '0%', direction: 'none' as const },
         tripTrend: { value: '0%', direction: 'none' as const },
-        priceTrend: { value: '0%', direction: 'none' as const },
+        boatsTrend: { value: '0%', direction: 'none' as const },
       }
     }
     const sortedData = [...aggregated.month].sort(
@@ -62,13 +63,9 @@ export default function Revenue() {
         : 0
     const tripChange = prevTrip ? ((avgTrip - prevTrip) / prevTrip) * 100 : 0
 
-    const avgPrice =
-      last12.reduce((sum, r) => sum + (r.price_kg ?? 0), 0) / last12.length
-    const prevPrice =
-      prev12.length > 0
-        ? prev12.reduce((sum, r) => sum + (r.price_kg ?? 0), 0) / prev12.length
-        : 0
-    const priceChange = prevPrice ? ((avgPrice - prevPrice) / prevPrice) * 100 : 0
+    const lastMonthBoats = last12[last12.length - 1]?.n_boats ?? 0
+    const prevMonthBoats = last12.length >= 2 ? (last12[last12.length - 2]?.n_boats ?? 0) : 0
+    const boatsChange = prevMonthBoats ? ((lastMonthBoats - prevMonthBoats) / prevMonthBoats) * 100 : 0
 
     const getTrend = (val: number) => ({
       value: `${val >= 0 ? '+' : ''}${val.toFixed(1)}%`,
@@ -78,62 +75,19 @@ export default function Revenue() {
     return {
       totalRevenue: (totalRevenue / 1000000).toLocaleString(undefined, { maximumFractionDigits: 1 }),
       avgRevenuePerTrip: avgTrip.toFixed(1),
-      pricePerKg: avgPrice.toFixed(2),
+      nBoats: lastMonthBoats.toLocaleString(),
       revenueTrend: getTrend(revenueChange),
       tripTrend: getTrend(tripChange),
-      priceTrend: getTrend(priceChange),
+      boatsTrend: getTrend(boatsChange),
     }
   }, [aggregated])
-
-  const radarData = useMemo(() => {
-    if (!municipalAggregated || !Array.isArray(municipalAggregated)) {
-      return { series: [], categories: [] }
-    }
-    const data = municipalAggregated as MunicipalAggregatedRecord[]
-
-    const regions = [...new Set(data.map((d) => d.region))].sort()
-
-    const allDataByRegion = regions.map((region) => {
-      const regionData = data.filter((d) => d.region === region)
-      const prices = regionData.map((d) => d.price_kg).filter((p) => p != null && p > 0)
-      if (prices.length === 0) return 0
-      prices.sort((a, b) => a - b)
-      const mid = Math.floor(prices.length / 2)
-      return prices.length % 2 !== 0 ? prices[mid] : (prices[mid - 1] + prices[mid]) / 2
-    })
-
-    const latestByRegion = regions.map((region) => {
-      const regionData = data
-        .filter((d) => d.region === region)
-        .sort((a, b) => new Date(a.date_bin_start).getTime() - new Date(b.date_bin_start).getTime())
-      const latest = regionData.slice(-2)
-      const prices = latest.map((d) => d.price_kg).filter((p) => p != null && p > 0)
-      if (prices.length === 0) return 0
-      prices.sort((a, b) => a - b)
-      const mid = Math.floor(prices.length / 2)
-      return prices.length % 2 !== 0 ? prices[mid] : (prices[mid - 1] + prices[mid]) / 2
-    })
-
-    return {
-      series: [
-        { name: t('revenue.all_data', { defaultValue: 'All data' }), data: allDataByRegion.map((v) => Math.round(v * 100) / 100) },
-        { name: t('revenue.latest_month', { defaultValue: 'Latest month' }), data: latestByRegion.map((v) => Math.round(v * 100) / 100) },
-      ],
-      categories: regions,
-    }
-  }, [municipalAggregated, t])
 
   const treemapData = useMemo(() => {
     if (!summaryData) return []
     const data = summaryData as SummaryData
     if (!data.revenue_habitat) return []
-    // Flatten treemap data: each habitat's gear types
-    return data.revenue_habitat.flatMap((habitat) =>
-      habitat.data.map((item) => ({
-        x: `${habitat.name}: ${item.x}`,
-        y: item.y,
-      }))
-    )
+    // Keep hierarchical structure for treemap grouping by habitat
+    return data.revenue_habitat
   }, [summaryData])
 
   if (error) {
@@ -160,10 +114,11 @@ export default function Revenue() {
       <div className="page-body">
         <div className="container-xl">
           <div className="row row-deck row-cards">
+            {/* Row 1: Time series + 3 cards */}
             <div className="col-lg-8 col-xl-8">
               <div className="card">
                 <div className="card-header">
-                  <h3 className="card-title">{t('vars.revenue.short_name')}</h3>
+                  <h3 className="card-title">{t('vars.revenue.short_name', { defaultValue: 'Revenue' })}</h3>
                 </div>
                 <div className="card-body">
                   {loading ? (
@@ -173,7 +128,7 @@ export default function Revenue() {
                   ) : (
                     <TimeSeriesChart
                       series={chartSeries}
-                      height="21rem"
+                      height={336}
                       yAxisTitle={t('revenue.million_usd', { defaultValue: 'Revenue (M USD)' })}
                       colors={revenueBarColors}
                     />
@@ -184,7 +139,7 @@ export default function Revenue() {
             <div className="col-lg-4 col-xl-4">
               <div className="row row-deck row-cards">
                 <div className="col-12">
-                  <div className="card" style={{ minHeight: '8rem' }}>
+                  <div className="card">
                     <div className="card-body">
                       <div className="d-flex align-items-center">
                         <div className="subheader">{t('vars.total_revenue', { defaultValue: 'Total revenue' })}</div>
@@ -202,10 +157,10 @@ export default function Revenue() {
                   </div>
                 </div>
                 <div className="col-12">
-                  <div className="card" style={{ minHeight: '8rem' }}>
+                  <div className="card">
                     <div className="card-body">
                       <div className="d-flex align-items-center">
-                        <div className="subheader">{t('vars.revenue_per_trip', { defaultValue: 'Revenue per trip' })}</div>
+                        <div className="subheader">{t('vars.landing_revenue.short_name', { defaultValue: 'Revenue per trip' })}</div>
                         <div className="ms-auto text-muted small">{t('common.avg')}</div>
                       </div>
                       <div className="d-flex align-items-baseline">
@@ -220,12 +175,12 @@ export default function Revenue() {
                   </div>
                 </div>
                 <div className="col-12">
-                  <div className="card" style={{ minHeight: '4rem' }}>
+                  <div className="card">
                     <div className="card-body">
                       <div className="row align-items-center">
                         <div className="col-auto">
                           <span
-                            className={`avatar ${metrics.priceTrend.direction === 'up' ? 'bg-green-lt' : metrics.priceTrend.direction === 'down' ? 'bg-red-lt' : 'bg-secondary-lt'}`}
+                            className={`avatar ${metrics.boatsTrend.direction === 'up' ? 'bg-green-lt' : metrics.boatsTrend.direction === 'down' ? 'bg-red-lt' : 'bg-secondary-lt'}`}
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -239,9 +194,9 @@ export default function Revenue() {
                               strokeLinecap="round"
                               strokeLinejoin="round"
                             >
-                              {metrics.priceTrend.direction === 'up' ? (
+                              {metrics.boatsTrend.direction === 'up' ? (
                                 <path d="M17 7l-10 10m0 -5v5h5" />
-                              ) : metrics.priceTrend.direction === 'down' ? (
+                              ) : metrics.boatsTrend.direction === 'down' ? (
                                 <path d="M7 7l10 10m-5 0h5v-5" />
                               ) : (
                                 <path d="M5 12h14" />
@@ -251,15 +206,15 @@ export default function Revenue() {
                         </div>
                         <div className="col">
                           <div className="d-flex align-items-center">
-                            <div className="font-weight-medium">{t('vars.price_kg', { defaultValue: 'Price per kg' })}</div>
-                            <div className="ms-auto lh-1 text-muted small">{t('common.avg')}</div>
+                            <div className="font-weight-medium">{t('vars.n_boats.short_name', { defaultValue: 'Active boats' })}</div>
+                            <div className="ms-auto lh-1 text-muted small">{t('common.last_month')}</div>
                           </div>
                           <div className="d-flex align-items-center">
-                            <div className="h1 mb-0">{loading ? '...' : `$${metrics.pricePerKg}`}</div>
+                            <div className="h1 mb-0">{loading ? '...' : metrics.nBoats}</div>
                             <span
-                              className={`ms-2 ${metrics.priceTrend.direction === 'up' ? 'text-green' : metrics.priceTrend.direction === 'down' ? 'text-red' : 'text-muted'}`}
+                              className={`ms-2 ${metrics.boatsTrend.direction === 'up' ? 'text-green' : metrics.boatsTrend.direction === 'down' ? 'text-red' : 'text-muted'}`}
                             >
-                              {metrics.priceTrend.value}
+                              {metrics.boatsTrend.value}
                             </span>
                           </div>
                         </div>
@@ -269,37 +224,20 @@ export default function Revenue() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 col-xl-6">
+
+            {/* Row 2: Full width treemap */}
+            <div className="col-12">
               <div className="card">
                 <div className="card-header">
-                  <h3 className="card-title">{t('revenue.price_by_region', { defaultValue: 'Price per Kg by Region' })}</h3>
-                </div>
-                <div className="card-body">
-                  {radarData.categories.length > 0 ? (
-                    <RadarChart
-                      series={radarData.series}
-                      categories={radarData.categories}
-                      height="22rem"
-                      colors={spiderColors}
-                    />
-                  ) : (
-                    <div className="d-flex justify-content-center py-5">
-                      <div className="spinner-border text-primary" role="status" />
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 col-xl-6">
-              <div className="card">
-                <div className="card-header">
-                  <h3 className="card-title">{t('revenue.by_habitat', { defaultValue: 'Revenue by Habitat & Gear' })}</h3>
+                  <h3 className="card-title">
+                    {pars?.revenue?.treemap?.title ?? t('revenue.habitat_treemap', { defaultValue: 'Revenue by Habitat and Gear' })}
+                  </h3>
                 </div>
                 <div className="card-body">
                   {treemapData.length > 0 ? (
                     <TreemapChart
                       data={treemapData}
-                      height="22rem"
+                      height={448}
                       colors={habitatPalette}
                     />
                   ) : (
@@ -308,17 +246,23 @@ export default function Revenue() {
                     </div>
                   )}
                 </div>
+                {pars?.revenue?.treemap?.description && (
+                  <div className="card-body">
+                    <div className="text-muted">{pars.revenue.treemap.description}</div>
+                  </div>
+                )}
               </div>
             </div>
-            <div className="col-12">
-              <div className="card">
-                <div className="card-header">
-                  <h3 className="card-title">{t('revenue.summary_table', { defaultValue: 'Revenue Summary by Municipality' })}</h3>
-                </div>
-                <div className="card-body">
-                  <SummaryTable municipality={municipality} />
-                </div>
-              </div>
+
+            {/* Row 3: Summary table + Variable descriptions */}
+            <div className="col-lg-7 col-xl-auto order-lg-last">
+              <RevenueSummaryTable />
+            </div>
+            <div className="col">
+              <VariableDescriptions
+                variables={['revenue', 'recorded_revenue', 'landing_revenue', 'n_landings_per_boat', 'n_boats']}
+                type="revenue"
+              />
             </div>
           </div>
         </div>

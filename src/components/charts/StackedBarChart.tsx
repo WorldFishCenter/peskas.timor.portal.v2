@@ -5,14 +5,14 @@ import type { ConservationRecord } from '../../types/data'
 
 interface StackedBarChartProps {
   data: ConservationRecord[]
-  height?: string | number
+  height?: number
   colors?: string[]
   yFormatter?: (val: number) => string
 }
 
 export default function StackedBarChart({
   data,
-  height = 320,
+  height = 380,
   colors,
   yFormatter = (val: number) => `${val}%`,
 }: StackedBarChartProps) {

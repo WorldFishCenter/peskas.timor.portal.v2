@@ -1,64 +1,96 @@
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { habitatPalette } from '../../constants/colors'
+import { useTheme } from '../../hooks/useTheme'
 
 export interface TreemapDataItem {
   x: string
   y: number
 }
 
-interface TreemapChartProps {
+export interface HierarchicalTreemapData {
+  name: string
   data: TreemapDataItem[]
+}
+
+interface TreemapChartProps {
+  data: TreemapDataItem[] | HierarchicalTreemapData[]
   title?: string
   colors?: string[]
-  height?: string | number
+  height?: number
 }
 
 export default function TreemapChart({
   data,
   title,
   colors = habitatPalette,
-  height = '20rem',
+  height = 450,
 }: TreemapChartProps) {
-  const series = [{ data }]
+  const theme = useTheme()
+
+  if (!data || data.length === 0) {
+    return (
+      <div
+        style={{
+          height: `${height}px`,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          color: '#999',
+        }}
+      >
+        No data available
+      </div>
+    )
+  }
+
+  // Check if data is hierarchical (has 'name' property) or flat
+  const isHierarchical = 'name' in data[0]
+
+  // For hierarchical data, ApexCharts expects series array with each habitat as a series
+  const series = isHierarchical
+    ? (data as HierarchicalTreemapData[]).map(habitat => ({
+        name: habitat.name,
+        data: habitat.data
+      }))
+    : [{ data: data as TreemapDataItem[] }]
 
   const options: ApexOptions = {
     chart: {
       type: 'treemap',
-      animations: { enabled: false },
+      background: 'transparent',
     },
-    colors,
+    theme: {
+      mode: theme,
+    },
     legend: {
-      show: false,
+      show: true,
+      position: 'top',
     },
     dataLabels: {
       enabled: true,
       style: {
         fontSize: '12px',
       },
-      formatter: function (text: string, op: { value: number }) {
-        return [text, op.value.toLocaleString()]
+      formatter: function (text: string, op: any) {
+        return [text, op.value.toFixed(2) + ' Kg']
       },
     },
     plotOptions: {
       treemap: {
-        enableShades: true,
+        distributed: !isHierarchical,
+        enableShades: isHierarchical,
         shadeIntensity: 0.5,
-        distributed: true,
       },
     },
-    tooltip: {
-      y: {
-        formatter: (val: number) => val.toLocaleString(),
-      },
-    },
-    title: title
-      ? {
-          text: title,
-          align: 'center',
-          style: { fontSize: '14px', fontWeight: 500 },
-        }
-      : undefined,
+    colors: colors,
+  }
+
+  if (title) {
+    options.title = {
+      text: title,
+      align: 'center',
+    }
   }
 
   return (
