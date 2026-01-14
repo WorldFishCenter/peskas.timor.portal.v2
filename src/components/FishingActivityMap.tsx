@@ -1,6 +1,7 @@
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo, useEffect, useCallback } from 'react'
 import DeckGL from '@deck.gl/react'
 import { Map } from 'react-map-gl/maplibre'
+import maplibregl from 'maplibre-gl'
 import { HexagonLayer } from '@deck.gl/aggregation-layers'
 import type { PickingInfo } from '@deck.gl/core'
 import { useData } from '../hooks'
@@ -64,12 +65,18 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
   const [radius, setRadius] = useState(500)
   const [hoverInfo, setHoverInfo] = useState<PickingInfo | null>(null)
 
+  // Memoized onHover to prevent layer recreation
+  const onHover = useCallback((info: PickingInfo) => {
+    setHoverInfo(info.object ? info : null)
+    return true
+  }, [])
+
   // Update selected gears when gear types are loaded
   useEffect(() => {
     if (gearTypes.length > 0 && selectedGears.length === 0) {
       setSelectedGears(gearTypes)
     }
-  }, [gearTypes])
+  }, [gearTypes, selectedGears.length])
 
   // Update year range when data is loaded
   useEffect(() => {
@@ -100,28 +107,28 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
         elevationRange: [0, 3000],
         elevationScale: 30,
         extruded: true,
-        coverage: 0.4,
+        coverage: 0.8, // Increased coverage for smoother look
         colorRange: COLOR_RANGE,
         pickable: true,
         autoHighlight: true,
-        onHover: (info: PickingInfo) => {
-          setHoverInfo(info.object ? info : null)
-          return true
-        },
+        onHover: onHover,
+        updateTriggers: {
+          radius: [radius]
+        }
       }),
     ]
-  }, [filteredTracks, radius])
+  }, [filteredTracks, radius, onHover])
 
-  const handleGearToggle = (gear: string) => {
+  const handleGearToggle = useCallback((gear: string) => {
     setSelectedGears(prev =>
       prev.includes(gear)
         ? prev.filter(g => g !== gear)
         : [...prev, gear]
     )
-  }
+  }, [])
 
-  const renderTooltip = () => {
-    if (!hoverInfo || !hoverInfo.object) return null
+  const tooltipData = useMemo(() => {
+    if (!hoverInfo || !hoverInfo.object || !hoverInfo.object.points) return null
 
     const { object, x, y } = hoverInfo
     const points = object.points as PredictedTrack[]
@@ -136,6 +143,16 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
     const mainGear = Object.keys(gearCounts).reduce((a, b) =>
       gearCounts[a] > gearCounts[b] ? a : b
     )
+
+    const position = object.position as [number, number]
+
+    return { gearCounts, totalActivities, mainGear, position, x, y }
+  }, [hoverInfo])
+
+  const renderTooltip = () => {
+    if (!tooltipData) return null
+
+    const { gearCounts, totalActivities, mainGear, position, x, y } = tooltipData
 
     // Set background color based on main gear type
     let bgColor = 'rgba(255, 255, 255, 0.95)'
@@ -156,8 +173,6 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
       }
     }
 
-    const position = object.position as [number, number]
-
     return (
       <div
         style={{
@@ -172,6 +187,7 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
           zIndex: 1000,
           fontSize: '12px',
           maxWidth: '300px',
+          boxShadow: '0 2px 4px rgba(0,0,0,0.3)'
         }}
       >
         <div>
@@ -209,8 +225,9 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
             initialViewState={INITIAL_VIEW_STATE}
             controller={true}
             layers={layers}
+            useDevicePixels={true} // Reverting to true to avoid WebGL dimension mismatches
           >
-            <Map mapStyle={mapStyle} mapLib={import('maplibre-gl')} />
+            <Map mapStyle={mapStyle} mapLib={maplibregl} />
           </DeckGL>
 
           {/* Control Panel */}
