@@ -1,5 +1,6 @@
 import { useI18n } from '../i18n'
 import { useData } from '../hooks/useData'
+import FishingMap from '../components/FishingMap'
 
 export default function Home() {
   const { t } = useI18n()
@@ -73,22 +74,7 @@ export default function Home() {
                   <h3 className="card-title">{mapTitle}</h3>
                 </div>
                 <div className="card-body">
-                  {/* Map placeholder - will be implemented in US-003b */}
-                  <div
-                    style={{
-                      height: 420,
-                      width: '100%',
-                      background: '#f4f6fa',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      borderRadius: 4,
-                    }}
-                  >
-                    <span className="text-muted">
-                      Map will be implemented in US-003b
-                    </span>
-                  </div>
+                  <FishingMap center={[-8.75, 125.7]} zoom={8} />
                 </div>
               </div>
             </div>
