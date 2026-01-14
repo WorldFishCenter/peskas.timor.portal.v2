@@ -1,7 +1,35 @@
 import { useData } from '../hooks/useData'
+import TreemapChart from '../components/charts/TreemapChart'
+import type { TreemapDataItem } from '../components/charts/TreemapChart'
 
 export default function Composition() {
   const { data: pars, loading: parsLoading } = useData('pars')
+  const { data: taxaAggregated, loading: taxaLoading } = useData('taxa_aggregated')
+  const { data: taxaNames } = useData('taxa_names')
+
+  // Create taxa name lookup map
+  const taxaNameMap: Record<string, string> = {}
+  if (taxaNames) {
+    taxaNames.forEach((t) => {
+      taxaNameMap[t.grouped_taxa] = t.grouped_taxa_names
+    })
+  }
+
+  // Aggregate taxa data for treemap - sum catch by grouped_taxa across all months
+  const treemapData: TreemapDataItem[] = []
+  if (taxaAggregated?.month) {
+    const catchByTaxa: Record<string, number> = {}
+    taxaAggregated.month.forEach((row) => {
+      const taxa = row.grouped_taxa
+      catchByTaxa[taxa] = (catchByTaxa[taxa] || 0) + (row.catch || 0)
+    })
+    Object.entries(catchByTaxa)
+      .sort((a, b) => b[1] - a[1])
+      .forEach(([taxa, total]) => {
+        const name = taxaNameMap[taxa] || taxa
+        treemapData.push({ x: name, y: Math.round(total / 1000) }) // Convert to tons
+      })
+  }
 
   const pretitle = pars?.catch?.subtitle?.text ?? ''
   const title = pars?.composition?.title?.text ?? ''
@@ -38,15 +66,26 @@ export default function Composition() {
       <div className="page-body">
         <div className="container-xl">
           <div className="row row-cards">
-            {/* Taxa Table - Full width */}
+            {/* Taxa Treemap - Full width */}
             <div className="col-12">
               <div className="card">
                 <div className="card-header">
                   <h3 className="card-title">{tableHeading}</h3>
                 </div>
                 <div className="card-body">
-                  {/* TODO: TaxaTable component */}
-                  <div className="text-muted">Taxa table placeholder</div>
+                  {taxaLoading ? (
+                    <div className="d-flex align-items-center justify-content-center" style={{ height: '20rem' }}>
+                      <div className="spinner-border text-primary" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <TreemapChart
+                      data={treemapData}
+                      title="Catch by Taxa (tons)"
+                      height="20rem"
+                    />
+                  )}
                   <div className="small text-muted mt-2">{tableFooter}</div>
                 </div>
               </div>
