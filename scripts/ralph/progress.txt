@@ -13,6 +13,7 @@ Started: 2026-01-13
 - tsconfig has `erasableSyntaxOnly` - don't use parameter properties in class constructors
 - Data loading: use `useData('filename')` hook for type-safe loading with loading/error states
 - Chart components: place in `src/components/charts/`, use ApexOptions type, disable animations for perf
+- ApexCharts treemap: `chart.type: 'treemap'`, data format `[{ x: 'label', y: value }]`
 
 ## Story Complexity Rules (Ralph Timeout Prevention)
 - 15-minute timeout per iteration - stories MUST be <10 minutes
@@ -304,4 +305,17 @@ Thread: https://ampcode.com/threads/T-019bbb72-3f8a-7377-a1e5-52cc70a152e1
   - Composition page layout from Shiny: taxa-table → region-composition → taxa-highlight (col-7) → var-descriptions (col-5)
   - Shiny uses same description text/heading from pars.revenue for all pages
   - apex_height="30rem" in Shiny → style={{ height: '30rem' }} in React
+---
+
+## 2026-01-14 - US-004b1
+Thread: https://ampcode.com/threads/T-019bbb74-43d7-715f-9d07-691f86ec1818
+- Researched ApexCharts treemap support - ApexCharts v4 natively supports treemap charts
+- No additional library installation needed - apexcharts and react-apexcharts already in package.json
+- Set chart.type: 'treemap' with series data in XY format: [{ x: 'label', y: value }]
+- Build passes with no TypeScript errors
+- **Learnings for future iterations:**
+  - ApexCharts treemap uses `chart.type: 'treemap'` - no separate library needed
+  - Data format: `series: [{ data: [{ x: 'label', y: value }, ...] }]`
+  - Supports colorScale, enableShades, distributed colors options
+  - Can use plotOptions.treemap for customization (colorScale.ranges, enableShades, etc.)
 ---
