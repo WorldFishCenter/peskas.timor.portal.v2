@@ -369,3 +369,15 @@ Thread: https://ampcode.com/threads/T-019bbb8b-82fa-7141-b560-987569d65977
   - YearFilter can be reused across multiple cards on same page with shared state
   - Filter state lives in page component, passed down to filter UI and used in data processing
 ---
+
+## 2026-01-14 - US-005a1
+Thread: https://ampcode.com/threads/T-019bbb8d-388e-74b2-8d77-09e8ace15e98
+- Verified Catch page structure already exists at src/pages/Catch.tsx
+- Page already has: page heading with pretitle, municipality filter, time series chart (col-lg-8), metric cards (col-lg-4), data table
+- Layout matches Shiny tab_catch_content.R structure
+- Build passes with no TypeScript errors
+- Marked as passing (no code changes needed)
+- **Learnings for future iterations:**
+  - Catch page layout: 8-col chart area, 4-col metric cards, full-width table
+  - Catch tab uses same layout structure as Revenue tab (per shiny-analysis.md)
+---
