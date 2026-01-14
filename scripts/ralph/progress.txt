@@ -123,3 +123,15 @@ Thread: https://ampcode.com/threads/T-019bbb17-4923-7585-9806-692fea0fd9bd
   - MapContainer requires explicit height style (width: 100% works automatically)
   - Leaflet CSS must be imported (already in App.css)
 ---
+
+## 2026-01-14 - US-003b3
+Thread: https://ampcode.com/threads/T-019bbb19-02eb-7299-9139-b68efea0e3d6
+- Imported FishingMap component into Home.tsx
+- Replaced map placeholder with FishingMap component
+- Set center coordinates: [-8.75, 125.7], zoom: 8
+- Build passes with no TypeScript errors
+- Files changed: src/pages/Home.tsx
+- **Learnings for future iterations:**
+  - FishingMap component has sensible defaults so explicit props optional
+  - Component already uses correct Timor-Leste center coordinates from Codebase Patterns
+---
