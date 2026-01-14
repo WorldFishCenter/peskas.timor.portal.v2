@@ -206,3 +206,23 @@ Thread: https://ampcode.com/threads/T-019bbc93-f91d-719e-897d-81c244de0442
   - Accepts height and year props for flexibility
   - FishingMap.tsx still exists if Leaflet maps needed elsewhere
 ---
+
+## 2026-01-14 - US-012b
+Thread: https://ampcode.com/threads/T-019bbc96-9bdf-7592-aeb8-34ea2eeb2263
+- Audited all pages for spacing and layout consistency with Shiny app
+- Fixed chart heights to match Shiny specifications:
+  - Main charts: 21rem (Catch, Revenue, Market)
+  - Treemaps: 28rem (Composition), 22rem (side panels)
+  - Conservation chart: 20rem
+  - Nutrients chart: 20rem
+- Added CSS rules for row-deck/row-cards grid behavior
+- Removed duplicate table title from SummaryTable (already in card-header)
+- Updated StackedBarChart to accept string | number for height prop
+- Added CSS for responsive table scrolling and filter dropdown gaps
+- Files changed: App.css, SummaryTable.tsx, StackedBarChart.tsx, Catch.tsx, Composition.tsx, Market.tsx, Nutrients.tsx, Revenue.tsx
+- **Learnings for future iterations:**
+  - Shiny uses specific rem heights for charts: 16rem (donuts), 20rem (nutrients), 21rem (main charts), 22rem (spider/side), 28rem (treemaps)
+  - ApexCharts height prop accepts both string ('21rem') and number (320)
+  - Use row-cards (not row-deck row-cards) for nested card grids in side panels
+  - Card headers already provide titles - don't duplicate in card-body
+---

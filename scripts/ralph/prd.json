@@ -592,7 +592,7 @@
         "Responsive breakpoints work correctly",
         "Browser verification passes"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "US-015a",
