@@ -4,6 +4,7 @@ import type { ApexOptions } from 'apexcharts'
 import MunicipalityFilter from '../components/MunicipalityFilter'
 import { MONTHS_SHORT } from '../constants'
 import { useFilters } from '../context/FilterContext'
+import { revenueBarColors, habitatPalette } from '../constants/colors'
 
 export default function Revenue() {
   const { t } = useI18n()
@@ -12,8 +13,14 @@ export default function Revenue() {
   const series = [{ name: t('revenue.series_name'), data: [2.1, 2.7, 2.3, 3.1, 2.9, 3.6, 3.2] }]
   const options: ApexOptions = {
     chart: { type: 'bar', toolbar: { show: false } },
+    colors: revenueBarColors,
     dataLabels: { enabled: false },
     xaxis: { categories: months.map((m) => t(`common.months_short.${m}`)) },
+  }
+  
+  const treemapOptions: ApexOptions = {
+    chart: { type: 'treemap' },
+    colors: habitatPalette,
   }
 
   return (
@@ -46,7 +53,7 @@ export default function Revenue() {
             <div className="col-lg-4 col-xl-4">
               <div className="card">
                 <div className="card-body">
-                  <ReactApexChart options={{ chart: { type: 'treemap' } }} series={[{ data: [{ x: 'A', y: 11 }, { x: 'B', y: 7 }, { x: 'C', y: 5 }] }]} type="treemap" height={320} />
+                  <ReactApexChart options={treemapOptions} series={[{ data: [{ x: 'A', y: 11 }, { x: 'B', y: 7 }, { x: 'C', y: 5 }] }]} type="treemap" height={320} />
                 </div>
               </div>
             </div>

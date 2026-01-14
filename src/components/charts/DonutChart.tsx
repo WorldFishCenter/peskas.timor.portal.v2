@@ -1,5 +1,6 @@
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
+import { donutBlue } from '../../constants/colors'
 
 export interface DonutChartData {
   label: string
@@ -13,12 +14,10 @@ interface DonutChartProps {
   height?: string | number
 }
 
-const DEFAULT_COLORS = ['#d7eaf3', '#77b5d9', '#14397d']
-
 export default function DonutChart({
   data,
   title,
-  colors = DEFAULT_COLORS,
+  colors = donutBlue,
   height = '16rem',
 }: DonutChartProps) {
   const series = data.map((d) => d.value)

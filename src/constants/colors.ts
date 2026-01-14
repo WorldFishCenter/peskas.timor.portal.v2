@@ -21,3 +21,9 @@ export const heatmapColors: [number, number, number][] = [
   [239, 254, 172],
   [255, 255, 217],
 ];
+
+// Time series chart colors (Tabler primary blue + secondary)
+export const timeSeriesColors = ['#206bc4', '#79a6dc'];
+
+// Revenue bar chart colors (single color scheme)
+export const revenueBarColors = ['#206bc4'];

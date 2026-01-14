@@ -1,5 +1,6 @@
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
+import { timeSeriesColors } from '../../constants/colors'
 
 export interface TimeSeriesDataPoint {
   date: string
@@ -21,12 +22,10 @@ interface TimeSeriesChartProps {
   chartType?: 'line' | 'area'
 }
 
-const DEFAULT_COLORS = ['#206bc4', '#aaaaaa']
-
 export default function TimeSeriesChart({
   series,
   title,
-  colors = DEFAULT_COLORS,
+  colors = timeSeriesColors,
   height = 320,
   yAxisTitle,
   xAxisTitle,

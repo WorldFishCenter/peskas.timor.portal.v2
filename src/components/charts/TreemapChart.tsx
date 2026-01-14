@@ -1,5 +1,6 @@
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
+import { habitatPalette } from '../../constants/colors'
 
 export interface TreemapDataItem {
   x: string
@@ -13,12 +14,10 @@ interface TreemapChartProps {
   height?: string | number
 }
 
-const DEFAULT_COLORS = ['#1b9e77', '#d95f02', '#7570b3', '#e7298a', '#66a61e']
-
 export default function TreemapChart({
   data,
   title,
-  colors = DEFAULT_COLORS,
+  colors = habitatPalette,
   height = '20rem',
 }: TreemapChartProps) {
   const series = [{ data }]
