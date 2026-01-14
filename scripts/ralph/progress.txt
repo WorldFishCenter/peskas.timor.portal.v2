@@ -291,3 +291,17 @@ Thread: https://ampcode.com/threads/T-019bbb6f-7716-738f-9ac6-6c131ce7c4d5
   - Color palettes should be centralized in src/constants/colors.ts
   - Shiny uses reactablefmtr::fivethirtyeight theme - we approximate with Tabler table classes
 ---
+
+## 2026-01-14 - US-004a
+Thread: https://ampcode.com/threads/T-019bbb72-3f8a-7377-a1e5-52cc70a152e1
+- Updated src/pages/Composition.tsx to match Shiny tab_catch_composition.R layout
+- Page heading with pretitle from pars.catch.subtitle.text, title from pars.composition.title.text
+- Grid structure: Taxa table (full width), Region composition stacked bar (30rem height), Taxa bar highlight (col-7), Variable descriptions (col-5)
+- All text loaded from pars.json using useData hook
+- Build passes with no TypeScript errors
+- Files changed: src/pages/Composition.tsx
+- **Learnings for future iterations:**
+  - Composition page layout from Shiny: taxa-table → region-composition → taxa-highlight (col-7) → var-descriptions (col-5)
+  - Shiny uses same description text/heading from pars.revenue for all pages
+  - apex_height="30rem" in Shiny → style={{ height: '30rem' }} in React
+---
