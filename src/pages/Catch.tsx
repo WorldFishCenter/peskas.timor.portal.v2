@@ -161,6 +161,7 @@ export default function Catch() {
                         >
                           {metrics.catchTrend.value}
                         </span>
+                        <span className="text-muted small ms-1">vs prev. year</span>
                       </div>
                     </div>
                     <div className="mt-auto" style={{ minHeight: '40px', margin: '0 -1px -1px -1px' }}>
@@ -184,6 +185,7 @@ export default function Catch() {
                         >
                           {metrics.weightTrend.value}
                         </span>
+                        <span className="text-muted small ms-1">vs prev. year</span>
                       </div>
                     </div>
                     <div className="mt-auto" style={{ minHeight: '40px', margin: '0 -1px -1px -1px' }}>
@@ -235,6 +237,7 @@ export default function Catch() {
                             >
                               {metrics.boatsTrend.value}
                             </span>
+                            <span className="text-muted small ms-1">vs prev. month</span>
                           </div>
                         </div>
                       </div>

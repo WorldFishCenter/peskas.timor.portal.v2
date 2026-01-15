@@ -162,6 +162,7 @@ export default function Revenue() {
                         >
                           {metrics.revenueTrend.value}
                         </span>
+                        <span className="text-muted small ms-1">vs prev. year</span>
                       </div>
                     </div>
                     <div className="mt-auto" style={{ minHeight: '40px', margin: '0 -1px -1px -1px' }}>
@@ -185,6 +186,7 @@ export default function Revenue() {
                         >
                           {metrics.tripTrend.value}
                         </span>
+                        <span className="text-muted small ms-1">vs prev. year</span>
                       </div>
                     </div>
                     <div className="mt-auto" style={{ minHeight: '40px', margin: '0 -1px -1px -1px' }}>
@@ -236,6 +238,7 @@ export default function Revenue() {
                             >
                               {metrics.boatsTrend.value}
                             </span>
+                            <span className="text-muted small ms-1">vs prev. month</span>
                           </div>
                         </div>
                       </div>

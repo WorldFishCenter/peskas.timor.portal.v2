@@ -143,29 +143,29 @@ export default function CatchSummaryTable() {
       </div>
       <div className="card-body p-0">
         <div className="table-responsive">
-          {loading ? (
-            <div className="d-flex justify-content-center py-5">
-              <div className="spinner-border text-primary" role="status" />
-            </div>
-          ) : (
+        {loading ? (
+          <div className="d-flex justify-content-center py-5">
+            <div className="spinner-border text-primary" role="status" />
+          </div>
+        ) : (
             <table className="table table-vcenter card-table">
-              <thead>
-                {table.getHeaderGroups().map(headerGroup => (
-                  <tr key={headerGroup.id}>
-                    {headerGroup.headers.map(header => (
-                      <th key={header.id}>
-                        {flexRender(
-                          header.column.columnDef.header,
-                          header.getContext()
-                        )}
-                      </th>
-                    ))}
-                  </tr>
-                ))}
-              </thead>
-              <tbody>
-                {table.getRowModel().rows.map(row => (
-                  <tr key={row.id}>
+            <thead>
+              {table.getHeaderGroups().map(headerGroup => (
+                <tr key={headerGroup.id}>
+                  {headerGroup.headers.map(header => (
+                    <th key={header.id}>
+                      {flexRender(
+                        header.column.columnDef.header,
+                        header.getContext()
+                      )}
+                    </th>
+                  ))}
+                </tr>
+              ))}
+            </thead>
+            <tbody>
+              {table.getRowModel().rows.map(row => (
+                <tr key={row.id}>
                     {row.getVisibleCells().map(cell => {
                       const value = cell.getValue();
                       const meta = cell.column.columnDef.meta as { style?: (val: any) => React.CSSProperties };
@@ -173,18 +173,18 @@ export default function CatchSummaryTable() {
                       
                       return (
                         <td key={cell.id} style={style}>
-                          {flexRender(
-                            cell.column.columnDef.cell,
-                            cell.getContext()
-                          )}
-                        </td>
+                      {flexRender(
+                        cell.column.columnDef.cell,
+                        cell.getContext()
+                      )}
+                    </td>
                       )
                     })}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          )}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
         </div>
       </div>
       {totals && (
@@ -204,7 +204,7 @@ export default function CatchSummaryTable() {
               </span>
               <span className="text-azure fw-bold">
                 {totals.recorded_catch.toFixed(1)} {t('units.t', { defaultValue: 't' })}
-              </span>
+            </span>
             </div>
           </div>
         </div>
