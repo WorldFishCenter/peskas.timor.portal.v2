@@ -83,11 +83,22 @@ export async function fetchMultipleData<T extends DataFileName[]>(
   const results = await Promise.all(
     fileNames.map(async (fileName) => ({
       fileName,
-      data: await fetchData(fileName),
+      data: await fetchData(fileName, true), // Use cache for multiple data fetches
     }))
   );
 
   return Object.fromEntries(
     results.map(({ fileName, data }) => [fileName, data])
   ) as { [K in T[number]]: DataTypeMap[K] };
+}
+
+/**
+ * Pre-fetch data files for faster subsequent loads
+ * Useful for prefetching data for likely next pages
+ */
+export async function prefetchData(fileNames: DataFileName[]): Promise<void> {
+  // Use cache and don't wait for completion - fire and forget
+  Promise.all(fileNames.map((fileName) => fetchData(fileName, true))).catch(() => {
+    // Silently fail - prefetching is optional
+  })
 }

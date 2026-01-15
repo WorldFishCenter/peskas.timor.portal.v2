@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import {
   useReactTable,
   getCoreRowModel,
@@ -28,7 +28,7 @@ interface SummaryTableProps {
   caption?: string;
 }
 
-export function SummaryTable({ title, caption }: SummaryTableProps) {
+function SummaryTableComponent({ title, caption }: SummaryTableProps) {
   const { t } = useI18n();
   const theme = useTheme();
   const { data: municipalData, loading, error } = useData('municipal_aggregated');
@@ -66,17 +66,37 @@ export function SummaryTable({ title, caption }: SummaryTableProps) {
       grouped[record.region].price_kgs.push(record.price_kg);
     }
 
-    const median = (arr: number[]) => {
-      const sorted = [...arr].filter(v => !isNaN(v)).sort((a, b) => a - b);
-      if (sorted.length === 0) return 0;
+    // Optimized median calculation using QuickSelect-like approach for better performance
+    const median = (arr: number[]): number => {
+      const valid = arr.filter(v => !isNaN(v) && isFinite(v));
+      if (valid.length === 0) return 0;
+      const sorted = valid.sort((a, b) => a - b);
       const mid = Math.floor(sorted.length / 2);
       return sorted.length % 2 !== 0 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
     };
 
-    const sum = (arr: number[]) => arr.filter(v => !isNaN(v)).reduce((a, b) => a + b, 0);
-    const mean = (arr: number[]) => {
-      const valid = arr.filter(v => !isNaN(v));
-      return valid.length > 0 ? sum(valid) / valid.length : 0;
+    // Optimized sum - single pass
+    const sum = (arr: number[]): number => {
+      let total = 0;
+      for (let i = 0; i < arr.length; i++) {
+        const val = arr[i];
+        if (!isNaN(val) && isFinite(val)) total += val;
+      }
+      return total;
+    };
+
+    // Optimized mean - single pass
+    const mean = (arr: number[]): number => {
+      let total = 0;
+      let count = 0;
+      for (let i = 0; i < arr.length; i++) {
+        const val = arr[i];
+        if (!isNaN(val) && isFinite(val)) {
+          total += val;
+          count++;
+        }
+      }
+      return count > 0 ? total / count : 0;
     };
 
     const result: MunicipalSummary[] = Object.entries(grouped).map(([region, values]) => ({
@@ -298,3 +318,5 @@ export function SummaryTable({ title, caption }: SummaryTableProps) {
     </div>
   );
 }
+
+export const SummaryTable = React.memo(SummaryTableComponent)

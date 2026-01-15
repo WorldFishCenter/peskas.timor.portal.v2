@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import React, { useMemo } from 'react'
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { timeSeriesColors } from '../../constants/colors'
@@ -27,7 +27,7 @@ interface TimeSeriesChartProps {
   showMax?: boolean
 }
 
-export default function TimeSeriesChart({
+function TimeSeriesChart({
   series,
   title,
   colors = timeSeriesColors,
@@ -321,3 +321,5 @@ export default function TimeSeriesChart({
     />
   )
 }
+
+export default React.memo(TimeSeriesChart)

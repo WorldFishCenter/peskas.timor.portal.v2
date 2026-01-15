@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import React, { useMemo } from 'react'
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { useTheme } from '../../hooks/useTheme'
@@ -14,7 +14,7 @@ interface SparklineChartProps {
   color?: string
 }
 
-export default function SparklineChart({
+function SparklineChart({
   data,
   height = 40,
   color = '#206bc4',
@@ -98,3 +98,5 @@ export default function SparklineChart({
     />
   )
 }
+
+export default React.memo(SparklineChart)

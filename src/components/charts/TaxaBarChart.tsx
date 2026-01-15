@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import React, { useMemo } from 'react'
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { useI18n } from '../../i18n'
@@ -22,7 +22,7 @@ interface TaxaBarChartProps {
   height?: number
 }
 
-export default function TaxaBarChart({
+function TaxaBarChart({
   data,
   taxaNameMap,
   year,
@@ -195,3 +195,5 @@ export default function TaxaBarChart({
     />
   )
 }
+
+export default React.memo(TaxaBarChart)

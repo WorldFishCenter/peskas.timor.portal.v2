@@ -1,3 +1,4 @@
+import React from 'react'
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { donutBlue } from '../../constants/colors'
@@ -16,7 +17,7 @@ interface DonutChartProps {
   height?: number
 }
 
-export default function DonutChart({
+function DonutChart({
   data,
   title,
   colors = donutBlue,
@@ -148,3 +149,5 @@ export default function DonutChart({
     />
   )
 }
+
+export default React.memo(DonutChart)

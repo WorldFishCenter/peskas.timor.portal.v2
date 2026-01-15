@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import {
   useReactTable,
   getCoreRowModel,
@@ -37,7 +37,7 @@ const TAXA_IMAGES: Record<string, string> = {
   'MZZ': 'https://storage.googleapis.com/public-timor/OTHR.svg',     // Other
 }
 
-export default function CompositionSummaryTable() {
+function CompositionSummaryTable() {
   const { t } = useI18n()
   const theme = useTheme()
   const { data: taxaAggregated, loading } = useData('taxa_aggregated')
@@ -265,3 +265,5 @@ export default function CompositionSummaryTable() {
     </div>
   )
 }
+
+export default React.memo(CompositionSummaryTable)

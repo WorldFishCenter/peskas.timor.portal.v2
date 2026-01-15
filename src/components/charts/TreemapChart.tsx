@@ -1,3 +1,4 @@
+import React from 'react'
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { habitatPalette } from '../../constants/colors'
@@ -22,7 +23,7 @@ interface TreemapChartProps {
   unit?: string
 }
 
-export default function TreemapChart({
+function TreemapChart({
   data,
   title,
   colors = habitatPalette,
@@ -143,3 +144,5 @@ export default function TreemapChart({
     />
   )
 }
+
+export default React.memo(TreemapChart)

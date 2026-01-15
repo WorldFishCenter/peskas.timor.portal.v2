@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import React, { useMemo } from 'react'
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import type { ConservationRecord } from '../../types/data'
@@ -12,7 +12,7 @@ interface StackedBarChartProps {
   yFormatter?: (val: number) => string
 }
 
-export default function StackedBarChart({
+function StackedBarChart({
   data,
   height = 380,
   colors,
@@ -130,3 +130,5 @@ export default function StackedBarChart({
     />
   )
 }
+
+export default React.memo(StackedBarChart)

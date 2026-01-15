@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import React, { useMemo } from 'react'
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { timeSeriesColors } from '../../constants/colors'
@@ -22,7 +22,7 @@ interface StackedBarTimeSeriesChartProps {
   yAxisTitle?: string
 }
 
-export default function StackedBarTimeSeriesChart({
+function StackedBarTimeSeriesChart({
   series,
   colors = timeSeriesColors,
   height = 400,
@@ -153,3 +153,5 @@ export default function StackedBarTimeSeriesChart({
     />
   )
 }
+
+export default React.memo(StackedBarTimeSeriesChart)

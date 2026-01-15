@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, useCallback } from 'react'
+import React, { useState, useMemo, useEffect, useCallback } from 'react'
 import DeckGL from '@deck.gl/react'
 import { Map } from 'react-map-gl/maplibre'
 import maplibregl from 'maplibre-gl'
@@ -41,7 +41,7 @@ const COLOR_RANGE: [number, number, number][] = [
   [209, 55, 78],
 ]
 
-export default function FishingActivityMap({ height = 650 }: FishingActivityMapProps) {
+function FishingActivityMap({ height = 650 }: FishingActivityMapProps) {
   const theme = useTheme()
   const { t } = useI18n()
   const { data: tracks, loading } = useData('predicted_tracks')
@@ -386,3 +386,5 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
     </div>
   )
 }
+
+export default React.memo(FishingActivityMap)

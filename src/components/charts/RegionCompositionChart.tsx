@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import React, { useMemo } from 'react'
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { useI18n } from '../../i18n'
@@ -20,7 +20,7 @@ interface RegionCompositionChartProps {
   height?: number
 }
 
-export default function RegionCompositionChart({
+function RegionCompositionChart({
   data,
   taxaNameMap,
   year = 'all',
@@ -193,3 +193,5 @@ export default function RegionCompositionChart({
     />
   )
 }
+
+export default React.memo(RegionCompositionChart)

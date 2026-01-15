@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import React, { useMemo } from 'react'
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { spiderColors } from '../../constants/colors'
@@ -18,7 +18,7 @@ interface RadarChartProps {
   yFormatter?: (val: number) => string
 }
 
-export default function RadarChart({
+function RadarChart({
   series,
   categories,
   height = 380,
@@ -107,3 +107,5 @@ export default function RadarChart({
     />
   )
 }
+
+export default React.memo(RadarChart)

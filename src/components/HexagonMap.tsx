@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import React, { useMemo } from 'react'
 import DeckGL from '@deck.gl/react'
 import { Map } from 'react-map-gl/maplibre'
 import { HexagonLayer } from '@deck.gl/aggregation-layers'
@@ -19,7 +19,7 @@ const INITIAL_VIEW_STATE = {
   bearing: 0,
 }
 
-export default function HexagonMap({ height = 420, year = 'all' }: HexagonMapProps) {
+function HexagonMap({ height = 420, year = 'all' }: HexagonMapProps) {
   const { data: tracks, loading } = useData('predicted_tracks')
 
   const filteredTracks = useMemo(() => {
@@ -66,3 +66,5 @@ export default function HexagonMap({ height = 420, year = 'all' }: HexagonMapPro
     </div>
   )
 }
+
+export default React.memo(HexagonMap)

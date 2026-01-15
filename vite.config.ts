@@ -19,4 +19,31 @@ export default defineConfig({
       '@/context': path.resolve(__dirname, './src/context'),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // React core libraries
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          // Chart libraries (heavy)
+          'chart-vendor': ['apexcharts', 'react-apexcharts'],
+          // Map libraries (very heavy)
+          'map-vendor': [
+            'deck.gl',
+            '@deck.gl/react',
+            '@deck.gl/layers',
+            '@deck.gl/aggregation-layers',
+            'maplibre-gl',
+            '@vis.gl/react-maplibre',
+          ],
+          // Table library
+          'table-vendor': ['@tanstack/react-table'],
+          // UI framework
+          'ui-vendor': ['@tabler/core'],
+        },
+      },
+    },
+    // Increase chunk size warning limit (we're splitting manually)
+    chunkSizeWarningLimit: 1000,
+  },
 })

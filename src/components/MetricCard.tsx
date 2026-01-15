@@ -1,3 +1,4 @@
+import React from 'react'
 import { useI18n } from '../i18n'
 import SparklineChart from './charts/SparklineChart'
 
@@ -38,7 +39,7 @@ interface MetricCardProps {
  * Reusable metric card component
  * Displays a metric with optional trend indicator and sparkline chart
  */
-export default function MetricCard({
+function MetricCard({
   label,
   value,
   trend,
@@ -105,3 +106,5 @@ export default function MetricCard({
     </div>
   )
 }
+
+export default React.memo(MetricCard)
