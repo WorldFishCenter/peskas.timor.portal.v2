@@ -7,10 +7,9 @@ import { donutBlue, viridis5 } from '../constants/colors'
 
 export default function Home() {
   const { t } = useI18n()
-  const { loading: parsLoading } = useData('pars')
   const { data: summaryData, loading: summaryLoading } = useData('summary_data')
 
-  const loading = parsLoading || summaryLoading
+  const loading = summaryLoading
 
   // Transform summary_data for donut charts
   const tripsData = summaryData?.n_surveys?.map((item) => ({

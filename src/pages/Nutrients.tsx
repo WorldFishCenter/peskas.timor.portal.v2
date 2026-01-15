@@ -7,12 +7,12 @@ import VariableDescriptions from '../components/VariableDescriptions'
 import type { TreemapDataItem } from '../components/charts/TreemapChart'
 import { habitatPalette } from '../constants/colors'
 import { interpolateViridis } from 'd3-scale-chromatic'
+import { NUTRIENTS_DISPLAY_ORDER, NUTRIENT_NAME_TO_KEY } from '../config/app.config'
 
 export default function Nutrients() {
   const { t } = useI18n()
   const { data: nutrientsData, loading: nutrientsLoading } = useData('nutrients_aggregated')
   const { data: summaryData, loading: summaryLoading } = useData('summary_data')
-  const { data: pars } = useData('pars')
 
   // Nutrient colors (viridis for 6 nutrients)
   const nutrientColors = useMemo(() => {
@@ -32,9 +32,9 @@ export default function Nutrients() {
 
   // Stacked bar time series for nutrients
   const nutrientTimeSeries = useMemo(() => {
-    if (!nutrientsData?.month || !pars?.nutrients?.to_display) return []
+    if (!nutrientsData?.month) return []
 
-    const displayOrder = pars.nutrients.to_display
+    const displayOrder = NUTRIENTS_DISPLAY_ORDER
     const seriesData: Record<string, Array<{ date: string; value: number }>> = {}
 
     // Initialize series for each nutrient
@@ -67,86 +67,72 @@ export default function Nutrients() {
       name: nutrientNames[nutrient] || nutrient,
       data: seriesData[nutrient]
     }))
-  }, [nutrientsData, pars, nutrientNames])
+  }, [nutrientsData, nutrientNames])
 
   // Nutrient treemap (average per catch)
   const nutrientTreemapData: TreemapDataItem[] = useMemo(() => {
-    if (!summaryData?.nutrients_per_catch || !pars?.nutrients?.to_display) return []
+    if (!summaryData?.nutrients_per_catch) return []
 
-    const displayOrder = pars.nutrients.to_display
-    // Create a reverse map: English display name -> key, and key -> translated name
-    const englishToKeyMap = new Map<string, string>()
+    const displayOrder = NUTRIENTS_DISPLAY_ORDER
+    // Create a map: key -> translated name
     const keyToTranslatedMap = new Map<string, string>()
     
     displayOrder.forEach((key: string) => {
       const translatedName = nutrientNames[key] || key
       keyToTranslatedMap.set(key, translatedName)
-      // Also map English names from pars if available
-      if (pars.nutrients?.nutrients?.[key]?.short_name) {
-        const englishName = pars.nutrients.nutrients[key].short_name
-        englishToKeyMap.set(englishName, key)
-      }
-      // Map the key itself
-      englishToKeyMap.set(key, key)
     })
 
     return summaryData.nutrients_per_catch
       .filter((item: any) => {
-        // Check if nutrient_names matches a key OR an English display name
-        const key = englishToKeyMap.get(item.nutrient_names) || item.nutrient_names
+        // Map English display name to key, then check if key is in display order
+        const key = NUTRIENT_NAME_TO_KEY[item.nutrient_names] || item.nutrient_names
         return displayOrder.includes(key)
       })
       .sort((a: any, b: any) => b.nut_rdi - a.nut_rdi)
       .map((item: any) => {
-        // Find the key (either direct match or via English name)
-        const key = englishToKeyMap.get(item.nutrient_names) || item.nutrient_names
-        // Get translated name for current language
+        // Map English display name to key, then get translated name
+        const key = NUTRIENT_NAME_TO_KEY[item.nutrient_names] || item.nutrient_names
         const displayName = keyToTranslatedMap.get(key) || item.nutrient_names
         return {
           x: displayName,
           y: Math.round(item.nut_rdi)
         }
       })
-  }, [summaryData, pars, nutrientNames])
+  }, [summaryData, nutrientNames])
 
   // Habitat nutrients treemap data
   const habitatNutrientsData = useMemo(() => {
-    if (!summaryData?.nutrients_habitat || !pars?.nutrients?.to_display) return []
+    if (!summaryData?.nutrients_habitat) return []
 
-    const displayOrder = pars.nutrients.to_display
-    // Create a reverse map: English display name -> key, and key -> translated name
-    const englishToKeyMap = new Map<string, string>()
+    const displayOrder = NUTRIENTS_DISPLAY_ORDER
+    // Create a map: key -> translated name
     const keyToTranslatedMap = new Map<string, string>()
     
     displayOrder.forEach((key: string) => {
       const translatedName = nutrientNames[key] || key
       keyToTranslatedMap.set(key, translatedName)
-      // Also map English names from pars if available
-      if (pars.nutrients?.nutrients?.[key]?.short_name) {
-        const englishName = pars.nutrients.nutrients[key].short_name
-        englishToKeyMap.set(englishName, key)
-      }
-      // Map the key itself
-      englishToKeyMap.set(key, key)
     })
 
     return summaryData.nutrients_habitat
       .filter((item: any) => {
-        // Check if name matches a key OR an English display name
-        const key = englishToKeyMap.get(item.name) || item.name
+        // Map English display name to key, then check if key is in display order
+        const key = NUTRIENT_NAME_TO_KEY[item.name] || item.name
         return displayOrder.includes(key)
       })
       .map((item: any) => {
-        // Find the key (either direct match or via English name)
-        const key = englishToKeyMap.get(item.name) || item.name
-        // Get translated name for current language
+        // Map English display name to key, then get translated name
+        const key = NUTRIENT_NAME_TO_KEY[item.name] || item.name
         const displayName = keyToTranslatedMap.get(key) || item.name
         return {
           ...item,
-          name: displayName
+          name: displayName,
+          data: item.data.map((d: any) => ({
+            ...d,
+            x: displayName, // Ensure x-axis label is also translated
+          })),
         }
       })
-  }, [summaryData, pars, nutrientNames])
+  }, [summaryData, nutrientNames])
 
   // Always use translations - translations are the single source of truth
   const pageTitle = t('nutrients.title')

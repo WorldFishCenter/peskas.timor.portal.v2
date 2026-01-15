@@ -12,8 +12,6 @@ import { useI18n } from '../i18n';
 import type {
   AggregatedData,
   SummaryData,
-  ParsData,
-  TaxaName,
 } from '../types/data';
 
 export default function DataTest() {
@@ -22,7 +20,7 @@ export default function DataTest() {
   const aggregatedResult = useData('aggregated');
 
   // Example 2: Load multiple files with useMultipleData
-  const multipleResult = useMultipleData(['summary_data', 'pars', 'taxa_names']);
+  const multipleResult = useMultipleData(['summary_data', 'aggregated']);
 
   // Combined loading state
   const isLoading = aggregatedResult.loading || multipleResult.loading;
@@ -82,8 +80,7 @@ export default function DataTest() {
   // Type-safe data access
   const aggregated: AggregatedData = aggregatedResult.data!;
   const summaryData: SummaryData = multipleResult.data!.summary_data;
-  const pars: ParsData = multipleResult.data!.pars;
-  const taxaNames: TaxaName[] = multipleResult.data!.taxa_names;
+  const aggregatedData: AggregatedData = multipleResult.data!.aggregated;
 
   return (
     <div className="row row-cards">
@@ -147,77 +144,6 @@ export default function DataTest() {
         </div>
       </div>
 
-      {/* Card 3: Pars/Config Data */}
-      <div className="col-md-6 col-lg-4">
-        <div className="card">
-          <div className="card-header">
-            <h3 className="card-title">
-              {t('data_test.cards.pars_title', { defaultValue: 'pars.json' })}
-            </h3>
-          </div>
-          <div className="card-body">
-            <dl className="row mb-0">
-              <dt className="col-6">{t('data_test.pars.variables', { defaultValue: 'Variables' })}</dt>
-              <dd className="col-6">{Object.keys(pars.vars).length}</dd>
-              <dt className="col-6">{t('data_test.pars.taxa_display', { defaultValue: 'Taxa to display' })}</dt>
-              <dd className="col-6">{pars.taxa.to_display.length}</dd>
-              <dt className="col-6">{t('data_test.pars.nutrients', { defaultValue: 'Nutrients' })}</dt>
-              <dd className="col-6">{pars.nutrients.to_display.length}</dd>
-              <dt className="col-6">{t('data_test.pars.nav_items', { defaultValue: 'Nav items' })}</dt>
-              <dd className="col-6">{Object.keys(pars.header.nav).length}</dd>
-            </dl>
-            <div className="mt-3">
-              <small className="text-muted">{t('data_test.pars.home_title', { defaultValue: 'Home title:' })}</small>
-              <br />
-              <code>{pars.home.title.text}</code>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Card 4: Taxa Names */}
-      <div className="col-12">
-        <div className="card">
-          <div className="card-header">
-            <h3 className="card-title">
-              {t('data_test.cards.taxa_title', {
-                count: taxaNames.length,
-                defaultValue: 'taxa_names.json ({count} taxa)',
-              })}
-            </h3>
-          </div>
-          <div className="card-body">
-            <div className="table-responsive">
-              <table className="table table-sm table-vcenter">
-                <thead>
-                  <tr>
-                    <th>{t('data_test.taxa.code', { defaultValue: 'Code' })}</th>
-                    <th>{t('data_test.taxa.name', { defaultValue: 'Name' })}</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {taxaNames.slice(0, 10).map((taxa) => (
-                    <tr key={taxa.grouped_taxa}>
-                      <td><code>{taxa.grouped_taxa}</code></td>
-                      <td>{taxa.grouped_taxa_names}</td>
-                    </tr>
-                  ))}
-                  {taxaNames.length > 10 && (
-                    <tr>
-                      <td colSpan={2} className="text-muted">
-                        {t('data_test.taxa.more', {
-                          count: taxaNames.length - 10,
-                          defaultValue: '... and {count} more taxa',
-                        })}
-                      </td>
-                    </tr>
-                  )}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

@@ -471,10 +471,8 @@ export type DataFileName =
   | 'summary_data'
   | 'indicators_grid'
   | 'predicted_tracks'
-  | 'taxa_names'
   | 'label_groups_list'
   | 'var_dictionary'
-  | 'pars'
   | 'data_last_updated';
 
 export interface DataTypeMap {
@@ -486,9 +484,7 @@ export interface DataTypeMap {
   summary_data: SummaryData;
   indicators_grid: IndicatorsGridRecord[];
   predicted_tracks: PredictedTrackRecord[];
-  taxa_names: TaxaName[];
   label_groups_list: LabelGroupsList;
   var_dictionary: VarDictionary;
-  pars: ParsData;
   data_last_updated: DataLastUpdated;
 }

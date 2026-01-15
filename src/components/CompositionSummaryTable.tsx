@@ -41,20 +41,18 @@ function CompositionSummaryTable() {
   const { t } = useI18n()
   const theme = useTheme()
   const { data: taxaAggregated, loading } = useData('taxa_aggregated')
-  const { data: taxaNames } = useData('taxa_names')
-  const { data: pars } = useData('pars')
   const [sorting, setSorting] = useState<SortingState>([])
 
-  // Create taxa name lookup map
+  // Create taxa name lookup map from i18n
   const taxaNameMap = useMemo(() => {
     const map: Record<string, string> = {}
-    if (taxaNames) {
-      taxaNames.forEach((t) => {
-        map[t.grouped_taxa] = t.grouped_taxa_names
-      })
-    }
+    // Use TAXA_DISPLAY_ORDER to get all taxa codes
+    const taxaCodes = ['CLP', 'FLY', 'TUN', 'SDX', 'GZP', 'SNA', 'CGX', 'CJX', 'BEN', 'MOO', 'RAX', 'LWX', 'MZZ'] as const
+    taxaCodes.forEach((code) => {
+      map[code] = t(`taxa.${code}`)
+    })
     return map
-  }, [taxaNames])
+  }, [t])
 
   const { tableData, years, columnValues } = useMemo(() => {
     if (!taxaAggregated?.month) return { tableData: [], years: [], columnValues: {} }
@@ -165,10 +163,8 @@ function CompositionSummaryTable() {
     getSortedRowModel: getSortedRowModel(),
   })
 
-  const tableHeading = pars?.composition?.table?.heading?.text 
-    ? t(pars.composition.table.heading.text)
-    : t('composition.table_heading', { defaultValue: 'Catch by Taxa and Year' })
-  const tableFooter = pars?.composition?.table?.footer?.text ? t(pars.composition.table.footer.text) : null
+  const tableHeading = t('composition.table_heading', { defaultValue: 'Total catch' })
+  const tableFooter = t('composition.table_footer', { defaultValue: '*Pictures by FAO' })
 
   return (
     <div className="card shadow-sm border-0">

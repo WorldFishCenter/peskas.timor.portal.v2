@@ -23,7 +23,6 @@ export default function MarketSummaryTable() {
   const theme = useTheme()
   const locale = lang === 'tet' ? 'tet' : lang === 'pt' ? 'pt-PT' : 'en-US'
   const { data: aggregated, loading } = useData('aggregated')
-  const { data: pars } = useData('pars')
   const [selectedYear, setSelectedYear] = useState<string>('all')
 
   const tableData = useMemo(() => {
@@ -99,7 +98,7 @@ export default function MarketSummaryTable() {
         },
       },
     ],
-    [t, theme, columnValues, pars]
+    [t, theme, columnValues]
   )
 
   const table = useReactTable({

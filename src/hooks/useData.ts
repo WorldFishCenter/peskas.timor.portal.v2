@@ -108,13 +108,13 @@ export { DataLoadError };
  * Common data file combinations for pages
  */
 export const PAGE_DATA_REQUIREMENTS = {
-  home: ['summary_data', 'pars', 'aggregated'] as const,
-  catch: ['aggregated', 'taxa_aggregated', 'municipal_aggregated', 'pars'] as const,
-  revenue: ['aggregated', 'municipal_aggregated', 'summary_data', 'pars'] as const,
-  composition: ['taxa_aggregated', 'taxa_names', 'municipal_taxa', 'pars'] as const,
-  market: ['summary_data', 'aggregated', 'pars'] as const,
-  nutrients: ['nutrients_aggregated', 'summary_data', 'pars'] as const,
-  tracks: ['predicted_tracks', 'indicators_grid', 'pars'] as const,
+  home: ['summary_data', 'aggregated'] as const,
+  catch: ['aggregated', 'taxa_aggregated', 'municipal_aggregated'] as const,
+  revenue: ['aggregated', 'municipal_aggregated', 'summary_data'] as const,
+  composition: ['taxa_aggregated', 'municipal_taxa'] as const,
+  market: ['summary_data', 'aggregated'] as const,
+  nutrients: ['nutrients_aggregated', 'summary_data'] as const,
+  tracks: ['predicted_tracks'] as const,
 } as const;
 
 export type PageName = keyof typeof PAGE_DATA_REQUIREMENTS;

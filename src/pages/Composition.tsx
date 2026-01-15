@@ -9,10 +9,8 @@ import { interpolateViridis } from 'd3-scale-chromatic'
 
 export default function Composition() {
   const { t } = useI18n()
-  const { loading: parsLoading } = useData('pars')
   const { data: taxaAggregated, loading: taxaLoading } = useData('taxa_aggregated')
   const { data: municipalTaxa, loading: municipalTaxaLoading } = useData('municipal_taxa')
-  const { data: taxaNames } = useData('taxa_names')
 
   // Local filters for composition charts
   const [regionYear, setRegionYear] = useState<string>('all')
@@ -29,16 +27,16 @@ export default function Composition() {
     ).map(c => c.substring(0, 7))
   }, [taxaAggregated])
 
-  // Create taxa name lookup map
+  // Create taxa name lookup map from i18n
   const taxaNameMap: Record<string, string> = useMemo(() => {
     const map: Record<string, string> = {}
-    if (taxaNames) {
-      taxaNames.forEach((t) => {
-        map[t.grouped_taxa] = t.grouped_taxa_names
-      })
-    }
+    // Use TAXA_DISPLAY_ORDER to get all taxa codes
+    const taxaCodes = ['CLP', 'FLY', 'TUN', 'SDX', 'GZP', 'SNA', 'CGX', 'CJX', 'BEN', 'MOO', 'RAX', 'LWX', 'MZZ'] as const
+    taxaCodes.forEach((code) => {
+      map[code] = t(`taxa.${code}`)
+    })
     return map
-  }, [taxaNames])
+  }, [t])
 
   // Always use translations - translations are the single source of truth
   const pretitle = t('composition.pretitle')
@@ -74,16 +72,8 @@ export default function Composition() {
         <div className="container-xl">
           <div className="row g-2 align-items-center">
             <div className="col">
-              {parsLoading ? (
-                <div className="placeholder-glow">
-                  <span className="placeholder col-3"></span>
-                </div>
-              ) : (
-                <>
-                  <div className="page-pretitle">{t(pretitle)}</div>
-                  <h2 className="page-title">{t(title)}</h2>
-                </>
-              )}
+              <div className="page-pretitle">{t(pretitle)}</div>
+              <h2 className="page-title">{t(title)}</h2>
             </div>
             {/* <div className="col-auto ms-auto d-print-none">
               <div className="btn-list">

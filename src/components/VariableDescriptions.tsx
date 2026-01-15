@@ -1,6 +1,6 @@
-import { useData } from '../hooks/useData'
 import { useI18n } from '../i18n'
 import { useMemo } from 'react'
+import { VARIABLE_CONFIG } from '../config/app.config'
 
 // Simple markdown link parser - converts [text](url) to clickable links
 function parseMarkdownLinks(text: string): React.ReactNode {
@@ -71,7 +71,6 @@ const getBgQuality = (quality: 'low' | 'medium' | 'high' | null | undefined) => 
 
 export default function VariableDescriptions({ variables, type, heading, intro }: VariableDescriptionsProps) {
   const { t } = useI18n()
-  const { data: pars } = useData('pars')
 
   // Always use translations - translations are the single source of truth
   const finalHeading = useMemo(() => {
@@ -110,27 +109,26 @@ export default function VariableDescriptions({ variables, type, heading, intro }
   }, [intro, type, t])
 
   const variableInfos = useMemo(() => {
-    if (!pars?.vars) return []
-
     return variables
       .map(varName => {
-        const varInfo = pars.vars[varName] as VariableInfo | undefined
-        if (!varInfo) return null
+        const varConfig = VARIABLE_CONFIG[varName]
+        // Check if translations exist for this variable
+        const hasDescription = t(`vars.${varName}.description`, { defaultValue: '' }) !== ''
+        const hasMethods = t(`vars.${varName}.methods`, { defaultValue: '' }) !== ''
+        const hasProblems = t(`vars.${varName}.problems`, { defaultValue: '' }) !== ''
 
         return {
           name: varName,
-          ...varInfo,
-          // Use translation keys instead of English text from pars.json
+          quality: varConfig?.quality || null,
+          // Use translation keys - translations are the single source of truth
           short_name_key: `vars.${varName}.short_name`,
-          description_key: varInfo.description ? `vars.${varName}.description` : undefined,
-          methods_key: varInfo.methods ? `vars.${varName}.methods` : undefined,
-          problems_key: varInfo.problems ? `vars.${varName}.problems` : undefined,
+          description_key: hasDescription ? `vars.${varName}.description` : undefined,
+          methods_key: hasMethods ? `vars.${varName}.methods` : undefined,
+          problems_key: hasProblems ? `vars.${varName}.problems` : undefined,
         }
       })
       .filter((v): v is NonNullable<typeof v> => v !== null)
-  }, [pars, variables])
-
-  if (!pars) return null
+  }, [variables, t])
 
   return (
     <div className="card shadow-sm border-0">
@@ -155,7 +153,7 @@ export default function VariableDescriptions({ variables, type, heading, intro }
                     aria-expanded={isLast ? 'true' : 'false'}
                   >
                     <span className={`badge badge-pill me-3 ${bg.normal}`}></span>
-                    {varInfo.short_name_key ? t(varInfo.short_name_key, { defaultValue: varInfo.short_name }) : varInfo.short_name}
+                    {t(varInfo.short_name_key)}
                   </button>
                 </h2>
                 <div
@@ -164,23 +162,23 @@ export default function VariableDescriptions({ variables, type, heading, intro }
                   data-bs-parent="#accordion-variables"
                 >
                   <div className="accordion-body">
-                    {varInfo.description && (
+                    {varInfo.description_key && (
                       <div className="mb-3">
-                        <p>{parseMarkdownLinks(varInfo.description_key ? t(varInfo.description_key, { defaultValue: varInfo.description }) : varInfo.description)}</p>
+                        <p>{parseMarkdownLinks(t(varInfo.description_key))}</p>
                       </div>
                     )}
 
-                    {varInfo.methods && (
+                    {varInfo.methods_key && (
                       <div className="small mb-3">
                         <strong>{t('common.data_processing')}</strong>
-                        <p className="mb-0">{parseMarkdownLinks(varInfo.methods_key ? t(varInfo.methods_key, { defaultValue: varInfo.methods }) : varInfo.methods)}</p>
+                        <p className="mb-0">{parseMarkdownLinks(t(varInfo.methods_key))}</p>
                       </div>
                     )}
 
-                    {varInfo.problems && (
+                    {varInfo.problems_key && (
                       <div className="small mb-3">
                         <strong>{t('common.known_problems')}</strong>
-                        <p className="mb-0">{parseMarkdownLinks(varInfo.problems_key ? t(varInfo.problems_key, { defaultValue: varInfo.problems }) : varInfo.problems)}</p>
+                        <p className="mb-0">{parseMarkdownLinks(t(varInfo.problems_key))}</p>
                       </div>
                     )}
 
