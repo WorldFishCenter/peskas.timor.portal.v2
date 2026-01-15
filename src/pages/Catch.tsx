@@ -2,6 +2,7 @@ import { useI18n } from '../i18n'
 import { useMemo } from 'react'
 import MunicipalityFilter from '../components/MunicipalityFilter'
 import TimeSeriesChart from '../components/charts/TimeSeriesChart'
+import SparklineChart from '../components/charts/SparklineChart'
 import TreemapChart from '../components/charts/TreemapChart'
 import CatchSummaryTable from '../components/CatchSummaryTable'
 import VariableDescriptions from '../components/VariableDescriptions'
@@ -79,6 +80,8 @@ export default function Catch() {
       catchTrend: getTrend(catchChange),
       weightTrend: getTrend(weightChange),
       boatsTrend: getTrend(boatsChange),
+      catchSparkline: last12.map(r => ({ date: r.date_bin_start, value: (r.catch ?? 0) / 1000 })),
+      weightSparkline: last12.map(r => ({ date: r.date_bin_start, value: r.landing_weight ?? 0 })),
     }
   }, [aggregated])
 
@@ -145,7 +148,7 @@ export default function Catch() {
             <div className="col-lg-4 col-xl-4">
               <div className="row row-deck row-cards">
                 <div className="col-12">
-                  <div className="card">
+                  <div className="card overflow-hidden">
                     <div className="card-body">
                       <div className="d-flex align-items-center">
                         <div className="subheader">{t('vars.catch.short_name', { defaultValue: 'Total catch' })}</div>
@@ -160,10 +163,15 @@ export default function Catch() {
                         </span>
                       </div>
                     </div>
+                    <div className="mt-auto" style={{ minHeight: '40px', margin: '0 -1px -1px -1px' }}>
+                      {!loading && metrics.catchSparkline && (
+                        <SparklineChart data={metrics.catchSparkline} color="#206bc4" height={50} />
+                      )}
+                    </div>
                   </div>
                 </div>
                 <div className="col-12">
-                  <div className="card">
+                  <div className="card overflow-hidden">
                     <div className="card-body">
                       <div className="d-flex align-items-center">
                         <div className="subheader">{t('vars.landing_weight.short_name', { defaultValue: 'Catch per trip' })}</div>
@@ -177,6 +185,11 @@ export default function Catch() {
                           {metrics.weightTrend.value}
                         </span>
                       </div>
+                    </div>
+                    <div className="mt-auto" style={{ minHeight: '40px', margin: '0 -1px -1px -1px' }}>
+                      {!loading && metrics.weightSparkline && (
+                        <SparklineChart data={metrics.weightSparkline} color="#206bc4" height={50} />
+                      )}
                     </div>
                   </div>
                 </div>
