@@ -2,6 +2,36 @@ import { useData } from '../hooks/useData'
 import { useI18n } from '../i18n'
 import { useMemo } from 'react'
 
+// Simple markdown link parser - converts [text](url) to clickable links
+function parseMarkdownLinks(text: string): React.ReactNode {
+  // Match markdown links: [text](url)
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g
+  const parts: React.ReactNode[] = []
+  let lastIndex = 0
+  let match
+
+  while ((match = linkRegex.exec(text)) !== null) {
+    // Add text before the link
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index))
+    }
+    // Add the link
+    parts.push(
+      <a key={match.index} href={match[2]} target="_blank" rel="noopener noreferrer">
+        {match[1]}
+      </a>
+    )
+    lastIndex = match.index + match[0].length
+  }
+
+  // Add remaining text after the last link
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex))
+  }
+
+  return parts.length > 0 ? parts : text
+}
+
 interface VariableDescriptionsProps {
   variables: string[]
   type?: 'catch' | 'revenue'
@@ -111,21 +141,21 @@ export default function VariableDescriptions({ variables, type, heading, intro }
                   <div className="accordion-body">
                     {varInfo.description && (
                       <div className="mb-3">
-                        <p>{t(varInfo.description)}</p>
+                        <p>{parseMarkdownLinks(t(varInfo.description))}</p>
                       </div>
                     )}
 
                     {varInfo.methods && (
                       <div className="small mb-3">
                         <strong>{t(pars.indicators?.processing?.text || 'Data processing and validation:')}</strong>
-                        <p className="mb-0">{t(varInfo.methods)}</p>
+                        <p className="mb-0">{parseMarkdownLinks(t(varInfo.methods))}</p>
                       </div>
                     )}
 
                     {varInfo.problems && (
                       <div className="small mb-3">
                         <strong>{t(pars.indicators?.limitations?.text || 'Known problems and limitations:')}</strong>
-                        <p className="mb-0">{t(varInfo.problems)}</p>
+                        <p className="mb-0">{parseMarkdownLinks(t(varInfo.problems))}</p>
                       </div>
                     )}
 

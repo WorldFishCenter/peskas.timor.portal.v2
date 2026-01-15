@@ -212,7 +212,7 @@ export default function Nutrients() {
             {/* Variable Descriptions */}
             <div className="col">
               <VariableDescriptions
-                variables={['nut_supply', 'nut_rdi']}
+                variables={['nut_rdi']}
                 heading={t(pars?.revenue?.description?.heading?.text || 'About this data')}
                 intro={
                   <>

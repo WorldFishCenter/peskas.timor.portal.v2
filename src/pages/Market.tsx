@@ -195,7 +195,7 @@ export default function Market() {
             {/* Variable Descriptions - Remaining columns */}
             <div className="col">
               <VariableDescriptions
-                variables={['price_kg', 'landing_weight', 'n_landings_per_boat']}
+                variables={['price_kg']}
                 heading={t(pars?.revenue?.description?.heading?.text || 'About this data')}
                 intro={
                   <>

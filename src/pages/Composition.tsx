@@ -202,7 +202,7 @@ export default function Composition() {
             {/* Variable Descriptions - Remaining columns */}
             <div className="col">
               <VariableDescriptions
-                variables={['catch', 'landing_weight']}
+                variables={['catch', 'taxa']}
                 heading={t(descriptionHeading)}
                 intro={
                   <>

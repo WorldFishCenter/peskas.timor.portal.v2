@@ -153,7 +153,7 @@ export default function TaxaBarChart({
         },
         formatter: (val: string | number) => {
           const numVal = typeof val === 'string' ? parseFloat(val) : val
-          return numVal.toLocaleString()
+          return `${numVal.toLocaleString()} ${tonsLabel}`
         }
       }
     },
