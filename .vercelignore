@@ -1,0 +1,48 @@
+# Vercel ignore file
+# Files and directories to exclude from deployment
+
+# Development files
+node_modules
+.vscode
+.idea
+*.log
+*.local
+
+# Build artifacts (Vercel builds these)
+dist
+dist-ssr
+
+# Git files
+.git
+.gitignore
+
+# Documentation (keep README.md)
+*.md
+!README.md
+
+# Scripts and tools
+scripts/ralph
+scripts/fetchData.js
+
+# Nested repository
+peskas.timor.portal
+
+# Environment files (use Vercel dashboard for env vars)
+.env
+.env.local
+.env.*.local
+
+# Test files
+**/__tests__/**
+**/*.test.*
+**/*.spec.*
+
+# TypeScript config (not needed in production)
+tsconfig*.json
+
+# ESLint config
+eslint.config.js
+
+# Development config
+rstudio-prefs.json
+peskas.timor.portal.Rproj

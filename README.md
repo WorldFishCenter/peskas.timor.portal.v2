@@ -129,6 +129,55 @@ All data loading includes:
 - Automatic caching (5-minute TTL)
 - Type safety via TypeScript
 
+## Deployment
+
+### Vercel Deployment
+
+The app is configured for deployment on Vercel. To deploy:
+
+1. **Connect your repository to Vercel:**
+   - Go to [vercel.com](https://vercel.com)
+   - Import your Git repository
+   - Vercel will auto-detect the Vite framework
+
+2. **Build Settings (auto-detected):**
+   - Framework: Vite
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+   - Install Command: `npm install`
+
+3. **Environment Variables (if needed):**
+   - Currently, no environment variables are required for the frontend
+   - If you need to configure data fetching from external sources, add them in Vercel dashboard:
+     - `MONGODB_URI` (optional, for data fetching script)
+     - `MONGODB_DB` (optional, for data fetching script)
+     - `MONGODB_COLLECTIONS` (optional, for data fetching script)
+
+4. **Deploy:**
+   - Push to your main branch or use Vercel CLI:
+     ```bash
+     npm i -g vercel
+     vercel
+     ```
+
+### Vercel Configuration
+
+The project includes:
+- `vercel.json` - Vercel configuration with:
+  - SPA routing (all routes redirect to `index.html`)
+  - Optimized caching headers for assets, data, and images
+  - Security headers (XSS protection, frame options, etc.)
+- `.vercelignore` - Files excluded from deployment
+
+### Performance Optimizations
+
+The app includes several performance optimizations:
+- Code splitting (route-based and vendor-based)
+- Lazy loading for pages and heavy components
+- Component memoization
+- Data prefetching
+- Optimized bundle sizes
+
 ## Internationalization
 
 The app supports three languages:
