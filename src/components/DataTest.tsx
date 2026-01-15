@@ -80,7 +80,6 @@ export default function DataTest() {
   // Type-safe data access
   const aggregated: AggregatedData = aggregatedResult.data!;
   const summaryData: SummaryData = multipleResult.data!.summary_data;
-  const aggregatedData: AggregatedData = multipleResult.data!.aggregated;
 
   return (
     <div className="row row-cards">

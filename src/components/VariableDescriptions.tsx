@@ -39,18 +39,6 @@ interface VariableDescriptionsProps {
   intro?: React.ReactNode
 }
 
-interface VariableInfo {
-  short_name: string
-  description?: string
-  methods?: string
-  problems?: string
-  quality?: 'low' | 'medium' | 'high' | null
-  short_name_key?: string
-  description_key?: string
-  methods_key?: string
-  problems_key?: string
-}
-
 const getBgQuality = (quality: 'low' | 'medium' | 'high' | null | undefined) => {
   if (!quality) {
     return { normal: 'bg-secondary', light: 'bg-secondary-lt' }
