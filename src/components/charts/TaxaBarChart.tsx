@@ -7,6 +7,9 @@ import { useTheme } from '../../hooks/useTheme'
 interface TaxaRecord {
   grouped_taxa: string
   catch: number
+  region?: string
+  date_bin_start?: string
+  year?: string
   [key: string]: any
 }
 
@@ -14,6 +17,7 @@ interface TaxaBarChartProps {
   data: TaxaRecord[]
   taxaNameMap: Record<string, string>
   year?: string
+  municipality?: string
   colors?: string[]
   height?: number
 }
@@ -21,29 +25,66 @@ interface TaxaBarChartProps {
 export default function TaxaBarChart({
   data,
   taxaNameMap,
-  year = 'all',
+  year,
+  municipality,
   colors = [],
   height = 400
 }: TaxaBarChartProps) {
   const { t } = useI18n()
   const theme = useTheme()
   const chartData = useMemo(() => {
-    // ... filtering and grouping logic ...
-    const filtered = year === 'all' ? data : data.filter(d => d.year === year)
+    if (!data || data.length === 0) return []
+
+    // Filter by year and municipality
+    let filtered = data
+
+    // Filter by year - match dates within the year
+    if (year) {
+      filtered = filtered.filter(row => {
+        if (row.date_bin_start) {
+          const rowYear = new Date(row.date_bin_start).getFullYear().toString()
+          return rowYear === year
+        }
+        if (row.year) {
+          return row.year === year
+        }
+        return false // If no date info, exclude it
+      })
+    }
+
+    // Filter by municipality (if provided)
+    if (municipality) {
+      filtered = filtered.filter(row => row.region === municipality)
+    }
+
+    // Get all valid taxa from taxaNameMap
+    const allTaxa = Object.keys(taxaNameMap)
+
+    // Group by taxa and sum catch - only for taxa in taxaNameMap
     const grouped: Record<string, number> = {}
     filtered.forEach(row => {
       const taxa = row.grouped_taxa
-      if (!grouped[taxa]) grouped[taxa] = 0
-      grouped[taxa] += row.catch || 0
+      if (allTaxa.includes(taxa)) {
+        if (!grouped[taxa]) grouped[taxa] = 0
+        grouped[taxa] += row.catch || 0
+      }
     })
+
+    // Add missing taxa with 0 values
+    allTaxa.forEach(taxa => {
+      if (!grouped[taxa]) {
+        grouped[taxa] = 0
+      }
+    })
+
     return Object.entries(grouped)
       .map(([taxa, catchValue]) => ({
         taxa,
         displayName: taxaNameMap[taxa] || taxa,
-        catch: Math.round(catchValue / 1000)
+        catch: catchValue / 1000 // Convert to tons (keep decimals for better precision)
       }))
       .sort((a, b) => b.catch - a.catch)
-  }, [data, taxaNameMap, year])
+  }, [data, taxaNameMap, year, municipality])
 
   if (chartData.length === 0) {
     return (
@@ -61,7 +102,10 @@ export default function TaxaBarChart({
 
   const series = [{
     name: catchLabel,
-    data: chartData.map(d => d.catch)
+    data: chartData.map(d => ({
+      x: d.displayName,
+      y: d.catch
+    }))
   }]
 
   const options: ApexOptions = {
@@ -82,12 +126,9 @@ export default function TaxaBarChart({
     plotOptions: {
       bar: {
         borderRadius: 4,
-        horizontal: false,
+        horizontal: true,
         distributed: true,
-        columnWidth: '60%',
-        dataLabels: {
-          position: 'top'
-        }
+        barHeight: '70%',
       }
     },
     colors: chartData.map((_, i) => colors[i % colors.length] || '#206bc4'),
@@ -95,18 +136,15 @@ export default function TaxaBarChart({
       enabled: false,
     },
     xaxis: {
-      categories: chartData.map(d => d.displayName),
-      axisBorder: { show: false },
-      axisTicks: { show: false },
       labels: {
-        rotate: -45,
-        rotateAlways: chartData.length > 5,
         style: {
           fontSize: '11px',
           colors: theme === 'dark' ? '#6c7a91' : '#656d77',
         },
-        trim: true,
-        maxHeight: 120,
+        formatter: (val: string | number) => {
+          const numVal = typeof val === 'string' ? parseFloat(val) : val
+          return numVal.toLocaleString()
+        }
       }
     },
     yaxis: {
@@ -114,8 +152,7 @@ export default function TaxaBarChart({
         style: {
           fontSize: '11px',
           colors: theme === 'dark' ? '#6c7a91' : '#656d77',
-        },
-        formatter: (val: number) => val.toLocaleString()
+        }
       }
     },
     legend: { show: false },

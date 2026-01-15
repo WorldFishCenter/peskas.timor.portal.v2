@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { useI18n } from '../../i18n'
+import { useTheme } from '../../hooks/useTheme'
 
 interface MunicipalTaxaRecord {
   region: string
@@ -27,6 +28,7 @@ export default function RegionCompositionChart({
   height = 450
 }: RegionCompositionChartProps) {
   const { t } = useI18n()
+  const theme = useTheme()
   const chartData = useMemo(() => {
     // Filter by year
     const filtered = year === 'all'
@@ -89,36 +91,65 @@ export default function RegionCompositionChart({
     chart: {
       type: 'bar',
       stacked: true,
+      background: 'transparent',
+      fontFamily: 'inherit',
       toolbar: { show: false },
-      animations: { enabled: false },
+      animations: {
+        enabled: true,
+        easing: 'easeinout',
+        speed: 800,
+      },
+    },
+    theme: {
+      mode: theme,
     },
     plotOptions: {
       bar: {
-        horizontal: false,
-        columnWidth: '70%',
+        horizontal: true,
+        barHeight: '70%',
         borderRadius: 0,
       },
     },
     xaxis: {
       categories: chartData.categories,
       labels: {
+        formatter: (val: string | number) => {
+          const numVal = typeof val === 'string' ? parseFloat(val) : val
+          return `${numVal.toFixed(1)}%`
+        },
         style: {
-          fontSize: '12px'
+          colors: theme === 'dark' ? '#6c7a91' : '#656d77',
+          fontSize: '11px',
+          fontFamily: 'inherit',
+        }
+      },
+      max: 100,
+      title: {
+        text: t('units.percentage_label', { defaultValue: 'Percentage (%)' }),
+        style: {
+          color: theme === 'dark' ? '#6c7a91' : '#656d77',
+          fontSize: '12px',
+          fontFamily: 'inherit',
         }
       },
     },
     yaxis: {
-      title: { text: t('units.percentage_label', { defaultValue: 'Percentage (%)' }) },
       labels: {
-        formatter: (val: number) => `${val.toFixed(1)}%`
+        style: {
+          colors: theme === 'dark' ? '#6c7a91' : '#656d77',
+          fontSize: '12px',
+          fontFamily: 'inherit',
+        }
       },
-      max: 100,
     },
     legend: {
-      position: 'right',
+      position: 'top',
       fontSize: '12px',
-      offsetY: 40,
-      height: 200,
+      fontFamily: 'inherit',
+      horizontalAlign: 'center',
+      labels: {
+        colors: theme === 'dark' ? '#6c7a91' : '#656d77',
+      },
       markers: {
         size: 6,
         offsetX: 0,
@@ -130,12 +161,14 @@ export default function RegionCompositionChart({
       enabled: false,
     },
     tooltip: {
+      theme: theme,
       y: {
         formatter: (val: number) => `${val.toFixed(1)}%`
       },
     },
     grid: {
       strokeDashArray: 4,
+      borderColor: theme === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.05)',
       padding: {
         top: -20,
         right: 0,

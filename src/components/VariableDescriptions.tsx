@@ -1,110 +1,152 @@
 import { useData } from '../hooks/useData'
 import { useI18n } from '../i18n'
+import { useMemo } from 'react'
 
 interface VariableDescriptionsProps {
   variables: string[]
-  type: 'catch' | 'revenue'
+  type?: 'catch' | 'revenue'
+  heading?: string
+  intro?: React.ReactNode
 }
 
-export default function VariableDescriptions({ variables, type }: VariableDescriptionsProps) {
+interface VariableInfo {
+  short_name: string
+  description?: string
+  methods?: string
+  problems?: string
+  quality?: 'low' | 'medium' | 'high' | null
+}
+
+const getBgQuality = (quality: 'low' | 'medium' | 'high' | null | undefined) => {
+  if (!quality) {
+    return { normal: 'bg-secondary', light: 'bg-secondary-lt' }
+  }
+
+  const colorMap = {
+    low: 'red',
+    medium: 'yellow',
+    high: 'green'
+  }
+
+  const color = colorMap[quality]
+  return {
+    normal: `bg-${color}`,
+    light: `bg-${color}-lt`
+  }
+}
+
+export default function VariableDescriptions({ variables, type, heading, intro }: VariableDescriptionsProps) {
   const { t } = useI18n()
   const { data: pars } = useData('pars')
-  const { data: varDictionary } = useData('var_dictionary')
 
-  const heading = pars?.[type]?.description?.heading?.text ?? t(`${type}.description_heading`, { defaultValue: 'Variable Descriptions' })
-  const content = pars?.[type]?.description?.content?.text ?? ''
-  const subheading = pars?.[type]?.description?.subheading?.text ?? t(`${type}.description_subheading`, { defaultValue: 'Variable Definitions' })
+  const finalHeading = useMemo(() => {
+    if (heading) return heading
+    if (!type || !pars) return t('common.variable_descriptions', { defaultValue: 'Variable Descriptions' })
+    return t(pars[type]?.description?.heading?.text || `${type}.description_heading`)
+  }, [heading, type, pars, t])
 
-  const getQualityBadgeColor = (quality?: string) => {
-    if (!quality) return 'bg-secondary'
-    switch (quality.toLowerCase()) {
-      case 'low': return 'bg-red'
-      case 'medium': return 'bg-yellow'
-      case 'high': return 'bg-green'
-      default: return 'bg-secondary'
-    }
-  }
+  const finalIntro = useMemo(() => {
+    if (intro) return intro
+    if (!type || !pars || !pars[type]?.description?.content?.text) return null
+    
+    return (
+      <>
+        <p className="text-secondary">{t(pars[type].description.content.text)}</p>
+        {pars[type].description.subheading?.text && (
+          <div className="hr-text">{t(pars[type].description.subheading.text)}</div>
+        )}
+      </>
+    )
+  }, [intro, type, pars, t])
 
-  const getQualityText = (quality?: string) => {
-    if (!quality || quality === '') return t('indicators.not_assessed', { defaultValue: 'Not assessed' })
-    const normalized = quality.toLowerCase()
-    if (normalized === 'low') return t('indicators.quality_low', { defaultValue: 'Low' })
-    if (normalized === 'medium') return t('indicators.quality_medium', { defaultValue: 'Medium' })
-    if (normalized === 'high') return t('indicators.quality_high', { defaultValue: 'High' })
-    return quality.charAt(0).toUpperCase() + quality.slice(1).toLowerCase()
-  }
+  const variableInfos = useMemo(() => {
+    if (!pars?.vars) return []
+
+    return variables
+      .map(varName => {
+        const varInfo = pars.vars[varName] as VariableInfo | undefined
+        if (!varInfo) return null
+
+        return {
+          name: varName,
+          ...varInfo
+        }
+      })
+      .filter((v): v is NonNullable<typeof v> => v !== null)
+  }, [pars, variables])
+
+  if (!pars) return null
 
   return (
     <div className="card shadow-sm border-0">
       <div className="card-body markdown">
-        <h3 className="card-title fw-bold mb-3">{heading}</h3>
-        {content && (
-          <div className="mt-3">
-            <p className="text-secondary">{content}</p>
-          </div>
-        )}
+        {finalHeading && <h3 className="card-title fw-bold mb-0">{finalHeading}</h3>}
+        {finalIntro && <div className="mt-3">{finalIntro}</div>}
 
-        {subheading && (
-          <div className="hr-text">{subheading}</div>
-        )}
-
-        <div className="accordion" id={`accordion-variables-${type}`}>
-          {variables.map((variable, index) => {
-            const varInfo = varDictionary?.[variable]
-            if (!varInfo) return null
-
-            const itemId = `accordion-${type}-${variable}`
-            const isLast = index === variables.length - 1
-            const badgeColor = getQualityBadgeColor(varInfo.quality)
-            const badgeLightColor = badgeColor + '-lt'
+        <div className="accordion mt-3" id="accordion-variables">
+          {variableInfos.map((varInfo, index) => {
+            const bg = getBgQuality(varInfo.quality)
+            const isLast = index === variableInfos.length - 1
+            const itemId = `accordion-${varInfo.name}`
 
             return (
-              <div className="accordion-item" key={variable}>
+              <div className="accordion-item" key={varInfo.name}>
                 <h2 className="accordion-header" id={`${itemId}-heading`}>
                   <button
-                    className={`accordion-button ${!isLast ? 'collapsed' : ''}`}
+                    className={`accordion-button ${isLast ? '' : 'collapsed'}`}
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target={`#${itemId}-collapse`}
                     aria-expanded={isLast ? 'true' : 'false'}
                   >
-                    <span className={`badge badge-pill me-3 ${badgeColor}`}></span>
-                    {varInfo.short_name || variable}
+                    <span className={`badge badge-pill me-3 ${bg.normal}`}></span>
+                    {t(varInfo.short_name)}
                   </button>
                 </h2>
                 <div
                   id={`${itemId}-collapse`}
                   className={`accordion-collapse collapse ${isLast ? 'show' : ''}`}
-                  data-bs-parent={`#accordion-variables-${type}`}
+                  data-bs-parent="#accordion-variables"
                 >
-                  <div className="accordion-body pt-0">
+                  <div className="accordion-body">
                     {varInfo.description && (
                       <div className="mb-3">
-                        <p>{varInfo.description}</p>
+                        <p>{t(varInfo.description)}</p>
                       </div>
                     )}
 
-                    {varInfo.method && (
+                    {varInfo.methods && (
                       <div className="small mb-3">
-                        <strong>{t('indicators.processing', { defaultValue: 'Data processing and validation:' })}</strong>
-                        <p className="mb-0">{varInfo.method}</p>
+                        <strong>{t(pars.indicators?.processing?.text || 'Data processing and validation:')}</strong>
+                        <p className="mb-0">{t(varInfo.methods)}</p>
                       </div>
                     )}
 
                     {varInfo.problems && (
                       <div className="small mb-3">
-                        <strong>{t('indicators.limitations', { defaultValue: 'Known problems and limitations:' })}</strong>
-                        <p className="mb-0">{varInfo.problems}</p>
+                        <strong>{t(pars.indicators?.limitations?.text || 'Known problems and limitations:')}</strong>
+                        <p className="mb-0">{t(varInfo.problems)}</p>
                       </div>
                     )}
 
                     {varInfo.quality && (
-                      <p className={`badge mb-0 ${badgeLightColor}`}>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-check me-1" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                          <path d="M5 12l5 5l10 -10"></path>
+                      <p className={`badge mb-0 ${bg.light}`}>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="icon icon-tabler icon-tabler-check me-1"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          strokeWidth="2"
+                          stroke="currentColor"
+                          fill="none"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M5 12l5 5l10 -10" />
                         </svg>
-                        {t('indicators.quality', { defaultValue: 'DATA QUALITY:' })} {getQualityText(varInfo.quality).toUpperCase()}
+                        {t(pars.indicators?.quality?.text || 'DATA QUALITY:')} {t(varInfo.quality).toUpperCase()}
                       </p>
                     )}
                   </div>

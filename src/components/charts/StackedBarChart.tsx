@@ -2,6 +2,8 @@ import { useMemo } from 'react'
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import type { ConservationRecord } from '../../types/data'
+import { useTheme } from '../../hooks/useTheme'
+import { useI18n } from '../../i18n'
 
 interface StackedBarChartProps {
   data: ConservationRecord[]
@@ -16,19 +18,22 @@ export default function StackedBarChart({
   colors,
   yFormatter = (val: number) => `${val}%`,
 }: StackedBarChartProps) {
+  const theme = useTheme()
+  const { t } = useI18n()
+
   const chartData = useMemo(() => {
     if (!data || data.length === 0) return { series: [], categories: [] }
 
-    // Get unique municipalities and catch_preservation types
-    const municipalities = [...new Set(data.map((d) => d.municipality))].sort()
-    const preservationTypes = [...new Set(data.map((d) => d.catch_preservation))].sort()
+    // Get unique municipalities and catch_preservation types, filtering out null/undefined values
+    const municipalities = [...new Set(data.map((d) => d.municipality).filter(Boolean))].sort()
+    const preservationTypes = [...new Set(data.map((d) => d.catch_preservation).filter(Boolean))].sort()
 
     // Build series data for stacked bar chart
     const series = preservationTypes.map((type) => ({
       name: type,
       data: municipalities.map((mun) => {
         const item = data.find(
-          (d) => d.municipality === mun && d.catch_preservation === type
+          (d) => d.municipality === mun && d.catch_preservation === type && d.municipality != null && d.catch_preservation != null
         )
         return item ? item.perc : 0
       }),
@@ -40,7 +45,7 @@ export default function StackedBarChart({
   if (chartData.series.length === 0) {
     return (
       <div className="d-flex align-items-center justify-content-center" style={{ height: `${height}px` }}>
-        <div className="text-muted small">No data available</div>
+        <div className="text-muted small">{t('common.no_data', { defaultValue: 'No data available' })}</div>
       </div>
     )
   }
@@ -49,7 +54,17 @@ export default function StackedBarChart({
     chart: {
       type: 'bar',
       stacked: true,
+      background: 'transparent',
+      fontFamily: 'inherit',
       toolbar: { show: false },
+      animations: {
+        enabled: true,
+        easing: 'easeinout',
+        speed: 800,
+      },
+    },
+    theme: {
+      mode: theme,
     },
     plotOptions: {
       bar: {
@@ -60,29 +75,43 @@ export default function StackedBarChart({
     xaxis: {
       categories: chartData.categories,
       labels: {
-        style: { fontSize: '12px' },
+        style: {
+          colors: theme === 'dark' ? '#6c7a91' : '#656d77',
+          fontSize: '12px',
+          fontFamily: 'inherit',
+        },
       },
     },
     yaxis: {
       labels: {
         formatter: yFormatter,
+        style: {
+          colors: theme === 'dark' ? '#6c7a91' : '#656d77',
+          fontSize: '11px',
+          fontFamily: 'inherit',
+        },
       },
     },
     legend: {
       position: 'top',
       horizontalAlign: 'center',
       fontSize: '16px',
+      fontFamily: 'inherit',
+      labels: {
+        colors: theme === 'dark' ? '#6c7a91' : '#656d77',
+      },
     },
     colors: colors,
     dataLabels: {
       enabled: false,
     },
     tooltip: {
+      theme: theme,
       y: {
         formatter: yFormatter,
       },
     },
-  }), [chartData.categories, yFormatter, colors])
+  }), [chartData.categories, yFormatter, colors, theme])
 
   const series = useMemo(() => chartData.series, [chartData.series])
 
