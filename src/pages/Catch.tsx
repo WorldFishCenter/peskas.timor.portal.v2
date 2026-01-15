@@ -65,8 +65,6 @@ export default function Catch() {
     const weightChange = prevWeight ? ((avgWeight - prevWeight) / prevWeight) * 100 : 0
 
     const lastMonthBoats = last12[last12.length - 1]?.n_boats ?? 0
-    const prevMonthBoats = last12.length >= 2 ? (last12[last12.length - 2]?.n_boats ?? 0) : 0
-    const boatsChange = prevMonthBoats ? ((lastMonthBoats - prevMonthBoats) / prevMonthBoats) * 100 : 0
 
     const getTrend = (val: number) => ({
       value: `${val >= 0 ? '+' : ''}${val.toFixed(1)}%`,
@@ -79,7 +77,6 @@ export default function Catch() {
       nBoats: lastMonthBoats.toLocaleString(),
       catchTrend: getTrend(catchChange),
       weightTrend: getTrend(weightChange),
-      boatsTrend: getTrend(boatsChange),
       catchSparkline: last12.map(r => ({ date: r.date_bin_start, value: (r.catch ?? 0) / 1000 })),
       weightSparkline: last12.map(r => ({ date: r.date_bin_start, value: r.landing_weight ?? 0 })),
     }
@@ -176,7 +173,7 @@ export default function Catch() {
                     <div className="card-body">
                       <div className="d-flex align-items-center">
                         <div className="subheader">{t('vars.landing_weight.short_name', { defaultValue: 'Catch per trip' })}</div>
-                        <div className="ms-auto text-muted small">{t('common.avg')}</div>
+                        <div className="ms-auto text-muted small">{t('common.last_12_months')}</div>
                       </div>
                       <div className="d-flex align-items-baseline">
                         <div className="h1 mb-0">{loading ? t('common.loading_short', { defaultValue: '...' }) : `${metrics.avgLandingWeight} ${t('units.kg', { defaultValue: 'kg' })}`}</div>
@@ -200,9 +197,7 @@ export default function Catch() {
                     <div className="card-body">
                       <div className="row align-items-center">
                         <div className="col-auto">
-                          <span
-                            className={`avatar ${metrics.boatsTrend.direction === 'up' ? 'bg-green-lt' : metrics.boatsTrend.direction === 'down' ? 'bg-red-lt' : 'bg-secondary-lt'}`}
-                          >
+                          <span className="avatar bg-secondary-lt">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               className="icon"
@@ -215,29 +210,17 @@ export default function Catch() {
                               strokeLinecap="round"
                               strokeLinejoin="round"
                             >
-                              {metrics.boatsTrend.direction === 'up' ? (
-                                <path d="M17 7l-10 10m0 -5v5h5" />
-                              ) : metrics.boatsTrend.direction === 'down' ? (
-                                <path d="M7 7l10 10m-5 0h5v-5" />
-                              ) : (
-                                <path d="M5 12h14" />
-                              )}
+                              <path d="M5 12h14" />
                             </svg>
                           </span>
                         </div>
                         <div className="col">
                           <div className="d-flex align-items-center">
                             <div className="font-weight-medium">{t('vars.n_boats.short_name', { defaultValue: 'Active boats' })}</div>
-                            <div className="ms-auto lh-1 text-muted small">{t('common.last_month')}</div>
+                            <div className="ms-auto lh-1 text-muted small">{municipality === 'all' ? t('common.national', { defaultValue: 'National' }) : municipality}</div>
                           </div>
                           <div className="d-flex align-items-center">
                             <div className="h1 mb-0">{loading ? t('common.loading_short', { defaultValue: '...' }) : metrics.nBoats}</div>
-                            <span
-                              className={`ms-2 ${metrics.boatsTrend.direction === 'up' ? 'text-green' : metrics.boatsTrend.direction === 'down' ? 'text-red' : 'text-muted'}`}
-                            >
-                              {metrics.boatsTrend.value}
-                            </span>
-                            <span className="text-muted small ms-1">vs prev. month</span>
                           </div>
                         </div>
                       </div>
