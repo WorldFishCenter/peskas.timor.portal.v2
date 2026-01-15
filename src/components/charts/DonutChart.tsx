@@ -64,6 +64,8 @@ export default function DonutChart({
       show: true,
       width: 2,
       colors: [theme === 'dark' ? '#1b2434' : '#fff'],
+      curve: 'smooth',
+      lineCap: 'round',
     },
     legend: {
       show: true,

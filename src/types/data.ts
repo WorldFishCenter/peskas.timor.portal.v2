@@ -166,6 +166,21 @@ export interface PortfolioData {
   mean_revenue: number;
 }
 
+export interface NutrientPerCatch {
+  nutrient_names: string;
+  nut_rdi: number;
+}
+
+export interface NutrientHabitatData {
+  x: string;
+  y: number;
+}
+
+export interface NutrientHabitat {
+  name: string;
+  data: NutrientHabitatData[];
+}
+
 export interface SummaryData {
   n_surveys: SurveyCountByArea[];
   estimated_tons: EstimatedTonsByGroup[];
@@ -179,6 +194,8 @@ export interface SummaryData {
   conservation_methods: ConservationMethods[];
   conservation: ConservationRecord[];
   portfolio_data: PortfolioData[];
+  nutrients_per_catch?: NutrientPerCatch[];
+  nutrients_habitat?: NutrientHabitat[];
   map_center?: [number, number][];
 }
 
@@ -395,6 +412,7 @@ export interface ParsNutrientsSection {
   };
   treemap_kg?: {
     title: string;
+    description?: string;
   };
 }
 

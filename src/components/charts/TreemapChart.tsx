@@ -19,6 +19,7 @@ interface TreemapChartProps {
   title?: string
   colors?: string[]
   height?: number
+  unit?: string
 }
 
 export default function TreemapChart({
@@ -26,10 +27,11 @@ export default function TreemapChart({
   title,
   colors = habitatPalette,
   height = 450,
+  unit,
 }: TreemapChartProps) {
   const theme = useTheme()
   const { t } = useI18n()
-  const kgUnit = t('units.kg', { defaultValue: 'kg' })
+  const displayUnit = unit ?? t('units.kg', { defaultValue: 'kg' })
 
   if (!data || data.length === 0) {
     return (
@@ -101,7 +103,7 @@ export default function TreemapChart({
         fontFamily: 'inherit',
       },
       formatter: function (text: string, op: any) {
-        return `${text}: ${op.value.toLocaleString()} ${kgUnit}`
+        return `${text}: ${op.value.toLocaleString()} ${displayUnit}`
       },
     },
     stroke: {
@@ -120,7 +122,7 @@ export default function TreemapChart({
     tooltip: {
       theme: theme,
       y: {
-        formatter: (val: number) => `${val.toLocaleString()} ${kgUnit}`,
+        formatter: (val: number) => `${val.toLocaleString()} ${displayUnit}`,
       },
     },
   }

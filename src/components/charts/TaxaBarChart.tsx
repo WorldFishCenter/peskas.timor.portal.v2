@@ -139,6 +139,12 @@ export default function TaxaBarChart({
     dataLabels: {
       enabled: false,
     },
+    stroke: {
+      show: false,
+      width: 0,
+      curve: 'smooth',
+      lineCap: 'round',
+    },
     xaxis: {
       labels: {
         style: {

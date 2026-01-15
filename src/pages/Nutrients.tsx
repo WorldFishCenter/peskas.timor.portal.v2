@@ -1,9 +1,7 @@
 import { useMemo } from 'react'
 import { useI18n } from '../i18n'
 import { useData } from '../hooks'
-import { useFilters } from '../context/FilterContext'
-import MunicipalityFilter from '../components/MunicipalityFilter'
-import TimeSeriesChart from '../components/charts/TimeSeriesChart'
+import StackedBarTimeSeriesChart from '../components/charts/StackedBarTimeSeriesChart'
 import TreemapChart from '../components/charts/TreemapChart'
 import VariableDescriptions from '../components/VariableDescriptions'
 import type { TreemapDataItem } from '../components/charts/TreemapChart'
@@ -12,7 +10,6 @@ import { interpolateViridis } from 'd3-scale-chromatic'
 
 export default function Nutrients() {
   const { t } = useI18n()
-  const { municipality, setMunicipality } = useFilters()
   const { data: nutrientsData, loading: nutrientsLoading } = useData('nutrients_aggregated')
   const { data: summaryData, loading: summaryLoading } = useData('summary_data')
   const { data: pars } = useData('pars')
@@ -101,10 +98,6 @@ export default function Nutrients() {
 
   const pageTitle = pars?.nutrients?.title?.text ?? t('nav.nutrients')
   const highlightTitle = pars?.vars?.nut_rdi?.short_name ?? t('nutrients.highlight')
-  const treemapAvgTitle = pars?.nutrients?.treemap_average?.title ?? t('nutrients.treemap_average')
-  const treemapAvgDesc = pars?.nutrients?.treemap_average?.description ?? ''
-  const treemapKgTitle = pars?.nutrients?.treemap_kg?.title ?? t('nutrients.treemap_kg')
-  const treemapKgDesc = pars?.nutrients?.treemap_kg?.description ?? ''
 
   return (
     <>
@@ -115,11 +108,11 @@ export default function Nutrients() {
               <div className="page-pretitle">{t('header.overview')}</div>
               <h2 className="page-title">{t(pageTitle)}</h2>
             </div>
-            <div className="col-auto ms-auto d-print-none">
+            {/* <div className="col-auto ms-auto d-print-none">
               <div className="btn-list">
                 <MunicipalityFilter value={municipality} onChange={setMunicipality} />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -141,13 +134,11 @@ export default function Nutrients() {
                       <div className="spinner-border text-primary" role="status" />
                     </div>
                   ) : (
-                    <TimeSeriesChart
+                    <StackedBarTimeSeriesChart
                       series={nutrientTimeSeries}
                       height={400}
                       colors={nutrientColors}
                       yAxisTitle={t('nutrients.people_count', { defaultValue: 'People (thousands)' })}
-                      stacked={true}
-                      chartType="bar"
                     />
                   )}
                 </div>
@@ -159,10 +150,12 @@ export default function Nutrients() {
               <div className="card shadow-sm border-0">
                 <div className="card-header border-0 pb-0">
                   <div>
-                    <h3 className="card-title fw-bold">{t(treemapAvgTitle)}</h3>
-                    {treemapAvgDesc && (
+                    <h3 className="card-title fw-bold">
+                      {pars?.nutrients?.treemap_average?.title ?? t('nutrients.treemap_average')}
+                    </h3>
+                    {pars?.nutrients?.treemap_average?.description && (
                       <div className="text-muted mt-1" style={{ fontSize: '0.75rem', lineHeight: '1.4' }}>
-                        {t(treemapAvgDesc)}
+                        {pars.nutrients.treemap_average.description}
                       </div>
                     )}
                   </div>
@@ -177,6 +170,7 @@ export default function Nutrients() {
                       data={nutrientTreemapData}
                       colors={nutrientColors}
                       height={200}
+                      unit="Ind."
                     />
                   )}
                 </div>
@@ -188,10 +182,12 @@ export default function Nutrients() {
               <div className="card shadow-sm border-0">
                 <div className="card-header border-0 pb-0">
                   <div>
-                    <h3 className="card-title fw-bold">{t(treemapKgTitle)}</h3>
-                    {treemapKgDesc && (
+                    <h3 className="card-title fw-bold">
+                      {pars?.nutrients?.treemap_kg?.title ?? t('nutrients.treemap_kg')}
+                    </h3>
+                    {pars?.nutrients?.treemap_kg?.description && (
                       <div className="text-muted mt-1" style={{ fontSize: '0.75rem', lineHeight: '1.4' }}>
-                        {t(treemapKgDesc)}
+                        {pars.nutrients.treemap_kg.description}
                       </div>
                     )}
                   </div>
@@ -206,6 +202,7 @@ export default function Nutrients() {
                       data={habitatNutrientsData}
                       colors={habitatPalette}
                       height={450}
+                      unit="Ind."
                     />
                   ) : null}
                 </div>

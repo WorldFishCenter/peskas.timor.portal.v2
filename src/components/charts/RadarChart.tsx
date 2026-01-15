@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { spiderColors } from '../../constants/colors'
@@ -27,18 +28,7 @@ export default function RadarChart({
   const theme = useTheme()
   const { t } = useI18n()
 
-  if (!series || series.length === 0 || !categories || categories.length === 0) {
-    return (
-      <div
-        className="d-flex align-items-center justify-content-center"
-        style={{ height: `${height}px`, color: '#999' }}
-      >
-        {t('common.no_data', { defaultValue: 'No data available' })}
-      </div>
-    )
-  }
-
-  const options: ApexOptions = {
+  const options: ApexOptions = useMemo(() => ({
     chart: {
       type: 'radar',
       background: 'transparent',
@@ -89,10 +79,23 @@ export default function RadarChart({
     },
     stroke: {
       width: 2,
+      curve: 'smooth',
+      lineCap: 'round',
     },
     fill: {
       opacity: 0.2,
     },
+  }), [theme, categories, yFormatter, colors])
+
+  if (!series || series.length === 0 || !categories || categories.length === 0) {
+    return (
+      <div
+        className="d-flex align-items-center justify-content-center"
+        style={{ height: `${height}px`, color: '#999' }}
+      >
+        {t('common.no_data', { defaultValue: 'No data available' })}
+      </div>
+    )
   }
 
   return (

@@ -110,6 +110,12 @@ export default function RegionCompositionChart({
         borderRadius: 0,
       },
     },
+    stroke: {
+      show: false,
+      width: 0,
+      curve: 'smooth',
+      lineCap: 'round',
+    },
     xaxis: {
       categories: chartData.categories,
       labels: {
