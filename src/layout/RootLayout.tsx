@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { useI18n } from '../i18n'
+import { useI18n, type Lang } from '../i18n'
 
 type ThemeMode = 'light' | 'dark'
 
@@ -32,6 +32,12 @@ export default function RootLayout() {
   }, [theme])
 
   const { t, lang, setLang } = useI18n()
+  const languageCycle: Lang[] = ['en', 'tet', 'pt']
+  const languageLabels: Record<Lang, string> = { en: 'EN', tet: 'TET', pt: 'PT' }
+  const getNextLanguage = (current: Lang) => {
+    const currentIndex = languageCycle.indexOf(current)
+    return languageCycle[(currentIndex + 1) % languageCycle.length]
+  }
 
   useEffect(() => {
     if (typeof document !== 'undefined') {
@@ -65,7 +71,18 @@ export default function RootLayout() {
             </div>
             {/* Language toggle */}
             <div className="nav-item me-3">
-              <a href="#" className="nav-link" aria-label={t('actions.toggle_language')} title={t('actions.toggle_language')} onClick={(e) => { e.preventDefault(); setLang(lang === 'en' ? 'tet' : 'en') }}>{lang === 'en' ? 'EN' : 'TET'}</a>
+              <a
+                href="#"
+                className="nav-link"
+                aria-label={t('actions.toggle_language')}
+                title={t('actions.toggle_language')}
+                onClick={(e) => {
+                  e.preventDefault()
+                  setLang(getNextLanguage(lang))
+                }}
+              >
+                {languageLabels[lang]}
+              </a>
             </div>
             {/* User menu placeholder */}
             {/* <div className="nav-item dropdown">

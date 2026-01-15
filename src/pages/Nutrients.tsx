@@ -19,15 +19,16 @@ export default function Nutrients() {
     return Array.from({ length: 6 }, (_, i) => interpolateViridis(i / 5)).map(c => c.substring(0, 7))
   }, [])
 
-  // Nutrient names mapping
-  const nutrientNames: Record<string, string> = {
-    protein: 'Protein',
-    zinc: 'Zinc',
-    vitaminA: 'Vitamin A',
-    calcium: 'Calcium',
-    omega3: 'Omega-3',
-    iron: 'Iron'
-  }
+  // Nutrient names mapping - use translations
+  const nutrientNames: Record<string, string> = useMemo(() => ({
+    protein: t('nutrients.categories.protein'),
+    zinc: t('nutrients.categories.zinc'),
+    vitaminA: t('nutrients.categories.vita'),
+    calcium: t('nutrients.categories.calcium'),
+    omega3: t('nutrients.categories.omega3'),
+    iron: t('nutrients.categories.iron'),
+    vitd: t('nutrients.categories.vitd')
+  }), [t])
 
   // Stacked bar time series for nutrients
   const nutrientTimeSeries = useMemo(() => {
@@ -66,7 +67,7 @@ export default function Nutrients() {
       name: nutrientNames[nutrient] || nutrient,
       data: seriesData[nutrient]
     }))
-  }, [nutrientsData, pars])
+  }, [nutrientsData, pars, nutrientNames])
 
   // Nutrient treemap (average per catch)
   const nutrientTreemapData: TreemapDataItem[] = useMemo(() => {
@@ -82,7 +83,7 @@ export default function Nutrients() {
         x: item.nutrient_names,
         y: Math.round(item.nut_rdi)
       }))
-  }, [summaryData, pars])
+  }, [summaryData, pars, nutrientNames])
 
   // Habitat nutrients treemap data
   const habitatNutrientsData = useMemo(() => {
@@ -94,10 +95,11 @@ export default function Nutrients() {
     return summaryData.nutrients_habitat.filter((item: any) =>
       displayNames.includes(item.name)
     )
-  }, [summaryData, pars])
+  }, [summaryData, pars, nutrientNames])
 
-  const pageTitle = pars?.nutrients?.title?.text ?? t('nav.nutrients')
-  const highlightTitle = pars?.vars?.nut_rdi?.short_name ?? t('nutrients.highlight')
+  // Always use translations - translations are the single source of truth
+  const pageTitle = t('nutrients.title')
+  const highlightTitle = t('nutrients.highlight')
 
   return (
     <>
@@ -151,13 +153,11 @@ export default function Nutrients() {
                 <div className="card-header border-0 pb-0">
                   <div>
                     <h3 className="card-title fw-bold">
-                      {pars?.nutrients?.treemap_average?.title ?? t('nutrients.treemap_average')}
+                      {t('nutrients.treemap_average')}
                     </h3>
-                    {pars?.nutrients?.treemap_average?.description && (
-                      <div className="text-muted mt-1" style={{ fontSize: '0.75rem', lineHeight: '1.4' }}>
-                        {pars.nutrients.treemap_average.description}
-                      </div>
-                    )}
+                    <div className="text-muted mt-1" style={{ fontSize: '0.75rem', lineHeight: '1.4' }}>
+                      {t('nutrients.treemap_average_description')}
+                    </div>
                   </div>
                 </div>
                 <div className="card-body">
@@ -183,13 +183,11 @@ export default function Nutrients() {
                 <div className="card-header border-0 pb-0">
                   <div>
                     <h3 className="card-title fw-bold">
-                      {pars?.nutrients?.treemap_kg?.title ?? t('nutrients.treemap_kg')}
+                      {t('nutrients.treemap_kg')}
                     </h3>
-                    {pars?.nutrients?.treemap_kg?.description && (
-                      <div className="text-muted mt-1" style={{ fontSize: '0.75rem', lineHeight: '1.4' }}>
-                        {pars.nutrients.treemap_kg.description}
-                      </div>
-                    )}
+                    <div className="text-muted mt-1" style={{ fontSize: '0.75rem', lineHeight: '1.4' }}>
+                      {t('nutrients.treemap_kg_description')}
+                    </div>
                   </div>
                 </div>
                 <div className="card-body">
@@ -213,12 +211,12 @@ export default function Nutrients() {
             <div className="col">
               <VariableDescriptions
                 variables={['nut_rdi']}
-                heading={t(pars?.revenue?.description?.heading?.text || 'About this data')}
+                heading={t('revenue.description_heading')}
                 intro={
                   <>
-                    <p>{t(pars?.revenue?.description?.content?.text || '')}</p>
+                    <p>{t('revenue.description_content')}</p>
                     <div className="hr-text">
-                      {t(pars?.revenue?.description?.subheading?.text || 'Variable definitions')}
+                      {t('revenue.description_subheading')}
                     </div>
                   </>
                 }

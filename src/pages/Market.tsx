@@ -15,10 +15,19 @@ import { timeSeriesColors, spiderColors } from '../constants/colors'
 export default function Market() {
   const { t } = useI18n()
   const { municipality, setMunicipality } = useFilters()
-  const { data: pars } = useData('pars')
   const { data: summaryData, loading: summaryLoading } = useData('summary_data')
   const { data: municipalData, loading: municipalLoading } = useData('municipal_aggregated')
   const { data: aggregated, loading: aggregatedLoading } = useMunicipalData()
+
+  // Always use translations - translations are the single source of truth
+  const pagePretitle = t('catch.subtitle')
+  const pageTitle = t('market.title')
+  const priceCardTitle = t('vars.price_kg.short_name')
+  const conservationTitle = t('market.conservation_title')
+  const conservationSubtitle = t('market.conservation_description')
+  const descriptionHeading = t('revenue.description_heading')
+  const descriptionContent = t('revenue.description_content')
+  const descriptionSubheading = t('revenue.description_subheading')
 
   const conservationColors = useMemo(() => {
     return Array.from({ length: 5 }, (_, i) => interpolateViridis(i / 4)).map((c) =>
@@ -87,8 +96,8 @@ export default function Market() {
         <div className="container-xl">
           <div className="row g-2 align-items-center">
             <div className="col">
-              <div className="page-pretitle">{t(pars?.catch?.subtitle?.text || 'header.overview')}</div>
-              <h2 className="page-title">{t(pars?.market?.title?.text || 'nav.market')}</h2>
+              <div className="page-pretitle">{pagePretitle}</div>
+              <h2 className="page-title">{pageTitle}</h2>
             </div>
             <div className="col-auto ms-auto d-print-none">
               <div className="btn-list">
@@ -107,7 +116,7 @@ export default function Market() {
                 <div className="card-header d-flex align-items-center">
                   <div>
                     <h3 className="card-title fw-bold">
-                      {t(pars?.vars?.price_kg?.short_name || 'Price per kg')}
+                      {priceCardTitle}
                     </h3>
                     <div className="card-subtitle">{t('market.trend_subtitle', { defaultValue: 'Monthly price per kilogram' })}</div>
                   </div>
@@ -157,11 +166,11 @@ export default function Market() {
                 <div className="card-header d-flex align-items-center">
                   <div>
                     <h3 className="card-title fw-bold">
-                      {t(pars?.market?.conservation?.region_barplot?.title || 'Fish Conservation')}
+                      {conservationTitle}
                     </h3>
-                    {pars?.market?.conservation?.region_barplot?.description && (
+                    {conservationSubtitle && (
                       <div className="card-subtitle">
-                        {t(pars.market.conservation.region_barplot.description)}
+                        {conservationSubtitle}
                       </div>
                     )}
                   </div>
@@ -178,9 +187,9 @@ export default function Market() {
                       colors={conservationColors}
                       yFormatter={(val: number) => `${val}%`}
                     />
-                  ) : (
+                    ) : (
                     <div className="d-flex align-items-center justify-content-center" style={{ height: '320px' }}>
-                      <div className="text-muted small">No conservation data available</div>
+                      <div className="text-muted small">{t('common.no_conservation_data', { defaultValue: 'No conservation data available' })}</div>
                     </div>
                   )}
                 </div>
@@ -193,20 +202,21 @@ export default function Market() {
             </div>
 
             {/* Variable Descriptions - Remaining columns */}
-            <div className="col">
-              <VariableDescriptions
-                variables={['price_kg']}
-                heading={t(pars?.revenue?.description?.heading?.text || 'About this data')}
-                intro={
-                  <>
-                    <p>{t(pars?.revenue?.description?.content?.text || '')}</p>
-                    <div className="hr-text">
-                      {t(pars?.revenue?.description?.subheading?.text || 'Variable definitions')}
-                    </div>
-                  </>
-                }
-              />
-            </div>
+              <div className="col">
+                <VariableDescriptions
+                  type="revenue"
+                  variables={['price_kg']}
+                  heading={descriptionHeading}
+                  intro={
+                    <>
+                      {descriptionContent && <p>{descriptionContent}</p>}
+                      <div className="hr-text">
+                        {descriptionSubheading}
+                      </div>
+                    </>
+                  }
+                />
+              </div>
           </div>
         </div>
       </div>

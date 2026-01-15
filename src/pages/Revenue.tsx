@@ -120,7 +120,7 @@ export default function Revenue() {
                 <div className="card-header d-flex align-items-center">
                   <div>
                     <h3 className="card-title fw-bold">
-                      {t('vars.revenue.short_name', { defaultValue: 'Revenue Trends' })}
+                      {t('revenue.trends', { defaultValue: 'Revenue Trends' })}
                     </h3>
                     <div className="card-subtitle">{t('revenue.trend_subtitle', { defaultValue: 'Monthly revenue in million USD' })}</div>
                   </div>
@@ -159,7 +159,7 @@ export default function Revenue() {
                         >
                           {metrics.revenueTrend.value}
                         </span>
-                        <span className="text-muted small ms-1">vs prev. year</span>
+                        <span className="text-muted small ms-1">{t('common.vs_prev_year', { defaultValue: 'vs prev. year' })}</span>
                       </div>
                     </div>
                     <div className="mt-auto" style={{ minHeight: '40px', margin: '0 -1px -1px -1px' }}>
@@ -183,7 +183,7 @@ export default function Revenue() {
                         >
                           {metrics.tripTrend.value}
                         </span>
-                        <span className="text-muted small ms-1">vs prev. year</span>
+                        <span className="text-muted small ms-1">{t('common.vs_prev_year', { defaultValue: 'vs prev. year' })}</span>
                       </div>
                     </div>
                     <div className="mt-auto" style={{ minHeight: '40px', margin: '0 -1px -1px -1px' }}>
@@ -217,7 +217,7 @@ export default function Revenue() {
                         </div>
                         <div className="col">
                           <div className="d-flex align-items-center">
-                            <div className="font-weight-medium">{t('vars.n_boats.short_name', { defaultValue: 'Active boats' })}</div>
+                            <div className="font-weight-medium">{t('vars.n_boats.active', { defaultValue: 'Active boats' })}</div>
                             <div className="ms-auto lh-1 text-muted small">{municipality === 'all' ? t('common.national', { defaultValue: 'National' }) : municipality}</div>
                           </div>
                           <div className="d-flex align-items-center">
@@ -237,13 +237,11 @@ export default function Revenue() {
                 <div className="card-header border-0 pb-0">
                   <div>
                     <h3 className="card-title fw-bold">
-                      {pars?.revenue?.treemap?.title ?? t('revenue.habitat_treemap', { defaultValue: 'Revenue Distribution' })}
+                      {t('revenue.habitat_treemap')}
                     </h3>
-                    {pars?.revenue?.treemap?.description && (
-                      <div className="text-muted mt-1" style={{ fontSize: '0.75rem', lineHeight: '1.4' }}>
-                        {pars.revenue.treemap.description}
-                      </div>
-                    )}
+                    <div className="text-muted mt-1" style={{ fontSize: '0.75rem', lineHeight: '1.4' }}>
+                      {t('revenue.treemap_description')}
+                    </div>
                   </div>
                 </div>
                 <div className="card-body">

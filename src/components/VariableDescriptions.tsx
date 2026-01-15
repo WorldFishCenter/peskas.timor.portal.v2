@@ -45,6 +45,10 @@ interface VariableInfo {
   methods?: string
   problems?: string
   quality?: 'low' | 'medium' | 'high' | null
+  short_name_key?: string
+  description_key?: string
+  methods_key?: string
+  problems_key?: string
 }
 
 const getBgQuality = (quality: 'low' | 'medium' | 'high' | null | undefined) => {
@@ -69,25 +73,41 @@ export default function VariableDescriptions({ variables, type, heading, intro }
   const { t } = useI18n()
   const { data: pars } = useData('pars')
 
+  // Always use translations - translations are the single source of truth
   const finalHeading = useMemo(() => {
     if (heading) return heading
-    if (!type || !pars) return t('common.variable_descriptions', { defaultValue: 'Variable Descriptions' })
-    return t(pars[type]?.description?.heading?.text || `${type}.description_heading`)
-  }, [heading, type, pars, t])
+    if (!type) return t('common.variable_descriptions')
+    // Map type to translation key
+    const headingKey = type === 'revenue' ? 'revenue.description_heading' 
+      : type === 'catch' ? 'catch.description_heading'
+      : 'common.variable_descriptions'
+    return t(headingKey)
+  }, [heading, type, t])
 
   const finalIntro = useMemo(() => {
     if (intro) return intro
-    if (!type || !pars || !pars[type]?.description?.content?.text) return null
+    if (!type) return null
+    
+    // Map type to translation keys
+    const contentKey = type === 'revenue' ? 'revenue.description_content'
+      : type === 'catch' ? 'catch.description_content'
+      : null
+    
+    const subheadingKey = type === 'revenue' ? 'revenue.description_subheading'
+      : type === 'catch' ? 'catch.description_subheading'
+      : null
+    
+    if (!contentKey) return null
     
     return (
       <>
-        <p className="text-secondary">{t(pars[type].description.content.text)}</p>
-        {pars[type].description.subheading?.text && (
-          <div className="hr-text">{t(pars[type].description.subheading.text)}</div>
+        <p className="text-secondary">{t(contentKey)}</p>
+        {subheadingKey && (
+          <div className="hr-text">{t(subheadingKey)}</div>
         )}
       </>
     )
-  }, [intro, type, pars, t])
+  }, [intro, type, t])
 
   const variableInfos = useMemo(() => {
     if (!pars?.vars) return []
@@ -99,7 +119,12 @@ export default function VariableDescriptions({ variables, type, heading, intro }
 
         return {
           name: varName,
-          ...varInfo
+          ...varInfo,
+          // Use translation keys instead of English text from pars.json
+          short_name_key: `vars.${varName}.short_name`,
+          description_key: varInfo.description ? `vars.${varName}.description` : undefined,
+          methods_key: varInfo.methods ? `vars.${varName}.methods` : undefined,
+          problems_key: varInfo.problems ? `vars.${varName}.problems` : undefined,
         }
       })
       .filter((v): v is NonNullable<typeof v> => v !== null)
@@ -130,7 +155,7 @@ export default function VariableDescriptions({ variables, type, heading, intro }
                     aria-expanded={isLast ? 'true' : 'false'}
                   >
                     <span className={`badge badge-pill me-3 ${bg.normal}`}></span>
-                    {t(varInfo.short_name)}
+                    {varInfo.short_name_key ? t(varInfo.short_name_key, { defaultValue: varInfo.short_name }) : varInfo.short_name}
                   </button>
                 </h2>
                 <div
@@ -141,21 +166,21 @@ export default function VariableDescriptions({ variables, type, heading, intro }
                   <div className="accordion-body">
                     {varInfo.description && (
                       <div className="mb-3">
-                        <p>{parseMarkdownLinks(t(varInfo.description))}</p>
+                        <p>{parseMarkdownLinks(varInfo.description_key ? t(varInfo.description_key, { defaultValue: varInfo.description }) : varInfo.description)}</p>
                       </div>
                     )}
 
                     {varInfo.methods && (
                       <div className="small mb-3">
-                        <strong>{t(pars.indicators?.processing?.text || 'Data processing and validation:')}</strong>
-                        <p className="mb-0">{parseMarkdownLinks(t(varInfo.methods))}</p>
+                        <strong>{t('common.data_processing')}</strong>
+                        <p className="mb-0">{parseMarkdownLinks(varInfo.methods_key ? t(varInfo.methods_key, { defaultValue: varInfo.methods }) : varInfo.methods)}</p>
                       </div>
                     )}
 
                     {varInfo.problems && (
                       <div className="small mb-3">
-                        <strong>{t(pars.indicators?.limitations?.text || 'Known problems and limitations:')}</strong>
-                        <p className="mb-0">{parseMarkdownLinks(t(varInfo.problems))}</p>
+                        <strong>{t('common.known_problems')}</strong>
+                        <p className="mb-0">{parseMarkdownLinks(varInfo.problems_key ? t(varInfo.problems_key, { defaultValue: varInfo.problems }) : varInfo.problems)}</p>
                       </div>
                     )}
 
@@ -176,7 +201,7 @@ export default function VariableDescriptions({ variables, type, heading, intro }
                           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                           <path d="M5 12l5 5l10 -10" />
                         </svg>
-                        {t(pars.indicators?.quality?.text || 'DATA QUALITY:')} {t(varInfo.quality).toUpperCase()}
+                        {t('common.data_quality')} {t(varInfo.quality).toUpperCase()}
                       </p>
                     )}
                   </div>

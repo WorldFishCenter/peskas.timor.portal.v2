@@ -28,11 +28,12 @@ export default function Home() {
     value: item.tons,
   })) ?? []
 
-  const introTitle = pars?.home?.intro?.title ?? ''
-  const introContent = pars?.home?.intro?.content ?? ''
-  const reportText = pars?.home?.report?.text ?? t('home.download_report')
-  const tableTitle = pars?.home?.table?.title ?? t('home.summary_table')
-  const tableCaption = pars?.home?.table?.caption ?? ''
+  // Always use translations - translations are the single source of truth
+  const introTitle = t('home.intro.title')
+  const introContent = t('home.intro.content')
+  const reportText = t('home.download_report')
+  const tableTitle = t('home.summary_table')
+  const tableCaption = t('home.table.caption')
 
   return (
     <>

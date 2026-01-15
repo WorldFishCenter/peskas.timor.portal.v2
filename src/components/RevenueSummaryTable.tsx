@@ -22,7 +22,7 @@ interface RevenueTableRow {
 export default function RevenueSummaryTable() {
   const { t, lang } = useI18n()
   const theme = useTheme()
-  const locale = lang === 'tet' ? 'tet' : 'en-US'
+  const locale = lang === 'tet' ? 'tet' : lang === 'pt' ? 'pt-PT' : 'en-US'
   const { data: aggregated, loading } = useData('aggregated')
   const [selectedYear, setSelectedYear] = useState<string>('all')
 

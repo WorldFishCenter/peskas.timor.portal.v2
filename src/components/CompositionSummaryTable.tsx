@@ -165,7 +165,9 @@ export default function CompositionSummaryTable() {
     getSortedRowModel: getSortedRowModel(),
   })
 
-  const tableHeading = t(pars?.composition?.table?.heading?.text || 'Catch by Taxa and Year')
+  const tableHeading = pars?.composition?.table?.heading?.text 
+    ? t(pars.composition.table.heading.text)
+    : t('composition.table_heading', { defaultValue: 'Catch by Taxa and Year' })
   const tableFooter = pars?.composition?.table?.footer?.text ? t(pars.composition.table.footer.text) : null
 
   return (

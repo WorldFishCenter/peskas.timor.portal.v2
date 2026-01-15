@@ -21,7 +21,7 @@ interface MarketTableRow {
 export default function MarketSummaryTable() {
   const { t, lang } = useI18n()
   const theme = useTheme()
-  const locale = lang === 'tet' ? 'tet' : 'en-US'
+  const locale = lang === 'tet' ? 'tet' : lang === 'pt' ? 'pt-PT' : 'en-US'
   const { data: aggregated, loading } = useData('aggregated')
   const { data: pars } = useData('pars')
   const [selectedYear, setSelectedYear] = useState<string>('all')
@@ -62,6 +62,11 @@ export default function MarketSummaryTable() {
     return ['all', ...uniqueYears]
   }, [aggregated])
 
+  // Always use translations - translations are the single source of truth
+  const priceHeader = t('vars.price_kg.short_name')
+  const landingHeader = t('vars.landing_weight.short_name')
+  const landingsLabel = t('vars.n_landings_per_boat.short_name')
+
   const columns = useMemo<ColumnDef<MarketTableRow>[]>(
     () => [
       {
@@ -71,7 +76,7 @@ export default function MarketSummaryTable() {
       },
       {
         accessorKey: 'price_kg',
-        header: t(pars?.vars?.price_kg?.short_name || 'Price per kg ($)'),
+        header: priceHeader,
         cell: info => `$${(info.getValue() as number).toFixed(2)}`,
         meta: {
           style: (value: number) => getHeatmapStyle(value, columnValues.price_kg, theme, tabPalette),
@@ -79,7 +84,7 @@ export default function MarketSummaryTable() {
       },
       {
         accessorKey: 'landing_weight',
-        header: t(pars?.vars?.landing_weight?.short_name || 'Catch per trip (kg)'),
+        header: landingHeader,
         cell: info => `${(info.getValue() as number).toFixed(1)} ${t('units.kg', { defaultValue: 'kg' })}`,
         meta: {
           style: (value: number) => getHeatmapStyle(value, columnValues.landing_weight, theme, tabPalette),
@@ -87,7 +92,7 @@ export default function MarketSummaryTable() {
       },
       {
         accessorKey: 'n_landings_per_boat',
-        header: t(pars?.vars?.n_landings_per_boat?.short_name || 'Trips per boat'),
+        header: landingsLabel,
         cell: info => (info.getValue() as number).toFixed(2),
         meta: {
           style: (value: number) => getHeatmapStyle(value, columnValues.n_landings_per_boat, theme, tabPalette),
@@ -111,7 +116,8 @@ export default function MarketSummaryTable() {
     }
   }, [tableData])
 
-  const tableHeading = t(pars?.revenue?.table?.heading?.text || 'Monthly Summary')
+  // Always use translations - translations are the single source of truth
+  const tableHeading = t('revenue.table_heading')
 
   return (
     <div className="card shadow-sm border-0">
@@ -126,7 +132,7 @@ export default function MarketSummaryTable() {
           >
             {years.map(year => (
               <option key={year} value={year}>
-                {year === 'all' ? t('table.all_years', { defaultValue: 'All years' }) : year}
+                {year === 'all' ? t('common.all_years', { defaultValue: 'All years' }) : year}
               </option>
             ))}
           </select>
@@ -182,7 +188,7 @@ export default function MarketSummaryTable() {
           <div className="d-flex align-items-center justify-content-end gap-4">
             <div className="d-flex align-items-center gap-2">
               <span className="text-muted small fw-bold text-uppercase" style={{ fontSize: '0.65rem' }}>
-                {t('table.avg', { defaultValue: 'Avg' })} {t(pars?.vars?.price_kg?.short_name || 'Price/kg')}
+                {t('common.avg', { defaultValue: 'Avg' })} {priceHeader}
               </span>
               <span className="text-primary fw-bold">
                 ${averages.price_kg.toFixed(2)}
@@ -190,7 +196,7 @@ export default function MarketSummaryTable() {
             </div>
             <div className="d-flex align-items-center gap-2">
               <span className="text-muted small fw-bold text-uppercase" style={{ fontSize: '0.65rem' }}>
-                {t('table.avg', { defaultValue: 'Avg' })} {t(pars?.vars?.landing_weight?.short_name || 'Catch/trip')}
+                {t('common.avg', { defaultValue: 'Avg' })} {landingHeader}
               </span>
               <span className="text-azure fw-bold">
                 {averages.landing_weight.toFixed(1)} {t('units.kg', { defaultValue: 'kg' })}

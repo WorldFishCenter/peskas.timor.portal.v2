@@ -17,7 +17,8 @@ export default function Composition() {
   // Local filters for composition charts
   const [regionYear, setRegionYear] = useState<string>('all')
   const [taxaYear, setTaxaYear] = useState<string>(new Date().getFullYear().toString())
-  const [taxaMunicipality, setTaxaMunicipality] = useState<string>('National')
+  // Use 'national' as a constant key, not the translated value, so it works across language changes
+  const [taxaMunicipality, setTaxaMunicipality] = useState<string>('national')
 
   // Generate viridis colors for taxa
   const taxaColors = useMemo(() => {
@@ -39,12 +40,13 @@ export default function Composition() {
     return map
   }, [taxaNames])
 
-  const pretitle = pars?.catch?.subtitle?.text ?? ''
-  const title = pars?.composition?.title?.text ?? ''
-  const percentHeading = pars?.composition?.percent?.heading?.text ?? ''
-  const highlightHeading = pars?.composition?.highlight?.heading?.text ?? ''
-  const descriptionHeading = pars?.revenue?.description?.heading?.text ?? ''
-  const descriptionContent = pars?.revenue?.description?.content?.text ?? ''
+  // Always use translations - translations are the single source of truth
+  const pretitle = t('composition.pretitle')
+  const title = t('composition.title')
+  const percentHeading = t('composition.percent.heading')
+  const highlightHeading = t('composition.highlight.heading')
+  const descriptionHeading = t('revenue.description_heading')
+  const descriptionContent = t('revenue.description_content')
 
   // Generate years for filters (current year back to 2018)
   const years = useMemo(() => {
@@ -56,11 +58,14 @@ export default function Composition() {
     return yearList
   }, [])
 
-  // Get unique municipalities
+  // Get unique municipalities - use 'national' as key, display translated value
   const municipalities = useMemo(() => {
     if (!municipalTaxa) return []
-    return ['National', ...Array.from(new Set(municipalTaxa.map(d => d.region))).sort()]
-  }, [municipalTaxa])
+    return [
+      { key: 'national', label: t('common.national') },
+      ...Array.from(new Set(municipalTaxa.map(d => d.region))).sort().map(region => ({ key: region, label: region }))
+    ]
+  }, [municipalTaxa, t])
 
   return (
     <>
@@ -169,7 +174,7 @@ export default function Composition() {
                       style={{ width: 'auto' }}
                     >
                       {municipalities.map(muni => (
-                        <option key={muni} value={muni}>{muni}</option>
+                        <option key={muni.key} value={muni.key}>{muni.label}</option>
                       ))}
                     </select>
                   </div>
@@ -183,10 +188,10 @@ export default function Composition() {
                     </div>
                   ) : taxaAggregated?.month && taxaAggregated.month.length > 0 ? (
                     <TaxaBarChart
-                      data={taxaMunicipality === 'National' ? taxaAggregated.month : (municipalTaxa || [])}
+                      data={taxaMunicipality === 'national' ? taxaAggregated.month : (municipalTaxa || [])}
                       taxaNameMap={taxaNameMap}
                       year={taxaYear}
-                      municipality={taxaMunicipality === 'National' ? undefined : taxaMunicipality}
+                      municipality={taxaMunicipality === 'national' ? undefined : taxaMunicipality}
                       colors={taxaColors}
                       height={400}
                     />
@@ -208,7 +213,7 @@ export default function Composition() {
                   <>
                     <p>{t(descriptionContent)}</p>
                     <div className="hr-text">
-                      {t(pars?.revenue?.description?.subheading?.text || 'Variable definitions')}
+                      {t('revenue.description_subheading')}
                     </div>
                   </>
                 }

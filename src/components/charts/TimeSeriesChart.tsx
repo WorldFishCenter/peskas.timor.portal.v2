@@ -40,7 +40,7 @@ export default function TimeSeriesChart({
 }: TimeSeriesChartProps) {
   const theme = useTheme()
   const { t, lang } = useI18n()
-  const locale = lang === 'tet' ? 'tet' : 'en-US'
+  const locale = lang === 'tet' ? 'tet' : lang === 'pt' ? 'pt-PT' : 'en-US'
   const monthYearFormatter = useMemo(
     () => new Intl.DateTimeFormat(locale, { month: 'short', year: 'numeric' }),
     [locale]
