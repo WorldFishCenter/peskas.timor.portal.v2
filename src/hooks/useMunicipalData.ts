@@ -4,7 +4,6 @@
 import { useMemo } from 'react';
 import { useData } from './useData';
 import { useFilters } from '../context/FilterContext';
-import type { Municipality } from '../constants';
 
 export interface MunicipalAggregatedRow {
   region: string;
@@ -61,7 +60,7 @@ export function useMunicipalData() {
       row => row.region.toLowerCase() === municipality.toLowerCase()
     );
 
-    return { month: filtered } as typeof nationalData;
+    return { month: filtered } as unknown as typeof nationalData;
   }, [municipality, nationalData, municipalData]);
 
   const loading = municipality === 'all' ? nationalLoading : (nationalLoading || municipalLoading);

@@ -36,7 +36,7 @@ export function biasedNormalize(value: number, values: number[], bias: number = 
   return Math.pow(n, 1 / bias);
 }
 
-export function getHeatmapStyle(value: number, values: number[], theme: 'light' | 'dark', tabPalette: string[]) {
+export function getHeatmapStyle(value: number, values: number[], theme: 'light' | 'dark', _tabPalette: string[]) {
   if (value === undefined || value === null || isNaN(value) || values.length === 0) return {};
   
   const t = biasedNormalize(value, values);

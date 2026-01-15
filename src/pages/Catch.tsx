@@ -17,7 +17,6 @@ export default function Catch() {
   const { municipality, setMunicipality } = useFilters()
   const { data: aggregated, loading, error } = useMunicipalData()
   const { data: summaryData } = useData('summary_data')
-  const { data: pars } = useData('pars')
 
   const chartSeries = useMemo(() => {
     if (!aggregated?.month) return []

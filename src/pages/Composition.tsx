@@ -9,7 +9,7 @@ import { interpolateViridis } from 'd3-scale-chromatic'
 
 export default function Composition() {
   const { t } = useI18n()
-  const { data: pars, loading: parsLoading } = useData('pars')
+  const { loading: parsLoading } = useData('pars')
   const { data: taxaAggregated, loading: taxaLoading } = useData('taxa_aggregated')
   const { data: municipalTaxa, loading: municipalTaxaLoading } = useData('municipal_taxa')
   const { data: taxaNames } = useData('taxa_names')

@@ -226,10 +226,6 @@ export default function FishingActivityMap({ height = 650 }: FishingActivityMapP
             controller={true}
             layers={layers}
             useDevicePixels={false}
-            glOptions={{
-              preserveDrawingBuffer: true,
-              failIfMajorPerformanceCaveat: false
-            }}
           >
             <Map mapStyle={mapStyle} mapLib={maplibregl} />
           </DeckGL>

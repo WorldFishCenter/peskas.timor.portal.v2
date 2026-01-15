@@ -5,8 +5,6 @@
  * and accessible. Run this in the browser console to check for missing keys.
  */
 
-import type { Lang } from '../i18n'
-
 type Dict = Record<string, unknown>
 
 // Import dictionaries - need to access them differently

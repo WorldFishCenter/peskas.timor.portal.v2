@@ -17,7 +17,6 @@ export interface TimeSeriesSeries {
 
 interface StackedBarTimeSeriesChartProps {
   series: TimeSeriesSeries[]
-  title?: string
   colors?: string[]
   height?: number
   yAxisTitle?: string
@@ -25,13 +24,12 @@ interface StackedBarTimeSeriesChartProps {
 
 export default function StackedBarTimeSeriesChart({
   series,
-  title,
   colors = timeSeriesColors,
   height = 400,
   yAxisTitle,
 }: StackedBarTimeSeriesChartProps) {
   const theme = useTheme()
-  const { t, lang } = useI18n()
+  const { lang } = useI18n()
   const locale = lang === 'tet' ? 'tet' : lang === 'pt' ? 'pt-PT' : 'en-US'
 
   const monthYearFormatter = useMemo(

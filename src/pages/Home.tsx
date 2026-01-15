@@ -7,7 +7,7 @@ import { donutBlue, viridis5 } from '../constants/colors'
 
 export default function Home() {
   const { t } = useI18n()
-  const { data: pars, loading: parsLoading } = useData('pars')
+  const { loading: parsLoading } = useData('pars')
   const { data: summaryData, loading: summaryLoading } = useData('summary_data')
 
   const loading = parsLoading || summaryLoading
