@@ -100,6 +100,10 @@ export default function TaxaBarChart({
   const catchLabel = t('catch.catch_t', { defaultValue: 'Catch (tons)' })
   const tonsLabel = t('units.tons', { defaultValue: 'tons' })
 
+  // Calculate dynamic height based on number of taxa (minimum 40px per bar, add padding for legend/labels)
+  // Ensure minimum height but allow growth based on data
+  const dynamicHeight = Math.max(height, chartData.length * 45 + 100)
+
   const series = [{
     name: catchLabel,
     data: chartData.map(d => ({
@@ -181,7 +185,7 @@ export default function TaxaBarChart({
       options={options}
       series={series}
       type="bar"
-      height={height}
+      height={dynamicHeight}
     />
   )
 }

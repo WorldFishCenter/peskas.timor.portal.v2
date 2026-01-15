@@ -4,14 +4,11 @@ import CompositionSummaryTable from '../components/CompositionSummaryTable'
 import RegionCompositionChart from '../components/charts/RegionCompositionChart'
 import TaxaBarChart from '../components/charts/TaxaBarChart'
 import VariableDescriptions from '../components/VariableDescriptions'
-import MunicipalityFilter from '../components/MunicipalityFilter'
 import { useI18n } from '../i18n'
-import { useFilters } from '../context/FilterContext'
 import { interpolateViridis } from 'd3-scale-chromatic'
 
 export default function Composition() {
   const { t } = useI18n()
-  const { municipality, setMunicipality } = useFilters()
   const { data: pars, loading: parsLoading } = useData('pars')
   const { data: taxaAggregated, loading: taxaLoading } = useData('taxa_aggregated')
   const { data: municipalTaxa, loading: municipalTaxaLoading } = useData('municipal_taxa')
@@ -83,11 +80,11 @@ export default function Composition() {
                 </>
               )}
             </div>
-            <div className="col-auto ms-auto d-print-none">
+            {/* <div className="col-auto ms-auto d-print-none">
               <div className="btn-list">
                 <MunicipalityFilter value={municipality} onChange={setMunicipality} />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
