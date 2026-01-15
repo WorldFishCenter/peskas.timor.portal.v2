@@ -146,7 +146,7 @@ export default function Revenue() {
               <div className="row row-deck row-cards">
                 <div className="col-12">
                   <MetricCard
-                    label={t('vars.total_revenue', { defaultValue: 'Total revenue' })}
+                    label={t('vars.revenue.short_name')}
                     value={loading ? '' : `$${metrics.totalRevenue}${t('units.million_short', { defaultValue: 'M' })}`}
                     trend={metrics.revenueTrend}
                     sparkline={metrics.revenueSparkline}
