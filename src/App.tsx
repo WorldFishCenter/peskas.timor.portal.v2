@@ -10,6 +10,7 @@ import Nutrients from './pages/Nutrients'
 import Tracks from './pages/Tracks'
 import About from './pages/About'
 import DataTestPage from './pages/DataTestPage'
+import { ROUTES } from './config/routes.config'
 import { FilterProvider } from './context/FilterContext'
 
 export default function App() {
@@ -18,7 +19,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<RootLayout />}>
-            <Route index element={<Navigate to="/home" replace />} />
+            <Route index element={<Navigate to={ROUTES.HOME} replace />} />
             <Route path="home" element={<Home />} />
             <Route path="catch" element={<Catch />} />
             <Route path="revenue" element={<Revenue />} />

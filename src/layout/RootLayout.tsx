@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useI18n, type Lang } from '../i18n'
+import { ROUTES } from '../config/routes.config'
 
 type ThemeMode = 'light' | 'dark'
 
@@ -111,7 +112,7 @@ export default function RootLayout() {
             <div className="container-xl">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <NavLink to="/home" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
+                  <NavLink to={ROUTES.HOME} className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="m0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
                     </span>
@@ -119,7 +120,7 @@ export default function RootLayout() {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink to="/catch" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
+                  <NavLink to={ROUTES.CATCH} className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 20l10 0" /><path d="M6 6l6 -1l6 1" /><path d="M12 3l0 17" /><path d="M9 12l-3 -6l-3 6a3 3 0 0 0 6 0" /><path d="M21 12l-3 -6l-3 6a3 3 0 0 0 6 0" /></svg>
                     </span>
@@ -127,7 +128,7 @@ export default function RootLayout() {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink to="/revenue" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
+                  <NavLink to={ROUTES.REVENUE} className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.7 8a3 3 0 0 0 -2.7 -2h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1 -2.7 -2" /><path d="M12 3v3m0 12v3" /></svg>
                     </span>
@@ -135,7 +136,7 @@ export default function RootLayout() {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink to="/market" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
+                  <NavLink to={ROUTES.MARKET} className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="6" cy="19" r="2" /><circle cx="17" cy="19" r="2" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
                     </span>
@@ -143,7 +144,7 @@ export default function RootLayout() {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink to="/composition" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
+                  <NavLink to={ROUTES.COMPOSITION} className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 3.2a9 9 0 1 0 10.8 10.8a1 1 0 0 0 -1 -1h-6.8a2 2 0 0 1 -2 -2v-7a0.9 .9 0 0 0 -1 -.8" /><path d="M15 3.5a9 9 0 0 1 5.5 5.5h-4.5a1 1 0 0 1 -1 -1v-4.5" /></svg>
                     </span>
@@ -151,7 +152,7 @@ export default function RootLayout() {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink to="/nutrients" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
+                  <NavLink to={ROUTES.NUTRIENTS} className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.69 7.44a6.973 6.973 0 0 0 -1.69 4.56c0 1.747 .64 3.345 1.699 4.571" /><path d="M2 9.504c7.715 8.647 14.75 10.265 20 2.498c-5.25 -7.761 -12.285 -6.142 -20 2.504" /><path d="M18 11v.01" /><path d="M11.5 10.5c-.667 1 -.667 2 0 3" /></svg>
                     </span>
@@ -159,7 +160,7 @@ export default function RootLayout() {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink to="/about" className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
+                  <NavLink to={ROUTES.ABOUT} className={({ isActive }: { isActive: boolean }) => `nav-link${isActive ? ' active' : ''}`}>
                     <span className="nav-link-icon d-md-none d-lg-inline-block">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="9" /><line x1="12" y1="8" x2="12.01" y2="8" /><polyline points="11 12 12 12 12 16 13 16" /></svg>
                     </span>

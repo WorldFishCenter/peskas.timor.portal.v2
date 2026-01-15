@@ -2,8 +2,9 @@
  * Data loading utilities for fetching JSON data files
  */
 import type { DataFileName, DataTypeMap } from '../types/data';
+import { DATA_CONFIG } from '../config/data.config';
 
-const DATA_BASE_PATH = '/data';
+const DATA_BASE_PATH = DATA_CONFIG.BASE_PATH;
 
 export class DataLoadError extends Error {
   fileName: string;
@@ -17,9 +18,29 @@ export class DataLoadError extends Error {
   }
 }
 
+/**
+ * Cache for data files to avoid redundant fetches
+ */
+const dataCache = new Map<string, { data: unknown; timestamp: number }>();
+const CACHE_TTL_MS = DATA_CONFIG.CACHE_TTL_MS;
+
+/**
+ * Fetch a data file from public/data/ directory with type safety
+ */
 export async function fetchData<T extends DataFileName>(
-  fileName: T
+  fileName: T,
+  useCache = false
 ): Promise<DataTypeMap[T]> {
+  // Check cache if enabled
+  if (useCache) {
+    const cached = dataCache.get(fileName);
+    const now = Date.now();
+
+    if (cached && now - cached.timestamp < CACHE_TTL_MS) {
+      return cached.data as DataTypeMap[T];
+    }
+  }
+
   const url = `${DATA_BASE_PATH}/${fileName}.json`;
 
   try {
@@ -30,12 +51,29 @@ export async function fetchData<T extends DataFileName>(
     }
 
     const data = await response.json();
+    
+    // Store in cache if enabled
+    if (useCache) {
+      dataCache.set(fileName, { data, timestamp: Date.now() });
+    }
+    
     return data as DataTypeMap[T];
   } catch (error) {
     throw new DataLoadError(
       fileName,
       error instanceof Error ? error : new Error(String(error))
     );
+  }
+}
+
+/**
+ * Clear cache for a specific file or all files
+ */
+export function clearDataCache(fileName?: DataFileName): void {
+  if (fileName) {
+    dataCache.delete(fileName);
+  } else {
+    dataCache.clear();
   }
 }
 

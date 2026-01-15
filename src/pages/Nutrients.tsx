@@ -74,15 +74,39 @@ export default function Nutrients() {
     if (!summaryData?.nutrients_per_catch || !pars?.nutrients?.to_display) return []
 
     const displayOrder = pars.nutrients.to_display
-    const displayNames = displayOrder.map((n: string) => nutrientNames[n] || n)
+    // Create a reverse map: English display name -> key, and key -> translated name
+    const englishToKeyMap = new Map<string, string>()
+    const keyToTranslatedMap = new Map<string, string>()
+    
+    displayOrder.forEach((key: string) => {
+      const translatedName = nutrientNames[key] || key
+      keyToTranslatedMap.set(key, translatedName)
+      // Also map English names from pars if available
+      if (pars.nutrients?.nutrients?.[key]?.short_name) {
+        const englishName = pars.nutrients.nutrients[key].short_name
+        englishToKeyMap.set(englishName, key)
+      }
+      // Map the key itself
+      englishToKeyMap.set(key, key)
+    })
 
     return summaryData.nutrients_per_catch
-      .filter((item: any) => displayNames.includes(item.nutrient_names))
+      .filter((item: any) => {
+        // Check if nutrient_names matches a key OR an English display name
+        const key = englishToKeyMap.get(item.nutrient_names) || item.nutrient_names
+        return displayOrder.includes(key)
+      })
       .sort((a: any, b: any) => b.nut_rdi - a.nut_rdi)
-      .map((item: any) => ({
-        x: item.nutrient_names,
-        y: Math.round(item.nut_rdi)
-      }))
+      .map((item: any) => {
+        // Find the key (either direct match or via English name)
+        const key = englishToKeyMap.get(item.nutrient_names) || item.nutrient_names
+        // Get translated name for current language
+        const displayName = keyToTranslatedMap.get(key) || item.nutrient_names
+        return {
+          x: displayName,
+          y: Math.round(item.nut_rdi)
+        }
+      })
   }, [summaryData, pars, nutrientNames])
 
   // Habitat nutrients treemap data
@@ -90,11 +114,38 @@ export default function Nutrients() {
     if (!summaryData?.nutrients_habitat || !pars?.nutrients?.to_display) return []
 
     const displayOrder = pars.nutrients.to_display
-    const displayNames = displayOrder.map((n: string) => nutrientNames[n] || n)
+    // Create a reverse map: English display name -> key, and key -> translated name
+    const englishToKeyMap = new Map<string, string>()
+    const keyToTranslatedMap = new Map<string, string>()
+    
+    displayOrder.forEach((key: string) => {
+      const translatedName = nutrientNames[key] || key
+      keyToTranslatedMap.set(key, translatedName)
+      // Also map English names from pars if available
+      if (pars.nutrients?.nutrients?.[key]?.short_name) {
+        const englishName = pars.nutrients.nutrients[key].short_name
+        englishToKeyMap.set(englishName, key)
+      }
+      // Map the key itself
+      englishToKeyMap.set(key, key)
+    })
 
-    return summaryData.nutrients_habitat.filter((item: any) =>
-      displayNames.includes(item.name)
-    )
+    return summaryData.nutrients_habitat
+      .filter((item: any) => {
+        // Check if name matches a key OR an English display name
+        const key = englishToKeyMap.get(item.name) || item.name
+        return displayOrder.includes(key)
+      })
+      .map((item: any) => {
+        // Find the key (either direct match or via English name)
+        const key = englishToKeyMap.get(item.name) || item.name
+        // Get translated name for current language
+        const displayName = keyToTranslatedMap.get(key) || item.name
+        return {
+          ...item,
+          name: displayName
+        }
+      })
   }, [summaryData, pars, nutrientNames])
 
   // Always use translations - translations are the single source of truth

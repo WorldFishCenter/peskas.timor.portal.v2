@@ -3,7 +3,7 @@
  */
 import { useState, useEffect, useCallback } from 'react';
 import type { DataFileName, DataTypeMap } from '../types/data';
-import { fetchData, DataLoadError } from '../utils/dataLoader';
+import { fetchData, clearDataCache, DataLoadError } from '../utils/dataLoader';
 
 export interface UseDataResult<T> {
   data: T | null;
@@ -13,8 +13,10 @@ export interface UseDataResult<T> {
 }
 
 export function useData<T extends DataFileName>(
-  fileName: T
+  fileName: T,
+  options?: { useCache?: boolean }
 ): UseDataResult<DataTypeMap[T]> {
+  const { useCache = true } = options ?? {};
   const [data, setData] = useState<DataTypeMap[T] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
@@ -24,22 +26,25 @@ export function useData<T extends DataFileName>(
     setError(null);
 
     try {
-      const result = await fetchData(fileName);
+      const result = await fetchData(fileName, useCache);
       setData(result);
     } catch (err) {
       setError(err instanceof Error ? err : new Error(String(err)));
     } finally {
       setLoading(false);
     }
-  }, [fileName]);
+  }, [fileName, useCache]);
 
   useEffect(() => {
     fetchDataAsync();
   }, [fetchDataAsync]);
 
   const refetch = useCallback(() => {
+    if (useCache) {
+      clearDataCache(fileName);
+    }
     fetchDataAsync();
-  }, [fetchDataAsync]);
+  }, [fileName, useCache, fetchDataAsync]);
 
   return { data, loading, error, refetch };
 }
@@ -68,7 +73,7 @@ export function useMultipleData<T extends DataFileName[]>(
       const results = await Promise.all(
         fileNames.map(async (fileName) => ({
           fileName,
-          data: await fetchData(fileName),
+          data: await fetchData(fileName, true), // Use cache for multiple data
         }))
       );
 
@@ -89,10 +94,34 @@ export function useMultipleData<T extends DataFileName[]>(
   }, [fetchDataAsync]);
 
   const refetch = useCallback(() => {
+    // Clear cache for all requested files
+    fileNames.forEach(fileName => clearDataCache(fileName));
     fetchDataAsync();
-  }, [fetchDataAsync]);
+  }, [fileNames, fetchDataAsync]);
 
   return { data, loading, error, refetch };
 }
 
 export { DataLoadError };
+
+/**
+ * Common data file combinations for pages
+ */
+export const PAGE_DATA_REQUIREMENTS = {
+  home: ['summary_data', 'pars', 'aggregated'] as const,
+  catch: ['aggregated', 'taxa_aggregated', 'municipal_aggregated', 'pars'] as const,
+  revenue: ['aggregated', 'municipal_aggregated', 'summary_data', 'pars'] as const,
+  composition: ['taxa_aggregated', 'taxa_names', 'municipal_taxa', 'pars'] as const,
+  market: ['summary_data', 'aggregated', 'pars'] as const,
+  nutrients: ['nutrients_aggregated', 'summary_data', 'pars'] as const,
+  tracks: ['predicted_tracks', 'indicators_grid', 'pars'] as const,
+} as const;
+
+export type PageName = keyof typeof PAGE_DATA_REQUIREMENTS;
+
+/**
+ * Hook to load all data required for a specific page
+ */
+export function usePageData<P extends PageName>(page: P) {
+  return useMultipleData([...PAGE_DATA_REQUIREMENTS[page]]);
+}

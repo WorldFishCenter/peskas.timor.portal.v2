@@ -41,7 +41,7 @@ export default function CatchSummaryTable() {
       .sort((a, b) => new Date(b.date_bin_start).getTime() - new Date(a.date_bin_start).getTime())
       .slice(0, 12)
       .map(row => ({
-        month: new Date(row.date_bin_start).toLocaleDateString(locale, { month: 'long', year: 'numeric' }),
+        month: new Date(row.date_bin_start).toLocaleDateString(locale, { month: 'long' }),
         catch: (row.catch ?? 0) / 1000,
         recorded_catch: (row.recorded_catch ?? 0) / 1000,
         landing_weight: row.landing_weight ?? 0,

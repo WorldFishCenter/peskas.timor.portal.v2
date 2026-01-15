@@ -2,10 +2,10 @@ import { useI18n } from '../i18n'
 import { useMemo } from 'react'
 import MunicipalityFilter from '../components/MunicipalityFilter'
 import TimeSeriesChart from '../components/charts/TimeSeriesChart'
-import SparklineChart from '../components/charts/SparklineChart'
 import TreemapChart from '../components/charts/TreemapChart'
 import CatchSummaryTable from '../components/CatchSummaryTable'
 import VariableDescriptions from '../components/VariableDescriptions'
+import MetricCard from '../components/MetricCard'
 import { useData } from '../hooks'
 import { useMunicipalData } from '../hooks/useMunicipalData'
 import { useFilters } from '../context/FilterContext'
@@ -40,9 +40,9 @@ export default function Catch() {
         totalCatch: '0',
         avgLandingWeight: '0',
         nBoats: '0',
-        catchTrend: { value: '0%', direction: 'none' as const },
-        weightTrend: { value: '0%', direction: 'none' as const },
-        boatsTrend: { value: '0%', direction: 'none' as const },
+        catchTrend: { value: '0%', direction: 'neutral' as const },
+        weightTrend: { value: '0%', direction: 'neutral' as const },
+        boatsTrend: { value: '0%', direction: 'neutral' as const },
       }
     }
     const sortedData = [...aggregated.month].sort(
@@ -67,7 +67,7 @@ export default function Catch() {
 
     const getTrend = (val: number) => ({
       value: `${val >= 0 ? '+' : ''}${val.toFixed(1)}%`,
-      direction: val > 0 ? 'up' as const : val < 0 ? 'down' as const : 'none' as const,
+      direction: (val > 0 ? 'up' : val < 0 ? 'down' : 'neutral') as 'up' | 'down' | 'neutral',
     })
 
     return {
@@ -144,87 +144,52 @@ export default function Catch() {
             <div className="col-lg-4 col-xl-4">
               <div className="row row-deck row-cards">
                 <div className="col-12">
-                  <div className="card overflow-hidden">
-                    <div className="card-body">
-                      <div className="d-flex align-items-center">
-                        <div className="subheader">{t('vars.catch.short_name', { defaultValue: 'Total catch' })}</div>
-                        <div className="ms-auto text-muted small">{t('common.last_12_months')}</div>
-                      </div>
-                      <div className="d-flex align-items-baseline">
-                        <div className="h1 mb-0">{loading ? t('common.loading_short', { defaultValue: '...' }) : `${metrics.totalCatch} ${t('units.t', { defaultValue: 't' })}`}</div>
-                        <span
-                          className={`ms-2 ${metrics.catchTrend.direction === 'up' ? 'text-green' : metrics.catchTrend.direction === 'down' ? 'text-red' : 'text-muted'}`}
-                        >
-                          {metrics.catchTrend.value}
-                        </span>
-                        <span className="text-muted small ms-1">{t('common.vs_prev_year', { defaultValue: 'vs prev. year' })}</span>
-                      </div>
-                    </div>
-                    <div className="mt-auto" style={{ minHeight: '40px', margin: '0 -1px -1px -1px' }}>
-                      {!loading && metrics.catchSparkline && (
-                        <SparklineChart data={metrics.catchSparkline} color="#206bc4" height={50} />
-                      )}
-                    </div>
-                  </div>
+                  <MetricCard
+                    label={t('vars.catch.short_name', { defaultValue: 'Total catch' })}
+                    value={loading ? '' : `${metrics.totalCatch} ${t('units.t', { defaultValue: 't' })}`}
+                    trend={metrics.catchTrend}
+                    sparkline={metrics.catchSparkline}
+                    subtitle={t('common.last_12_months')}
+                    loading={loading}
+                    variant="with-sparkline"
+                  />
                 </div>
                 <div className="col-12">
-                  <div className="card overflow-hidden">
-                    <div className="card-body">
-                      <div className="d-flex align-items-center">
-                        <div className="subheader">{t('vars.landing_weight.short_name', { defaultValue: 'Catch per trip' })}</div>
-                        <div className="ms-auto text-muted small">{t('common.last_12_months')}</div>
-                      </div>
-                      <div className="d-flex align-items-baseline">
-                        <div className="h1 mb-0">{loading ? t('common.loading_short', { defaultValue: '...' }) : `${metrics.avgLandingWeight} ${t('units.kg', { defaultValue: 'kg' })}`}</div>
-                        <span
-                          className={`ms-2 ${metrics.weightTrend.direction === 'up' ? 'text-green' : metrics.weightTrend.direction === 'down' ? 'text-red' : 'text-muted'}`}
-                        >
-                          {metrics.weightTrend.value}
-                        </span>
-                        <span className="text-muted small ms-1">{t('common.vs_prev_year', { defaultValue: 'vs prev. year' })}</span>
-                      </div>
-                    </div>
-                    <div className="mt-auto" style={{ minHeight: '40px', margin: '0 -1px -1px -1px' }}>
-                      {!loading && metrics.weightSparkline && (
-                        <SparklineChart data={metrics.weightSparkline} color="#206bc4" height={50} />
-                      )}
-                    </div>
-                  </div>
+                  <MetricCard
+                    label={t('vars.landing_weight.short_name', { defaultValue: 'Catch per trip' })}
+                    value={loading ? '' : `${metrics.avgLandingWeight} ${t('units.kg', { defaultValue: 'kg' })}`}
+                    trend={metrics.weightTrend}
+                    sparkline={metrics.weightSparkline}
+                    subtitle={t('common.last_12_months')}
+                    loading={loading}
+                    variant="with-sparkline"
+                  />
                 </div>
                 <div className="col-12">
-                  <div className="card">
-                    <div className="card-body">
-                      <div className="row align-items-center">
-                        <div className="col-auto">
-                          <span className="avatar bg-secondary-lt">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="icon"
-                              width="24"
-                              height="24"
-                              viewBox="0 0 24 24"
-                              strokeWidth="2"
-                              stroke="currentColor"
-                              fill="none"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <path d="M5 12h14" />
-                            </svg>
-                          </span>
-                        </div>
-                        <div className="col">
-                          <div className="d-flex align-items-center">
-                            <div className="font-weight-medium">{t('vars.n_boats.active', { defaultValue: 'Active boats' })}</div>
-                            <div className="ms-auto lh-1 text-muted small">{municipality === 'all' ? t('common.national', { defaultValue: 'National' }) : municipality}</div>
-                          </div>
-                          <div className="d-flex align-items-center">
-                            <div className="h1 mb-0">{loading ? t('common.loading_short', { defaultValue: '...' }) : metrics.nBoats}</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <MetricCard
+                    label={t('vars.n_boats.active', { defaultValue: 'Active boats' })}
+                    value={metrics.nBoats}
+                    loading={loading}
+                    icon={
+                      <span className="avatar bg-secondary-lt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="icon"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          strokeWidth="2"
+                          stroke="currentColor"
+                          fill="none"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M5 12h14" />
+                        </svg>
+                      </span>
+                    }
+                    footer={municipality === 'all' ? t('common.national', { defaultValue: 'National' }) : municipality}
+                  />
                 </div>
               </div>
             </div>
@@ -259,10 +224,10 @@ export default function Catch() {
             </div>
 
             {/* Row 3: Summary table + Variable descriptions */}
-            <div className="col-lg-7 col-xl-auto order-lg-last">
+            <div className="col-lg-5 col-xl-7 order-lg-last">
               <CatchSummaryTable />
             </div>
-            <div className="col">
+            <div className="col-lg-7 col-xl-5">
               <VariableDescriptions
                 variables={['catch', 'recorded_catch', 'landing_weight', 'n_landings_per_boat', 'n_boats']}
                 type="catch"

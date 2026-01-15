@@ -41,7 +41,7 @@ export default function RevenueSummaryTable() {
       .sort((a, b) => new Date(b.date_bin_start).getTime() - new Date(a.date_bin_start).getTime())
       .slice(0, 12)
       .map(row => ({
-        month: new Date(row.date_bin_start).toLocaleDateString(locale, { month: 'long', year: 'numeric' }),
+        month: new Date(row.date_bin_start).toLocaleDateString(locale, { month: 'long' }),
         revenue: (row.revenue ?? 0) / 1000000,
         recorded_revenue: (row.recorded_revenue ?? 0) / 1000000,
         landing_revenue: row.landing_revenue ?? 0,

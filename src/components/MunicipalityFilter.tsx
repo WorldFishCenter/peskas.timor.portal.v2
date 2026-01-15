@@ -1,6 +1,5 @@
 import { useI18n } from '../i18n'
-import { MUNICIPALITIES } from '../constants'
-import type { Municipality } from '../constants'
+import { MUNICIPALITIES, type Municipality } from '../constants'
 
 type MunicipalityFilterProps = {
   value: Municipality

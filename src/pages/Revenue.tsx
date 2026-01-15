@@ -2,10 +2,10 @@ import { useI18n } from '../i18n'
 import { useMemo } from 'react'
 import MunicipalityFilter from '../components/MunicipalityFilter'
 import TimeSeriesChart from '../components/charts/TimeSeriesChart'
-import SparklineChart from '../components/charts/SparklineChart'
 import TreemapChart from '../components/charts/TreemapChart'
 import RevenueSummaryTable from '../components/RevenueSummaryTable'
 import VariableDescriptions from '../components/VariableDescriptions'
+import MetricCard from '../components/MetricCard'
 import { useData } from '../hooks'
 import { useMunicipalData } from '../hooks/useMunicipalData'
 import { useFilters } from '../context/FilterContext'
@@ -40,9 +40,9 @@ export default function Revenue() {
         totalRevenue: '0',
         avgRevenuePerTrip: '0',
         nBoats: '0',
-        revenueTrend: { value: '0%', direction: 'none' as const },
-        tripTrend: { value: '0%', direction: 'none' as const },
-        boatsTrend: { value: '0%', direction: 'none' as const },
+        revenueTrend: { value: '0%', direction: 'neutral' as const },
+        tripTrend: { value: '0%', direction: 'neutral' as const },
+        boatsTrend: { value: '0%', direction: 'neutral' as const },
       }
     }
     const sortedData = [...aggregated.month].sort(
@@ -67,7 +67,7 @@ export default function Revenue() {
 
     const getTrend = (val: number) => ({
       value: `${val >= 0 ? '+' : ''}${val.toFixed(1)}%`,
-      direction: val > 0 ? 'up' as const : val < 0 ? 'down' as const : 'none' as const,
+      direction: (val > 0 ? 'up' : val < 0 ? 'down' : 'neutral') as 'up' | 'down' | 'neutral',
     })
 
     return {
@@ -145,87 +145,52 @@ export default function Revenue() {
             <div className="col-lg-4 col-xl-4">
               <div className="row row-deck row-cards">
                 <div className="col-12">
-                  <div className="card overflow-hidden">
-                    <div className="card-body">
-                      <div className="d-flex align-items-center">
-                        <div className="subheader">{t('vars.total_revenue', { defaultValue: 'Total revenue' })}</div>
-                        <div className="ms-auto text-muted small">{t('common.last_12_months')}</div>
-                      </div>
-                      <div className="d-flex align-items-baseline">
-                        <div className="h1 mb-0">{loading ? t('common.loading_short', { defaultValue: '...' }) : `$${metrics.totalRevenue}${t('units.million_short', { defaultValue: 'M' })}`}</div>
-                        <span
-                          className={`ms-2 ${metrics.revenueTrend.direction === 'up' ? 'text-green' : metrics.revenueTrend.direction === 'down' ? 'text-red' : 'text-muted'}`}
-                        >
-                          {metrics.revenueTrend.value}
-                        </span>
-                        <span className="text-muted small ms-1">{t('common.vs_prev_year', { defaultValue: 'vs prev. year' })}</span>
-                      </div>
-                    </div>
-                    <div className="mt-auto" style={{ minHeight: '40px', margin: '0 -1px -1px -1px' }}>
-                      {!loading && metrics.revenueSparkline && (
-                        <SparklineChart data={metrics.revenueSparkline} color="#206bc4" height={50} />
-                      )}
-                    </div>
-                  </div>
+                  <MetricCard
+                    label={t('vars.total_revenue', { defaultValue: 'Total revenue' })}
+                    value={loading ? '' : `$${metrics.totalRevenue}${t('units.million_short', { defaultValue: 'M' })}`}
+                    trend={metrics.revenueTrend}
+                    sparkline={metrics.revenueSparkline}
+                    subtitle={t('common.last_12_months')}
+                    loading={loading}
+                    variant="with-sparkline"
+                  />
                 </div>
                 <div className="col-12">
-                  <div className="card overflow-hidden">
-                    <div className="card-body">
-                      <div className="d-flex align-items-center">
-                        <div className="subheader">{t('vars.landing_revenue.short_name', { defaultValue: 'Revenue per trip' })}</div>
-                        <div className="ms-auto text-muted small">{t('common.last_12_months')}</div>
-                      </div>
-                      <div className="d-flex align-items-baseline">
-                        <div className="h1 mb-0">{loading ? t('common.loading_short', { defaultValue: '...' }) : `$${metrics.avgRevenuePerTrip}`}</div>
-                        <span
-                          className={`ms-2 ${metrics.tripTrend.direction === 'up' ? 'text-green' : metrics.tripTrend.direction === 'down' ? 'text-red' : 'text-muted'}`}
-                        >
-                          {metrics.tripTrend.value}
-                        </span>
-                        <span className="text-muted small ms-1">{t('common.vs_prev_year', { defaultValue: 'vs prev. year' })}</span>
-                      </div>
-                    </div>
-                    <div className="mt-auto" style={{ minHeight: '40px', margin: '0 -1px -1px -1px' }}>
-                      {!loading && metrics.tripSparkline && (
-                        <SparklineChart data={metrics.tripSparkline} color="#206bc4" height={50} />
-                      )}
-                    </div>
-                  </div>
+                  <MetricCard
+                    label={t('vars.landing_revenue.short_name', { defaultValue: 'Revenue per trip' })}
+                    value={loading ? '' : `$${metrics.avgRevenuePerTrip}`}
+                    trend={metrics.tripTrend}
+                    sparkline={metrics.tripSparkline}
+                    subtitle={t('common.last_12_months')}
+                    loading={loading}
+                    variant="with-sparkline"
+                  />
                 </div>
                 <div className="col-12">
-                  <div className="card">
-                    <div className="card-body">
-                      <div className="row align-items-center">
-                        <div className="col-auto">
-                          <span className="avatar bg-secondary-lt">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="icon"
-                              width="24"
-                              height="24"
-                              viewBox="0 0 24 24"
-                              strokeWidth="2"
-                              stroke="currentColor"
-                              fill="none"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <path d="M5 12h14" />
-                            </svg>
-                          </span>
-                        </div>
-                        <div className="col">
-                          <div className="d-flex align-items-center">
-                            <div className="font-weight-medium">{t('vars.n_boats.active', { defaultValue: 'Active boats' })}</div>
-                            <div className="ms-auto lh-1 text-muted small">{municipality === 'all' ? t('common.national', { defaultValue: 'National' }) : municipality}</div>
-                          </div>
-                          <div className="d-flex align-items-center">
-                            <div className="h1 mb-0">{loading ? t('common.loading_short', { defaultValue: '...' }) : metrics.nBoats}</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <MetricCard
+                    label={t('vars.n_boats.active', { defaultValue: 'Active boats' })}
+                    value={metrics.nBoats}
+                    loading={loading}
+                    icon={
+                      <span className="avatar bg-secondary-lt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="icon"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          strokeWidth="2"
+                          stroke="currentColor"
+                          fill="none"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M5 12h14" />
+                        </svg>
+                      </span>
+                    }
+                    footer={municipality === 'all' ? t('common.national', { defaultValue: 'National' }) : municipality}
+                  />
                 </div>
               </div>
             </div>
@@ -260,10 +225,10 @@ export default function Revenue() {
             </div>
 
             {/* Row 3: Summary table + Variable descriptions */}
-            <div className="col-lg-7 col-xl-auto order-lg-last">
+            <div className="col-lg-5 col-xl-7 order-lg-last">
               <RevenueSummaryTable />
             </div>
-            <div className="col">
+            <div className="col-lg-7 col-xl-5">
               <VariableDescriptions
                 variables={['revenue', 'recorded_revenue', 'landing_revenue', 'n_landings_per_boat', 'n_boats']}
                 type="revenue"
