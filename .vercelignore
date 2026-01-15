@@ -37,9 +37,6 @@ peskas.timor.portal
 **/*.test.*
 **/*.spec.*
 
-# TypeScript config (not needed in production)
-tsconfig*.json
-
 # ESLint config
 eslint.config.js
 
