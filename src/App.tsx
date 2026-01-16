@@ -4,6 +4,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import RootLayout from './layout/RootLayout'
 import LoadingFallback from './components/LoadingFallback'
 import RoutePrefetcher from './components/RoutePrefetcher'
+import Analytics from './components/Analytics'
 import { ROUTES } from './config/routes.config'
 import { FilterProvider } from './context/FilterContext'
 
@@ -22,6 +23,7 @@ export default function App() {
   return (
     <FilterProvider>
       <BrowserRouter>
+        <Analytics />
         <RoutePrefetcher />
         <Routes>
           <Route element={<RootLayout />}>
