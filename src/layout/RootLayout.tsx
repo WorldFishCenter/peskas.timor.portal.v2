@@ -181,8 +181,8 @@ export default function RootLayout() {
             <div className="row text-center align-items-center flex-row-reverse">
               <div className="col-lg-auto ms-lg-auto">
                 <ul className="list-inline list-inline-dots mb-0">
-                  <li className="list-inline-item"><a className="link-secondary" href="https://github.com/WorldFishCenter/peskas.timor.portal/blob/main/LICENSE.md">{t('footer.licence')}</a></li>
-                  <li className="list-inline-item"><a className="link-secondary" href="https://github.com/WorldFishCenter/peskas.timor.portal">{t('footer.source')}</a></li>
+                  <li className="list-inline-item"><a className="link-secondary" href="https://github.com/WorldFishCenter/peskas.timor.portal.v2/blob/main/LICENSE.md">{t('footer.licence')}</a></li>
+                  <li className="list-inline-item"><a className="link-secondary" href="https://github.com/WorldFishCenter/peskas.timor.portal.v2">{t('footer.source')}</a></li>
                 </ul>
               </div>
               <div className="col-12 col-lg-auto mt-3 mt-lg-0">
