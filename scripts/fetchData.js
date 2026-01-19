@@ -136,42 +136,73 @@ async function main() {
       return;
     }
 
-        console.log(`Found ${files.length} file(s) with prefix "${FILE_PREFIX}"`);
+    console.log(`Found ${files.length} file(s) with prefix "${FILE_PREFIX}"`);
 
-        // Files to exclude (now handled in codebase or not used)
-        const EXCLUDED_FILES = [
-          'pars.json',           // Moved to config + i18n
-          'taxa_names.json',     // Moved to i18n
-          'var_dictionary.json', // Not used
-          'indicators_grid.json', // Not used
-          'label_groups_list.json' // Not used
-        ];
+    // Files to exclude (now handled in codebase or not used)
+    const EXCLUDED_FILES = [
+      'pars.json',           // Moved to config + i18n
+      'taxa_names.json',     // Moved to i18n
+      'var_dictionary.json', // Not used
+      'indicators_grid.json', // Not used
+      'label_groups_list.json' // Not used
+    ];
 
-        // Download each file (excluding pars.json and taxa_names.json)
-        const downloadPromises = files
-          .filter((file) => {
-            const localFileName = extractBaseName(file.name);
-            const shouldExclude = EXCLUDED_FILES.includes(localFileName);
-            if (shouldExclude) {
-              console.log(`Skipping ${localFileName} (handled in codebase)`);
-            }
-            return !shouldExclude;
-          })
-          .map(async (file) => {
-            const gcsFileName = file.name;
-            const localFileName = extractBaseName(gcsFileName);
+    // Map GCS files to local filenames and check for duplicates
+    const fileMap = new Map();
+    for (const file of files) {
+      const localFileName = extractBaseName(file.name);
+      if (!fileMap.has(localFileName)) {
+        fileMap.set(localFileName, []);
+      }
+      fileMap.get(localFileName).push({
+        gcsName: file.name,
+        updated: file.metadata.updated || file.metadata.timeCreated
+      });
+    }
 
-            try {
-              await downloadFile(storage, gcsFileName, localFileName);
-            } catch (error) {
-              console.error(`Error downloading ${gcsFileName}:`, error.message);
-              throw error;
-            }
-          });
+    // Log and handle duplicates - keep only the most recent version
+    console.log('\nFile mapping:');
+    for (const [localName, gcsFiles] of fileMap.entries()) {
+      if (gcsFiles.length > 1) {
+        console.log(`⚠️  Multiple versions found for ${localName}:`);
+        gcsFiles.forEach(f => console.log(`    - ${f.gcsName} (${f.updated})`));
+        // Sort by date, most recent first
+        gcsFiles.sort((a, b) => new Date(b.updated) - new Date(a.updated));
+        console.log(`    → Will use: ${gcsFiles[0].gcsName}`);
+      } else {
+        console.log(`  ${localName} ← ${gcsFiles[0].gcsName}`);
+      }
+    }
+
+    // Download each file (only the most recent version, excluding certain files)
+    const downloadPromises = Array.from(fileMap.entries())
+      .filter(([localFileName]) => {
+        const shouldExclude = EXCLUDED_FILES.includes(localFileName);
+        if (shouldExclude) {
+          console.log(`\nSkipping ${localFileName} (handled in codebase)`);
+        }
+        return !shouldExclude;
+      })
+      .map(async ([localFileName, gcsFiles]) => {
+        // Use the most recent file (already sorted)
+        const mostRecent = gcsFiles[0];
+        const gcsFileName = mostRecent.gcsName;
+
+        try {
+          await downloadFile(storage, gcsFileName, localFileName);
+        } catch (error) {
+          console.error(`Error downloading ${gcsFileName}:`, error.message);
+          throw error;
+        }
+      });
 
     await Promise.all(downloadPromises);
     
-    console.log(`\n✓ Successfully synced ${files.length} file(s) to ${DATA_DIR}`);
+    const downloadedCount = Array.from(fileMap.entries()).filter(
+      ([localFileName]) => !EXCLUDED_FILES.includes(localFileName)
+    ).length;
+    
+    console.log(`\n✓ Successfully synced ${downloadedCount} unique file(s) to ${DATA_DIR}`);
     
   } catch (error) {
     console.error('Error syncing data from GCS:', error);
