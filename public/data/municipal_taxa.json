@@ -7764,7 +7764,7 @@
     "date_bin_start": "2018-01-01",
     "grouped_taxa": "FLY",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.5879,
+    "n_landings_per_boat": 9.5795,
     "catch": 0,
     "month": "January 2018",
     "year": "2018"
@@ -7774,8 +7774,8 @@
     "date_bin_start": "2018-01-01",
     "grouped_taxa": "GZP",
     "landing_weight": 1.1813,
-    "n_landings_per_boat": 9.5879,
-    "catch": 31902.3277,
+    "n_landings_per_boat": 9.5795,
+    "catch": 31874.3084,
     "month": "January 2018",
     "year": "2018"
   },
@@ -7784,7 +7784,7 @@
     "date_bin_start": "2018-01-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.5879,
+    "n_landings_per_boat": 9.5795,
     "catch": 0,
     "month": "January 2018",
     "year": "2018"
@@ -7794,7 +7794,7 @@
     "date_bin_start": "2018-01-01",
     "grouped_taxa": "TUN",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.5879,
+    "n_landings_per_boat": 9.5795,
     "catch": 0,
     "month": "January 2018",
     "year": "2018"
@@ -7804,8 +7804,8 @@
     "date_bin_start": "2018-02-01",
     "grouped_taxa": "FLY",
     "landing_weight": 0.0752,
-    "n_landings_per_boat": 8.7445,
-    "catch": 260.9863,
+    "n_landings_per_boat": 8.7396,
+    "catch": 260.8304,
     "month": "February 2018",
     "year": "2018"
   },
@@ -7814,8 +7814,8 @@
     "date_bin_start": "2018-02-01",
     "grouped_taxa": "GZP",
     "landing_weight": 7.192,
-    "n_landings_per_boat": 8.7445,
-    "catch": 24957.441,
+    "n_landings_per_boat": 8.7396,
+    "catch": 24942.5371,
     "month": "February 2018",
     "year": "2018"
   },
@@ -7824,8 +7824,8 @@
     "date_bin_start": "2018-02-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0.4738,
-    "n_landings_per_boat": 8.7445,
-    "catch": 1644.1356,
+    "n_landings_per_boat": 8.7396,
+    "catch": 1643.1538,
     "month": "February 2018",
     "year": "2018"
   },
@@ -7834,8 +7834,8 @@
     "date_bin_start": "2018-02-01",
     "grouped_taxa": "TUN",
     "landing_weight": 5.0076,
-    "n_landings_per_boat": 8.7445,
-    "catch": 17377.261,
+    "n_landings_per_boat": 8.7396,
+    "catch": 17366.8837,
     "month": "February 2018",
     "year": "2018"
   },
@@ -7844,8 +7844,8 @@
     "date_bin_start": "2018-03-01",
     "grouped_taxa": "FLY",
     "landing_weight": 0.0683,
-    "n_landings_per_boat": 9.2516,
-    "catch": 254.1977,
+    "n_landings_per_boat": 9.2474,
+    "catch": 254.1062,
     "month": "March 2018",
     "year": "2018"
   },
@@ -7854,8 +7854,8 @@
     "date_bin_start": "2018-03-01",
     "grouped_taxa": "GZP",
     "landing_weight": 4.8984,
-    "n_landings_per_boat": 9.2516,
-    "catch": 18218.2976,
+    "n_landings_per_boat": 9.2474,
+    "catch": 18211.7389,
     "month": "March 2018",
     "year": "2018"
   },
@@ -7864,8 +7864,8 @@
     "date_bin_start": "2018-03-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0.5672,
-    "n_landings_per_boat": 9.2516,
-    "catch": 2109.6957,
+    "n_landings_per_boat": 9.2474,
+    "catch": 2108.9362,
     "month": "March 2018",
     "year": "2018"
   },
@@ -7874,8 +7874,8 @@
     "date_bin_start": "2018-03-01",
     "grouped_taxa": "TUN",
     "landing_weight": 5.4753,
-    "n_landings_per_boat": 9.2516,
-    "catch": 20363.6856,
+    "n_landings_per_boat": 9.2474,
+    "catch": 20356.3547,
     "month": "March 2018",
     "year": "2018"
   },
@@ -7884,8 +7884,8 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "FLY",
     "landing_weight": 0.0663,
-    "n_landings_per_boat": 11.8045,
-    "catch": 131.5693,
+    "n_landings_per_boat": 11.8048,
+    "catch": 131.7532,
     "month": "April 2018",
     "year": "2018"
   },
@@ -7894,8 +7894,8 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "GZP",
     "landing_weight": 4.2306,
-    "n_landings_per_boat": 11.8045,
-    "catch": 8397.3478,
+    "n_landings_per_boat": 11.8048,
+    "catch": 8409.0878,
     "month": "April 2018",
     "year": "2018"
   },
@@ -7904,8 +7904,8 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0.5988,
-    "n_landings_per_boat": 11.8045,
-    "catch": 1188.6228,
+    "n_landings_per_boat": 11.8048,
+    "catch": 1190.2845,
     "month": "April 2018",
     "year": "2018"
   },
@@ -7914,8 +7914,8 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "TUN",
     "landing_weight": 6.5063,
-    "n_landings_per_boat": 11.8045,
-    "catch": 12914.5162,
+    "n_landings_per_boat": 11.8048,
+    "catch": 12932.5714,
     "month": "April 2018",
     "year": "2018"
   },
@@ -7924,8 +7924,8 @@
     "date_bin_start": "2018-05-01",
     "grouped_taxa": "FLY",
     "landing_weight": 0.0635,
-    "n_landings_per_boat": 9.3494,
-    "catch": 166.1275,
+    "n_landings_per_boat": 9.3495,
+    "catch": 166.1036,
     "month": "May 2018",
     "year": "2018"
   },
@@ -7934,8 +7934,8 @@
     "date_bin_start": "2018-05-01",
     "grouped_taxa": "GZP",
     "landing_weight": 4.2598,
-    "n_landings_per_boat": 9.3494,
-    "catch": 11145.9129,
+    "n_landings_per_boat": 9.3495,
+    "catch": 11144.3073,
     "month": "May 2018",
     "year": "2018"
   },
@@ -7944,8 +7944,8 @@
     "date_bin_start": "2018-05-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0.395,
-    "n_landings_per_boat": 9.3494,
-    "catch": 1033.4051,
+    "n_landings_per_boat": 9.3495,
+    "catch": 1033.2562,
     "month": "May 2018",
     "year": "2018"
   },
@@ -7954,8 +7954,8 @@
     "date_bin_start": "2018-05-01",
     "grouped_taxa": "TUN",
     "landing_weight": 7.2167,
-    "n_landings_per_boat": 9.3494,
-    "catch": 18882.7706,
+    "n_landings_per_boat": 9.3495,
+    "catch": 18880.0505,
     "month": "May 2018",
     "year": "2018"
   },
@@ -11604,7 +11604,7 @@
     "date_bin_start": "2026-01-01",
     "grouped_taxa": "FLY",
     "landing_weight": 0,
-    "n_landings_per_boat": 7.8069,
+    "n_landings_per_boat": 7.6499,
     "catch": 0,
     "month": "January 2026",
     "year": "2026"
@@ -11614,8 +11614,8 @@
     "date_bin_start": "2026-01-01",
     "grouped_taxa": "GZP",
     "landing_weight": 6.1126,
-    "n_landings_per_boat": 7.8069,
-    "catch": 20285.1131,
+    "n_landings_per_boat": 7.6499,
+    "catch": 19877.2929,
     "month": "January 2026",
     "year": "2026"
   },
@@ -11624,7 +11624,7 @@
     "date_bin_start": "2026-01-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0,
-    "n_landings_per_boat": 7.8069,
+    "n_landings_per_boat": 7.6499,
     "catch": 0,
     "month": "January 2026",
     "year": "2026"
@@ -11634,8 +11634,8 @@
     "date_bin_start": "2026-01-01",
     "grouped_taxa": "TUN",
     "landing_weight": 2.765,
-    "n_landings_per_boat": 7.8069,
-    "catch": 9175.9062,
+    "n_landings_per_boat": 7.6499,
+    "catch": 8991.43,
     "month": "January 2026",
     "year": "2026"
   },
@@ -27165,7 +27165,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 94.4083,
     "n_landings_per_boat": 3.462,
-    "catch": 4840.0888,
+    "catch": 4840.0864,
     "month": "January 2018",
     "year": "2018"
   },
@@ -27175,7 +27175,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 24.4992,
     "n_landings_per_boat": 3.462,
-    "catch": 1256.0151,
+    "catch": 1256.0145,
     "month": "January 2018",
     "year": "2018"
   },
@@ -27185,7 +27185,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 64.2321,
     "n_landings_per_boat": 4.0409,
-    "catch": 5193.2821,
+    "catch": 5193.2812,
     "month": "February 2018",
     "year": "2018"
   },
@@ -27195,7 +27195,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 16.0246,
     "n_landings_per_boat": 4.0409,
-    "catch": 1295.6195,
+    "catch": 1295.6193,
     "month": "February 2018",
     "year": "2018"
   },
@@ -27205,7 +27205,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 51.7463,
     "n_landings_per_boat": 2.9713,
-    "catch": 3268.3095,
+    "catch": 3268.308,
     "month": "March 2018",
     "year": "2018"
   },
@@ -27215,7 +27215,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 12.5297,
     "n_landings_per_boat": 2.9713,
-    "catch": 791.3816,
+    "catch": 791.3812,
     "month": "March 2018",
     "year": "2018"
   },
@@ -27225,7 +27225,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 25.106,
     "n_landings_per_boat": 2.8488,
-    "catch": 3274.6089,
+    "catch": 3274.6068,
     "month": "April 2018",
     "year": "2018"
   },
@@ -27235,7 +27235,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 8.4077,
     "n_landings_per_boat": 2.8488,
-    "catch": 1096.6352,
+    "catch": 1096.6345,
     "month": "April 2018",
     "year": "2018"
   },
@@ -27245,7 +27245,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 30.4255,
     "n_landings_per_boat": 3.1008,
-    "catch": 3569.0635,
+    "catch": 3569.0619,
     "month": "May 2018",
     "year": "2018"
   },
@@ -27255,7 +27255,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 7.9999,
     "n_landings_per_boat": 3.1008,
-    "catch": 938.4295,
+    "catch": 938.4291,
     "month": "May 2018",
     "year": "2018"
   },
@@ -27265,7 +27265,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 18.5652,
     "n_landings_per_boat": 3.0749,
-    "catch": 3326.6866,
+    "catch": 3326.6839,
     "month": "June 2018",
     "year": "2018"
   },
@@ -27275,7 +27275,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 7.596,
     "n_landings_per_boat": 3.0749,
-    "catch": 1361.1176,
+    "catch": 1361.1165,
     "month": "June 2018",
     "year": "2018"
   },
@@ -27285,7 +27285,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 23.379,
     "n_landings_per_boat": 3.439,
-    "catch": 5173.0213,
+    "catch": 5173.0208,
     "month": "July 2018",
     "year": "2018"
   },
@@ -27295,7 +27295,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 10.0933,
     "n_landings_per_boat": 3.439,
-    "catch": 2233.3263,
+    "catch": 2233.3261,
     "month": "July 2018",
     "year": "2018"
   },
@@ -27305,7 +27305,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 25.7555,
     "n_landings_per_boat": 2.721,
-    "catch": 2722.198,
+    "catch": 2722.1967,
     "month": "August 2018",
     "year": "2018"
   },
@@ -27315,7 +27315,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 11.636,
     "n_landings_per_boat": 2.721,
-    "catch": 1229.8539,
+    "catch": 1229.8533,
     "month": "August 2018",
     "year": "2018"
   },
@@ -27325,7 +27325,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 20.8913,
     "n_landings_per_boat": 3.6191,
-    "catch": 4838.248,
+    "catch": 4838.2464,
     "month": "September 2018",
     "year": "2018"
   },
@@ -27335,7 +27335,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 15.4877,
     "n_landings_per_boat": 3.6191,
-    "catch": 3586.8257,
+    "catch": 3586.8246,
     "month": "September 2018",
     "year": "2018"
   },
@@ -27345,7 +27345,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 24.7641,
     "n_landings_per_boat": 3.4349,
-    "catch": 4520.0676,
+    "catch": 4520.0622,
     "month": "October 2018",
     "year": "2018"
   },
@@ -27355,7 +27355,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 19.5887,
     "n_landings_per_boat": 3.4349,
-    "catch": 3575.4269,
+    "catch": 3575.4227,
     "month": "October 2018",
     "year": "2018"
   },
@@ -27365,7 +27365,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 21.4219,
     "n_landings_per_boat": 2.9756,
-    "catch": 4046.186,
+    "catch": 4046.1844,
     "month": "November 2018",
     "year": "2018"
   },
@@ -27375,7 +27375,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 25.68,
     "n_landings_per_boat": 2.9756,
-    "catch": 4850.4609,
+    "catch": 4850.4591,
     "month": "November 2018",
     "year": "2018"
   },
@@ -27385,7 +27385,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 28.9685,
     "n_landings_per_boat": 2.3903,
-    "catch": 2663.8473,
+    "catch": 2663.8474,
     "month": "December 2018",
     "year": "2018"
   },
@@ -27395,7 +27395,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 27.015,
     "n_landings_per_boat": 2.3903,
-    "catch": 2484.2074,
+    "catch": 2484.2075,
     "month": "December 2018",
     "year": "2018"
   },
@@ -27405,7 +27405,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 100.0827,
     "n_landings_per_boat": 1,
-    "catch": 813.3732,
+    "catch": 813.373,
     "month": "January 2019",
     "year": "2019"
   },
@@ -27415,7 +27415,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 24.961,
     "n_landings_per_boat": 1,
-    "catch": 202.8583,
+    "catch": 202.8582,
     "month": "January 2019",
     "year": "2019"
   },
@@ -27425,7 +27425,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 74.8981,
     "n_landings_per_boat": 1,
-    "catch": 732.8194,
+    "catch": 732.8175,
     "month": "February 2019",
     "year": "2019"
   },
@@ -27435,7 +27435,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 14.6623,
     "n_landings_per_boat": 1,
-    "catch": 143.4591,
+    "catch": 143.4587,
     "month": "February 2019",
     "year": "2019"
   },
@@ -27445,7 +27445,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 57.7889,
     "n_landings_per_boat": 1,
-    "catch": 571.2758,
+    "catch": 571.2757,
     "month": "March 2019",
     "year": "2019"
   },
@@ -27465,7 +27465,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 35.8091,
     "n_landings_per_boat": 1,
-    "catch": 655.5292,
+    "catch": 655.527,
     "month": "April 2019",
     "year": "2019"
   },
@@ -27475,7 +27475,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 8.5766,
     "n_landings_per_boat": 1,
-    "catch": 157.0046,
+    "catch": 157.0041,
     "month": "April 2019",
     "year": "2019"
   },
@@ -27485,7 +27485,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 40.8898,
     "n_landings_per_boat": 1,
-    "catch": 793.8509,
+    "catch": 793.8496,
     "month": "May 2019",
     "year": "2019"
   },
@@ -27495,7 +27495,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 8.3574,
     "n_landings_per_boat": 1,
-    "catch": 162.2532,
+    "catch": 162.2529,
     "month": "May 2019",
     "year": "2019"
   },
@@ -27545,7 +27545,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 18.6784,
     "n_landings_per_boat": 1,
-    "catch": 659.1863,
+    "catch": 659.1856,
     "month": "August 2019",
     "year": "2019"
   },
@@ -27555,7 +27555,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 12.5348,
     "n_landings_per_boat": 1,
-    "catch": 442.3699,
+    "catch": 442.3694,
     "month": "August 2019",
     "year": "2019"
   },
@@ -27565,7 +27565,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 20.9876,
     "n_landings_per_boat": 2.5,
-    "catch": 3088.8478,
+    "catch": 3089.8845,
     "month": "September 2019",
     "year": "2019"
   },
@@ -27575,7 +27575,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 11.807,
     "n_landings_per_boat": 2.5,
-    "catch": 1737.6934,
+    "catch": 1738.2767,
     "month": "September 2019",
     "year": "2019"
   },
@@ -27585,7 +27585,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 22.4802,
     "n_landings_per_boat": 3,
-    "catch": 3604.249,
+    "catch": 3605.5955,
     "month": "October 2019",
     "year": "2019"
   },
@@ -27595,7 +27595,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 19.1506,
     "n_landings_per_boat": 3,
-    "catch": 3070.4206,
+    "catch": 3071.5676,
     "month": "October 2019",
     "year": "2019"
   },
@@ -27625,7 +27625,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 20.9774,
     "n_landings_per_boat": 8.5,
-    "catch": 15353.5848,
+    "catch": 15362.8408,
     "month": "December 2019",
     "year": "2019"
   },
@@ -27635,7 +27635,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 27.276,
     "n_landings_per_boat": 8.5,
-    "catch": 19963.5757,
+    "catch": 19975.6109,
     "month": "December 2019",
     "year": "2019"
   },
@@ -27665,7 +27665,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 53.4006,
     "n_landings_per_boat": 14,
-    "catch": 60237.6864,
+    "catch": 60262.7712,
     "month": "February 2020",
     "year": "2020"
   },
@@ -27675,7 +27675,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 19.4007,
     "n_landings_per_boat": 14,
-    "catch": 21884.6956,
+    "catch": 21893.8091,
     "month": "February 2020",
     "year": "2020"
   },
@@ -27685,7 +27685,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 64.6967,
     "n_landings_per_boat": 14,
-    "catch": 70380.8073,
+    "catch": 70413.3908,
     "month": "March 2020",
     "year": "2020"
   },
@@ -27695,7 +27695,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 8.6606,
     "n_landings_per_boat": 14,
-    "catch": 9421.5191,
+    "catch": 9425.8809,
     "month": "March 2020",
     "year": "2020"
   },
@@ -27705,7 +27705,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 34.6671,
     "n_landings_per_boat": 1,
-    "catch": 756.1687,
+    "catch": 756.1679,
     "month": "April 2020",
     "year": "2020"
   },
@@ -27715,7 +27715,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 7.1322,
     "n_landings_per_boat": 1,
-    "catch": 155.5704,
+    "catch": 155.5702,
     "month": "April 2020",
     "year": "2020"
   },
@@ -27725,7 +27725,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 34.6083,
     "n_landings_per_boat": 0.823,
-    "catch": 718.6756,
+    "catch": 718.6755,
     "month": "May 2020",
     "year": "2020"
   },
@@ -27745,7 +27745,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 37.3081,
     "n_landings_per_boat": 3.1474,
-    "catch": 4901.091,
+    "catch": 4901.0897,
     "month": "June 2020",
     "year": "2020"
   },
@@ -27755,7 +27755,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 6.781,
     "n_landings_per_boat": 3.1474,
-    "catch": 890.8114,
+    "catch": 890.8111,
     "month": "June 2020",
     "year": "2020"
   },
@@ -27765,7 +27765,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 31.62,
     "n_landings_per_boat": 3.0766,
-    "catch": 4635.1951,
+    "catch": 4635.188,
     "month": "July 2020",
     "year": "2020"
   },
@@ -27775,7 +27775,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 7.2867,
     "n_landings_per_boat": 3.0766,
-    "catch": 1068.1613,
+    "catch": 1068.1596,
     "month": "July 2020",
     "year": "2020"
   },
@@ -27785,7 +27785,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 22.3271,
     "n_landings_per_boat": 1.7148,
-    "catch": 1646.5081,
+    "catch": 1646.5064,
     "month": "August 2020",
     "year": "2020"
   },
@@ -27795,7 +27795,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 11.7136,
     "n_landings_per_boat": 1.7148,
-    "catch": 863.818,
+    "catch": 863.8171,
     "month": "August 2020",
     "year": "2020"
   },
@@ -27805,7 +27805,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 19.3003,
     "n_landings_per_boat": 4.8565,
-    "catch": 8260.99,
+    "catch": 8260.9804,
     "month": "September 2020",
     "year": "2020"
   },
@@ -27815,7 +27815,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 13.8832,
     "n_landings_per_boat": 4.8565,
-    "catch": 5942.3486,
+    "catch": 5942.3417,
     "month": "September 2020",
     "year": "2020"
   },
@@ -27825,7 +27825,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 14.0284,
     "n_landings_per_boat": 4.0698,
-    "catch": 4449.0557,
+    "catch": 4449.0509,
     "month": "October 2020",
     "year": "2020"
   },
@@ -27835,7 +27835,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 18.7032,
     "n_landings_per_boat": 4.0698,
-    "catch": 5931.6544,
+    "catch": 5931.648,
     "month": "October 2020",
     "year": "2020"
   },
@@ -27845,7 +27845,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 13.9551,
     "n_landings_per_boat": 3.7513,
-    "catch": 3782.5953,
+    "catch": 3782.5909,
     "month": "November 2020",
     "year": "2020"
   },
@@ -27855,7 +27855,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 20.6168,
     "n_landings_per_boat": 3.7513,
-    "catch": 5588.2609,
+    "catch": 5588.2544,
     "month": "November 2020",
     "year": "2020"
   },
@@ -27865,7 +27865,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 15.926,
     "n_landings_per_boat": 4.3154,
-    "catch": 5870.2551,
+    "catch": 5870.2495,
     "month": "December 2020",
     "year": "2020"
   },
@@ -27875,7 +27875,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 23.1191,
     "n_landings_per_boat": 4.3154,
-    "catch": 8521.6298,
+    "catch": 8521.6218,
     "month": "December 2020",
     "year": "2020"
   },
@@ -27885,7 +27885,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 86.5134,
     "n_landings_per_boat": 3.8677,
-    "catch": 5255.27,
+    "catch": 5255.2704,
     "month": "January 2021",
     "year": "2021"
   },
@@ -27895,7 +27895,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 25.9462,
     "n_landings_per_boat": 3.8677,
-    "catch": 1576.1073,
+    "catch": 1576.1074,
     "month": "January 2021",
     "year": "2021"
   },
@@ -27905,7 +27905,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 63.5665,
     "n_landings_per_boat": 2.931,
-    "catch": 3460.8193,
+    "catch": 3460.8132,
     "month": "February 2021",
     "year": "2021"
   },
@@ -27915,7 +27915,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 14.6935,
     "n_landings_per_boat": 2.931,
-    "catch": 799.9726,
+    "catch": 799.9712,
     "month": "February 2021",
     "year": "2021"
   },
@@ -27945,7 +27945,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 43.3465,
     "n_landings_per_boat": 3.3287,
-    "catch": 4262.7885,
+    "catch": 4262.7815,
     "month": "April 2021",
     "year": "2021"
   },
@@ -27955,7 +27955,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 7.6228,
     "n_landings_per_boat": 3.3287,
-    "catch": 749.6446,
+    "catch": 749.6434,
     "month": "April 2021",
     "year": "2021"
   },
@@ -27965,7 +27965,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 39.4154,
     "n_landings_per_boat": 2.803,
-    "catch": 3628.8472,
+    "catch": 3628.8474,
     "month": "May 2021",
     "year": "2021"
   },
@@ -27975,7 +27975,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 7.9888,
     "n_landings_per_boat": 2.803,
-    "catch": 735.5002,
+    "catch": 735.5003,
     "month": "May 2021",
     "year": "2021"
   },
@@ -27985,7 +27985,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 30.1528,
     "n_landings_per_boat": 3.1206,
-    "catch": 3720.9029,
+    "catch": 3720.903,
     "month": "June 2021",
     "year": "2021"
   },
@@ -28005,7 +28005,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 17.3113,
     "n_landings_per_boat": 2.6852,
-    "catch": 3348.7631,
+    "catch": 3348.7607,
     "month": "July 2021",
     "year": "2021"
   },
@@ -28015,7 +28015,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 5.8243,
     "n_landings_per_boat": 2.6852,
-    "catch": 1126.683,
+    "catch": 1126.6822,
     "month": "July 2021",
     "year": "2021"
   },
@@ -28025,7 +28025,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 25.0522,
     "n_landings_per_boat": 2.8873,
-    "catch": 4388.2245,
+    "catch": 4388.2224,
     "month": "August 2021",
     "year": "2021"
   },
@@ -28035,7 +28035,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 10.0962,
     "n_landings_per_boat": 2.8873,
-    "catch": 1768.4873,
+    "catch": 1768.4865,
     "month": "August 2021",
     "year": "2021"
   },
@@ -28065,7 +28065,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 14.7909,
     "n_landings_per_boat": 3.6723,
-    "catch": 4408.3802,
+    "catch": 4408.3759,
     "month": "October 2021",
     "year": "2021"
   },
@@ -28075,7 +28075,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 18.175,
     "n_landings_per_boat": 3.6723,
-    "catch": 5417.0013,
+    "catch": 5416.996,
     "month": "October 2021",
     "year": "2021"
   },
@@ -28125,7 +28125,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 88.1683,
     "n_landings_per_boat": 3.6083,
-    "catch": 4756.544,
+    "catch": 4756.5417,
     "month": "January 2022",
     "year": "2022"
   },
@@ -28135,7 +28135,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 31.0883,
     "n_landings_per_boat": 3.6083,
-    "catch": 1677.1664,
+    "catch": 1677.1656,
     "month": "January 2022",
     "year": "2022"
   },
@@ -28145,7 +28145,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 64.4699,
     "n_landings_per_boat": 2.4435,
-    "catch": 2398.9327,
+    "catch": 2398.9316,
     "month": "February 2022",
     "year": "2022"
   },
@@ -28155,7 +28155,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 12.2936,
     "n_landings_per_boat": 2.4435,
-    "catch": 457.4471,
+    "catch": 457.4469,
     "month": "February 2022",
     "year": "2022"
   },
@@ -28165,7 +28165,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 52.7911,
     "n_landings_per_boat": 1.4392,
-    "catch": 1352.0285,
+    "catch": 1352.0279,
     "month": "March 2022",
     "year": "2022"
   },
@@ -28175,7 +28175,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 10.511,
     "n_landings_per_boat": 1.4392,
-    "catch": 269.1963,
+    "catch": 269.1962,
     "month": "March 2022",
     "year": "2022"
   },
@@ -28185,7 +28185,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 53.2237,
     "n_landings_per_boat": 1.6485,
-    "catch": 1726.1342,
+    "catch": 1726.1331,
     "month": "April 2022",
     "year": "2022"
   },
@@ -28195,7 +28195,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 7.6097,
     "n_landings_per_boat": 1.6485,
-    "catch": 246.7962,
+    "catch": 246.7961,
     "month": "April 2022",
     "year": "2022"
   },
@@ -28205,7 +28205,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 35.2167,
     "n_landings_per_boat": 1.7922,
-    "catch": 1771.652,
+    "catch": 1771.6506,
     "month": "May 2022",
     "year": "2022"
   },
@@ -28215,7 +28215,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 7.4963,
     "n_landings_per_boat": 1.7922,
-    "catch": 377.1175,
+    "catch": 377.1172,
     "month": "May 2022",
     "year": "2022"
   },
@@ -28225,7 +28225,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 25.8683,
     "n_landings_per_boat": 2.26,
-    "catch": 2127.0863,
+    "catch": 2127.0842,
     "month": "June 2022",
     "year": "2022"
   },
@@ -28235,7 +28235,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 11.3689,
     "n_landings_per_boat": 2.26,
-    "catch": 934.8417,
+    "catch": 934.8408,
     "month": "June 2022",
     "year": "2022"
   },
@@ -28245,7 +28245,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 19.9124,
     "n_landings_per_boat": 3.6271,
-    "catch": 4605.8601,
+    "catch": 4605.8558,
     "month": "July 2022",
     "year": "2022"
   },
@@ -28255,7 +28255,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 9.1224,
     "n_landings_per_boat": 3.6271,
-    "catch": 2110.0608,
+    "catch": 2110.0588,
     "month": "July 2022",
     "year": "2022"
   },
@@ -28305,7 +28305,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 20.9072,
     "n_landings_per_boat": 0.7401,
-    "catch": 510.8243,
+    "catch": 510.8244,
     "month": "October 2022",
     "year": "2022"
   },
@@ -28315,7 +28315,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 17.8909,
     "n_landings_per_boat": 0.7401,
-    "catch": 437.1288,
+    "catch": 437.1289,
     "month": "October 2022",
     "year": "2022"
   },
@@ -28345,7 +28345,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 13.6322,
     "n_landings_per_boat": 0.873,
-    "catch": 457.5027,
+    "catch": 457.5028,
     "month": "December 2022",
     "year": "2022"
   },
@@ -28355,7 +28355,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 28.1287,
     "n_landings_per_boat": 0.873,
-    "catch": 944.0117,
+    "catch": 944.012,
     "month": "December 2022",
     "year": "2022"
   },
@@ -28365,7 +28365,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 89.4264,
     "n_landings_per_boat": 2.8422,
-    "catch": 3402.5292,
+    "catch": 3402.5278,
     "month": "January 2023",
     "year": "2023"
   },
@@ -28375,7 +28375,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 26.3285,
     "n_landings_per_boat": 2.8422,
-    "catch": 1001.756,
+    "catch": 1001.7556,
     "month": "January 2023",
     "year": "2023"
   },
@@ -28385,7 +28385,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 67.0764,
     "n_landings_per_boat": 3.4603,
-    "catch": 4385.2719,
+    "catch": 4385.2686,
     "month": "February 2023",
     "year": "2023"
   },
@@ -28395,7 +28395,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 11.6399,
     "n_landings_per_boat": 3.4603,
-    "catch": 760.9851,
+    "catch": 760.9846,
     "month": "February 2023",
     "year": "2023"
   },
@@ -28405,7 +28405,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 60.6264,
     "n_landings_per_boat": 2.9777,
-    "catch": 4553.7395,
+    "catch": 4553.7368,
     "month": "March 2023",
     "year": "2023"
   },
@@ -28415,7 +28415,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 12.6702,
     "n_landings_per_boat": 2.9777,
-    "catch": 951.6817,
+    "catch": 951.6812,
     "month": "March 2023",
     "year": "2023"
   },
@@ -28425,7 +28425,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 31.485,
     "n_landings_per_boat": 1.9593,
-    "catch": 1842.4765,
+    "catch": 1842.4751,
     "month": "April 2023",
     "year": "2023"
   },
@@ -28435,7 +28435,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 7.7804,
     "n_landings_per_boat": 1.9593,
-    "catch": 455.3017,
+    "catch": 455.3013,
     "month": "April 2023",
     "year": "2023"
   },
@@ -28445,7 +28445,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 34.5689,
     "n_landings_per_boat": 3.0866,
-    "catch": 3263.7623,
+    "catch": 3263.7584,
     "month": "May 2023",
     "year": "2023"
   },
@@ -28455,7 +28455,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 7.8341,
     "n_landings_per_boat": 3.0866,
-    "catch": 739.6402,
+    "catch": 739.6393,
     "month": "May 2023",
     "year": "2023"
   },
@@ -28485,7 +28485,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 24.5431,
     "n_landings_per_boat": 17.1886,
-    "catch": 67536.6267,
+    "catch": 67536.5405,
     "month": "July 2023",
     "year": "2023"
   },
@@ -28495,7 +28495,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 8.1882,
     "n_landings_per_boat": 17.1886,
-    "catch": 22531.8531,
+    "catch": 22531.8243,
     "month": "July 2023",
     "year": "2023"
   },
@@ -28505,7 +28505,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 17.9718,
     "n_landings_per_boat": 2.7428,
-    "catch": 3519.0731,
+    "catch": 3519.0703,
     "month": "August 2023",
     "year": "2023"
   },
@@ -28515,7 +28515,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 12.1477,
     "n_landings_per_boat": 2.7428,
-    "catch": 2378.6628,
+    "catch": 2378.6609,
     "month": "August 2023",
     "year": "2023"
   },
@@ -28525,7 +28525,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 18.2686,
     "n_landings_per_boat": 3.2797,
-    "catch": 4493.5521,
+    "catch": 4493.5499,
     "month": "September 2023",
     "year": "2023"
   },
@@ -28535,7 +28535,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 15.0595,
     "n_landings_per_boat": 3.2797,
-    "catch": 3704.1979,
+    "catch": 3704.1961,
     "month": "September 2023",
     "year": "2023"
   },
@@ -28545,7 +28545,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 20.486,
     "n_landings_per_boat": 2.5847,
-    "catch": 2803.7351,
+    "catch": 2803.7321,
     "month": "October 2023",
     "year": "2023"
   },
@@ -28555,7 +28555,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 16.8417,
     "n_landings_per_boat": 2.5847,
-    "catch": 2304.9651,
+    "catch": 2304.9627,
     "month": "October 2023",
     "year": "2023"
   },
@@ -28565,7 +28565,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 21.9182,
     "n_landings_per_boat": 3.1674,
-    "catch": 3971.9872,
+    "catch": 3971.9849,
     "month": "November 2023",
     "year": "2023"
   },
@@ -28575,7 +28575,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 25.2415,
     "n_landings_per_boat": 3.1674,
-    "catch": 4574.2232,
+    "catch": 4574.2206,
     "month": "November 2023",
     "year": "2023"
   },
@@ -28585,7 +28585,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 29.5499,
     "n_landings_per_boat": 4.1638,
-    "catch": 5448.9524,
+    "catch": 5448.9488,
     "month": "December 2023",
     "year": "2023"
   },
@@ -28595,7 +28595,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 30.5467,
     "n_landings_per_boat": 4.1638,
-    "catch": 5632.7669,
+    "catch": 5632.7633,
     "month": "December 2023",
     "year": "2023"
   },
@@ -28605,7 +28605,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 93.5952,
     "n_landings_per_boat": 3.5596,
-    "catch": 4114.8205,
+    "catch": 4114.8172,
     "month": "January 2024",
     "year": "2024"
   },
@@ -28615,7 +28615,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 24.8752,
     "n_landings_per_boat": 3.5596,
-    "catch": 1093.6114,
+    "catch": 1093.6105,
     "month": "January 2024",
     "year": "2024"
   },
@@ -28625,7 +28625,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 85.9012,
     "n_landings_per_boat": 3.9942,
-    "catch": 4547.3127,
+    "catch": 4547.3124,
     "month": "February 2024",
     "year": "2024"
   },
@@ -28635,7 +28635,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 14.3951,
     "n_landings_per_boat": 3.9942,
-    "catch": 762.0295,
+    "catch": 762.0294,
     "month": "February 2024",
     "year": "2024"
   },
@@ -28645,7 +28645,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 61.9036,
     "n_landings_per_boat": 3.2349,
-    "catch": 3381.138,
+    "catch": 3381.135,
     "month": "March 2024",
     "year": "2024"
   },
@@ -28655,7 +28655,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 10.0258,
     "n_landings_per_boat": 3.2349,
-    "catch": 547.6051,
+    "catch": 547.6046,
     "month": "March 2024",
     "year": "2024"
   },
@@ -28665,7 +28665,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 51.2844,
     "n_landings_per_boat": 3.3841,
-    "catch": 4775.8739,
+    "catch": 4775.8697,
     "month": "April 2024",
     "year": "2024"
   },
@@ -28675,7 +28675,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 7.087,
     "n_landings_per_boat": 3.3841,
-    "catch": 659.9827,
+    "catch": 659.9821,
     "month": "April 2024",
     "year": "2024"
   },
@@ -28685,7 +28685,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 37.7601,
     "n_landings_per_boat": 3.1318,
-    "catch": 3600.8885,
+    "catch": 3600.8857,
     "month": "May 2024",
     "year": "2024"
   },
@@ -28695,7 +28695,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 6.9528,
     "n_landings_per_boat": 3.1318,
-    "catch": 663.0306,
+    "catch": 663.0301,
     "month": "May 2024",
     "year": "2024"
   },
@@ -28705,7 +28705,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 23.936,
     "n_landings_per_boat": 3.0702,
-    "catch": 3789.5723,
+    "catch": 3789.5683,
     "month": "June 2024",
     "year": "2024"
   },
@@ -28715,7 +28715,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 7.3521,
     "n_landings_per_boat": 3.0702,
-    "catch": 1163.9882,
+    "catch": 1163.987,
     "month": "June 2024",
     "year": "2024"
   },
@@ -28725,7 +28725,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 28.2004,
     "n_landings_per_boat": 2.8668,
-    "catch": 4324.4141,
+    "catch": 4324.4146,
     "month": "July 2024",
     "year": "2024"
   },
@@ -28735,7 +28735,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 13.4401,
     "n_landings_per_boat": 2.8668,
-    "catch": 2060.9874,
+    "catch": 2060.9876,
     "month": "July 2024",
     "year": "2024"
   },
@@ -28745,7 +28745,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 26.3325,
     "n_landings_per_boat": 3.8105,
-    "catch": 5186.8423,
+    "catch": 5186.8367,
     "month": "August 2024",
     "year": "2024"
   },
@@ -28755,7 +28755,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 15.821,
     "n_landings_per_boat": 3.8105,
-    "catch": 3116.335,
+    "catch": 3116.3317,
     "month": "August 2024",
     "year": "2024"
   },
@@ -28765,7 +28765,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 14.8527,
     "n_landings_per_boat": 3.0981,
-    "catch": 3847.4676,
+    "catch": 3847.4672,
     "month": "September 2024",
     "year": "2024"
   },
@@ -28775,7 +28775,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 17.1655,
     "n_landings_per_boat": 3.0981,
-    "catch": 4446.5833,
+    "catch": 4446.5828,
     "month": "September 2024",
     "year": "2024"
   },
@@ -28785,7 +28785,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 25.8399,
     "n_landings_per_boat": 3.484,
-    "catch": 4811.0122,
+    "catch": 4811.0083,
     "month": "October 2024",
     "year": "2024"
   },
@@ -28795,7 +28795,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 18.0667,
     "n_landings_per_boat": 3.484,
-    "catch": 3363.7503,
+    "catch": 3363.7475,
     "month": "October 2024",
     "year": "2024"
   },
@@ -28805,7 +28805,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 14.4491,
     "n_landings_per_boat": 3.3159,
-    "catch": 3300.1824,
+    "catch": 3300.1816,
     "month": "November 2024",
     "year": "2024"
   },
@@ -28815,7 +28815,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 25.3303,
     "n_landings_per_boat": 3.3159,
-    "catch": 5785.4346,
+    "catch": 5785.433,
     "month": "November 2024",
     "year": "2024"
   },
@@ -28825,7 +28825,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 21.7687,
     "n_landings_per_boat": 3.2778,
-    "catch": 4044.5602,
+    "catch": 4044.5574,
     "month": "December 2024",
     "year": "2024"
   },
@@ -28835,7 +28835,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 25.6864,
     "n_landings_per_boat": 3.2778,
-    "catch": 4772.4619,
+    "catch": 4772.4586,
     "month": "December 2024",
     "year": "2024"
   },
@@ -28845,7 +28845,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 97.831,
     "n_landings_per_boat": 3.667,
-    "catch": 6213.7044,
+    "catch": 6213.6992,
     "month": "January 2025",
     "year": "2025"
   },
@@ -28855,7 +28855,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 21.9847,
     "n_landings_per_boat": 3.667,
-    "catch": 1396.3517,
+    "catch": 1396.3506,
     "month": "January 2025",
     "year": "2025"
   },
@@ -28865,7 +28865,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 57.7536,
     "n_landings_per_boat": 3.6757,
-    "catch": 4407.3304,
+    "catch": 4407.3242,
     "month": "February 2025",
     "year": "2025"
   },
@@ -28875,7 +28875,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 13.8942,
     "n_landings_per_boat": 3.6757,
-    "catch": 1060.3038,
+    "catch": 1060.3023,
     "month": "February 2025",
     "year": "2025"
   },
@@ -28885,7 +28885,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 59.5244,
     "n_landings_per_boat": 3.4767,
-    "catch": 4695.1098,
+    "catch": 4695.1088,
     "month": "March 2025",
     "year": "2025"
   },
@@ -28895,7 +28895,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 11.3215,
     "n_landings_per_boat": 3.4767,
-    "catch": 893.0055,
+    "catch": 893.0053,
     "month": "March 2025",
     "year": "2025"
   },
@@ -28905,7 +28905,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 46.0058,
     "n_landings_per_boat": 2.5167,
-    "catch": 3324.3798,
+    "catch": 3324.3781,
     "month": "April 2025",
     "year": "2025"
   },
@@ -28915,7 +28915,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 5.414,
     "n_landings_per_boat": 2.5167,
-    "catch": 391.2182,
+    "catch": 391.218,
     "month": "April 2025",
     "year": "2025"
   },
@@ -28925,7 +28925,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 29.2134,
     "n_landings_per_boat": 2.989,
-    "catch": 3250.4056,
+    "catch": 3250.4035,
     "month": "May 2025",
     "year": "2025"
   },
@@ -28935,7 +28935,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 7.4481,
     "n_landings_per_boat": 2.989,
-    "catch": 828.7072,
+    "catch": 828.7066,
     "month": "May 2025",
     "year": "2025"
   },
@@ -28945,7 +28945,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 25.1285,
     "n_landings_per_boat": 2.6343,
-    "catch": 2708.9885,
+    "catch": 2708.9881,
     "month": "June 2025",
     "year": "2025"
   },
@@ -28955,7 +28955,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 10.9992,
     "n_landings_per_boat": 2.6343,
-    "catch": 1185.7764,
+    "catch": 1185.7762,
     "month": "June 2025",
     "year": "2025"
   },
@@ -28965,7 +28965,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 27.8481,
     "n_landings_per_boat": 2.5032,
-    "catch": 3142.7672,
+    "catch": 3142.7625,
     "month": "July 2025",
     "year": "2025"
   },
@@ -28975,7 +28975,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 10.2914,
     "n_landings_per_boat": 2.5032,
-    "catch": 1161.4226,
+    "catch": 1161.4209,
     "month": "July 2025",
     "year": "2025"
   },
@@ -28985,7 +28985,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 33.3961,
     "n_landings_per_boat": 3.9441,
-    "catch": 5905.9508,
+    "catch": 5905.9472,
     "month": "August 2025",
     "year": "2025"
   },
@@ -28995,7 +28995,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 14.2768,
     "n_landings_per_boat": 3.9441,
-    "catch": 2524.7923,
+    "catch": 2524.7907,
     "month": "August 2025",
     "year": "2025"
   },
@@ -29005,7 +29005,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 25.7103,
     "n_landings_per_boat": 3.5009,
-    "catch": 5387.178,
+    "catch": 5387.171,
     "month": "September 2025",
     "year": "2025"
   },
@@ -29015,7 +29015,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 18.8261,
     "n_landings_per_boat": 3.5009,
-    "catch": 3944.7024,
+    "catch": 3944.6972,
     "month": "September 2025",
     "year": "2025"
   },
@@ -29025,7 +29025,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 19.6707,
     "n_landings_per_boat": 3.0077,
-    "catch": 3392.2485,
+    "catch": 3392.2448,
     "month": "October 2025",
     "year": "2025"
   },
@@ -29035,7 +29035,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 18.8475,
     "n_landings_per_boat": 3.0077,
-    "catch": 3250.2811,
+    "catch": 3250.2776,
     "month": "October 2025",
     "year": "2025"
   },
@@ -29045,7 +29045,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 14.8979,
     "n_landings_per_boat": 3.5852,
-    "catch": 3916.8169,
+    "catch": 3916.8141,
     "month": "November 2025",
     "year": "2025"
   },
@@ -29055,7 +29055,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 26.4574,
     "n_landings_per_boat": 3.5852,
-    "catch": 6955.9545,
+    "catch": 6955.9495,
     "month": "November 2025",
     "year": "2025"
   },
@@ -29065,7 +29065,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 18.3872,
     "n_landings_per_boat": 2.8044,
-    "catch": 2764.502,
+    "catch": 2764.5004,
     "month": "December 2025",
     "year": "2025"
   },
@@ -29075,7 +29075,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 29.8182,
     "n_landings_per_boat": 2.8044,
-    "catch": 4483.1345,
+    "catch": 4483.132,
     "month": "December 2025",
     "year": "2025"
   },
@@ -29085,7 +29085,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 111.6643,
     "n_landings_per_boat": 4.3076,
-    "catch": 5192.673,
+    "catch": 5192.6682,
     "month": "January 2026",
     "year": "2026"
   },
@@ -29095,7 +29095,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 22.6425,
     "n_landings_per_boat": 4.3076,
-    "catch": 1052.9331,
+    "catch": 1052.9322,
     "month": "January 2026",
     "year": "2026"
   },

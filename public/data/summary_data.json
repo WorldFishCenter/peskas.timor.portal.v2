@@ -2,7 +2,7 @@
   "n_surveys": [
     {
       "Area": "Atauro island",
-      "n": 37825
+      "n": 37836
     },
     {
       "Area": "North Coast",
@@ -16,7 +16,7 @@
   "estimated_tons": [
     {
       "fish_group": "Small pelagics",
-      "tons": 37701
+      "tons": 37700
     },
     {
       "fish_group": "Large pelagics",
@@ -30,7 +30,7 @@
   "estimated_revenue": [
     {
       "Area": "Atauro island",
-      "Estimated revenue": 12390161
+      "Estimated revenue": 12395164
     },
     {
       "Area": "North Coast",
@@ -63,7 +63,7 @@
         },
         {
           "x": "Seine Net",
-          "y": 0.197
+          "y": 0.196
         }
       ]
     },
@@ -200,7 +200,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 5.649
+          "y": 5.65
         },
         {
           "x": "Cast Net",
@@ -233,7 +233,7 @@
         },
         {
           "x": "Seine Net",
-          "y": 4.084
+          "y": 4.081
         },
         {
           "x": "Gill Net",
@@ -596,19 +596,19 @@
       "municipality": "Atauro",
       "catch_preservation": "Box",
       "count": 29,
-      "perc": 0.2832
+      "perc": 0.2829
     },
     {
       "municipality": "Atauro",
       "catch_preservation": "Ice box",
-      "count": 6631,
-      "perc": 64.7559
+      "count": 6642,
+      "perc": 64.7937
     },
     {
       "municipality": "Atauro",
       "catch_preservation": "Open",
       "count": 2112,
-      "perc": 20.625
+      "perc": 20.6029
     },
     {
       "municipality": "Atauro",
@@ -620,7 +620,7 @@
       "municipality": "Atauro",
       "catch_preservation": "Shade",
       "count": 1467,
-      "perc": 14.3262
+      "perc": 14.3108
     },
     {
       "municipality": "Baucau",
@@ -929,18 +929,18 @@
     },
     {
       "catch_preservation": "Ice box",
-      "count": 0,
-      "perc": 0
+      "count": 1,
+      "perc": 16.6667
     },
     {
       "catch_preservation": "Open",
       "count": 3,
-      "perc": 60
+      "perc": 50
     },
     {
       "catch_preservation": "Other",
       "count": 2,
-      "perc": 40
+      "perc": 33.3333
     },
     {
       "catch_preservation": "Shade",
