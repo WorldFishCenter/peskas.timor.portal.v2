@@ -1,6 +1,15 @@
 {
   "day": [
     {
+      "date_bin_start": "2026-01-29",
+      "n_landings": 0,
+      "n_tracks": 1,
+      "n_matched": 0,
+      "prop_matched": 0,
+      "n_boats": 3872,
+      "day": "29 Jan 26"
+    },
+    {
       "date_bin_start": "2026-01-28",
       "n_landings": 0,
       "n_tracks": 1,
@@ -35717,7 +35726,7 @@
     {
       "date_bin_start": "2026-01-25",
       "n_landings": 0,
-      "n_tracks": 4,
+      "n_tracks": 5,
       "n_matched": 0,
       "prop_matched": 0,
       "n_boats": 3872,
@@ -41096,7 +41105,7 @@
       "n_landings": 130,
       "prop_landings_woman": 0.1797,
       "fuel": 7.9268,
-      "n_tracks": 27,
+      "n_tracks": 28,
       "n_matched": 0,
       "prop_matched": 0,
       "landing_revenue": 32.3374,
@@ -43017,7 +43026,7 @@
       "n_landings": 130,
       "prop_landings_woman": 0.1797,
       "fuel": 7.9268,
-      "n_tracks": 27,
+      "n_tracks": 28,
       "n_matched": 0,
       "prop_matched": 0,
       "landing_revenue": 32.3374,
