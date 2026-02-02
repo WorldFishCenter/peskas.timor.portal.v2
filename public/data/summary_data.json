@@ -16,29 +16,29 @@
   "estimated_tons": [
     {
       "fish_group": "Small pelagics",
-      "tons": 37685
+      "tons": 37946
     },
     {
       "fish_group": "Large pelagics",
-      "tons": 27710
+      "tons": 28030
     },
     {
       "fish_group": "Other",
-      "tons": 4781
+      "tons": 4769
     }
   ],
   "estimated_revenue": [
     {
       "Area": "Atauro island",
-      "Estimated revenue": 12395707
+      "Estimated revenue": 12450378
     },
     {
       "Area": "North Coast",
-      "Estimated revenue": 99249107
+      "Estimated revenue": 100580253
     },
     {
       "Area": "South Coast",
-      "Estimated revenue": 43356674
+      "Estimated revenue": 43936686
     }
   ],
   "catch_habitat": [
