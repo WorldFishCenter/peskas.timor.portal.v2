@@ -4309,7 +4309,7 @@
       "landing_weight": 9.7213,
       "n_landings_per_boat": 0,
       "revenue": 0,
-      "catch": 1.2685,
+      "catch": 0.4281,
       "n_boats": 3872,
       "month": "February 2026",
       "year": "2026"
@@ -4672,7 +4672,7 @@
       "landing_weight": 10.8343,
       "n_landings_per_boat": 11.6136,
       "revenue": 0,
-      "catch": 321443.5604,
+      "catch": 321442.72,
       "n_boats": 3872,
       "year": "2026"
     }
