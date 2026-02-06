@@ -214,6 +214,7 @@ export default function Revenue() {
                       data={treemapData}
                       height={448}
                       colors={habitatPalette}
+                      unit="$"
                     />
                   ) : (
                     <div className="d-flex justify-content-center py-5">

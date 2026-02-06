@@ -11,12 +11,13 @@ import { useData } from '../hooks/useData'
 import { useI18n } from '../i18n'
 import { useTheme } from '../hooks/useTheme'
 import { tabPalette } from '../constants/colors'
-import { getHeatmapStyle } from '../utils/table'
+import { getHeatmapStyle, biasedNormalize } from '../utils/table'
 
 interface TaxaYearRow {
   taxaCode: string
   taxa: string
   imageUrl: string
+  total: number
   [year: string]: string | number // Dynamic year columns
 }
 
@@ -42,6 +43,25 @@ function CompositionSummaryTable() {
   const theme = useTheme()
   const { data: taxaAggregated, loading } = useData('taxa_aggregated')
   const [sorting, setSorting] = useState<SortingState>([])
+
+  // Custom style function for Total column with blue gradient
+  const getTotalColumnStyle = (value: number, values: number[]) => {
+    if (value === undefined || value === null || isNaN(value) || values.length === 0) return {}
+    
+    const t = biasedNormalize(value, values)
+    
+    // Blue color: #206bc4 -> rgba(32, 107, 196)
+    const baseColor = '32, 107, 196'
+    
+    // Use a clear range of opacity for visibility
+    const minOpacity = theme === 'dark' ? 0.1 : 0.05
+    const maxOpacity = theme === 'dark' ? 0.45 : 0.5
+    const opacity = minOpacity + (t * (maxOpacity - minOpacity))
+    
+    return {
+      backgroundColor: `rgba(${baseColor}, ${opacity})`,
+    }
+  }
 
   // Create taxa name lookup map from i18n
   const taxaNameMap = useMemo(() => {
@@ -72,8 +92,17 @@ function CompositionSummaryTable() {
       grouped[taxa][year] += (row.catch ?? 0) / 1000 // Convert to tons
     })
 
-    // Get all taxa sorted
-    const allTaxa = Object.keys(grouped).sort()
+    // Get all taxa sorted by total catch (most important contributor first)
+    // Always place MZZ (other) at the end
+    const allTaxa = Object.keys(grouped).sort((a, b) => {
+      // Always put MZZ at the end
+      if (a === 'MZZ') return 1
+      if (b === 'MZZ') return -1
+      
+      const totalA = Object.values(grouped[a]).reduce((sum, val) => sum + val, 0)
+      const totalB = Object.values(grouped[b]).reduce((sum, val) => sum + val, 0)
+      return totalB - totalA // Descending order
+    })
 
     // Build table rows
     const rows: TaxaYearRow[] = allTaxa.map(taxaCode => {
@@ -81,23 +110,32 @@ function CompositionSummaryTable() {
         taxaCode,
         taxa: taxaNameMap[taxaCode] || taxaCode,
         imageUrl: TAXA_IMAGES[taxaCode] || TAXA_IMAGES['OTHR'],
+        total: 0,
       }
+      let total = 0
       allYears.forEach(year => {
-        row[year] = grouped[taxaCode]?.[year] ?? 0
+        const value = grouped[taxaCode]?.[year] ?? 0
+        row[year] = value
+        total += value
       })
+      row.total = total
       return row
     })
 
     // Calculate column values for heatmap styling (all years together for consistent coloring)
     const allValues: number[] = []
+    const totalValues: number[] = []
     rows.forEach(row => {
+      if (row.total > 0) totalValues.push(row.total)
       allYears.forEach(year => {
         const val = row[year] as number
         if (val > 0) allValues.push(val)
       })
     })
 
-    const colValues: Record<string, number[]> = {}
+    const colValues: Record<string, number[]> = {
+      total: totalValues,
+    }
     allYears.forEach(year => {
       colValues[year] = allValues // Use same scale for all columns
     })
@@ -122,12 +160,12 @@ function CompositionSummaryTable() {
           <img
             src={info.getValue() as string}
             alt={info.row.original.taxa}
-            style={{ height: '60px', width: '95px', objectFit: 'contain' }}
+            style={{ height: '70px', width: '105px', objectFit: 'contain', padding: '8px 0' }}
           />
         ),
-        size: 120,
-        minSize: 120,
-        maxSize: 120,
+        size: 130,
+        minSize: 130,
+        maxSize: 130,
       },
     ]
 
@@ -138,7 +176,7 @@ function CompositionSummaryTable() {
         header: year,
         cell: info => {
           const value = info.getValue() as number
-          return `${value.toFixed(2)} t`
+          return `${Math.round(value)} t`
         },
         meta: {
           style: (value: number) => getHeatmapStyle(value, columnValues[year], theme, tabPalette),
@@ -147,6 +185,26 @@ function CompositionSummaryTable() {
         minSize: 90,
         maxSize: 90,
       })
+    })
+
+    // Add total column at the end with different formatting (blue gradient)
+    cols.push({
+      accessorKey: 'total',
+      header: t('table.total', { defaultValue: 'Total' }),
+      cell: info => {
+        const value = info.getValue() as number
+        return `${Math.round(value)} t`
+      },
+      meta: {
+        style: (value: number) => ({
+          ...getTotalColumnStyle(value, columnValues['total']),
+          fontWeight: 'bold',
+          borderLeft: theme === 'dark' ? '2px solid rgba(32, 107, 196, 0.3)' : '2px solid rgba(32, 107, 196, 0.2)',
+        }),
+      },
+      size: 100,
+      minSize: 100,
+      maxSize: 100,
     })
 
     return cols
@@ -167,16 +225,16 @@ function CompositionSummaryTable() {
   const tableFooter = t('composition.table_footer', { defaultValue: '*Pictures by FAO' })
 
   return (
-    <div className="card shadow-sm border-0">
-      <div className="card-header border-0">
+    <div className="card shadow-sm border-0" style={{ minHeight: '600px' }}>
+      <div className="card-header border-0 pb-3 pt-4">
         <div>
           <h3 className="card-title fw-bold mb-0">{tableHeading}</h3>
           {tableFooter && (
-            <div className="text-muted mt-1 small">{tableFooter}</div>
+            <div className="text-muted mt-2 small">{tableFooter}</div>
           )}
         </div>
       </div>
-      <div className="card-body p-0">
+      <div className="card-body p-0 pb-4">
         {loading ? (
           <div className="d-flex justify-content-center py-5">
             <div className="spinner-border text-primary" role="status">
@@ -184,8 +242,8 @@ function CompositionSummaryTable() {
             </div>
           </div>
         ) : (
-          <div className="table-responsive" style={{ maxHeight: '500px', overflowY: 'auto' }}>
-            <table className="table table-vcenter card-table" style={{ tableLayout: 'auto' }}>
+          <div className="table-responsive" style={{ maxHeight: '700px', overflowY: 'auto' }}>
+            <table className="table table-vcenter card-table" style={{ tableLayout: 'auto', fontSize: '0.95rem' }}>
               <thead style={{ position: 'sticky', top: 0, zIndex: 1, backgroundColor: theme === 'dark' ? '#1b2434' : '#fff' }}>
                 {table.getHeaderGroups().map(headerGroup => (
                   <tr key={headerGroup.id}>
@@ -200,6 +258,7 @@ function CompositionSummaryTable() {
                             maxWidth: size ? `${size}px` : 'auto',
                             cursor: 'pointer',
                             userSelect: 'none',
+                            padding: '14px 8px',
                           }}
                           onClick={header.column.getToggleSortingHandler()}
                         >
@@ -244,7 +303,7 @@ function CompositionSummaryTable() {
                         minWidth: `${size}px`,
                         maxWidth: `${size}px`,
                       } : {}
-                      const style = { ...baseStyle, ...sizeStyle }
+                      const style = { ...baseStyle, ...sizeStyle, padding: '12px 8px' }
                       return (
                         <td key={cell.id} style={style}>
                           {flexRender(cell.column.columnDef.cell, cell.getContext())}
