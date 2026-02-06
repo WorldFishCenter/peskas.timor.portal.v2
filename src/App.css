@@ -15,7 +15,7 @@
         left: 0;
         right: 0;
         bottom: -0.6rem;
-        border: 0 solid #206bc4;
+        border: 0 solid var(--tblr-primary);
         border-bottom-width: 2px;
     }
 }
@@ -27,7 +27,7 @@
     display: block;
     width: 40%;
     right: 0;
-    border: 0 solid #206bc4;
+    border: 0 solid var(--tblr-primary);
     border-top-width: 4px;
 }
 
