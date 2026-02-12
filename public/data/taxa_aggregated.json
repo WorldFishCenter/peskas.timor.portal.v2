@@ -14009,9 +14009,9 @@
       "date_bin_start": "2026-02-01",
       "grouped_taxa": "TUN",
       "landing_weight": 1.5663,
-      "n_landings_per_boat": 0,
+      "n_landings_per_boat": 0.0001,
       "revenue": 0,
-      "catch": 0.3468,
+      "catch": 0.4208,
       "n_boats": 3872,
       "month": "February 2026",
       "year": "2026"
@@ -15182,9 +15182,9 @@
       "date_bin_start": "2026-01-01",
       "grouped_taxa": "TUN",
       "landing_weight": 1.517,
-      "n_landings_per_boat": 11.5224,
+      "n_landings_per_boat": 11.5225,
       "revenue": 0,
-      "catch": 75539.52,
+      "catch": 75539.594,
       "n_boats": 3872,
       "year": "2026"
     }
