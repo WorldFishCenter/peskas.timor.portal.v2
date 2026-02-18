@@ -1,6 +1,42 @@
 {
   "day": [
     {
+      "date_bin_start": "2026-02-15",
+      "n_landings": 0,
+      "n_tracks": 1,
+      "n_matched": 0,
+      "prop_matched": 0,
+      "n_boats": 3872,
+      "day": "15 Feb 26"
+    },
+    {
+      "date_bin_start": "2026-02-14",
+      "n_landings": 0,
+      "n_tracks": 1,
+      "n_matched": 0,
+      "prop_matched": 0,
+      "n_boats": 3872,
+      "day": "14 Feb 26"
+    },
+    {
+      "date_bin_start": "2026-02-12",
+      "n_landings": 0,
+      "n_tracks": 1,
+      "n_matched": 0,
+      "prop_matched": 0,
+      "n_boats": 3872,
+      "day": "12 Feb 26"
+    },
+    {
+      "date_bin_start": "2026-02-11",
+      "n_landings": 0,
+      "n_tracks": 1,
+      "n_matched": 0,
+      "prop_matched": 0,
+      "n_boats": 3872,
+      "day": "11 Feb 26"
+    },
+    {
       "date_bin_start": "2026-02-08",
       "n_landings": 0,
       "n_tracks": 1,
@@ -36195,9 +36231,18 @@
   ],
   "week": [
     {
-      "date_bin_start": "2026-02-08",
+      "date_bin_start": "2026-02-15",
       "n_landings": 0,
       "n_tracks": 1,
+      "n_matched": 0,
+      "prop_matched": 0,
+      "n_boats": 3872,
+      "week": "15 Feb 26"
+    },
+    {
+      "date_bin_start": "2026-02-08",
+      "n_landings": 0,
+      "n_tracks": 4,
       "n_matched": 0,
       "prop_matched": 0,
       "n_boats": 3872,
@@ -41601,14 +41646,14 @@
     {
       "date_bin_start": "2026-02-01",
       "n_landings": 0,
-      "n_tracks": 7,
+      "n_tracks": 11,
       "n_matched": 0,
       "prop_matched": 0,
       "landing_revenue": 33.9771,
       "landing_weight": 12.6881,
-      "n_landings_per_boat": 4.8606,
-      "revenue": 729303.0552,
-      "catch": 258282.0001,
+      "n_landings_per_boat": 7.4244,
+      "revenue": 1113990.381,
+      "catch": 394518.6594,
       "price_kg": 3.0502,
       "n_boats": 3872,
       "month": "February 2026",
@@ -43540,14 +43585,14 @@
       "n_landings": 130,
       "prop_landings_woman": 0.1797,
       "fuel": 7.9268,
-      "n_tracks": 35,
+      "n_tracks": 39,
       "n_matched": 0,
       "prop_matched": 0,
       "landing_revenue": 33.1199,
       "landing_weight": 12.8337,
-      "n_landings_per_boat": 16.383,
-      "revenue": 2325358.8367,
-      "catch": 879908.0053,
+      "n_landings_per_boat": 18.9468,
+      "revenue": 2710046.1625,
+      "catch": 1016144.6647,
       "price_kg": 2.7315,
       "recorded_revenue": 5955,
       "recorded_catch": 2679.884,
