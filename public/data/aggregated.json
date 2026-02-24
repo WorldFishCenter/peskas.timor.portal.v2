@@ -1,6 +1,24 @@
 {
   "day": [
     {
+      "date_bin_start": "2026-02-22",
+      "n_landings": 0,
+      "n_tracks": 1,
+      "n_matched": 0,
+      "prop_matched": 0,
+      "n_boats": 3872,
+      "day": "22 Feb 26"
+    },
+    {
+      "date_bin_start": "2026-02-21",
+      "n_landings": 0,
+      "n_tracks": 2,
+      "n_matched": 0,
+      "prop_matched": 0,
+      "n_boats": 3872,
+      "day": "21 Feb 26"
+    },
+    {
       "date_bin_start": "2026-02-17",
       "n_landings": 0,
       "n_tracks": 1,
@@ -36240,9 +36258,18 @@
   ],
   "week": [
     {
+      "date_bin_start": "2026-02-22",
+      "n_landings": 0,
+      "n_tracks": 1,
+      "n_matched": 0,
+      "prop_matched": 0,
+      "n_boats": 3872,
+      "week": "22 Feb 26"
+    },
+    {
       "date_bin_start": "2026-02-15",
       "n_landings": 0,
-      "n_tracks": 2,
+      "n_tracks": 4,
       "n_matched": 0,
       "prop_matched": 0,
       "n_boats": 3872,
@@ -41655,14 +41682,14 @@
     {
       "date_bin_start": "2026-02-01",
       "n_landings": 0,
-      "n_tracks": 12,
+      "n_tracks": 15,
       "n_matched": 0,
       "prop_matched": 0,
       "landing_revenue": 33.9771,
       "landing_weight": 12.6881,
-      "n_landings_per_boat": 9.1337,
-      "revenue": 1370448.5982,
-      "catch": 485343.099,
+      "n_landings_per_boat": 9.9883,
+      "revenue": 1498677.7068,
+      "catch": 530755.3188,
       "price_kg": 3.0502,
       "n_boats": 3872,
       "month": "February 2026",
@@ -43594,14 +43621,14 @@
       "n_landings": 130,
       "prop_landings_woman": 0.1797,
       "fuel": 7.9268,
-      "n_tracks": 40,
+      "n_tracks": 43,
       "n_matched": 0,
       "prop_matched": 0,
       "landing_revenue": 33.1199,
       "landing_weight": 12.8337,
-      "n_landings_per_boat": 20.6561,
-      "revenue": 2966504.3797,
-      "catch": 1106969.1043,
+      "n_landings_per_boat": 21.5107,
+      "revenue": 3094733.4883,
+      "catch": 1152381.324,
       "price_kg": 2.7315,
       "recorded_revenue": 5955,
       "recorded_catch": 2679.884,
