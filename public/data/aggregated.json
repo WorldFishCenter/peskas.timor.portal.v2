@@ -1,6 +1,15 @@
 {
   "day": [
     {
+      "date_bin_start": "2026-03-09",
+      "n_landings": 0,
+      "n_tracks": 1,
+      "n_matched": 0,
+      "prop_matched": 0,
+      "n_boats": 3872,
+      "day": "09 Mar 26"
+    },
+    {
       "date_bin_start": "2026-03-04",
       "n_landings": 0,
       "n_tracks": 1,
@@ -36321,6 +36330,15 @@
   ],
   "week": [
     {
+      "date_bin_start": "2026-03-08",
+      "n_landings": 0,
+      "n_tracks": 1,
+      "n_matched": 0,
+      "prop_matched": 0,
+      "n_boats": 3872,
+      "week": "08 Mar 26"
+    },
+    {
       "date_bin_start": "2026-03-01",
       "n_landings": 0,
       "n_tracks": 2,
@@ -41754,14 +41772,14 @@
     {
       "date_bin_start": "2026-03-01",
       "n_landings": 0,
-      "n_tracks": 2,
+      "n_tracks": 3,
       "n_matched": 0,
       "prop_matched": 0,
       "landing_revenue": 34.9905,
       "landing_weight": 13.4958,
-      "n_landings_per_boat": 3.5851,
-      "revenue": 529169.9246,
-      "catch": 201505.9153,
+      "n_landings_per_boat": 4.35,
+      "revenue": 642059.5086,
+      "catch": 244493.8439,
       "price_kg": 2.6283,
       "n_boats": 3872,
       "month": "March 2026",
@@ -43709,14 +43727,14 @@
       "n_landings": 130,
       "prop_landings_woman": 0.1797,
       "fuel": 7.9268,
-      "n_tracks": 54,
+      "n_tracks": 55,
       "n_matched": 0,
       "prop_matched": 0,
       "landing_revenue": 33.1927,
       "landing_weight": 13.0023,
-      "n_landings_per_boat": 27.4577,
-      "revenue": 3882853.0183,
-      "catch": 1476142.5837,
+      "n_landings_per_boat": 28.2225,
+      "revenue": 3995742.6022,
+      "catch": 1519130.5123,
       "price_kg": 2.5453,
       "recorded_revenue": 5955,
       "recorded_catch": 2679.884,
