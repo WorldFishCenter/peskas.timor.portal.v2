@@ -32,7 +32,7 @@ export function useI18n() {
 // Dictionaries
 const en = {
   brand: {
-    title: 'PESKAS | Timor-Leste',
+    title: 'PESKAAS | Timor-Leste',
     subtitle: 'Management Dashboard',
   },
   nav: {
@@ -507,7 +507,7 @@ const en = {
 // NOTE: Tetum (Tetun) translations - update as needed
 const tet: typeof en = {
   brand: {
-    title: 'PESKAS Timor-Leste',
+    title: 'PESKAAS Timor-Leste',
     subtitle: 'Dashboard Jestaun',
   },
   nav: {
@@ -981,7 +981,7 @@ const tet: typeof en = {
 
 const pt: typeof en = {
   brand: {
-    title: 'PESKAS | Timor-Leste',
+    title: 'PESKAAS | Timor-Leste',
     subtitle: 'Painel de Gestão',
   },
   nav: {
