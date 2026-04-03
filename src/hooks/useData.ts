@@ -1,9 +1,15 @@
 /**
  * React hook for loading data files with loading and error states
  */
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import type { DataFileName, DataTypeMap } from '../types/data';
 import { fetchData, clearDataCache, DataLoadError } from '../utils/dataLoader';
+
+export interface UseDataOptions {
+  useCache?: boolean;
+  /** When false, no fetch runs; data, error are null and loading is false. */
+  enabled?: boolean;
+}
 
 export interface UseDataResult<T> {
   data: T | null;
@@ -14,37 +20,76 @@ export interface UseDataResult<T> {
 
 export function useData<T extends DataFileName>(
   fileName: T,
-  options?: { useCache?: boolean }
+  options?: UseDataOptions
 ): UseDataResult<DataTypeMap[T]> {
-  const { useCache = true } = options ?? {};
+  const { useCache = true, enabled = true } = options ?? {};
   const [data, setData] = useState<DataTypeMap[T] | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => enabled);
   const [error, setError] = useState<Error | null>(null);
+  const genRef = useRef(0);
 
-  const fetchDataAsync = useCallback(async () => {
+  useEffect(() => {
+    if (!enabled) {
+      genRef.current += 1;
+      setData(null);
+      setError(null);
+      setLoading(false);
+      return;
+    }
+
+    let cancelled = false;
+    genRef.current += 1;
+    const runId = genRef.current;
+
     setLoading(true);
     setError(null);
 
-    try {
-      const result = await fetchData(fileName, useCache);
-      setData(result);
-    } catch (err) {
-      setError(err instanceof Error ? err : new Error(String(err)));
-    } finally {
-      setLoading(false);
-    }
-  }, [fileName, useCache]);
+    (async () => {
+      try {
+        const result = await fetchData(fileName, useCache);
+        if (cancelled || runId !== genRef.current) return;
+        setData(result);
+        setError(null);
+      } catch (err) {
+        if (cancelled || runId !== genRef.current) return;
+        setError(err instanceof Error ? err : new Error(String(err)));
+      } finally {
+        if (!cancelled && runId === genRef.current) {
+          setLoading(false);
+        }
+      }
+    })();
 
-  useEffect(() => {
-    fetchDataAsync();
-  }, [fetchDataAsync]);
+    return () => {
+      cancelled = true;
+    };
+  }, [fileName, useCache, enabled]);
 
   const refetch = useCallback(() => {
+    if (!enabled) return;
+    genRef.current += 1;
+    const runId = genRef.current;
+    setLoading(true);
+    setError(null);
     if (useCache) {
       clearDataCache(fileName);
     }
-    fetchDataAsync();
-  }, [fileName, useCache, fetchDataAsync]);
+    (async () => {
+      try {
+        const result = await fetchData(fileName, useCache);
+        if (runId !== genRef.current) return;
+        setData(result);
+        setError(null);
+      } catch (err) {
+        if (runId !== genRef.current) return;
+        setError(err instanceof Error ? err : new Error(String(err)));
+      } finally {
+        if (runId === genRef.current) {
+          setLoading(false);
+        }
+      }
+    })();
+  }, [fileName, useCache, enabled]);
 
   return { data, loading, error, refetch };
 }
@@ -56,6 +101,10 @@ export interface UseMultipleDataResult<T extends DataFileName[]> {
   refetch: () => void;
 }
 
+function stableFileNamesKey<T extends DataFileName[]>(fileNames: T): string {
+  return [...fileNames].join('\0');
+}
+
 export function useMultipleData<T extends DataFileName[]>(
   fileNames: T
 ): UseMultipleDataResult<T> {
@@ -64,40 +113,83 @@ export function useMultipleData<T extends DataFileName[]>(
   );
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
+  const genRef = useRef(0);
+  const fileNamesRef = useRef(fileNames);
+  fileNamesRef.current = fileNames;
+  const namesKey = stableFileNamesKey(fileNames);
 
-  const fetchDataAsync = useCallback(async () => {
+  useEffect(() => {
+    let cancelled = false;
+    genRef.current += 1;
+    const runId = genRef.current;
+    const currentFiles = fileNamesRef.current;
+
     setLoading(true);
     setError(null);
 
-    try {
-      const results = await Promise.all(
-        fileNames.map(async (fileName) => ({
-          fileName,
-          data: await fetchData(fileName, true), // Use cache for multiple data
-        }))
-      );
+    (async () => {
+      try {
+        const results = await Promise.all(
+          currentFiles.map(async (fileName) => ({
+            fileName,
+            data: await fetchData(fileName, true),
+          }))
+        );
 
-      const dataMap = Object.fromEntries(
-        results.map(({ fileName, data }) => [fileName, data])
-      ) as { [K in T[number]]: DataTypeMap[K] };
+        if (cancelled || runId !== genRef.current) return;
 
-      setData(dataMap);
-    } catch (err) {
-      setError(err instanceof Error ? err : new Error(String(err)));
-    } finally {
-      setLoading(false);
-    }
-  }, [fileNames.join(',')]);
+        const dataMap = Object.fromEntries(
+          results.map(({ fileName, data: d }) => [fileName, d])
+        ) as { [K in T[number]]: DataTypeMap[K] };
 
-  useEffect(() => {
-    fetchDataAsync();
-  }, [fetchDataAsync]);
+        setData(dataMap);
+        setError(null);
+      } catch (err) {
+        if (cancelled || runId !== genRef.current) return;
+        setError(err instanceof Error ? err : new Error(String(err)));
+      } finally {
+        if (!cancelled && runId === genRef.current) {
+          setLoading(false);
+        }
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [namesKey]);
 
   const refetch = useCallback(() => {
-    // Clear cache for all requested files
-    fileNames.forEach(fileName => clearDataCache(fileName));
-    fetchDataAsync();
-  }, [fileNames, fetchDataAsync]);
+    genRef.current += 1;
+    const runId = genRef.current;
+    const currentFiles = fileNamesRef.current;
+    currentFiles.forEach((fileName) => clearDataCache(fileName));
+    setLoading(true);
+    setError(null);
+    (async () => {
+      try {
+        const results = await Promise.all(
+          currentFiles.map(async (fileName) => ({
+            fileName,
+            data: await fetchData(fileName, true),
+          }))
+        );
+        if (runId !== genRef.current) return;
+        const dataMap = Object.fromEntries(
+          results.map(({ fileName, data: d }) => [fileName, d])
+        ) as { [K in T[number]]: DataTypeMap[K] };
+        setData(dataMap);
+        setError(null);
+      } catch (err) {
+        if (runId !== genRef.current) return;
+        setError(err instanceof Error ? err : new Error(String(err)));
+      } finally {
+        if (runId === genRef.current) {
+          setLoading(false);
+        }
+      }
+    })();
+  }, []);
 
   return { data, loading, error, refetch };
 }

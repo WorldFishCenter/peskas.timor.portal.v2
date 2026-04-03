@@ -3,14 +3,7 @@ import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { useI18n } from '../../i18n'
 import { useTheme } from '../../hooks/useTheme'
-
-interface MunicipalTaxaRecord {
-  region: string
-  grouped_taxa: string
-  catch: number
-  year: string
-  [key: string]: any
-}
+import type { MunicipalTaxaRecord } from '../../types/data'
 
 interface RegionCompositionChartProps {
   data: MunicipalTaxaRecord[]

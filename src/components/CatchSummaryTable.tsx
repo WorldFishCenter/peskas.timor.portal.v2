@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import {
   useReactTable,
   getCoreRowModel,
@@ -6,19 +6,31 @@ import {
   type ColumnDef,
 } from '@tanstack/react-table'
 import { useMunicipalData } from '../hooks/useMunicipalData'
+import { useMonthlyYearFilter } from '../hooks/useMonthlyYearFilter'
 import { useFilters } from '../context/FilterContext'
 import { useI18n } from '../i18n'
 import { useTheme } from '../hooks/useTheme'
 import { tabPalette } from '../constants/colors'
 import { getHeatmapStyle } from '../utils/table'
+import { filterRowsByCalendarYear, sortRecentMonths } from '../utils/monthSeries'
+import { getMunicipalityScopeLabel } from '../utils/i18nLabels'
+import type { HeatmapColumnMeta } from '../types/tableMeta'
+import {
+  formatKg,
+  formatRecordedCatchKg,
+  formatSummaryNullable,
+  formatTonnes,
+  formatTripsPerBoat,
+  summaryNumericColumn,
+} from '../utils/formatSummaryTable'
 import DataScopeCallout from './DataScopeCallout'
 
 interface CatchTableRow {
   month: string
-  catch: number
-  recorded_catch: number
-  landing_weight: number
-  n_landings_per_boat: number
+  catch: number | null
+  recorded_catch: number | null
+  landing_weight: number | null
+  n_landings_per_boat: number | null
 }
 
 export default function CatchSummaryTable() {
@@ -27,48 +39,30 @@ export default function CatchSummaryTable() {
   const { municipality } = useFilters()
   const locale = lang === 'tet' ? 'tet' : lang === 'pt' ? 'pt-PT' : 'en-US'
   const { data: aggregated, loading, error } = useMunicipalData()
-  const [selectedYear, setSelectedYear] = useState<string>('all')
+  const { years, selectedYear, setSelectedYear } = useMonthlyYearFilter(aggregated?.month)
 
-  const scopeLabel =
-    municipality === 'all' ? t('common.national') : t(`common.municipalities.${municipality}`)
+  const scopeLabel = getMunicipalityScopeLabel(t, municipality)
 
   const tableData = useMemo(() => {
-    if (!aggregated?.month) return []
+    if (!aggregated?.month || !selectedYear) return []
 
-    let filtered = [...aggregated.month]
+    const filtered = filterRowsByCalendarYear(aggregated.month, selectedYear)
 
-    if (selectedYear !== 'all') {
-      filtered = filtered.filter(row =>
-        new Date(row.date_bin_start).getFullYear().toString() === selectedYear
-      )
-    }
-
-    return filtered
-      .sort((a, b) => new Date(b.date_bin_start).getTime() - new Date(a.date_bin_start).getTime())
-      .slice(0, 12)
-      .map(row => ({
-        month: new Date(row.date_bin_start).toLocaleDateString(locale, { month: 'long' }),
-        catch: (row.catch ?? 0) / 1000,
-        recorded_catch: (row.recorded_catch ?? 0) / 1000,
-        landing_weight: row.landing_weight ?? 0,
-        n_landings_per_boat: row.n_landings_per_boat ?? 0,
-      }))
+    return sortRecentMonths(filtered, 12).map(row => ({
+      month: new Date(row.date_bin_start).toLocaleDateString(locale, { month: 'long' }),
+      catch: row.catch == null ? null : row.catch / 1000,
+      recorded_catch: row.recorded_catch ?? null,
+      landing_weight: row.landing_weight ?? null,
+      n_landings_per_boat: row.n_landings_per_boat ?? null,
+    }))
   }, [aggregated, selectedYear, locale])
 
   const columnValues = useMemo(() => ({
-    catch: tableData.map(r => r.catch),
-    recorded_catch: tableData.map(r => r.recorded_catch),
-    landing_weight: tableData.map(r => r.landing_weight),
-    n_landings_per_boat: tableData.map(r => r.n_landings_per_boat),
+    catch: summaryNumericColumn(tableData.map(r => r.catch)),
+    recorded_catch: summaryNumericColumn(tableData.map(r => r.recorded_catch)),
+    landing_weight: summaryNumericColumn(tableData.map(r => r.landing_weight)),
+    n_landings_per_boat: summaryNumericColumn(tableData.map(r => r.n_landings_per_boat)),
   }), [tableData])
-
-  const years = useMemo(() => {
-    if (!aggregated?.month) return []
-    const uniqueYears = [...new Set(aggregated.month.map(row =>
-      new Date(row.date_bin_start).getFullYear().toString()
-    ))].sort((a, b) => b.localeCompare(a))
-    return ['all', ...uniqueYears]
-  }, [aggregated])
 
   const columns = useMemo<ColumnDef<CatchTableRow>[]>(
     () => [
@@ -80,34 +74,36 @@ export default function CatchSummaryTable() {
       {
         accessorKey: 'catch',
         header: t('vars.catch.short_name'),
-        cell: info => (info.getValue() as number).toFixed(1),
+        cell: info => formatSummaryNullable(formatTonnes, info.getValue() as number | null),
         meta: {
-          style: (value: number) => getHeatmapStyle(value, columnValues.catch, theme, tabPalette),
-        },
+          style: (value: number | null) =>
+            getHeatmapStyle(value, columnValues.catch, theme, tabPalette),
+        } satisfies HeatmapColumnMeta,
       },
       {
         accessorKey: 'recorded_catch',
         header: t('vars.recorded_catch.short_name'),
-        cell: info => (info.getValue() as number).toFixed(1),
+        cell: info => formatSummaryNullable(formatRecordedCatchKg, info.getValue() as number | null),
         meta: {
-          style: (value: number) => getHeatmapStyle(value, columnValues.recorded_catch, theme, tabPalette),
-        },
+          style: (value: number | null) =>
+            getHeatmapStyle(value, columnValues.recorded_catch, theme, tabPalette),
+        } satisfies HeatmapColumnMeta,
       },
       {
         accessorKey: 'landing_weight',
         header: t('vars.landing_weight.short_name'),
-        cell: info => (info.getValue() as number).toFixed(1),
+        cell: info => formatSummaryNullable(formatKg, info.getValue() as number | null),
         meta: {
-          style: (value: number) => getHeatmapStyle(value, columnValues.landing_weight, theme, tabPalette),
-        },
+          style: (value: number | null) => getHeatmapStyle(value, columnValues.landing_weight, theme, tabPalette),
+        } satisfies HeatmapColumnMeta,
       },
       {
         accessorKey: 'n_landings_per_boat',
         header: t('vars.n_landings_per_boat.short_name'),
-        cell: info => (info.getValue() as number).toFixed(1),
+        cell: info => formatSummaryNullable(formatTripsPerBoat, info.getValue() as number | null),
         meta: {
-          style: (value: number) => getHeatmapStyle(value, columnValues.n_landings_per_boat, theme, tabPalette),
-        },
+          style: (value: number | null) => getHeatmapStyle(value, columnValues.n_landings_per_boat, theme, tabPalette),
+        } satisfies HeatmapColumnMeta,
       },
     ],
     [t, columnValues, theme]
@@ -121,9 +117,11 @@ export default function CatchSummaryTable() {
 
   const totals = useMemo(() => {
     if (tableData.length === 0) return null
+    const catchVals = summaryNumericColumn(tableData.map(r => r.catch))
+    const recordedVals = summaryNumericColumn(tableData.map(r => r.recorded_catch))
     return {
-      catch: tableData.reduce((sum, row) => sum + row.catch, 0),
-      recorded_catch: tableData.reduce((sum, row) => sum + row.recorded_catch, 0),
+      catch: catchVals.length ? catchVals.reduce((a, b) => a + b, 0) : null,
+      recorded_catch: recordedVals.length ? recordedVals.reduce((a, b) => a + b, 0) : null,
     }
   }, [tableData])
 
@@ -132,7 +130,7 @@ export default function CatchSummaryTable() {
       <div className="card-header border-0 pb-0 d-flex flex-wrap align-items-start gap-2">
         <div className="flex-grow-1" style={{ minWidth: '12rem' }}>
           <h3 className="card-title fw-bold">{t('catch.summary_table', { defaultValue: 'Annual Summary' })}</h3>
-          <DataScopeCallout areaLabel={scopeLabel} className="mt-1" />
+          <DataScopeCallout areaLabel={scopeLabel} className="mt-2" />
         </div>
         <div className="ms-auto card-actions">
           <select
@@ -142,7 +140,7 @@ export default function CatchSummaryTable() {
           >
             {years.map(year => (
               <option key={year} value={year}>
-                {year === 'all' ? t('common.all_years', { defaultValue: 'All years' }) : year}
+                {year}
               </option>
             ))}
           </select>
@@ -179,8 +177,8 @@ export default function CatchSummaryTable() {
                 <tr key={row.id}>
                     {row.getVisibleCells().map(cell => {
                       const value = cell.getValue();
-                      const meta = cell.column.columnDef.meta as { style?: (val: any) => React.CSSProperties };
-                      const style = meta?.style ? meta.style(value) : {};
+                      const meta = cell.column.columnDef.meta as HeatmapColumnMeta | undefined;
+                      const style = meta?.style ? meta.style(value as number | null) : {};
                       
                       return (
                         <td key={cell.id} style={style}>
@@ -206,7 +204,7 @@ export default function CatchSummaryTable() {
                 {t('vars.catch.short_name')}
               </span>
               <span className="text-primary fw-bold">
-                {totals.catch.toFixed(1)}
+                {formatSummaryNullable(formatTonnes, totals.catch)}
               </span>
             </div>
             <div className="d-flex align-items-center gap-2">
@@ -214,7 +212,7 @@ export default function CatchSummaryTable() {
                 {t('vars.recorded_catch.short_name')}
               </span>
               <span className="text-azure fw-bold">
-                {totals.recorded_catch.toFixed(1)}
+                {formatSummaryNullable(formatRecordedCatchKg, totals.recorded_catch)}
             </span>
             </div>
           </div>

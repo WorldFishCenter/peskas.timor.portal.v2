@@ -27,7 +27,7 @@ if (!rootEl.getAttribute('data-bs-theme')) {
 if (import.meta.env.DEV) {
   verifyTranslations(DICTS as Record<'en' | 'tet' | 'pt', Record<string, unknown>>)
   // Make verification available in browser console
-  ;(window as any).verifyTranslations = () => verifyTranslations(DICTS as Record<'en' | 'tet' | 'pt', Record<string, unknown>>)
+  window.verifyTranslations = () => verifyTranslations(DICTS as Record<'en' | 'tet' | 'pt', Record<string, unknown>>)
 }
 
 createRoot(document.getElementById('root')!).render(

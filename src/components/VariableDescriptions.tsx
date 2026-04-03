@@ -1,6 +1,10 @@
 import { useI18n } from '../i18n'
-import { useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import { VARIABLE_CONFIG } from '../config/app.config'
+import { IMPUTED_MONTHS_EXPLAINER_HASH, IMPUTED_MONTHS_EXPLAINER_ID } from './TimeseriesExplainerLink'
+
+/** Primary indicators whose monthly municipal series may include imputed months (see trend-chart legend). */
+const VARIABLES_WITH_IMPUTATION_NOTE = new Set(['catch', 'revenue', 'price_kg'])
 
 // Simple markdown link parser - converts [text](url) to clickable links
 function parseMarkdownLinks(text: string): React.ReactNode {
@@ -57,7 +61,12 @@ const getBgQuality = (quality: 'low' | 'medium' | 'high' | null | undefined) => 
   }
 }
 
-export default function VariableDescriptions({ variables, type, heading, intro }: VariableDescriptionsProps) {
+export default function VariableDescriptions({
+  variables,
+  type,
+  heading,
+  intro,
+}: VariableDescriptionsProps) {
   const { t } = useI18n()
 
   // Always use translations - translations are the single source of truth
@@ -95,6 +104,39 @@ export default function VariableDescriptions({ variables, type, heading, intro }
       </>
     )
   }, [intro, type, t])
+
+  const firstImputationVariable = useMemo(
+    () => variables.find((v) => VARIABLES_WITH_IMPUTATION_NOTE.has(v)),
+    [variables]
+  )
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !firstImputationVariable) return
+
+    const revealAndScroll = () => {
+      if (window.location.hash !== IMPUTED_MONTHS_EXPLAINER_HASH) return
+      const panel = document.getElementById(`accordion-${firstImputationVariable}-collapse`)
+      const target = document.getElementById(IMPUTED_MONTHS_EXPLAINER_ID)
+      if (!panel || !target) return
+
+      const scrollToTarget = () => {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }
+
+      if (!panel.classList.contains('show')) {
+        document
+          .querySelector<HTMLButtonElement>(`button[data-bs-target="#accordion-${firstImputationVariable}-collapse"]`)
+          ?.click()
+        window.setTimeout(scrollToTarget, 420)
+      } else {
+        scrollToTarget()
+      }
+    }
+
+    revealAndScroll()
+    window.addEventListener('hashchange', revealAndScroll)
+    return () => window.removeEventListener('hashchange', revealAndScroll)
+  }, [firstImputationVariable])
 
   const variableInfos = useMemo(() => {
     return variables
@@ -160,6 +202,17 @@ export default function VariableDescriptions({ variables, type, heading, intro }
                       <div className="small mb-3">
                         <strong>{t('common.data_processing')}</strong>
                         <p className="mb-0">{parseMarkdownLinks(t(varInfo.methods_key))}</p>
+                      </div>
+                    )}
+
+                    {VARIABLES_WITH_IMPUTATION_NOTE.has(varInfo.name) && (
+                      <div
+                        id={varInfo.name === firstImputationVariable ? IMPUTED_MONTHS_EXPLAINER_ID : undefined}
+                        className="small mb-3"
+                        style={{ scrollMarginTop: '5rem' }}
+                      >
+                        <strong>{t('common.imputed_values_note_title')}</strong>
+                        <p className="mb-0">{parseMarkdownLinks(t('common.imputed_values_note_body'))}</p>
                       </div>
                     )}
 

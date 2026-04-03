@@ -25,6 +25,9 @@ export const heatmapColors: [number, number, number][] = [
 // Time series chart colors (Tabler primary blue + secondary)
 export const timeSeriesColors = ['#206bc4', '#79a6dc'];
 
+// Estimated / imputed months in municipal trend charts (distinct from primary series)
+export const timeSeriesImputedColor = '#f59f00';
+
 // Revenue bar chart colors (single color scheme)
 export const revenueBarColors = ['#206bc4'];
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useLayoutEffect, useMemo, useState } from 'react';
 import {
   useReactTable,
   getCoreRowModel,
@@ -45,30 +45,28 @@ function SummaryTableComponent({ title, caption }: SummaryTableProps) {
   const theme = useTheme();
   const { data: municipalData, loading, error } = useData('municipal_aggregated');
   const [sorting, setSorting] = useState<SortingState>([]);
-  const [selectedYear, setSelectedYear] = useState<string>('all');
+  const [selectedYear, setSelectedYear] = useState<string>('');
 
   const years = useMemo(() => {
-    if (!municipalData || municipalData.length === 0) return ['all'] as string[];
+    if (!municipalData || municipalData.length === 0) return [] as string[];
     const set = new Set<string>();
     for (const row of municipalData as MunicipalRow[]) {
       const y = row.year ?? new Date(row.date_bin_start).getFullYear().toString();
       if (y) set.add(y);
     }
     const sorted = [...set].sort((a, b) => b.localeCompare(a));
-    return ['all', ...sorted];
+    return sorted;
   }, [municipalData]);
 
-  useEffect(() => {
-    if (selectedYear !== 'all' && !years.includes(selectedYear)) {
-      setSelectedYear('all');
-    }
-  }, [years, selectedYear]);
+  useLayoutEffect(() => {
+    if (years.length === 0) return;
+    setSelectedYear(prev => (prev && years.includes(prev) ? prev : years[0]));
+  }, [years]);
 
   const summaryData = useMemo(() => {
-    if (!municipalData) return [];
+    if (!municipalData || !selectedYear) return [];
 
     const rows = (municipalData as MunicipalRow[]).filter((record) => {
-      if (selectedYear === 'all') return true;
       const y = record.year ?? new Date(record.date_bin_start).getFullYear().toString();
       return y === selectedYear;
     });
@@ -267,11 +265,11 @@ function SummaryTableComponent({ title, caption }: SummaryTableProps) {
                 {caption}
               </div>
             )}
-            <div className="text-muted small mt-2" style={{ fontSize: '0.7rem' }}>
-              {selectedYear === 'all'
-                ? t('home.table.scope_all_years')
-                : t('home.table.scope_year', { year: selectedYear })}
-            </div>
+            {selectedYear && (
+              <div className="text-muted small mt-2" style={{ fontSize: '0.7rem' }}>
+                {t('home.table.scope_year', { year: selectedYear })}
+              </div>
+            )}
           </div>
           <div className="ms-auto card-actions">
             <select
@@ -282,7 +280,7 @@ function SummaryTableComponent({ title, caption }: SummaryTableProps) {
             >
               {years.map((y) => (
                 <option key={y} value={y}>
-                  {y === 'all' ? t('common.all_years') : y}
+                  {y}
                 </option>
               ))}
             </select>

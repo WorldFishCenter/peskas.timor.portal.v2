@@ -13,7 +13,7 @@ export default function DataScopeCallout({ areaLabel, className = '' }: DataScop
   const { t } = useI18n()
   return (
     <div
-      className={`border-start border-primary border-3 ps-3 py-2 mt-2 bg-light-lt rounded-end ${className}`.trim()}
+      className={`border-start border-primary border-3 ps-3 pe-3 py-2 bg-light-lt rounded-end min-w-0 mw-100 ${className}`.trim()}
       role="note"
     >
       <div
@@ -22,7 +22,7 @@ export default function DataScopeCallout({ areaLabel, className = '' }: DataScop
       >
         {t('common.data_scope_label')}
       </div>
-      <div className="fw-semibold small text-body mt-1">{areaLabel}</div>
+      <div className="fw-semibold small text-body mt-1 text-break">{areaLabel}</div>
     </div>
   )
 }

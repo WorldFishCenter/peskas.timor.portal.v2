@@ -1,13 +1,18 @@
 import React, { useMemo } from 'react'
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
-import { timeSeriesColors } from '../../constants/colors'
+
+/** Y-axis line annotations (ApexCharts uses this shape; `YAxisAnnotations` is not exported). */
+type ApexYAxisLineAnnotation = NonNullable<NonNullable<ApexOptions['annotations']>['yaxis']>[number]
+import { timeSeriesColors, timeSeriesImputedColor } from '../../constants/colors'
 import { useTheme } from '../../hooks/useTheme'
 import { useI18n } from '../../i18n'
 
 export interface TimeSeriesDataPoint {
   date: string
   value: number
+  /** When set (monthly municipal rows), chart splits recorded vs imputed styling */
+  isImputed?: boolean
 }
 
 export interface TimeSeriesSeries {
@@ -56,37 +61,139 @@ function TimeSeriesChart({
     series.length > 0 &&
     series.some((s) => s.data && s.data.length > 0)
 
-  if (!hasValidData) {
-    return (
-      <div
-        style={{
-          height: `${height}px`,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          color: '#999',
-        }}
-      >
-        {t('common.no_data', { defaultValue: 'No data available' })}
-      </div>
-    )
-  }
+  const gradientFill = useMemo(
+    () => ({
+      shade: 'light' as const,
+      shadeIntensity: 0.5,
+      inverseColors: false,
+      opacityFrom: theme === 'dark' ? 0.6 : 0.5,
+      opacityTo: theme === 'dark' ? 0.1 : 0.1,
+      stops: [0, 100],
+    }),
+    [theme]
+  )
 
-  const apexSeries = useMemo(() => series.map((s) => ({
-    name: s.name,
-    data: s.data.map((d) => ({
-      x: d.date,
-      y: d.value,
-    })),
-  })), [series])
+  const chartModel = useMemo(() => {
+    if (!series?.length || !series[0]?.data?.length) {
+      return {
+        apexSeries: [] as { name: string; data: { x: string; y: number | null }[] }[],
+        palette: colors,
+        strokeDashArray: 0 as number | number[],
+        strokeWidth: 2.5 as number | number[],
+        valuesForStats: [] as number[],
+        markerSizes: 0 as number | number[],
+        fill:
+          chartType === 'area'
+            ? { type: 'gradient' as const, gradient: gradientFill }
+            : { type: 'solid' as const, opacity: 0 },
+      }
+    }
+
+    const primary = series[0]
+    const hasImputationMeta = primary.data.some((d) => typeof d.isImputed === 'boolean')
+
+    if (!hasImputationMeta || series.length > 1) {
+      return {
+        apexSeries: series.map((s) => ({
+          name: s.name,
+          data: s.data.map((d) => ({ x: d.date, y: d.value })),
+        })),
+        palette: colors,
+        strokeDashArray: 0,
+        strokeWidth: 2.5,
+        valuesForStats: primary.data.map((d) => d.value),
+        markerSizes: 0,
+        fill:
+          chartType === 'area'
+            ? { type: 'gradient' as const, gradient: gradientFill }
+            : { type: 'solid' as const, opacity: 0 },
+      }
+    }
+
+    const nImputed = primary.data.filter((d) => d.isImputed === true).length
+    const nRecorded = primary.data.length - nImputed
+
+    if (nImputed === 0) {
+      return {
+        apexSeries: [
+          {
+            name: primary.name,
+            data: primary.data.map((d) => ({ x: d.date, y: d.value })),
+          },
+        ],
+        palette: colors,
+        strokeDashArray: 0,
+        strokeWidth: 2.5,
+        valuesForStats: primary.data.map((d) => d.value),
+        markerSizes: 0,
+        fill:
+          chartType === 'area'
+            ? { type: 'gradient' as const, gradient: gradientFill }
+            : { type: 'solid' as const, opacity: 0 },
+      }
+    }
+
+    if (nRecorded === 0) {
+      return {
+        apexSeries: [
+          {
+            name: primary.name,
+            data: primary.data.map((d) => ({ x: d.date, y: d.value })),
+          },
+        ],
+        palette: [timeSeriesImputedColor],
+        strokeDashArray: [6],
+        strokeWidth: 2.5,
+        valuesForStats: primary.data.map((d) => d.value),
+        markerSizes: 3.5,
+        fill:
+          chartType === 'area'
+            ? { type: 'gradient' as const, gradient: gradientFill }
+            : { type: 'solid' as const, opacity: 0 },
+      }
+    }
+
+    const recName = t('common.timeseries_non_imputed', { defaultValue: 'Direct' })
+    const impName = t('common.timeseries_imputed', { defaultValue: 'Estimated' })
+
+    return {
+      apexSeries: [
+        {
+          name: recName,
+          data: primary.data.map((d) => ({
+            x: d.date,
+            y: d.isImputed === true ? null : d.value,
+          })),
+        },
+        {
+          name: impName,
+          data: primary.data.map((d) => ({
+            x: d.date,
+            y: d.isImputed === true ? d.value : null,
+          })),
+        },
+      ],
+      palette: [colors[0] ?? timeSeriesColors[0], timeSeriesImputedColor],
+      strokeDashArray: [0, 6],
+      strokeWidth: [2.5, 2.5],
+      valuesForStats: primary.data.map((d) => d.value),
+      markerSizes: [3.5, 4],
+      fill:
+        chartType === 'area'
+          ? {
+              type: ['gradient', 'solid'] as unknown as 'gradient',
+              gradient: gradientFill,
+              opacity: [1, 0],
+            }
+          : { type: 'solid' as const, opacity: [0, 0] },
+    }
+  }, [series, colors, chartType, gradientFill, t])
 
   const annotations = useMemo(() => {
-    const lines: any[] = []
-    
-    if ((showMean || showMax) && series.length > 0) {
-      // Use the first series for reference metrics if multiple exist
-      const data = series[0].data
-      const values = data.map(d => d.value)
+    const lines: ApexYAxisLineAnnotation[] = []
+    const values = chartModel.valuesForStats
+
+    if ((showMean || showMax) && values.length > 0) {
       
       if (showMean) {
         const mean = values.reduce((a, b) => a + b, 0) / values.length
@@ -135,7 +242,23 @@ function TimeSeriesChart({
     }
     
     return { yaxis: lines }
-  }, [series, showMean, showMax, theme, t])
+  }, [chartModel.valuesForStats, showMean, showMax, theme, t])
+
+  if (!hasValidData) {
+    return (
+      <div
+        style={{
+          height: `${height}px`,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          color: '#999',
+        }}
+      >
+        {t('common.no_data', { defaultValue: 'No data available' })}
+      </div>
+    )
+  }
 
   const options: ApexOptions = {
     chart: {
@@ -157,24 +280,15 @@ function TimeSeriesChart({
       mode: theme,
     },
     annotations: annotations,
-    colors: colors,
+    colors: chartModel.palette,
     dataLabels: { enabled: false },
     stroke: {
       curve: 'smooth',
-      width: 2.5,
+      width: chartModel.strokeWidth,
       lineCap: 'round',
+      dashArray: chartModel.strokeDashArray,
     },
-    fill: {
-      type: chartType === 'area' ? 'gradient' : 'solid',
-      gradient: {
-        shade: 'light',
-        shadeIntensity: 0.5,
-        inverseColors: false,
-        opacityFrom: theme === 'dark' ? 0.6 : 0.5,
-        opacityTo: theme === 'dark' ? 0.1 : 0.1,
-        stops: [0, 100],
-      },
-    },
+    fill: chartModel.fill as ApexOptions['fill'],
     grid: {
       padding: {
         top: -20,
@@ -196,7 +310,7 @@ function TimeSeriesChart({
       },
     },
     markers: {
-      size: 0,
+      size: chartModel.markerSizes,
       strokeColors: theme === 'dark' ? '#1b2434' : '#fff',
       strokeWidth: 2,
       hover: {
@@ -235,12 +349,18 @@ function TimeSeriesChart({
     },
     tooltip: {
       theme: theme,
+      // With split recorded/imputed series, one series is always null per x; shared + safe y formatter avoids broken tooltips
+      shared: chartModel.apexSeries.length > 1,
+      intersect: false,
       x: {
         show: true,
         formatter: (value: string | number) => formatMonthYear(value),
       },
       y: {
-        formatter: (val: number) => val.toLocaleString(),
+        formatter: (val: number | null | undefined) => {
+          if (val == null || Number.isNaN(Number(val))) return ''
+          return Number(val).toLocaleString()
+        },
       },
       style: {
         fontSize: '12px',
@@ -315,7 +435,7 @@ function TimeSeriesChart({
   return (
     <ReactApexChart
       options={options}
-      series={apexSeries}
+      series={chartModel.apexSeries}
       type={chartType}
       height={height}
     />

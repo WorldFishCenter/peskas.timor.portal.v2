@@ -12,6 +12,7 @@ import { useI18n } from '../i18n'
 import { useTheme } from '../hooks/useTheme'
 import { tabPalette } from '../constants/colors'
 import { getHeatmapStyle, biasedNormalize } from '../utils/table'
+import type { HeatmapColumnMeta } from '../types/tableMeta'
 
 interface TaxaYearRow {
   taxaCode: string
@@ -201,7 +202,7 @@ function CompositionSummaryTable() {
           fontWeight: 'bold',
           borderLeft: theme === 'dark' ? '2px solid rgba(32, 107, 196, 0.3)' : '2px solid rgba(32, 107, 196, 0.2)',
         }),
-      },
+      } satisfies HeatmapColumnMeta<number>,
       size: 100,
       minSize: 100,
       maxSize: 100,
@@ -295,9 +296,10 @@ function CompositionSummaryTable() {
                 {table.getRowModel().rows.map(row => (
                   <tr key={row.id}>
                     {row.getVisibleCells().map(cell => {
-                      const meta = cell.column.columnDef.meta as any
+                      const value = cell.getValue()
+                      const meta = cell.column.columnDef.meta as HeatmapColumnMeta<number> | undefined
                       const size = cell.column.columnDef.size
-                      const baseStyle = meta?.style ? meta.style(cell.getValue()) : {}
+                      const baseStyle = meta?.style ? meta.style(value as number) : {}
                       const sizeStyle = size ? {
                         width: `${size}px`,
                         minWidth: `${size}px`,

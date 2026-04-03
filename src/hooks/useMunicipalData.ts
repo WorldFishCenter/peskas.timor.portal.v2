@@ -4,67 +4,47 @@
 import { useMemo } from 'react';
 import { useData } from './useData';
 import { useFilters } from '../context/FilterContext';
+import type { MunicipalAggregatedRecord, MunicipalMonthlySlice, MunicipalScopedAggregatedData } from '../types/data';
 
-export interface MunicipalAggregatedRow {
-  region: string;
-  date_bin_start: string;
-  is_imputed: boolean;
-  n_landings_per_boat: number;
-  landing_revenue: number;
-  landing_weight: number;
-  price_kg: number;
-  revenue: number;
-  catch: number;
-  n_boats: number;
-  recorded_catch?: number;
-  recorded_revenue?: number;
-  month: string;
-  year: string;
-}
-
-export interface AggregatedRow {
-  date_bin_start: string;
-  is_imputed: boolean;
-  n_landings_per_boat: number;
-  landing_revenue: number;
-  landing_weight: number;
-  price_kg: number;
-  revenue: number;
-  catch: number;
-  n_boats: number;
-  recorded_catch?: number;
-  recorded_revenue?: number;
-  month: string;
-  year: string;
+function buildMunicipalMonthlySlice(rows: MunicipalAggregatedRecord[]): MunicipalMonthlySlice {
+  return { month: rows };
 }
 
 /**
  * Hook that returns municipality-filtered aggregated data
  * - If municipality is 'all', returns national aggregated data
- * - Otherwise, returns filtered municipal_aggregated data for the selected municipality
+ * - Otherwise, returns filtered municipal_aggregated rows as `{ month }` (municipal JSON is not fetched when national)
  */
-export function useMunicipalData() {
+export function useMunicipalData(): {
+  data: MunicipalScopedAggregatedData | null;
+  loading: boolean;
+  error: Error | null;
+} {
   const { municipality } = useFilters();
-  const { data: nationalData, loading: nationalLoading, error: nationalError } = useData('aggregated');
-  const { data: municipalData, loading: municipalLoading, error: municipalError } = useData('municipal_aggregated');
+  const municipalEnabled = municipality !== 'all';
 
-  const filteredData = useMemo(() => {
+  const { data: nationalData, loading: nationalLoading, error: nationalError } = useData('aggregated');
+  const { data: municipalData, loading: municipalLoading, error: municipalError } = useData(
+    'municipal_aggregated',
+    { enabled: municipalEnabled }
+  );
+
+  const filteredData = useMemo((): MunicipalScopedAggregatedData | null => {
     if (municipality === 'all') {
       return nationalData;
     }
 
     if (!municipalData) return null;
 
-    // Filter by selected municipality
-    const filtered = (municipalData as MunicipalAggregatedRow[]).filter(
-      row => row.region.toLowerCase() === municipality.toLowerCase()
+    const filtered = municipalData.filter(
+      (row) => row.region.toLowerCase() === municipality.toLowerCase()
     );
 
-    return { month: filtered } as unknown as typeof nationalData;
+    return buildMunicipalMonthlySlice(filtered);
   }, [municipality, nationalData, municipalData]);
 
-  const loading = municipality === 'all' ? nationalLoading : (nationalLoading || municipalLoading);
-  const error = municipality === 'all' ? nationalError : (nationalError || municipalError);
+  const loading = municipality === 'all' ? nationalLoading : nationalLoading || municipalLoading;
+  const error = municipality === 'all' ? nationalError : nationalError || municipalError;
 
   return { data: filteredData, loading, error };
 }

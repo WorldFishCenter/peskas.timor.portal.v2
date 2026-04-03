@@ -103,7 +103,7 @@ function TreemapChart({
         fontWeight: 600,
         fontFamily: 'inherit',
       },
-      formatter: function (text: string, op: any) {
+      formatter: function (text: string, op: { value: number }) {
         return `${text}: ${op.value.toLocaleString()} ${displayUnit}`
       },
     },

@@ -6,18 +6,19 @@ import RadarChart from '../components/charts/RadarChart'
 import TimeSeriesChart from '../components/charts/TimeSeriesChart'
 import MarketSummaryTable from '../components/MarketSummaryTable'
 import DataScopeCallout from '../components/DataScopeCallout'
+import TimeseriesExplainerLink from '../components/TimeseriesExplainerLink'
 import VariableDescriptions from '../components/VariableDescriptions'
 import { useData } from '../hooks'
 import { useMunicipalData } from '../hooks/useMunicipalData'
 import { interpolateViridis } from 'd3-scale-chromatic'
 import { useFilters } from '../context/FilterContext'
+import { getMunicipalityScopeLabel } from '../utils/i18nLabels'
 import { timeSeriesColors, spiderColors } from '../constants/colors'
 
 export default function Market() {
   const { t } = useI18n()
   const { municipality, setMunicipality } = useFilters()
-  const chartScopeLabel =
-    municipality === 'all' ? t('common.national') : t(`common.municipalities.${municipality}`)
+  const chartScopeLabel = getMunicipalityScopeLabel(t, municipality)
   const { data: summaryData, loading: summaryLoading } = useData('summary_data')
   const { data: municipalData, loading: municipalLoading } = useData('municipal_aggregated')
   const { data: aggregated, loading: aggregatedLoading } = useMunicipalData()
@@ -50,6 +51,7 @@ export default function Market() {
         data: sortedData.map((row) => ({
           date: row.date_bin_start,
           value: row.price_kg ?? 0,
+          isImputed: row.is_imputed,
         })),
       },
     ]
@@ -116,13 +118,18 @@ export default function Market() {
             {/* Time Series Chart - 8 columns */}
             <div className="col-lg-8 col-xl-8">
               <div className="card shadow-sm border-0">
-                <div className="card-header d-flex align-items-center">
-                  <div>
-                    <h3 className="card-title fw-bold">
-                      {priceCardTitle}
-                    </h3>
-                    <div className="card-subtitle">{t('market.trend_subtitle', { defaultValue: 'Monthly price per kilogram' })}</div>
-                    <DataScopeCallout areaLabel={chartScopeLabel} />
+                <div className="card-header">
+                  <div className="d-flex flex-wrap align-items-center column-gap-4 row-gap-2">
+                    <div className="min-w-0">
+                      <h3 className="card-title fw-bold">
+                        {priceCardTitle}
+                      </h3>
+                      <div className="card-subtitle">{t('market.trend_subtitle', { defaultValue: 'Monthly price per kilogram' })}</div>
+                      {municipality !== 'all' && (
+                        <TimeseriesExplainerLink className="d-inline-block mt-1" />
+                      )}
+                    </div>
+                    <DataScopeCallout areaLabel={chartScopeLabel} className="flex-shrink-0" />
                   </div>
                 </div>
                 <div className="card-body">
@@ -148,9 +155,9 @@ export default function Market() {
             <div className="col-lg-4 col-xl-4">
               <div className="card shadow-sm border-0">
                 <div className="card-header border-0 pb-0">
-                  <div>
-                    <h3 className="card-title fw-bold">{t('market.price_by_region')}</h3>
-                    <DataScopeCallout areaLabel={t('common.radar_all_municipalities_scope')} />
+                  <div className="d-flex flex-column gap-2">
+                    <h3 className="card-title fw-bold mb-0">{t('market.price_by_region')}</h3>
+                    <DataScopeCallout areaLabel={t('common.radar_all_municipalities_scope')} className="w-100" />
                   </div>
                 </div>
                 <div className="card-body pt-2">
@@ -173,20 +180,22 @@ export default function Market() {
             {/* Conservation Stacked Bar - Full width */}
             <div className="col-12">
               <div className="card shadow-sm border-0">
-                <div className="card-header d-flex align-items-center">
-                  <div>
-                    <h3 className="card-title fw-bold">
-                      {conservationTitle}
-                    </h3>
-                    {conservationSubtitle && (
-                      <div className="card-subtitle">
-                        {conservationSubtitle}
-                      </div>
-                    )}
+                <div className="card-header">
+                  <div className="d-flex flex-wrap align-items-center column-gap-4 row-gap-2">
+                    <div className="min-w-0">
+                      <h3 className="card-title fw-bold">
+                        {conservationTitle}
+                      </h3>
+                      {conservationSubtitle && (
+                        <div className="card-subtitle">
+                          {conservationSubtitle}
+                        </div>
+                      )}
+                    </div>
                     {municipality === 'all' && (
                       <DataScopeCallout
                         areaLabel={t('common.conservation_scope_national_line')}
-                        className="mt-2"
+                        className="flex-shrink-0"
                       />
                     )}
                   </div>

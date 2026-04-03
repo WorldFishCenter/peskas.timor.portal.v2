@@ -3,18 +3,12 @@ import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
 import { useI18n } from '../../i18n'
 import { useTheme } from '../../hooks/useTheme'
+import type { MunicipalTaxaRecord, TaxaAggregatedRecord } from '../../types/data'
 
-interface TaxaRecord {
-  grouped_taxa: string
-  catch: number
-  region?: string
-  date_bin_start?: string
-  year?: string
-  [key: string]: any
-}
+type TaxaChartRow = TaxaAggregatedRecord | MunicipalTaxaRecord
 
 interface TaxaBarChartProps {
-  data: TaxaRecord[]
+  data: TaxaChartRow[]
   taxaNameMap: Record<string, string>
   year?: string
   municipality?: string
@@ -54,7 +48,7 @@ function TaxaBarChart({
 
     // Filter by municipality (if provided)
     if (municipality) {
-      filtered = filtered.filter(row => row.region === municipality)
+      filtered = filtered.filter(row => 'region' in row && row.region === municipality)
     }
 
     // Get all valid taxa from taxaNameMap

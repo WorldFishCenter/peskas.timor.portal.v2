@@ -200,7 +200,7 @@
 .card-header {
     border-bottom: 1px solid rgba(230, 230, 235, 0.6);
     background-color: transparent;
-    padding: 1rem 1.25rem;
+    padding: 1.25rem 1.75rem;
 }
 
 [data-bs-theme='dark'] .card-header {

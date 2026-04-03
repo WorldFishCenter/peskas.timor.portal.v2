@@ -9,6 +9,8 @@ export type TimeBin = 'day' | 'week' | 'month' | 'year';
 // ============ aggregated.json ============
 export interface AggregatedRecord {
   date_bin_start: string;
+  /** Present on municipal series; absent for national aggregated.json */
+  is_imputed?: boolean;
   n_landings: number;
   prop_landings_woman?: number;
   fuel?: number;
@@ -54,6 +56,12 @@ export interface MunicipalAggregatedRecord {
   month: string;
   year: string;
 }
+
+/** Municipal time series shaped like `AggregatedData.month` for useMunicipalData when scoped. */
+export type MunicipalMonthlySlice = { month: MunicipalAggregatedRecord[] };
+
+/** Full national `aggregated.json` or a single-municipality monthly slice from the same hook. */
+export type MunicipalScopedAggregatedData = AggregatedData | MunicipalMonthlySlice;
 
 // ============ taxa_aggregated.json ============
 export interface TaxaAggregatedRecord {

@@ -5,11 +5,13 @@ import TimeSeriesChart from '../components/charts/TimeSeriesChart'
 import TreemapChart from '../components/charts/TreemapChart'
 import RevenueSummaryTable from '../components/RevenueSummaryTable'
 import DataScopeCallout from '../components/DataScopeCallout'
+import TimeseriesExplainerLink from '../components/TimeseriesExplainerLink'
 import VariableDescriptions from '../components/VariableDescriptions'
 import MetricCard from '../components/MetricCard'
-import { useData } from '../hooks'
+import { useData, useRevenueRollingMetrics } from '../hooks'
 import { useMunicipalData } from '../hooks/useMunicipalData'
 import { useFilters } from '../context/FilterContext'
+import { getMunicipalityScopeLabel } from '../utils/i18nLabels'
 import { revenueBarColors, habitatPalette } from '../constants/colors'
 import type { SummaryData } from '../types/data'
 
@@ -17,9 +19,9 @@ export default function Revenue() {
   const { t } = useI18n()
   const { municipality, setMunicipality } = useFilters()
   const { data: aggregated, loading, error } = useMunicipalData()
-  const chartScopeLabel =
-    municipality === 'all' ? t('common.national') : t(`common.municipalities.${municipality}`)
+  const chartScopeLabel = getMunicipalityScopeLabel(t, municipality)
   const { data: summaryData } = useData('summary_data')
+  const metrics = useRevenueRollingMetrics(aggregated)
 
   const chartSeries = useMemo(() => {
     if (!aggregated?.month) return []
@@ -32,57 +34,11 @@ export default function Revenue() {
         data: sortedData.map((row) => ({
           date: row.date_bin_start,
           value: (row.revenue ?? 0) / 1000000,
+          isImputed: row.is_imputed,
         })),
       },
     ]
   }, [aggregated, t])
-
-  const metrics = useMemo(() => {
-    if (!aggregated?.month || aggregated.month.length < 2) {
-      return {
-        totalRevenue: '0',
-        avgRevenuePerTrip: '0',
-        nBoats: '0',
-        revenueTrend: { value: '0%', direction: 'neutral' as const },
-        tripTrend: { value: '0%', direction: 'neutral' as const },
-        boatsTrend: { value: '0%', direction: 'neutral' as const },
-      }
-    }
-    const sortedData = [...aggregated.month].sort(
-      (a, b) => new Date(a.date_bin_start).getTime() - new Date(b.date_bin_start).getTime()
-    )
-    const last12 = sortedData.slice(-12)
-    const prev12 = sortedData.slice(-24, -12)
-
-    const totalRevenue = last12.reduce((sum, r) => sum + (r.revenue ?? 0), 0)
-    const prevRevenue = prev12.reduce((sum, r) => sum + (r.revenue ?? 0), 0)
-    const revenueChange = prevRevenue ? ((totalRevenue - prevRevenue) / prevRevenue) * 100 : 0
-
-    const avgTrip =
-      last12.reduce((sum, r) => sum + (r.landing_revenue ?? 0), 0) / last12.length
-    const prevTrip =
-      prev12.length > 0
-        ? prev12.reduce((sum, r) => sum + (r.landing_revenue ?? 0), 0) / prev12.length
-        : 0
-    const tripChange = prevTrip ? ((avgTrip - prevTrip) / prevTrip) * 100 : 0
-
-    const lastMonthBoats = last12[last12.length - 1]?.n_boats ?? 0
-
-    const getTrend = (val: number) => ({
-      value: `${val >= 0 ? '+' : ''}${val.toFixed(1)}%`,
-      direction: (val > 0 ? 'up' : val < 0 ? 'down' : 'neutral') as 'up' | 'down' | 'neutral',
-    })
-
-    return {
-      totalRevenue: (totalRevenue / 1000000).toLocaleString(undefined, { maximumFractionDigits: 1 }),
-      avgRevenuePerTrip: avgTrip.toFixed(1),
-      nBoats: lastMonthBoats.toLocaleString(),
-      revenueTrend: getTrend(revenueChange),
-      tripTrend: getTrend(tripChange),
-      revenueSparkline: last12.map(r => ({ date: r.date_bin_start, value: (r.revenue ?? 0) / 1000000 })),
-      tripSparkline: last12.map(r => ({ date: r.date_bin_start, value: r.landing_revenue ?? 0 })),
-    }
-  }, [aggregated])
 
   const treemapData = useMemo(() => {
     if (!summaryData) return []
@@ -119,13 +75,18 @@ export default function Revenue() {
             {/* Row 1: Time series + 3 cards */}
             <div className="col-lg-8 col-xl-8">
               <div className="card shadow-sm border-0">
-                <div className="card-header d-flex align-items-center">
-                  <div>
-                    <h3 className="card-title fw-bold">
-                      {t('revenue.trends', { defaultValue: 'Revenue Trends' })}
-                    </h3>
-                    <div className="card-subtitle">{t('revenue.trend_subtitle', { defaultValue: 'Monthly revenue in million USD' })}</div>
-                    <DataScopeCallout areaLabel={chartScopeLabel} />
+                <div className="card-header">
+                  <div className="d-flex flex-wrap align-items-center column-gap-4 row-gap-2">
+                    <div className="min-w-0">
+                      <h3 className="card-title fw-bold">
+                        {t('revenue.trends', { defaultValue: 'Revenue Trends' })}
+                      </h3>
+                      <div className="card-subtitle">{t('revenue.trend_subtitle', { defaultValue: 'Monthly revenue in million USD' })}</div>
+                      {municipality !== 'all' && (
+                        <TimeseriesExplainerLink className="d-inline-block mt-1" />
+                      )}
+                    </div>
+                    <DataScopeCallout areaLabel={chartScopeLabel} className="flex-shrink-0" />
                   </div>
                 </div>
                 <div className="card-body">
