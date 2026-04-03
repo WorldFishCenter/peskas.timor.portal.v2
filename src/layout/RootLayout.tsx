@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { Link, NavLink, Outlet } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useI18n, type Lang } from '../i18n'
 import { ROUTES } from '../config/routes.config'
@@ -54,13 +54,25 @@ export default function RootLayout() {
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label={t('actions.toggle_navigation', { defaultValue: 'Toggle navigation' })}>
             <span className="navbar-toggler-icon"></span>
           </button>
-          <h1 className="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
-            <a href=".">
-              <span className="ms-2 d-none d-lg-inline-block">
-                <span className="fw-bold">{t('brand.title')}</span>
-                <span className="d-block text-muted" style={{ fontSize: '0.8rem', lineHeight: '1.7' }}>{t('brand.subtitle')}</span>
+          <h1 className="navbar-brand navbar-brand-autodark navbar-brand-lockup-root d-none-navbar-horizontal pe-0 pe-md-3 mb-0">
+            <Link to={ROUTES.HOME} className="navbar-brand-lockup text-reset text-decoration-none">
+              <span className="navbar-brand-wordmark">
+                <span className="navbar-brand-title">{t('brand.title')}</span>
+                <span className="navbar-brand-subtitle text-muted">{t('brand.subtitle')}</span>
               </span>
-            </a>
+              <span className="navbar-brand-flag-slot" aria-hidden="true">
+                <span className="navbar-brand-flag-frame">
+                  <img
+                    src="/images/tl_flag.svg"
+                    alt=""
+                    width={36}
+                    height={18}
+                    decoding="async"
+                    className="navbar-brand-flag-img"
+                  />
+                </span>
+              </span>
+            </Link>
           </h1>
           <div className="navbar-nav flex-row order-md-last">
             {/* Theme toggle */}

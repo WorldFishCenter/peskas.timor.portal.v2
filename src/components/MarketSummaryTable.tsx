@@ -5,8 +5,10 @@ import {
   flexRender,
   type ColumnDef,
 } from '@tanstack/react-table'
-import { useData } from '../hooks/useData'
+import { useMunicipalData } from '../hooks/useMunicipalData'
+import { useFilters } from '../context/FilterContext'
 import { useI18n } from '../i18n'
+import DataScopeCallout from './DataScopeCallout'
 import { useTheme } from '../hooks/useTheme'
 import { tabPalette } from '../constants/colors'
 import { getHeatmapStyle } from '../utils/table'
@@ -21,9 +23,13 @@ interface MarketTableRow {
 export default function MarketSummaryTable() {
   const { t, lang } = useI18n()
   const theme = useTheme()
+  const { municipality } = useFilters()
   const locale = lang === 'tet' ? 'tet' : lang === 'pt' ? 'pt-PT' : 'en-US'
-  const { data: aggregated, loading } = useData('aggregated')
+  const { data: aggregated, loading, error } = useMunicipalData()
   const [selectedYear, setSelectedYear] = useState<string>('all')
+
+  const scopeLabel =
+    municipality === 'all' ? t('common.national') : t(`common.municipalities.${municipality}`)
 
   const tableData = useMemo(() => {
     if (!aggregated?.month) return []
@@ -84,7 +90,7 @@ export default function MarketSummaryTable() {
       {
         accessorKey: 'landing_weight',
         header: landingHeader,
-        cell: info => `${(info.getValue() as number).toFixed(1)} ${t('units.kg', { defaultValue: 'kg' })}`,
+        cell: info => (info.getValue() as number).toFixed(1),
         meta: {
           style: (value: number) => getHeatmapStyle(value, columnValues.landing_weight, theme, tabPalette),
         },
@@ -120,9 +126,12 @@ export default function MarketSummaryTable() {
 
   return (
     <div className="card shadow-sm border-0">
-      <div className="card-header border-0 d-flex align-items-center">
-        <h3 className="card-title fw-bold mb-0">{tableHeading}</h3>
-        <div className="ms-auto">
+      <div className="card-header border-0 pb-0 d-flex flex-wrap align-items-start gap-2">
+        <div className="flex-grow-1" style={{ minWidth: '12rem' }}>
+          <h3 className="card-title fw-bold mb-0">{tableHeading}</h3>
+          <DataScopeCallout areaLabel={scopeLabel} className="mt-1" />
+        </div>
+        <div className="ms-auto card-actions">
           <select
             className="form-select form-select-sm"
             value={selectedYear}
@@ -138,7 +147,11 @@ export default function MarketSummaryTable() {
         </div>
       </div>
       <div className="card-body p-0">
-        {loading ? (
+        {error ? (
+          <div className="alert alert-danger m-3" role="alert">
+            {error.message || t('common.error_loading')}
+          </div>
+        ) : loading ? (
           <div className="d-flex justify-content-center py-5">
             <div className="spinner-border text-primary" role="status">
               <span className="visually-hidden">{t('common.loading')}</span>
@@ -187,7 +200,7 @@ export default function MarketSummaryTable() {
           <div className="d-flex align-items-center justify-content-end gap-4">
             <div className="d-flex align-items-center gap-2">
               <span className="text-muted small fw-bold text-uppercase" style={{ fontSize: '0.65rem' }}>
-                {t('common.avg', { defaultValue: 'Avg' })} {priceHeader}
+                {t('common.avg', { defaultValue: 'Avg' })} {t('vars.price_kg.short_name')}
               </span>
               <span className="text-primary fw-bold">
                 ${averages.price_kg.toFixed(2)}
@@ -198,7 +211,7 @@ export default function MarketSummaryTable() {
                 {t('common.avg', { defaultValue: 'Avg' })} {landingHeader}
               </span>
               <span className="text-azure fw-bold">
-                {averages.landing_weight.toFixed(1)} {t('units.kg', { defaultValue: 'kg' })}
+                {averages.landing_weight.toFixed(1)}
               </span>
             </div>
           </div>

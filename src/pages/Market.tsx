@@ -5,6 +5,7 @@ import StackedBarChart from '../components/charts/StackedBarChart'
 import RadarChart from '../components/charts/RadarChart'
 import TimeSeriesChart from '../components/charts/TimeSeriesChart'
 import MarketSummaryTable from '../components/MarketSummaryTable'
+import DataScopeCallout from '../components/DataScopeCallout'
 import VariableDescriptions from '../components/VariableDescriptions'
 import { useData } from '../hooks'
 import { useMunicipalData } from '../hooks/useMunicipalData'
@@ -15,6 +16,8 @@ import { timeSeriesColors, spiderColors } from '../constants/colors'
 export default function Market() {
   const { t } = useI18n()
   const { municipality, setMunicipality } = useFilters()
+  const chartScopeLabel =
+    municipality === 'all' ? t('common.national') : t(`common.municipalities.${municipality}`)
   const { data: summaryData, loading: summaryLoading } = useData('summary_data')
   const { data: municipalData, loading: municipalLoading } = useData('municipal_aggregated')
   const { data: aggregated, loading: aggregatedLoading } = useMunicipalData()
@@ -119,6 +122,7 @@ export default function Market() {
                       {priceCardTitle}
                     </h3>
                     <div className="card-subtitle">{t('market.trend_subtitle', { defaultValue: 'Monthly price per kilogram' })}</div>
+                    <DataScopeCallout areaLabel={chartScopeLabel} />
                   </div>
                 </div>
                 <div className="card-body">
@@ -143,7 +147,13 @@ export default function Market() {
             {/* Spider Chart - 4 columns */}
             <div className="col-lg-4 col-xl-4">
               <div className="card shadow-sm border-0">
-                <div className="card-body">
+                <div className="card-header border-0 pb-0">
+                  <div>
+                    <h3 className="card-title fw-bold">{t('market.price_by_region')}</h3>
+                    <DataScopeCallout areaLabel={t('common.radar_all_municipalities_scope')} />
+                  </div>
+                </div>
+                <div className="card-body pt-2">
                   {municipalLoading ? (
                     <div className="d-flex justify-content-center py-5">
                       <div className="spinner-border text-primary" role="status" />
@@ -173,9 +183,20 @@ export default function Market() {
                         {conservationSubtitle}
                       </div>
                     )}
+                    {municipality === 'all' && (
+                      <DataScopeCallout
+                        areaLabel={t('common.conservation_scope_national_line')}
+                        className="mt-2"
+                      />
+                    )}
                   </div>
                 </div>
                 <div className="card-body">
+                  {municipality !== 'all' && (
+                    <div className="alert alert-info mb-3 py-2" role="status">
+                      {t('common.conservation_national_disclaimer')}
+                    </div>
+                  )}
                   {summaryLoading ? (
                     <div className="d-flex justify-content-center py-5">
                       <div className="spinner-border text-primary" role="status" />

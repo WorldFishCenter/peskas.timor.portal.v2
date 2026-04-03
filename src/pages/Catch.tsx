@@ -4,6 +4,7 @@ import MunicipalityFilter from '../components/MunicipalityFilter'
 import TimeSeriesChart from '../components/charts/TimeSeriesChart'
 import TreemapChart from '../components/charts/TreemapChart'
 import CatchSummaryTable from '../components/CatchSummaryTable'
+import DataScopeCallout from '../components/DataScopeCallout'
 import VariableDescriptions from '../components/VariableDescriptions'
 import MetricCard from '../components/MetricCard'
 import { useData } from '../hooks'
@@ -16,6 +17,8 @@ export default function Catch() {
   const { t } = useI18n()
   const { municipality, setMunicipality } = useFilters()
   const { data: aggregated, loading, error } = useMunicipalData()
+  const chartScopeLabel =
+    municipality === 'all' ? t('common.national') : t(`common.municipalities.${municipality}`)
   const { data: summaryData } = useData('summary_data')
 
   const chartSeries = useMemo(() => {
@@ -122,6 +125,7 @@ export default function Catch() {
                       {t('catch.trends', { defaultValue: 'Catch Trends' })}
                     </h3>
                     <div className="card-subtitle">{t('catch.trend_subtitle', { defaultValue: 'Monthly catch volume in tons' })}</div>
+                    <DataScopeCallout areaLabel={chartScopeLabel} />
                   </div>
                 </div>
                 <div className="card-body">
@@ -188,7 +192,11 @@ export default function Catch() {
                         </svg>
                       </span>
                     }
-                    footer={municipality === 'all' ? t('common.national', { defaultValue: 'National' }) : municipality}
+                    footer={
+                      municipality === 'all'
+                        ? t('common.national', { defaultValue: 'National' })
+                        : t(`common.municipalities.${municipality}`)
+                    }
                   />
                 </div>
               </div>
@@ -205,9 +213,17 @@ export default function Catch() {
                     <div className="text-muted mt-1" style={{ fontSize: '0.75rem', lineHeight: '1.4' }}>
                       {t('catch.treemap_description')}
                     </div>
+                    {municipality === 'all' && (
+                      <DataScopeCallout areaLabel={t('common.treemap_scope_national_line')} className="mt-2" />
+                    )}
                   </div>
                 </div>
                 <div className="card-body">
+                  {municipality !== 'all' && (
+                    <div className="alert alert-info mb-3 py-2" role="status">
+                      {t('common.habitat_treemap_national_disclaimer')}
+                    </div>
+                  )}
                   {treemapData.length > 0 ? (
                     <TreemapChart
                       data={treemapData}

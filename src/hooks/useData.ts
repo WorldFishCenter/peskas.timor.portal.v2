@@ -108,11 +108,11 @@ export { DataLoadError };
  * Common data file combinations for pages
  */
 export const PAGE_DATA_REQUIREMENTS = {
-  home: ['summary_data', 'aggregated'] as const,
+  home: ['summary_data', 'aggregated', 'municipal_aggregated'] as const,
   catch: ['aggregated', 'taxa_aggregated', 'municipal_aggregated'] as const,
   revenue: ['aggregated', 'municipal_aggregated', 'summary_data'] as const,
   composition: ['taxa_aggregated', 'municipal_taxa'] as const,
-  market: ['summary_data', 'aggregated'] as const,
+  market: ['summary_data', 'aggregated', 'municipal_aggregated'] as const,
   nutrients: ['nutrients_aggregated', 'summary_data'] as const,
   tracks: ['predicted_tracks'] as const,
 } as const;

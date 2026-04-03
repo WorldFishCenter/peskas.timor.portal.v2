@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   useReactTable,
   getCoreRowModel,
@@ -28,14 +28,50 @@ interface SummaryTableProps {
   caption?: string;
 }
 
+type MunicipalRow = {
+  region: string;
+  year?: string;
+  date_bin_start: string;
+  landing_revenue: number;
+  landing_weight: number;
+  n_landings_per_boat: number;
+  revenue: number;
+  catch: number;
+  price_kg: number;
+};
+
 function SummaryTableComponent({ title, caption }: SummaryTableProps) {
   const { t } = useI18n();
   const theme = useTheme();
   const { data: municipalData, loading, error } = useData('municipal_aggregated');
   const [sorting, setSorting] = useState<SortingState>([]);
+  const [selectedYear, setSelectedYear] = useState<string>('all');
+
+  const years = useMemo(() => {
+    if (!municipalData || municipalData.length === 0) return ['all'] as string[];
+    const set = new Set<string>();
+    for (const row of municipalData as MunicipalRow[]) {
+      const y = row.year ?? new Date(row.date_bin_start).getFullYear().toString();
+      if (y) set.add(y);
+    }
+    const sorted = [...set].sort((a, b) => b.localeCompare(a));
+    return ['all', ...sorted];
+  }, [municipalData]);
+
+  useEffect(() => {
+    if (selectedYear !== 'all' && !years.includes(selectedYear)) {
+      setSelectedYear('all');
+    }
+  }, [years, selectedYear]);
 
   const summaryData = useMemo(() => {
     if (!municipalData) return [];
+
+    const rows = (municipalData as MunicipalRow[]).filter((record) => {
+      if (selectedYear === 'all') return true;
+      const y = record.year ?? new Date(record.date_bin_start).getFullYear().toString();
+      return y === selectedYear;
+    });
 
     type GroupedData = Record<string, {
       landing_revenues: number[];
@@ -47,7 +83,7 @@ function SummaryTableComponent({ title, caption }: SummaryTableProps) {
     }>;
 
     const grouped: GroupedData = {};
-    for (const record of municipalData) {
+    for (const record of rows) {
       if (!grouped[record.region]) {
         grouped[record.region] = {
           landing_revenues: [],
@@ -110,7 +146,7 @@ function SummaryTableComponent({ title, caption }: SummaryTableProps) {
     }));
 
     return result;
-  }, [municipalData]);
+  }, [municipalData, selectedYear]);
 
   const totals = useMemo(() => {
     if (summaryData.length === 0) return null;
@@ -155,7 +191,7 @@ function SummaryTableComponent({ title, caption }: SummaryTableProps) {
       {
         accessorKey: 'landing_weight',
         header: t('table.catch_per_trip'),
-        cell: info => `${(info.getValue() as number).toFixed(2)} ${t('units.kg', { defaultValue: 'kg' })}`,
+        cell: info => (info.getValue() as number).toFixed(2),
         meta: {
           style: (value: number) => getHeatmapStyle(value, columnValues.landing_weight, theme, tabPalette),
         },
@@ -163,7 +199,7 @@ function SummaryTableComponent({ title, caption }: SummaryTableProps) {
       {
         accessorKey: 'revenue',
         header: t('table.total_revenue'),
-        cell: info => `$${(info.getValue() as number).toFixed(2)} ${t('units.million_short', { defaultValue: 'M' })}`,
+        cell: info => `$${(info.getValue() as number).toFixed(2)}`,
         meta: {
           style: (value: number) => getHeatmapStyle(value, columnValues.revenue, theme, tabPalette),
         },
@@ -171,7 +207,7 @@ function SummaryTableComponent({ title, caption }: SummaryTableProps) {
       {
         accessorKey: 'catch',
         header: t('table.total_catch'),
-        cell: info => `${(info.getValue() as number).toFixed(2)} ${t('units.t', { defaultValue: 't' })}`,
+        cell: info => (info.getValue() as number).toFixed(2),
         meta: {
           style: (value: number) => getHeatmapStyle(value, columnValues.catch, theme, tabPalette),
         },
@@ -223,14 +259,33 @@ function SummaryTableComponent({ title, caption }: SummaryTableProps) {
   return (
     <div className="card shadow-sm border-0">
       {title && (
-        <div className="card-header border-0 pb-0">
-          <div>
+        <div className="card-header border-0 pb-0 d-flex flex-wrap align-items-start gap-2">
+          <div className="flex-grow-1" style={{ minWidth: '12rem' }}>
             <h3 className="card-title fw-bold">{title}</h3>
             {caption && (
               <div className="text-muted mt-1" style={{ fontSize: '0.7rem', lineHeight: '1.4' }}>
                 {caption}
               </div>
             )}
+            <div className="text-muted small mt-2" style={{ fontSize: '0.7rem' }}>
+              {selectedYear === 'all'
+                ? t('home.table.scope_all_years')
+                : t('home.table.scope_year', { year: selectedYear })}
+            </div>
+          </div>
+          <div className="ms-auto card-actions">
+            <select
+              className="form-select form-select-sm"
+              aria-label={t('home.table.year_filter_aria')}
+              value={selectedYear}
+              onChange={(e) => setSelectedYear(e.target.value)}
+            >
+              {years.map((y) => (
+                <option key={y} value={y}>
+                  {y === 'all' ? t('common.all_years') : y}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
       )}
@@ -298,18 +353,18 @@ function SummaryTableComponent({ title, caption }: SummaryTableProps) {
           <div className="d-flex align-items-center justify-content-end gap-4">
             <div className="d-flex align-items-center gap-2">
               <span className="text-muted small fw-bold text-uppercase" style={{ fontSize: '0.65rem' }}>
-                {t('vars.revenue.short_name', { defaultValue: 'Revenue' })}
+                {t('vars.revenue.short_name')}
               </span>
               <span className="text-primary fw-bold">
-                ${totals.revenue.toFixed(2)}{t('units.million_short', { defaultValue: 'M' })}
+                ${totals.revenue.toFixed(2)}
               </span>
             </div>
             <div className="d-flex align-items-center gap-2">
               <span className="text-muted small fw-bold text-uppercase" style={{ fontSize: '0.65rem' }}>
-                {t('vars.catch.short_name', { defaultValue: 'Catch' })}
+                {t('vars.catch.short_name')}
               </span>
               <span className="text-azure fw-bold">
-                {totals.catch.toFixed(1)} {t('units.t', { defaultValue: 't' })}
+                {totals.catch.toFixed(1)}
               </span>
             </div>
           </div>
