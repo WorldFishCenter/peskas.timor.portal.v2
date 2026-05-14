@@ -2,11 +2,11 @@
   "n_surveys": [
     {
       "Area": "Atauro island",
-      "n": 38448
+      "n": 38476
     },
     {
       "Area": "North Coast",
-      "n": 37341
+      "n": 37342
     },
     {
       "Area": "South Coast",
@@ -16,15 +16,15 @@
   "estimated_tons": [
     {
       "fish_group": "Small pelagics",
-      "tons": 34288
+      "tons": 34290
     },
     {
       "fish_group": "Large pelagics",
-      "tons": 13742
+      "tons": 13741
     },
     {
       "fish_group": "Other",
-      "tons": 5466
+      "tons": 5465
     },
     {
       "fish_group": "Large demersals",
@@ -38,7 +38,7 @@
   "estimated_revenue": [
     {
       "Area": "Atauro island",
-      "Estimated revenue": 13210304
+      "Estimated revenue": 13216022
     },
     {
       "Area": "North Coast",
@@ -59,7 +59,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 2.306
+          "y": 2.307
         },
         {
           "x": "Beach Seine",
@@ -208,7 +208,7 @@
         },
         {
           "x": "Long Line",
-          "y": 5.234
+          "y": 5.239
         },
         {
           "x": "Seine Net",
@@ -225,11 +225,11 @@
       "data": [
         {
           "x": "Spear Gun",
-          "y": 10.097
+          "y": 10.096
         },
         {
           "x": "Gill Net",
-          "y": 5.648
+          "y": 5.649
         },
         {
           "x": "Hand Line",
@@ -342,31 +342,31 @@
   "nutrients_per_catch": [
     {
       "nutrient_names": "Selenium",
-      "nut_rdi": 203.0794
+      "nut_rdi": 203.2543
     },
     {
       "nutrient_names": "Protein",
-      "nut_rdi": 56.1528
+      "nut_rdi": 56.173
     },
     {
       "nutrient_names": "Zinc",
-      "nut_rdi": 31.1093
+      "nut_rdi": 31.1199
     },
     {
       "nutrient_names": "Vitamin A",
-      "nut_rdi": 15.7858
+      "nut_rdi": 15.7845
     },
     {
       "nutrient_names": "Calcium",
-      "nut_rdi": 13.8876
+      "nut_rdi": 13.9064
     },
     {
       "nutrient_names": "Omega-3",
-      "nut_rdi": 10.5685
+      "nut_rdi": 10.5742
     },
     {
       "nutrient_names": "Iron",
-      "nut_rdi": 5.2792
+      "nut_rdi": 5.2855
     }
   ],
   "nutrients_habitat": [
@@ -432,7 +432,7 @@
         },
         {
           "x": "Deep",
-          "y": 2.075
+          "y": 2.074
         }
       ]
     },
@@ -482,7 +482,7 @@
         },
         {
           "x": "Deep",
-          "y": 1.393
+          "y": 1.392
         },
         {
           "x": "Beach",
@@ -490,7 +490,7 @@
         },
         {
           "x": "Reef",
-          "y": 0.879
+          "y": 0.88
         },
         {
           "x": "Seagrass",
@@ -556,7 +556,7 @@
         },
         {
           "x": "Reef",
-          "y": 0.351
+          "y": 0.352
         },
         {
           "x": "Seagrass",
@@ -603,20 +603,20 @@
     {
       "municipality": "Atauro",
       "catch_preservation": "Box",
-      "count": 31,
-      "perc": 0.2854
+      "count": 37,
+      "perc": 0.3397
     },
     {
       "municipality": "Atauro",
       "catch_preservation": "Ice box",
-      "count": 7007,
-      "perc": 64.5034
+      "count": 7012,
+      "perc": 64.3834
     },
     {
       "municipality": "Atauro",
       "catch_preservation": "Open",
-      "count": 2166,
-      "perc": 19.9392
+      "count": 2174,
+      "perc": 19.9614
     },
     {
       "municipality": "Atauro",
@@ -627,8 +627,8 @@
     {
       "municipality": "Atauro",
       "catch_preservation": "Shade",
-      "count": 1658,
-      "perc": 15.2628
+      "count": 1667,
+      "perc": 15.3062
     },
     {
       "municipality": "Baucau",
@@ -664,31 +664,31 @@
       "municipality": "Bobonaro",
       "catch_preservation": "Box",
       "count": 1,
-      "perc": 0.12
+      "perc": 0.1199
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Ice box",
       "count": 9,
-      "perc": 1.0804
+      "perc": 1.0791
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Open",
-      "count": 784,
-      "perc": 94.1176
+      "count": 785,
+      "perc": 94.1247
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Other",
       "count": 2,
-      "perc": 0.2401
+      "perc": 0.2398
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Shade",
       "count": 37,
-      "perc": 4.4418
+      "perc": 4.4365
     },
     {
       "municipality": "Covalima",
