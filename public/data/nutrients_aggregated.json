@@ -5,8 +5,8 @@
     {
       "date_bin_start": "2018-01-01",
       "nutrient": "zinc",
-      "nut_supply": 4.4162,
-      "nut_rdi": 29549.4151,
+      "nut_supply": 4.4134,
+      "nut_rdi": 29530.8494,
       "n_boats": 3872,
       "month": "January 2018",
       "year": "2018"
@@ -14,8 +14,8 @@
     {
       "date_bin_start": "2018-01-01",
       "nutrient": "protein",
-      "nut_supply": 79999.4265,
-      "nut_rdi": 57020.2612,
+      "nut_supply": 79961.2091,
+      "nut_rdi": 56993.0215,
       "n_boats": 3872,
       "month": "January 2018",
       "year": "2018"
@@ -23,8 +23,8 @@
     {
       "date_bin_start": "2018-01-01",
       "nutrient": "omega3",
-      "nut_supply": 1419.4553,
-      "nut_rdi": 15835.1536,
+      "nut_supply": 1416.5065,
+      "nut_rdi": 15802.2574,
       "n_boats": 3872,
       "month": "January 2018",
       "year": "2018"
@@ -32,8 +32,8 @@
     {
       "date_bin_start": "2018-01-01",
       "nutrient": "calcium",
-      "nut_supply": 687.9932,
-      "nut_rdi": 22557.1547,
+      "nut_supply": 688.4487,
+      "nut_rdi": 22572.09,
       "n_boats": 3872,
       "month": "January 2018",
       "year": "2018"
@@ -41,8 +41,8 @@
     {
       "date_bin_start": "2018-01-01",
       "nutrient": "iron",
-      "nut_supply": 6.8185,
-      "nut_rdi": 7604.0184,
+      "nut_supply": 6.8256,
+      "nut_rdi": 7611.8975,
       "n_boats": 3872,
       "month": "January 2018",
       "year": "2018"
@@ -51,7 +51,7 @@
       "date_bin_start": "2018-01-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.1496,
-      "nut_rdi": 9809.4198,
+      "nut_rdi": 9811.1018,
       "n_boats": 3872,
       "month": "January 2018",
       "year": "2018"
@@ -59,8 +59,8 @@
     {
       "date_bin_start": "2018-02-01",
       "nutrient": "zinc",
-      "nut_supply": 2.9036,
-      "nut_rdi": 19428.7739,
+      "nut_supply": 2.902,
+      "nut_rdi": 19417.7807,
       "n_boats": 3872,
       "month": "February 2018",
       "year": "2018"
@@ -68,8 +68,8 @@
     {
       "date_bin_start": "2018-02-01",
       "nutrient": "protein",
-      "nut_supply": 56740.5056,
-      "nut_rdi": 40442.2706,
+      "nut_supply": 56718.5517,
+      "nut_rdi": 40426.6227,
       "n_boats": 3872,
       "month": "February 2018",
       "year": "2018"
@@ -77,8 +77,8 @@
     {
       "date_bin_start": "2018-02-01",
       "nutrient": "omega3",
-      "nut_supply": 1006.9761,
-      "nut_rdi": 11233.62,
+      "nut_supply": 1005.0523,
+      "nut_rdi": 11212.1588,
       "n_boats": 3872,
       "month": "February 2018",
       "year": "2018"
@@ -86,8 +86,8 @@
     {
       "date_bin_start": "2018-02-01",
       "nutrient": "calcium",
-      "nut_supply": 452.9721,
-      "nut_rdi": 14851.5446,
+      "nut_supply": 453.3681,
+      "nut_rdi": 14864.5285,
       "n_boats": 3872,
       "month": "February 2018",
       "year": "2018"
@@ -95,8 +95,8 @@
     {
       "date_bin_start": "2018-02-01",
       "nutrient": "iron",
-      "nut_supply": 4.0237,
-      "nut_rdi": 4487.1775,
+      "nut_supply": 4.0295,
+      "nut_rdi": 4493.6853,
       "n_boats": 3872,
       "month": "February 2018",
       "year": "2018"
@@ -105,7 +105,7 @@
       "date_bin_start": "2018-02-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.1086,
-      "nut_rdi": 7120.7664,
+      "nut_rdi": 7121.2844,
       "n_boats": 3872,
       "month": "February 2018",
       "year": "2018"
@@ -113,8 +113,8 @@
     {
       "date_bin_start": "2018-03-01",
       "nutrient": "zinc",
-      "nut_supply": 3.3198,
-      "nut_rdi": 22213.4379,
+      "nut_supply": 3.3182,
+      "nut_rdi": 22202.7379,
       "n_boats": 3872,
       "month": "March 2018",
       "year": "2018"
@@ -122,8 +122,8 @@
     {
       "date_bin_start": "2018-03-01",
       "nutrient": "protein",
-      "nut_supply": 61390.9127,
-      "nut_rdi": 43756.8871,
+      "nut_supply": 61368.7413,
+      "nut_rdi": 43741.0844,
       "n_boats": 3872,
       "month": "March 2018",
       "year": "2018"
@@ -131,8 +131,8 @@
     {
       "date_bin_start": "2018-03-01",
       "nutrient": "omega3",
-      "nut_supply": 1182.6668,
-      "nut_rdi": 13193.5902,
+      "nut_supply": 1180.4912,
+      "nut_rdi": 13169.3189,
       "n_boats": 3872,
       "month": "March 2018",
       "year": "2018"
@@ -140,8 +140,8 @@
     {
       "date_bin_start": "2018-03-01",
       "nutrient": "calcium",
-      "nut_supply": 561.2227,
-      "nut_rdi": 18400.7427,
+      "nut_supply": 561.6664,
+      "nut_rdi": 18415.2909,
       "n_boats": 3872,
       "month": "March 2018",
       "year": "2018"
@@ -149,8 +149,8 @@
     {
       "date_bin_start": "2018-03-01",
       "nutrient": "iron",
-      "nut_supply": 5.3175,
-      "nut_rdi": 5930.0478,
+      "nut_supply": 5.3242,
+      "nut_rdi": 5937.5546,
       "n_boats": 3872,
       "month": "March 2018",
       "year": "2018"
@@ -159,7 +159,7 @@
       "date_bin_start": "2018-03-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.0945,
-      "nut_rdi": 6197.4031,
+      "nut_rdi": 6198.6074,
       "n_boats": 3872,
       "month": "March 2018",
       "year": "2018"
@@ -167,8 +167,8 @@
     {
       "date_bin_start": "2018-04-01",
       "nutrient": "zinc",
-      "nut_supply": 3.6537,
-      "nut_rdi": 24447.6273,
+      "nut_supply": 3.6527,
+      "nut_rdi": 24440.7903,
       "n_boats": 3872,
       "month": "April 2018",
       "year": "2018"
@@ -176,8 +176,8 @@
     {
       "date_bin_start": "2018-04-01",
       "nutrient": "protein",
-      "nut_supply": 66420.9523,
-      "nut_rdi": 47342.09,
+      "nut_supply": 66406.8806,
+      "nut_rdi": 47332.0603,
       "n_boats": 3872,
       "month": "April 2018",
       "year": "2018"
@@ -185,8 +185,8 @@
     {
       "date_bin_start": "2018-04-01",
       "nutrient": "omega3",
-      "nut_supply": 1291.4353,
-      "nut_rdi": 14406.9888,
+      "nut_supply": 1290.1261,
+      "nut_rdi": 14392.3834,
       "n_boats": 3872,
       "month": "April 2018",
       "year": "2018"
@@ -194,8 +194,8 @@
     {
       "date_bin_start": "2018-04-01",
       "nutrient": "calcium",
-      "nut_supply": 592.8096,
-      "nut_rdi": 19436.3792,
+      "nut_supply": 593.0955,
+      "nut_rdi": 19445.7536,
       "n_boats": 3872,
       "month": "April 2018",
       "year": "2018"
@@ -203,8 +203,8 @@
     {
       "date_bin_start": "2018-04-01",
       "nutrient": "iron",
-      "nut_supply": 5.715,
-      "nut_rdi": 6373.3668,
+      "nut_supply": 5.7191,
+      "nut_rdi": 6377.895,
       "n_boats": 3872,
       "month": "April 2018",
       "year": "2018"
@@ -213,7 +213,7 @@
       "date_bin_start": "2018-04-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.0917,
-      "nut_rdi": 6011.7326,
+      "nut_rdi": 6012.4057,
       "n_boats": 3872,
       "month": "April 2018",
       "year": "2018"
@@ -221,8 +221,8 @@
     {
       "date_bin_start": "2018-05-01",
       "nutrient": "zinc",
-      "nut_supply": 3.5512,
-      "nut_rdi": 23761.8828,
+      "nut_supply": 3.551,
+      "nut_rdi": 23760.4029,
       "n_boats": 3872,
       "month": "May 2018",
       "year": "2018"
@@ -230,8 +230,8 @@
     {
       "date_bin_start": "2018-05-01",
       "nutrient": "protein",
-      "nut_supply": 64615.7674,
-      "nut_rdi": 46055.4294,
+      "nut_supply": 64617.4268,
+      "nut_rdi": 46056.6121,
       "n_boats": 3872,
       "month": "May 2018",
       "year": "2018"
@@ -239,8 +239,8 @@
     {
       "date_bin_start": "2018-05-01",
       "nutrient": "omega3",
-      "nut_supply": 1100.8704,
-      "nut_rdi": 12281.0862,
+      "nut_supply": 1099.8041,
+      "nut_rdi": 12269.1908,
       "n_boats": 3872,
       "month": "May 2018",
       "year": "2018"
@@ -248,8 +248,8 @@
     {
       "date_bin_start": "2018-05-01",
       "nutrient": "calcium",
-      "nut_supply": 555.8176,
-      "nut_rdi": 18223.5292,
+      "nut_supply": 556.1319,
+      "nut_rdi": 18233.8332,
       "n_boats": 3872,
       "month": "May 2018",
       "year": "2018"
@@ -257,8 +257,8 @@
     {
       "date_bin_start": "2018-05-01",
       "nutrient": "iron",
-      "nut_supply": 4.7817,
-      "nut_rdi": 5332.5934,
+      "nut_supply": 4.7863,
+      "nut_rdi": 5337.6749,
       "n_boats": 3872,
       "month": "May 2018",
       "year": "2018"
@@ -267,7 +267,7 @@
       "date_bin_start": "2018-05-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.1049,
-      "nut_rdi": 6875.669,
+      "nut_rdi": 6878.6198,
       "n_boats": 3872,
       "month": "May 2018",
       "year": "2018"
@@ -275,8 +275,8 @@
     {
       "date_bin_start": "2018-06-01",
       "nutrient": "zinc",
-      "nut_supply": 3.9367,
-      "nut_rdi": 26341.0437,
+      "nut_supply": 3.9365,
+      "nut_rdi": 26339.6073,
       "n_boats": 3872,
       "month": "June 2018",
       "year": "2018"
@@ -284,8 +284,8 @@
     {
       "date_bin_start": "2018-06-01",
       "nutrient": "protein",
-      "nut_supply": 74622.2286,
-      "nut_rdi": 53187.6184,
+      "nut_supply": 74622.0841,
+      "nut_rdi": 53187.5154,
       "n_boats": 3872,
       "month": "June 2018",
       "year": "2018"
@@ -293,8 +293,8 @@
     {
       "date_bin_start": "2018-06-01",
       "nutrient": "omega3",
-      "nut_supply": 1262.3594,
-      "nut_rdi": 14082.6246,
+      "nut_supply": 1261.4317,
+      "nut_rdi": 14072.2755,
       "n_boats": 3872,
       "month": "June 2018",
       "year": "2018"
@@ -302,8 +302,8 @@
     {
       "date_bin_start": "2018-06-01",
       "nutrient": "calcium",
-      "nut_supply": 597.3282,
-      "nut_rdi": 19584.5304,
+      "nut_supply": 597.666,
+      "nut_rdi": 19595.6056,
       "n_boats": 3872,
       "month": "June 2018",
       "year": "2018"
@@ -311,8 +311,8 @@
     {
       "date_bin_start": "2018-06-01",
       "nutrient": "iron",
-      "nut_supply": 5.3468,
-      "nut_rdi": 5962.7592,
+      "nut_supply": 5.3513,
+      "nut_rdi": 5967.758,
       "n_boats": 3872,
       "month": "June 2018",
       "year": "2018"
@@ -321,7 +321,7 @@
       "date_bin_start": "2018-06-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.1232,
-      "nut_rdi": 8075.5724,
+      "nut_rdi": 8076.5503,
       "n_boats": 3872,
       "month": "June 2018",
       "year": "2018"
@@ -329,8 +329,8 @@
     {
       "date_bin_start": "2018-07-01",
       "nutrient": "zinc",
-      "nut_supply": 6.7261,
-      "nut_rdi": 45005.748,
+      "nut_supply": 6.7259,
+      "nut_rdi": 45004.3994,
       "n_boats": 3872,
       "month": "July 2018",
       "year": "2018"
@@ -338,8 +338,8 @@
     {
       "date_bin_start": "2018-07-01",
       "nutrient": "protein",
-      "nut_supply": 135599.9249,
-      "nut_rdi": 96649.9821,
+      "nut_supply": 135600.9563,
+      "nut_rdi": 96650.7172,
       "n_boats": 3872,
       "month": "July 2018",
       "year": "2018"
@@ -347,8 +347,8 @@
     {
       "date_bin_start": "2018-07-01",
       "nutrient": "omega3",
-      "nut_supply": 1794.6034,
-      "nut_rdi": 20020.2303,
+      "nut_supply": 1793.4955,
+      "nut_rdi": 20007.8703,
       "n_boats": 3872,
       "month": "July 2018",
       "year": "2018"
@@ -356,8 +356,8 @@
     {
       "date_bin_start": "2018-07-01",
       "nutrient": "calcium",
-      "nut_supply": 712.1413,
-      "nut_rdi": 23348.8959,
+      "nut_supply": 712.4851,
+      "nut_rdi": 23360.1674,
       "n_boats": 3872,
       "month": "July 2018",
       "year": "2018"
@@ -365,8 +365,8 @@
     {
       "date_bin_start": "2018-07-01",
       "nutrient": "iron",
-      "nut_supply": 7.0629,
-      "nut_rdi": 7876.5144,
+      "nut_supply": 7.0679,
+      "nut_rdi": 7882.1581,
       "n_boats": 3872,
       "month": "July 2018",
       "year": "2018"
@@ -374,8 +374,8 @@
     {
       "date_bin_start": "2018-07-01",
       "nutrient": "vitaminA",
-      "nut_supply": 0.2836,
-      "nut_rdi": 18599.4742,
+      "nut_supply": 0.2837,
+      "nut_rdi": 18601.7125,
       "n_boats": 3872,
       "month": "July 2018",
       "year": "2018"
@@ -384,7 +384,7 @@
       "date_bin_start": "2018-08-01",
       "nutrient": "zinc",
       "nut_supply": 8.4956,
-      "nut_rdi": 56845.9897,
+      "nut_rdi": 56845.5797,
       "n_boats": 3872,
       "month": "August 2018",
       "year": "2018"
@@ -392,8 +392,8 @@
     {
       "date_bin_start": "2018-08-01",
       "nutrient": "protein",
-      "nut_supply": 171360.8114,
-      "nut_rdi": 122138.8535,
+      "nut_supply": 171360.8826,
+      "nut_rdi": 122138.9042,
       "n_boats": 3872,
       "month": "August 2018",
       "year": "2018"
@@ -401,8 +401,8 @@
     {
       "date_bin_start": "2018-08-01",
       "nutrient": "omega3",
-      "nut_supply": 2182.9645,
-      "nut_rdi": 24352.7074,
+      "nut_supply": 2182.4041,
+      "nut_rdi": 24346.4557,
       "n_boats": 3872,
       "month": "August 2018",
       "year": "2018"
@@ -410,8 +410,8 @@
     {
       "date_bin_start": "2018-08-01",
       "nutrient": "calcium",
-      "nut_supply": 818.9643,
-      "nut_rdi": 26851.2882,
+      "nut_supply": 819.1829,
+      "nut_rdi": 26858.4563,
       "n_boats": 3872,
       "month": "August 2018",
       "year": "2018"
@@ -419,8 +419,8 @@
     {
       "date_bin_start": "2018-08-01",
       "nutrient": "iron",
-      "nut_supply": 8.0504,
-      "nut_rdi": 8977.8091,
+      "nut_supply": 8.0534,
+      "nut_rdi": 8981.1498,
       "n_boats": 3872,
       "month": "August 2018",
       "year": "2018"
@@ -429,7 +429,7 @@
       "date_bin_start": "2018-08-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.3586,
-      "nut_rdi": 23516.7127,
+      "nut_rdi": 23516.687,
       "n_boats": 3872,
       "month": "August 2018",
       "year": "2018"
@@ -438,7 +438,7 @@
       "date_bin_start": "2018-09-01",
       "nutrient": "zinc",
       "nut_supply": 5.5317,
-      "nut_rdi": 37014.0176,
+      "nut_rdi": 37013.7448,
       "n_boats": 3872,
       "month": "September 2018",
       "year": "2018"
@@ -446,8 +446,8 @@
     {
       "date_bin_start": "2018-09-01",
       "nutrient": "protein",
-      "nut_supply": 99963.943,
-      "nut_rdi": 71250.1375,
+      "nut_supply": 99964.8251,
+      "nut_rdi": 71250.7663,
       "n_boats": 3872,
       "month": "September 2018",
       "year": "2018"
@@ -455,8 +455,8 @@
     {
       "date_bin_start": "2018-09-01",
       "nutrient": "omega3",
-      "nut_supply": 1289.5611,
-      "nut_rdi": 14386.081,
+      "nut_supply": 1289.1274,
+      "nut_rdi": 14381.2424,
       "n_boats": 3872,
       "month": "September 2018",
       "year": "2018"
@@ -464,8 +464,8 @@
     {
       "date_bin_start": "2018-09-01",
       "nutrient": "calcium",
-      "nut_supply": 871.5151,
-      "nut_rdi": 28574.2645,
+      "nut_supply": 871.6423,
+      "nut_rdi": 28578.4359,
       "n_boats": 3872,
       "month": "September 2018",
       "year": "2018"
@@ -473,8 +473,8 @@
     {
       "date_bin_start": "2018-09-01",
       "nutrient": "iron",
-      "nut_supply": 6.2021,
-      "nut_rdi": 6916.5661,
+      "nut_supply": 6.204,
+      "nut_rdi": 6918.744,
       "n_boats": 3872,
       "month": "September 2018",
       "year": "2018"
@@ -483,7 +483,7 @@
       "date_bin_start": "2018-09-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.2011,
-      "nut_rdi": 13184.5974,
+      "nut_rdi": 13185.618,
       "n_boats": 3872,
       "month": "September 2018",
       "year": "2018"
@@ -491,8 +491,8 @@
     {
       "date_bin_start": "2018-10-01",
       "nutrient": "zinc",
-      "nut_supply": 6.5118,
-      "nut_rdi": 43571.6825,
+      "nut_supply": 6.5119,
+      "nut_rdi": 43572.3768,
       "n_boats": 3872,
       "month": "October 2018",
       "year": "2018"
@@ -500,8 +500,8 @@
     {
       "date_bin_start": "2018-10-01",
       "nutrient": "protein",
-      "nut_supply": 122679.5049,
-      "nut_rdi": 87440.8445,
+      "nut_supply": 122681.3031,
+      "nut_rdi": 87442.1262,
       "n_boats": 3872,
       "month": "October 2018",
       "year": "2018"
@@ -509,8 +509,8 @@
     {
       "date_bin_start": "2018-10-01",
       "nutrient": "omega3",
-      "nut_supply": 1818.109,
-      "nut_rdi": 20282.454,
+      "nut_supply": 1817.7813,
+      "nut_rdi": 20278.7982,
       "n_boats": 3872,
       "month": "October 2018",
       "year": "2018"
@@ -518,8 +518,8 @@
     {
       "date_bin_start": "2018-10-01",
       "nutrient": "calcium",
-      "nut_supply": 1092.5282,
-      "nut_rdi": 35820.5976,
+      "nut_supply": 1092.6813,
+      "nut_rdi": 35825.6156,
       "n_boats": 3872,
       "month": "October 2018",
       "year": "2018"
@@ -527,8 +527,8 @@
     {
       "date_bin_start": "2018-10-01",
       "nutrient": "iron",
-      "nut_supply": 9.8314,
-      "nut_rdi": 10963.9732,
+      "nut_supply": 9.8336,
+      "nut_rdi": 10966.4279,
       "n_boats": 3872,
       "month": "October 2018",
       "year": "2018"
@@ -537,7 +537,7 @@
       "date_bin_start": "2018-10-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.1993,
-      "nut_rdi": 13070.395,
+      "nut_rdi": 13070.498,
       "n_boats": 3872,
       "month": "October 2018",
       "year": "2018"
@@ -545,8 +545,8 @@
     {
       "date_bin_start": "2018-11-01",
       "nutrient": "zinc",
-      "nut_supply": 8.255,
-      "nut_rdi": 55235.8856,
+      "nut_supply": 8.2551,
+      "nut_rdi": 55236.5961,
       "n_boats": 3872,
       "month": "November 2018",
       "year": "2018"
@@ -554,8 +554,8 @@
     {
       "date_bin_start": "2018-11-01",
       "nutrient": "protein",
-      "nut_supply": 146588.1932,
-      "nut_rdi": 104481.9624,
+      "nut_supply": 146590.0641,
+      "nut_rdi": 104483.2959,
       "n_boats": 3872,
       "month": "November 2018",
       "year": "2018"
@@ -563,8 +563,8 @@
     {
       "date_bin_start": "2018-11-01",
       "nutrient": "omega3",
-      "nut_supply": 2440.769,
-      "nut_rdi": 27228.7216,
+      "nut_supply": 2440.4207,
+      "nut_rdi": 27224.8361,
       "n_boats": 3872,
       "month": "November 2018",
       "year": "2018"
@@ -572,8 +572,8 @@
     {
       "date_bin_start": "2018-11-01",
       "nutrient": "calcium",
-      "nut_supply": 1861.1603,
-      "nut_rdi": 61021.6481,
+      "nut_supply": 1861.3116,
+      "nut_rdi": 61026.6086,
       "n_boats": 3872,
       "month": "November 2018",
       "year": "2018"
@@ -581,8 +581,8 @@
     {
       "date_bin_start": "2018-11-01",
       "nutrient": "iron",
-      "nut_supply": 16.4453,
-      "nut_rdi": 18339.8278,
+      "nut_supply": 16.4476,
+      "nut_rdi": 18342.3817,
       "n_boats": 3872,
       "month": "November 2018",
       "year": "2018"
@@ -590,8 +590,8 @@
     {
       "date_bin_start": "2018-11-01",
       "nutrient": "vitaminA",
-      "nut_supply": 0.1812,
-      "nut_rdi": 11884.9481,
+      "nut_supply": 0.1813,
+      "nut_rdi": 11885.5658,
       "n_boats": 3872,
       "month": "November 2018",
       "year": "2018"
@@ -599,8 +599,8 @@
     {
       "date_bin_start": "2018-12-01",
       "nutrient": "zinc",
-      "nut_supply": 4.3667,
-      "nut_rdi": 29218.6347,
+      "nut_supply": 4.3669,
+      "nut_rdi": 29219.7142,
       "n_boats": 3872,
       "month": "December 2018",
       "year": "2018"
@@ -608,8 +608,8 @@
     {
       "date_bin_start": "2018-12-01",
       "nutrient": "protein",
-      "nut_supply": 77330.2767,
-      "nut_rdi": 55117.8024,
+      "nut_supply": 77333.6906,
+      "nut_rdi": 55120.2356,
       "n_boats": 3872,
       "month": "December 2018",
       "year": "2018"
@@ -617,8 +617,8 @@
     {
       "date_bin_start": "2018-12-01",
       "nutrient": "omega3",
-      "nut_supply": 1251.3036,
-      "nut_rdi": 13959.2882,
+      "nut_supply": 1250.8954,
+      "nut_rdi": 13954.7339,
       "n_boats": 3872,
       "month": "December 2018",
       "year": "2018"
@@ -626,8 +626,8 @@
     {
       "date_bin_start": "2018-12-01",
       "nutrient": "calcium",
-      "nut_supply": 742.0143,
-      "nut_rdi": 24328.338,
+      "nut_supply": 742.1675,
+      "nut_rdi": 24333.3623,
       "n_boats": 3872,
       "month": "December 2018",
       "year": "2018"
@@ -635,8 +635,8 @@
     {
       "date_bin_start": "2018-12-01",
       "nutrient": "iron",
-      "nut_supply": 6.2329,
-      "nut_rdi": 6950.9239,
+      "nut_supply": 6.2355,
+      "nut_rdi": 6953.7847,
       "n_boats": 3872,
       "month": "December 2018",
       "year": "2018"
@@ -645,7 +645,7 @@
       "date_bin_start": "2018-12-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.1464,
-      "nut_rdi": 9599.8615,
+      "nut_rdi": 9600.9039,
       "n_boats": 3872,
       "month": "December 2018",
       "year": "2018"
@@ -653,8 +653,8 @@
     {
       "date_bin_start": "2019-01-01",
       "nutrient": "zinc",
-      "nut_supply": 6.089,
-      "nut_rdi": 40742.8828,
+      "nut_supply": 6.0872,
+      "nut_rdi": 40730.8113,
       "n_boats": 3872,
       "month": "January 2019",
       "year": "2019"
@@ -662,8 +662,8 @@
     {
       "date_bin_start": "2019-01-01",
       "nutrient": "protein",
-      "nut_supply": 113009.5907,
-      "nut_rdi": 80548.5322,
+      "nut_supply": 112998.4814,
+      "nut_rdi": 80540.614,
       "n_boats": 3872,
       "month": "January 2019",
       "year": "2019"
@@ -671,8 +671,8 @@
     {
       "date_bin_start": "2019-01-01",
       "nutrient": "omega3",
-      "nut_supply": 1644.3134,
-      "nut_rdi": 18343.6257,
+      "nut_supply": 1640.6004,
+      "nut_rdi": 18302.2037,
       "n_boats": 3872,
       "month": "January 2019",
       "year": "2019"
@@ -680,8 +680,8 @@
     {
       "date_bin_start": "2019-01-01",
       "nutrient": "calcium",
-      "nut_supply": 916.8829,
-      "nut_rdi": 30061.7351,
+      "nut_supply": 917.6161,
+      "nut_rdi": 30085.7751,
       "n_boats": 3872,
       "month": "January 2019",
       "year": "2019"
@@ -689,8 +689,8 @@
     {
       "date_bin_start": "2019-01-01",
       "nutrient": "iron",
-      "nut_supply": 7.6151,
-      "nut_rdi": 8492.3739,
+      "nut_supply": 7.6266,
+      "nut_rdi": 8505.1792,
       "n_boats": 3872,
       "month": "January 2019",
       "year": "2019"
@@ -698,8 +698,8 @@
     {
       "date_bin_start": "2019-01-01",
       "nutrient": "vitaminA",
-      "nut_supply": 0.2287,
-      "nut_rdi": 14997.9927,
+      "nut_supply": 0.2289,
+      "nut_rdi": 15007.248,
       "n_boats": 3872,
       "month": "January 2019",
       "year": "2019"
@@ -707,8 +707,8 @@
     {
       "date_bin_start": "2019-02-01",
       "nutrient": "zinc",
-      "nut_supply": 5.1937,
-      "nut_rdi": 34751.8014,
+      "nut_supply": 5.1925,
+      "nut_rdi": 34744.2226,
       "n_boats": 3872,
       "month": "February 2019",
       "year": "2019"
@@ -716,8 +716,8 @@
     {
       "date_bin_start": "2019-02-01",
       "nutrient": "protein",
-      "nut_supply": 104719.9533,
-      "nut_rdi": 74640.0238,
+      "nut_supply": 104714.1962,
+      "nut_rdi": 74635.9203,
       "n_boats": 3872,
       "month": "February 2019",
       "year": "2019"
@@ -725,8 +725,8 @@
     {
       "date_bin_start": "2019-02-01",
       "nutrient": "omega3",
-      "nut_supply": 1722.7963,
-      "nut_rdi": 19219.1643,
+      "nut_supply": 1719.8669,
+      "nut_rdi": 19186.4847,
       "n_boats": 3872,
       "month": "February 2019",
       "year": "2019"
@@ -734,8 +734,8 @@
     {
       "date_bin_start": "2019-02-01",
       "nutrient": "calcium",
-      "nut_supply": 754.5055,
-      "nut_rdi": 24737.8848,
+      "nut_supply": 755.2454,
+      "nut_rdi": 24762.1437,
       "n_boats": 3872,
       "month": "February 2019",
       "year": "2019"
@@ -743,8 +743,8 @@
     {
       "date_bin_start": "2019-02-01",
       "nutrient": "iron",
-      "nut_supply": 7.3223,
-      "nut_rdi": 8165.8385,
+      "nut_supply": 7.3332,
+      "nut_rdi": 8177.9362,
       "n_boats": 3872,
       "month": "February 2019",
       "year": "2019"
@@ -752,8 +752,8 @@
     {
       "date_bin_start": "2019-02-01",
       "nutrient": "vitaminA",
-      "nut_supply": 0.1828,
-      "nut_rdi": 11984.9766,
+      "nut_supply": 0.1829,
+      "nut_rdi": 11991.1329,
       "n_boats": 3872,
       "month": "February 2019",
       "year": "2019"
@@ -761,8 +761,8 @@
     {
       "date_bin_start": "2019-03-01",
       "nutrient": "zinc",
-      "nut_supply": 8.0864,
-      "nut_rdi": 54108.0482,
+      "nut_supply": 8.0856,
+      "nut_rdi": 54102.2751,
       "n_boats": 3872,
       "month": "March 2019",
       "year": "2019"
@@ -770,8 +770,8 @@
     {
       "date_bin_start": "2019-03-01",
       "nutrient": "protein",
-      "nut_supply": 154447.281,
-      "nut_rdi": 110083.593,
+      "nut_supply": 154444.5148,
+      "nut_rdi": 110081.6214,
       "n_boats": 3872,
       "month": "March 2019",
       "year": "2019"
@@ -779,8 +779,8 @@
     {
       "date_bin_start": "2019-03-01",
       "nutrient": "omega3",
-      "nut_supply": 2390.4855,
-      "nut_rdi": 26667.7695,
+      "nut_supply": 2388.0997,
+      "nut_rdi": 26641.1538,
       "n_boats": 3872,
       "month": "March 2019",
       "year": "2019"
@@ -788,8 +788,8 @@
     {
       "date_bin_start": "2019-03-01",
       "nutrient": "calcium",
-      "nut_supply": 1222.6287,
-      "nut_rdi": 40086.1868,
+      "nut_supply": 1223.2637,
+      "nut_rdi": 40107.0052,
       "n_boats": 3872,
       "month": "March 2019",
       "year": "2019"
@@ -797,8 +797,8 @@
     {
       "date_bin_start": "2019-03-01",
       "nutrient": "iron",
-      "nut_supply": 9.7874,
-      "nut_rdi": 10914.9528,
+      "nut_supply": 9.7966,
+      "nut_rdi": 10925.1288,
       "n_boats": 3872,
       "month": "March 2019",
       "year": "2019"
@@ -807,7 +807,7 @@
       "date_bin_start": "2019-03-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.2728,
-      "nut_rdi": 17886.8109,
+      "nut_rdi": 17891.7536,
       "n_boats": 3872,
       "month": "March 2019",
       "year": "2019"
@@ -815,8 +815,8 @@
     {
       "date_bin_start": "2019-04-01",
       "nutrient": "zinc",
-      "nut_supply": 8.4951,
-      "nut_rdi": 56842.4061,
+      "nut_supply": 8.4946,
+      "nut_rdi": 56839.0708,
       "n_boats": 3872,
       "month": "April 2019",
       "year": "2019"
@@ -824,8 +824,8 @@
     {
       "date_bin_start": "2019-04-01",
       "nutrient": "protein",
-      "nut_supply": 179614.4505,
-      "nut_rdi": 128021.7039,
+      "nut_supply": 179612.2067,
+      "nut_rdi": 128020.1046,
       "n_boats": 3872,
       "month": "April 2019",
       "year": "2019"
@@ -833,8 +833,8 @@
     {
       "date_bin_start": "2019-04-01",
       "nutrient": "omega3",
-      "nut_supply": 2843.9846,
-      "nut_rdi": 31726.913,
+      "nut_supply": 2842.7677,
+      "nut_rdi": 31713.3374,
       "n_boats": 3872,
       "month": "April 2019",
       "year": "2019"
@@ -842,8 +842,8 @@
     {
       "date_bin_start": "2019-04-01",
       "nutrient": "calcium",
-      "nut_supply": 1439.7125,
-      "nut_rdi": 47203.6899,
+      "nut_supply": 1440.0514,
+      "nut_rdi": 47214.8,
       "n_boats": 3872,
       "month": "April 2019",
       "year": "2019"
@@ -851,8 +851,8 @@
     {
       "date_bin_start": "2019-04-01",
       "nutrient": "iron",
-      "nut_supply": 15.5439,
-      "nut_rdi": 17334.5233,
+      "nut_supply": 15.5486,
+      "nut_rdi": 17339.7938,
       "n_boats": 3872,
       "month": "April 2019",
       "year": "2019"
@@ -861,7 +861,7 @@
       "date_bin_start": "2019-04-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.2558,
-      "nut_rdi": 16771.208,
+      "nut_rdi": 16774.0343,
       "n_boats": 3872,
       "month": "April 2019",
       "year": "2019"
@@ -2922,7 +2922,7 @@
       "date_bin_start": "2022-07-01",
       "nutrient": "zinc",
       "nut_supply": 4.6167,
-      "nut_rdi": 30891.1803,
+      "nut_rdi": 30890.958,
       "n_boats": 3872,
       "month": "July 2022",
       "year": "2022"
@@ -2930,8 +2930,8 @@
     {
       "date_bin_start": "2022-07-01",
       "nutrient": "protein",
-      "nut_supply": 91074.1214,
-      "nut_rdi": 64913.8428,
+      "nut_supply": 91074.2498,
+      "nut_rdi": 64913.9343,
       "n_boats": 3872,
       "month": "July 2022",
       "year": "2022"
@@ -2939,8 +2939,8 @@
     {
       "date_bin_start": "2022-07-01",
       "nutrient": "omega3",
-      "nut_supply": 1197.4038,
-      "nut_rdi": 13357.9927,
+      "nut_supply": 1197.2323,
+      "nut_rdi": 13356.0799,
       "n_boats": 3872,
       "month": "July 2022",
       "year": "2022"
@@ -2948,8 +2948,8 @@
     {
       "date_bin_start": "2022-07-01",
       "nutrient": "calcium",
-      "nut_supply": 602.117,
-      "nut_rdi": 19741.5407,
+      "nut_supply": 602.1775,
+      "nut_rdi": 19743.5258,
       "n_boats": 3872,
       "month": "July 2022",
       "year": "2022"
@@ -2957,8 +2957,8 @@
     {
       "date_bin_start": "2022-07-01",
       "nutrient": "iron",
-      "nut_supply": 6.3118,
-      "nut_rdi": 7038.9619,
+      "nut_supply": 6.3127,
+      "nut_rdi": 7039.8812,
       "n_boats": 3872,
       "month": "July 2022",
       "year": "2022"
@@ -2967,7 +2967,7 @@
       "date_bin_start": "2022-07-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.1782,
-      "nut_rdi": 11684.4891,
+      "nut_rdi": 11684.7983,
       "n_boats": 3872,
       "month": "July 2022",
       "year": "2022"
@@ -3084,7 +3084,7 @@
       "date_bin_start": "2022-10-01",
       "nutrient": "zinc",
       "nut_supply": 5.1722,
-      "nut_rdi": 34608.0318,
+      "nut_rdi": 34608.3678,
       "n_boats": 3872,
       "month": "October 2022",
       "year": "2022"
@@ -3092,8 +3092,8 @@
     {
       "date_bin_start": "2022-10-01",
       "nutrient": "protein",
-      "nut_supply": 90932.4695,
-      "nut_rdi": 64812.8792,
+      "nut_supply": 90933.7174,
+      "nut_rdi": 64813.7687,
       "n_boats": 3872,
       "month": "October 2022",
       "year": "2022"
@@ -3101,8 +3101,8 @@
     {
       "date_bin_start": "2022-10-01",
       "nutrient": "omega3",
-      "nut_supply": 1639.4362,
-      "nut_rdi": 18289.2163,
+      "nut_supply": 1638.9967,
+      "nut_rdi": 18284.3131,
       "n_boats": 3872,
       "month": "October 2022",
       "year": "2022"
@@ -3110,8 +3110,8 @@
     {
       "date_bin_start": "2022-10-01",
       "nutrient": "calcium",
-      "nut_supply": 877.0698,
-      "nut_rdi": 28756.3871,
+      "nut_supply": 877.242,
+      "nut_rdi": 28762.0331,
       "n_boats": 3872,
       "month": "October 2022",
       "year": "2022"
@@ -3119,8 +3119,8 @@
     {
       "date_bin_start": "2022-10-01",
       "nutrient": "iron",
-      "nut_supply": 6.9467,
-      "nut_rdi": 7746.988,
+      "nut_supply": 6.9493,
+      "nut_rdi": 7749.8205,
       "n_boats": 3872,
       "month": "October 2022",
       "year": "2022"
@@ -3129,7 +3129,7 @@
       "date_bin_start": "2022-10-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.1768,
-      "nut_rdi": 11591.605,
+      "nut_rdi": 11592.009,
       "n_boats": 3872,
       "month": "October 2022",
       "year": "2022"
@@ -3138,7 +3138,7 @@
       "date_bin_start": "2022-11-01",
       "nutrient": "zinc",
       "nut_supply": 6.628,
-      "nut_rdi": 44349.518,
+      "nut_rdi": 44349.6123,
       "n_boats": 3872,
       "month": "November 2022",
       "year": "2022"
@@ -3146,8 +3146,8 @@
     {
       "date_bin_start": "2022-11-01",
       "nutrient": "protein",
-      "nut_supply": 118405.5218,
-      "nut_rdi": 84394.5273,
+      "nut_supply": 118406.5415,
+      "nut_rdi": 84395.2541,
       "n_boats": 3872,
       "month": "November 2022",
       "year": "2022"
@@ -3155,8 +3155,8 @@
     {
       "date_bin_start": "2022-11-01",
       "nutrient": "omega3",
-      "nut_supply": 2192.7049,
-      "nut_rdi": 24461.3694,
+      "nut_supply": 2192.369,
+      "nut_rdi": 24457.6215,
       "n_boats": 3872,
       "month": "November 2022",
       "year": "2022"
@@ -3164,8 +3164,8 @@
     {
       "date_bin_start": "2022-11-01",
       "nutrient": "calcium",
-      "nut_supply": 1102.3805,
-      "nut_rdi": 36143.623,
+      "nut_supply": 1102.4855,
+      "nut_rdi": 36147.0641,
       "n_boats": 3872,
       "month": "November 2022",
       "year": "2022"
@@ -3173,8 +3173,8 @@
     {
       "date_bin_start": "2022-11-01",
       "nutrient": "iron",
-      "nut_supply": 7.76,
-      "nut_rdi": 8653.9058,
+      "nut_supply": 7.7617,
+      "nut_rdi": 8655.9002,
       "n_boats": 3872,
       "month": "November 2022",
       "year": "2022"
@@ -3183,7 +3183,7 @@
       "date_bin_start": "2022-11-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.277,
-      "nut_rdi": 18165.6395,
+      "nut_rdi": 18166.4992,
       "n_boats": 3872,
       "month": "November 2022",
       "year": "2022"
@@ -3191,8 +3191,8 @@
     {
       "date_bin_start": "2022-12-01",
       "nutrient": "zinc",
-      "nut_supply": 5.1826,
-      "nut_rdi": 34677.9457,
+      "nut_supply": 5.1827,
+      "nut_rdi": 34678.4402,
       "n_boats": 3872,
       "month": "December 2022",
       "year": "2022"
@@ -3200,8 +3200,8 @@
     {
       "date_bin_start": "2022-12-01",
       "nutrient": "protein",
-      "nut_supply": 95578.464,
-      "nut_rdi": 68124.3507,
+      "nut_supply": 95579.5401,
+      "nut_rdi": 68125.1176,
       "n_boats": 3872,
       "month": "December 2022",
       "year": "2022"
@@ -3209,8 +3209,8 @@
     {
       "date_bin_start": "2022-12-01",
       "nutrient": "omega3",
-      "nut_supply": 1399.1432,
-      "nut_rdi": 15608.5566,
+      "nut_supply": 1399.0335,
+      "nut_rdi": 15607.333,
       "n_boats": 3872,
       "month": "December 2022",
       "year": "2022"
@@ -3218,8 +3218,8 @@
     {
       "date_bin_start": "2022-12-01",
       "nutrient": "calcium",
-      "nut_supply": 816.5486,
-      "nut_rdi": 26772.0867,
+      "nut_supply": 816.5902,
+      "nut_rdi": 26773.4482,
       "n_boats": 3872,
       "month": "December 2022",
       "year": "2022"
@@ -3227,8 +3227,8 @@
     {
       "date_bin_start": "2022-12-01",
       "nutrient": "iron",
-      "nut_supply": 6.4909,
-      "nut_rdi": 7238.6021,
+      "nut_supply": 6.4916,
+      "nut_rdi": 7239.4427,
       "n_boats": 3872,
       "month": "December 2022",
       "year": "2022"
@@ -3237,7 +3237,7 @@
       "date_bin_start": "2022-12-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.1904,
-      "nut_rdi": 12487.3922,
+      "nut_rdi": 12487.7878,
       "n_boats": 3872,
       "month": "December 2022",
       "year": "2022"
@@ -3245,8 +3245,8 @@
     {
       "date_bin_start": "2023-01-01",
       "nutrient": "zinc",
-      "nut_supply": 9.2869,
-      "nut_rdi": 62140.3038,
+      "nut_supply": 9.2861,
+      "nut_rdi": 62135.3053,
       "n_boats": 3872,
       "month": "January 2023",
       "year": "2023"
@@ -3254,8 +3254,8 @@
     {
       "date_bin_start": "2023-01-01",
       "nutrient": "protein",
-      "nut_supply": 167667.9597,
-      "nut_rdi": 119506.7425,
+      "nut_supply": 167663.6258,
+      "nut_rdi": 119503.6535,
       "n_boats": 3872,
       "month": "January 2023",
       "year": "2023"
@@ -3263,8 +3263,8 @@
     {
       "date_bin_start": "2023-01-01",
       "nutrient": "omega3",
-      "nut_supply": 1973.3165,
-      "nut_rdi": 22013.9166,
+      "nut_supply": 1971.4612,
+      "nut_rdi": 21993.2192,
       "n_boats": 3872,
       "month": "January 2023",
       "year": "2023"
@@ -3272,8 +3272,8 @@
     {
       "date_bin_start": "2023-01-01",
       "nutrient": "calcium",
-      "nut_supply": 1365.4681,
-      "nut_rdi": 44769.4469,
+      "nut_supply": 1365.8873,
+      "nut_rdi": 44783.1909,
       "n_boats": 3872,
       "month": "January 2023",
       "year": "2023"
@@ -3281,8 +3281,8 @@
     {
       "date_bin_start": "2023-01-01",
       "nutrient": "iron",
-      "nut_supply": 8.7303,
-      "nut_rdi": 9736.0679,
+      "nut_supply": 8.7367,
+      "nut_rdi": 9743.1176,
       "n_boats": 3872,
       "month": "January 2023",
       "year": "2023"
@@ -3291,7 +3291,7 @@
       "date_bin_start": "2023-01-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.3519,
-      "nut_rdi": 23072.5386,
+      "nut_rdi": 23076.3647,
       "n_boats": 3872,
       "month": "January 2023",
       "year": "2023"
@@ -3299,8 +3299,8 @@
     {
       "date_bin_start": "2023-02-01",
       "nutrient": "zinc",
-      "nut_supply": 5.3041,
-      "nut_rdi": 35491.0659,
+      "nut_supply": 5.3031,
+      "nut_rdi": 35484.3759,
       "n_boats": 3872,
       "month": "February 2023",
       "year": "2023"
@@ -3308,8 +3308,8 @@
     {
       "date_bin_start": "2023-02-01",
       "nutrient": "protein",
-      "nut_supply": 102014.7264,
-      "nut_rdi": 72711.8506,
+      "nut_supply": 102009.4016,
+      "nut_rdi": 72708.0553,
       "n_boats": 3872,
       "month": "February 2023",
       "year": "2023"
@@ -3317,8 +3317,8 @@
     {
       "date_bin_start": "2023-02-01",
       "nutrient": "omega3",
-      "nut_supply": 1611.2283,
-      "nut_rdi": 17974.5351,
+      "nut_supply": 1608.9602,
+      "nut_rdi": 17949.2325,
       "n_boats": 3872,
       "month": "February 2023",
       "year": "2023"
@@ -3326,8 +3326,8 @@
     {
       "date_bin_start": "2023-02-01",
       "nutrient": "calcium",
-      "nut_supply": 760.4014,
-      "nut_rdi": 24931.1932,
+      "nut_supply": 760.8539,
+      "nut_rdi": 24946.0296,
       "n_boats": 3872,
       "month": "February 2023",
       "year": "2023"
@@ -3335,8 +3335,8 @@
     {
       "date_bin_start": "2023-02-01",
       "nutrient": "iron",
-      "nut_supply": 7.1306,
-      "nut_rdi": 7952.0121,
+      "nut_supply": 7.1378,
+      "nut_rdi": 7960.1251,
       "n_boats": 3872,
       "month": "February 2023",
       "year": "2023"
@@ -3344,8 +3344,8 @@
     {
       "date_bin_start": "2023-02-01",
       "nutrient": "vitaminA",
-      "nut_supply": 0.2027,
-      "nut_rdi": 13291.1235,
+      "nut_supply": 0.2028,
+      "nut_rdi": 13297.2173,
       "n_boats": 3872,
       "month": "February 2023",
       "year": "2023"
@@ -3353,8 +3353,8 @@
     {
       "date_bin_start": "2023-03-01",
       "nutrient": "zinc",
-      "nut_supply": 11.5652,
-      "nut_rdi": 77385.0948,
+      "nut_supply": 11.5647,
+      "nut_rdi": 77381.7241,
       "n_boats": 3872,
       "month": "March 2023",
       "year": "2023"
@@ -3362,8 +3362,8 @@
     {
       "date_bin_start": "2023-03-01",
       "nutrient": "protein",
-      "nut_supply": 207818.6493,
-      "nut_rdi": 148124.4827,
+      "nut_supply": 207817.273,
+      "nut_rdi": 148123.5018,
       "n_boats": 3872,
       "month": "March 2023",
       "year": "2023"
@@ -3371,8 +3371,8 @@
     {
       "date_bin_start": "2023-03-01",
       "nutrient": "omega3",
-      "nut_supply": 2726.1712,
-      "nut_rdi": 30412.6109,
+      "nut_supply": 2724.7595,
+      "nut_rdi": 30396.8613,
       "n_boats": 3872,
       "month": "March 2023",
       "year": "2023"
@@ -3380,8 +3380,8 @@
     {
       "date_bin_start": "2023-03-01",
       "nutrient": "calcium",
-      "nut_supply": 1625.6076,
-      "nut_rdi": 53298.6111,
+      "nut_supply": 1626.008,
+      "nut_rdi": 53311.7362,
       "n_boats": 3872,
       "month": "March 2023",
       "year": "2023"
@@ -3389,8 +3389,8 @@
     {
       "date_bin_start": "2023-03-01",
       "nutrient": "iron",
-      "nut_supply": 10.0059,
-      "nut_rdi": 11158.6024,
+      "nut_supply": 10.0115,
+      "nut_rdi": 11164.8701,
       "n_boats": 3872,
       "month": "March 2023",
       "year": "2023"
@@ -3399,7 +3399,7 @@
       "date_bin_start": "2023-03-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.4381,
-      "nut_rdi": 28727.5865,
+      "nut_rdi": 28730.5024,
       "n_boats": 3872,
       "month": "March 2023",
       "year": "2023"
@@ -3407,8 +3407,8 @@
     {
       "date_bin_start": "2023-04-01",
       "nutrient": "zinc",
-      "nut_supply": 3.7481,
-      "nut_rdi": 25079.4648,
+      "nut_supply": 3.748,
+      "nut_rdi": 25078.5248,
       "n_boats": 3872,
       "month": "April 2023",
       "year": "2023"
@@ -3416,8 +3416,8 @@
     {
       "date_bin_start": "2023-04-01",
       "nutrient": "protein",
-      "nut_supply": 67292.6479,
-      "nut_rdi": 47963.3984,
+      "nut_supply": 67292.3949,
+      "nut_rdi": 47963.218,
       "n_boats": 3872,
       "month": "April 2023",
       "year": "2023"
@@ -3425,8 +3425,8 @@
     {
       "date_bin_start": "2023-04-01",
       "nutrient": "omega3",
-      "nut_supply": 1354.0462,
-      "nut_rdi": 15105.4633,
+      "nut_supply": 1353.5306,
+      "nut_rdi": 15099.7119,
       "n_boats": 3872,
       "month": "April 2023",
       "year": "2023"
@@ -3434,8 +3434,8 @@
     {
       "date_bin_start": "2023-04-01",
       "nutrient": "calcium",
-      "nut_supply": 511.9443,
-      "nut_rdi": 16785.0601,
+      "nut_supply": 512.1207,
+      "nut_rdi": 16790.8426,
       "n_boats": 3872,
       "month": "April 2023",
       "year": "2023"
@@ -3443,8 +3443,8 @@
     {
       "date_bin_start": "2023-04-01",
       "nutrient": "iron",
-      "nut_supply": 4.1379,
-      "nut_rdi": 4614.5804,
+      "nut_supply": 4.1402,
+      "nut_rdi": 4617.174,
       "n_boats": 3872,
       "month": "April 2023",
       "year": "2023"
@@ -3453,7 +3453,7 @@
       "date_bin_start": "2023-04-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.1053,
-      "nut_rdi": 6907.193,
+      "nut_rdi": 6907.8765,
       "n_boats": 3872,
       "month": "April 2023",
       "year": "2023"
@@ -3461,8 +3461,8 @@
     {
       "date_bin_start": "2023-05-01",
       "nutrient": "zinc",
-      "nut_supply": 5.8411,
-      "nut_rdi": 39083.8092,
+      "nut_supply": 5.8407,
+      "nut_rdi": 39081.433,
       "n_boats": 3872,
       "month": "May 2023",
       "year": "2023"
@@ -3470,8 +3470,8 @@
     {
       "date_bin_start": "2023-05-01",
       "nutrient": "protein",
-      "nut_supply": 103447.6335,
-      "nut_rdi": 73733.1671,
+      "nut_supply": 103446.6876,
+      "nut_rdi": 73732.4929,
       "n_boats": 3872,
       "month": "May 2023",
       "year": "2023"
@@ -3479,8 +3479,8 @@
     {
       "date_bin_start": "2023-05-01",
       "nutrient": "omega3",
-      "nut_supply": 1253.9683,
-      "nut_rdi": 13989.0146,
+      "nut_supply": 1252.715,
+      "nut_rdi": 13975.0336,
       "n_boats": 3872,
       "month": "May 2023",
       "year": "2023"
@@ -3488,8 +3488,8 @@
     {
       "date_bin_start": "2023-05-01",
       "nutrient": "calcium",
-      "nut_supply": 869.2013,
-      "nut_rdi": 28498.4025,
+      "nut_supply": 869.635,
+      "nut_rdi": 28512.6225,
       "n_boats": 3872,
       "month": "May 2023",
       "year": "2023"
@@ -3497,8 +3497,8 @@
     {
       "date_bin_start": "2023-05-01",
       "nutrient": "iron",
-      "nut_supply": 6.2113,
-      "nut_rdi": 6926.8426,
+      "nut_supply": 6.2171,
+      "nut_rdi": 6933.2773,
       "n_boats": 3872,
       "month": "May 2023",
       "year": "2023"
@@ -3506,8 +3506,8 @@
     {
       "date_bin_start": "2023-05-01",
       "nutrient": "vitaminA",
-      "nut_supply": 0.1964,
-      "nut_rdi": 12881.6532,
+      "nut_supply": 0.1965,
+      "nut_rdi": 12883.404,
       "n_boats": 3872,
       "month": "May 2023",
       "year": "2023"
@@ -3515,8 +3515,8 @@
     {
       "date_bin_start": "2023-06-01",
       "nutrient": "zinc",
-      "nut_supply": 5.5327,
-      "nut_rdi": 37020.5387,
+      "nut_supply": 5.5325,
+      "nut_rdi": 37018.741,
       "n_boats": 3872,
       "month": "June 2023",
       "year": "2023"
@@ -3524,8 +3524,8 @@
     {
       "date_bin_start": "2023-06-01",
       "nutrient": "protein",
-      "nut_supply": 116477.7047,
-      "nut_rdi": 83020.4595,
+      "nut_supply": 116478.1288,
+      "nut_rdi": 83020.7618,
       "n_boats": 3872,
       "month": "June 2023",
       "year": "2023"
@@ -3533,8 +3533,8 @@
     {
       "date_bin_start": "2023-06-01",
       "nutrient": "omega3",
-      "nut_supply": 1504.0819,
-      "nut_rdi": 16779.2309,
+      "nut_supply": 1503.0577,
+      "nut_rdi": 16767.8056,
       "n_boats": 3872,
       "month": "June 2023",
       "year": "2023"
@@ -3542,8 +3542,8 @@
     {
       "date_bin_start": "2023-06-01",
       "nutrient": "calcium",
-      "nut_supply": 479.9526,
-      "nut_rdi": 15736.1522,
+      "nut_supply": 480.2192,
+      "nut_rdi": 15744.8933,
       "n_boats": 3872,
       "month": "June 2023",
       "year": "2023"
@@ -3551,8 +3551,8 @@
     {
       "date_bin_start": "2023-06-01",
       "nutrient": "iron",
-      "nut_supply": 5.227,
-      "nut_rdi": 5829.16,
+      "nut_supply": 5.2311,
+      "nut_rdi": 5833.7158,
       "n_boats": 3872,
       "month": "June 2023",
       "year": "2023"
@@ -3561,7 +3561,7 @@
       "date_bin_start": "2023-06-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.2429,
-      "nut_rdi": 15925.4423,
+      "nut_rdi": 15927.7928,
       "n_boats": 3872,
       "month": "June 2023",
       "year": "2023"
@@ -3569,8 +3569,8 @@
     {
       "date_bin_start": "2023-07-01",
       "nutrient": "zinc",
-      "nut_supply": 4.1219,
-      "nut_rdi": 27580.3935,
+      "nut_supply": 4.1218,
+      "nut_rdi": 27579.7231,
       "n_boats": 3872,
       "month": "July 2023",
       "year": "2023"
@@ -3578,8 +3578,8 @@
     {
       "date_bin_start": "2023-07-01",
       "nutrient": "protein",
-      "nut_supply": 85373.0529,
-      "nut_rdi": 60850.3584,
+      "nut_supply": 85371.3905,
+      "nut_rdi": 60849.1735,
       "n_boats": 3872,
       "month": "July 2023",
       "year": "2023"
@@ -3587,8 +3587,8 @@
     {
       "date_bin_start": "2023-07-01",
       "nutrient": "omega3",
-      "nut_supply": 828.1952,
-      "nut_rdi": 9239.1771,
+      "nut_supply": 828.1714,
+      "nut_rdi": 9238.9115,
       "n_boats": 3872,
       "month": "July 2023",
       "year": "2023"
@@ -3596,8 +3596,8 @@
     {
       "date_bin_start": "2023-07-01",
       "nutrient": "calcium",
-      "nut_supply": 550.0242,
-      "nut_rdi": 18033.5801,
+      "nut_supply": 550.009,
+      "nut_rdi": 18033.0833,
       "n_boats": 3872,
       "month": "July 2023",
       "year": "2023"
@@ -3605,8 +3605,8 @@
     {
       "date_bin_start": "2023-07-01",
       "nutrient": "iron",
-      "nut_supply": 4.4899,
-      "nut_rdi": 5007.1402,
+      "nut_supply": 4.4897,
+      "nut_rdi": 5006.9188,
       "n_boats": 3872,
       "month": "July 2023",
       "year": "2023"
@@ -3615,7 +3615,7 @@
       "date_bin_start": "2023-07-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.2106,
-      "nut_rdi": 13810.6699,
+      "nut_rdi": 13810.4285,
       "n_boats": 3872,
       "month": "July 2023",
       "year": "2023"
@@ -3624,7 +3624,7 @@
       "date_bin_start": "2023-08-01",
       "nutrient": "zinc",
       "nut_supply": 3.4489,
-      "nut_rdi": 23077.5943,
+      "nut_rdi": 23077.3523,
       "n_boats": 3872,
       "month": "August 2023",
       "year": "2023"
@@ -3632,8 +3632,8 @@
     {
       "date_bin_start": "2023-08-01",
       "nutrient": "protein",
-      "nut_supply": 70807.3792,
-      "nut_rdi": 50468.5525,
+      "nut_supply": 70805.8651,
+      "nut_rdi": 50467.4733,
       "n_boats": 3872,
       "month": "August 2023",
       "year": "2023"
@@ -3641,8 +3641,8 @@
     {
       "date_bin_start": "2023-08-01",
       "nutrient": "omega3",
-      "nut_supply": 942.4743,
-      "nut_rdi": 10514.0511,
+      "nut_supply": 942.4629,
+      "nut_rdi": 10513.9246,
       "n_boats": 3872,
       "month": "August 2023",
       "year": "2023"
@@ -3650,8 +3650,8 @@
     {
       "date_bin_start": "2023-08-01",
       "nutrient": "calcium",
-      "nut_supply": 500.3996,
-      "nut_rdi": 16406.5431,
+      "nut_supply": 500.3969,
+      "nut_rdi": 16406.4573,
       "n_boats": 3872,
       "month": "August 2023",
       "year": "2023"
@@ -3660,7 +3660,7 @@
       "date_bin_start": "2023-08-01",
       "nutrient": "iron",
       "nut_supply": 4.8945,
-      "nut_rdi": 5458.3538,
+      "nut_rdi": 5458.3236,
       "n_boats": 3872,
       "month": "August 2023",
       "year": "2023"
@@ -3669,7 +3669,7 @@
       "date_bin_start": "2023-08-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.1794,
-      "nut_rdi": 11762.5205,
+      "nut_rdi": 11761.7254,
       "n_boats": 3872,
       "month": "August 2023",
       "year": "2023"
@@ -3678,7 +3678,7 @@
       "date_bin_start": "2023-09-01",
       "nutrient": "zinc",
       "nut_supply": 3.6984,
-      "nut_rdi": 24746.6,
+      "nut_rdi": 24746.4434,
       "n_boats": 3872,
       "month": "September 2023",
       "year": "2023"
@@ -3686,8 +3686,8 @@
     {
       "date_bin_start": "2023-09-01",
       "nutrient": "protein",
-      "nut_supply": 81005.2622,
-      "nut_rdi": 57737.1791,
+      "nut_supply": 81004.8416,
+      "nut_rdi": 57736.8793,
       "n_boats": 3872,
       "month": "September 2023",
       "year": "2023"
@@ -3695,8 +3695,8 @@
     {
       "date_bin_start": "2023-09-01",
       "nutrient": "omega3",
-      "nut_supply": 1216.2453,
-      "nut_rdi": 13568.1845,
+      "nut_supply": 1216.2385,
+      "nut_rdi": 13568.1089,
       "n_boats": 3872,
       "month": "September 2023",
       "year": "2023"
@@ -3704,8 +3704,8 @@
     {
       "date_bin_start": "2023-09-01",
       "nutrient": "calcium",
-      "nut_supply": 550.8753,
-      "nut_rdi": 18061.4838,
+      "nut_supply": 550.8693,
+      "nut_rdi": 18061.2875,
       "n_boats": 3872,
       "month": "September 2023",
       "year": "2023"
@@ -3713,8 +3713,8 @@
     {
       "date_bin_start": "2023-09-01",
       "nutrient": "iron",
-      "nut_supply": 6.6245,
-      "nut_rdi": 7387.6189,
+      "nut_supply": 6.6244,
+      "nut_rdi": 7387.5545,
       "n_boats": 3872,
       "month": "September 2023",
       "year": "2023"
@@ -3723,7 +3723,7 @@
       "date_bin_start": "2023-09-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.1204,
-      "nut_rdi": 7894.4418,
+      "nut_rdi": 7894.4161,
       "n_boats": 3872,
       "month": "September 2023",
       "year": "2023"
@@ -3732,7 +3732,7 @@
       "date_bin_start": "2023-10-01",
       "nutrient": "zinc",
       "nut_supply": 3.0035,
-      "nut_rdi": 20096.9396,
+      "nut_rdi": 20096.7334,
       "n_boats": 3872,
       "month": "October 2023",
       "year": "2023"
@@ -3740,8 +3740,8 @@
     {
       "date_bin_start": "2023-10-01",
       "nutrient": "protein",
-      "nut_supply": 53976.7262,
-      "nut_rdi": 38472.3636,
+      "nut_supply": 53976.2132,
+      "nut_rdi": 38471.998,
       "n_boats": 3872,
       "month": "October 2023",
       "year": "2023"
@@ -3749,8 +3749,8 @@
     {
       "date_bin_start": "2023-10-01",
       "nutrient": "omega3",
-      "nut_supply": 782.276,
-      "nut_rdi": 8726.9116,
+      "nut_supply": 782.2673,
+      "nut_rdi": 8726.8142,
       "n_boats": 3872,
       "month": "October 2023",
       "year": "2023"
@@ -3758,8 +3758,8 @@
     {
       "date_bin_start": "2023-10-01",
       "nutrient": "calcium",
-      "nut_supply": 451.8915,
-      "nut_rdi": 14816.1144,
+      "nut_supply": 451.8858,
+      "nut_rdi": 14815.9278,
       "n_boats": 3872,
       "month": "October 2023",
       "year": "2023"
@@ -3767,8 +3767,8 @@
     {
       "date_bin_start": "2023-10-01",
       "nutrient": "iron",
-      "nut_supply": 3.1182,
-      "nut_rdi": 3477.372,
+      "nut_supply": 3.1181,
+      "nut_rdi": 3477.3018,
       "n_boats": 3872,
       "month": "October 2023",
       "year": "2023"
@@ -3777,7 +3777,7 @@
       "date_bin_start": "2023-10-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.1512,
-      "nut_rdi": 9916.7245,
+      "nut_rdi": 9916.6819,
       "n_boats": 3872,
       "month": "October 2023",
       "year": "2023"
@@ -3786,7 +3786,7 @@
       "date_bin_start": "2023-11-01",
       "nutrient": "zinc",
       "nut_supply": 4.9698,
-      "nut_rdi": 33253.7811,
+      "nut_rdi": 33253.6473,
       "n_boats": 3872,
       "month": "November 2023",
       "year": "2023"
@@ -3794,8 +3794,8 @@
     {
       "date_bin_start": "2023-11-01",
       "nutrient": "protein",
-      "nut_supply": 97774.228,
-      "nut_rdi": 69689.3999,
+      "nut_supply": 97773.9002,
+      "nut_rdi": 69689.1662,
       "n_boats": 3872,
       "month": "November 2023",
       "year": "2023"
@@ -3803,8 +3803,8 @@
     {
       "date_bin_start": "2023-11-01",
       "nutrient": "omega3",
-      "nut_supply": 1375.9534,
-      "nut_rdi": 15349.856,
+      "nut_supply": 1375.9477,
+      "nut_rdi": 15349.7924,
       "n_boats": 3872,
       "month": "November 2023",
       "year": "2023"
@@ -3812,8 +3812,8 @@
     {
       "date_bin_start": "2023-11-01",
       "nutrient": "calcium",
-      "nut_supply": 690.2637,
-      "nut_rdi": 22631.5972,
+      "nut_supply": 690.261,
+      "nut_rdi": 22631.5069,
       "n_boats": 3872,
       "month": "November 2023",
       "year": "2023"
@@ -3822,7 +3822,7 @@
       "date_bin_start": "2023-11-01",
       "nutrient": "iron",
       "nut_supply": 6.1106,
-      "nut_rdi": 6814.5509,
+      "nut_rdi": 6814.5126,
       "n_boats": 3872,
       "month": "November 2023",
       "year": "2023"
@@ -3831,7 +3831,7 @@
       "date_bin_start": "2023-11-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.1883,
-      "nut_rdi": 12349.188,
+      "nut_rdi": 12349.1527,
       "n_boats": 3872,
       "month": "November 2023",
       "year": "2023"
@@ -3840,7 +3840,7 @@
       "date_bin_start": "2023-12-01",
       "nutrient": "zinc",
       "nut_supply": 4.258,
-      "nut_rdi": 28491.2046,
+      "nut_rdi": 28491.3161,
       "n_boats": 3872,
       "month": "December 2023",
       "year": "2023"
@@ -3848,8 +3848,8 @@
     {
       "date_bin_start": "2023-12-01",
       "nutrient": "protein",
-      "nut_supply": 73086.7532,
-      "nut_rdi": 52093.1954,
+      "nut_supply": 73087.0453,
+      "nut_rdi": 52093.4036,
       "n_boats": 3872,
       "month": "December 2023",
       "year": "2023"
@@ -3857,8 +3857,8 @@
     {
       "date_bin_start": "2023-12-01",
       "nutrient": "omega3",
-      "nut_supply": 1425.3559,
-      "nut_rdi": 15900.9803,
+      "nut_supply": 1425.3607,
+      "nut_rdi": 15901.0338,
       "n_boats": 3872,
       "month": "December 2023",
       "year": "2023"
@@ -3866,8 +3866,8 @@
     {
       "date_bin_start": "2023-12-01",
       "nutrient": "calcium",
-      "nut_supply": 696.4149,
-      "nut_rdi": 22833.2739,
+      "nut_supply": 696.4178,
+      "nut_rdi": 22833.3711,
       "n_boats": 3872,
       "month": "December 2023",
       "year": "2023"
@@ -3875,8 +3875,8 @@
     {
       "date_bin_start": "2023-12-01",
       "nutrient": "iron",
-      "nut_supply": 4.6087,
-      "nut_rdi": 5139.6632,
+      "nut_supply": 4.6088,
+      "nut_rdi": 5139.6965,
       "n_boats": 3872,
       "month": "December 2023",
       "year": "2023"
@@ -3885,7 +3885,7 @@
       "date_bin_start": "2023-12-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.1228,
-      "nut_rdi": 8050.06,
+      "nut_rdi": 8050.0887,
       "n_boats": 3872,
       "month": "December 2023",
       "year": "2023"
@@ -3893,8 +3893,8 @@
     {
       "date_bin_start": "2024-01-01",
       "nutrient": "zinc",
-      "nut_supply": 5.9073,
-      "nut_rdi": 39527.0533,
+      "nut_supply": 5.9063,
+      "nut_rdi": 39520.3729,
       "n_boats": 3872,
       "month": "January 2024",
       "year": "2024"
@@ -3902,8 +3902,8 @@
     {
       "date_bin_start": "2024-01-01",
       "nutrient": "protein",
-      "nut_supply": 121232.7437,
-      "nut_rdi": 86409.6534,
+      "nut_supply": 121228.9229,
+      "nut_rdi": 86406.9301,
       "n_boats": 3872,
       "month": "January 2024",
       "year": "2024"
@@ -3911,8 +3911,8 @@
     {
       "date_bin_start": "2024-01-01",
       "nutrient": "omega3",
-      "nut_supply": 1750.2612,
-      "nut_rdi": 19525.5573,
+      "nut_supply": 1747.68,
+      "nut_rdi": 19496.7619,
       "n_boats": 3872,
       "month": "January 2024",
       "year": "2024"
@@ -3920,8 +3920,8 @@
     {
       "date_bin_start": "2024-01-01",
       "nutrient": "calcium",
-      "nut_supply": 807.6714,
-      "nut_rdi": 26481.0303,
+      "nut_supply": 808.2666,
+      "nut_rdi": 26500.5454,
       "n_boats": 3872,
       "month": "January 2024",
       "year": "2024"
@@ -3929,8 +3929,8 @@
     {
       "date_bin_start": "2024-01-01",
       "nutrient": "iron",
-      "nut_supply": 8.0071,
-      "nut_rdi": 8929.5418,
+      "nut_supply": 8.016,
+      "nut_rdi": 8939.4299,
       "n_boats": 3872,
       "month": "January 2024",
       "year": "2024"
@@ -3938,8 +3938,8 @@
     {
       "date_bin_start": "2024-01-01",
       "nutrient": "vitaminA",
-      "nut_supply": 0.2298,
-      "nut_rdi": 15070.6847,
+      "nut_supply": 0.2299,
+      "nut_rdi": 15077.0522,
       "n_boats": 3872,
       "month": "January 2024",
       "year": "2024"
@@ -3947,8 +3947,8 @@
     {
       "date_bin_start": "2024-02-01",
       "nutrient": "zinc",
-      "nut_supply": 4.739,
-      "nut_rdi": 31709.6141,
+      "nut_supply": 4.7383,
+      "nut_rdi": 31705.0778,
       "n_boats": 3872,
       "month": "February 2024",
       "year": "2024"
@@ -3956,8 +3956,8 @@
     {
       "date_bin_start": "2024-02-01",
       "nutrient": "protein",
-      "nut_supply": 91861.7047,
-      "nut_rdi": 65475.1993,
+      "nut_supply": 91858.5637,
+      "nut_rdi": 65472.9606,
       "n_boats": 3872,
       "month": "February 2024",
       "year": "2024"
@@ -3965,8 +3965,8 @@
     {
       "date_bin_start": "2024-02-01",
       "nutrient": "omega3",
-      "nut_supply": 1308.2565,
-      "nut_rdi": 14594.6431,
+      "nut_supply": 1306.3948,
+      "nut_rdi": 14573.8739,
       "n_boats": 3872,
       "month": "February 2024",
       "year": "2024"
@@ -3974,8 +3974,8 @@
     {
       "date_bin_start": "2024-02-01",
       "nutrient": "calcium",
-      "nut_supply": 688.4795,
-      "nut_rdi": 22573.0994,
+      "nut_supply": 689.096,
+      "nut_rdi": 22593.3124,
       "n_boats": 3872,
       "month": "February 2024",
       "year": "2024"
@@ -3983,8 +3983,8 @@
     {
       "date_bin_start": "2024-02-01",
       "nutrient": "iron",
-      "nut_supply": 5.9522,
-      "nut_rdi": 6637.8544,
+      "nut_supply": 5.9602,
+      "nut_rdi": 6646.7942,
       "n_boats": 3872,
       "month": "February 2024",
       "year": "2024"
@@ -3993,7 +3993,7 @@
       "date_bin_start": "2024-02-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.2213,
-      "nut_rdi": 14510.9341,
+      "nut_rdi": 14513.7799,
       "n_boats": 3872,
       "month": "February 2024",
       "year": "2024"
@@ -4001,8 +4001,8 @@
     {
       "date_bin_start": "2024-03-01",
       "nutrient": "zinc",
-      "nut_supply": 8.2529,
-      "nut_rdi": 55221.9517,
+      "nut_supply": 8.2523,
+      "nut_rdi": 55217.6483,
       "n_boats": 3872,
       "month": "March 2024",
       "year": "2024"
@@ -4010,8 +4010,8 @@
     {
       "date_bin_start": "2024-03-01",
       "nutrient": "protein",
-      "nut_supply": 163415.909,
-      "nut_rdi": 116476.0577,
+      "nut_supply": 163415.5663,
+      "nut_rdi": 116475.8135,
       "n_boats": 3872,
       "month": "March 2024",
       "year": "2024"
@@ -4019,8 +4019,8 @@
     {
       "date_bin_start": "2024-03-01",
       "nutrient": "omega3",
-      "nut_supply": 2386.2856,
-      "nut_rdi": 26620.9164,
+      "nut_supply": 2384.2342,
+      "nut_rdi": 26598.0309,
       "n_boats": 3872,
       "month": "March 2024",
       "year": "2024"
@@ -4028,8 +4028,8 @@
     {
       "date_bin_start": "2024-03-01",
       "nutrient": "calcium",
-      "nut_supply": 1156.8093,
-      "nut_rdi": 37928.1731,
+      "nut_supply": 1157.3856,
+      "nut_rdi": 37947.068,
       "n_boats": 3872,
       "month": "March 2024",
       "year": "2024"
@@ -4037,8 +4037,8 @@
     {
       "date_bin_start": "2024-03-01",
       "nutrient": "iron",
-      "nut_supply": 10.4618,
-      "nut_rdi": 11666.9604,
+      "nut_supply": 10.47,
+      "nut_rdi": 11676.1366,
       "n_boats": 3872,
       "month": "March 2024",
       "year": "2024"
@@ -4047,7 +4047,7 @@
       "date_bin_start": "2024-03-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.3574,
-      "nut_rdi": 23432.9159,
+      "nut_rdi": 23438.0745,
       "n_boats": 3872,
       "month": "March 2024",
       "year": "2024"
@@ -4055,8 +4055,8 @@
     {
       "date_bin_start": "2024-04-01",
       "nutrient": "zinc",
-      "nut_supply": 6.644,
-      "nut_rdi": 44456.2653,
+      "nut_supply": 6.6439,
+      "nut_rdi": 44455.3829,
       "n_boats": 3872,
       "month": "April 2024",
       "year": "2024"
@@ -4064,8 +4064,8 @@
     {
       "date_bin_start": "2024-04-01",
       "nutrient": "protein",
-      "nut_supply": 125787.9493,
-      "nut_rdi": 89656.4144,
+      "nut_supply": 125785.6579,
+      "nut_rdi": 89654.7811,
       "n_boats": 3872,
       "month": "April 2024",
       "year": "2024"
@@ -4073,8 +4073,8 @@
     {
       "date_bin_start": "2024-04-01",
       "nutrient": "omega3",
-      "nut_supply": 2268.9434,
-      "nut_rdi": 25311.8707,
+      "nut_supply": 2268.8803,
+      "nut_rdi": 25311.1667,
       "n_boats": 3872,
       "month": "April 2024",
       "year": "2024"
@@ -4082,8 +4082,8 @@
     {
       "date_bin_start": "2024-04-01",
       "nutrient": "calcium",
-      "nut_supply": 853.4035,
-      "nut_rdi": 27980.4413,
+      "nut_supply": 853.3867,
+      "nut_rdi": 27979.8928,
       "n_boats": 3872,
       "month": "April 2024",
       "year": "2024"
@@ -4091,8 +4091,8 @@
     {
       "date_bin_start": "2024-04-01",
       "nutrient": "iron",
-      "nut_supply": 6.9536,
-      "nut_rdi": 7754.6871,
+      "nut_supply": 6.9535,
+      "nut_rdi": 7754.5407,
       "n_boats": 3872,
       "month": "April 2024",
       "year": "2024"
@@ -4101,7 +4101,7 @@
       "date_bin_start": "2024-04-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.2458,
-      "nut_rdi": 16118.0497,
+      "nut_rdi": 16117.8838,
       "n_boats": 3872,
       "month": "April 2024",
       "year": "2024"
@@ -4110,7 +4110,7 @@
       "date_bin_start": "2024-05-01",
       "nutrient": "zinc",
       "nut_supply": 4.5901,
-      "nut_rdi": 30713.5778,
+      "nut_rdi": 30713.1871,
       "n_boats": 3872,
       "month": "May 2024",
       "year": "2024"
@@ -4118,8 +4118,8 @@
     {
       "date_bin_start": "2024-05-01",
       "nutrient": "protein",
-      "nut_supply": 93767.3001,
-      "nut_rdi": 66833.4284,
+      "nut_supply": 93766.2218,
+      "nut_rdi": 66832.6599,
       "n_boats": 3872,
       "month": "May 2024",
       "year": "2024"
@@ -4127,8 +4127,8 @@
     {
       "date_bin_start": "2024-05-01",
       "nutrient": "omega3",
-      "nut_supply": 1448.8537,
-      "nut_rdi": 16163.1162,
+      "nut_supply": 1448.8285,
+      "nut_rdi": 16162.8356,
       "n_boats": 3872,
       "month": "May 2024",
       "year": "2024"
@@ -4136,8 +4136,8 @@
     {
       "date_bin_start": "2024-05-01",
       "nutrient": "calcium",
-      "nut_supply": 447.9193,
-      "nut_rdi": 14685.8773,
+      "nut_supply": 447.9086,
+      "nut_rdi": 14685.5288,
       "n_boats": 3872,
       "month": "May 2024",
       "year": "2024"
@@ -4145,8 +4145,8 @@
     {
       "date_bin_start": "2024-05-01",
       "nutrient": "iron",
-      "nut_supply": 4.546,
-      "nut_rdi": 5069.6803,
+      "nut_supply": 4.5459,
+      "nut_rdi": 5069.5788,
       "n_boats": 3872,
       "month": "May 2024",
       "year": "2024"
@@ -4155,7 +4155,7 @@
       "date_bin_start": "2024-05-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.1874,
-      "nut_rdi": 12287.004,
+      "nut_rdi": 12286.908,
       "n_boats": 3872,
       "month": "May 2024",
       "year": "2024"
@@ -4163,8 +4163,8 @@
     {
       "date_bin_start": "2024-06-01",
       "nutrient": "zinc",
-      "nut_supply": 5.4817,
-      "nut_rdi": 36679.0153,
+      "nut_supply": 5.4816,
+      "nut_rdi": 36678.8131,
       "n_boats": 3872,
       "month": "June 2024",
       "year": "2024"
@@ -4172,8 +4172,8 @@
     {
       "date_bin_start": "2024-06-01",
       "nutrient": "protein",
-      "nut_supply": 165259.6917,
-      "nut_rdi": 117790.2293,
+      "nut_supply": 165259.0887,
+      "nut_rdi": 117789.7995,
       "n_boats": 3872,
       "month": "June 2024",
       "year": "2024"
@@ -4181,8 +4181,8 @@
     {
       "date_bin_start": "2024-06-01",
       "nutrient": "omega3",
-      "nut_supply": 2410.3575,
-      "nut_rdi": 26889.4577,
+      "nut_supply": 2410.3469,
+      "nut_rdi": 26889.3388,
       "n_boats": 3872,
       "month": "June 2024",
       "year": "2024"
@@ -4190,8 +4190,8 @@
     {
       "date_bin_start": "2024-06-01",
       "nutrient": "calcium",
-      "nut_supply": 500.9805,
-      "nut_rdi": 16425.5893,
+      "nut_supply": 500.9756,
+      "nut_rdi": 16425.4293,
       "n_boats": 3872,
       "month": "June 2024",
       "year": "2024"
@@ -4199,8 +4199,8 @@
     {
       "date_bin_start": "2024-06-01",
       "nutrient": "iron",
-      "nut_supply": 13.9271,
-      "nut_rdi": 15531.458,
+      "nut_supply": 13.927,
+      "nut_rdi": 15531.4074,
       "n_boats": 3872,
       "month": "June 2024",
       "year": "2024"
@@ -4209,7 +4209,7 @@
       "date_bin_start": "2024-06-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.249,
-      "nut_rdi": 16331.0025,
+      "nut_rdi": 16330.9289,
       "n_boats": 3872,
       "month": "June 2024",
       "year": "2024"
@@ -4217,8 +4217,8 @@
     {
       "date_bin_start": "2024-07-01",
       "nutrient": "zinc",
-      "nut_supply": 5.6022,
-      "nut_rdi": 37485.7352,
+      "nut_supply": 5.6021,
+      "nut_rdi": 37485.0624,
       "n_boats": 3872,
       "month": "July 2024",
       "year": "2024"
@@ -4226,8 +4226,8 @@
     {
       "date_bin_start": "2024-07-01",
       "nutrient": "protein",
-      "nut_supply": 123904.512,
-      "nut_rdi": 88313.9786,
+      "nut_supply": 123902.7725,
+      "nut_rdi": 88312.7388,
       "n_boats": 3872,
       "month": "July 2024",
       "year": "2024"
@@ -4235,8 +4235,8 @@
     {
       "date_bin_start": "2024-07-01",
       "nutrient": "omega3",
-      "nut_supply": 1793.0261,
-      "nut_rdi": 20002.6344,
+      "nut_supply": 1792.9823,
+      "nut_rdi": 20002.1451,
       "n_boats": 3872,
       "month": "July 2024",
       "year": "2024"
@@ -4244,8 +4244,8 @@
     {
       "date_bin_start": "2024-07-01",
       "nutrient": "calcium",
-      "nut_supply": 693.2141,
-      "nut_rdi": 22728.3296,
+      "nut_supply": 693.2002,
+      "nut_rdi": 22727.8758,
       "n_boats": 3872,
       "month": "July 2024",
       "year": "2024"
@@ -4253,8 +4253,8 @@
     {
       "date_bin_start": "2024-07-01",
       "nutrient": "iron",
-      "nut_supply": 8.9195,
-      "nut_rdi": 9946.9923,
+      "nut_supply": 8.9193,
+      "nut_rdi": 9946.8543,
       "n_boats": 3872,
       "month": "July 2024",
       "year": "2024"
@@ -4263,7 +4263,7 @@
       "date_bin_start": "2024-07-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.2201,
-      "nut_rdi": 14435.8285,
+      "nut_rdi": 14435.69,
       "n_boats": 3872,
       "month": "July 2024",
       "year": "2024"
@@ -4271,8 +4271,8 @@
     {
       "date_bin_start": "2024-08-01",
       "nutrient": "zinc",
-      "nut_supply": 7.0222,
-      "nut_rdi": 46986.6823,
+      "nut_supply": 7.0221,
+      "nut_rdi": 46986.5337,
       "n_boats": 3872,
       "month": "August 2024",
       "year": "2024"
@@ -4280,8 +4280,8 @@
     {
       "date_bin_start": "2024-08-01",
       "nutrient": "protein",
-      "nut_supply": 161265.4135,
-      "nut_rdi": 114943.2741,
+      "nut_supply": 161265.0043,
+      "nut_rdi": 114942.9824,
       "n_boats": 3872,
       "month": "August 2024",
       "year": "2024"
@@ -4289,8 +4289,8 @@
     {
       "date_bin_start": "2024-08-01",
       "nutrient": "omega3",
-      "nut_supply": 2023.1314,
-      "nut_rdi": 22569.6421,
+      "nut_supply": 2023.1251,
+      "nut_rdi": 22569.5716,
       "n_boats": 3872,
       "month": "August 2024",
       "year": "2024"
@@ -4298,8 +4298,8 @@
     {
       "date_bin_start": "2024-08-01",
       "nutrient": "calcium",
-      "nut_supply": 936.9043,
-      "nut_rdi": 30718.1729,
+      "nut_supply": 936.8992,
+      "nut_rdi": 30718.0058,
       "n_boats": 3872,
       "month": "August 2024",
       "year": "2024"
@@ -4307,8 +4307,8 @@
     {
       "date_bin_start": "2024-08-01",
       "nutrient": "iron",
-      "nut_supply": 11.714,
-      "nut_rdi": 13063.4547,
+      "nut_supply": 11.7139,
+      "nut_rdi": 13063.3984,
       "n_boats": 3872,
       "month": "August 2024",
       "year": "2024"
@@ -4317,7 +4317,7 @@
       "date_bin_start": "2024-08-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.2748,
-      "nut_rdi": 18017.4362,
+      "nut_rdi": 18017.3958,
       "n_boats": 3872,
       "month": "August 2024",
       "year": "2024"
@@ -4325,8 +4325,8 @@
     {
       "date_bin_start": "2024-09-01",
       "nutrient": "zinc",
-      "nut_supply": 6.0313,
-      "nut_rdi": 40356.5727,
+      "nut_supply": 6.0312,
+      "nut_rdi": 40356.1468,
       "n_boats": 3872,
       "month": "September 2024",
       "year": "2024"
@@ -4334,8 +4334,8 @@
     {
       "date_bin_start": "2024-09-01",
       "nutrient": "protein",
-      "nut_supply": 118842.0239,
-      "nut_rdi": 84705.6478,
+      "nut_supply": 118840.8644,
+      "nut_rdi": 84704.8214,
       "n_boats": 3872,
       "month": "September 2024",
       "year": "2024"
@@ -4343,8 +4343,8 @@
     {
       "date_bin_start": "2024-09-01",
       "nutrient": "omega3",
-      "nut_supply": 1585.6962,
-      "nut_rdi": 17689.7034,
+      "nut_supply": 1585.6776,
+      "nut_rdi": 17689.4963,
       "n_boats": 3872,
       "month": "September 2024",
       "year": "2024"
@@ -4352,8 +4352,8 @@
     {
       "date_bin_start": "2024-09-01",
       "nutrient": "calcium",
-      "nut_supply": 1019.9116,
-      "nut_rdi": 33439.724,
+      "nut_supply": 1019.8943,
+      "nut_rdi": 33439.1578,
       "n_boats": 3872,
       "month": "September 2024",
       "year": "2024"
@@ -4361,8 +4361,8 @@
     {
       "date_bin_start": "2024-09-01",
       "nutrient": "iron",
-      "nut_supply": 8.962,
-      "nut_rdi": 9994.4026,
+      "nut_supply": 8.9618,
+      "nut_rdi": 9994.2188,
       "n_boats": 3872,
       "month": "September 2024",
       "year": "2024"
@@ -4371,7 +4371,7 @@
       "date_bin_start": "2024-09-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.2421,
-      "nut_rdi": 15873.9908,
+      "nut_rdi": 15873.9008,
       "n_boats": 3872,
       "month": "September 2024",
       "year": "2024"
@@ -4380,7 +4380,7 @@
       "date_bin_start": "2024-10-01",
       "nutrient": "zinc",
       "nut_supply": 4.3967,
-      "nut_rdi": 29419.3028,
+      "nut_rdi": 29418.8949,
       "n_boats": 3872,
       "month": "October 2024",
       "year": "2024"
@@ -4388,8 +4388,8 @@
     {
       "date_bin_start": "2024-10-01",
       "nutrient": "protein",
-      "nut_supply": 82255.5511,
-      "nut_rdi": 58628.333,
+      "nut_supply": 82254.5195,
+      "nut_rdi": 58627.5977,
       "n_boats": 3872,
       "month": "October 2024",
       "year": "2024"
@@ -4397,8 +4397,8 @@
     {
       "date_bin_start": "2024-10-01",
       "nutrient": "omega3",
-      "nut_supply": 1268.0636,
-      "nut_rdi": 14146.2597,
+      "nut_supply": 1268.046,
+      "nut_rdi": 14146.0632,
       "n_boats": 3872,
       "month": "October 2024",
       "year": "2024"
@@ -4406,8 +4406,8 @@
     {
       "date_bin_start": "2024-10-01",
       "nutrient": "calcium",
-      "nut_supply": 702.5712,
-      "nut_rdi": 23035.1229,
+      "nut_supply": 702.5579,
+      "nut_rdi": 23034.686,
       "n_boats": 3872,
       "month": "October 2024",
       "year": "2024"
@@ -4415,8 +4415,8 @@
     {
       "date_bin_start": "2024-10-01",
       "nutrient": "iron",
-      "nut_supply": 6.0766,
-      "nut_rdi": 6776.5952,
+      "nut_supply": 6.0764,
+      "nut_rdi": 6776.4379,
       "n_boats": 3872,
       "month": "October 2024",
       "year": "2024"
@@ -4425,7 +4425,7 @@
       "date_bin_start": "2024-10-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.1585,
-      "nut_rdi": 10391.2038,
+      "nut_rdi": 10391.1342,
       "n_boats": 3872,
       "month": "October 2024",
       "year": "2024"
@@ -4434,7 +4434,7 @@
       "date_bin_start": "2024-11-01",
       "nutrient": "zinc",
       "nut_supply": 9.4472,
-      "nut_rdi": 63213.396,
+      "nut_rdi": 63213.2877,
       "n_boats": 3872,
       "month": "November 2024",
       "year": "2024"
@@ -4442,8 +4442,8 @@
     {
       "date_bin_start": "2024-11-01",
       "nutrient": "protein",
-      "nut_supply": 158452.6398,
-      "nut_rdi": 112938.4461,
+      "nut_supply": 158452.3797,
+      "nut_rdi": 112938.2607,
       "n_boats": 3872,
       "month": "November 2024",
       "year": "2024"
@@ -4451,8 +4451,8 @@
     {
       "date_bin_start": "2024-11-01",
       "nutrient": "omega3",
-      "nut_supply": 3481.1993,
-      "nut_rdi": 38835.5501,
+      "nut_supply": 3481.194,
+      "nut_rdi": 38835.4912,
       "n_boats": 3872,
       "month": "November 2024",
       "year": "2024"
@@ -4460,8 +4460,8 @@
     {
       "date_bin_start": "2024-11-01",
       "nutrient": "calcium",
-      "nut_supply": 1537.2606,
-      "nut_rdi": 50401.9872,
+      "nut_supply": 1537.2581,
+      "nut_rdi": 50401.9037,
       "n_boats": 3872,
       "month": "November 2024",
       "year": "2024"
@@ -4469,8 +4469,8 @@
     {
       "date_bin_start": "2024-11-01",
       "nutrient": "iron",
-      "nut_supply": 10.2603,
-      "nut_rdi": 11442.2511,
+      "nut_supply": 10.2602,
+      "nut_rdi": 11442.2197,
       "n_boats": 3872,
       "month": "November 2024",
       "year": "2024"
@@ -4479,7 +4479,7 @@
       "date_bin_start": "2024-11-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.256,
-      "nut_rdi": 16789.2133,
+      "nut_rdi": 16789.1932,
       "n_boats": 3872,
       "month": "November 2024",
       "year": "2024"
@@ -4488,7 +4488,7 @@
       "date_bin_start": "2024-12-01",
       "nutrient": "zinc",
       "nut_supply": 5.2022,
-      "nut_rdi": 34809.0527,
+      "nut_rdi": 34809.2469,
       "n_boats": 3872,
       "month": "December 2024",
       "year": "2024"
@@ -4496,8 +4496,8 @@
     {
       "date_bin_start": "2024-12-01",
       "nutrient": "protein",
-      "nut_supply": 125745.9515,
-      "nut_rdi": 89626.48,
+      "nut_supply": 125746.456,
+      "nut_rdi": 89626.8396,
       "n_boats": 3872,
       "month": "December 2024",
       "year": "2024"
@@ -4505,8 +4505,8 @@
     {
       "date_bin_start": "2024-12-01",
       "nutrient": "omega3",
-      "nut_supply": 2001.01,
-      "nut_rdi": 22322.8603,
+      "nut_supply": 2001.0233,
+      "nut_rdi": 22323.0077,
       "n_boats": 3872,
       "month": "December 2024",
       "year": "2024"
@@ -4514,8 +4514,8 @@
     {
       "date_bin_start": "2024-12-01",
       "nutrient": "calcium",
-      "nut_supply": 537.2516,
-      "nut_rdi": 17614.8078,
+      "nut_supply": 537.2569,
+      "nut_rdi": 17614.9814,
       "n_boats": 3872,
       "month": "December 2024",
       "year": "2024"
@@ -4523,8 +4523,8 @@
     {
       "date_bin_start": "2024-12-01",
       "nutrient": "iron",
-      "nut_supply": 8.1394,
-      "nut_rdi": 9077.1095,
+      "nut_supply": 8.1395,
+      "nut_rdi": 9077.1578,
       "n_boats": 3872,
       "month": "December 2024",
       "year": "2024"
@@ -4533,7 +4533,7 @@
       "date_bin_start": "2024-12-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.2191,
-      "nut_rdi": 14365.463,
+      "nut_rdi": 14365.4926,
       "n_boats": 3872,
       "month": "December 2024",
       "year": "2024"
@@ -4541,8 +4541,8 @@
     {
       "date_bin_start": "2025-01-01",
       "nutrient": "zinc",
-      "nut_supply": 8.7007,
-      "nut_rdi": 58217.8838,
+      "nut_supply": 8.6995,
+      "nut_rdi": 58210.371,
       "n_boats": 3872,
       "month": "January 2025",
       "year": "2025"
@@ -4550,8 +4550,8 @@
     {
       "date_bin_start": "2025-01-01",
       "nutrient": "protein",
-      "nut_supply": 187470.7055,
-      "nut_rdi": 133621.3154,
+      "nut_supply": 187467.4342,
+      "nut_rdi": 133618.9837,
       "n_boats": 3872,
       "month": "January 2025",
       "year": "2025"
@@ -4559,8 +4559,8 @@
     {
       "date_bin_start": "2025-01-01",
       "nutrient": "omega3",
-      "nut_supply": 2738.6234,
-      "nut_rdi": 30551.5242,
+      "nut_supply": 2736.0979,
+      "nut_rdi": 30523.3511,
       "n_boats": 3872,
       "month": "January 2025",
       "year": "2025"
@@ -4568,8 +4568,8 @@
     {
       "date_bin_start": "2025-01-01",
       "nutrient": "calcium",
-      "nut_supply": 1158.8758,
-      "nut_rdi": 37995.9294,
+      "nut_supply": 1159.2991,
+      "nut_rdi": 38009.8058,
       "n_boats": 3872,
       "month": "January 2025",
       "year": "2025"
@@ -4577,8 +4577,8 @@
     {
       "date_bin_start": "2025-01-01",
       "nutrient": "iron",
-      "nut_supply": 12.5283,
-      "nut_rdi": 13971.5654,
+      "nut_supply": 12.5355,
+      "nut_rdi": 13979.5909,
       "n_boats": 3872,
       "month": "January 2025",
       "year": "2025"
@@ -4586,8 +4586,8 @@
     {
       "date_bin_start": "2025-01-01",
       "nutrient": "vitaminA",
-      "nut_supply": 0.3767,
-      "nut_rdi": 24701.2527,
+      "nut_supply": 0.3768,
+      "nut_rdi": 24709.6398,
       "n_boats": 3872,
       "month": "January 2025",
       "year": "2025"
@@ -4595,8 +4595,8 @@
     {
       "date_bin_start": "2025-02-01",
       "nutrient": "zinc",
-      "nut_supply": 6.5893,
-      "nut_rdi": 44090.0503,
+      "nut_supply": 6.5885,
+      "nut_rdi": 44084.9681,
       "n_boats": 3872,
       "month": "February 2025",
       "year": "2025"
@@ -4604,8 +4604,8 @@
     {
       "date_bin_start": "2025-02-01",
       "nutrient": "protein",
-      "nut_supply": 120659.0897,
-      "nut_rdi": 86000.7767,
+      "nut_supply": 120656.2352,
+      "nut_rdi": 85998.7421,
       "n_boats": 3872,
       "month": "February 2025",
       "year": "2025"
@@ -4613,8 +4613,8 @@
     {
       "date_bin_start": "2025-02-01",
       "nutrient": "omega3",
-      "nut_supply": 1753.0046,
-      "nut_rdi": 19556.1626,
+      "nut_supply": 1751.029,
+      "nut_rdi": 19534.123,
       "n_boats": 3872,
       "month": "February 2025",
       "year": "2025"
@@ -4622,8 +4622,8 @@
     {
       "date_bin_start": "2025-02-01",
       "nutrient": "calcium",
-      "nut_supply": 1073.6565,
-      "nut_rdi": 35201.8531,
+      "nut_supply": 1074.1151,
+      "nut_rdi": 35216.888,
       "n_boats": 3872,
       "month": "February 2025",
       "year": "2025"
@@ -4631,8 +4631,8 @@
     {
       "date_bin_start": "2025-02-01",
       "nutrient": "iron",
-      "nut_supply": 8.2567,
-      "nut_rdi": 9207.9008,
+      "nut_supply": 8.2635,
+      "nut_rdi": 9215.4122,
       "n_boats": 3872,
       "month": "February 2025",
       "year": "2025"
@@ -4640,8 +4640,8 @@
     {
       "date_bin_start": "2025-02-01",
       "nutrient": "vitaminA",
-      "nut_supply": 0.2468,
-      "nut_rdi": 16183.041,
+      "nut_supply": 0.2469,
+      "nut_rdi": 16188.1674,
       "n_boats": 3872,
       "month": "February 2025",
       "year": "2025"
@@ -4649,8 +4649,8 @@
     {
       "date_bin_start": "2025-03-01",
       "nutrient": "zinc",
-      "nut_supply": 6.5956,
-      "nut_rdi": 44132.6523,
+      "nut_supply": 6.5953,
+      "nut_rdi": 44130.1734,
       "n_boats": 3872,
       "month": "March 2025",
       "year": "2025"
@@ -4658,8 +4658,8 @@
     {
       "date_bin_start": "2025-03-01",
       "nutrient": "protein",
-      "nut_supply": 130417.5358,
-      "nut_rdi": 92956.1909,
+      "nut_supply": 130410.7909,
+      "nut_rdi": 92951.3834,
       "n_boats": 3872,
       "month": "March 2025",
       "year": "2025"
@@ -4667,8 +4667,8 @@
     {
       "date_bin_start": "2025-03-01",
       "nutrient": "omega3",
-      "nut_supply": 1944.529,
-      "nut_rdi": 21692.7694,
+      "nut_supply": 1944.4462,
+      "nut_rdi": 21691.846,
       "n_boats": 3872,
       "month": "March 2025",
       "year": "2025"
@@ -4676,8 +4676,8 @@
     {
       "date_bin_start": "2025-03-01",
       "nutrient": "calcium",
-      "nut_supply": 853.9077,
-      "nut_rdi": 27996.9748,
+      "nut_supply": 853.8567,
+      "nut_rdi": 27995.3023,
       "n_boats": 3872,
       "month": "March 2025",
       "year": "2025"
@@ -4685,8 +4685,8 @@
     {
       "date_bin_start": "2025-03-01",
       "nutrient": "iron",
-      "nut_supply": 7.6532,
-      "nut_rdi": 8534.826,
+      "nut_supply": 7.6529,
+      "nut_rdi": 8534.4801,
       "n_boats": 3872,
       "month": "March 2025",
       "year": "2025"
@@ -4695,7 +4695,7 @@
       "date_bin_start": "2025-03-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.271,
-      "nut_rdi": 17769.9872,
+      "nut_rdi": 17769.0107,
       "n_boats": 3872,
       "month": "March 2025",
       "year": "2025"
@@ -4703,8 +4703,8 @@
     {
       "date_bin_start": "2025-04-01",
       "nutrient": "zinc",
-      "nut_supply": 5.1325,
-      "nut_rdi": 34342.3137,
+      "nut_supply": 5.1324,
+      "nut_rdi": 34341.739,
       "n_boats": 3872,
       "month": "April 2025",
       "year": "2025"
@@ -4712,8 +4712,8 @@
     {
       "date_bin_start": "2025-04-01",
       "nutrient": "protein",
-      "nut_supply": 101981.9724,
-      "nut_rdi": 72688.5049,
+      "nut_supply": 101980.4552,
+      "nut_rdi": 72687.4235,
       "n_boats": 3872,
       "month": "April 2025",
       "year": "2025"
@@ -4721,8 +4721,8 @@
     {
       "date_bin_start": "2025-04-01",
       "nutrient": "omega3",
-      "nut_supply": 1550.0557,
-      "nut_rdi": 17292.1051,
+      "nut_supply": 1550.0314,
+      "nut_rdi": 17291.8344,
       "n_boats": 3872,
       "month": "April 2025",
       "year": "2025"
@@ -4730,8 +4730,8 @@
     {
       "date_bin_start": "2025-04-01",
       "nutrient": "calcium",
-      "nut_supply": 715.0918,
-      "nut_rdi": 23445.6319,
+      "nut_supply": 715.0817,
+      "nut_rdi": 23445.3006,
       "n_boats": 3872,
       "month": "April 2025",
       "year": "2025"
@@ -4739,8 +4739,8 @@
     {
       "date_bin_start": "2025-04-01",
       "nutrient": "iron",
-      "nut_supply": 6.2751,
-      "nut_rdi": 6998.0002,
+      "nut_supply": 6.275,
+      "nut_rdi": 6997.8733,
       "n_boats": 3872,
       "month": "April 2025",
       "year": "2025"
@@ -4749,7 +4749,7 @@
       "date_bin_start": "2025-04-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.2224,
-      "nut_rdi": 14586.0702,
+      "nut_rdi": 14585.8781,
       "n_boats": 3872,
       "month": "April 2025",
       "year": "2025"
@@ -4757,8 +4757,8 @@
     {
       "date_bin_start": "2025-05-01",
       "nutrient": "zinc",
-      "nut_supply": 5.2888,
-      "nut_rdi": 35388.2084,
+      "nut_supply": 5.2887,
+      "nut_rdi": 35387.8687,
       "n_boats": 3872,
       "month": "May 2025",
       "year": "2025"
@@ -4766,8 +4766,8 @@
     {
       "date_bin_start": "2025-05-01",
       "nutrient": "protein",
-      "nut_supply": 100199.259,
-      "nut_rdi": 71417.861,
+      "nut_supply": 100198.2857,
+      "nut_rdi": 71417.1673,
       "n_boats": 3872,
       "month": "May 2025",
       "year": "2025"
@@ -4775,8 +4775,8 @@
     {
       "date_bin_start": "2025-05-01",
       "nutrient": "omega3",
-      "nut_supply": 1644.5121,
-      "nut_rdi": 18345.8422,
+      "nut_supply": 1644.4967,
+      "nut_rdi": 18345.6696,
       "n_boats": 3872,
       "month": "May 2025",
       "year": "2025"
@@ -4784,8 +4784,8 @@
     {
       "date_bin_start": "2025-05-01",
       "nutrient": "calcium",
-      "nut_supply": 669.5436,
-      "nut_rdi": 21952.2477,
+      "nut_supply": 669.5375,
+      "nut_rdi": 21952.0495,
       "n_boats": 3872,
       "month": "May 2025",
       "year": "2025"
@@ -4793,8 +4793,8 @@
     {
       "date_bin_start": "2025-05-01",
       "nutrient": "iron",
-      "nut_supply": 5.4876,
-      "nut_rdi": 6119.7344,
+      "nut_supply": 5.4875,
+      "nut_rdi": 6119.6668,
       "n_boats": 3872,
       "month": "May 2025",
       "year": "2025"
@@ -4803,7 +4803,7 @@
       "date_bin_start": "2025-05-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.1843,
-      "nut_rdi": 12082.6647,
+      "nut_rdi": 12082.5806,
       "n_boats": 3872,
       "month": "May 2025",
       "year": "2025"
@@ -4811,8 +4811,8 @@
     {
       "date_bin_start": "2025-06-01",
       "nutrient": "zinc",
-      "nut_supply": 5.0714,
-      "nut_rdi": 33934.0049,
+      "nut_supply": 5.0713,
+      "nut_rdi": 33933.0215,
       "n_boats": 3872,
       "month": "June 2025",
       "year": "2025"
@@ -4820,8 +4820,8 @@
     {
       "date_bin_start": "2025-06-01",
       "nutrient": "protein",
-      "nut_supply": 104758.7398,
-      "nut_rdi": 74667.6691,
+      "nut_supply": 104755.9201,
+      "nut_rdi": 74665.6593,
       "n_boats": 3872,
       "month": "June 2025",
       "year": "2025"
@@ -4829,8 +4829,8 @@
     {
       "date_bin_start": "2025-06-01",
       "nutrient": "omega3",
-      "nut_supply": 1256.0335,
-      "nut_rdi": 14012.0535,
+      "nut_supply": 1255.9892,
+      "nut_rdi": 14011.56,
       "n_boats": 3872,
       "month": "June 2025",
       "year": "2025"
@@ -4838,8 +4838,8 @@
     {
       "date_bin_start": "2025-06-01",
       "nutrient": "calcium",
-      "nut_supply": 525.4477,
-      "nut_rdi": 17227.7932,
+      "nut_supply": 525.4354,
+      "nut_rdi": 17227.3916,
       "n_boats": 3872,
       "month": "June 2025",
       "year": "2025"
@@ -4847,8 +4847,8 @@
     {
       "date_bin_start": "2025-06-01",
       "nutrient": "iron",
-      "nut_supply": 5.1705,
-      "nut_rdi": 5766.1492,
+      "nut_supply": 5.1704,
+      "nut_rdi": 5766.0074,
       "n_boats": 3872,
       "month": "June 2025",
       "year": "2025"
@@ -4857,7 +4857,7 @@
       "date_bin_start": "2025-06-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.2153,
-      "nut_rdi": 14121.2671,
+      "nut_rdi": 14120.9855,
       "n_boats": 3872,
       "month": "June 2025",
       "year": "2025"
@@ -4865,8 +4865,8 @@
     {
       "date_bin_start": "2025-07-01",
       "nutrient": "zinc",
-      "nut_supply": 5.8724,
-      "nut_rdi": 39293.6899,
+      "nut_supply": 5.8723,
+      "nut_rdi": 39292.6707,
       "n_boats": 3872,
       "month": "July 2025",
       "year": "2025"
@@ -4874,8 +4874,8 @@
     {
       "date_bin_start": "2025-07-01",
       "nutrient": "protein",
-      "nut_supply": 117525.1923,
-      "nut_rdi": 83767.0651,
+      "nut_supply": 117522.9193,
+      "nut_rdi": 83765.445,
       "n_boats": 3872,
       "month": "July 2025",
       "year": "2025"
@@ -4883,8 +4883,8 @@
     {
       "date_bin_start": "2025-07-01",
       "nutrient": "omega3",
-      "nut_supply": 1516.2604,
-      "nut_rdi": 16915.0924,
+      "nut_supply": 1516.2241,
+      "nut_rdi": 16914.6874,
       "n_boats": 3872,
       "month": "July 2025",
       "year": "2025"
@@ -4892,8 +4892,8 @@
     {
       "date_bin_start": "2025-07-01",
       "nutrient": "calcium",
-      "nut_supply": 709.9033,
-      "nut_rdi": 23275.5181,
+      "nut_supply": 709.8778,
+      "nut_rdi": 23274.6813,
       "n_boats": 3872,
       "month": "July 2025",
       "year": "2025"
@@ -4901,8 +4901,8 @@
     {
       "date_bin_start": "2025-07-01",
       "nutrient": "iron",
-      "nut_supply": 6.7733,
-      "nut_rdi": 7553.5993,
+      "nut_supply": 6.773,
+      "nut_rdi": 7553.2326,
       "n_boats": 3872,
       "month": "July 2025",
       "year": "2025"
@@ -4911,7 +4911,7 @@
       "date_bin_start": "2025-07-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.2323,
-      "nut_rdi": 15232.8173,
+      "nut_rdi": 15232.6613,
       "n_boats": 3872,
       "month": "July 2025",
       "year": "2025"
@@ -4919,8 +4919,8 @@
     {
       "date_bin_start": "2025-08-01",
       "nutrient": "zinc",
-      "nut_supply": 5.0207,
-      "nut_rdi": 33594.496,
+      "nut_supply": 5.0206,
+      "nut_rdi": 33593.7894,
       "n_boats": 3872,
       "month": "August 2025",
       "year": "2025"
@@ -4928,8 +4928,8 @@
     {
       "date_bin_start": "2025-08-01",
       "nutrient": "protein",
-      "nut_supply": 115387.1691,
-      "nut_rdi": 82243.1711,
+      "nut_supply": 115385.2751,
+      "nut_rdi": 82241.8212,
       "n_boats": 3872,
       "month": "August 2025",
       "year": "2025"
@@ -4937,8 +4937,8 @@
     {
       "date_bin_start": "2025-08-01",
       "nutrient": "omega3",
-      "nut_supply": 1732.6596,
-      "nut_rdi": 19329.1975,
+      "nut_supply": 1732.6288,
+      "nut_rdi": 19328.8537,
       "n_boats": 3872,
       "month": "August 2025",
       "year": "2025"
@@ -4946,8 +4946,8 @@
     {
       "date_bin_start": "2025-08-01",
       "nutrient": "calcium",
-      "nut_supply": 739.1992,
-      "nut_rdi": 24236.0384,
+      "nut_supply": 739.17,
+      "nut_rdi": 24235.0824,
       "n_boats": 3872,
       "month": "August 2025",
       "year": "2025"
@@ -4955,8 +4955,8 @@
     {
       "date_bin_start": "2025-08-01",
       "nutrient": "iron",
-      "nut_supply": 9.5691,
-      "nut_rdi": 10671.4383,
+      "nut_supply": 9.5688,
+      "nut_rdi": 10671.1286,
       "n_boats": 3872,
       "month": "August 2025",
       "year": "2025"
@@ -4965,7 +4965,7 @@
       "date_bin_start": "2025-08-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.1786,
-      "nut_rdi": 11713.6167,
+      "nut_rdi": 11713.5117,
       "n_boats": 3872,
       "month": "August 2025",
       "year": "2025"
@@ -4973,8 +4973,8 @@
     {
       "date_bin_start": "2025-09-01",
       "nutrient": "zinc",
-      "nut_supply": 7.3876,
-      "nut_rdi": 49431.6638,
+      "nut_supply": 7.3875,
+      "nut_rdi": 49431.4086,
       "n_boats": 3872,
       "month": "September 2025",
       "year": "2025"
@@ -4982,8 +4982,8 @@
     {
       "date_bin_start": "2025-09-01",
       "nutrient": "protein",
-      "nut_supply": 176994.6589,
-      "nut_rdi": 126154.4255,
+      "nut_supply": 176994.0186,
+      "nut_rdi": 126153.9691,
       "n_boats": 3872,
       "month": "September 2025",
       "year": "2025"
@@ -4991,8 +4991,8 @@
     {
       "date_bin_start": "2025-09-01",
       "nutrient": "omega3",
-      "nut_supply": 2538.0942,
-      "nut_rdi": 28314.4616,
+      "nut_supply": 2538.0838,
+      "nut_rdi": 28314.3458,
       "n_boats": 3872,
       "month": "September 2025",
       "year": "2025"
@@ -5000,8 +5000,8 @@
     {
       "date_bin_start": "2025-09-01",
       "nutrient": "calcium",
-      "nut_supply": 905.1228,
-      "nut_rdi": 29676.1582,
+      "nut_supply": 905.1137,
+      "nut_rdi": 29675.8599,
       "n_boats": 3872,
       "month": "September 2025",
       "year": "2025"
@@ -5009,8 +5009,8 @@
     {
       "date_bin_start": "2025-09-01",
       "nutrient": "iron",
-      "nut_supply": 13.6208,
-      "nut_rdi": 15189.9587,
+      "nut_supply": 13.6207,
+      "nut_rdi": 15189.8541,
       "n_boats": 3872,
       "month": "September 2025",
       "year": "2025"
@@ -5019,7 +5019,7 @@
       "date_bin_start": "2025-09-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.2817,
-      "nut_rdi": 18474.7837,
+      "nut_rdi": 18474.745,
       "n_boats": 3872,
       "month": "September 2025",
       "year": "2025"
@@ -5027,8 +5027,8 @@
     {
       "date_bin_start": "2025-10-01",
       "nutrient": "zinc",
-      "nut_supply": 4.6539,
-      "nut_rdi": 31140.4163,
+      "nut_supply": 4.6538,
+      "nut_rdi": 31139.4064,
       "n_boats": 3872,
       "month": "October 2025",
       "year": "2025"
@@ -5036,8 +5036,8 @@
     {
       "date_bin_start": "2025-10-01",
       "nutrient": "protein",
-      "nut_supply": 89779.7808,
-      "nut_rdi": 63991.2907,
+      "nut_supply": 89777.1371,
+      "nut_rdi": 63989.4064,
       "n_boats": 3872,
       "month": "October 2025",
       "year": "2025"
@@ -5045,8 +5045,8 @@
     {
       "date_bin_start": "2025-10-01",
       "nutrient": "omega3",
-      "nut_supply": 1268.9707,
-      "nut_rdi": 14156.3784,
+      "nut_supply": 1268.9278,
+      "nut_rdi": 14155.9004,
       "n_boats": 3872,
       "month": "October 2025",
       "year": "2025"
@@ -5054,8 +5054,8 @@
     {
       "date_bin_start": "2025-10-01",
       "nutrient": "calcium",
-      "nut_supply": 668.5063,
-      "nut_rdi": 21918.2383,
+      "nut_supply": 668.4693,
+      "nut_rdi": 21917.0253,
       "n_boats": 3872,
       "month": "October 2025",
       "year": "2025"
@@ -5063,8 +5063,8 @@
     {
       "date_bin_start": "2025-10-01",
       "nutrient": "iron",
-      "nut_supply": 5.9711,
-      "nut_rdi": 6658.9888,
+      "nut_supply": 5.9707,
+      "nut_rdi": 6658.5787,
       "n_boats": 3872,
       "month": "October 2025",
       "year": "2025"
@@ -5073,7 +5073,7 @@
       "date_bin_start": "2025-10-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.1885,
-      "nut_rdi": 12358.4887,
+      "nut_rdi": 12358.2999,
       "n_boats": 3872,
       "month": "October 2025",
       "year": "2025"
@@ -5081,8 +5081,8 @@
     {
       "date_bin_start": "2025-11-01",
       "nutrient": "zinc",
-      "nut_supply": 5.2664,
-      "nut_rdi": 35238.5124,
+      "nut_supply": 5.2663,
+      "nut_rdi": 35238.1048,
       "n_boats": 3872,
       "month": "November 2025",
       "year": "2025"
@@ -5090,8 +5090,8 @@
     {
       "date_bin_start": "2025-11-01",
       "nutrient": "protein",
-      "nut_supply": 109560.1663,
-      "nut_rdi": 78089.9261,
+      "nut_supply": 109559.0848,
+      "nut_rdi": 78089.1553,
       "n_boats": 3872,
       "month": "November 2025",
       "year": "2025"
@@ -5099,8 +5099,8 @@
     {
       "date_bin_start": "2025-11-01",
       "nutrient": "omega3",
-      "nut_supply": 1991.0403,
-      "nut_rdi": 22211.6402,
+      "nut_supply": 1991.0212,
+      "nut_rdi": 22211.4266,
       "n_boats": 3872,
       "month": "November 2025",
       "year": "2025"
@@ -5108,8 +5108,8 @@
     {
       "date_bin_start": "2025-11-01",
       "nutrient": "calcium",
-      "nut_supply": 637.8986,
-      "nut_rdi": 20914.7073,
+      "nut_supply": 637.8822,
+      "nut_rdi": 20914.169,
       "n_boats": 3872,
       "month": "November 2025",
       "year": "2025"
@@ -5117,8 +5117,8 @@
     {
       "date_bin_start": "2025-11-01",
       "nutrient": "iron",
-      "nut_supply": 7.1211,
-      "nut_rdi": 7941.4556,
+      "nut_supply": 7.1209,
+      "nut_rdi": 7941.284,
       "n_boats": 3872,
       "month": "November 2025",
       "year": "2025"
@@ -5127,7 +5127,7 @@
       "date_bin_start": "2025-11-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.2078,
-      "nut_rdi": 13625.0233,
+      "nut_rdi": 13624.9676,
       "n_boats": 3872,
       "month": "November 2025",
       "year": "2025"
@@ -5135,8 +5135,8 @@
     {
       "date_bin_start": "2025-12-01",
       "nutrient": "zinc",
-      "nut_supply": 6.6383,
-      "nut_rdi": 44418.4464,
+      "nut_supply": 6.6386,
+      "nut_rdi": 44419.8781,
       "n_boats": 3872,
       "month": "December 2025",
       "year": "2025"
@@ -5144,8 +5144,8 @@
     {
       "date_bin_start": "2025-12-01",
       "nutrient": "protein",
-      "nut_supply": 120773.8573,
-      "nut_rdi": 86082.5783,
+      "nut_supply": 120775.9222,
+      "nut_rdi": 86084.05,
       "n_boats": 3872,
       "month": "December 2025",
       "year": "2025"
@@ -5153,8 +5153,8 @@
     {
       "date_bin_start": "2025-12-01",
       "nutrient": "omega3",
-      "nut_supply": 2311.2405,
-      "nut_rdi": 25783.7284,
+      "nut_supply": 2310.9342,
+      "nut_rdi": 25780.3111,
       "n_boats": 3872,
       "month": "December 2025",
       "year": "2025"
@@ -5162,8 +5162,8 @@
     {
       "date_bin_start": "2025-12-01",
       "nutrient": "calcium",
-      "nut_supply": 938.025,
-      "nut_rdi": 30754.9176,
+      "nut_supply": 938.1657,
+      "nut_rdi": 30759.5318,
       "n_boats": 3872,
       "month": "December 2025",
       "year": "2025"
@@ -5171,8 +5171,8 @@
     {
       "date_bin_start": "2025-12-01",
       "nutrient": "iron",
-      "nut_supply": 6.9221,
-      "nut_rdi": 7719.5584,
+      "nut_supply": 6.9244,
+      "nut_rdi": 7722.0759,
       "n_boats": 3872,
       "month": "December 2025",
       "year": "2025"
@@ -5181,7 +5181,7 @@
       "date_bin_start": "2025-12-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.2621,
-      "nut_rdi": 17185.4947,
+      "nut_rdi": 17184.843,
       "n_boats": 3872,
       "month": "December 2025",
       "year": "2025"
@@ -5189,8 +5189,8 @@
     {
       "date_bin_start": "2026-01-01",
       "nutrient": "zinc",
-      "nut_supply": 6.8287,
-      "nut_rdi": 45692.2382,
+      "nut_supply": 6.8276,
+      "nut_rdi": 45684.8076,
       "n_boats": 3872,
       "month": "January 2026",
       "year": "2026"
@@ -5198,8 +5198,8 @@
     {
       "date_bin_start": "2026-01-01",
       "nutrient": "protein",
-      "nut_supply": 136112.9435,
-      "nut_rdi": 97015.6404,
+      "nut_supply": 136111.5325,
+      "nut_rdi": 97014.6347,
       "n_boats": 3872,
       "month": "January 2026",
       "year": "2026"
@@ -5207,8 +5207,8 @@
     {
       "date_bin_start": "2026-01-01",
       "nutrient": "omega3",
-      "nut_supply": 1986.4975,
-      "nut_rdi": 22160.9616,
+      "nut_supply": 1983.5813,
+      "nut_rdi": 22128.4285,
       "n_boats": 3872,
       "month": "January 2026",
       "year": "2026"
@@ -5216,8 +5216,8 @@
     {
       "date_bin_start": "2026-01-01",
       "nutrient": "calcium",
-      "nut_supply": 938.0073,
-      "nut_rdi": 30754.3381,
+      "nut_supply": 938.5582,
+      "nut_rdi": 30772.4,
       "n_boats": 3872,
       "month": "January 2026",
       "year": "2026"
@@ -5225,8 +5225,8 @@
     {
       "date_bin_start": "2026-01-01",
       "nutrient": "iron",
-      "nut_supply": 8.7991,
-      "nut_rdi": 9812.7421,
+      "nut_supply": 8.808,
+      "nut_rdi": 9822.7067,
       "n_boats": 3872,
       "month": "January 2026",
       "year": "2026"
@@ -5234,8 +5234,8 @@
     {
       "date_bin_start": "2026-01-01",
       "nutrient": "vitaminA",
-      "nut_supply": 0.2924,
-      "nut_rdi": 19176.8138,
+      "nut_supply": 0.2926,
+      "nut_rdi": 19186.1402,
       "n_boats": 3872,
       "month": "January 2026",
       "year": "2026"
@@ -5243,8 +5243,8 @@
     {
       "date_bin_start": "2026-02-01",
       "nutrient": "zinc",
-      "nut_supply": 6.0014,
-      "nut_rdi": 40156.5844,
+      "nut_supply": 6.0001,
+      "nut_rdi": 40147.704,
       "n_boats": 3872,
       "month": "February 2026",
       "year": "2026"
@@ -5252,8 +5252,8 @@
     {
       "date_bin_start": "2026-02-01",
       "nutrient": "protein",
-      "nut_supply": 118449.3196,
-      "nut_rdi": 84425.7446,
+      "nut_supply": 118435.6094,
+      "nut_rdi": 84415.9725,
       "n_boats": 3872,
       "month": "February 2026",
       "year": "2026"
@@ -5261,8 +5261,8 @@
     {
       "date_bin_start": "2026-02-01",
       "nutrient": "omega3",
-      "nut_supply": 1824.4047,
-      "nut_rdi": 20352.6869,
+      "nut_supply": 1822.3548,
+      "nut_rdi": 20329.8191,
       "n_boats": 3872,
       "month": "February 2026",
       "year": "2026"
@@ -5270,8 +5270,8 @@
     {
       "date_bin_start": "2026-02-01",
       "nutrient": "calcium",
-      "nut_supply": 838.6426,
-      "nut_rdi": 27496.4786,
+      "nut_supply": 838.9673,
+      "nut_rdi": 27507.1254,
       "n_boats": 3872,
       "month": "February 2026",
       "year": "2026"
@@ -5279,8 +5279,8 @@
     {
       "date_bin_start": "2026-02-01",
       "nutrient": "iron",
-      "nut_supply": 7.6826,
-      "nut_rdi": 8567.6472,
+      "nut_supply": 7.6883,
+      "nut_rdi": 8574.0072,
       "n_boats": 3872,
       "month": "February 2026",
       "year": "2026"
@@ -5288,8 +5288,8 @@
     {
       "date_bin_start": "2026-02-01",
       "nutrient": "vitaminA",
-      "nut_supply": 0.2322,
-      "nut_rdi": 15228.1089,
+      "nut_supply": 0.2323,
+      "nut_rdi": 15229.577,
       "n_boats": 3872,
       "month": "February 2026",
       "year": "2026"
@@ -5297,8 +5297,8 @@
     {
       "date_bin_start": "2026-03-01",
       "nutrient": "zinc",
-      "nut_supply": 9.5248,
-      "nut_rdi": 63732.5346,
+      "nut_supply": 9.5247,
+      "nut_rdi": 63731.7687,
       "n_boats": 3872,
       "month": "March 2026",
       "year": "2026"
@@ -5306,8 +5306,8 @@
     {
       "date_bin_start": "2026-03-01",
       "nutrient": "protein",
-      "nut_supply": 180942.6852,
-      "nut_rdi": 128968.4142,
+      "nut_supply": 180940.3218,
+      "nut_rdi": 128966.7297,
       "n_boats": 3872,
       "month": "March 2026",
       "year": "2026"
@@ -5315,8 +5315,8 @@
     {
       "date_bin_start": "2026-03-01",
       "nutrient": "omega3",
-      "nut_supply": 2274.6991,
-      "nut_rdi": 25376.0803,
+      "nut_supply": 2274.6514,
+      "nut_rdi": 25375.5472,
       "n_boats": 3872,
       "month": "March 2026",
       "year": "2026"
@@ -5324,8 +5324,8 @@
     {
       "date_bin_start": "2026-03-01",
       "nutrient": "calcium",
-      "nut_supply": 1299.3085,
-      "nut_rdi": 42600.2798,
+      "nut_supply": 1299.2965,
+      "nut_rdi": 42599.8844,
       "n_boats": 3872,
       "month": "March 2026",
       "year": "2026"
@@ -5333,8 +5333,8 @@
     {
       "date_bin_start": "2026-03-01",
       "nutrient": "iron",
-      "nut_supply": 9.9731,
-      "nut_rdi": 11121.9475,
+      "nut_supply": 9.9729,
+      "nut_rdi": 11121.833,
       "n_boats": 3872,
       "month": "March 2026",
       "year": "2026"
@@ -5343,7 +5343,7 @@
       "date_bin_start": "2026-03-01",
       "nutrient": "vitaminA",
       "nut_supply": 0.3651,
-      "nut_rdi": 23941.468,
+      "nut_rdi": 23941.1328,
       "n_boats": 3872,
       "month": "March 2026",
       "year": "2026"
@@ -5351,8 +5351,8 @@
     {
       "date_bin_start": "2026-04-01",
       "nutrient": "zinc",
-      "nut_supply": 6.2871,
-      "nut_rdi": 42068.2667,
+      "nut_supply": 6.2743,
+      "nut_rdi": 41982.5567,
       "n_boats": 3872,
       "month": "April 2026",
       "year": "2026"
@@ -5360,8 +5360,8 @@
     {
       "date_bin_start": "2026-04-01",
       "nutrient": "protein",
-      "nut_supply": 125459.4508,
-      "nut_rdi": 89422.2742,
+      "nut_supply": 125401.3601,
+      "nut_rdi": 89380.8696,
       "n_boats": 3872,
       "month": "April 2026",
       "year": "2026"
@@ -5369,8 +5369,8 @@
     {
       "date_bin_start": "2026-04-01",
       "nutrient": "omega3",
-      "nut_supply": 1905.182,
-      "nut_rdi": 21253.8219,
+      "nut_supply": 1867.0379,
+      "nut_rdi": 20828.2944,
       "n_boats": 3872,
       "month": "April 2026",
       "year": "2026"
@@ -5378,8 +5378,8 @@
     {
       "date_bin_start": "2026-04-01",
       "nutrient": "calcium",
-      "nut_supply": 783.1749,
-      "nut_rdi": 25677.8669,
+      "nut_supply": 795.5194,
+      "nut_rdi": 26082.6017,
       "n_boats": 3872,
       "month": "April 2026",
       "year": "2026"
@@ -5387,8 +5387,8 @@
     {
       "date_bin_start": "2026-04-01",
       "nutrient": "iron",
-      "nut_supply": 7.4984,
-      "nut_rdi": 8362.2298,
+      "nut_supply": 7.6629,
+      "nut_rdi": 8545.6922,
       "n_boats": 3872,
       "month": "April 2026",
       "year": "2026"
@@ -5396,8 +5396,8 @@
     {
       "date_bin_start": "2026-04-01",
       "nutrient": "vitaminA",
-      "nut_supply": 0.2286,
-      "nut_rdi": 14986.9658,
+      "nut_supply": 0.2293,
+      "nut_rdi": 15037.3691,
       "n_boats": 3872,
       "month": "April 2026",
       "year": "2026"
@@ -5405,8 +5405,8 @@
     {
       "date_bin_start": "2026-05-01",
       "nutrient": "zinc",
-      "nut_supply": 5.7886,
-      "nut_rdi": 38732.803,
+      "nut_supply": 5.751,
+      "nut_rdi": 38480.8006,
       "n_boats": 3872,
       "month": "May 2026",
       "year": "2026"
@@ -5414,8 +5414,8 @@
     {
       "date_bin_start": "2026-05-01",
       "nutrient": "protein",
-      "nut_supply": 103591.0773,
-      "nut_rdi": 73835.4079,
+      "nut_supply": 102945.0877,
+      "nut_rdi": 73374.9734,
       "n_boats": 3872,
       "month": "May 2026",
       "year": "2026"
@@ -5423,8 +5423,8 @@
     {
       "date_bin_start": "2026-05-01",
       "nutrient": "omega3",
-      "nut_supply": 1917.4472,
-      "nut_rdi": 21390.6508,
+      "nut_supply": 1906.4536,
+      "nut_rdi": 21268.0076,
       "n_boats": 3872,
       "month": "May 2026",
       "year": "2026"
@@ -5432,8 +5432,8 @@
     {
       "date_bin_start": "2026-05-01",
       "nutrient": "calcium",
-      "nut_supply": 866.6621,
-      "nut_rdi": 28415.1498,
+      "nut_supply": 857.3603,
+      "nut_rdi": 28110.1732,
       "n_boats": 3872,
       "month": "May 2026",
       "year": "2026"
@@ -5441,8 +5441,8 @@
     {
       "date_bin_start": "2026-05-01",
       "nutrient": "iron",
-      "nut_supply": 6.519,
-      "nut_rdi": 7269.949,
+      "nut_supply": 6.4322,
+      "nut_rdi": 7173.155,
       "n_boats": 3872,
       "month": "May 2026",
       "year": "2026"
@@ -5450,8 +5450,8 @@
     {
       "date_bin_start": "2026-05-01",
       "nutrient": "vitaminA",
-      "nut_supply": 0.1909,
-      "nut_rdi": 12515.4191,
+      "nut_supply": 0.1898,
+      "nut_rdi": 12443.4103,
       "n_boats": 3872,
       "month": "May 2026",
       "year": "2026"
@@ -5461,96 +5461,96 @@
     {
       "date_bin_start": "2018-01-01",
       "nutrient": "zinc",
-      "nut_supply": 57.7043,
-      "nut_rdi": 32264.0918,
+      "nut_supply": 57.6949,
+      "nut_rdi": 32258.8472,
       "n_boats": 3872,
       "year": "2018"
     },
     {
       "date_bin_start": "2018-01-01",
       "nutrient": "protein",
-      "nut_supply": 1079639.9555,
-      "nut_rdi": 64302.5584,
+      "nut_supply": 1079515.4556,
+      "nut_rdi": 64295.1433,
       "n_boats": 3872,
       "year": "2018"
     },
     {
       "date_bin_start": "2018-01-01",
       "nutrient": "omega3",
-      "nut_supply": 17116.8954,
-      "nut_rdi": 15956.313,
+      "nut_supply": 17102.8976,
+      "nut_rdi": 15943.2643,
       "n_boats": 3872,
       "year": "2018"
     },
     {
       "date_bin_start": "2018-01-01",
       "nutrient": "calcium",
-      "nut_supply": 9299.4123,
-      "nut_rdi": 25477.842,
+      "nut_supply": 9302.6698,
+      "nut_rdi": 25486.7666,
       "n_boats": 3872,
       "year": "2018"
     },
     {
       "date_bin_start": "2018-01-01",
       "nutrient": "iron",
-      "nut_supply": 82.6884,
-      "nut_rdi": 7705.5669,
+      "nut_supply": 82.7367,
+      "nut_rdi": 7710.0618,
       "n_boats": 3872,
       "year": "2018"
     },
     {
       "date_bin_start": "2018-01-01",
       "nutrient": "vitaminA",
-      "nut_supply": 1.9216,
-      "nut_rdi": 10529.0924,
+      "nut_supply": 1.9217,
+      "nut_rdi": 10529.8486,
       "n_boats": 3872,
       "year": "2018"
     },
     {
       "date_bin_start": "2019-01-01",
       "nutrient": "zinc",
-      "nut_supply": 68.7379,
-      "nut_rdi": 38433.2891,
+      "nut_supply": 68.7336,
+      "nut_rdi": 38430.886,
       "n_boats": 3872,
       "year": "2019"
     },
     {
       "date_bin_start": "2019-01-01",
       "nutrient": "protein",
-      "nut_supply": 1395739.487,
-      "nut_rdi": 83129.213,
+      "nut_supply": 1395717.6105,
+      "nut_rdi": 83127.9101,
       "n_boats": 3872,
       "year": "2019"
     },
     {
       "date_bin_start": "2019-01-01",
       "nutrient": "omega3",
-      "nut_supply": 22356.8809,
-      "nut_rdi": 20841.01,
+      "nut_supply": 22346.6358,
+      "nut_rdi": 20831.4595,
       "n_boats": 3872,
       "year": "2019"
     },
     {
       "date_bin_start": "2019-01-01",
       "nutrient": "calcium",
-      "nut_supply": 10156.5649,
-      "nut_rdi": 27826.2052,
+      "nut_supply": 10159.0118,
+      "nut_rdi": 27832.9091,
       "n_boats": 3872,
       "year": "2019"
     },
     {
       "date_bin_start": "2019-01-01",
       "nutrient": "iron",
-      "nut_supply": 96.7996,
-      "nut_rdi": 9020.5553,
+      "nut_supply": 96.8358,
+      "nut_rdi": 9023.927,
       "n_boats": 3872,
       "year": "2019"
     },
     {
       "date_bin_start": "2019-01-01",
       "nutrient": "vitaminA",
-      "nut_supply": 2.7353,
-      "nut_rdi": 14988.0492,
+      "nut_supply": 2.7357,
+      "nut_rdi": 14989.9862,
       "n_boats": 3872,
       "year": "2019"
     },
@@ -5653,40 +5653,40 @@
     {
       "date_bin_start": "2022-01-01",
       "nutrient": "zinc",
-      "nut_supply": 65.8125,
-      "nut_rdi": 36797.5935,
+      "nut_supply": 65.8126,
+      "nut_rdi": 36797.6522,
       "n_boats": 3872,
       "year": "2022"
     },
     {
       "date_bin_start": "2022-01-01",
       "nutrient": "protein",
-      "nut_supply": 1226176.8652,
-      "nut_rdi": 73030.1885,
+      "nut_supply": 1226180.3372,
+      "nut_rdi": 73030.3953,
       "n_boats": 3872,
       "year": "2022"
     },
     {
       "date_bin_start": "2022-01-01",
       "nutrient": "omega3",
-      "nut_supply": 20792.7782,
-      "nut_rdi": 19382.9587,
+      "nut_supply": 20791.7216,
+      "nut_rdi": 19381.9737,
       "n_boats": 3872,
       "year": "2022"
     },
     {
       "date_bin_start": "2022-01-01",
       "nutrient": "calcium",
-      "nut_supply": 10019.4834,
-      "nut_rdi": 27450.6394,
+      "nut_supply": 10019.8626,
+      "nut_rdi": 27451.6784,
       "n_boats": 3872,
       "year": "2022"
     },
     {
       "date_bin_start": "2022-01-01",
       "nutrient": "iron",
-      "nut_supply": 84.5599,
-      "nut_rdi": 7879.966,
+      "nut_supply": 84.5658,
+      "nut_rdi": 7880.5164,
       "n_boats": 3872,
       "year": "2022"
     },
@@ -5694,199 +5694,199 @@
       "date_bin_start": "2022-01-01",
       "nutrient": "vitaminA",
       "nut_supply": 2.4062,
-      "nut_rdi": 13184.5255,
+      "nut_rdi": 13184.69,
       "n_boats": 3872,
       "year": "2022"
     },
     {
       "date_bin_start": "2023-01-01",
       "nutrient": "zinc",
-      "nut_supply": 64.7786,
-      "nut_rdi": 36219.5263,
+      "nut_supply": 64.7754,
+      "nut_rdi": 36217.7322,
       "n_boats": 3872,
       "year": "2023"
     },
     {
       "date_bin_start": "2023-01-01",
       "nutrient": "protein",
-      "nut_supply": 1226742.7232,
-      "nut_rdi": 73063.8906,
+      "nut_supply": 1226726.7674,
+      "nut_rdi": 73062.9403,
       "n_boats": 3872,
       "year": "2023"
     },
     {
       "date_bin_start": "2023-01-01",
       "nutrient": "omega3",
-      "nut_supply": 16993.3125,
-      "nut_rdi": 15841.1094,
+      "nut_supply": 16984.9327,
+      "nut_rdi": 15833.2978,
       "n_boats": 3872,
       "year": "2023"
     },
     {
       "date_bin_start": "2023-01-01",
       "nutrient": "calcium",
-      "nut_supply": 9052.4445,
-      "nut_rdi": 24801.2178,
+      "nut_supply": 9054.5639,
+      "nut_rdi": 24807.0245,
       "n_boats": 3872,
       "year": "2023"
     },
     {
       "date_bin_start": "2023-01-01",
       "nutrient": "iron",
-      "nut_supply": 71.2894,
-      "nut_rdi": 6643.3148,
+      "nut_supply": 71.3205,
+      "nut_rdi": 6646.208,
       "n_boats": 3872,
       "year": "2023"
     },
     {
       "date_bin_start": "2023-01-01",
       "nutrient": "vitaminA",
-      "nut_supply": 2.51,
-      "nut_rdi": 13753.3392,
+      "nut_supply": 2.5102,
+      "nut_rdi": 13754.7188,
       "n_boats": 3872,
       "year": "2023"
     },
     {
       "date_bin_start": "2024-01-01",
       "nutrient": "zinc",
-      "nut_supply": 73.3169,
-      "nut_rdi": 40993.5224,
+      "nut_supply": 73.3141,
+      "nut_rdi": 40991.9711,
       "n_boats": 3872,
       "year": "2024"
     },
     {
       "date_bin_start": "2024-01-01",
       "nutrient": "protein",
-      "nut_supply": 1531791.3903,
-      "nut_rdi": 91232.3639,
+      "nut_supply": 1531776.0178,
+      "nut_rdi": 91231.4483,
       "n_boats": 3872,
       "year": "2024"
     },
     {
       "date_bin_start": "2024-01-01",
       "nutrient": "omega3",
-      "nut_supply": 23725.0847,
-      "nut_rdi": 22116.4451,
+      "nut_supply": 23718.413,
+      "nut_rdi": 22110.2257,
       "n_boats": 3872,
       "year": "2024"
     },
     {
       "date_bin_start": "2024-01-01",
       "nutrient": "calcium",
-      "nut_supply": 9882.3768,
-      "nut_rdi": 27075.005,
+      "nut_supply": 9884.0858,
+      "nut_rdi": 27079.6872,
       "n_boats": 3872,
       "year": "2024"
     },
     {
       "date_bin_start": "2024-01-01",
       "nutrient": "iron",
-      "nut_supply": 103.9194,
-      "nut_rdi": 9684.0414,
+      "nut_supply": 103.9438,
+      "nut_rdi": 9686.3132,
       "n_boats": 3872,
       "year": "2024"
     },
     {
       "date_bin_start": "2024-01-01",
       "nutrient": "vitaminA",
-      "nut_supply": 2.8613,
-      "nut_rdi": 15678.147,
+      "nut_supply": 2.8615,
+      "nut_rdi": 15679.2924,
       "n_boats": 3872,
       "year": "2024"
     },
     {
       "date_bin_start": "2025-01-01",
       "nutrient": "zinc",
-      "nut_supply": 72.2176,
-      "nut_rdi": 40378.8529,
+      "nut_supply": 72.2147,
+      "nut_rdi": 40377.2704,
       "n_boats": 3872,
       "year": "2025"
     },
     {
       "date_bin_start": "2025-01-01",
       "nutrient": "protein",
-      "nut_supply": 1475508.127,
-      "nut_rdi": 87880.1743,
+      "nut_supply": 1475483.4784,
+      "nut_rdi": 87878.7063,
       "n_boats": 3872,
       "year": "2025"
     },
     {
       "date_bin_start": "2025-01-01",
       "nutrient": "omega3",
-      "nut_supply": 22245.024,
-      "nut_rdi": 20736.7374,
+      "nut_supply": 22239.9104,
+      "nut_rdi": 20731.9705,
       "n_boats": 3872,
       "year": "2025"
     },
     {
       "date_bin_start": "2025-01-01",
       "nutrient": "calcium",
-      "nut_supply": 9595.1782,
-      "nut_rdi": 26288.1596,
+      "nut_supply": 9596.0042,
+      "nut_rdi": 26290.4224,
       "n_boats": 3872,
       "year": "2025"
     },
     {
       "date_bin_start": "2025-01-01",
       "nutrient": "iron",
-      "nut_supply": 95.349,
-      "nut_rdi": 8885.3749,
+      "nut_supply": 95.3633,
+      "nut_rdi": 8886.7127,
       "n_boats": 3872,
       "year": "2025"
     },
     {
       "date_bin_start": "2025-01-01",
       "nutrient": "vitaminA",
-      "nut_supply": 2.8675,
-      "nut_rdi": 15712.4725,
+      "nut_supply": 2.8677,
+      "nut_rdi": 15713.3736,
       "n_boats": 3872,
       "year": "2025"
     },
     {
       "date_bin_start": "2026-01-01",
       "nutrient": "zinc",
-      "nut_supply": 34.4307,
-      "nut_rdi": 19251.1343,
+      "nut_supply": 34.3776,
+      "nut_rdi": 19221.4875,
       "n_boats": 3872,
       "year": "2026"
     },
     {
       "date_bin_start": "2026-01-01",
       "nutrient": "protein",
-      "nut_supply": 664555.4764,
-      "nut_rdi": 39580.4334,
+      "nut_supply": 663833.9115,
+      "nut_rdi": 39537.4575,
       "n_boats": 3872,
       "year": "2026"
     },
     {
       "date_bin_start": "2026-01-01",
       "nutrient": "omega3",
-      "nut_supply": 9908.2305,
-      "nut_rdi": 9236.4196,
+      "nut_supply": 9854.0789,
+      "nut_rdi": 9185.9396,
       "n_boats": 3872,
       "year": "2026"
     },
     {
       "date_bin_start": "2026-01-01",
       "nutrient": "calcium",
-      "nut_supply": 4725.7955,
-      "nut_rdi": 12947.3848,
+      "nut_supply": 4729.7016,
+      "nut_rdi": 12958.0867,
       "n_boats": 3872,
       "year": "2026"
     },
     {
       "date_bin_start": "2026-01-01",
       "nutrient": "iron",
-      "nut_supply": 40.4721,
-      "nut_rdi": 3771.5143,
+      "nut_supply": 40.5644,
+      "nut_rdi": 3780.111,
       "n_boats": 3872,
       "year": "2026"
     },
     {
       "date_bin_start": "2026-01-01",
       "nutrient": "vitaminA",
-      "nut_supply": 1.3092,
-      "nut_rdi": 7173.6648,
+      "nut_supply": 1.309,
+      "nut_rdi": 7172.7334,
       "n_boats": 3872,
       "year": "2026"
     }
