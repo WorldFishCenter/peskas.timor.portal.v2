@@ -2,7 +2,7 @@
   "n_surveys": [
     {
       "Area": "Atauro island",
-      "n": 38558
+      "n": 38563
     },
     {
       "Area": "North Coast",
@@ -10,17 +10,17 @@
     },
     {
       "Area": "South Coast",
-      "n": 18278
+      "n": 18322
     }
   ],
   "estimated_tons": [
     {
       "fish_group": "Small pelagics",
-      "tons": 34102
+      "tons": 34107
     },
     {
       "fish_group": "Large pelagics",
-      "tons": 13758
+      "tons": 13760
     },
     {
       "fish_group": "Other",
@@ -32,13 +32,13 @@
     },
     {
       "fish_group": "Large demersals",
-      "tons": 2582
+      "tons": 2588
     }
   ],
   "estimated_revenue": [
     {
       "Area": "Atauro island",
-      "Estimated revenue": 13201603
+      "Estimated revenue": 13199979
     },
     {
       "Area": "North Coast",
@@ -46,7 +46,7 @@
     },
     {
       "Area": "South Coast",
-      "Estimated revenue": 44564495
+      "Estimated revenue": 44619921
     }
   ],
   "catch_habitat": [
@@ -208,7 +208,7 @@
         },
         {
           "x": "Long Line",
-          "y": 5.244
+          "y": 5.243
         },
         {
           "x": "Seine Net",
@@ -342,31 +342,31 @@
   "nutrients_per_catch": [
     {
       "nutrient_names": "Selenium",
-      "nut_rdi": 203.2997
+      "nut_rdi": 203.3159
     },
     {
       "nutrient_names": "Protein",
-      "nut_rdi": 56.1672
+      "nut_rdi": 56.1606
     },
     {
       "nutrient_names": "Zinc",
-      "nut_rdi": 31.1214
+      "nut_rdi": 31.1174
     },
     {
       "nutrient_names": "Vitamin A",
-      "nut_rdi": 15.7756
+      "nut_rdi": 15.7726
     },
     {
       "nutrient_names": "Calcium",
-      "nut_rdi": 13.9091
+      "nut_rdi": 13.9104
     },
     {
       "nutrient_names": "Omega-3",
-      "nut_rdi": 10.5717
+      "nut_rdi": 10.5709
     },
     {
       "nutrient_names": "Iron",
-      "nut_rdi": 5.288
+      "nut_rdi": 5.2894
     }
   ],
   "nutrients_habitat": [
@@ -432,7 +432,7 @@
         },
         {
           "x": "Deep",
-          "y": 2.074
+          "y": 2.075
         }
       ]
     },
@@ -482,7 +482,7 @@
         },
         {
           "x": "Deep",
-          "y": 1.393
+          "y": 1.394
         },
         {
           "x": "Beach",
@@ -548,7 +548,7 @@
         },
         {
           "x": "Deep",
-          "y": 0.467
+          "y": 0.468
         },
         {
           "x": "Beach",
@@ -604,19 +604,19 @@
       "municipality": "Atauro",
       "catch_preservation": "Box",
       "count": 38,
-      "perc": 0.3463
+      "perc": 0.3461
     },
     {
       "municipality": "Atauro",
       "catch_preservation": "Ice box",
-      "count": 7054,
-      "perc": 64.2851
+      "count": 7057,
+      "perc": 64.2831
     },
     {
       "municipality": "Atauro",
       "catch_preservation": "Open",
       "count": 2179,
-      "perc": 19.8578
+      "perc": 19.8488
     },
     {
       "municipality": "Atauro",
@@ -627,8 +627,8 @@
     {
       "municipality": "Atauro",
       "catch_preservation": "Shade",
-      "count": 1701,
-      "perc": 15.5017
+      "count": 1703,
+      "perc": 15.5128
     },
     {
       "municipality": "Baucau",
@@ -705,7 +705,7 @@
     {
       "municipality": "Covalima",
       "catch_preservation": "Open",
-      "count": 1576,
+      "count": 1611,
       "perc": 100
     },
     {
@@ -1095,7 +1095,7 @@
     {
       "municipality": "Covalima",
       "gear": "long line",
-      "cpue": 0.4874
+      "cpue": 0.4888
     },
     {
       "municipality": "Covalima",
