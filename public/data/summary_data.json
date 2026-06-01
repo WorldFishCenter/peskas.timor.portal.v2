@@ -2,11 +2,11 @@
   "n_surveys": [
     {
       "Area": "Atauro island",
-      "n": 38615
+      "n": 38659
     },
     {
       "Area": "North Coast",
-      "n": 37353
+      "n": 37374
     },
     {
       "Area": "South Coast",
@@ -16,15 +16,15 @@
   "estimated_tons": [
     {
       "fish_group": "Small pelagics",
-      "tons": 34104
+      "tons": 34070
     },
     {
       "fish_group": "Large pelagics",
-      "tons": 13760
+      "tons": 13753
     },
     {
       "fish_group": "Other",
-      "tons": 5475
+      "tons": 5469
     },
     {
       "fish_group": "Small demersals",
@@ -32,17 +32,17 @@
     },
     {
       "fish_group": "Large demersals",
-      "tons": 2588
+      "tons": 2587
     }
   ],
   "estimated_revenue": [
     {
       "Area": "Atauro island",
-      "Estimated revenue": 13194965
+      "Estimated revenue": 13198415
     },
     {
       "Area": "North Coast",
-      "Estimated revenue": 106907820
+      "Estimated revenue": 106662427
     },
     {
       "Area": "South Coast",
@@ -55,7 +55,7 @@
       "data": [
         {
           "x": "Spear Gun",
-          "y": 5.084
+          "y": 5.085
         },
         {
           "x": "Gill Net",
@@ -84,7 +84,7 @@
       "data": [
         {
           "x": "Spear Gun",
-          "y": 3.154
+          "y": 3.275
         },
         {
           "x": "Hand Line",
@@ -96,7 +96,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 1.449
+          "y": 1.448
         },
         {
           "x": "Long Line",
@@ -134,7 +134,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 1.36
+          "y": 1.357
         },
         {
           "x": "Spear Gun",
@@ -163,7 +163,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 1.627
+          "y": 1.625
         },
         {
           "x": "Manual Collection",
@@ -200,7 +200,7 @@
       "data": [
         {
           "x": "Spear Gun",
-          "y": 10.495
+          "y": 10.555
         },
         {
           "x": "Hand Line",
@@ -208,7 +208,7 @@
         },
         {
           "x": "Long Line",
-          "y": 5.249
+          "y": 5.252
         },
         {
           "x": "Seine Net",
@@ -216,7 +216,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 3.733
+          "y": 3.732
         }
       ]
     },
@@ -225,11 +225,11 @@
       "data": [
         {
           "x": "Spear Gun",
-          "y": 10.105
+          "y": 10.102
         },
         {
           "x": "Gill Net",
-          "y": 5.653
+          "y": 5.655
         },
         {
           "x": "Hand Line",
@@ -258,7 +258,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 4.544
+          "y": 4.539
         },
         {
           "x": "Hand Line",
@@ -308,7 +308,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 3.335
+          "y": 3.331
         },
         {
           "x": "Manual Collection",
@@ -342,31 +342,31 @@
   "nutrients_per_catch": [
     {
       "nutrient_names": "Selenium",
-      "nut_rdi": 203.3254
+      "nut_rdi": 203.4511
     },
     {
       "nutrient_names": "Protein",
-      "nut_rdi": 56.1673
+      "nut_rdi": 56.1795
     },
     {
       "nutrient_names": "Zinc",
-      "nut_rdi": 31.1297
+      "nut_rdi": 31.1412
     },
     {
       "nutrient_names": "Vitamin A",
-      "nut_rdi": 15.7725
+      "nut_rdi": 15.7694
     },
     {
       "nutrient_names": "Calcium",
-      "nut_rdi": 13.9063
+      "nut_rdi": 13.9213
     },
     {
       "nutrient_names": "Omega-3",
-      "nut_rdi": 10.5693
+      "nut_rdi": 10.5719
     },
     {
       "nutrient_names": "Iron",
-      "nut_rdi": 5.2894
+      "nut_rdi": 5.2942
     }
   ],
   "nutrients_habitat": [
@@ -445,7 +445,7 @@
         },
         {
           "x": "Seagrass",
-          "y": 1.047
+          "y": 1.046
         },
         {
           "x": "Deep",
@@ -482,11 +482,11 @@
         },
         {
           "x": "Deep",
-          "y": 1.393
+          "y": 1.394
         },
         {
           "x": "Beach",
-          "y": 1.035
+          "y": 1.034
         },
         {
           "x": "Reef",
@@ -507,7 +507,7 @@
       "data": [
         {
           "x": "Beach",
-          "y": 1.263
+          "y": 1.262
         },
         {
           "x": "Traditional FAD",
@@ -604,31 +604,31 @@
       "municipality": "Atauro",
       "catch_preservation": "Box",
       "count": 39,
-      "perc": 0.3536
+      "perc": 0.3522
     },
     {
       "municipality": "Atauro",
       "catch_preservation": "Ice box",
-      "count": 7085,
-      "perc": 64.2339
+      "count": 7112,
+      "perc": 64.2225
     },
     {
       "municipality": "Atauro",
       "catch_preservation": "Open",
-      "count": 2185,
-      "perc": 19.8096
+      "count": 2195,
+      "perc": 19.8212
     },
     {
       "municipality": "Atauro",
       "catch_preservation": "Other",
       "count": 1,
-      "perc": 0.0091
+      "perc": 0.009
     },
     {
       "municipality": "Atauro",
       "catch_preservation": "Shade",
-      "count": 1720,
-      "perc": 15.5938
+      "count": 1727,
+      "perc": 15.5951
     },
     {
       "municipality": "Baucau",
@@ -784,7 +784,7 @@
       "municipality": "Liquica",
       "catch_preservation": "Box",
       "count": 3,
-      "perc": 0.2681
+      "perc": 0.2641
     },
     {
       "municipality": "Liquica",
@@ -795,20 +795,20 @@
     {
       "municipality": "Liquica",
       "catch_preservation": "Open",
-      "count": 1018,
-      "perc": 90.9741
+      "count": 1034,
+      "perc": 91.0211
     },
     {
       "municipality": "Liquica",
       "catch_preservation": "Other",
       "count": 11,
-      "perc": 0.983
+      "perc": 0.9683
     },
     {
       "municipality": "Liquica",
       "catch_preservation": "Shade",
-      "count": 87,
-      "perc": 7.7748
+      "count": 88,
+      "perc": 7.7465
     },
     {
       "municipality": "Manatuto",
@@ -1005,7 +1005,7 @@
     {
       "municipality": "Atauro",
       "gear": "spear gun",
-      "cpue": 4.4784
+      "cpue": 4.4806
     },
     {
       "municipality": "Atauro",
@@ -1170,7 +1170,7 @@
     {
       "municipality": "Liquica",
       "gear": "gill net",
-      "cpue": 0.5118
+      "cpue": 0.5112
     },
     {
       "municipality": "Liquica",
@@ -1180,7 +1180,7 @@
     {
       "municipality": "Liquica",
       "gear": "long line",
-      "cpue": 1.5225
+      "cpue": 1.5009
     },
     {
       "municipality": "Liquica",
