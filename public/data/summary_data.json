@@ -6,7 +6,7 @@
     },
     {
       "Area": "North Coast",
-      "n": 37433
+      "n": 37434
     },
     {
       "Area": "South Coast",
@@ -16,23 +16,23 @@
   "estimated_tons": [
     {
       "fish_group": "Small pelagics",
-      "tons": 34046
+      "tons": 34061
     },
     {
       "fish_group": "Large pelagics",
-      "tons": 13945
+      "tons": 13952
     },
     {
       "fish_group": "Other",
-      "tons": 5505
+      "tons": 5508
     },
     {
       "fish_group": "Small demersals",
-      "tons": 3108
+      "tons": 3113
     },
     {
       "fish_group": "Large demersals",
-      "tons": 2606
+      "tons": 2608
     }
   ],
   "estimated_revenue": [
@@ -42,7 +42,7 @@
     },
     {
       "Area": "North Coast",
-      "Estimated revenue": 108508770
+      "Estimated revenue": 108449995
     },
     {
       "Area": "South Coast",
@@ -204,7 +204,7 @@
         },
         {
           "x": "Hand Line",
-          "y": 8.907
+          "y": 8.906
         },
         {
           "x": "Long Line",
@@ -342,27 +342,27 @@
   "nutrients_per_catch": [
     {
       "nutrient_names": "Selenium",
-      "nut_rdi": 203.6628
+      "nut_rdi": 203.6606
     },
     {
       "nutrient_names": "Protein",
-      "nut_rdi": 56.2776
+      "nut_rdi": 56.277
     },
     {
       "nutrient_names": "Zinc",
-      "nut_rdi": 31.1979
+      "nut_rdi": 31.1975
     },
     {
       "nutrient_names": "Vitamin A",
-      "nut_rdi": 15.7855
+      "nut_rdi": 15.7853
     },
     {
       "nutrient_names": "Calcium",
-      "nut_rdi": 13.9227
+      "nut_rdi": 13.9225
     },
     {
       "nutrient_names": "Omega-3",
-      "nut_rdi": 10.582
+      "nut_rdi": 10.5819
     },
     {
       "nutrient_names": "Iron",
@@ -664,31 +664,31 @@
       "municipality": "Bobonaro",
       "catch_preservation": "Box",
       "count": 1,
-      "perc": 0.1147
+      "perc": 0.1145
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Ice box",
       "count": 9,
-      "perc": 1.0321
+      "perc": 1.0309
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Open",
-      "count": 823,
-      "perc": 94.3807
+      "count": 824,
+      "perc": 94.3872
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Other",
       "count": 2,
-      "perc": 0.2294
+      "perc": 0.2291
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Shade",
       "count": 37,
-      "perc": 4.2431
+      "perc": 4.2383
     },
     {
       "municipality": "Covalima",
@@ -1055,7 +1055,7 @@
     {
       "municipality": "Bobonaro",
       "gear": "hand line",
-      "cpue": 0.3577
+      "cpue": 0.3551
     },
     {
       "municipality": "Bobonaro",
