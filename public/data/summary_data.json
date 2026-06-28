@@ -2,7 +2,7 @@
   "n_surveys": [
     {
       "Area": "Atauro island",
-      "n": 38870
+      "n": 38892
     },
     {
       "Area": "North Coast",
@@ -16,29 +16,29 @@
   "estimated_tons": [
     {
       "fish_group": "Small pelagics",
-      "tons": 34107
+      "tons": 34125
     },
     {
       "fish_group": "Large pelagics",
-      "tons": 13964
+      "tons": 13971
     },
     {
       "fish_group": "Other",
-      "tons": 5513
+      "tons": 5516
     },
     {
       "fish_group": "Small demersals",
-      "tons": 3100
+      "tons": 3118
     },
     {
       "fish_group": "Large demersals",
-      "tons": 2610
+      "tons": 2611
     }
   ],
   "estimated_revenue": [
     {
       "Area": "Atauro island",
-      "Estimated revenue": 13329407
+      "Estimated revenue": 13326745
     },
     {
       "Area": "North Coast",
@@ -55,11 +55,11 @@
       "data": [
         {
           "x": "Spear Gun",
-          "y": 5.101
+          "y": 5.102
         },
         {
           "x": "Gill Net",
-          "y": 2.308
+          "y": 2.309
         },
         {
           "x": "Beach Seine",
@@ -100,7 +100,7 @@
         },
         {
           "x": "Long Line",
-          "y": 1.316
+          "y": 1.317
         }
       ]
     },
@@ -163,7 +163,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 1.618
+          "y": 1.617
         },
         {
           "x": "Manual Collection",
@@ -208,7 +208,7 @@
         },
         {
           "x": "Long Line",
-          "y": 5.275
+          "y": 5.278
         },
         {
           "x": "Seine Net",
@@ -229,7 +229,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 5.661
+          "y": 5.662
         },
         {
           "x": "Hand Line",
@@ -308,7 +308,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 3.321
+          "y": 3.32
         },
         {
           "x": "Manual Collection",
@@ -342,31 +342,31 @@
   "nutrients_per_catch": [
     {
       "nutrient_names": "Selenium",
-      "nut_rdi": 203.8252
+      "nut_rdi": 203.8188
     },
     {
       "nutrient_names": "Protein",
-      "nut_rdi": 56.2963
+      "nut_rdi": 56.2955
     },
     {
       "nutrient_names": "Zinc",
-      "nut_rdi": 31.21
+      "nut_rdi": 31.2115
     },
     {
       "nutrient_names": "Vitamin A",
-      "nut_rdi": 15.7835
+      "nut_rdi": 15.7825
     },
     {
       "nutrient_names": "Calcium",
-      "nut_rdi": 13.9382
+      "nut_rdi": 13.9357
     },
     {
       "nutrient_names": "Omega-3",
-      "nut_rdi": 10.5859
+      "nut_rdi": 10.5849
     },
     {
       "nutrient_names": "Iron",
-      "nut_rdi": 5.3047
+      "nut_rdi": 5.3045
     }
   ],
   "nutrients_habitat": [
@@ -383,7 +383,7 @@
         },
         {
           "x": "Deep",
-          "y": 4.19
+          "y": 4.191
         },
         {
           "x": "Seagrass",
@@ -412,7 +412,7 @@
         },
         {
           "x": "Reef",
-          "y": 2.836
+          "y": 2.837
         },
         {
           "x": "Mangrove",
@@ -445,7 +445,7 @@
         },
         {
           "x": "Seagrass",
-          "y": 1.04
+          "y": 1.039
         },
         {
           "x": "Deep",
@@ -482,7 +482,7 @@
         },
         {
           "x": "Deep",
-          "y": 1.392
+          "y": 1.391
         },
         {
           "x": "Beach",
@@ -604,31 +604,31 @@
       "municipality": "Atauro",
       "catch_preservation": "Box",
       "count": 40,
-      "perc": 0.3545
+      "perc": 0.3538
     },
     {
       "municipality": "Atauro",
       "catch_preservation": "Ice box",
-      "count": 7238,
-      "perc": 64.1439
+      "count": 7250,
+      "perc": 64.1252
     },
     {
       "municipality": "Atauro",
       "catch_preservation": "Open",
       "count": 2213,
-      "perc": 19.6118
+      "perc": 19.5737
     },
     {
       "municipality": "Atauro",
       "catch_preservation": "Other",
       "count": 1,
-      "perc": 0.0089
+      "perc": 0.0088
     },
     {
       "municipality": "Atauro",
       "catch_preservation": "Shade",
-      "count": 1792,
-      "perc": 15.8809
+      "count": 1802,
+      "perc": 15.9384
     },
     {
       "municipality": "Baucau",
@@ -990,7 +990,7 @@
     {
       "municipality": "Atauro",
       "gear": "long line",
-      "cpue": 3.2429
+      "cpue": 3.2334
     },
     {
       "municipality": "Atauro",
@@ -1005,7 +1005,7 @@
     {
       "municipality": "Atauro",
       "gear": "spear gun",
-      "cpue": 4.504
+      "cpue": 4.5065
     },
     {
       "municipality": "Atauro",
