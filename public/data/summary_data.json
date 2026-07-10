@@ -6,7 +6,7 @@
     },
     {
       "Area": "North Coast",
-      "n": 37455
+      "n": 37456
     },
     {
       "Area": "South Coast",
@@ -16,23 +16,23 @@
   "estimated_tons": [
     {
       "fish_group": "Small pelagics",
-      "tons": 34076
+      "tons": 34078
     },
     {
       "fish_group": "Large pelagics",
-      "tons": 13763
+      "tons": 13815
     },
     {
       "fish_group": "Other",
-      "tons": 5531
+      "tons": 5535
     },
     {
       "fish_group": "Small demersals",
-      "tons": 3091
+      "tons": 3119
     },
     {
       "fish_group": "Large demersals",
-      "tons": 2644
+      "tons": 2646
     }
   ],
   "estimated_revenue": [
@@ -42,7 +42,7 @@
     },
     {
       "Area": "North Coast",
-      "Estimated revenue": 109108224
+      "Estimated revenue": 109406344
     },
     {
       "Area": "South Coast",
@@ -134,7 +134,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 1.363
+          "y": 1.367
         },
         {
           "x": "Spear Gun",
@@ -258,7 +258,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 4.696
+          "y": 4.73
         },
         {
           "x": "Hand Line",
@@ -342,31 +342,31 @@
   "nutrients_per_catch": [
     {
       "nutrient_names": "Selenium",
-      "nut_rdi": 203.8855
+      "nut_rdi": 203.8905
     },
     {
       "nutrient_names": "Protein",
-      "nut_rdi": 56.3214
+      "nut_rdi": 56.3228
     },
     {
       "nutrient_names": "Zinc",
-      "nut_rdi": 31.2426
+      "nut_rdi": 31.2433
     },
     {
       "nutrient_names": "Vitamin A",
-      "nut_rdi": 15.7962
+      "nut_rdi": 15.7964
     },
     {
       "nutrient_names": "Calcium",
-      "nut_rdi": 13.9291
+      "nut_rdi": 13.9298
     },
     {
       "nutrient_names": "Omega-3",
-      "nut_rdi": 10.5813
+      "nut_rdi": 10.5814
     },
     {
       "nutrient_names": "Iron",
-      "nut_rdi": 5.3053
+      "nut_rdi": 5.3054
     }
   ],
   "nutrients_habitat": [
@@ -486,7 +486,7 @@
         },
         {
           "x": "Beach",
-          "y": 1.037
+          "y": 1.038
         },
         {
           "x": "Reef",
@@ -507,7 +507,7 @@
       "data": [
         {
           "x": "Beach",
-          "y": 1.261
+          "y": 1.26
         },
         {
           "x": "Traditional FAD",
@@ -664,31 +664,31 @@
       "municipality": "Bobonaro",
       "catch_preservation": "Box",
       "count": 1,
-      "perc": 0.113
+      "perc": 0.1129
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Ice box",
       "count": 9,
-      "perc": 1.0169
+      "perc": 1.0158
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Open",
-      "count": 836,
-      "perc": 94.4633
+      "count": 837,
+      "perc": 94.4695
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Other",
       "count": 2,
-      "perc": 0.226
+      "perc": 0.2257
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Shade",
       "count": 37,
-      "perc": 4.1808
+      "perc": 4.1761
     },
     {
       "municipality": "Covalima",
