@@ -10,21 +10,21 @@
     },
     {
       "Area": "South Coast",
-      "n": 18322
+      "n": 18379
     }
   ],
   "estimated_tons": [
     {
       "fish_group": "Small pelagics",
-      "tons": 34050
+      "tons": 34114
     },
     {
       "fish_group": "Large pelagics",
-      "tons": 13820
+      "tons": 13824
     },
     {
       "fish_group": "Other",
-      "tons": 5542
+      "tons": 5547
     },
     {
       "fish_group": "Small demersals",
@@ -32,7 +32,7 @@
     },
     {
       "fish_group": "Large demersals",
-      "tons": 2647
+      "tons": 2648
     }
   ],
   "estimated_revenue": [
@@ -42,11 +42,11 @@
     },
     {
       "Area": "North Coast",
-      "Estimated revenue": 109360309
+      "Estimated revenue": 109406344
     },
     {
       "Area": "South Coast",
-      "Estimated revenue": 45263318
+      "Estimated revenue": 45213372
     }
   ],
   "catch_habitat": [
@@ -96,11 +96,11 @@
         },
         {
           "x": "Gill Net",
-          "y": 1.436
+          "y": 1.449
         },
         {
           "x": "Long Line",
-          "y": 1.319
+          "y": 1.318
         }
       ]
     },
@@ -208,7 +208,7 @@
         },
         {
           "x": "Long Line",
-          "y": 5.3
+          "y": 5.296
         },
         {
           "x": "Seine Net",
@@ -216,7 +216,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 3.728
+          "y": 3.735
         }
       ]
     },
@@ -342,31 +342,31 @@
   "nutrients_per_catch": [
     {
       "nutrient_names": "Selenium",
-      "nut_rdi": 203.7851
+      "nut_rdi": 203.9035
     },
     {
       "nutrient_names": "Protein",
-      "nut_rdi": 56.3141
+      "nut_rdi": 56.3212
     },
     {
       "nutrient_names": "Zinc",
-      "nut_rdi": 31.2503
+      "nut_rdi": 31.254
     },
     {
       "nutrient_names": "Vitamin A",
-      "nut_rdi": 15.7969
+      "nut_rdi": 15.7922
     },
     {
       "nutrient_names": "Calcium",
-      "nut_rdi": 13.9124
+      "nut_rdi": 13.9289
     },
     {
       "nutrient_names": "Omega-3",
-      "nut_rdi": 10.5749
+      "nut_rdi": 10.5791
     },
     {
       "nutrient_names": "Iron",
-      "nut_rdi": 5.3012
+      "nut_rdi": 5.306
     }
   ],
   "nutrients_habitat": [
@@ -432,7 +432,7 @@
         },
         {
           "x": "Deep",
-          "y": 2.07
+          "y": 2.071
         }
       ]
     },
@@ -449,7 +449,7 @@
         },
         {
           "x": "Deep",
-          "y": 0.925
+          "y": 0.924
         },
         {
           "x": "Mangrove",
@@ -482,7 +482,7 @@
         },
         {
           "x": "Deep",
-          "y": 1.39
+          "y": 1.391
         },
         {
           "x": "Beach",
@@ -515,7 +515,7 @@
         },
         {
           "x": "Deep",
-          "y": 0.981
+          "y": 0.982
         },
         {
           "x": "FAD",
@@ -705,7 +705,7 @@
     {
       "municipality": "Covalima",
       "catch_preservation": "Open",
-      "count": 1611,
+      "count": 1655,
       "perc": 100
     },
     {
@@ -1020,7 +1020,7 @@
     {
       "municipality": "Baucau",
       "gear": "gill net",
-      "cpue": 1.0148
+      "cpue": 1.0155
     },
     {
       "municipality": "Baucau",
@@ -1085,7 +1085,7 @@
     {
       "municipality": "Covalima",
       "gear": "gill net",
-      "cpue": 0.4644
+      "cpue": 0.4473
     },
     {
       "municipality": "Covalima",
@@ -1095,7 +1095,7 @@
     {
       "municipality": "Covalima",
       "gear": "long line",
-      "cpue": 0.4888
+      "cpue": 0.4882
     },
     {
       "municipality": "Covalima",
