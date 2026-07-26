@@ -6,7 +6,7 @@
     },
     {
       "Area": "North Coast",
-      "n": 37543
+      "n": 37544
     },
     {
       "Area": "South Coast",
@@ -16,23 +16,23 @@
   "estimated_tons": [
     {
       "fish_group": "Small pelagics",
-      "tons": 34305
+      "tons": 34332
     },
     {
       "fish_group": "Large pelagics",
-      "tons": 13901
+      "tons": 13905
     },
     {
       "fish_group": "Other",
-      "tons": 5552
+      "tons": 5556
     },
     {
       "fish_group": "Small demersals",
-      "tons": 3271
+      "tons": 3279
     },
     {
       "fish_group": "Large demersals",
-      "tons": 2635
+      "tons": 2636
     }
   ],
   "estimated_revenue": [
@@ -664,31 +664,31 @@
       "municipality": "Bobonaro",
       "catch_preservation": "Box",
       "count": 1,
-      "perc": 0.1105
+      "perc": 0.1104
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Ice box",
       "count": 9,
-      "perc": 0.9945
+      "perc": 0.9934
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Open",
-      "count": 855,
-      "perc": 94.4751
+      "count": 856,
+      "perc": 94.4812
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Other",
       "count": 2,
-      "perc": 0.221
+      "perc": 0.2208
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Shade",
       "count": 38,
-      "perc": 4.1989
+      "perc": 4.1943
     },
     {
       "municipality": "Covalima",
