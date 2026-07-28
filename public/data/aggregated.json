@@ -1,6 +1,17 @@
 {
   "day": [
     {
+      "date_bin_start": "2026-07-27",
+      "n_landings": 1,
+      "prop_landings_woman": 0,
+      "fuel": 5,
+      "n_tracks": 0,
+      "n_matched": 0,
+      "prop_matched": 0,
+      "n_boats": 3872,
+      "day": "27 Jul 26"
+    },
+    {
       "date_bin_start": "2026-07-24",
       "n_landings": 1,
       "prop_landings_woman": 0,
@@ -37895,6 +37906,17 @@
   ],
   "week": [
     {
+      "date_bin_start": "2026-07-26",
+      "n_landings": 1,
+      "prop_landings_woman": 0,
+      "fuel": 5,
+      "n_tracks": 0,
+      "n_matched": 0,
+      "prop_matched": 0,
+      "n_boats": 3872,
+      "week": "26 Jul 26"
+    },
+    {
       "date_bin_start": "2026-07-19",
       "n_landings": 14,
       "prop_landings_woman": 0.2143,
@@ -43591,17 +43613,17 @@
   "month": [
     {
       "date_bin_start": "2026-07-01",
-      "n_landings": 252,
-      "prop_landings_woman": 0.0924,
-      "fuel": 10.0265,
+      "n_landings": 253,
+      "prop_landings_woman": 0.092,
+      "fuel": 9.9825,
       "n_tracks": 3,
       "n_matched": 0,
       "prop_matched": 0,
       "landing_revenue": 52.865,
       "landing_weight": 15.5133,
-      "n_landings_per_boat": 8.4915,
-      "revenue": 1979636.773,
-      "catch": 557936.6344,
+      "n_landings_per_boat": 9.1708,
+      "revenue": 2138007.7148,
+      "catch": 602571.5651,
       "price_kg": 3.3126,
       "recorded_revenue": 12112,
       "recorded_catch": 3893.0917,
@@ -45628,17 +45650,17 @@
   "year": [
     {
       "date_bin_start": "2026-01-01",
-      "n_landings": 2128,
-      "prop_landings_woman": 0.0694,
-      "fuel": 7.3587,
+      "n_landings": 2129,
+      "prop_landings_woman": 0.0693,
+      "fuel": 7.3566,
       "n_tracks": 82,
       "n_matched": 0,
       "prop_matched": 0,
       "landing_revenue": 44.3919,
       "landing_weight": 15.2275,
-      "n_landings_per_boat": 78.4983,
-      "revenue": 14868862.4728,
-      "catch": 4894169.6391,
+      "n_landings_per_boat": 79.1776,
+      "revenue": 15027233.4147,
+      "catch": 4938804.5698,
       "price_kg": 2.8595,
       "recorded_revenue": 100094,
       "recorded_catch": 34418.0613,
