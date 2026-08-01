@@ -2,7 +2,7 @@
   "n_surveys": [
     {
       "Area": "Atauro island",
-      "n": 39188
+      "n": 39209
     },
     {
       "Area": "North Coast",
@@ -16,33 +16,33 @@
   "estimated_tons": [
     {
       "fish_group": "Small pelagics",
-      "tons": 34417
+      "tons": 34391
     },
     {
       "fish_group": "Large pelagics",
-      "tons": 13914
+      "tons": 13919
     },
     {
       "fish_group": "Other",
-      "tons": 5561
+      "tons": 5566
     },
     {
       "fish_group": "Small demersals",
-      "tons": 3283
+      "tons": 3290
     },
     {
       "fish_group": "Large demersals",
-      "tons": 2638
+      "tons": 2639
     }
   ],
   "estimated_revenue": [
     {
       "Area": "Atauro island",
-      "Estimated revenue": 13414638
+      "Estimated revenue": 13416444
     },
     {
       "Area": "North Coast",
-      "Estimated revenue": 109869663
+      "Estimated revenue": 109823628
     },
     {
       "Area": "South Coast",
@@ -55,7 +55,7 @@
       "data": [
         {
           "x": "Spear Gun",
-          "y": 5.129
+          "y": 5.135
         },
         {
           "x": "Gill Net",
@@ -96,7 +96,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 1.453
+          "y": 1.438
         },
         {
           "x": "Long Line",
@@ -208,7 +208,7 @@
         },
         {
           "x": "Long Line",
-          "y": 5.305
+          "y": 5.309
         },
         {
           "x": "Seine Net",
@@ -216,7 +216,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 3.754
+          "y": 3.745
         }
       ]
     },
@@ -225,7 +225,7 @@
       "data": [
         {
           "x": "Spear Gun",
-          "y": 10.131
+          "y": 10.133
         },
         {
           "x": "Gill Net",
@@ -342,31 +342,31 @@
   "nutrients_per_catch": [
     {
       "nutrient_names": "Selenium",
-      "nut_rdi": 204.149
+      "nut_rdi": 203.9831
     },
     {
       "nutrient_names": "Protein",
-      "nut_rdi": 56.4223
+      "nut_rdi": 56.3999
     },
     {
       "nutrient_names": "Zinc",
-      "nut_rdi": 31.3121
+      "nut_rdi": 31.3041
     },
     {
       "nutrient_names": "Vitamin A",
-      "nut_rdi": 15.8044
+      "nut_rdi": 15.8016
     },
     {
       "nutrient_names": "Calcium",
-      "nut_rdi": 13.9474
+      "nut_rdi": 13.9277
     },
     {
       "nutrient_names": "Omega-3",
-      "nut_rdi": 10.5882
+      "nut_rdi": 10.5813
     },
     {
       "nutrient_names": "Iron",
-      "nut_rdi": 5.3101
+      "nut_rdi": 5.3044
     }
   ],
   "nutrients_habitat": [
@@ -432,7 +432,7 @@
         },
         {
           "x": "Deep",
-          "y": 2.07
+          "y": 2.069
         }
       ]
     },
@@ -604,19 +604,19 @@
       "municipality": "Atauro",
       "catch_preservation": "Box",
       "count": 41,
-      "perc": 0.3534
+      "perc": 0.3527
     },
     {
       "municipality": "Atauro",
       "catch_preservation": "Ice box",
-      "count": 7433,
-      "perc": 64.0665
+      "count": 7445,
+      "perc": 64.054
     },
     {
       "municipality": "Atauro",
       "catch_preservation": "Open",
       "count": 2236,
-      "perc": 19.2725
+      "perc": 19.2377
     },
     {
       "municipality": "Atauro",
@@ -627,8 +627,8 @@
     {
       "municipality": "Atauro",
       "catch_preservation": "Shade",
-      "count": 1891,
-      "perc": 16.2989
+      "count": 1900,
+      "perc": 16.3469
     },
     {
       "municipality": "Baucau",
@@ -980,7 +980,7 @@
     {
       "municipality": "Atauro",
       "gear": "gill net",
-      "cpue": 2.1797
+      "cpue": 2.1799
     },
     {
       "municipality": "Atauro",
@@ -990,7 +990,7 @@
     {
       "municipality": "Atauro",
       "gear": "long line",
-      "cpue": 3.0789
+      "cpue": 3.0645
     },
     {
       "municipality": "Atauro",
@@ -1005,7 +1005,7 @@
     {
       "municipality": "Atauro",
       "gear": "spear gun",
-      "cpue": 4.5461
+      "cpue": 4.5509
     },
     {
       "municipality": "Atauro",
@@ -1020,7 +1020,7 @@
     {
       "municipality": "Baucau",
       "gear": "gill net",
-      "cpue": 1.0155
+      "cpue": 1.0148
     },
     {
       "municipality": "Baucau",
