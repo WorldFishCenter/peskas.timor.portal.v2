@@ -6,7 +6,7 @@
     },
     {
       "Area": "North Coast",
-      "n": 37653
+      "n": 37668
     },
     {
       "Area": "South Coast",
@@ -16,23 +16,23 @@
   "estimated_tons": [
     {
       "fish_group": "Small pelagics",
-      "tons": 34412
+      "tons": 34431
     },
     {
       "fish_group": "Large pelagics",
-      "tons": 13953
+      "tons": 13959
     },
     {
       "fish_group": "Other",
-      "tons": 5648
+      "tons": 5652
     },
     {
       "fish_group": "Small demersals",
-      "tons": 3364
+      "tons": 3354
     },
     {
       "fish_group": "Large demersals",
-      "tons": 2634
+      "tons": 2635
     }
   ],
   "estimated_revenue": [
@@ -42,7 +42,7 @@
     },
     {
       "Area": "North Coast",
-      "Estimated revenue": 111064111
+      "Estimated revenue": 111085890
     },
     {
       "Area": "South Coast",
@@ -134,7 +134,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 1.372
+          "y": 1.369
         },
         {
           "x": "Spear Gun",
@@ -204,7 +204,7 @@
         },
         {
           "x": "Hand Line",
-          "y": 8.88
+          "y": 8.879
         },
         {
           "x": "Long Line",
@@ -216,7 +216,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 3.746
+          "y": 3.745
         }
       ]
     },
@@ -233,7 +233,7 @@
         },
         {
           "x": "Hand Line",
-          "y": 5.531
+          "y": 5.529
         },
         {
           "x": "Beach Seine",
@@ -258,7 +258,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 4.761
+          "y": 4.78
         },
         {
           "x": "Hand Line",
@@ -342,31 +342,31 @@
   "nutrients_per_catch": [
     {
       "nutrient_names": "Selenium",
-      "nut_rdi": 204.2036
+      "nut_rdi": 204.18
     },
     {
       "nutrient_names": "Protein",
-      "nut_rdi": 56.4455
+      "nut_rdi": 56.4393
     },
     {
       "nutrient_names": "Zinc",
-      "nut_rdi": 31.3435
+      "nut_rdi": 31.34
     },
     {
       "nutrient_names": "Vitamin A",
-      "nut_rdi": 15.7969
+      "nut_rdi": 15.7949
     },
     {
       "nutrient_names": "Calcium",
-      "nut_rdi": 13.9414
+      "nut_rdi": 13.9403
     },
     {
       "nutrient_names": "Omega-3",
-      "nut_rdi": 10.5843
+      "nut_rdi": 10.5831
     },
     {
       "nutrient_names": "Iron",
-      "nut_rdi": 5.3113
+      "nut_rdi": 5.3107
     }
   ],
   "nutrients_habitat": [
@@ -399,7 +399,7 @@
         },
         {
           "x": "Beach",
-          "y": 4.121
+          "y": 4.12
         }
       ]
     },
@@ -449,7 +449,7 @@
         },
         {
           "x": "Deep",
-          "y": 0.924
+          "y": 0.923
         },
         {
           "x": "Mangrove",
@@ -457,7 +457,7 @@
         },
         {
           "x": "Beach",
-          "y": 0.703
+          "y": 0.704
         },
         {
           "x": "FAD",
@@ -486,7 +486,7 @@
         },
         {
           "x": "Beach",
-          "y": 1.039
+          "y": 1.04
         },
         {
           "x": "Reef",
@@ -664,31 +664,31 @@
       "municipality": "Bobonaro",
       "catch_preservation": "Box",
       "count": 1,
-      "perc": 0.1086
+      "perc": 0.1081
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Ice box",
       "count": 9,
-      "perc": 0.9772
+      "perc": 0.973
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Open",
-      "count": 871,
-      "perc": 94.5711
+      "count": 875,
+      "perc": 94.5946
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Other",
       "count": 2,
-      "perc": 0.2172
+      "perc": 0.2162
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Shade",
       "count": 38,
-      "perc": 4.126
+      "perc": 4.1081
     },
     {
       "municipality": "Covalima",
@@ -784,7 +784,7 @@
       "municipality": "Liquica",
       "catch_preservation": "Box",
       "count": 3,
-      "perc": 0.2602
+      "perc": 0.258
     },
     {
       "municipality": "Liquica",
@@ -795,20 +795,20 @@
     {
       "municipality": "Liquica",
       "catch_preservation": "Open",
-      "count": 1048,
-      "perc": 90.8933
+      "count": 1058,
+      "perc": 90.9716
     },
     {
       "municipality": "Liquica",
       "catch_preservation": "Other",
       "count": 11,
-      "perc": 0.954
+      "perc": 0.9458
     },
     {
       "municipality": "Liquica",
       "catch_preservation": "Shade",
       "count": 91,
-      "perc": 7.8925
+      "perc": 7.8246
     },
     {
       "municipality": "Manatuto",
@@ -1050,12 +1050,12 @@
     {
       "municipality": "Bobonaro",
       "gear": "gill net",
-      "cpue": 0.8754
+      "cpue": 0.8755
     },
     {
       "municipality": "Bobonaro",
       "gear": "hand line",
-      "cpue": 0.3473
+      "cpue": 0.3469
     },
     {
       "municipality": "Bobonaro",
@@ -1170,12 +1170,12 @@
     {
       "municipality": "Liquica",
       "gear": "gill net",
-      "cpue": 0.508
+      "cpue": 0.5062
     },
     {
       "municipality": "Liquica",
       "gear": "hand line",
-      "cpue": 0.4254
+      "cpue": 0.4194
     },
     {
       "municipality": "Liquica",
