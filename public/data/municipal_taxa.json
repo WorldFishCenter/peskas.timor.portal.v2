@@ -27045,7 +27045,7 @@
     "grouped_taxa": "BEN",
     "landing_weight": 0.0043,
     "n_landings_per_boat": 9.088,
-    "catch": 874.6766,
+    "catch": 874.677,
     "month": "January 2018",
     "year": "2018"
   },
@@ -27065,7 +27065,7 @@
     "grouped_taxa": "CJX",
     "landing_weight": 0.0842,
     "n_landings_per_boat": 9.088,
-    "catch": 17324.166,
+    "catch": 17324.174,
     "month": "January 2018",
     "year": "2018"
   },
@@ -27095,7 +27095,7 @@
     "grouped_taxa": "GZP",
     "landing_weight": 0.0537,
     "n_landings_per_boat": 9.088,
-    "catch": 11050.446,
+    "catch": 11050.4511,
     "month": "January 2018",
     "year": "2018"
   },
@@ -27115,7 +27115,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 0.1448,
     "n_landings_per_boat": 9.088,
-    "catch": 29791.1361,
+    "catch": 29791.1499,
     "month": "January 2018",
     "year": "2018"
   },
@@ -27145,7 +27145,7 @@
     "grouped_taxa": "SNA",
     "landing_weight": 0.0045,
     "n_landings_per_boat": 9.088,
-    "catch": 928.9606,
+    "catch": 928.961,
     "month": "January 2018",
     "year": "2018"
   },
@@ -27165,7 +27165,7 @@
     "grouped_taxa": "BEN",
     "landing_weight": 0.0494,
     "n_landings_per_boat": 8.6714,
-    "catch": 9363.7431,
+    "catch": 9363.6646,
     "month": "February 2018",
     "year": "2018"
   },
@@ -27175,7 +27175,7 @@
     "grouped_taxa": "CGX",
     "landing_weight": 0.0014,
     "n_landings_per_boat": 8.6714,
-    "catch": 266.3193,
+    "catch": 266.3171,
     "month": "February 2018",
     "year": "2018"
   },
@@ -27185,7 +27185,7 @@
     "grouped_taxa": "CJX",
     "landing_weight": 0.029,
     "n_landings_per_boat": 8.6714,
-    "catch": 5497.6973,
+    "catch": 5497.6512,
     "month": "February 2018",
     "year": "2018"
   },
@@ -27225,7 +27225,7 @@
     "grouped_taxa": "LWX",
     "landing_weight": 0.0005,
     "n_landings_per_boat": 8.6714,
-    "catch": 100.1452,
+    "catch": 100.1443,
     "month": "February 2018",
     "year": "2018"
   },
@@ -27235,7 +27235,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 0.1621,
     "n_landings_per_boat": 8.6714,
-    "catch": 30734.0231,
+    "catch": 30733.7653,
     "month": "February 2018",
     "year": "2018"
   },
@@ -27245,7 +27245,7 @@
     "grouped_taxa": "RAX",
     "landing_weight": 0.004,
     "n_landings_per_boat": 8.6714,
-    "catch": 767.6607,
+    "catch": 767.6543,
     "month": "February 2018",
     "year": "2018"
   },
@@ -27255,7 +27255,7 @@
     "grouped_taxa": "SDX",
     "landing_weight": 0.0052,
     "n_landings_per_boat": 8.6714,
-    "catch": 990.1911,
+    "catch": 990.1828,
     "month": "February 2018",
     "year": "2018"
   },
@@ -27265,7 +27265,7 @@
     "grouped_taxa": "SNA",
     "landing_weight": 0.0097,
     "n_landings_per_boat": 8.6714,
-    "catch": 1844.8438,
+    "catch": 1844.8284,
     "month": "February 2018",
     "year": "2018"
   },
@@ -27285,7 +27285,7 @@
     "grouped_taxa": "BEN",
     "landing_weight": 0.0001,
     "n_landings_per_boat": 9.9928,
-    "catch": 9.735,
+    "catch": 9.7348,
     "month": "March 2018",
     "year": "2018"
   },
@@ -27305,7 +27305,7 @@
     "grouped_taxa": "CJX",
     "landing_weight": 0.0059,
     "n_landings_per_boat": 9.9928,
-    "catch": 1033.8128,
+    "catch": 1033.7972,
     "month": "March 2018",
     "year": "2018"
   },
@@ -27355,7 +27355,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 0.2586,
     "n_landings_per_boat": 9.9928,
-    "catch": 44955.4465,
+    "catch": 44954.7684,
     "month": "March 2018",
     "year": "2018"
   },
@@ -27375,7 +27375,7 @@
     "grouped_taxa": "SDX",
     "landing_weight": 0.0878,
     "n_landings_per_boat": 9.9928,
-    "catch": 15269.9323,
+    "catch": 15269.702,
     "month": "March 2018",
     "year": "2018"
   },
@@ -27404,8 +27404,8 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0.0004,
-    "n_landings_per_boat": 11.6148,
-    "catch": 24.0221,
+    "n_landings_per_boat": 11.6149,
+    "catch": 24.0226,
     "month": "April 2018",
     "year": "2018"
   },
@@ -27414,7 +27414,7 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "CGX",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.6148,
+    "n_landings_per_boat": 11.6149,
     "catch": 0,
     "month": "April 2018",
     "year": "2018"
@@ -27424,8 +27424,8 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0.0537,
-    "n_landings_per_boat": 11.6148,
-    "catch": 3188.8101,
+    "n_landings_per_boat": 11.6149,
+    "catch": 3188.8704,
     "month": "April 2018",
     "year": "2018"
   },
@@ -27434,7 +27434,7 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "CLP",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.6148,
+    "n_landings_per_boat": 11.6149,
     "catch": 0,
     "month": "April 2018",
     "year": "2018"
@@ -27444,7 +27444,7 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "FLY",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.6148,
+    "n_landings_per_boat": 11.6149,
     "catch": 0,
     "month": "April 2018",
     "year": "2018"
@@ -27454,7 +27454,7 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "GZP",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.6148,
+    "n_landings_per_boat": 11.6149,
     "catch": 0,
     "month": "April 2018",
     "year": "2018"
@@ -27464,7 +27464,7 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.6148,
+    "n_landings_per_boat": 11.6149,
     "catch": 0,
     "month": "April 2018",
     "year": "2018"
@@ -27474,8 +27474,8 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0.296,
-    "n_landings_per_boat": 11.6148,
-    "catch": 17569.0502,
+    "n_landings_per_boat": 11.6149,
+    "catch": 17569.3821,
     "month": "April 2018",
     "year": "2018"
   },
@@ -27484,7 +27484,7 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.6148,
+    "n_landings_per_boat": 11.6149,
     "catch": 0,
     "month": "April 2018",
     "year": "2018"
@@ -27494,8 +27494,8 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0.0607,
-    "n_landings_per_boat": 11.6148,
-    "catch": 3600.8437,
+    "n_landings_per_boat": 11.6149,
+    "catch": 3600.9118,
     "month": "April 2018",
     "year": "2018"
   },
@@ -27504,7 +27504,7 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.6148,
+    "n_landings_per_boat": 11.6149,
     "catch": 0,
     "month": "April 2018",
     "year": "2018"
@@ -27514,7 +27514,7 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "TUN",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.6148,
+    "n_landings_per_boat": 11.6149,
     "catch": 0,
     "month": "April 2018",
     "year": "2018"
@@ -27545,7 +27545,7 @@
     "grouped_taxa": "CJX",
     "landing_weight": 0.1947,
     "n_landings_per_boat": 13.2508,
-    "catch": 11779.6887,
+    "catch": 11779.763,
     "month": "May 2018",
     "year": "2018"
   },
@@ -27595,7 +27595,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 0.1973,
     "n_landings_per_boat": 13.2508,
-    "catch": 11938.1206,
+    "catch": 11938.1958,
     "month": "May 2018",
     "year": "2018"
   },
@@ -27605,7 +27605,7 @@
     "grouped_taxa": "RAX",
     "landing_weight": 0.0014,
     "n_landings_per_boat": 13.2508,
-    "catch": 86.9511,
+    "catch": 86.9516,
     "month": "May 2018",
     "year": "2018"
   },
@@ -27615,7 +27615,7 @@
     "grouped_taxa": "SDX",
     "landing_weight": 0.0969,
     "n_landings_per_boat": 13.2508,
-    "catch": 5864.1867,
+    "catch": 5864.2236,
     "month": "May 2018",
     "year": "2018"
   },
@@ -27625,7 +27625,7 @@
     "grouped_taxa": "SNA",
     "landing_weight": 0.0033,
     "n_landings_per_boat": 13.2508,
-    "catch": 200.2543,
+    "catch": 200.2556,
     "month": "May 2018",
     "year": "2018"
   },
@@ -38685,7 +38685,7 @@
     "grouped_taxa": "BEN",
     "landing_weight": 3.9372,
     "n_landings_per_boat": 9.7603,
-    "catch": 14649.9321,
+    "catch": 14648.4327,
     "month": "February 2026",
     "year": "2026"
   },
@@ -38693,9 +38693,9 @@
     "region": "Atauro",
     "date_bin_start": "2026-02-01",
     "grouped_taxa": "CGX",
-    "landing_weight": 0.2422,
+    "landing_weight": 0.2421,
     "n_landings_per_boat": 9.7603,
-    "catch": 901.0792,
+    "catch": 900.8787,
     "month": "February 2026",
     "year": "2026"
   },
@@ -38703,9 +38703,9 @@
     "region": "Atauro",
     "date_bin_start": "2026-02-01",
     "grouped_taxa": "CJX",
-    "landing_weight": 3.0443,
+    "landing_weight": 3.0444,
     "n_landings_per_boat": 9.7603,
-    "catch": 11327.6868,
+    "catch": 11326.6487,
     "month": "February 2026",
     "year": "2026"
   },
@@ -38715,7 +38715,7 @@
     "grouped_taxa": "CLP",
     "landing_weight": 0.0057,
     "n_landings_per_boat": 9.7603,
-    "catch": 21.3347,
+    "catch": 21.3325,
     "month": "February 2026",
     "year": "2026"
   },
@@ -38725,7 +38725,7 @@
     "grouped_taxa": "FLY",
     "landing_weight": 0.0087,
     "n_landings_per_boat": 9.7603,
-    "catch": 32.2274,
+    "catch": 32.2241,
     "month": "February 2026",
     "year": "2026"
   },
@@ -38735,7 +38735,7 @@
     "grouped_taxa": "GZP",
     "landing_weight": 0.6243,
     "n_landings_per_boat": 9.7603,
-    "catch": 2323.1448,
+    "catch": 2322.9071,
     "month": "February 2026",
     "year": "2026"
   },
@@ -38745,7 +38745,7 @@
     "grouped_taxa": "LWX",
     "landing_weight": 0.3903,
     "n_landings_per_boat": 9.7603,
-    "catch": 1452.2771,
+    "catch": 1452.1284,
     "month": "February 2026",
     "year": "2026"
   },
@@ -38753,9 +38753,9 @@
     "region": "Atauro",
     "date_bin_start": "2026-02-01",
     "grouped_taxa": "MZZ",
-    "landing_weight": 3.37,
+    "landing_weight": 3.3705,
     "n_landings_per_boat": 9.7603,
-    "catch": 12539.4191,
+    "catch": 12540.0391,
     "month": "February 2026",
     "year": "2026"
   },
@@ -38765,7 +38765,7 @@
     "grouped_taxa": "RAX",
     "landing_weight": 0.4348,
     "n_landings_per_boat": 9.7603,
-    "catch": 1617.7654,
+    "catch": 1617.5998,
     "month": "February 2026",
     "year": "2026"
   },
@@ -38773,9 +38773,9 @@
     "region": "Atauro",
     "date_bin_start": "2026-02-01",
     "grouped_taxa": "SDX",
-    "landing_weight": 0.4561,
+    "landing_weight": 0.4569,
     "n_landings_per_boat": 9.7603,
-    "catch": 1696.9777,
+    "catch": 1699.9455,
     "month": "February 2026",
     "year": "2026"
   },
@@ -38785,7 +38785,7 @@
     "grouped_taxa": "SNA",
     "landing_weight": 0.4852,
     "n_landings_per_boat": 9.7603,
-    "catch": 1805.491,
+    "catch": 1805.1494,
     "month": "February 2026",
     "year": "2026"
   },
@@ -38795,7 +38795,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 0.679,
     "n_landings_per_boat": 9.7603,
-    "catch": 2526.4307,
+    "catch": 2526.2183,
     "month": "February 2026",
     "year": "2026"
   },
@@ -39404,7 +39404,7 @@
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.4905,
+    "n_landings_per_boat": 9.4853,
     "catch": 0,
     "month": "August 2026",
     "year": "2026"
@@ -39413,9 +39413,9 @@
     "region": "Atauro",
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "CGX",
-    "landing_weight": 0.015,
-    "n_landings_per_boat": 9.4905,
-    "catch": 49.5548,
+    "landing_weight": 0.0192,
+    "n_landings_per_boat": 9.4853,
+    "catch": 63.2354,
     "month": "August 2026",
     "year": "2026"
   },
@@ -39423,9 +39423,9 @@
     "region": "Atauro",
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "CJX",
-    "landing_weight": 2.4539,
-    "n_landings_per_boat": 9.4905,
-    "catch": 8104.5977,
+    "landing_weight": 2.4974,
+    "n_landings_per_boat": 9.4853,
+    "catch": 8243.4913,
     "month": "August 2026",
     "year": "2026"
   },
@@ -39434,7 +39434,7 @@
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "CLP",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.4905,
+    "n_landings_per_boat": 9.4853,
     "catch": 0,
     "month": "August 2026",
     "year": "2026"
@@ -39444,7 +39444,7 @@
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "FLY",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.4905,
+    "n_landings_per_boat": 9.4853,
     "catch": 0,
     "month": "August 2026",
     "year": "2026"
@@ -39454,7 +39454,7 @@
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "GZP",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.4905,
+    "n_landings_per_boat": 9.4853,
     "catch": 0,
     "month": "August 2026",
     "year": "2026"
@@ -39464,7 +39464,7 @@
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.4905,
+    "n_landings_per_boat": 9.4853,
     "catch": 0,
     "month": "August 2026",
     "year": "2026"
@@ -39473,9 +39473,9 @@
     "region": "Atauro",
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "MZZ",
-    "landing_weight": 10.3292,
-    "n_landings_per_boat": 9.4905,
-    "catch": 34114.2186,
+    "landing_weight": 10.0509,
+    "n_landings_per_boat": 9.4853,
+    "catch": 33176.6545,
     "month": "August 2026",
     "year": "2026"
   },
@@ -39484,7 +39484,7 @@
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.4905,
+    "n_landings_per_boat": 9.4853,
     "catch": 0,
     "month": "August 2026",
     "year": "2026"
@@ -39493,9 +39493,9 @@
     "region": "Atauro",
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "SDX",
-    "landing_weight": 3.8408,
-    "n_landings_per_boat": 9.4905,
-    "catch": 12685.063,
+    "landing_weight": 4.0353,
+    "n_landings_per_boat": 9.4853,
+    "catch": 13320.069,
     "month": "August 2026",
     "year": "2026"
   },
@@ -39503,9 +39503,9 @@
     "region": "Atauro",
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "SNA",
-    "landing_weight": 0.0144,
-    "n_landings_per_boat": 9.4905,
-    "catch": 47.7195,
+    "landing_weight": 0.0183,
+    "n_landings_per_boat": 9.4853,
+    "catch": 60.5557,
     "month": "August 2026",
     "year": "2026"
   },
@@ -39513,9 +39513,9 @@
     "region": "Atauro",
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "TUN",
-    "landing_weight": 0.6197,
-    "n_landings_per_boat": 9.4905,
-    "catch": 2046.7427,
+    "landing_weight": 0.6302,
+    "n_landings_per_boat": 9.4853,
+    "catch": 2080.2899,
     "month": "August 2026",
     "year": "2026"
   },
@@ -118564,7 +118564,7 @@
     "date_bin_start": "2018-01-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.9278,
+    "n_landings_per_boat": 12.9264,
     "catch": 0,
     "month": "January 2018",
     "year": "2018"
@@ -118574,7 +118574,7 @@
     "date_bin_start": "2018-01-01",
     "grouped_taxa": "CGX",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.9278,
+    "n_landings_per_boat": 12.9264,
     "catch": 0,
     "month": "January 2018",
     "year": "2018"
@@ -118584,8 +118584,8 @@
     "date_bin_start": "2018-01-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0.1615,
-    "n_landings_per_boat": 12.9278,
-    "catch": 1056.2667,
+    "n_landings_per_boat": 12.9264,
+    "catch": 1056.1498,
     "month": "January 2018",
     "year": "2018"
   },
@@ -118594,8 +118594,8 @@
     "date_bin_start": "2018-01-01",
     "grouped_taxa": "CLP",
     "landing_weight": 0.341,
-    "n_landings_per_boat": 12.9278,
-    "catch": 2230.7257,
+    "n_landings_per_boat": 12.9264,
+    "catch": 2230.4787,
     "month": "January 2018",
     "year": "2018"
   },
@@ -118604,8 +118604,8 @@
     "date_bin_start": "2018-01-01",
     "grouped_taxa": "FLY",
     "landing_weight": 0.5348,
-    "n_landings_per_boat": 12.9278,
-    "catch": 3498.463,
+    "n_landings_per_boat": 12.9264,
+    "catch": 3498.0758,
     "month": "January 2018",
     "year": "2018"
   },
@@ -118614,7 +118614,7 @@
     "date_bin_start": "2018-01-01",
     "grouped_taxa": "GZP",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.9278,
+    "n_landings_per_boat": 12.9264,
     "catch": 0,
     "month": "January 2018",
     "year": "2018"
@@ -118624,7 +118624,7 @@
     "date_bin_start": "2018-01-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.9278,
+    "n_landings_per_boat": 12.9264,
     "catch": 0,
     "month": "January 2018",
     "year": "2018"
@@ -118634,7 +118634,7 @@
     "date_bin_start": "2018-01-01",
     "grouped_taxa": "MOO",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.9278,
+    "n_landings_per_boat": 12.9264,
     "catch": 0,
     "month": "January 2018",
     "year": "2018"
@@ -118644,8 +118644,8 @@
     "date_bin_start": "2018-01-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0.2007,
-    "n_landings_per_boat": 12.9278,
-    "catch": 1312.8756,
+    "n_landings_per_boat": 12.9264,
+    "catch": 1312.7303,
     "month": "January 2018",
     "year": "2018"
   },
@@ -118654,7 +118654,7 @@
     "date_bin_start": "2018-01-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.9278,
+    "n_landings_per_boat": 12.9264,
     "catch": 0,
     "month": "January 2018",
     "year": "2018"
@@ -118664,7 +118664,7 @@
     "date_bin_start": "2018-01-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.9278,
+    "n_landings_per_boat": 12.9264,
     "catch": 0,
     "month": "January 2018",
     "year": "2018"
@@ -118674,8 +118674,8 @@
     "date_bin_start": "2018-01-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0.2424,
-    "n_landings_per_boat": 12.9278,
-    "catch": 1585.5345,
+    "n_landings_per_boat": 12.9264,
+    "catch": 1585.359,
     "month": "January 2018",
     "year": "2018"
   },
@@ -118684,7 +118684,7 @@
     "date_bin_start": "2018-01-01",
     "grouped_taxa": "TUN",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.9278,
+    "n_landings_per_boat": 12.9264,
     "catch": 0,
     "month": "January 2018",
     "year": "2018"
@@ -118694,7 +118694,7 @@
     "date_bin_start": "2018-02-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0.0001,
-    "n_landings_per_boat": 14.629,
+    "n_landings_per_boat": 14.6277,
     "catch": 0.5493,
     "month": "February 2018",
     "year": "2018"
@@ -118704,8 +118704,8 @@
     "date_bin_start": "2018-02-01",
     "grouped_taxa": "CGX",
     "landing_weight": 0.0002,
-    "n_landings_per_boat": 14.629,
-    "catch": 1.5159,
+    "n_landings_per_boat": 14.6277,
+    "catch": 1.5158,
     "month": "February 2018",
     "year": "2018"
   },
@@ -118714,8 +118714,8 @@
     "date_bin_start": "2018-02-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0.0096,
-    "n_landings_per_boat": 14.629,
-    "catch": 71.1254,
+    "n_landings_per_boat": 14.6277,
+    "catch": 71.1192,
     "month": "February 2018",
     "year": "2018"
   },
@@ -118724,8 +118724,8 @@
     "date_bin_start": "2018-02-01",
     "grouped_taxa": "CLP",
     "landing_weight": 1.0541,
-    "n_landings_per_boat": 14.629,
-    "catch": 7802.9789,
+    "n_landings_per_boat": 14.6277,
+    "catch": 7802.2962,
     "month": "February 2018",
     "year": "2018"
   },
@@ -118734,8 +118734,8 @@
     "date_bin_start": "2018-02-01",
     "grouped_taxa": "FLY",
     "landing_weight": 0.1582,
-    "n_landings_per_boat": 14.629,
-    "catch": 1170.6939,
+    "n_landings_per_boat": 14.6277,
+    "catch": 1170.5915,
     "month": "February 2018",
     "year": "2018"
   },
@@ -118744,8 +118744,8 @@
     "date_bin_start": "2018-02-01",
     "grouped_taxa": "GZP",
     "landing_weight": 0.2263,
-    "n_landings_per_boat": 14.629,
-    "catch": 1675.2246,
+    "n_landings_per_boat": 14.6277,
+    "catch": 1675.078,
     "month": "February 2018",
     "year": "2018"
   },
@@ -118754,7 +118754,7 @@
     "date_bin_start": "2018-02-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 14.629,
+    "n_landings_per_boat": 14.6277,
     "catch": 0,
     "month": "February 2018",
     "year": "2018"
@@ -118764,8 +118764,8 @@
     "date_bin_start": "2018-02-01",
     "grouped_taxa": "MOO",
     "landing_weight": 0.1144,
-    "n_landings_per_boat": 14.629,
-    "catch": 846.4927,
+    "n_landings_per_boat": 14.6277,
+    "catch": 846.4186,
     "month": "February 2018",
     "year": "2018"
   },
@@ -118774,8 +118774,8 @@
     "date_bin_start": "2018-02-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0.1476,
-    "n_landings_per_boat": 14.629,
-    "catch": 1092.5267,
+    "n_landings_per_boat": 14.6277,
+    "catch": 1092.4311,
     "month": "February 2018",
     "year": "2018"
   },
@@ -118784,7 +118784,7 @@
     "date_bin_start": "2018-02-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 14.629,
+    "n_landings_per_boat": 14.6277,
     "catch": 0,
     "month": "February 2018",
     "year": "2018"
@@ -118794,7 +118794,7 @@
     "date_bin_start": "2018-02-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0,
-    "n_landings_per_boat": 14.629,
+    "n_landings_per_boat": 14.6277,
     "catch": 0,
     "month": "February 2018",
     "year": "2018"
@@ -118804,7 +118804,7 @@
     "date_bin_start": "2018-02-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0,
-    "n_landings_per_boat": 14.629,
+    "n_landings_per_boat": 14.6277,
     "catch": 0,
     "month": "February 2018",
     "year": "2018"
@@ -118814,7 +118814,7 @@
     "date_bin_start": "2018-02-01",
     "grouped_taxa": "TUN",
     "landing_weight": 0,
-    "n_landings_per_boat": 14.629,
+    "n_landings_per_boat": 14.6277,
     "catch": 0,
     "month": "February 2018",
     "year": "2018"
@@ -118824,7 +118824,7 @@
     "date_bin_start": "2018-03-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.896,
+    "n_landings_per_boat": 12.895,
     "catch": 0,
     "month": "March 2018",
     "year": "2018"
@@ -118834,7 +118834,7 @@
     "date_bin_start": "2018-03-01",
     "grouped_taxa": "CGX",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.896,
+    "n_landings_per_boat": 12.895,
     "catch": 0,
     "month": "March 2018",
     "year": "2018"
@@ -118844,8 +118844,8 @@
     "date_bin_start": "2018-03-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0.1398,
-    "n_landings_per_boat": 12.896,
-    "catch": 912.525,
+    "n_landings_per_boat": 12.895,
+    "catch": 912.4517,
     "month": "March 2018",
     "year": "2018"
   },
@@ -118854,8 +118854,8 @@
     "date_bin_start": "2018-03-01",
     "grouped_taxa": "CLP",
     "landing_weight": 0.5492,
-    "n_landings_per_boat": 12.896,
-    "catch": 3583.6901,
+    "n_landings_per_boat": 12.895,
+    "catch": 3583.4021,
     "month": "March 2018",
     "year": "2018"
   },
@@ -118864,8 +118864,8 @@
     "date_bin_start": "2018-03-01",
     "grouped_taxa": "FLY",
     "landing_weight": 0.4276,
-    "n_landings_per_boat": 12.896,
-    "catch": 2790.2402,
+    "n_landings_per_boat": 12.895,
+    "catch": 2790.016,
     "month": "March 2018",
     "year": "2018"
   },
@@ -118874,8 +118874,8 @@
     "date_bin_start": "2018-03-01",
     "grouped_taxa": "GZP",
     "landing_weight": 0.1169,
-    "n_landings_per_boat": 12.896,
-    "catch": 762.7091,
+    "n_landings_per_boat": 12.895,
+    "catch": 762.6478,
     "month": "March 2018",
     "year": "2018"
   },
@@ -118884,7 +118884,7 @@
     "date_bin_start": "2018-03-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.896,
+    "n_landings_per_boat": 12.895,
     "catch": 0,
     "month": "March 2018",
     "year": "2018"
@@ -118894,8 +118894,8 @@
     "date_bin_start": "2018-03-01",
     "grouped_taxa": "MOO",
     "landing_weight": 0.2206,
-    "n_landings_per_boat": 12.896,
-    "catch": 1439.813,
+    "n_landings_per_boat": 12.895,
+    "catch": 1439.6973,
     "month": "March 2018",
     "year": "2018"
   },
@@ -118904,8 +118904,8 @@
     "date_bin_start": "2018-03-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0.1083,
-    "n_landings_per_boat": 12.896,
-    "catch": 706.5283,
+    "n_landings_per_boat": 12.895,
+    "catch": 706.4716,
     "month": "March 2018",
     "year": "2018"
   },
@@ -118914,8 +118914,8 @@
     "date_bin_start": "2018-03-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0.0767,
-    "n_landings_per_boat": 12.896,
-    "catch": 500.5425,
+    "n_landings_per_boat": 12.895,
+    "catch": 500.5023,
     "month": "March 2018",
     "year": "2018"
   },
@@ -118924,7 +118924,7 @@
     "date_bin_start": "2018-03-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.896,
+    "n_landings_per_boat": 12.895,
     "catch": 0,
     "month": "March 2018",
     "year": "2018"
@@ -118934,7 +118934,7 @@
     "date_bin_start": "2018-03-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.896,
+    "n_landings_per_boat": 12.895,
     "catch": 0,
     "month": "March 2018",
     "year": "2018"
@@ -118944,7 +118944,7 @@
     "date_bin_start": "2018-03-01",
     "grouped_taxa": "TUN",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.896,
+    "n_landings_per_boat": 12.895,
     "catch": 0,
     "month": "March 2018",
     "year": "2018"
@@ -118954,7 +118954,7 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0,
-    "n_landings_per_boat": 13.9833,
+    "n_landings_per_boat": 13.9834,
     "catch": 0,
     "month": "April 2018",
     "year": "2018"
@@ -118964,7 +118964,7 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "CGX",
     "landing_weight": 0,
-    "n_landings_per_boat": 13.9833,
+    "n_landings_per_boat": 13.9834,
     "catch": 0,
     "month": "April 2018",
     "year": "2018"
@@ -118974,7 +118974,7 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0,
-    "n_landings_per_boat": 13.9833,
+    "n_landings_per_boat": 13.9834,
     "catch": 0,
     "month": "April 2018",
     "year": "2018"
@@ -118984,8 +118984,8 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "CLP",
     "landing_weight": 0.3193,
-    "n_landings_per_boat": 13.9833,
-    "catch": 2258.9635,
+    "n_landings_per_boat": 13.9834,
+    "catch": 2258.9903,
     "month": "April 2018",
     "year": "2018"
   },
@@ -118994,8 +118994,8 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "FLY",
     "landing_weight": 1.1836,
-    "n_landings_per_boat": 13.9833,
-    "catch": 8374.6838,
+    "n_landings_per_boat": 13.9834,
+    "catch": 8374.7834,
     "month": "April 2018",
     "year": "2018"
   },
@@ -119004,8 +119004,8 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "GZP",
     "landing_weight": 0.7917,
-    "n_landings_per_boat": 13.9833,
-    "catch": 5601.6694,
+    "n_landings_per_boat": 13.9834,
+    "catch": 5601.736,
     "month": "April 2018",
     "year": "2018"
   },
@@ -119014,7 +119014,7 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 13.9833,
+    "n_landings_per_boat": 13.9834,
     "catch": 0,
     "month": "April 2018",
     "year": "2018"
@@ -119024,8 +119024,8 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "MOO",
     "landing_weight": 1.1909,
-    "n_landings_per_boat": 13.9833,
-    "catch": 8426.1819,
+    "n_landings_per_boat": 13.9834,
+    "catch": 8426.2821,
     "month": "April 2018",
     "year": "2018"
   },
@@ -119034,8 +119034,8 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0.2195,
-    "n_landings_per_boat": 13.9833,
-    "catch": 1552.9746,
+    "n_landings_per_boat": 13.9834,
+    "catch": 1552.993,
     "month": "April 2018",
     "year": "2018"
   },
@@ -119044,7 +119044,7 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 13.9833,
+    "n_landings_per_boat": 13.9834,
     "catch": 0,
     "month": "April 2018",
     "year": "2018"
@@ -119054,8 +119054,8 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0.0568,
-    "n_landings_per_boat": 13.9833,
-    "catch": 401.6337,
+    "n_landings_per_boat": 13.9834,
+    "catch": 401.6385,
     "month": "April 2018",
     "year": "2018"
   },
@@ -119064,7 +119064,7 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0,
-    "n_landings_per_boat": 13.9833,
+    "n_landings_per_boat": 13.9834,
     "catch": 0,
     "month": "April 2018",
     "year": "2018"
@@ -119074,7 +119074,7 @@
     "date_bin_start": "2018-04-01",
     "grouped_taxa": "TUN",
     "landing_weight": 0,
-    "n_landings_per_boat": 13.9833,
+    "n_landings_per_boat": 13.9834,
     "catch": 0,
     "month": "April 2018",
     "year": "2018"
@@ -119084,7 +119084,7 @@
     "date_bin_start": "2018-05-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0,
-    "n_landings_per_boat": 13.3646,
+    "n_landings_per_boat": 13.3647,
     "catch": 0,
     "month": "May 2018",
     "year": "2018"
@@ -119094,7 +119094,7 @@
     "date_bin_start": "2018-05-01",
     "grouped_taxa": "CGX",
     "landing_weight": 0,
-    "n_landings_per_boat": 13.3646,
+    "n_landings_per_boat": 13.3647,
     "catch": 0,
     "month": "May 2018",
     "year": "2018"
@@ -119104,7 +119104,7 @@
     "date_bin_start": "2018-05-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0,
-    "n_landings_per_boat": 13.3646,
+    "n_landings_per_boat": 13.3647,
     "catch": 0,
     "month": "May 2018",
     "year": "2018"
@@ -119114,8 +119114,8 @@
     "date_bin_start": "2018-05-01",
     "grouped_taxa": "CLP",
     "landing_weight": 0.0826,
-    "n_landings_per_boat": 13.3646,
-    "catch": 558.5491,
+    "n_landings_per_boat": 13.3647,
+    "catch": 558.554,
     "month": "May 2018",
     "year": "2018"
   },
@@ -119124,8 +119124,8 @@
     "date_bin_start": "2018-05-01",
     "grouped_taxa": "FLY",
     "landing_weight": 2.9683,
-    "n_landings_per_boat": 13.3646,
-    "catch": 20073.3701,
+    "n_landings_per_boat": 13.3647,
+    "catch": 20073.5439,
     "month": "May 2018",
     "year": "2018"
   },
@@ -119134,7 +119134,7 @@
     "date_bin_start": "2018-05-01",
     "grouped_taxa": "GZP",
     "landing_weight": 0,
-    "n_landings_per_boat": 13.3646,
+    "n_landings_per_boat": 13.3647,
     "catch": 0,
     "month": "May 2018",
     "year": "2018"
@@ -119144,7 +119144,7 @@
     "date_bin_start": "2018-05-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 13.3646,
+    "n_landings_per_boat": 13.3647,
     "catch": 0,
     "month": "May 2018",
     "year": "2018"
@@ -119154,7 +119154,7 @@
     "date_bin_start": "2018-05-01",
     "grouped_taxa": "MOO",
     "landing_weight": 0,
-    "n_landings_per_boat": 13.3646,
+    "n_landings_per_boat": 13.3647,
     "catch": 0,
     "month": "May 2018",
     "year": "2018"
@@ -119164,8 +119164,8 @@
     "date_bin_start": "2018-05-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0.0254,
-    "n_landings_per_boat": 13.3646,
-    "catch": 171.4603,
+    "n_landings_per_boat": 13.3647,
+    "catch": 171.4618,
     "month": "May 2018",
     "year": "2018"
   },
@@ -119174,7 +119174,7 @@
     "date_bin_start": "2018-05-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 13.3646,
+    "n_landings_per_boat": 13.3647,
     "catch": 0,
     "month": "May 2018",
     "year": "2018"
@@ -119184,7 +119184,7 @@
     "date_bin_start": "2018-05-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0,
-    "n_landings_per_boat": 13.3646,
+    "n_landings_per_boat": 13.3647,
     "catch": 0,
     "month": "May 2018",
     "year": "2018"
@@ -119194,7 +119194,7 @@
     "date_bin_start": "2018-05-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0,
-    "n_landings_per_boat": 13.3646,
+    "n_landings_per_boat": 13.3647,
     "catch": 0,
     "month": "May 2018",
     "year": "2018"
@@ -119204,7 +119204,7 @@
     "date_bin_start": "2018-05-01",
     "grouped_taxa": "TUN",
     "landing_weight": 0,
-    "n_landings_per_boat": 13.3646,
+    "n_landings_per_boat": 13.3647,
     "catch": 0,
     "month": "May 2018",
     "year": "2018"
@@ -119214,7 +119214,7 @@
     "date_bin_start": "2018-06-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.4888,
+    "n_landings_per_boat": 12.4889,
     "catch": 0,
     "month": "June 2018",
     "year": "2018"
@@ -119224,8 +119224,8 @@
     "date_bin_start": "2018-06-01",
     "grouped_taxa": "CGX",
     "landing_weight": 0.3133,
-    "n_landings_per_boat": 12.4888,
-    "catch": 1979.8145,
+    "n_landings_per_boat": 12.4889,
+    "catch": 1979.8211,
     "month": "June 2018",
     "year": "2018"
   },
@@ -119234,7 +119234,7 @@
     "date_bin_start": "2018-06-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.4888,
+    "n_landings_per_boat": 12.4889,
     "catch": 0,
     "month": "June 2018",
     "year": "2018"
@@ -119244,7 +119244,7 @@
     "date_bin_start": "2018-06-01",
     "grouped_taxa": "CLP",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.4888,
+    "n_landings_per_boat": 12.4889,
     "catch": 0,
     "month": "June 2018",
     "year": "2018"
@@ -119254,8 +119254,8 @@
     "date_bin_start": "2018-06-01",
     "grouped_taxa": "FLY",
     "landing_weight": 5.8827,
-    "n_landings_per_boat": 12.4888,
-    "catch": 37174.9705,
+    "n_landings_per_boat": 12.4889,
+    "catch": 37175.0939,
     "month": "June 2018",
     "year": "2018"
   },
@@ -119264,8 +119264,8 @@
     "date_bin_start": "2018-06-01",
     "grouped_taxa": "GZP",
     "landing_weight": 0.8821,
-    "n_landings_per_boat": 12.4888,
-    "catch": 5574.4559,
+    "n_landings_per_boat": 12.4889,
+    "catch": 5574.4744,
     "month": "June 2018",
     "year": "2018"
   },
@@ -119274,7 +119274,7 @@
     "date_bin_start": "2018-06-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.4888,
+    "n_landings_per_boat": 12.4889,
     "catch": 0,
     "month": "June 2018",
     "year": "2018"
@@ -119284,7 +119284,7 @@
     "date_bin_start": "2018-06-01",
     "grouped_taxa": "MOO",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.4888,
+    "n_landings_per_boat": 12.4889,
     "catch": 0,
     "month": "June 2018",
     "year": "2018"
@@ -119294,8 +119294,8 @@
     "date_bin_start": "2018-06-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 1.6741,
-    "n_landings_per_boat": 12.4888,
-    "catch": 10579.0866,
+    "n_landings_per_boat": 12.4889,
+    "catch": 10579.1217,
     "month": "June 2018",
     "year": "2018"
   },
@@ -119304,7 +119304,7 @@
     "date_bin_start": "2018-06-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.4888,
+    "n_landings_per_boat": 12.4889,
     "catch": 0,
     "month": "June 2018",
     "year": "2018"
@@ -119314,7 +119314,7 @@
     "date_bin_start": "2018-06-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.4888,
+    "n_landings_per_boat": 12.4889,
     "catch": 0,
     "month": "June 2018",
     "year": "2018"
@@ -119324,7 +119324,7 @@
     "date_bin_start": "2018-06-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.4888,
+    "n_landings_per_boat": 12.4889,
     "catch": 0,
     "month": "June 2018",
     "year": "2018"
@@ -119334,7 +119334,7 @@
     "date_bin_start": "2018-06-01",
     "grouped_taxa": "TUN",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.4888,
+    "n_landings_per_boat": 12.4889,
     "catch": 0,
     "month": "June 2018",
     "year": "2018"
@@ -119344,7 +119344,7 @@
     "date_bin_start": "2018-07-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.9245,
+    "n_landings_per_boat": 12.9243,
     "catch": 0,
     "month": "July 2018",
     "year": "2018"
@@ -119354,7 +119354,7 @@
     "date_bin_start": "2018-07-01",
     "grouped_taxa": "CGX",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.9245,
+    "n_landings_per_boat": 12.9243,
     "catch": 0,
     "month": "July 2018",
     "year": "2018"
@@ -119364,7 +119364,7 @@
     "date_bin_start": "2018-07-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.9245,
+    "n_landings_per_boat": 12.9243,
     "catch": 0,
     "month": "July 2018",
     "year": "2018"
@@ -119374,7 +119374,7 @@
     "date_bin_start": "2018-07-01",
     "grouped_taxa": "CLP",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.9245,
+    "n_landings_per_boat": 12.9243,
     "catch": 0,
     "month": "July 2018",
     "year": "2018"
@@ -119384,8 +119384,8 @@
     "date_bin_start": "2018-07-01",
     "grouped_taxa": "FLY",
     "landing_weight": 0.6639,
-    "n_landings_per_boat": 12.9245,
-    "catch": 4341.4639,
+    "n_landings_per_boat": 12.9243,
+    "catch": 4341.4097,
     "month": "July 2018",
     "year": "2018"
   },
@@ -119394,7 +119394,7 @@
     "date_bin_start": "2018-07-01",
     "grouped_taxa": "GZP",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.9245,
+    "n_landings_per_boat": 12.9243,
     "catch": 0,
     "month": "July 2018",
     "year": "2018"
@@ -119404,7 +119404,7 @@
     "date_bin_start": "2018-07-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.9245,
+    "n_landings_per_boat": 12.9243,
     "catch": 0,
     "month": "July 2018",
     "year": "2018"
@@ -119414,8 +119414,8 @@
     "date_bin_start": "2018-07-01",
     "grouped_taxa": "MOO",
     "landing_weight": 46.9102,
-    "n_landings_per_boat": 12.9245,
-    "catch": 306783.1215,
+    "n_landings_per_boat": 12.9243,
+    "catch": 306779.2926,
     "month": "July 2018",
     "year": "2018"
   },
@@ -119424,8 +119424,8 @@
     "date_bin_start": "2018-07-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0.124,
-    "n_landings_per_boat": 12.9245,
-    "catch": 811.0304,
+    "n_landings_per_boat": 12.9243,
+    "catch": 811.0203,
     "month": "July 2018",
     "year": "2018"
   },
@@ -119434,7 +119434,7 @@
     "date_bin_start": "2018-07-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.9245,
+    "n_landings_per_boat": 12.9243,
     "catch": 0,
     "month": "July 2018",
     "year": "2018"
@@ -119444,7 +119444,7 @@
     "date_bin_start": "2018-07-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.9245,
+    "n_landings_per_boat": 12.9243,
     "catch": 0,
     "month": "July 2018",
     "year": "2018"
@@ -119454,7 +119454,7 @@
     "date_bin_start": "2018-07-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.9245,
+    "n_landings_per_boat": 12.9243,
     "catch": 0,
     "month": "July 2018",
     "year": "2018"
@@ -119464,7 +119464,7 @@
     "date_bin_start": "2018-07-01",
     "grouped_taxa": "TUN",
     "landing_weight": 0,
-    "n_landings_per_boat": 12.9245,
+    "n_landings_per_boat": 12.9243,
     "catch": 0,
     "month": "July 2018",
     "year": "2018"
@@ -120255,7 +120255,7 @@
     "grouped_taxa": "BEN",
     "landing_weight": 0.0355,
     "n_landings_per_boat": 12,
-    "catch": 170.1749,
+    "catch": 170.1967,
     "month": "February 2019",
     "year": "2019"
   },
@@ -120263,9 +120263,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2019-02-01",
     "grouped_taxa": "CGX",
-    "landing_weight": 0.0749,
+    "landing_weight": 0.0748,
     "n_landings_per_boat": 12,
-    "catch": 358.5565,
+    "catch": 358.2363,
     "month": "February 2019",
     "year": "2019"
   },
@@ -120275,7 +120275,7 @@
     "grouped_taxa": "CJX",
     "landing_weight": 0.1625,
     "n_landings_per_boat": 12,
-    "catch": 778.5019,
+    "catch": 778.6017,
     "month": "February 2019",
     "year": "2019"
   },
@@ -120285,7 +120285,7 @@
     "grouped_taxa": "CLP",
     "landing_weight": 6.8868,
     "n_landings_per_boat": 12,
-    "catch": 32986.6776,
+    "catch": 32990.9059,
     "month": "February 2019",
     "year": "2019"
   },
@@ -120295,7 +120295,7 @@
     "grouped_taxa": "FLY",
     "landing_weight": 1.6618,
     "n_landings_per_boat": 12,
-    "catch": 7959.5503,
+    "catch": 7960.5705,
     "month": "February 2019",
     "year": "2019"
   },
@@ -120303,9 +120303,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2019-02-01",
     "grouped_taxa": "GZP",
-    "landing_weight": 12.5651,
+    "landing_weight": 12.5741,
     "n_landings_per_boat": 12,
-    "catch": 60185.144,
+    "catch": 60235.9207,
     "month": "February 2019",
     "year": "2019"
   },
@@ -120315,7 +120315,7 @@
     "grouped_taxa": "LWX",
     "landing_weight": 0.0005,
     "n_landings_per_boat": 12,
-    "catch": 2.561,
+    "catch": 2.5614,
     "month": "February 2019",
     "year": "2019"
   },
@@ -120323,9 +120323,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2019-02-01",
     "grouped_taxa": "MOO",
-    "landing_weight": 5.5493,
+    "landing_weight": 5.53,
     "n_landings_per_boat": 12,
-    "catch": 26580.1857,
+    "catch": 26491.2183,
     "month": "February 2019",
     "year": "2019"
   },
@@ -120335,7 +120335,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 0.2949,
     "n_landings_per_boat": 12,
-    "catch": 1412.7276,
+    "catch": 1412.7736,
     "month": "February 2019",
     "year": "2019"
   },
@@ -120345,7 +120345,7 @@
     "grouped_taxa": "RAX",
     "landing_weight": 0.083,
     "n_landings_per_boat": 12,
-    "catch": 397.419,
+    "catch": 397.4699,
     "month": "February 2019",
     "year": "2019"
   },
@@ -120355,7 +120355,7 @@
     "grouped_taxa": "SDX",
     "landing_weight": 0.1342,
     "n_landings_per_boat": 12,
-    "catch": 642.5654,
+    "catch": 642.6478,
     "month": "February 2019",
     "year": "2019"
   },
@@ -120365,7 +120365,7 @@
     "grouped_taxa": "SNA",
     "landing_weight": 0.0512,
     "n_landings_per_boat": 12,
-    "catch": 245.3688,
+    "catch": 245.4003,
     "month": "February 2019",
     "year": "2019"
   },
@@ -120373,9 +120373,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2019-02-01",
     "grouped_taxa": "TUN",
-    "landing_weight": 5.4427,
+    "landing_weight": 5.4361,
     "n_landings_per_boat": 12,
-    "catch": 26069.656,
+    "catch": 26041.4223,
     "month": "February 2019",
     "year": "2019"
   },
@@ -125584,8 +125584,8 @@
     "date_bin_start": "2022-07-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0.8511,
-    "n_landings_per_boat": 10.6657,
-    "catch": 4593.3753,
+    "n_landings_per_boat": 10.6658,
+    "catch": 4593.4187,
     "month": "July 2022",
     "year": "2022"
   },
@@ -125594,7 +125594,7 @@
     "date_bin_start": "2022-07-01",
     "grouped_taxa": "CGX",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.6657,
+    "n_landings_per_boat": 10.6658,
     "catch": 0,
     "month": "July 2022",
     "year": "2022"
@@ -125604,7 +125604,7 @@
     "date_bin_start": "2022-07-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.6657,
+    "n_landings_per_boat": 10.6658,
     "catch": 0,
     "month": "July 2022",
     "year": "2022"
@@ -125614,7 +125614,7 @@
     "date_bin_start": "2022-07-01",
     "grouped_taxa": "CLP",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.6657,
+    "n_landings_per_boat": 10.6658,
     "catch": 0,
     "month": "July 2022",
     "year": "2022"
@@ -125624,8 +125624,8 @@
     "date_bin_start": "2022-07-01",
     "grouped_taxa": "FLY",
     "landing_weight": 1.7017,
-    "n_landings_per_boat": 10.6657,
-    "catch": 9183.7194,
+    "n_landings_per_boat": 10.6658,
+    "catch": 9183.8063,
     "month": "July 2022",
     "year": "2022"
   },
@@ -125634,8 +125634,8 @@
     "date_bin_start": "2022-07-01",
     "grouped_taxa": "GZP",
     "landing_weight": 0.4689,
-    "n_landings_per_boat": 10.6657,
-    "catch": 2530.6199,
+    "n_landings_per_boat": 10.6658,
+    "catch": 2530.6438,
     "month": "July 2022",
     "year": "2022"
   },
@@ -125644,7 +125644,7 @@
     "date_bin_start": "2022-07-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.6657,
+    "n_landings_per_boat": 10.6658,
     "catch": 0,
     "month": "July 2022",
     "year": "2022"
@@ -125654,8 +125654,8 @@
     "date_bin_start": "2022-07-01",
     "grouped_taxa": "MOO",
     "landing_weight": 34.4591,
-    "n_landings_per_boat": 10.6657,
-    "catch": 185970.4169,
+    "n_landings_per_boat": 10.6658,
+    "catch": 185972.1759,
     "month": "July 2022",
     "year": "2022"
   },
@@ -125664,8 +125664,8 @@
     "date_bin_start": "2022-07-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0.318,
-    "n_landings_per_boat": 10.6657,
-    "catch": 1716.4407,
+    "n_landings_per_boat": 10.6658,
+    "catch": 1716.4569,
     "month": "July 2022",
     "year": "2022"
   },
@@ -125674,7 +125674,7 @@
     "date_bin_start": "2022-07-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.6657,
+    "n_landings_per_boat": 10.6658,
     "catch": 0,
     "month": "July 2022",
     "year": "2022"
@@ -125684,7 +125684,7 @@
     "date_bin_start": "2022-07-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0.0005,
-    "n_landings_per_boat": 10.6657,
+    "n_landings_per_boat": 10.6658,
     "catch": 2.8549,
     "month": "July 2022",
     "year": "2022"
@@ -125694,7 +125694,7 @@
     "date_bin_start": "2022-07-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.6657,
+    "n_landings_per_boat": 10.6658,
     "catch": 0,
     "month": "July 2022",
     "year": "2022"
@@ -125704,8 +125704,8 @@
     "date_bin_start": "2022-07-01",
     "grouped_taxa": "TUN",
     "landing_weight": 0.067,
-    "n_landings_per_boat": 10.6657,
-    "catch": 361.4018,
+    "n_landings_per_boat": 10.6658,
+    "catch": 361.4053,
     "month": "July 2022",
     "year": "2022"
   },
@@ -125714,7 +125714,7 @@
     "date_bin_start": "2022-08-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.2966,
+    "n_landings_per_boat": 9.2967,
     "catch": 0,
     "month": "August 2022",
     "year": "2022"
@@ -125724,7 +125724,7 @@
     "date_bin_start": "2022-08-01",
     "grouped_taxa": "CGX",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.2966,
+    "n_landings_per_boat": 9.2967,
     "catch": 0,
     "month": "August 2022",
     "year": "2022"
@@ -125734,7 +125734,7 @@
     "date_bin_start": "2022-08-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0.0014,
-    "n_landings_per_boat": 9.2966,
+    "n_landings_per_boat": 9.2967,
     "catch": 6.8209,
     "month": "August 2022",
     "year": "2022"
@@ -125744,7 +125744,7 @@
     "date_bin_start": "2022-08-01",
     "grouped_taxa": "CLP",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.2966,
+    "n_landings_per_boat": 9.2967,
     "catch": 0,
     "month": "August 2022",
     "year": "2022"
@@ -125754,8 +125754,8 @@
     "date_bin_start": "2022-08-01",
     "grouped_taxa": "FLY",
     "landing_weight": 5.0143,
-    "n_landings_per_boat": 9.2966,
-    "catch": 23587.8101,
+    "n_landings_per_boat": 9.2967,
+    "catch": 23587.9592,
     "month": "August 2022",
     "year": "2022"
   },
@@ -125764,7 +125764,7 @@
     "date_bin_start": "2022-08-01",
     "grouped_taxa": "GZP",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.2966,
+    "n_landings_per_boat": 9.2967,
     "catch": 0,
     "month": "August 2022",
     "year": "2022"
@@ -125774,7 +125774,7 @@
     "date_bin_start": "2022-08-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.2966,
+    "n_landings_per_boat": 9.2967,
     "catch": 0,
     "month": "August 2022",
     "year": "2022"
@@ -125784,8 +125784,8 @@
     "date_bin_start": "2022-08-01",
     "grouped_taxa": "MOO",
     "landing_weight": 17.914,
-    "n_landings_per_boat": 9.2966,
-    "catch": 84268.7581,
+    "n_landings_per_boat": 9.2967,
+    "catch": 84269.2906,
     "month": "August 2022",
     "year": "2022"
   },
@@ -125794,8 +125794,8 @@
     "date_bin_start": "2022-08-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0.1446,
-    "n_landings_per_boat": 9.2966,
-    "catch": 680.0457,
+    "n_landings_per_boat": 9.2967,
+    "catch": 680.05,
     "month": "August 2022",
     "year": "2022"
   },
@@ -125804,8 +125804,8 @@
     "date_bin_start": "2022-08-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0.5691,
-    "n_landings_per_boat": 9.2966,
-    "catch": 2677.3074,
+    "n_landings_per_boat": 9.2967,
+    "catch": 2677.3243,
     "month": "August 2022",
     "year": "2022"
   },
@@ -125814,7 +125814,7 @@
     "date_bin_start": "2022-08-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0.0006,
-    "n_landings_per_boat": 9.2966,
+    "n_landings_per_boat": 9.2967,
     "catch": 2.8158,
     "month": "August 2022",
     "year": "2022"
@@ -125824,7 +125824,7 @@
     "date_bin_start": "2022-08-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.2966,
+    "n_landings_per_boat": 9.2967,
     "catch": 0,
     "month": "August 2022",
     "year": "2022"
@@ -125834,8 +125834,8 @@
     "date_bin_start": "2022-08-01",
     "grouped_taxa": "TUN",
     "landing_weight": 0.1461,
-    "n_landings_per_boat": 9.2966,
-    "catch": 687.4568,
+    "n_landings_per_boat": 9.2967,
+    "catch": 687.4612,
     "month": "August 2022",
     "year": "2022"
   },
@@ -126495,7 +126495,7 @@
     "grouped_taxa": "BEN",
     "landing_weight": 0.0269,
     "n_landings_per_boat": 6,
-    "catch": 103.1072,
+    "catch": 103.0869,
     "month": "February 2023",
     "year": "2023"
   },
@@ -126503,9 +126503,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2023-02-01",
     "grouped_taxa": "CGX",
-    "landing_weight": 0.0772,
+    "landing_weight": 0.077,
     "n_landings_per_boat": 6,
-    "catch": 295.9428,
+    "catch": 295.3695,
     "month": "February 2023",
     "year": "2023"
   },
@@ -126515,7 +126515,7 @@
     "grouped_taxa": "CJX",
     "landing_weight": 0.1957,
     "n_landings_per_boat": 6,
-    "catch": 750.6439,
+    "catch": 750.496,
     "month": "February 2023",
     "year": "2023"
   },
@@ -126525,7 +126525,7 @@
     "grouped_taxa": "CLP",
     "landing_weight": 4.38,
     "n_landings_per_boat": 6,
-    "catch": 16798.2905,
+    "catch": 16794.9795,
     "month": "February 2023",
     "year": "2023"
   },
@@ -126535,7 +126535,7 @@
     "grouped_taxa": "FLY",
     "landing_weight": 2.0639,
     "n_landings_per_boat": 6,
-    "catch": 7915.6981,
+    "catch": 7914.1379,
     "month": "February 2023",
     "year": "2023"
   },
@@ -126543,9 +126543,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2023-02-01",
     "grouped_taxa": "GZP",
-    "landing_weight": 7.9035,
+    "landing_weight": 7.9076,
     "n_landings_per_boat": 6,
-    "catch": 30311.9523,
+    "catch": 30321.477,
     "month": "February 2023",
     "year": "2023"
   },
@@ -126555,7 +126555,7 @@
     "grouped_taxa": "LWX",
     "landing_weight": 0.0004,
     "n_landings_per_boat": 6,
-    "catch": 1.6514,
+    "catch": 1.6511,
     "month": "February 2023",
     "year": "2023"
   },
@@ -126563,9 +126563,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2023-02-01",
     "grouped_taxa": "MOO",
-    "landing_weight": 6.8661,
+    "landing_weight": 6.8515,
     "n_landings_per_boat": 6,
-    "catch": 26333.1629,
+    "catch": 26271.9234,
     "month": "February 2023",
     "year": "2023"
   },
@@ -126575,7 +126575,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 0.2716,
     "n_landings_per_boat": 6,
-    "catch": 1041.6013,
+    "catch": 1041.3055,
     "month": "February 2023",
     "year": "2023"
   },
@@ -126585,7 +126585,7 @@
     "grouped_taxa": "RAX",
     "landing_weight": 0.051,
     "n_landings_per_boat": 6,
-    "catch": 195.5703,
+    "catch": 195.5317,
     "month": "February 2023",
     "year": "2023"
   },
@@ -126595,7 +126595,7 @@
     "grouped_taxa": "SDX",
     "landing_weight": 0.1223,
     "n_landings_per_boat": 6,
-    "catch": 469.0351,
+    "catch": 468.9427,
     "month": "February 2023",
     "year": "2023"
   },
@@ -126605,7 +126605,7 @@
     "grouped_taxa": "SNA",
     "landing_weight": 0.0757,
     "n_landings_per_boat": 6,
-    "catch": 290.3427,
+    "catch": 290.2854,
     "month": "February 2023",
     "year": "2023"
   },
@@ -126613,9 +126613,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2023-02-01",
     "grouped_taxa": "TUN",
-    "landing_weight": 5.6483,
+    "landing_weight": 5.6432,
     "n_landings_per_boat": 6,
-    "catch": 21662.5127,
+    "catch": 21638.91,
     "month": "February 2023",
     "year": "2023"
   },
@@ -127055,7 +127055,7 @@
     "grouped_taxa": "FLY",
     "landing_weight": 1.1896,
     "n_landings_per_boat": 9.0102,
-    "catch": 5423.6662,
+    "catch": 5423.7023,
     "month": "June 2023",
     "year": "2023"
   },
@@ -127065,7 +127065,7 @@
     "grouped_taxa": "GZP",
     "landing_weight": 1.9567,
     "n_landings_per_boat": 9.0102,
-    "catch": 8920.7215,
+    "catch": 8920.7809,
     "month": "June 2023",
     "year": "2023"
   },
@@ -127085,7 +127085,7 @@
     "grouped_taxa": "MOO",
     "landing_weight": 61.9101,
     "n_landings_per_boat": 9.0102,
-    "catch": 282256.5303,
+    "catch": 282258.4102,
     "month": "June 2023",
     "year": "2023"
   },
@@ -127135,7 +127135,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 1.1588,
     "n_landings_per_boat": 9.0102,
-    "catch": 5283.0233,
+    "catch": 5283.0585,
     "month": "June 2023",
     "year": "2023"
   },
@@ -127175,7 +127175,7 @@
     "grouped_taxa": "CLP",
     "landing_weight": 0.1798,
     "n_landings_per_boat": 10.9787,
-    "catch": 998.7992,
+    "catch": 998.8,
     "month": "July 2023",
     "year": "2023"
   },
@@ -127185,7 +127185,7 @@
     "grouped_taxa": "FLY",
     "landing_weight": 0.9458,
     "n_landings_per_boat": 10.9787,
-    "catch": 5254.2167,
+    "catch": 5254.221,
     "month": "July 2023",
     "year": "2023"
   },
@@ -127195,7 +127195,7 @@
     "grouped_taxa": "GZP",
     "landing_weight": 23.7192,
     "n_landings_per_boat": 10.9787,
-    "catch": 131765.2513,
+    "catch": 131765.3601,
     "month": "July 2023",
     "year": "2023"
   },
@@ -127225,7 +127225,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 1.6094,
     "n_landings_per_boat": 10.9787,
-    "catch": 8940.4239,
+    "catch": 8940.4312,
     "month": "July 2023",
     "year": "2023"
   },
@@ -127295,7 +127295,7 @@
     "grouped_taxa": "CJX",
     "landing_weight": 0.2986,
     "n_landings_per_boat": 11.8762,
-    "catch": 1794.3315,
+    "catch": 1794.3306,
     "month": "August 2023",
     "year": "2023"
   },
@@ -127305,7 +127305,7 @@
     "grouped_taxa": "CLP",
     "landing_weight": 0.7188,
     "n_landings_per_boat": 11.8762,
-    "catch": 4319.6799,
+    "catch": 4319.6778,
     "month": "August 2023",
     "year": "2023"
   },
@@ -127315,7 +127315,7 @@
     "grouped_taxa": "FLY",
     "landing_weight": 2.1409,
     "n_landings_per_boat": 11.8762,
-    "catch": 12865.3451,
+    "catch": 12865.3391,
     "month": "August 2023",
     "year": "2023"
   },
@@ -127325,7 +127325,7 @@
     "grouped_taxa": "GZP",
     "landing_weight": 11.7108,
     "n_landings_per_boat": 11.8762,
-    "catch": 70374.2659,
+    "catch": 70374.233,
     "month": "August 2023",
     "year": "2023"
   },
@@ -127345,7 +127345,7 @@
     "grouped_taxa": "MOO",
     "landing_weight": 0.415,
     "n_landings_per_boat": 11.8762,
-    "catch": 2494.1147,
+    "catch": 2494.1136,
     "month": "August 2023",
     "year": "2023"
   },
@@ -127355,7 +127355,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 0.0373,
     "n_landings_per_boat": 11.8762,
-    "catch": 224.4311,
+    "catch": 224.431,
     "month": "August 2023",
     "year": "2023"
   },
@@ -127395,7 +127395,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 6.7798,
     "n_landings_per_boat": 11.8762,
-    "catch": 40742.1507,
+    "catch": 40742.1316,
     "month": "August 2023",
     "year": "2023"
   },
@@ -127925,7 +127925,7 @@
     "grouped_taxa": "BEN",
     "landing_weight": 0.0659,
     "n_landings_per_boat": 13,
-    "catch": 442.4965,
+    "catch": 442.6461,
     "month": "January 2024",
     "year": "2024"
   },
@@ -127933,9 +127933,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2024-01-01",
     "grouped_taxa": "CGX",
-    "landing_weight": 0.0643,
+    "landing_weight": 0.0641,
     "n_landings_per_boat": 13,
-    "catch": 431.3897,
+    "catch": 430.5458,
     "month": "January 2024",
     "year": "2024"
   },
@@ -127945,7 +127945,7 @@
     "grouped_taxa": "CJX",
     "landing_weight": 0.165,
     "n_landings_per_boat": 13,
-    "catch": 1108.005,
+    "catch": 1108.3797,
     "month": "January 2024",
     "year": "2024"
   },
@@ -127955,7 +127955,7 @@
     "grouped_taxa": "CLP",
     "landing_weight": 5.4344,
     "n_landings_per_boat": 13,
-    "catch": 36485.5611,
+    "catch": 36497.899,
     "month": "January 2024",
     "year": "2024"
   },
@@ -127965,7 +127965,7 @@
     "grouped_taxa": "FLY",
     "landing_weight": 1.4464,
     "n_landings_per_boat": 13,
-    "catch": 9710.5696,
+    "catch": 9713.8533,
     "month": "January 2024",
     "year": "2024"
   },
@@ -127973,9 +127973,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2024-01-01",
     "grouped_taxa": "GZP",
-    "landing_weight": 11.1325,
+    "landing_weight": 11.1376,
     "n_landings_per_boat": 13,
-    "catch": 74741.7743,
+    "catch": 74801.2195,
     "month": "January 2024",
     "year": "2024"
   },
@@ -127985,7 +127985,7 @@
     "grouped_taxa": "LWX",
     "landing_weight": 0.0006,
     "n_landings_per_boat": 13,
-    "catch": 3.9236,
+    "catch": 3.9249,
     "month": "January 2024",
     "year": "2024"
   },
@@ -127993,9 +127993,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2024-01-01",
     "grouped_taxa": "MOO",
-    "landing_weight": 3.4404,
+    "landing_weight": 3.4331,
     "n_landings_per_boat": 13,
-    "catch": 23098.1753,
+    "catch": 23056.8129,
     "month": "January 2024",
     "year": "2024"
   },
@@ -128005,7 +128005,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 0.2712,
     "n_landings_per_boat": 13,
-    "catch": 1820.9133,
+    "catch": 1821.3685,
     "month": "January 2024",
     "year": "2024"
   },
@@ -128015,7 +128015,7 @@
     "grouped_taxa": "RAX",
     "landing_weight": 0.0589,
     "n_landings_per_boat": 13,
-    "catch": 395.19,
+    "catch": 395.3236,
     "month": "January 2024",
     "year": "2024"
   },
@@ -128025,7 +128025,7 @@
     "grouped_taxa": "SDX",
     "landing_weight": 0.1071,
     "n_landings_per_boat": 13,
-    "catch": 718.7395,
+    "catch": 718.9825,
     "month": "January 2024",
     "year": "2024"
   },
@@ -128035,7 +128035,7 @@
     "grouped_taxa": "SNA",
     "landing_weight": 0.0866,
     "n_landings_per_boat": 13,
-    "catch": 581.5201,
+    "catch": 581.7167,
     "month": "January 2024",
     "year": "2024"
   },
@@ -128043,9 +128043,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2024-01-01",
     "grouped_taxa": "TUN",
-    "landing_weight": 7.5233,
+    "landing_weight": 7.5108,
     "n_landings_per_boat": 13,
-    "catch": 50509.9293,
+    "catch": 50443.2604,
     "month": "January 2024",
     "year": "2024"
   },
@@ -128185,7 +128185,7 @@
     "grouped_taxa": "BEN",
     "landing_weight": 0.0493,
     "n_landings_per_boat": 19,
-    "catch": 366.8531,
+    "catch": 366.8906,
     "month": "March 2024",
     "year": "2024"
   },
@@ -128193,9 +128193,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2024-03-01",
     "grouped_taxa": "CGX",
-    "landing_weight": 0.0754,
+    "landing_weight": 0.0752,
     "n_landings_per_boat": 19,
-    "catch": 561.7944,
+    "catch": 560.0649,
     "month": "March 2024",
     "year": "2024"
   },
@@ -128205,7 +128205,7 @@
     "grouped_taxa": "CJX",
     "landing_weight": 0.119,
     "n_landings_per_boat": 19,
-    "catch": 886.0348,
+    "catch": 886.1253,
     "month": "March 2024",
     "year": "2024"
   },
@@ -128215,7 +128215,7 @@
     "grouped_taxa": "CLP",
     "landing_weight": 7.4484,
     "n_landings_per_boat": 19,
-    "catch": 55472.3272,
+    "catch": 55477.9961,
     "month": "March 2024",
     "year": "2024"
   },
@@ -128225,7 +128225,7 @@
     "grouped_taxa": "FLY",
     "landing_weight": 2.6768,
     "n_landings_per_boat": 19,
-    "catch": 19935.4631,
+    "catch": 19937.5003,
     "month": "March 2024",
     "year": "2024"
   },
@@ -128233,9 +128233,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2024-03-01",
     "grouped_taxa": "GZP",
-    "landing_weight": 8.638,
+    "landing_weight": 8.6448,
     "n_landings_per_boat": 19,
-    "catch": 64331.813,
+    "catch": 64389.2288,
     "month": "March 2024",
     "year": "2024"
   },
@@ -128245,7 +128245,7 @@
     "grouped_taxa": "LWX",
     "landing_weight": 0.0004,
     "n_landings_per_boat": 19,
-    "catch": 3.2477,
+    "catch": 3.248,
     "month": "March 2024",
     "year": "2024"
   },
@@ -128253,9 +128253,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2024-03-01",
     "grouped_taxa": "MOO",
-    "landing_weight": 6.5931,
+    "landing_weight": 6.5755,
     "n_landings_per_boat": 19,
-    "catch": 49102.5663,
+    "catch": 48976.181,
     "month": "March 2024",
     "year": "2024"
   },
@@ -128265,7 +128265,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 0.2714,
     "n_landings_per_boat": 19,
-    "catch": 2021.6312,
+    "catch": 2021.4189,
     "month": "March 2024",
     "year": "2024"
   },
@@ -128275,7 +128275,7 @@
     "grouped_taxa": "RAX",
     "landing_weight": 0.076,
     "n_landings_per_boat": 19,
-    "catch": 565.6436,
+    "catch": 565.7014,
     "month": "March 2024",
     "year": "2024"
   },
@@ -128285,7 +128285,7 @@
     "grouped_taxa": "SDX",
     "landing_weight": 0.1386,
     "n_landings_per_boat": 19,
-    "catch": 1032.3549,
+    "catch": 1032.4604,
     "month": "March 2024",
     "year": "2024"
   },
@@ -128295,7 +128295,7 @@
     "grouped_taxa": "SNA",
     "landing_weight": 0.0494,
     "n_landings_per_boat": 19,
-    "catch": 368.1116,
+    "catch": 368.1492,
     "month": "March 2024",
     "year": "2024"
   },
@@ -128303,9 +128303,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2024-03-01",
     "grouped_taxa": "TUN",
-    "landing_weight": 6.409,
+    "landing_weight": 6.4018,
     "n_landings_per_boat": 19,
-    "catch": 47731.677,
+    "catch": 47682.8303,
     "month": "March 2024",
     "year": "2024"
   },
@@ -128444,8 +128444,8 @@
     "date_bin_start": "2024-05-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0.0277,
-    "n_landings_per_boat": 9.586,
-    "catch": 134.4078,
+    "n_landings_per_boat": 9.5861,
+    "catch": 134.4084,
     "month": "May 2024",
     "year": "2024"
   },
@@ -128454,8 +128454,8 @@
     "date_bin_start": "2024-05-01",
     "grouped_taxa": "CGX",
     "landing_weight": 1.4976,
-    "n_landings_per_boat": 9.586,
-    "catch": 7264.2804,
+    "n_landings_per_boat": 9.5861,
+    "catch": 7264.3152,
     "month": "May 2024",
     "year": "2024"
   },
@@ -128464,8 +128464,8 @@
     "date_bin_start": "2024-05-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0.5783,
-    "n_landings_per_boat": 9.586,
-    "catch": 2805.2857,
+    "n_landings_per_boat": 9.5861,
+    "catch": 2805.2992,
     "month": "May 2024",
     "year": "2024"
   },
@@ -128474,7 +128474,7 @@
     "date_bin_start": "2024-05-01",
     "grouped_taxa": "CLP",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.586,
+    "n_landings_per_boat": 9.5861,
     "catch": 0,
     "month": "May 2024",
     "year": "2024"
@@ -128484,8 +128484,8 @@
     "date_bin_start": "2024-05-01",
     "grouped_taxa": "FLY",
     "landing_weight": 1.8813,
-    "n_landings_per_boat": 9.586,
-    "catch": 9125.3995,
+    "n_landings_per_boat": 9.5861,
+    "catch": 9125.4434,
     "month": "May 2024",
     "year": "2024"
   },
@@ -128494,8 +128494,8 @@
     "date_bin_start": "2024-05-01",
     "grouped_taxa": "GZP",
     "landing_weight": 1.9744,
-    "n_landings_per_boat": 9.586,
-    "catch": 9577.0678,
+    "n_landings_per_boat": 9.5861,
+    "catch": 9577.1137,
     "month": "May 2024",
     "year": "2024"
   },
@@ -128504,7 +128504,7 @@
     "date_bin_start": "2024-05-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.586,
+    "n_landings_per_boat": 9.5861,
     "catch": 0,
     "month": "May 2024",
     "year": "2024"
@@ -128514,8 +128514,8 @@
     "date_bin_start": "2024-05-01",
     "grouped_taxa": "MOO",
     "landing_weight": 19.3043,
-    "n_landings_per_boat": 9.586,
-    "catch": 93636.3109,
+    "n_landings_per_boat": 9.5861,
+    "catch": 93636.7606,
     "month": "May 2024",
     "year": "2024"
   },
@@ -128524,8 +128524,8 @@
     "date_bin_start": "2024-05-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0.3888,
-    "n_landings_per_boat": 9.586,
-    "catch": 1885.7739,
+    "n_landings_per_boat": 9.5861,
+    "catch": 1885.783,
     "month": "May 2024",
     "year": "2024"
   },
@@ -128534,7 +128534,7 @@
     "date_bin_start": "2024-05-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.586,
+    "n_landings_per_boat": 9.5861,
     "catch": 0,
     "month": "May 2024",
     "year": "2024"
@@ -128544,7 +128544,7 @@
     "date_bin_start": "2024-05-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.586,
+    "n_landings_per_boat": 9.5861,
     "catch": 0,
     "month": "May 2024",
     "year": "2024"
@@ -128554,8 +128554,8 @@
     "date_bin_start": "2024-05-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0.1198,
-    "n_landings_per_boat": 9.586,
-    "catch": 581.242,
+    "n_landings_per_boat": 9.5861,
+    "catch": 581.2448,
     "month": "May 2024",
     "year": "2024"
   },
@@ -128564,8 +128564,8 @@
     "date_bin_start": "2024-05-01",
     "grouped_taxa": "TUN",
     "landing_weight": 1.6603,
-    "n_landings_per_boat": 9.586,
-    "catch": 8053.2976,
+    "n_landings_per_boat": 9.5861,
+    "catch": 8053.3363,
     "month": "May 2024",
     "year": "2024"
   },
@@ -128574,7 +128574,7 @@
     "date_bin_start": "2024-06-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.5926,
+    "n_landings_per_boat": 10.5925,
     "catch": 0,
     "month": "June 2024",
     "year": "2024"
@@ -128584,7 +128584,7 @@
     "date_bin_start": "2024-06-01",
     "grouped_taxa": "CGX",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.5926,
+    "n_landings_per_boat": 10.5925,
     "catch": 0,
     "month": "June 2024",
     "year": "2024"
@@ -128594,8 +128594,8 @@
     "date_bin_start": "2024-06-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0.4936,
-    "n_landings_per_boat": 10.5926,
-    "catch": 2645.5664,
+    "n_landings_per_boat": 10.5925,
+    "catch": 2645.5279,
     "month": "June 2024",
     "year": "2024"
   },
@@ -128604,7 +128604,7 @@
     "date_bin_start": "2024-06-01",
     "grouped_taxa": "CLP",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.5926,
+    "n_landings_per_boat": 10.5925,
     "catch": 0,
     "month": "June 2024",
     "year": "2024"
@@ -128614,8 +128614,8 @@
     "date_bin_start": "2024-06-01",
     "grouped_taxa": "FLY",
     "landing_weight": 0.2716,
-    "n_landings_per_boat": 10.5926,
-    "catch": 1455.887,
+    "n_landings_per_boat": 10.5925,
+    "catch": 1455.8658,
     "month": "June 2024",
     "year": "2024"
   },
@@ -128624,8 +128624,8 @@
     "date_bin_start": "2024-06-01",
     "grouped_taxa": "GZP",
     "landing_weight": 10.7126,
-    "n_landings_per_boat": 10.5926,
-    "catch": 57418.3544,
+    "n_landings_per_boat": 10.5925,
+    "catch": 57417.5191,
     "month": "June 2024",
     "year": "2024"
   },
@@ -128634,7 +128634,7 @@
     "date_bin_start": "2024-06-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.5926,
+    "n_landings_per_boat": 10.5925,
     "catch": 0,
     "month": "June 2024",
     "year": "2024"
@@ -128644,7 +128644,7 @@
     "date_bin_start": "2024-06-01",
     "grouped_taxa": "MOO",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.5926,
+    "n_landings_per_boat": 10.5925,
     "catch": 0,
     "month": "June 2024",
     "year": "2024"
@@ -128654,7 +128654,7 @@
     "date_bin_start": "2024-06-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.5926,
+    "n_landings_per_boat": 10.5925,
     "catch": 0,
     "month": "June 2024",
     "year": "2024"
@@ -128664,7 +128664,7 @@
     "date_bin_start": "2024-06-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.5926,
+    "n_landings_per_boat": 10.5925,
     "catch": 0,
     "month": "June 2024",
     "year": "2024"
@@ -128674,7 +128674,7 @@
     "date_bin_start": "2024-06-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.5926,
+    "n_landings_per_boat": 10.5925,
     "catch": 0,
     "month": "June 2024",
     "year": "2024"
@@ -128684,7 +128684,7 @@
     "date_bin_start": "2024-06-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.5926,
+    "n_landings_per_boat": 10.5925,
     "catch": 0,
     "month": "June 2024",
     "year": "2024"
@@ -128694,8 +128694,8 @@
     "date_bin_start": "2024-06-01",
     "grouped_taxa": "TUN",
     "landing_weight": 55.7395,
-    "n_landings_per_boat": 10.5926,
-    "catch": 298756.6559,
+    "n_landings_per_boat": 10.5925,
+    "catch": 298752.3098,
     "month": "June 2024",
     "year": "2024"
   },
@@ -128705,7 +128705,7 @@
     "grouped_taxa": "BEN",
     "landing_weight": 0.5539,
     "n_landings_per_boat": 9.8009,
-    "catch": 2746.7376,
+    "catch": 2746.7317,
     "month": "July 2024",
     "year": "2024"
   },
@@ -128715,7 +128715,7 @@
     "grouped_taxa": "CGX",
     "landing_weight": 0.9971,
     "n_landings_per_boat": 9.8009,
-    "catch": 4944.7076,
+    "catch": 4944.6969,
     "month": "July 2024",
     "year": "2024"
   },
@@ -128745,7 +128745,7 @@
     "grouped_taxa": "FLY",
     "landing_weight": 3.7721,
     "n_landings_per_boat": 9.8009,
-    "catch": 18706.7587,
+    "catch": 18706.7183,
     "month": "July 2024",
     "year": "2024"
   },
@@ -128755,7 +128755,7 @@
     "grouped_taxa": "GZP",
     "landing_weight": 6.2726,
     "n_landings_per_boat": 9.8009,
-    "catch": 31107.3903,
+    "catch": 31107.3231,
     "month": "July 2024",
     "year": "2024"
   },
@@ -128785,7 +128785,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 0.2156,
     "n_landings_per_boat": 9.8009,
-    "catch": 1069.4447,
+    "catch": 1069.4424,
     "month": "July 2024",
     "year": "2024"
   },
@@ -128805,7 +128805,7 @@
     "grouped_taxa": "SDX",
     "landing_weight": 0.6716,
     "n_landings_per_boat": 9.8009,
-    "catch": 3330.6319,
+    "catch": 3330.6247,
     "month": "July 2024",
     "year": "2024"
   },
@@ -128825,7 +128825,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 16.8551,
     "n_landings_per_boat": 9.8009,
-    "catch": 83588.9863,
+    "catch": 83588.8057,
     "month": "July 2024",
     "year": "2024"
   },
@@ -128834,7 +128834,7 @@
     "date_bin_start": "2024-08-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.955,
+    "n_landings_per_boat": 11.9549,
     "catch": 0,
     "month": "August 2024",
     "year": "2024"
@@ -128844,7 +128844,7 @@
     "date_bin_start": "2024-08-01",
     "grouped_taxa": "CGX",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.955,
+    "n_landings_per_boat": 11.9549,
     "catch": 0,
     "month": "August 2024",
     "year": "2024"
@@ -128854,7 +128854,7 @@
     "date_bin_start": "2024-08-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.955,
+    "n_landings_per_boat": 11.9549,
     "catch": 0,
     "month": "August 2024",
     "year": "2024"
@@ -128864,7 +128864,7 @@
     "date_bin_start": "2024-08-01",
     "grouped_taxa": "CLP",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.955,
+    "n_landings_per_boat": 11.9549,
     "catch": 0,
     "month": "August 2024",
     "year": "2024"
@@ -128874,8 +128874,8 @@
     "date_bin_start": "2024-08-01",
     "grouped_taxa": "FLY",
     "landing_weight": 2.5792,
-    "n_landings_per_boat": 11.955,
-    "catch": 15602.4311,
+    "n_landings_per_boat": 11.9549,
+    "catch": 15602.3747,
     "month": "August 2024",
     "year": "2024"
   },
@@ -128884,8 +128884,8 @@
     "date_bin_start": "2024-08-01",
     "grouped_taxa": "GZP",
     "landing_weight": 11.7016,
-    "n_landings_per_boat": 11.955,
-    "catch": 70785.507,
+    "n_landings_per_boat": 11.9549,
+    "catch": 70785.2512,
     "month": "August 2024",
     "year": "2024"
   },
@@ -128894,7 +128894,7 @@
     "date_bin_start": "2024-08-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.955,
+    "n_landings_per_boat": 11.9549,
     "catch": 0,
     "month": "August 2024",
     "year": "2024"
@@ -128904,7 +128904,7 @@
     "date_bin_start": "2024-08-01",
     "grouped_taxa": "MOO",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.955,
+    "n_landings_per_boat": 11.9549,
     "catch": 0,
     "month": "August 2024",
     "year": "2024"
@@ -128914,7 +128914,7 @@
     "date_bin_start": "2024-08-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.955,
+    "n_landings_per_boat": 11.9549,
     "catch": 0,
     "month": "August 2024",
     "year": "2024"
@@ -128924,7 +128924,7 @@
     "date_bin_start": "2024-08-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.955,
+    "n_landings_per_boat": 11.9549,
     "catch": 0,
     "month": "August 2024",
     "year": "2024"
@@ -128934,7 +128934,7 @@
     "date_bin_start": "2024-08-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.955,
+    "n_landings_per_boat": 11.9549,
     "catch": 0,
     "month": "August 2024",
     "year": "2024"
@@ -128944,7 +128944,7 @@
     "date_bin_start": "2024-08-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.955,
+    "n_landings_per_boat": 11.9549,
     "catch": 0,
     "month": "August 2024",
     "year": "2024"
@@ -128954,8 +128954,8 @@
     "date_bin_start": "2024-08-01",
     "grouped_taxa": "TUN",
     "landing_weight": 24.2778,
-    "n_landings_per_boat": 11.955,
-    "catch": 146861.3147,
+    "n_landings_per_boat": 11.9549,
+    "catch": 146860.7839,
     "month": "August 2024",
     "year": "2024"
   },
@@ -129005,7 +129005,7 @@
     "grouped_taxa": "FLY",
     "landing_weight": 1.6551,
     "n_landings_per_boat": 11.3416,
-    "catch": 9498.2878,
+    "catch": 9498.3002,
     "month": "September 2024",
     "year": "2024"
   },
@@ -129015,7 +129015,7 @@
     "grouped_taxa": "GZP",
     "landing_weight": 5.7487,
     "n_landings_per_boat": 11.3416,
-    "catch": 32991.0372,
+    "catch": 32991.0802,
     "month": "September 2024",
     "year": "2024"
   },
@@ -129085,7 +129085,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 9.7551,
     "n_landings_per_boat": 11.3416,
-    "catch": 55982.8155,
+    "catch": 55982.8884,
     "month": "September 2024",
     "year": "2024"
   },
@@ -129094,7 +129094,7 @@
     "date_bin_start": "2024-10-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.2476,
+    "n_landings_per_boat": 10.2477,
     "catch": 0,
     "month": "October 2024",
     "year": "2024"
@@ -129104,7 +129104,7 @@
     "date_bin_start": "2024-10-01",
     "grouped_taxa": "CGX",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.2476,
+    "n_landings_per_boat": 10.2477,
     "catch": 0,
     "month": "October 2024",
     "year": "2024"
@@ -129114,7 +129114,7 @@
     "date_bin_start": "2024-10-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.2476,
+    "n_landings_per_boat": 10.2477,
     "catch": 0,
     "month": "October 2024",
     "year": "2024"
@@ -129124,8 +129124,8 @@
     "date_bin_start": "2024-10-01",
     "grouped_taxa": "CLP",
     "landing_weight": 5.616,
-    "n_landings_per_boat": 10.2476,
-    "catch": 29120.4562,
+    "n_landings_per_boat": 10.2477,
+    "catch": 29120.6429,
     "month": "October 2024",
     "year": "2024"
   },
@@ -129134,8 +129134,8 @@
     "date_bin_start": "2024-10-01",
     "grouped_taxa": "FLY",
     "landing_weight": 8.0665,
-    "n_landings_per_boat": 10.2476,
-    "catch": 41827.138,
+    "n_landings_per_boat": 10.2477,
+    "catch": 41827.4062,
     "month": "October 2024",
     "year": "2024"
   },
@@ -129144,8 +129144,8 @@
     "date_bin_start": "2024-10-01",
     "grouped_taxa": "GZP",
     "landing_weight": 1.6228,
-    "n_landings_per_boat": 10.2476,
-    "catch": 8414.8697,
+    "n_landings_per_boat": 10.2477,
+    "catch": 8414.9236,
     "month": "October 2024",
     "year": "2024"
   },
@@ -129154,7 +129154,7 @@
     "date_bin_start": "2024-10-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.2476,
+    "n_landings_per_boat": 10.2477,
     "catch": 0,
     "month": "October 2024",
     "year": "2024"
@@ -129164,7 +129164,7 @@
     "date_bin_start": "2024-10-01",
     "grouped_taxa": "MOO",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.2476,
+    "n_landings_per_boat": 10.2477,
     "catch": 0,
     "month": "October 2024",
     "year": "2024"
@@ -129174,7 +129174,7 @@
     "date_bin_start": "2024-10-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.2476,
+    "n_landings_per_boat": 10.2477,
     "catch": 0,
     "month": "October 2024",
     "year": "2024"
@@ -129184,7 +129184,7 @@
     "date_bin_start": "2024-10-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.2476,
+    "n_landings_per_boat": 10.2477,
     "catch": 0,
     "month": "October 2024",
     "year": "2024"
@@ -129194,7 +129194,7 @@
     "date_bin_start": "2024-10-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.2476,
+    "n_landings_per_boat": 10.2477,
     "catch": 0,
     "month": "October 2024",
     "year": "2024"
@@ -129204,7 +129204,7 @@
     "date_bin_start": "2024-10-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.2476,
+    "n_landings_per_boat": 10.2477,
     "catch": 0,
     "month": "October 2024",
     "year": "2024"
@@ -129214,7 +129214,7 @@
     "date_bin_start": "2024-10-01",
     "grouped_taxa": "TUN",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.2476,
+    "n_landings_per_boat": 10.2477,
     "catch": 0,
     "month": "October 2024",
     "year": "2024"
@@ -129485,7 +129485,7 @@
     "grouped_taxa": "BEN",
     "landing_weight": 0.0376,
     "n_landings_per_boat": 22,
-    "catch": 512.1722,
+    "catch": 512.1196,
     "month": "January 2025",
     "year": "2025"
   },
@@ -129493,9 +129493,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2025-01-01",
     "grouped_taxa": "CGX",
-    "landing_weight": 0.1091,
+    "landing_weight": 0.109,
     "n_landings_per_boat": 22,
-    "catch": 1488.4363,
+    "catch": 1485.8974,
     "month": "January 2025",
     "year": "2025"
   },
@@ -129505,7 +129505,7 @@
     "grouped_taxa": "CJX",
     "landing_weight": 0.1559,
     "n_landings_per_boat": 22,
-    "catch": 2125.6962,
+    "catch": 2125.478,
     "month": "January 2025",
     "year": "2025"
   },
@@ -129515,7 +129515,7 @@
     "grouped_taxa": "CLP",
     "landing_weight": 6.2992,
     "n_landings_per_boat": 22,
-    "catch": 85905.1543,
+    "catch": 85896.3364,
     "month": "January 2025",
     "year": "2025"
   },
@@ -129525,7 +129525,7 @@
     "grouped_taxa": "FLY",
     "landing_weight": 1.8711,
     "n_landings_per_boat": 22,
-    "catch": 25516.8981,
+    "catch": 25514.2789,
     "month": "January 2025",
     "year": "2025"
   },
@@ -129533,9 +129533,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2025-01-01",
     "grouped_taxa": "GZP",
-    "landing_weight": 10.3697,
+    "landing_weight": 10.3732,
     "n_landings_per_boat": 22,
-    "catch": 141417.2202,
+    "catch": 141450.4072,
     "month": "January 2025",
     "year": "2025"
   },
@@ -129545,7 +129545,7 @@
     "grouped_taxa": "LWX",
     "landing_weight": 0.0005,
     "n_landings_per_boat": 22,
-    "catch": 6.14,
+    "catch": 6.1394,
     "month": "January 2025",
     "year": "2025"
   },
@@ -129553,9 +129553,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2025-01-01",
     "grouped_taxa": "MOO",
-    "landing_weight": 4.7193,
+    "landing_weight": 4.7094,
     "n_landings_per_boat": 22,
-    "catch": 64360.1203,
+    "catch": 64217.6743,
     "month": "January 2025",
     "year": "2025"
   },
@@ -129565,7 +129565,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 0.2724,
     "n_landings_per_boat": 22,
-    "catch": 3714.6081,
+    "catch": 3714.188,
     "month": "January 2025",
     "year": "2025"
   },
@@ -129575,7 +129575,7 @@
     "grouped_taxa": "RAX",
     "landing_weight": 0.067,
     "n_landings_per_boat": 22,
-    "catch": 913.4085,
+    "catch": 913.3148,
     "month": "January 2025",
     "year": "2025"
   },
@@ -129585,7 +129585,7 @@
     "grouped_taxa": "SDX",
     "landing_weight": 0.1485,
     "n_landings_per_boat": 22,
-    "catch": 2025.8465,
+    "catch": 2025.6385,
     "month": "January 2025",
     "year": "2025"
   },
@@ -129595,7 +129595,7 @@
     "grouped_taxa": "SNA",
     "landing_weight": 0.0666,
     "n_landings_per_boat": 22,
-    "catch": 908.1766,
+    "catch": 908.0834,
     "month": "January 2025",
     "year": "2025"
   },
@@ -129603,9 +129603,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2025-01-01",
     "grouped_taxa": "TUN",
-    "landing_weight": 5.1296,
+    "landing_weight": 5.1268,
     "n_landings_per_boat": 22,
-    "catch": 69954.5426,
+    "catch": 69909.5408,
     "month": "January 2025",
     "year": "2025"
   },
@@ -129615,7 +129615,7 @@
     "grouped_taxa": "BEN",
     "landing_weight": 0.0406,
     "n_landings_per_boat": 10,
-    "catch": 223.3132,
+    "catch": 223.2367,
     "month": "February 2025",
     "year": "2025"
   },
@@ -129623,9 +129623,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2025-02-01",
     "grouped_taxa": "CGX",
-    "landing_weight": 0.0684,
+    "landing_weight": 0.0683,
     "n_landings_per_boat": 10,
-    "catch": 376.0772,
+    "catch": 375.0956,
     "month": "February 2025",
     "year": "2025"
   },
@@ -129635,7 +129635,7 @@
     "grouped_taxa": "CJX",
     "landing_weight": 0.2504,
     "n_landings_per_boat": 10,
-    "catch": 1375.7942,
+    "catch": 1375.323,
     "month": "February 2025",
     "year": "2025"
   },
@@ -129645,7 +129645,7 @@
     "grouped_taxa": "CLP",
     "landing_weight": 6.3258,
     "n_landings_per_boat": 10,
-    "catch": 34762.0448,
+    "catch": 34750.1384,
     "month": "February 2025",
     "year": "2025"
   },
@@ -129655,7 +129655,7 @@
     "grouped_taxa": "FLY",
     "landing_weight": 1.3929,
     "n_landings_per_boat": 10,
-    "catch": 7654.6039,
+    "catch": 7651.9821,
     "month": "February 2025",
     "year": "2025"
   },
@@ -129663,9 +129663,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2025-02-01",
     "grouped_taxa": "GZP",
-    "landing_weight": 8.8192,
+    "landing_weight": 8.8255,
     "n_landings_per_boat": 10,
-    "catch": 48464.0491,
+    "catch": 48482.1732,
     "month": "February 2025",
     "year": "2025"
   },
@@ -129675,7 +129675,7 @@
     "grouped_taxa": "LWX",
     "landing_weight": 0.0008,
     "n_landings_per_boat": 10,
-    "catch": 4.5375,
+    "catch": 4.5359,
     "month": "February 2025",
     "year": "2025"
   },
@@ -129683,9 +129683,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2025-02-01",
     "grouped_taxa": "MOO",
-    "landing_weight": 4.834,
+    "landing_weight": 4.8257,
     "n_landings_per_boat": 10,
-    "catch": 26564.1261,
+    "catch": 26509.6252,
     "month": "February 2025",
     "year": "2025"
   },
@@ -129693,9 +129693,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2025-02-01",
     "grouped_taxa": "MZZ",
-    "landing_weight": 0.3672,
+    "landing_weight": 0.3671,
     "n_landings_per_boat": 10,
-    "catch": 2017.7447,
+    "catch": 2016.864,
     "month": "February 2025",
     "year": "2025"
   },
@@ -129705,7 +129705,7 @@
     "grouped_taxa": "RAX",
     "landing_weight": 0.0517,
     "n_landings_per_boat": 10,
-    "catch": 283.8745,
+    "catch": 283.7773,
     "month": "February 2025",
     "year": "2025"
   },
@@ -129715,7 +129715,7 @@
     "grouped_taxa": "SDX",
     "landing_weight": 0.197,
     "n_landings_per_boat": 10,
-    "catch": 1082.8347,
+    "catch": 1082.4638,
     "month": "February 2025",
     "year": "2025"
   },
@@ -129725,7 +129725,7 @@
     "grouped_taxa": "SNA",
     "landing_weight": 0.0606,
     "n_landings_per_boat": 10,
-    "catch": 332.7486,
+    "catch": 332.6347,
     "month": "February 2025",
     "year": "2025"
   },
@@ -129733,9 +129733,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2025-02-01",
     "grouped_taxa": "TUN",
-    "landing_weight": 7.6154,
+    "landing_weight": 7.6069,
     "n_landings_per_boat": 10,
-    "catch": 41848.5459,
+    "catch": 41787.4344,
     "month": "February 2025",
     "year": "2025"
   },
@@ -129875,7 +129875,7 @@
     "grouped_taxa": "BEN",
     "landing_weight": 0.002,
     "n_landings_per_boat": 11.4837,
-    "catch": 11.6582,
+    "catch": 11.6583,
     "month": "April 2025",
     "year": "2025"
   },
@@ -129885,7 +129885,7 @@
     "grouped_taxa": "CGX",
     "landing_weight": 0.3911,
     "n_landings_per_boat": 11.4837,
-    "catch": 2272.8161,
+    "catch": 2272.826,
     "month": "April 2025",
     "year": "2025"
   },
@@ -129895,7 +129895,7 @@
     "grouped_taxa": "CJX",
     "landing_weight": 0.7374,
     "n_landings_per_boat": 11.4837,
-    "catch": 4284.8514,
+    "catch": 4284.8701,
     "month": "April 2025",
     "year": "2025"
   },
@@ -129905,7 +129905,7 @@
     "grouped_taxa": "CLP",
     "landing_weight": 6.5211,
     "n_landings_per_boat": 11.4837,
-    "catch": 37892.7147,
+    "catch": 37892.8794,
     "month": "April 2025",
     "year": "2025"
   },
@@ -129925,7 +129925,7 @@
     "grouped_taxa": "GZP",
     "landing_weight": 15.5893,
     "n_landings_per_boat": 11.4837,
-    "catch": 90585.4151,
+    "catch": 90585.8088,
     "month": "April 2025",
     "year": "2025"
   },
@@ -129955,7 +129955,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 0.1,
     "n_landings_per_boat": 11.4837,
-    "catch": 580.7884,
+    "catch": 580.7909,
     "month": "April 2025",
     "year": "2025"
   },
@@ -129985,7 +129985,7 @@
     "grouped_taxa": "SNA",
     "landing_weight": 0.3251,
     "n_landings_per_boat": 11.4837,
-    "catch": 1888.9393,
+    "catch": 1888.9475,
     "month": "April 2025",
     "year": "2025"
   },
@@ -129995,7 +129995,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 2.4293,
     "n_landings_per_boat": 11.4837,
-    "catch": 14115.9082,
+    "catch": 14115.9695,
     "month": "April 2025",
     "year": "2025"
   },
@@ -130004,7 +130004,7 @@
     "date_bin_start": "2025-05-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0,
-    "n_landings_per_boat": 8.7452,
+    "n_landings_per_boat": 8.7453,
     "catch": 0,
     "month": "May 2025",
     "year": "2025"
@@ -130014,8 +130014,8 @@
     "date_bin_start": "2025-05-01",
     "grouped_taxa": "CGX",
     "landing_weight": 0.0754,
-    "n_landings_per_boat": 8.7452,
-    "catch": 333.8132,
+    "n_landings_per_boat": 8.7453,
+    "catch": 333.8163,
     "month": "May 2025",
     "year": "2025"
   },
@@ -130024,8 +130024,8 @@
     "date_bin_start": "2025-05-01",
     "grouped_taxa": "CJX",
     "landing_weight": 1.8665,
-    "n_landings_per_boat": 8.7452,
-    "catch": 8259.1927,
+    "n_landings_per_boat": 8.7453,
+    "catch": 8259.2687,
     "month": "May 2025",
     "year": "2025"
   },
@@ -130034,8 +130034,8 @@
     "date_bin_start": "2025-05-01",
     "grouped_taxa": "CLP",
     "landing_weight": 6.3334,
-    "n_landings_per_boat": 8.7452,
-    "catch": 28025.7213,
+    "n_landings_per_boat": 8.7453,
+    "catch": 28025.9793,
     "month": "May 2025",
     "year": "2025"
   },
@@ -130044,8 +130044,8 @@
     "date_bin_start": "2025-05-01",
     "grouped_taxa": "FLY",
     "landing_weight": 1.3759,
-    "n_landings_per_boat": 8.7452,
-    "catch": 6088.5196,
+    "n_landings_per_boat": 8.7453,
+    "catch": 6088.5756,
     "month": "May 2025",
     "year": "2025"
   },
@@ -130054,8 +130054,8 @@
     "date_bin_start": "2025-05-01",
     "grouped_taxa": "GZP",
     "landing_weight": 13.9251,
-    "n_landings_per_boat": 8.7452,
-    "catch": 61619.5745,
+    "n_landings_per_boat": 8.7453,
+    "catch": 61620.1418,
     "month": "May 2025",
     "year": "2025"
   },
@@ -130064,7 +130064,7 @@
     "date_bin_start": "2025-05-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 8.7452,
+    "n_landings_per_boat": 8.7453,
     "catch": 0,
     "month": "May 2025",
     "year": "2025"
@@ -130074,8 +130074,8 @@
     "date_bin_start": "2025-05-01",
     "grouped_taxa": "MOO",
     "landing_weight": 3.3916,
-    "n_landings_per_boat": 8.7452,
-    "catch": 15008.2753,
+    "n_landings_per_boat": 8.7453,
+    "catch": 15008.4135,
     "month": "May 2025",
     "year": "2025"
   },
@@ -130084,8 +130084,8 @@
     "date_bin_start": "2025-05-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0.0668,
-    "n_landings_per_boat": 8.7452,
-    "catch": 295.5434,
+    "n_landings_per_boat": 8.7453,
+    "catch": 295.5461,
     "month": "May 2025",
     "year": "2025"
   },
@@ -130094,7 +130094,7 @@
     "date_bin_start": "2025-05-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 8.7452,
+    "n_landings_per_boat": 8.7453,
     "catch": 0,
     "month": "May 2025",
     "year": "2025"
@@ -130104,8 +130104,8 @@
     "date_bin_start": "2025-05-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0.0449,
-    "n_landings_per_boat": 8.7452,
-    "catch": 198.7286,
+    "n_landings_per_boat": 8.7453,
+    "catch": 198.7304,
     "month": "May 2025",
     "year": "2025"
   },
@@ -130114,8 +130114,8 @@
     "date_bin_start": "2025-05-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0.0382,
-    "n_landings_per_boat": 8.7452,
-    "catch": 169.1477,
+    "n_landings_per_boat": 8.7453,
+    "catch": 169.1493,
     "month": "May 2025",
     "year": "2025"
   },
@@ -130124,8 +130124,8 @@
     "date_bin_start": "2025-05-01",
     "grouped_taxa": "TUN",
     "landing_weight": 0.0096,
-    "n_landings_per_boat": 8.7452,
-    "catch": 42.5199,
+    "n_landings_per_boat": 8.7453,
+    "catch": 42.5203,
     "month": "May 2025",
     "year": "2025"
   },
@@ -130134,7 +130134,7 @@
     "date_bin_start": "2025-06-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.2764,
+    "n_landings_per_boat": 11.2763,
     "catch": 0,
     "month": "June 2025",
     "year": "2025"
@@ -130144,7 +130144,7 @@
     "date_bin_start": "2025-06-01",
     "grouped_taxa": "CGX",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.2764,
+    "n_landings_per_boat": 11.2763,
     "catch": 0,
     "month": "June 2025",
     "year": "2025"
@@ -130154,8 +130154,8 @@
     "date_bin_start": "2025-06-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0.0551,
-    "n_landings_per_boat": 11.2764,
-    "catch": 314.3899,
+    "n_landings_per_boat": 11.2763,
+    "catch": 314.3891,
     "month": "June 2025",
     "year": "2025"
   },
@@ -130164,7 +130164,7 @@
     "date_bin_start": "2025-06-01",
     "grouped_taxa": "CLP",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.2764,
+    "n_landings_per_boat": 11.2763,
     "catch": 0,
     "month": "June 2025",
     "year": "2025"
@@ -130174,8 +130174,8 @@
     "date_bin_start": "2025-06-01",
     "grouped_taxa": "FLY",
     "landing_weight": 1.5629,
-    "n_landings_per_boat": 11.2764,
-    "catch": 8917.6511,
+    "n_landings_per_boat": 11.2763,
+    "catch": 8917.6304,
     "month": "June 2025",
     "year": "2025"
   },
@@ -130184,8 +130184,8 @@
     "date_bin_start": "2025-06-01",
     "grouped_taxa": "GZP",
     "landing_weight": 15.19,
-    "n_landings_per_boat": 11.2764,
-    "catch": 86671.6437,
+    "n_landings_per_boat": 11.2763,
+    "catch": 86671.4428,
     "month": "June 2025",
     "year": "2025"
   },
@@ -130194,7 +130194,7 @@
     "date_bin_start": "2025-06-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.2764,
+    "n_landings_per_boat": 11.2763,
     "catch": 0,
     "month": "June 2025",
     "year": "2025"
@@ -130204,8 +130204,8 @@
     "date_bin_start": "2025-06-01",
     "grouped_taxa": "MOO",
     "landing_weight": 34.4035,
-    "n_landings_per_boat": 11.2764,
-    "catch": 196301.0625,
+    "n_landings_per_boat": 11.2763,
+    "catch": 196300.6074,
     "month": "June 2025",
     "year": "2025"
   },
@@ -130214,7 +130214,7 @@
     "date_bin_start": "2025-06-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.2764,
+    "n_landings_per_boat": 11.2763,
     "catch": 0,
     "month": "June 2025",
     "year": "2025"
@@ -130224,7 +130224,7 @@
     "date_bin_start": "2025-06-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.2764,
+    "n_landings_per_boat": 11.2763,
     "catch": 0,
     "month": "June 2025",
     "year": "2025"
@@ -130234,8 +130234,8 @@
     "date_bin_start": "2025-06-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0.3093,
-    "n_landings_per_boat": 11.2764,
-    "catch": 1765.0256,
+    "n_landings_per_boat": 11.2763,
+    "catch": 1765.0215,
     "month": "June 2025",
     "year": "2025"
   },
@@ -130244,8 +130244,8 @@
     "date_bin_start": "2025-06-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0.0749,
-    "n_landings_per_boat": 11.2764,
-    "catch": 427.1998,
+    "n_landings_per_boat": 11.2763,
+    "catch": 427.1988,
     "month": "June 2025",
     "year": "2025"
   },
@@ -130254,7 +130254,7 @@
     "date_bin_start": "2025-06-01",
     "grouped_taxa": "TUN",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.2764,
+    "n_landings_per_boat": 11.2763,
     "catch": 0,
     "month": "June 2025",
     "year": "2025"
@@ -130295,7 +130295,7 @@
     "grouped_taxa": "CLP",
     "landing_weight": 0.1111,
     "n_landings_per_boat": 10.1936,
-    "catch": 573.2407,
+    "catch": 573.239,
     "month": "July 2025",
     "year": "2025"
   },
@@ -130305,7 +130305,7 @@
     "grouped_taxa": "FLY",
     "landing_weight": 0.3916,
     "n_landings_per_boat": 10.1936,
-    "catch": 2019.7945,
+    "catch": 2019.7883,
     "month": "July 2025",
     "year": "2025"
   },
@@ -130315,7 +130315,7 @@
     "grouped_taxa": "GZP",
     "landing_weight": 28.0079,
     "n_landings_per_boat": 10.1936,
-    "catch": 144463.4747,
+    "catch": 144463.035,
     "month": "July 2025",
     "year": "2025"
   },
@@ -130335,7 +130335,7 @@
     "grouped_taxa": "MOO",
     "landing_weight": 16.8938,
     "n_landings_per_boat": 10.1936,
-    "catch": 87137.3417,
+    "catch": 87137.0765,
     "month": "July 2025",
     "year": "2025"
   },
@@ -130345,7 +130345,7 @@
     "grouped_taxa": "MZZ",
     "landing_weight": 0.2009,
     "n_landings_per_boat": 10.1936,
-    "catch": 1036.2741,
+    "catch": 1036.271,
     "month": "July 2025",
     "year": "2025"
   },
@@ -130365,7 +130365,7 @@
     "grouped_taxa": "SDX",
     "landing_weight": 0.0162,
     "n_landings_per_boat": 10.1936,
-    "catch": 83.8039,
+    "catch": 83.8037,
     "month": "July 2025",
     "year": "2025"
   },
@@ -130375,7 +130375,7 @@
     "grouped_taxa": "SNA",
     "landing_weight": 0.0701,
     "n_landings_per_boat": 10.1936,
-    "catch": 361.4841,
+    "catch": 361.483,
     "month": "July 2025",
     "year": "2025"
   },
@@ -130395,7 +130395,7 @@
     "grouped_taxa": "BEN",
     "landing_weight": 0.8529,
     "n_landings_per_boat": 10.0422,
-    "catch": 4334.1216,
+    "catch": 4334.1225,
     "month": "August 2025",
     "year": "2025"
   },
@@ -130435,7 +130435,7 @@
     "grouped_taxa": "FLY",
     "landing_weight": 6.2268,
     "n_landings_per_boat": 10.0422,
-    "catch": 31640.6833,
+    "catch": 31640.6894,
     "month": "August 2025",
     "year": "2025"
   },
@@ -130445,7 +130445,7 @@
     "grouped_taxa": "GZP",
     "landing_weight": 5.7226,
     "n_landings_per_boat": 10.0422,
-    "catch": 29078.3487,
+    "catch": 29078.3543,
     "month": "August 2025",
     "year": "2025"
   },
@@ -130515,7 +130515,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 21.6863,
     "n_landings_per_boat": 10.0422,
-    "catch": 110195.459,
+    "catch": 110195.48,
     "month": "August 2025",
     "year": "2025"
   },
@@ -130524,7 +130524,7 @@
     "date_bin_start": "2025-09-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.0082,
+    "n_landings_per_boat": 11.008,
     "catch": 0,
     "month": "September 2025",
     "year": "2025"
@@ -130534,7 +130534,7 @@
     "date_bin_start": "2025-09-01",
     "grouped_taxa": "CGX",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.0082,
+    "n_landings_per_boat": 11.008,
     "catch": 0,
     "month": "September 2025",
     "year": "2025"
@@ -130544,8 +130544,8 @@
     "date_bin_start": "2025-09-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0.2413,
-    "n_landings_per_boat": 11.0082,
-    "catch": 1344.0711,
+    "n_landings_per_boat": 11.008,
+    "catch": 1344.0497,
     "month": "September 2025",
     "year": "2025"
   },
@@ -130554,8 +130554,8 @@
     "date_bin_start": "2025-09-01",
     "grouped_taxa": "CLP",
     "landing_weight": 7.8312,
-    "n_landings_per_boat": 11.0082,
-    "catch": 43620.8408,
+    "n_landings_per_boat": 11.008,
+    "catch": 43620.1457,
     "month": "September 2025",
     "year": "2025"
   },
@@ -130564,8 +130564,8 @@
     "date_bin_start": "2025-09-01",
     "grouped_taxa": "FLY",
     "landing_weight": 3.29,
-    "n_landings_per_boat": 11.0082,
-    "catch": 18325.9152,
+    "n_landings_per_boat": 11.008,
+    "catch": 18325.6231,
     "month": "September 2025",
     "year": "2025"
   },
@@ -130574,8 +130574,8 @@
     "date_bin_start": "2025-09-01",
     "grouped_taxa": "GZP",
     "landing_weight": 16.5637,
-    "n_landings_per_boat": 11.0082,
-    "catch": 92262.1593,
+    "n_landings_per_boat": 11.008,
+    "catch": 92260.6891,
     "month": "September 2025",
     "year": "2025"
   },
@@ -130584,7 +130584,7 @@
     "date_bin_start": "2025-09-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.0082,
+    "n_landings_per_boat": 11.008,
     "catch": 0,
     "month": "September 2025",
     "year": "2025"
@@ -130594,8 +130594,8 @@
     "date_bin_start": "2025-09-01",
     "grouped_taxa": "MOO",
     "landing_weight": 3.4911,
-    "n_landings_per_boat": 11.0082,
-    "catch": 19446.1806,
+    "n_landings_per_boat": 11.008,
+    "catch": 19445.8707,
     "month": "September 2025",
     "year": "2025"
   },
@@ -130604,7 +130604,7 @@
     "date_bin_start": "2025-09-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.0082,
+    "n_landings_per_boat": 11.008,
     "catch": 0,
     "month": "September 2025",
     "year": "2025"
@@ -130614,7 +130614,7 @@
     "date_bin_start": "2025-09-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.0082,
+    "n_landings_per_boat": 11.008,
     "catch": 0,
     "month": "September 2025",
     "year": "2025"
@@ -130624,8 +130624,8 @@
     "date_bin_start": "2025-09-01",
     "grouped_taxa": "SDX",
     "landing_weight": 2.6251,
-    "n_landings_per_boat": 11.0082,
-    "catch": 14621.9742,
+    "n_landings_per_boat": 11.008,
+    "catch": 14621.7412,
     "month": "September 2025",
     "year": "2025"
   },
@@ -130634,7 +130634,7 @@
     "date_bin_start": "2025-09-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.0082,
+    "n_landings_per_boat": 11.008,
     "catch": 0,
     "month": "September 2025",
     "year": "2025"
@@ -130644,8 +130644,8 @@
     "date_bin_start": "2025-09-01",
     "grouped_taxa": "TUN",
     "landing_weight": 51.8879,
-    "n_landings_per_boat": 11.0082,
-    "catch": 289023.6577,
+    "n_landings_per_boat": 11.008,
+    "catch": 289019.0518,
     "month": "September 2025",
     "year": "2025"
   },
@@ -130654,7 +130654,7 @@
     "date_bin_start": "2025-10-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.4156,
+    "n_landings_per_boat": 11.4157,
     "catch": 0,
     "month": "October 2025",
     "year": "2025"
@@ -130664,7 +130664,7 @@
     "date_bin_start": "2025-10-01",
     "grouped_taxa": "CGX",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.4156,
+    "n_landings_per_boat": 11.4157,
     "catch": 0,
     "month": "October 2025",
     "year": "2025"
@@ -130674,8 +130674,8 @@
     "date_bin_start": "2025-10-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0.0551,
-    "n_landings_per_boat": 11.4156,
-    "catch": 318.2727,
+    "n_landings_per_boat": 11.4157,
+    "catch": 318.275,
     "month": "October 2025",
     "year": "2025"
   },
@@ -130684,8 +130684,8 @@
     "date_bin_start": "2025-10-01",
     "grouped_taxa": "CLP",
     "landing_weight": 1.1226,
-    "n_landings_per_boat": 11.4156,
-    "catch": 6484.3305,
+    "n_landings_per_boat": 11.4157,
+    "catch": 6484.3769,
     "month": "October 2025",
     "year": "2025"
   },
@@ -130694,8 +130694,8 @@
     "date_bin_start": "2025-10-01",
     "grouped_taxa": "FLY",
     "landing_weight": 8.1554,
-    "n_landings_per_boat": 11.4156,
-    "catch": 47107.9674,
+    "n_landings_per_boat": 11.4157,
+    "catch": 47108.3045,
     "month": "October 2025",
     "year": "2025"
   },
@@ -130704,8 +130704,8 @@
     "date_bin_start": "2025-10-01",
     "grouped_taxa": "GZP",
     "landing_weight": 2.5401,
-    "n_landings_per_boat": 11.4156,
-    "catch": 14672.4673,
+    "n_landings_per_boat": 11.4157,
+    "catch": 14672.5724,
     "month": "October 2025",
     "year": "2025"
   },
@@ -130714,7 +130714,7 @@
     "date_bin_start": "2025-10-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.4156,
+    "n_landings_per_boat": 11.4157,
     "catch": 0,
     "month": "October 2025",
     "year": "2025"
@@ -130724,8 +130724,8 @@
     "date_bin_start": "2025-10-01",
     "grouped_taxa": "MOO",
     "landing_weight": 3.2261,
-    "n_landings_per_boat": 11.4156,
-    "catch": 18635.2267,
+    "n_landings_per_boat": 11.4157,
+    "catch": 18635.36,
     "month": "October 2025",
     "year": "2025"
   },
@@ -130734,7 +130734,7 @@
     "date_bin_start": "2025-10-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.4156,
+    "n_landings_per_boat": 11.4157,
     "catch": 0,
     "month": "October 2025",
     "year": "2025"
@@ -130744,7 +130744,7 @@
     "date_bin_start": "2025-10-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.4156,
+    "n_landings_per_boat": 11.4157,
     "catch": 0,
     "month": "October 2025",
     "year": "2025"
@@ -130754,7 +130754,7 @@
     "date_bin_start": "2025-10-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.4156,
+    "n_landings_per_boat": 11.4157,
     "catch": 0,
     "month": "October 2025",
     "year": "2025"
@@ -130764,7 +130764,7 @@
     "date_bin_start": "2025-10-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0,
-    "n_landings_per_boat": 11.4156,
+    "n_landings_per_boat": 11.4157,
     "catch": 0,
     "month": "October 2025",
     "year": "2025"
@@ -130774,8 +130774,8 @@
     "date_bin_start": "2025-10-01",
     "grouped_taxa": "TUN",
     "landing_weight": 0.724,
-    "n_landings_per_boat": 11.4156,
-    "catch": 4181.9925,
+    "n_landings_per_boat": 11.4157,
+    "catch": 4182.0224,
     "month": "October 2025",
     "year": "2025"
   },
@@ -130805,7 +130805,7 @@
     "grouped_taxa": "CJX",
     "landing_weight": 0.095,
     "n_landings_per_boat": 10.5666,
-    "catch": 508.1892,
+    "catch": 508.1895,
     "month": "November 2025",
     "year": "2025"
   },
@@ -130815,7 +130815,7 @@
     "grouped_taxa": "CLP",
     "landing_weight": 11.816,
     "n_landings_per_boat": 10.5666,
-    "catch": 63176.6146,
+    "catch": 63176.6555,
     "month": "November 2025",
     "year": "2025"
   },
@@ -130855,7 +130855,7 @@
     "grouped_taxa": "MOO",
     "landing_weight": 3.3319,
     "n_landings_per_boat": 10.5666,
-    "catch": 17814.9063,
+    "catch": 17814.9178,
     "month": "November 2025",
     "year": "2025"
   },
@@ -130905,7 +130905,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 13.9245,
     "n_landings_per_boat": 10.5666,
-    "catch": 74450.2441,
+    "catch": 74450.2923,
     "month": "November 2025",
     "year": "2025"
   },
@@ -130935,7 +130935,7 @@
     "grouped_taxa": "CJX",
     "landing_weight": 1.0948,
     "n_landings_per_boat": 7.2782,
-    "catch": 4031.7098,
+    "catch": 4031.7133,
     "month": "December 2025",
     "year": "2025"
   },
@@ -130945,7 +130945,7 @@
     "grouped_taxa": "CLP",
     "landing_weight": 38.038,
     "n_landings_per_boat": 7.2782,
-    "catch": 140084.9473,
+    "catch": 140085.0685,
     "month": "December 2025",
     "year": "2025"
   },
@@ -130965,7 +130965,7 @@
     "grouped_taxa": "GZP",
     "landing_weight": 10.5542,
     "n_landings_per_boat": 7.2782,
-    "catch": 38868.5032,
+    "catch": 38868.5368,
     "month": "December 2025",
     "year": "2025"
   },
@@ -131044,8 +131044,8 @@
     "date_bin_start": "2026-01-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0.0426,
-    "n_landings_per_boat": 13.4064,
-    "catch": 342.7719,
+    "n_landings_per_boat": 13.4065,
+    "catch": 342.7787,
     "month": "January 2026",
     "year": "2026"
   },
@@ -131053,9 +131053,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2026-01-01",
     "grouped_taxa": "CGX",
-    "landing_weight": 0.0868,
-    "n_landings_per_boat": 13.4064,
-    "catch": 698.0942,
+    "landing_weight": 0.0867,
+    "n_landings_per_boat": 13.4065,
+    "catch": 697.0184,
     "month": "January 2026",
     "year": "2026"
   },
@@ -131064,8 +131064,8 @@
     "date_bin_start": "2026-01-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0.2751,
-    "n_landings_per_boat": 13.4064,
-    "catch": 2211.6763,
+    "n_landings_per_boat": 13.4065,
+    "catch": 2211.7204,
     "month": "January 2026",
     "year": "2026"
   },
@@ -131074,8 +131074,8 @@
     "date_bin_start": "2026-01-01",
     "grouped_taxa": "CLP",
     "landing_weight": 6.5589,
-    "n_landings_per_boat": 13.4064,
-    "catch": 52722.6065,
+    "n_landings_per_boat": 13.4065,
+    "catch": 52723.6568,
     "month": "January 2026",
     "year": "2026"
   },
@@ -131084,8 +131084,8 @@
     "date_bin_start": "2026-01-01",
     "grouped_taxa": "FLY",
     "landing_weight": 1.7291,
-    "n_landings_per_boat": 13.4064,
-    "catch": 13898.7253,
+    "n_landings_per_boat": 13.4065,
+    "catch": 13899.0022,
     "month": "January 2026",
     "year": "2026"
   },
@@ -131093,9 +131093,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2026-01-01",
     "grouped_taxa": "GZP",
-    "landing_weight": 8.4286,
-    "n_landings_per_boat": 13.4064,
-    "catch": 67751.7923,
+    "landing_weight": 8.4315,
+    "n_landings_per_boat": 13.4065,
+    "catch": 67777.0206,
     "month": "January 2026",
     "year": "2026"
   },
@@ -131104,8 +131104,8 @@
     "date_bin_start": "2026-01-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0.0007,
-    "n_landings_per_boat": 13.4064,
-    "catch": 5.3125,
+    "n_landings_per_boat": 13.4065,
+    "catch": 5.3126,
     "month": "January 2026",
     "year": "2026"
   },
@@ -131113,9 +131113,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2026-01-01",
     "grouped_taxa": "MOO",
-    "landing_weight": 4.1873,
-    "n_landings_per_boat": 13.4064,
-    "catch": 33659.3193,
+    "landing_weight": 4.1775,
+    "n_landings_per_boat": 13.4065,
+    "catch": 33580.779,
     "month": "January 2026",
     "year": "2026"
   },
@@ -131124,8 +131124,8 @@
     "date_bin_start": "2026-01-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0.292,
-    "n_landings_per_boat": 13.4064,
-    "catch": 2347.1143,
+    "n_landings_per_boat": 13.4065,
+    "catch": 2347.0634,
     "month": "January 2026",
     "year": "2026"
   },
@@ -131134,8 +131134,8 @@
     "date_bin_start": "2026-01-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0.0452,
-    "n_landings_per_boat": 13.4064,
-    "catch": 363.7089,
+    "n_landings_per_boat": 13.4065,
+    "catch": 363.7161,
     "month": "January 2026",
     "year": "2026"
   },
@@ -131144,8 +131144,8 @@
     "date_bin_start": "2026-01-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0.137,
-    "n_landings_per_boat": 13.4064,
-    "catch": 1100.9708,
+    "n_landings_per_boat": 13.4065,
+    "catch": 1100.9927,
     "month": "January 2026",
     "year": "2026"
   },
@@ -131154,8 +131154,8 @@
     "date_bin_start": "2026-01-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0.0915,
-    "n_landings_per_boat": 13.4064,
-    "catch": 735.4896,
+    "n_landings_per_boat": 13.4065,
+    "catch": 735.5042,
     "month": "January 2026",
     "year": "2026"
   },
@@ -131163,9 +131163,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2026-01-01",
     "grouped_taxa": "TUN",
-    "landing_weight": 6.2574,
-    "n_landings_per_boat": 13.4064,
-    "catch": 50299.5646,
+    "landing_weight": 6.2531,
+    "n_landings_per_boat": 13.4065,
+    "catch": 50265.5046,
     "month": "January 2026",
     "year": "2026"
   },
@@ -131174,8 +131174,8 @@
     "date_bin_start": "2026-02-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0.0329,
-    "n_landings_per_boat": 12.7671,
-    "catch": 209.064,
+    "n_landings_per_boat": 12.7665,
+    "catch": 209.0762,
     "month": "February 2026",
     "year": "2026"
   },
@@ -131183,9 +131183,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2026-02-01",
     "grouped_taxa": "CGX",
-    "landing_weight": 0.0938,
-    "n_landings_per_boat": 12.7671,
-    "catch": 595.6805,
+    "landing_weight": 0.0935,
+    "n_landings_per_boat": 12.7665,
+    "catch": 593.7658,
     "month": "February 2026",
     "year": "2026"
   },
@@ -131194,8 +131194,8 @@
     "date_bin_start": "2026-02-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0.2407,
-    "n_landings_per_boat": 12.7671,
-    "catch": 1529.0729,
+    "n_landings_per_boat": 12.7665,
+    "catch": 1529.1619,
     "month": "February 2026",
     "year": "2026"
   },
@@ -131204,8 +131204,8 @@
     "date_bin_start": "2026-02-01",
     "grouped_taxa": "CLP",
     "landing_weight": 4.4822,
-    "n_landings_per_boat": 12.7671,
-    "catch": 28468.1325,
+    "n_landings_per_boat": 12.7665,
+    "catch": 28469.7895,
     "month": "February 2026",
     "year": "2026"
   },
@@ -131214,8 +131214,8 @@
     "date_bin_start": "2026-02-01",
     "grouped_taxa": "FLY",
     "landing_weight": 1.7032,
-    "n_landings_per_boat": 12.7671,
-    "catch": 10817.6923,
+    "n_landings_per_boat": 12.7665,
+    "catch": 10818.322,
     "month": "February 2026",
     "year": "2026"
   },
@@ -131223,9 +131223,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2026-02-01",
     "grouped_taxa": "GZP",
-    "landing_weight": 10.9043,
-    "n_landings_per_boat": 12.7671,
-    "catch": 69256.5353,
+    "landing_weight": 10.9129,
+    "n_landings_per_boat": 12.7665,
+    "catch": 69315.4347,
     "month": "February 2026",
     "year": "2026"
   },
@@ -131234,8 +131234,8 @@
     "date_bin_start": "2026-02-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0.0005,
-    "n_landings_per_boat": 12.7671,
-    "catch": 3.4732,
+    "n_landings_per_boat": 12.7665,
+    "catch": 3.4734,
     "month": "February 2026",
     "year": "2026"
   },
@@ -131243,9 +131243,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2026-02-01",
     "grouped_taxa": "MOO",
-    "landing_weight": 6.3815,
-    "n_landings_per_boat": 12.7671,
-    "catch": 40531.3121,
+    "landing_weight": 6.3705,
+    "n_landings_per_boat": 12.7665,
+    "catch": 40463.5969,
     "month": "February 2026",
     "year": "2026"
   },
@@ -131254,8 +131254,8 @@
     "date_bin_start": "2026-02-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0.3766,
-    "n_landings_per_boat": 12.7671,
-    "catch": 2392.0115,
+    "n_landings_per_boat": 12.7665,
+    "catch": 2391.9393,
     "month": "February 2026",
     "year": "2026"
   },
@@ -131264,8 +131264,8 @@
     "date_bin_start": "2026-02-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0.0734,
-    "n_landings_per_boat": 12.7671,
-    "catch": 465.9329,
+    "n_landings_per_boat": 12.7665,
+    "catch": 465.96,
     "month": "February 2026",
     "year": "2026"
   },
@@ -131274,8 +131274,8 @@
     "date_bin_start": "2026-02-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0.1197,
-    "n_landings_per_boat": 12.7671,
-    "catch": 760.4134,
+    "n_landings_per_boat": 12.7665,
+    "catch": 760.4576,
     "month": "February 2026",
     "year": "2026"
   },
@@ -131284,8 +131284,8 @@
     "date_bin_start": "2026-02-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0.0705,
-    "n_landings_per_boat": 12.7671,
-    "catch": 447.7293,
+    "n_landings_per_boat": 12.7665,
+    "catch": 447.7554,
     "month": "February 2026",
     "year": "2026"
   },
@@ -131293,9 +131293,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2026-02-01",
     "grouped_taxa": "TUN",
-    "landing_weight": 4.5983,
-    "n_landings_per_boat": 12.7671,
-    "catch": 29205.3768,
+    "landing_weight": 4.5922,
+    "n_landings_per_boat": 12.7665,
+    "catch": 29168.1208,
     "month": "February 2026",
     "year": "2026"
   },
@@ -131304,7 +131304,7 @@
     "date_bin_start": "2026-03-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.5115,
+    "n_landings_per_boat": 10.5116,
     "catch": 0,
     "month": "March 2026",
     "year": "2026"
@@ -131314,7 +131314,7 @@
     "date_bin_start": "2026-03-01",
     "grouped_taxa": "CGX",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.5115,
+    "n_landings_per_boat": 10.5116,
     "catch": 0,
     "month": "March 2026",
     "year": "2026"
@@ -131324,8 +131324,8 @@
     "date_bin_start": "2026-03-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0.3219,
-    "n_landings_per_boat": 10.5115,
-    "catch": 1712.1525,
+    "n_landings_per_boat": 10.5116,
+    "catch": 1712.1657,
     "month": "March 2026",
     "year": "2026"
   },
@@ -131334,8 +131334,8 @@
     "date_bin_start": "2026-03-01",
     "grouped_taxa": "CLP",
     "landing_weight": 11.8746,
-    "n_landings_per_boat": 10.5115,
-    "catch": 63158.6568,
+    "n_landings_per_boat": 10.5116,
+    "catch": 63159.1448,
     "month": "March 2026",
     "year": "2026"
   },
@@ -131344,7 +131344,7 @@
     "date_bin_start": "2026-03-01",
     "grouped_taxa": "FLY",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.5115,
+    "n_landings_per_boat": 10.5116,
     "catch": 0,
     "month": "March 2026",
     "year": "2026"
@@ -131354,8 +131354,8 @@
     "date_bin_start": "2026-03-01",
     "grouped_taxa": "GZP",
     "landing_weight": 8.3663,
-    "n_landings_per_boat": 10.5115,
-    "catch": 44498.6567,
+    "n_landings_per_boat": 10.5116,
+    "catch": 44499.0005,
     "month": "March 2026",
     "year": "2026"
   },
@@ -131364,7 +131364,7 @@
     "date_bin_start": "2026-03-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.5115,
+    "n_landings_per_boat": 10.5116,
     "catch": 0,
     "month": "March 2026",
     "year": "2026"
@@ -131374,7 +131374,7 @@
     "date_bin_start": "2026-03-01",
     "grouped_taxa": "MOO",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.5115,
+    "n_landings_per_boat": 10.5116,
     "catch": 0,
     "month": "March 2026",
     "year": "2026"
@@ -131384,7 +131384,7 @@
     "date_bin_start": "2026-03-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.5115,
+    "n_landings_per_boat": 10.5116,
     "catch": 0,
     "month": "March 2026",
     "year": "2026"
@@ -131394,7 +131394,7 @@
     "date_bin_start": "2026-03-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.5115,
+    "n_landings_per_boat": 10.5116,
     "catch": 0,
     "month": "March 2026",
     "year": "2026"
@@ -131404,8 +131404,8 @@
     "date_bin_start": "2026-03-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0.4628,
-    "n_landings_per_boat": 10.5115,
-    "catch": 2461.3997,
+    "n_landings_per_boat": 10.5116,
+    "catch": 2461.4187,
     "month": "March 2026",
     "year": "2026"
   },
@@ -131414,7 +131414,7 @@
     "date_bin_start": "2026-03-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0,
-    "n_landings_per_boat": 10.5115,
+    "n_landings_per_boat": 10.5116,
     "catch": 0,
     "month": "March 2026",
     "year": "2026"
@@ -131424,8 +131424,8 @@
     "date_bin_start": "2026-03-01",
     "grouped_taxa": "TUN",
     "landing_weight": 9.7328,
-    "n_landings_per_boat": 10.5115,
-    "catch": 51767.0942,
+    "n_landings_per_boat": 10.5116,
+    "catch": 51767.4942,
     "month": "March 2026",
     "year": "2026"
   },
@@ -131445,7 +131445,7 @@
     "grouped_taxa": "CGX",
     "landing_weight": 0.3811,
     "n_landings_per_boat": 12.9225,
-    "catch": 2491.7266,
+    "catch": 2491.7301,
     "month": "April 2026",
     "year": "2026"
   },
@@ -131455,7 +131455,7 @@
     "grouped_taxa": "CJX",
     "landing_weight": 0.871,
     "n_landings_per_boat": 12.9225,
-    "catch": 5695.5171,
+    "catch": 5695.5252,
     "month": "April 2026",
     "year": "2026"
   },
@@ -131465,7 +131465,7 @@
     "grouped_taxa": "CLP",
     "landing_weight": 5.1264,
     "n_landings_per_boat": 12.9225,
-    "catch": 33520.6063,
+    "catch": 33520.6538,
     "month": "April 2026",
     "year": "2026"
   },
@@ -131485,7 +131485,7 @@
     "grouped_taxa": "GZP",
     "landing_weight": 12.6152,
     "n_landings_per_boat": 12.9225,
-    "catch": 82487.7812,
+    "catch": 82487.8981,
     "month": "April 2026",
     "year": "2026"
   },
@@ -131505,7 +131505,7 @@
     "grouped_taxa": "MOO",
     "landing_weight": 16.781,
     "n_landings_per_boat": 12.9225,
-    "catch": 109726.9711,
+    "catch": 109727.1265,
     "month": "April 2026",
     "year": "2026"
   },
@@ -131525,7 +131525,7 @@
     "grouped_taxa": "RAX",
     "landing_weight": 0.1747,
     "n_landings_per_boat": 12.9225,
-    "catch": 1142.4497,
+    "catch": 1142.4514,
     "month": "April 2026",
     "year": "2026"
   },
@@ -131535,7 +131535,7 @@
     "grouped_taxa": "SDX",
     "landing_weight": 1.8673,
     "n_landings_per_boat": 12.9225,
-    "catch": 12209.7512,
+    "catch": 12209.7685,
     "month": "April 2026",
     "year": "2026"
   },
@@ -131555,7 +131555,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 5.2599,
     "n_landings_per_boat": 12.9225,
-    "catch": 34393.4397,
+    "catch": 34393.4884,
     "month": "April 2026",
     "year": "2026"
   },
@@ -131564,7 +131564,7 @@
     "date_bin_start": "2026-05-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.4178,
+    "n_landings_per_boat": 9.4179,
     "catch": 0,
     "month": "May 2026",
     "year": "2026"
@@ -131574,7 +131574,7 @@
     "date_bin_start": "2026-05-01",
     "grouped_taxa": "CGX",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.4178,
+    "n_landings_per_boat": 9.4179,
     "catch": 0,
     "month": "May 2026",
     "year": "2026"
@@ -131584,8 +131584,8 @@
     "date_bin_start": "2026-05-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0.7239,
-    "n_landings_per_boat": 9.4178,
-    "catch": 3449.8213,
+    "n_landings_per_boat": 9.4179,
+    "catch": 3449.8373,
     "month": "May 2026",
     "year": "2026"
   },
@@ -131594,8 +131594,8 @@
     "date_bin_start": "2026-05-01",
     "grouped_taxa": "CLP",
     "landing_weight": 11.9507,
-    "n_landings_per_boat": 9.4178,
-    "catch": 56949.8814,
+    "n_landings_per_boat": 9.4179,
+    "catch": 56950.1467,
     "month": "May 2026",
     "year": "2026"
   },
@@ -131604,8 +131604,8 @@
     "date_bin_start": "2026-05-01",
     "grouped_taxa": "FLY",
     "landing_weight": 1.9622,
-    "n_landings_per_boat": 9.4178,
-    "catch": 9350.8097,
+    "n_landings_per_boat": 9.4179,
+    "catch": 9350.8533,
     "month": "May 2026",
     "year": "2026"
   },
@@ -131614,8 +131614,8 @@
     "date_bin_start": "2026-05-01",
     "grouped_taxa": "GZP",
     "landing_weight": 1.381,
-    "n_landings_per_boat": 9.4178,
-    "catch": 6580.9836,
+    "n_landings_per_boat": 9.4179,
+    "catch": 6581.0142,
     "month": "May 2026",
     "year": "2026"
   },
@@ -131624,7 +131624,7 @@
     "date_bin_start": "2026-05-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.4178,
+    "n_landings_per_boat": 9.4179,
     "catch": 0,
     "month": "May 2026",
     "year": "2026"
@@ -131634,8 +131634,8 @@
     "date_bin_start": "2026-05-01",
     "grouped_taxa": "MOO",
     "landing_weight": 34.2397,
-    "n_landings_per_boat": 9.4178,
-    "catch": 163166.6131,
+    "n_landings_per_boat": 9.4179,
+    "catch": 163167.3734,
     "month": "May 2026",
     "year": "2026"
   },
@@ -131644,7 +131644,7 @@
     "date_bin_start": "2026-05-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.4178,
+    "n_landings_per_boat": 9.4179,
     "catch": 0,
     "month": "May 2026",
     "year": "2026"
@@ -131654,7 +131654,7 @@
     "date_bin_start": "2026-05-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.4178,
+    "n_landings_per_boat": 9.4179,
     "catch": 0,
     "month": "May 2026",
     "year": "2026"
@@ -131664,7 +131664,7 @@
     "date_bin_start": "2026-05-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.4178,
+    "n_landings_per_boat": 9.4179,
     "catch": 0,
     "month": "May 2026",
     "year": "2026"
@@ -131674,7 +131674,7 @@
     "date_bin_start": "2026-05-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.4178,
+    "n_landings_per_boat": 9.4179,
     "catch": 0,
     "month": "May 2026",
     "year": "2026"
@@ -131684,8 +131684,8 @@
     "date_bin_start": "2026-05-01",
     "grouped_taxa": "TUN",
     "landing_weight": 0.2369,
-    "n_landings_per_boat": 9.4178,
-    "catch": 1129.0788,
+    "n_landings_per_boat": 9.4179,
+    "catch": 1129.084,
     "month": "May 2026",
     "year": "2026"
   },
@@ -131705,7 +131705,7 @@
     "grouped_taxa": "CGX",
     "landing_weight": 0.2317,
     "n_landings_per_boat": 12.8234,
-    "catch": 1503.6919,
+    "catch": 1503.6902,
     "month": "June 2026",
     "year": "2026"
   },
@@ -131715,7 +131715,7 @@
     "grouped_taxa": "CJX",
     "landing_weight": 0.1082,
     "n_landings_per_boat": 12.8234,
-    "catch": 702.2758,
+    "catch": 702.275,
     "month": "June 2026",
     "year": "2026"
   },
@@ -131725,7 +131725,7 @@
     "grouped_taxa": "CLP",
     "landing_weight": 0.3834,
     "n_landings_per_boat": 12.8234,
-    "catch": 2487.8937,
+    "catch": 2487.8909,
     "month": "June 2026",
     "year": "2026"
   },
@@ -131735,7 +131735,7 @@
     "grouped_taxa": "FLY",
     "landing_weight": 1.1342,
     "n_landings_per_boat": 12.8234,
-    "catch": 7359.7124,
+    "catch": 7359.7041,
     "month": "June 2026",
     "year": "2026"
   },
@@ -131745,7 +131745,7 @@
     "grouped_taxa": "GZP",
     "landing_weight": 11.8196,
     "n_landings_per_boat": 12.8234,
-    "catch": 76693.0421,
+    "catch": 76692.9558,
     "month": "June 2026",
     "year": "2026"
   },
@@ -131755,7 +131755,7 @@
     "grouped_taxa": "LWX",
     "landing_weight": 0.0578,
     "n_landings_per_boat": 12.8234,
-    "catch": 374.8936,
+    "catch": 374.8931,
     "month": "June 2026",
     "year": "2026"
   },
@@ -131765,7 +131765,7 @@
     "grouped_taxa": "MOO",
     "landing_weight": 57.9924,
     "n_landings_per_boat": 12.8234,
-    "catch": 376291.727,
+    "catch": 376291.3032,
     "month": "June 2026",
     "year": "2026"
   },
@@ -131795,7 +131795,7 @@
     "grouped_taxa": "SDX",
     "landing_weight": 0.9861,
     "n_landings_per_boat": 12.8234,
-    "catch": 6398.7367,
+    "catch": 6398.7295,
     "month": "June 2026",
     "year": "2026"
   },
@@ -131805,7 +131805,7 @@
     "grouped_taxa": "SNA",
     "landing_weight": 0.2157,
     "n_landings_per_boat": 12.8234,
-    "catch": 1399.3204,
+    "catch": 1399.3189,
     "month": "June 2026",
     "year": "2026"
   },
@@ -131815,7 +131815,7 @@
     "grouped_taxa": "TUN",
     "landing_weight": 0.0952,
     "n_landings_per_boat": 12.8234,
-    "catch": 617.7857,
+    "catch": 617.785,
     "month": "June 2026",
     "year": "2026"
   },
@@ -131824,7 +131824,7 @@
     "date_bin_start": "2026-07-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0,
-    "n_landings_per_boat": 7.9994,
+    "n_landings_per_boat": 7.9995,
     "catch": 0,
     "month": "July 2026",
     "year": "2026"
@@ -131834,8 +131834,8 @@
     "date_bin_start": "2026-07-01",
     "grouped_taxa": "CGX",
     "landing_weight": 0.0518,
-    "n_landings_per_boat": 7.9994,
-    "catch": 209.4793,
+    "n_landings_per_boat": 7.9995,
+    "catch": 209.4802,
     "month": "July 2026",
     "year": "2026"
   },
@@ -131844,7 +131844,7 @@
     "date_bin_start": "2026-07-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0,
-    "n_landings_per_boat": 7.9994,
+    "n_landings_per_boat": 7.9995,
     "catch": 0,
     "month": "July 2026",
     "year": "2026"
@@ -131854,7 +131854,7 @@
     "date_bin_start": "2026-07-01",
     "grouped_taxa": "CLP",
     "landing_weight": 0,
-    "n_landings_per_boat": 7.9994,
+    "n_landings_per_boat": 7.9995,
     "catch": 0,
     "month": "July 2026",
     "year": "2026"
@@ -131864,8 +131864,8 @@
     "date_bin_start": "2026-07-01",
     "grouped_taxa": "FLY",
     "landing_weight": 4.5102,
-    "n_landings_per_boat": 7.9994,
-    "catch": 18256.0078,
+    "n_landings_per_boat": 7.9995,
+    "catch": 18256.0834,
     "month": "July 2026",
     "year": "2026"
   },
@@ -131874,8 +131874,8 @@
     "date_bin_start": "2026-07-01",
     "grouped_taxa": "GZP",
     "landing_weight": 13.8528,
-    "n_landings_per_boat": 7.9994,
-    "catch": 56072.0712,
+    "n_landings_per_boat": 7.9995,
+    "catch": 56072.3033,
     "month": "July 2026",
     "year": "2026"
   },
@@ -131884,7 +131884,7 @@
     "date_bin_start": "2026-07-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 7.9994,
+    "n_landings_per_boat": 7.9995,
     "catch": 0,
     "month": "July 2026",
     "year": "2026"
@@ -131894,8 +131894,8 @@
     "date_bin_start": "2026-07-01",
     "grouped_taxa": "MOO",
     "landing_weight": 27.0781,
-    "n_landings_per_boat": 7.9994,
-    "catch": 109604.1997,
+    "n_landings_per_boat": 7.9995,
+    "catch": 109604.6534,
     "month": "July 2026",
     "year": "2026"
   },
@@ -131904,7 +131904,7 @@
     "date_bin_start": "2026-07-01",
     "grouped_taxa": "MZZ",
     "landing_weight": 0,
-    "n_landings_per_boat": 7.9994,
+    "n_landings_per_boat": 7.9995,
     "catch": 0,
     "month": "July 2026",
     "year": "2026"
@@ -131914,7 +131914,7 @@
     "date_bin_start": "2026-07-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 7.9994,
+    "n_landings_per_boat": 7.9995,
     "catch": 0,
     "month": "July 2026",
     "year": "2026"
@@ -131924,7 +131924,7 @@
     "date_bin_start": "2026-07-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0,
-    "n_landings_per_boat": 7.9994,
+    "n_landings_per_boat": 7.9995,
     "catch": 0,
     "month": "July 2026",
     "year": "2026"
@@ -131934,8 +131934,8 @@
     "date_bin_start": "2026-07-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0.4237,
-    "n_landings_per_boat": 7.9994,
-    "catch": 1714.9564,
+    "n_landings_per_boat": 7.9995,
+    "catch": 1714.9635,
     "month": "July 2026",
     "year": "2026"
   },
@@ -131944,8 +131944,8 @@
     "date_bin_start": "2026-07-01",
     "grouped_taxa": "TUN",
     "landing_weight": 2.0398,
-    "n_landings_per_boat": 7.9994,
-    "catch": 8256.3862,
+    "n_landings_per_boat": 7.9995,
+    "catch": 8256.4204,
     "month": "July 2026",
     "year": "2026"
   },
@@ -131954,7 +131954,7 @@
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "BEN",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.5802,
+    "n_landings_per_boat": 9.5869,
     "catch": 0,
     "month": "August 2026",
     "year": "2026"
@@ -131963,9 +131963,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "CGX",
-    "landing_weight": 0.2852,
-    "n_landings_per_boat": 9.5802,
-    "catch": 1382.555,
+    "landing_weight": 0.2633,
+    "n_landings_per_boat": 9.5869,
+    "catch": 1277.0936,
     "month": "August 2026",
     "year": "2026"
   },
@@ -131974,7 +131974,7 @@
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "CJX",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.5802,
+    "n_landings_per_boat": 9.5869,
     "catch": 0,
     "month": "August 2026",
     "year": "2026"
@@ -131984,7 +131984,7 @@
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "CLP",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.5802,
+    "n_landings_per_boat": 9.5869,
     "catch": 0,
     "month": "August 2026",
     "year": "2026"
@@ -131994,7 +131994,7 @@
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "FLY",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.5802,
+    "n_landings_per_boat": 9.5869,
     "catch": 0,
     "month": "August 2026",
     "year": "2026"
@@ -132003,9 +132003,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "GZP",
-    "landing_weight": 10.7924,
-    "n_landings_per_boat": 9.5802,
-    "catch": 52317.2228,
+    "landing_weight": 11.6254,
+    "n_landings_per_boat": 9.5869,
+    "catch": 56394.1444,
     "month": "August 2026",
     "year": "2026"
   },
@@ -132014,7 +132014,7 @@
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "LWX",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.5802,
+    "n_landings_per_boat": 9.5869,
     "catch": 0,
     "month": "August 2026",
     "year": "2026"
@@ -132023,9 +132023,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "MOO",
-    "landing_weight": 22.4134,
-    "n_landings_per_boat": 9.5802,
-    "catch": 108650.4709,
+    "landing_weight": 20.6893,
+    "n_landings_per_boat": 9.5869,
+    "catch": 100362.6021,
     "month": "August 2026",
     "year": "2026"
   },
@@ -132033,9 +132033,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "MZZ",
-    "landing_weight": 0.1107,
-    "n_landings_per_boat": 9.5802,
-    "catch": 536.4245,
+    "landing_weight": 0.1021,
+    "n_landings_per_boat": 9.5869,
+    "catch": 495.506,
     "month": "August 2026",
     "year": "2026"
   },
@@ -132044,7 +132044,7 @@
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "RAX",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.5802,
+    "n_landings_per_boat": 9.5869,
     "catch": 0,
     "month": "August 2026",
     "year": "2026"
@@ -132054,7 +132054,7 @@
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "SDX",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.5802,
+    "n_landings_per_boat": 9.5869,
     "catch": 0,
     "month": "August 2026",
     "year": "2026"
@@ -132064,7 +132064,7 @@
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "SNA",
     "landing_weight": 0,
-    "n_landings_per_boat": 9.5802,
+    "n_landings_per_boat": 9.5869,
     "catch": 0,
     "month": "August 2026",
     "year": "2026"
@@ -132073,9 +132073,9 @@
     "region": "Bobonaro",
     "date_bin_start": "2026-08-01",
     "grouped_taxa": "TUN",
-    "landing_weight": 24.4861,
-    "n_landings_per_boat": 9.5802,
-    "catch": 118698.3724,
+    "landing_weight": 22.6026,
+    "n_landings_per_boat": 9.5869,
+    "catch": 109644.0486,
     "month": "August 2026",
     "year": "2026"
   },
