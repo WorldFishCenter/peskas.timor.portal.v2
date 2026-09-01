@@ -10,29 +10,29 @@
     },
     {
       "Area": "South Coast",
-      "n": 18393
+      "n": 18434
     }
   ],
   "estimated_tons": [
     {
       "fish_group": "Small pelagics",
-      "tons": 34519
+      "tons": 34538
     },
     {
       "fish_group": "Large pelagics",
-      "tons": 14099
+      "tons": 14103
     },
     {
       "fish_group": "Other",
-      "tons": 5681
+      "tons": 5670
     },
     {
       "fish_group": "Small demersals",
-      "tons": 3405
+      "tons": 3411
     },
     {
       "fish_group": "Large demersals",
-      "tons": 2646
+      "tons": 2640
     }
   ],
   "estimated_revenue": [
@@ -46,7 +46,7 @@
     },
     {
       "Area": "South Coast",
-      "Estimated revenue": 46205356
+      "Estimated revenue": 46125810
     }
   ],
   "catch_habitat": [
@@ -100,7 +100,7 @@
         },
         {
           "x": "Long Line",
-          "y": 1.321
+          "y": 1.318
         }
       ]
     },
@@ -208,7 +208,7 @@
         },
         {
           "x": "Long Line",
-          "y": 5.321
+          "y": 5.314
         },
         {
           "x": "Seine Net",
@@ -342,31 +342,31 @@
   "nutrients_per_catch": [
     {
       "nutrient_names": "Selenium",
-      "nut_rdi": 204.4221
+      "nut_rdi": 204.3362
     },
     {
       "nutrient_names": "Protein",
-      "nut_rdi": 56.5063
+      "nut_rdi": 56.4809
     },
     {
       "nutrient_names": "Zinc",
-      "nut_rdi": 31.391
+      "nut_rdi": 31.3767
     },
     {
       "nutrient_names": "Vitamin A",
-      "nut_rdi": 15.7969
+      "nut_rdi": 15.7893
     },
     {
       "nutrient_names": "Calcium",
-      "nut_rdi": 13.9387
+      "nut_rdi": 13.9333
     },
     {
       "nutrient_names": "Omega-3",
-      "nut_rdi": 10.589
+      "nut_rdi": 10.5843
     },
     {
       "nutrient_names": "Iron",
-      "nut_rdi": 5.3175
+      "nut_rdi": 5.3154
     }
   ],
   "nutrients_habitat": [
@@ -432,7 +432,7 @@
         },
         {
           "x": "Deep",
-          "y": 2.068
+          "y": 2.069
         }
       ]
     },
@@ -482,7 +482,7 @@
         },
         {
           "x": "Deep",
-          "y": 1.388
+          "y": 1.389
         },
         {
           "x": "Beach",
@@ -915,20 +915,20 @@
     {
       "municipality": "Viqueque",
       "catch_preservation": "Open",
-      "count": 1627,
-      "perc": 96.3292
+      "count": 1668,
+      "perc": 96.4162
     },
     {
       "municipality": "Viqueque",
       "catch_preservation": "Other",
       "count": 51,
-      "perc": 3.0195
+      "perc": 2.948
     },
     {
       "municipality": "Viqueque",
       "catch_preservation": "Shade",
       "count": 11,
-      "perc": 0.6513
+      "perc": 0.6358
     },
     {
       "catch_preservation": "Box",
@@ -1270,7 +1270,7 @@
     {
       "municipality": "Viqueque",
       "gear": "long line",
-      "cpue": 0.5327
+      "cpue": 0.528
     },
     {
       "municipality": "Viqueque",
