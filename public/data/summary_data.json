@@ -6,7 +6,7 @@
     },
     {
       "Area": "North Coast",
-      "n": 37691
+      "n": 37692
     },
     {
       "Area": "South Coast",
@@ -16,37 +16,37 @@
   "estimated_tons": [
     {
       "fish_group": "Small pelagics",
-      "tons": 34711
+      "tons": 29629
     },
     {
       "fish_group": "Large pelagics",
-      "tons": 14173
+      "tons": 10263
     },
     {
       "fish_group": "Other",
-      "tons": 5733
-    },
-    {
-      "fish_group": "Small demersals",
-      "tons": 3524
+      "tons": 4585
     },
     {
       "fish_group": "Large demersals",
-      "tons": 2654
+      "tons": 2242
+    },
+    {
+      "fish_group": "Small demersals",
+      "tons": 2069
     }
   ],
   "estimated_revenue": [
     {
       "Area": "Atauro island",
-      "Estimated revenue": 13803751
+      "Estimated revenue": 13510292
     },
     {
       "Area": "North Coast",
-      "Estimated revenue": 112719883
+      "Estimated revenue": 127930258
     },
     {
       "Area": "South Coast",
-      "Estimated revenue": 46912346
+      "Estimated revenue": 21534017
     }
   ],
   "catch_habitat": [
@@ -55,27 +55,27 @@
       "data": [
         {
           "x": "Spear Gun",
-          "y": 5.168
+          "y": 7.194
         },
         {
           "x": "Gill Net",
-          "y": 2.312
+          "y": 2.174
+        },
+        {
+          "x": "Gleaning",
+          "y": 1.94
         },
         {
           "x": "Beach Seine",
-          "y": 1.59
-        },
-        {
-          "x": "Hand Line",
-          "y": 0.712
+          "y": 1.818
         },
         {
           "x": "Cast Net",
-          "y": 0.678
+          "y": 0.76
         },
         {
-          "x": "Manual Collection",
-          "y": 0.187
+          "x": "Hand Line",
+          "y": 0.625
         }
       ]
     },
@@ -84,23 +84,52 @@
       "data": [
         {
           "x": "Spear Gun",
-          "y": 3.32
+          "y": 2.546
         },
         {
           "x": "Hand Line",
-          "y": 2.266
-        },
-        {
-          "x": "Seine Net",
-          "y": 1.7
+          "y": 1.803
         },
         {
           "x": "Gill Net",
-          "y": 1.438
+          "y": 1.346
         },
         {
           "x": "Long Line",
-          "y": 1.318
+          "y": 1.102
+        },
+        {
+          "x": "Seine",
+          "y": 1.062
+        }
+      ]
+    },
+    {
+      "name": "Beach",
+      "data": [
+        {
+          "x": "Spear Gun",
+          "y": 2.634
+        },
+        {
+          "x": "Gill Net",
+          "y": 1.389
+        },
+        {
+          "x": "Beach Seine",
+          "y": 0.786
+        },
+        {
+          "x": "Hand Line",
+          "y": 0.481
+        },
+        {
+          "x": "Cast Net",
+          "y": 0.171
+        },
+        {
+          "x": "Gleaning",
+          "y": 0.135
         }
       ]
     },
@@ -109,48 +138,19 @@
       "data": [
         {
           "x": "Gill Net",
-          "y": 2.863
+          "y": 2.338
         },
         {
-          "x": "Seine Net",
-          "y": 1.594
+          "x": "Seine",
+          "y": 1.409
         },
         {
           "x": "Hand Line",
-          "y": 0.556
+          "y": 0.49
         },
         {
           "x": "Long Line",
-          "y": 0.331
-        }
-      ]
-    },
-    {
-      "name": "Beach",
-      "data": [
-        {
-          "x": "Beach Seine",
-          "y": 2.088
-        },
-        {
-          "x": "Gill Net",
-          "y": 1.391
-        },
-        {
-          "x": "Spear Gun",
-          "y": 0.698
-        },
-        {
-          "x": "Hand Line",
-          "y": 0.601
-        },
-        {
-          "x": "Cast Net",
-          "y": 0.214
-        },
-        {
-          "x": "Manual Collection",
-          "y": 0.067
+          "y": 0.432
         }
       ]
     },
@@ -159,15 +159,11 @@
       "data": [
         {
           "x": "Spear Gun",
-          "y": 2.124
+          "y": 1.456
         },
         {
           "x": "Gill Net",
-          "y": 1.618
-        },
-        {
-          "x": "Manual Collection",
-          "y": 0.412
+          "y": 1.368
         }
       ]
     },
@@ -175,12 +171,12 @@
       "name": "Traditional FAD",
       "data": [
         {
-          "x": "Seine Net",
-          "y": 1.828
+          "x": "Seine",
+          "y": 1.615
         },
         {
           "x": "Gill Net",
-          "y": 1.011
+          "y": 0.829
         }
       ]
     },
@@ -189,7 +185,7 @@
       "data": [
         {
           "x": "Gill Net",
-          "y": 2.062
+          "y": 1.777
         }
       ]
     }
@@ -204,19 +200,19 @@
         },
         {
           "x": "Hand Line",
-          "y": 8.878
+          "y": 8.924
         },
         {
           "x": "Long Line",
-          "y": 5.317
+          "y": 5.388
         },
         {
-          "x": "Seine Net",
+          "x": "Seine",
           "y": 4.051
         },
         {
           "x": "Gill Net",
-          "y": 3.745
+          "y": 3.735
         }
       ]
     },
@@ -225,27 +221,27 @@
       "data": [
         {
           "x": "Spear Gun",
-          "y": 10.173
+          "y": 10.18
         },
         {
           "x": "Gill Net",
-          "y": 5.68
+          "y": 5.705
         },
         {
           "x": "Hand Line",
-          "y": 5.529
+          "y": 5.56
         },
         {
           "x": "Beach Seine",
-          "y": 2.923
+          "y": 2.942
         },
         {
           "x": "Cast Net",
-          "y": 2.784
+          "y": 2.749
         },
         {
-          "x": "Manual Collection",
-          "y": 1.907
+          "x": "Gleaning",
+          "y": 1.858
         }
       ]
     },
@@ -254,27 +250,27 @@
       "data": [
         {
           "x": "Beach Seine",
-          "y": 7.245
+          "y": 7.272
         },
         {
           "x": "Gill Net",
-          "y": 4.94
+          "y": 4.947
         },
         {
           "x": "Hand Line",
-          "y": 2.803
+          "y": 2.75
         },
         {
           "x": "Spear Gun",
-          "y": 2.427
+          "y": 2.462
         },
         {
           "x": "Cast Net",
-          "y": 0.782
+          "y": 0.785
         },
         {
-          "x": "Manual Collection",
-          "y": 0.762
+          "x": "Gleaning",
+          "y": 0.773
         }
       ]
     },
@@ -283,18 +279,18 @@
       "data": [
         {
           "x": "Gill Net",
-          "y": 5.736
+          "y": 5.7
         },
         {
           "x": "Hand Line",
-          "y": 3.695
+          "y": 3.745
         },
         {
           "x": "Long Line",
-          "y": 3.286
+          "y": 3.407
         },
         {
-          "x": "Seine Net",
+          "x": "Seine",
           "y": 2.96
         }
       ]
@@ -309,10 +305,6 @@
         {
           "x": "Gill Net",
           "y": 3.357
-        },
-        {
-          "x": "Manual Collection",
-          "y": 1.431
         }
       ]
     },
@@ -320,7 +312,7 @@
       "name": "Traditional FAD",
       "data": [
         {
-          "x": "Seine Net",
+          "x": "Seine",
           "y": 2.881
         },
         {
@@ -342,31 +334,31 @@
   "nutrients_per_catch": [
     {
       "nutrient_names": "Selenium",
-      "nut_rdi": 204.3255
+      "nut_rdi": 195.1114
     },
     {
       "nutrient_names": "Protein",
-      "nut_rdi": 56.4797
+      "nut_rdi": 49.2188
     },
     {
       "nutrient_names": "Zinc",
-      "nut_rdi": 31.3876
-    },
-    {
-      "nutrient_names": "Vitamin A",
-      "nut_rdi": 15.7851
+      "nut_rdi": 31.3255
     },
     {
       "nutrient_names": "Calcium",
-      "nut_rdi": 13.9294
+      "nut_rdi": 14.436
+    },
+    {
+      "nutrient_names": "Vitamin A",
+      "nut_rdi": 13.597
     },
     {
       "nutrient_names": "Omega-3",
-      "nut_rdi": 10.581
+      "nut_rdi": 8.7328
     },
     {
       "nutrient_names": "Iron",
-      "nut_rdi": 5.3149
+      "nut_rdi": 5.817
     }
   ],
   "nutrients_habitat": [
@@ -375,31 +367,31 @@
       "data": [
         {
           "x": "Traditional FAD",
-          "y": 4.397
-        },
-        {
-          "x": "FAD",
-          "y": 4.342
-        },
-        {
-          "x": "Deep",
-          "y": 4.193
-        },
-        {
-          "x": "Seagrass",
-          "y": 4.182
+          "y": 4.376
         },
         {
           "x": "Reef",
-          "y": 4.162
+          "y": 4.135
+        },
+        {
+          "x": "Seagrass",
+          "y": 4.124
         },
         {
           "x": "Mangrove",
-          "y": 4.146
+          "y": 4.114
         },
         {
           "x": "Beach",
-          "y": 4.122
+          "y": 3.991
+        },
+        {
+          "x": "Deep",
+          "y": 3.985
+        },
+        {
+          "x": "FAD",
+          "y": 3.719
         }
       ]
     },
@@ -408,31 +400,31 @@
       "data": [
         {
           "x": "Seagrass",
-          "y": 3.63
+          "y": 3.498
         },
         {
           "x": "Reef",
-          "y": 2.843
-        },
-        {
-          "x": "Mangrove",
-          "y": 2.714
+          "y": 3.008
         },
         {
           "x": "Beach",
-          "y": 2.402
+          "y": 2.864
+        },
+        {
+          "x": "Mangrove",
+          "y": 2.652
         },
         {
           "x": "Traditional FAD",
-          "y": 2.324
-        },
-        {
-          "x": "FAD",
-          "y": 2.081
+          "y": 2.638
         },
         {
           "x": "Deep",
-          "y": 2.068
+          "y": 2.16
+        },
+        {
+          "x": "FAD",
+          "y": 1.915
         }
       ]
     },
@@ -441,31 +433,31 @@
       "data": [
         {
           "x": "Reef",
-          "y": 1.182
+          "y": 1.223
         },
         {
           "x": "Seagrass",
-          "y": 1.026
+          "y": 1.029
         },
         {
           "x": "Deep",
-          "y": 0.923
+          "y": 0.908
         },
         {
           "x": "Mangrove",
-          "y": 0.804
+          "y": 0.731
         },
         {
           "x": "Beach",
-          "y": 0.704
+          "y": 0.726
         },
         {
           "x": "FAD",
-          "y": 0.609
+          "y": 0.479
         },
         {
           "x": "Traditional FAD",
-          "y": 0.32
+          "y": 0.357
         }
       ]
     },
@@ -474,31 +466,31 @@
       "data": [
         {
           "x": "Traditional FAD",
-          "y": 3.166
+          "y": 3.408
         },
         {
           "x": "FAD",
-          "y": 1.967
+          "y": 1.91
         },
         {
           "x": "Deep",
-          "y": 1.389
+          "y": 1.537
         },
         {
           "x": "Beach",
-          "y": 1.04
+          "y": 1.5
         },
         {
           "x": "Reef",
-          "y": 0.88
+          "y": 1.053
         },
         {
           "x": "Seagrass",
-          "y": 0.484
+          "y": 0.463
         },
         {
           "x": "Mangrove",
-          "y": 0.409
+          "y": 0.45
         }
       ]
     },
@@ -506,32 +498,32 @@
       "name": "Omega-3",
       "data": [
         {
-          "x": "Beach",
-          "y": 1.256
-        },
-        {
           "x": "Traditional FAD",
-          "y": 1.147
+          "y": 1.129
         },
         {
-          "x": "Deep",
-          "y": 0.981
+          "x": "Beach",
+          "y": 0.879
         },
         {
           "x": "FAD",
-          "y": 0.937
+          "y": 0.867
+        },
+        {
+          "x": "Deep",
+          "y": 0.825
         },
         {
           "x": "Reef",
-          "y": 0.777
+          "y": 0.651
+        },
+        {
+          "x": "Mangrove",
+          "y": 0.476
         },
         {
           "x": "Seagrass",
           "y": 0.457
-        },
-        {
-          "x": "Mangrove",
-          "y": 0.44
         }
       ]
     },
@@ -540,31 +532,31 @@
       "data": [
         {
           "x": "Traditional FAD",
-          "y": 1.015
+          "y": 1.087
         },
         {
           "x": "FAD",
-          "y": 0.697
+          "y": 0.709
         },
         {
           "x": "Deep",
-          "y": 0.47
+          "y": 0.543
         },
         {
           "x": "Beach",
-          "y": 0.354
+          "y": 0.54
         },
         {
           "x": "Reef",
-          "y": 0.352
+          "y": 0.425
         },
         {
           "x": "Seagrass",
-          "y": 0.282
+          "y": 0.262
         },
         {
           "x": "Mangrove",
-          "y": 0.209
+          "y": 0.222
         }
       ]
     }
@@ -664,31 +656,31 @@
       "municipality": "Bobonaro",
       "catch_preservation": "Box",
       "count": 1,
-      "perc": 0.1064
+      "perc": 0.1063
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Ice box",
       "count": 9,
-      "perc": 0.9574
+      "perc": 0.9564
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Open",
-      "count": 890,
-      "perc": 94.6809
+      "count": 891,
+      "perc": 94.6865
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Other",
       "count": 2,
-      "perc": 0.2128
+      "perc": 0.2125
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Shade",
       "count": 38,
-      "perc": 4.0426
+      "perc": 4.0383
     },
     {
       "municipality": "Covalima",
@@ -959,333 +951,328 @@
   "region_cpue": [
     {
       "municipality": "Ainaro",
-      "gear": "gill net",
-      "cpue": 0.4137
+      "gear": "Gill Net",
+      "cpue": 0.4229
     },
     {
       "municipality": "Ainaro",
-      "gear": "hand line",
-      "cpue": 0.2797
+      "gear": "Hand Line",
+      "cpue": 0.2711
     },
     {
       "municipality": "Atauro",
-      "gear": "beach seine",
-      "cpue": 0.4334
+      "gear": "Beach Seine",
+      "cpue": 0.3734
     },
     {
       "municipality": "Atauro",
-      "gear": "cast net",
-      "cpue": 2.5266
+      "gear": "Cast Net",
+      "cpue": 2.1649
     },
     {
       "municipality": "Atauro",
-      "gear": "gill net",
-      "cpue": 2.1807
+      "gear": "Gill Net",
+      "cpue": 1.9708
     },
     {
       "municipality": "Atauro",
-      "gear": "hand line",
-      "cpue": 2.644
+      "gear": "Gleaning",
+      "cpue": 5.6378
     },
     {
       "municipality": "Atauro",
-      "gear": "long line",
-      "cpue": 3.0233
+      "gear": "Hand Line",
+      "cpue": 2.1444
     },
     {
       "municipality": "Atauro",
-      "gear": "manual collection",
-      "cpue": 0.4321
+      "gear": "Long Line",
+      "cpue": 2.3724
     },
     {
       "municipality": "Atauro",
-      "gear": "seine net",
-      "cpue": 1.3719
+      "gear": "Seine",
+      "cpue": 0.8571
     },
     {
       "municipality": "Atauro",
-      "gear": "spear gun",
-      "cpue": 4.5919
+      "gear": "Spear Gun",
+      "cpue": 4.6087
     },
     {
       "municipality": "Atauro",
-      "gear": "trap",
-      "cpue": 0.6063
+      "gear": "Trap",
+      "cpue": 0.5552
     },
     {
       "municipality": "Baucau",
-      "gear": "beach seine",
-      "cpue": 0.5446
+      "gear": "Beach Seine",
+      "cpue": 0.6476
     },
     {
       "municipality": "Baucau",
-      "gear": "gill net",
-      "cpue": 1.0148
+      "gear": "Gill Net",
+      "cpue": 0.9874
     },
     {
       "municipality": "Baucau",
-      "gear": "hand line",
-      "cpue": 0.4498
+      "gear": "Hand Line",
+      "cpue": 0.3871
     },
     {
       "municipality": "Baucau",
-      "gear": "long line",
-      "cpue": 1.0026
+      "gear": "Long Line",
+      "cpue": 0.8001
     },
     {
       "municipality": "Baucau",
-      "gear": "seine net",
-      "cpue": 1.2258
+      "gear": "Seine",
+      "cpue": 1.0782
     },
     {
       "municipality": "Bobonaro",
-      "gear": "beach seine",
-      "cpue": 0.6418
+      "gear": "Beach Seine",
+      "cpue": 0.6358
     },
     {
       "municipality": "Bobonaro",
-      "gear": "cast net",
-      "cpue": 0.5149
+      "gear": "Cast Net",
+      "cpue": 0.2453
     },
     {
       "municipality": "Bobonaro",
-      "gear": "gill net",
-      "cpue": 0.882
+      "gear": "Gill Net",
+      "cpue": 0.8881
     },
     {
       "municipality": "Bobonaro",
-      "gear": "hand line",
-      "cpue": 0.3469
+      "gear": "Gleaning",
+      "cpue": 0.1636
     },
     {
       "municipality": "Bobonaro",
-      "gear": "long line",
-      "cpue": 0.6609
+      "gear": "Hand Line",
+      "cpue": 0.2968
     },
     {
       "municipality": "Bobonaro",
-      "gear": "manual collection",
-      "cpue": 0.0949
+      "gear": "Long Line",
+      "cpue": 1.5626
     },
     {
       "municipality": "Bobonaro",
-      "gear": "spear gun",
-      "cpue": 0.3511
+      "gear": "Spear Gun",
+      "cpue": 0.3205
     },
     {
       "municipality": "Covalima",
-      "gear": "beach seine",
-      "cpue": 1.325
+      "gear": "Beach Seine",
+      "cpue": 0.8839
     },
     {
       "municipality": "Covalima",
-      "gear": "cast net",
-      "cpue": 0.3659
+      "gear": "Cast Net",
+      "cpue": 0.2529
     },
     {
       "municipality": "Covalima",
-      "gear": "gill net",
-      "cpue": 0.4473
+      "gear": "Gill Net",
+      "cpue": 0.4811
     },
     {
       "municipality": "Covalima",
-      "gear": "hand line",
-      "cpue": 0.6193
+      "gear": "Gleaning",
+      "cpue": 1.1269
     },
     {
       "municipality": "Covalima",
-      "gear": "long line",
-      "cpue": 0.4866
+      "gear": "Hand Line",
+      "cpue": 0.5448
     },
     {
       "municipality": "Covalima",
-      "gear": "manual collection",
-      "cpue": 0.0293
+      "gear": "Long Line",
+      "cpue": 0.4565
     },
     {
       "municipality": "Dili",
-      "gear": "beach seine",
-      "cpue": 0.0926
+      "gear": "Beach Seine",
+      "cpue": 0.0971
     },
     {
       "municipality": "Dili",
-      "gear": "cast net",
-      "cpue": 0.0611
+      "gear": "Cast Net",
+      "cpue": 0.0461
     },
     {
       "municipality": "Dili",
-      "gear": "gill net",
-      "cpue": 0.2077
+      "gear": "Gill Net",
+      "cpue": 0.1969
     },
     {
       "municipality": "Dili",
-      "gear": "hand line",
-      "cpue": 0.2157
+      "gear": "Gleaning",
+      "cpue": 0.1229
     },
     {
       "municipality": "Dili",
-      "gear": "long line",
-      "cpue": 0.0847
+      "gear": "Hand Line",
+      "cpue": 0.2019
     },
     {
       "municipality": "Dili",
-      "gear": "manual collection",
-      "cpue": 0.1059
+      "gear": "Long Line",
+      "cpue": 0.0782
     },
     {
       "municipality": "Dili",
-      "gear": "spear gun",
-      "cpue": 0.803
+      "gear": "Spear Gun",
+      "cpue": 0.6561
     },
     {
       "municipality": "Lautem",
-      "gear": "beach seine",
-      "cpue": 0.031
+      "gear": "Gill Net",
+      "cpue": 0.7745
     },
     {
       "municipality": "Lautem",
-      "gear": "gill net",
-      "cpue": 1.1939
+      "gear": "Hand Line",
+      "cpue": 0.6012
     },
     {
       "municipality": "Lautem",
-      "gear": "hand line",
-      "cpue": 0.759
+      "gear": "Long Line",
+      "cpue": 0.4738
     },
     {
       "municipality": "Lautem",
-      "gear": "long line",
-      "cpue": 0.5806
-    },
-    {
-      "municipality": "Lautem",
-      "gear": "spear gun",
-      "cpue": 0.6192
+      "gear": "Spear Gun",
+      "cpue": 0.467
     },
     {
       "municipality": "Liquica",
-      "gear": "cast net",
-      "cpue": 0.0514
+      "gear": "Cast Net",
+      "cpue": 0.0387
     },
     {
       "municipality": "Liquica",
-      "gear": "gill net",
-      "cpue": 0.5062
+      "gear": "Gill Net",
+      "cpue": 0.533
     },
     {
       "municipality": "Liquica",
-      "gear": "hand line",
-      "cpue": 0.4194
+      "gear": "Hand Line",
+      "cpue": 0.345
     },
     {
       "municipality": "Liquica",
-      "gear": "long line",
-      "cpue": 1.5009
+      "gear": "Long Line",
+      "cpue": 0.9505
     },
     {
       "municipality": "Liquica",
-      "gear": "spear gun",
-      "cpue": 0.2454
+      "gear": "Spear Gun",
+      "cpue": 0.2309
     },
     {
       "municipality": "Manatuto",
-      "gear": "cast net",
-      "cpue": 0.4979
+      "gear": "Cast Net",
+      "cpue": 0.5921
     },
     {
       "municipality": "Manatuto",
-      "gear": "gill net",
-      "cpue": 0.8335
+      "gear": "Gill Net",
+      "cpue": 0.9594
     },
     {
       "municipality": "Manatuto",
-      "gear": "hand line",
-      "cpue": 1.5558
+      "gear": "Gleaning",
+      "cpue": 0.6235
     },
     {
       "municipality": "Manatuto",
-      "gear": "manual collection",
-      "cpue": 0.1264
+      "gear": "Hand Line",
+      "cpue": 1.2684
     },
     {
       "municipality": "Manufahi",
-      "gear": "gill net",
-      "cpue": 0.2118
+      "gear": "Gill Net",
+      "cpue": 0.2172
     },
     {
       "municipality": "Manufahi",
-      "gear": "hand line",
-      "cpue": 0.3412
+      "gear": "Hand Line",
+      "cpue": 0.3046
     },
     {
       "municipality": "Oecusse",
-      "gear": "beach seine",
-      "cpue": 0.6772
+      "gear": "Beach Seine",
+      "cpue": 0.613
     },
     {
       "municipality": "Oecusse",
-      "gear": "gill net",
-      "cpue": 0.9044
+      "gear": "Gill Net",
+      "cpue": 0.8018
     },
     {
       "municipality": "Oecusse",
-      "gear": "hand line",
-      "cpue": 1.6757
+      "gear": "Hand Line",
+      "cpue": 1.3442
     },
     {
       "municipality": "Oecusse",
-      "gear": "long line",
-      "cpue": 0.8391
+      "gear": "Long Line",
+      "cpue": 0.6841
     },
     {
       "municipality": "Oecusse",
-      "gear": "seine net",
-      "cpue": 0.4458
+      "gear": "Seine",
+      "cpue": 0.2099
     },
     {
       "municipality": "Oecusse",
-      "gear": "spear gun",
-      "cpue": 0.5694
+      "gear": "Spear Gun",
+      "cpue": 0.4073
     },
     {
       "municipality": "Viqueque",
-      "gear": "beach seine",
-      "cpue": 6.4855
+      "gear": "Beach Seine",
+      "cpue": 2.2375
     },
     {
       "municipality": "Viqueque",
-      "gear": "cast net",
-      "cpue": 0.3374
+      "gear": "Cast Net",
+      "cpue": 0.328
     },
     {
       "municipality": "Viqueque",
-      "gear": "gill net",
-      "cpue": 0.6207
+      "gear": "Gill Net",
+      "cpue": 0.418
     },
     {
       "municipality": "Viqueque",
-      "gear": "hand line",
-      "cpue": 0.6763
+      "gear": "Gleaning",
+      "cpue": 0.0106
     },
     {
       "municipality": "Viqueque",
-      "gear": "long line",
-      "cpue": 0.528
+      "gear": "Hand Line",
+      "cpue": 0.6295
     },
     {
       "municipality": "Viqueque",
-      "gear": "manual collection",
-      "cpue": 0.0049
+      "gear": "Long Line",
+      "cpue": 0.4417
     },
     {
       "municipality": "Viqueque",
-      "gear": "seine net",
-      "cpue": 0.521
+      "gear": "Seine",
+      "cpue": 0.123
     },
     {
       "municipality": "Viqueque",
-      "gear": "spear gun",
-      "cpue": 0.8812
+      "gear": "Spear Gun",
+      "cpue": 0.7024
     }
   ]
 }
