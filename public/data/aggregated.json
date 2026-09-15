@@ -14,6 +14,32 @@
       "day": "21 Sep 26"
     },
     {
+      "date_bin_start": "2026-09-14",
+      "n_landings": 14,
+      "prop_landings_woman": 0.0714,
+      "fuel": 10,
+      "n_tracks": 0,
+      "n_matched": 0,
+      "prop_matched": 0,
+      "recorded_revenue": 590,
+      "recorded_catch": 132.8867,
+      "n_boats": 3796,
+      "day": "14 Sep 26"
+    },
+    {
+      "date_bin_start": "2026-09-12",
+      "n_landings": 10,
+      "prop_landings_woman": 0.1,
+      "fuel": 5,
+      "n_tracks": 0,
+      "n_matched": 0,
+      "prop_matched": 0,
+      "recorded_revenue": 378,
+      "recorded_catch": 123.1136,
+      "n_boats": 3796,
+      "day": "12 Sep 26"
+    },
+    {
       "date_bin_start": "2026-09-11",
       "n_landings": 15,
       "prop_landings_woman": 0.1333,
@@ -154,7 +180,7 @@
     {
       "date_bin_start": "2026-08-29",
       "n_landings": 10,
-      "prop_landings_woman": 0.1,
+      "prop_landings_woman": 0.1111,
       "fuel": 10,
       "n_tracks": 0,
       "n_matched": 0,
@@ -193,7 +219,7 @@
     {
       "date_bin_start": "2026-08-26",
       "n_landings": 23,
-      "prop_landings_woman": 0.087,
+      "prop_landings_woman": 0.0909,
       "fuel": 7.5714,
       "n_tracks": 0,
       "n_matched": 0,
@@ -457,7 +483,7 @@
     {
       "date_bin_start": "2026-08-03",
       "n_landings": 30,
-      "prop_landings_woman": 0.069,
+      "prop_landings_woman": 0.0741,
       "fuel": 10.2222,
       "n_tracks": 0,
       "n_matched": 0,
@@ -888,7 +914,7 @@
     {
       "date_bin_start": "2026-06-22",
       "n_landings": 25,
-      "prop_landings_woman": 0.125,
+      "prop_landings_woman": 0.1304,
       "fuel": 8.3333,
       "n_tracks": 0,
       "n_matched": 0,
@@ -1155,7 +1181,7 @@
     {
       "date_bin_start": "2026-05-29",
       "n_landings": 31,
-      "prop_landings_woman": 0.1333,
+      "prop_landings_woman": 0.1379,
       "fuel": 5.5556,
       "n_tracks": 0,
       "n_matched": 0,
@@ -1372,7 +1398,7 @@
     {
       "date_bin_start": "2026-05-09",
       "n_landings": 11,
-      "prop_landings_woman": 0.0909,
+      "prop_landings_woman": 0.1,
       "fuel": 10.6,
       "n_tracks": 0,
       "n_matched": 0,
@@ -1754,7 +1780,7 @@
     {
       "date_bin_start": "2026-04-07",
       "n_landings": 32,
-      "prop_landings_woman": 0.0938,
+      "prop_landings_woman": 0.0968,
       "fuel": 5,
       "n_tracks": 1,
       "n_matched": 0,
@@ -1840,7 +1866,7 @@
     {
       "date_bin_start": "2026-03-31",
       "n_landings": 21,
-      "prop_landings_woman": 0.15,
+      "prop_landings_woman": 0.1579,
       "fuel": 8.4118,
       "n_tracks": 0,
       "n_matched": 0,
@@ -1901,7 +1927,7 @@
     {
       "date_bin_start": "2026-03-26",
       "n_landings": 33,
-      "prop_landings_woman": 0.0909,
+      "prop_landings_woman": 0.0938,
       "fuel": 5.4286,
       "n_tracks": 1,
       "n_matched": 0,
@@ -1914,7 +1940,7 @@
     {
       "date_bin_start": "2026-03-25",
       "n_landings": 26,
-      "prop_landings_woman": 0.08,
+      "prop_landings_woman": 0.0833,
       "fuel": 6.2778,
       "n_tracks": 0,
       "n_matched": 0,
@@ -1927,7 +1953,7 @@
     {
       "date_bin_start": "2026-03-24",
       "n_landings": 26,
-      "prop_landings_woman": 0.12,
+      "prop_landings_woman": 0.1304,
       "fuel": 7.1333,
       "n_tracks": 0,
       "n_matched": 0,
@@ -1940,7 +1966,7 @@
     {
       "date_bin_start": "2026-03-23",
       "n_landings": 26,
-      "prop_landings_woman": 0.08,
+      "prop_landings_woman": 0.0833,
       "fuel": 5.0769,
       "n_tracks": 0,
       "n_matched": 0,
@@ -2378,7 +2404,7 @@
     {
       "date_bin_start": "2026-01-22",
       "n_landings": 8,
-      "prop_landings_woman": 0.125,
+      "prop_landings_woman": 0.1429,
       "fuel": 8.2,
       "n_tracks": 2,
       "n_matched": 0,
@@ -2391,7 +2417,7 @@
     {
       "date_bin_start": "2026-01-21",
       "n_landings": 14,
-      "prop_landings_woman": 0.2143,
+      "prop_landings_woman": 0.2308,
       "fuel": 8.25,
       "n_tracks": 1,
       "n_matched": 0,
@@ -2404,7 +2430,7 @@
     {
       "date_bin_start": "2026-01-20",
       "n_landings": 13,
-      "prop_landings_woman": 0.1538,
+      "prop_landings_woman": 0.1667,
       "fuel": 8.75,
       "n_tracks": 1,
       "n_matched": 0,
@@ -2417,7 +2443,7 @@
     {
       "date_bin_start": "2026-01-19",
       "n_landings": 12,
-      "prop_landings_woman": 0.1667,
+      "prop_landings_woman": 0.1818,
       "fuel": 8.2,
       "n_tracks": 0,
       "n_matched": 0,
@@ -2469,7 +2495,7 @@
     {
       "date_bin_start": "2026-01-12",
       "n_landings": 7,
-      "prop_landings_woman": 0.1429,
+      "prop_landings_woman": 0.1667,
       "fuel": 7.6667,
       "n_tracks": 2,
       "n_matched": 0,
@@ -2500,7 +2526,7 @@
     {
       "date_bin_start": "2026-01-09",
       "n_landings": 16,
-      "prop_landings_woman": 0.125,
+      "prop_landings_woman": 0.1333,
       "fuel": 7.5,
       "n_tracks": 2,
       "n_matched": 0,
@@ -2513,7 +2539,7 @@
     {
       "date_bin_start": "2026-01-08",
       "n_landings": 12,
-      "prop_landings_woman": 0.0833,
+      "prop_landings_woman": 0.0909,
       "fuel": 7.6667,
       "n_tracks": 0,
       "n_matched": 0,
@@ -2526,7 +2552,7 @@
     {
       "date_bin_start": "2026-01-07",
       "n_landings": 7,
-      "prop_landings_woman": 0.2857,
+      "prop_landings_woman": 0.3333,
       "fuel": 9,
       "n_tracks": 1,
       "n_matched": 0,
@@ -2780,7 +2806,7 @@
     {
       "date_bin_start": "2025-12-13",
       "n_landings": 13,
-      "prop_landings_woman": 0.0769,
+      "prop_landings_woman": 0.0833,
       "fuel": 7.75,
       "n_tracks": 0,
       "n_matched": 0,
@@ -2793,7 +2819,7 @@
     {
       "date_bin_start": "2025-12-12",
       "n_landings": 24,
-      "prop_landings_woman": 0.0833,
+      "prop_landings_woman": 0.087,
       "fuel": 7.1111,
       "n_tracks": 0,
       "n_matched": 0,
@@ -2806,7 +2832,7 @@
     {
       "date_bin_start": "2025-12-11",
       "n_landings": 35,
-      "prop_landings_woman": 0.1176,
+      "prop_landings_woman": 0.125,
       "fuel": 8.4286,
       "n_tracks": 2,
       "n_matched": 0,
@@ -2819,7 +2845,7 @@
     {
       "date_bin_start": "2025-12-10",
       "n_landings": 31,
-      "prop_landings_woman": 0.0968,
+      "prop_landings_woman": 0.1,
       "fuel": 6.7857,
       "n_tracks": 2,
       "n_matched": 0,
@@ -2832,7 +2858,7 @@
     {
       "date_bin_start": "2025-12-09",
       "n_landings": 25,
-      "prop_landings_woman": 0.2,
+      "prop_landings_woman": 0.2083,
       "fuel": 8.25,
       "n_tracks": 1,
       "n_matched": 0,
@@ -2867,7 +2893,7 @@
     {
       "date_bin_start": "2025-12-06",
       "n_landings": 14,
-      "prop_landings_woman": 0.2143,
+      "prop_landings_woman": 0.2308,
       "fuel": 8,
       "n_tracks": 0,
       "n_matched": 0,
@@ -2880,7 +2906,7 @@
     {
       "date_bin_start": "2025-12-05",
       "n_landings": 28,
-      "prop_landings_woman": 0.1786,
+      "prop_landings_woman": 0.1852,
       "fuel": 6.7692,
       "n_tracks": 1,
       "n_matched": 0,
@@ -2893,7 +2919,7 @@
     {
       "date_bin_start": "2025-12-04",
       "n_landings": 41,
-      "prop_landings_woman": 0.0976,
+      "prop_landings_woman": 0.1,
       "fuel": 6.5238,
       "n_tracks": 0,
       "n_matched": 0,
@@ -2932,7 +2958,7 @@
     {
       "date_bin_start": "2025-12-01",
       "n_landings": 12,
-      "prop_landings_woman": 0.0833,
+      "prop_landings_woman": 0.0909,
       "fuel": 10,
       "n_tracks": 1,
       "n_matched": 0,
@@ -2957,7 +2983,7 @@
     {
       "date_bin_start": "2025-11-29",
       "n_landings": 14,
-      "prop_landings_woman": 0.1429,
+      "prop_landings_woman": 0.1538,
       "fuel": 10,
       "n_tracks": 0,
       "n_matched": 0,
@@ -2992,7 +3018,7 @@
     {
       "date_bin_start": "2025-11-26",
       "n_landings": 33,
-      "prop_landings_woman": 0.0938,
+      "prop_landings_woman": 0.0968,
       "fuel": 7.1333,
       "n_tracks": 1,
       "n_matched": 0,
@@ -3005,7 +3031,7 @@
     {
       "date_bin_start": "2025-11-25",
       "n_landings": 33,
-      "prop_landings_woman": 0.0968,
+      "prop_landings_woman": 0.1,
       "fuel": 8.9333,
       "n_tracks": 1,
       "n_matched": 0,
@@ -3018,7 +3044,7 @@
     {
       "date_bin_start": "2025-11-24",
       "n_landings": 18,
-      "prop_landings_woman": 0.2,
+      "prop_landings_woman": 0.2143,
       "fuel": 10.3333,
       "n_tracks": 1,
       "n_matched": 0,
@@ -3031,7 +3057,7 @@
     {
       "date_bin_start": "2025-11-22",
       "n_landings": 36,
-      "prop_landings_woman": 0.0833,
+      "prop_landings_woman": 0.0882,
       "fuel": 9,
       "n_tracks": 3,
       "n_matched": 0,
@@ -3044,7 +3070,7 @@
     {
       "date_bin_start": "2025-11-21",
       "n_landings": 41,
-      "prop_landings_woman": 0.075,
+      "prop_landings_woman": 0.0789,
       "fuel": 5.24,
       "n_tracks": 2,
       "n_matched": 0,
@@ -3083,7 +3109,7 @@
     {
       "date_bin_start": "2025-11-18",
       "n_landings": 26,
-      "prop_landings_woman": 0.1667,
+      "prop_landings_woman": 0.1739,
       "fuel": 7.7143,
       "n_tracks": 3,
       "n_matched": 0,
@@ -3096,7 +3122,7 @@
     {
       "date_bin_start": "2025-11-17",
       "n_landings": 34,
-      "prop_landings_woman": 0.0909,
+      "prop_landings_woman": 0.0938,
       "fuel": 6.1053,
       "n_tracks": 3,
       "n_matched": 0,
@@ -3118,7 +3144,7 @@
     {
       "date_bin_start": "2025-11-15",
       "n_landings": 29,
-      "prop_landings_woman": 0.1724,
+      "prop_landings_woman": 0.1852,
       "fuel": 9.7895,
       "n_tracks": 0,
       "n_matched": 0,
@@ -3131,7 +3157,7 @@
     {
       "date_bin_start": "2025-11-14",
       "n_landings": 31,
-      "prop_landings_woman": 0.129,
+      "prop_landings_woman": 0.1333,
       "fuel": 5.4091,
       "n_tracks": 4,
       "n_matched": 0,
@@ -3157,7 +3183,7 @@
     {
       "date_bin_start": "2025-11-12",
       "n_landings": 24,
-      "prop_landings_woman": 0.1739,
+      "prop_landings_woman": 0.1818,
       "fuel": 8.6667,
       "n_tracks": 0,
       "n_matched": 0,
@@ -3170,7 +3196,7 @@
     {
       "date_bin_start": "2025-11-11",
       "n_landings": 32,
-      "prop_landings_woman": 0.0645,
+      "prop_landings_woman": 0.069,
       "fuel": 5.7368,
       "n_tracks": 3,
       "n_matched": 0,
@@ -3183,7 +3209,7 @@
     {
       "date_bin_start": "2025-11-10",
       "n_landings": 37,
-      "prop_landings_woman": 0.0833,
+      "prop_landings_woman": 0.0857,
       "fuel": 5.1667,
       "n_tracks": 0,
       "n_matched": 0,
@@ -3235,7 +3261,7 @@
     {
       "date_bin_start": "2025-11-06",
       "n_landings": 56,
-      "prop_landings_woman": 0.0357,
+      "prop_landings_woman": 0.0364,
       "fuel": 4.5366,
       "n_tracks": 3,
       "n_matched": 0,
@@ -3248,7 +3274,7 @@
     {
       "date_bin_start": "2025-11-05",
       "n_landings": 36,
-      "prop_landings_woman": 0.0833,
+      "prop_landings_woman": 0.0882,
       "fuel": 6.2174,
       "n_tracks": 1,
       "n_matched": 0,
@@ -3261,7 +3287,7 @@
     {
       "date_bin_start": "2025-11-04",
       "n_landings": 42,
-      "prop_landings_woman": 0.0238,
+      "prop_landings_woman": 0.0244,
       "fuel": 5.4828,
       "n_tracks": 2,
       "n_matched": 0,
@@ -3335,7 +3361,7 @@
     {
       "date_bin_start": "2025-10-29",
       "n_landings": 33,
-      "prop_landings_woman": 0.0938,
+      "prop_landings_woman": 0.0968,
       "fuel": 5.1667,
       "n_tracks": 5,
       "n_matched": 0,
@@ -3465,7 +3491,7 @@
     {
       "date_bin_start": "2025-10-18",
       "n_landings": 35,
-      "prop_landings_woman": 0.0857,
+      "prop_landings_woman": 0.0882,
       "fuel": 8.6667,
       "n_tracks": 1,
       "n_matched": 0,
@@ -3565,7 +3591,7 @@
     {
       "date_bin_start": "2025-10-10",
       "n_landings": 25,
-      "prop_landings_woman": 0.04,
+      "prop_landings_woman": 0.0417,
       "fuel": 5.45,
       "n_tracks": 1,
       "n_matched": 0,
@@ -3643,7 +3669,7 @@
     {
       "date_bin_start": "2025-10-04",
       "n_landings": 42,
-      "prop_landings_woman": 0.0476,
+      "prop_landings_woman": 0.0488,
       "fuel": 7.6429,
       "n_tracks": 1,
       "n_matched": 0,
@@ -3656,7 +3682,7 @@
     {
       "date_bin_start": "2025-10-03",
       "n_landings": 32,
-      "prop_landings_woman": 0.0312,
+      "prop_landings_woman": 0.0323,
       "fuel": 6.2,
       "n_tracks": 0,
       "n_matched": 0,
@@ -3695,7 +3721,7 @@
     {
       "date_bin_start": "2025-09-30",
       "n_landings": 33,
-      "prop_landings_woman": 0.0312,
+      "prop_landings_woman": 0.0323,
       "fuel": 5.5926,
       "n_tracks": 1,
       "n_matched": 0,
@@ -3721,7 +3747,7 @@
     {
       "date_bin_start": "2025-09-27",
       "n_landings": 33,
-      "prop_landings_woman": 0.0303,
+      "prop_landings_woman": 0.0312,
       "fuel": 9.3571,
       "n_tracks": 1,
       "n_matched": 0,
@@ -3760,7 +3786,7 @@
     {
       "date_bin_start": "2025-09-24",
       "n_landings": 30,
-      "prop_landings_woman": 0.0333,
+      "prop_landings_woman": 0.0345,
       "fuel": 4.5263,
       "n_tracks": 1,
       "n_matched": 0,
@@ -3808,7 +3834,7 @@
     {
       "date_bin_start": "2025-09-20",
       "n_landings": 29,
-      "prop_landings_woman": 0.0345,
+      "prop_landings_woman": 0.0357,
       "fuel": 10.36,
       "n_tracks": 2,
       "n_matched": 0,
@@ -3847,7 +3873,7 @@
     {
       "date_bin_start": "2025-09-17",
       "n_landings": 42,
-      "prop_landings_woman": 0.0488,
+      "prop_landings_woman": 0.05,
       "fuel": 5.2593,
       "n_tracks": 0,
       "n_matched": 0,
@@ -3860,7 +3886,7 @@
     {
       "date_bin_start": "2025-09-16",
       "n_landings": 47,
-      "prop_landings_woman": 0.0435,
+      "prop_landings_woman": 0.0444,
       "fuel": 5.7586,
       "n_tracks": 2,
       "n_matched": 0,
@@ -3899,7 +3925,7 @@
     {
       "date_bin_start": "2025-09-13",
       "n_landings": 41,
-      "prop_landings_woman": 0.1463,
+      "prop_landings_woman": 0.15,
       "fuel": 8.5,
       "n_tracks": 0,
       "n_matched": 0,
@@ -5331,7 +5357,7 @@
     {
       "date_bin_start": "2025-05-17",
       "n_landings": 32,
-      "prop_landings_woman": 0.0323,
+      "prop_landings_woman": 0.0333,
       "fuel": 9.1304,
       "n_tracks": 3,
       "n_matched": 0,
@@ -5444,7 +5470,7 @@
     {
       "date_bin_start": "2025-05-08",
       "n_landings": 39,
-      "prop_landings_woman": 0.0789,
+      "prop_landings_woman": 0.0811,
       "fuel": 5.1,
       "n_tracks": 1,
       "n_matched": 0,
@@ -5631,7 +5657,7 @@
     {
       "date_bin_start": "2025-04-23",
       "n_landings": 36,
-      "prop_landings_woman": 0.0286,
+      "prop_landings_woman": 0.0294,
       "fuel": 7.9333,
       "n_tracks": 4,
       "n_matched": 0,
@@ -5644,7 +5670,7 @@
     {
       "date_bin_start": "2025-04-22",
       "n_landings": 47,
-      "prop_landings_woman": 0.087,
+      "prop_landings_woman": 0.0889,
       "fuel": 6.4194,
       "n_tracks": 3,
       "n_matched": 0,
@@ -5657,7 +5683,7 @@
     {
       "date_bin_start": "2025-04-21",
       "n_landings": 36,
-      "prop_landings_woman": 0.1143,
+      "prop_landings_woman": 0.1176,
       "fuel": 5.125,
       "n_tracks": 4,
       "n_matched": 0,
@@ -5973,7 +5999,7 @@
     {
       "date_bin_start": "2025-03-26",
       "n_landings": 45,
-      "prop_landings_woman": 0.0222,
+      "prop_landings_woman": 0.0227,
       "fuel": 5.0323,
       "n_tracks": 1,
       "n_matched": 0,
@@ -5986,7 +6012,7 @@
     {
       "date_bin_start": "2025-03-25",
       "n_landings": 41,
-      "prop_landings_woman": 0.0488,
+      "prop_landings_woman": 0.05,
       "fuel": 5.2857,
       "n_tracks": 2,
       "n_matched": 0,
@@ -6031,7 +6057,7 @@
     {
       "date_bin_start": "2025-03-21",
       "n_landings": 36,
-      "prop_landings_woman": 0.0556,
+      "prop_landings_woman": 0.0571,
       "fuel": 4.48,
       "n_tracks": 3,
       "n_matched": 0,
@@ -6044,7 +6070,7 @@
     {
       "date_bin_start": "2025-03-20",
       "n_landings": 45,
-      "prop_landings_woman": 0.0909,
+      "prop_landings_woman": 0.0952,
       "fuel": 5.5357,
       "n_tracks": 3,
       "n_matched": 0,
@@ -6057,7 +6083,7 @@
     {
       "date_bin_start": "2025-03-19",
       "n_landings": 40,
-      "prop_landings_woman": 0.05,
+      "prop_landings_woman": 0.0513,
       "fuel": 6.037,
       "n_tracks": 2,
       "n_matched": 0,
@@ -6070,7 +6096,7 @@
     {
       "date_bin_start": "2025-03-18",
       "n_landings": 34,
-      "prop_landings_woman": 0.0294,
+      "prop_landings_woman": 0.0303,
       "fuel": 6.087,
       "n_tracks": 1,
       "n_matched": 0,
@@ -6083,7 +6109,7 @@
     {
       "date_bin_start": "2025-03-17",
       "n_landings": 38,
-      "prop_landings_woman": 0.0541,
+      "prop_landings_woman": 0.0571,
       "fuel": 5.9,
       "n_tracks": 1,
       "n_matched": 0,
@@ -6108,7 +6134,7 @@
     {
       "date_bin_start": "2025-03-15",
       "n_landings": 28,
-      "prop_landings_woman": 0.1071,
+      "prop_landings_woman": 0.1154,
       "fuel": 7.4,
       "n_tracks": 1,
       "n_matched": 0,
@@ -6167,7 +6193,7 @@
     {
       "date_bin_start": "2025-03-10",
       "n_landings": 26,
-      "prop_landings_woman": 0.0385,
+      "prop_landings_woman": 0.04,
       "fuel": 5.3,
       "n_tracks": 3,
       "n_matched": 0,
@@ -6189,7 +6215,7 @@
     {
       "date_bin_start": "2025-03-08",
       "n_landings": 33,
-      "prop_landings_woman": 0.0606,
+      "prop_landings_woman": 0.0625,
       "fuel": 7.6875,
       "n_tracks": 3,
       "n_matched": 0,
@@ -6612,7 +6638,7 @@
     {
       "date_bin_start": "2025-01-30",
       "n_landings": 14,
-      "prop_landings_woman": 0.1429,
+      "prop_landings_woman": 0.1538,
       "fuel": 9.6667,
       "n_tracks": 1,
       "n_matched": 0,
@@ -6673,7 +6699,7 @@
     {
       "date_bin_start": "2025-01-25",
       "n_landings": 21,
-      "prop_landings_woman": 0.0476,
+      "prop_landings_woman": 0.05,
       "fuel": 8.1818,
       "n_tracks": 5,
       "n_matched": 0,
@@ -6686,7 +6712,7 @@
     {
       "date_bin_start": "2025-01-24",
       "n_landings": 18,
-      "prop_landings_woman": 0.0556,
+      "prop_landings_woman": 0.0588,
       "fuel": 9,
       "n_tracks": 3,
       "n_matched": 0,
@@ -6738,7 +6764,7 @@
     {
       "date_bin_start": "2025-01-20",
       "n_landings": 26,
-      "prop_landings_woman": 0.0385,
+      "prop_landings_woman": 0.04,
       "fuel": 7.5455,
       "n_tracks": 4,
       "n_matched": 0,
@@ -6847,7 +6873,7 @@
     {
       "date_bin_start": "2025-01-11",
       "n_landings": 23,
-      "prop_landings_woman": 0.0435,
+      "prop_landings_woman": 0.0455,
       "fuel": 8.3571,
       "n_tracks": 5,
       "n_matched": 0,
@@ -6873,7 +6899,7 @@
     {
       "date_bin_start": "2025-01-09",
       "n_landings": 35,
-      "prop_landings_woman": 0.0303,
+      "prop_landings_woman": 0.0312,
       "fuel": 6.5,
       "n_tracks": 4,
       "n_matched": 0,
@@ -6947,7 +6973,7 @@
     {
       "date_bin_start": "2025-01-03",
       "n_landings": 13,
-      "prop_landings_woman": 0.1538,
+      "prop_landings_woman": 0.1667,
       "fuel": 6.6667,
       "n_tracks": 3,
       "n_matched": 0,
@@ -6994,7 +7020,7 @@
     {
       "date_bin_start": "2024-12-30",
       "n_landings": 25,
-      "prop_landings_woman": 0.04,
+      "prop_landings_woman": 0.0417,
       "fuel": 8.1,
       "n_tracks": 4,
       "n_matched": 0,
@@ -7016,7 +7042,7 @@
     {
       "date_bin_start": "2024-12-28",
       "n_landings": 30,
-      "prop_landings_woman": 0.1667,
+      "prop_landings_woman": 0.1724,
       "fuel": 8,
       "n_tracks": 4,
       "n_matched": 0,
@@ -7029,7 +7055,7 @@
     {
       "date_bin_start": "2024-12-27",
       "n_landings": 19,
-      "prop_landings_woman": 0.1667,
+      "prop_landings_woman": 0.1765,
       "fuel": 8.5,
       "n_tracks": 6,
       "n_matched": 0,
@@ -7042,7 +7068,7 @@
     {
       "date_bin_start": "2024-12-26",
       "n_landings": 27,
-      "prop_landings_woman": 0.1538,
+      "prop_landings_woman": 0.16,
       "fuel": 7.5833,
       "n_tracks": 4,
       "n_matched": 0,
@@ -7119,7 +7145,7 @@
     {
       "date_bin_start": "2024-12-20",
       "n_landings": 15,
-      "prop_landings_woman": 0.1429,
+      "prop_landings_woman": 0.1538,
       "fuel": 8,
       "n_tracks": 4,
       "n_matched": 0,
@@ -7132,7 +7158,7 @@
     {
       "date_bin_start": "2024-12-19",
       "n_landings": 21,
-      "prop_landings_woman": 0.05,
+      "prop_landings_woman": 0.0526,
       "fuel": 7.1818,
       "n_tracks": 6,
       "n_matched": 0,
@@ -7171,7 +7197,7 @@
     {
       "date_bin_start": "2024-12-16",
       "n_landings": 26,
-      "prop_landings_woman": 0.1154,
+      "prop_landings_woman": 0.125,
       "fuel": 7.3333,
       "n_tracks": 4,
       "n_matched": 0,
@@ -7197,7 +7223,7 @@
     {
       "date_bin_start": "2024-12-14",
       "n_landings": 32,
-      "prop_landings_woman": 0.0625,
+      "prop_landings_woman": 0.0645,
       "fuel": 8.5,
       "n_tracks": 2,
       "n_matched": 0,
@@ -7236,7 +7262,7 @@
     {
       "date_bin_start": "2024-12-11",
       "n_landings": 35,
-      "prop_landings_woman": 0.1429,
+      "prop_landings_woman": 0.1562,
       "fuel": 8.75,
       "n_tracks": 5,
       "n_matched": 0,
@@ -7284,7 +7310,7 @@
     {
       "date_bin_start": "2024-12-07",
       "n_landings": 22,
-      "prop_landings_woman": 0.0476,
+      "prop_landings_woman": 0.0556,
       "fuel": 9.6875,
       "n_tracks": 1,
       "n_matched": 0,
@@ -7310,7 +7336,7 @@
     {
       "date_bin_start": "2024-12-05",
       "n_landings": 31,
-      "prop_landings_woman": 0.0323,
+      "prop_landings_woman": 0.0345,
       "fuel": 7.0455,
       "n_tracks": 4,
       "n_matched": 0,
@@ -7323,7 +7349,7 @@
     {
       "date_bin_start": "2024-12-04",
       "n_landings": 37,
-      "prop_landings_woman": 0.027,
+      "prop_landings_woman": 0.0286,
       "fuel": 5.4211,
       "n_tracks": 3,
       "n_matched": 0,
@@ -7336,7 +7362,7 @@
     {
       "date_bin_start": "2024-12-03",
       "n_landings": 31,
-      "prop_landings_woman": 0.0667,
+      "prop_landings_woman": 0.0714,
       "fuel": 9.2857,
       "n_tracks": 4,
       "n_matched": 0,
@@ -7349,7 +7375,7 @@
     {
       "date_bin_start": "2024-12-02",
       "n_landings": 26,
-      "prop_landings_woman": 0.0435,
+      "prop_landings_woman": 0.0455,
       "fuel": 7.2,
       "n_tracks": 4,
       "n_matched": 0,
@@ -7375,7 +7401,7 @@
     {
       "date_bin_start": "2024-11-30",
       "n_landings": 35,
-      "prop_landings_woman": 0.1143,
+      "prop_landings_woman": 0.1176,
       "fuel": 7.64,
       "n_tracks": 1,
       "n_matched": 0,
@@ -7436,7 +7462,7 @@
     {
       "date_bin_start": "2024-11-25",
       "n_landings": 46,
-      "prop_landings_woman": 0.0217,
+      "prop_landings_woman": 0.0227,
       "fuel": 5.5143,
       "n_tracks": 5,
       "n_matched": 0,
@@ -7458,7 +7484,7 @@
     {
       "date_bin_start": "2024-11-23",
       "n_landings": 18,
-      "prop_landings_woman": 0.1111,
+      "prop_landings_woman": 0.1176,
       "fuel": 8.6364,
       "n_tracks": 3,
       "n_matched": 0,
@@ -7471,7 +7497,7 @@
     {
       "date_bin_start": "2024-11-22",
       "n_landings": 49,
-      "prop_landings_woman": 0.0204,
+      "prop_landings_woman": 0.0208,
       "fuel": 5.7632,
       "n_tracks": 4,
       "n_matched": 0,
@@ -7484,7 +7510,7 @@
     {
       "date_bin_start": "2024-11-21",
       "n_landings": 38,
-      "prop_landings_woman": 0.0278,
+      "prop_landings_woman": 0.0286,
       "fuel": 4.3667,
       "n_tracks": 1,
       "n_matched": 0,
@@ -7523,7 +7549,7 @@
     {
       "date_bin_start": "2024-11-18",
       "n_landings": 58,
-      "prop_landings_woman": 0.0345,
+      "prop_landings_woman": 0.0351,
       "fuel": 6.907,
       "n_tracks": 3,
       "n_matched": 0,
@@ -7597,7 +7623,7 @@
     {
       "date_bin_start": "2024-11-12",
       "n_landings": 26,
-      "prop_landings_woman": 0.0833,
+      "prop_landings_woman": 0.087,
       "fuel": 6.8947,
       "n_tracks": 5,
       "n_matched": 0,
@@ -7645,7 +7671,7 @@
     {
       "date_bin_start": "2024-11-08",
       "n_landings": 36,
-      "prop_landings_woman": 0.0286,
+      "prop_landings_woman": 0.0294,
       "fuel": 5,
       "n_tracks": 2,
       "n_matched": 0,
@@ -10231,7 +10257,7 @@
     {
       "date_bin_start": "2024-04-15",
       "n_landings": 64,
-      "prop_landings_woman": 0.0492,
+      "prop_landings_woman": 0.0508,
       "fuel": 4.7778,
       "n_tracks": 2,
       "n_matched": 0,
@@ -10257,7 +10283,7 @@
     {
       "date_bin_start": "2024-04-13",
       "n_landings": 43,
-      "prop_landings_woman": 0.093,
+      "prop_landings_woman": 0.0976,
       "fuel": 6.6452,
       "n_tracks": 6,
       "n_matched": 0,
@@ -10270,7 +10296,7 @@
     {
       "date_bin_start": "2024-04-12",
       "n_landings": 50,
-      "prop_landings_woman": 0.0408,
+      "prop_landings_woman": 0.0426,
       "fuel": 6.8571,
       "n_tracks": 5,
       "n_matched": 0,
@@ -10634,7 +10660,7 @@
     {
       "date_bin_start": "2024-03-06",
       "n_landings": 21,
-      "prop_landings_woman": 0.0952,
+      "prop_landings_woman": 0.1,
       "fuel": 6.8824,
       "n_tracks": 4,
       "n_matched": 0,
@@ -10647,7 +10673,7 @@
     {
       "date_bin_start": "2024-03-05",
       "n_landings": 23,
-      "prop_landings_woman": 0.087,
+      "prop_landings_woman": 0.0909,
       "fuel": 7.75,
       "n_tracks": 5,
       "n_matched": 0,
@@ -10660,7 +10686,7 @@
     {
       "date_bin_start": "2024-03-04",
       "n_landings": 18,
-      "prop_landings_woman": 0.0556,
+      "prop_landings_woman": 0.0588,
       "fuel": 6.6429,
       "n_tracks": 6,
       "n_matched": 0,
@@ -10709,7 +10735,7 @@
     {
       "date_bin_start": "2024-02-28",
       "n_landings": 18,
-      "prop_landings_woman": 0.1111,
+      "prop_landings_woman": 0.1176,
       "fuel": 7.5385,
       "n_tracks": 6,
       "n_matched": 0,
@@ -10771,7 +10797,7 @@
     {
       "date_bin_start": "2024-02-22",
       "n_landings": 22,
-      "prop_landings_woman": 0.0455,
+      "prop_landings_woman": 0.0476,
       "fuel": 8.2941,
       "n_tracks": 5,
       "n_matched": 0,
@@ -10793,7 +10819,7 @@
     {
       "date_bin_start": "2024-02-20",
       "n_landings": 16,
-      "prop_landings_woman": 0.125,
+      "prop_landings_woman": 0.1333,
       "fuel": 6.75,
       "n_tracks": 7,
       "n_matched": 0,
@@ -10806,7 +10832,7 @@
     {
       "date_bin_start": "2024-02-19",
       "n_landings": 22,
-      "prop_landings_woman": 0.0455,
+      "prop_landings_woman": 0.05,
       "fuel": 6.3333,
       "n_tracks": 6,
       "n_matched": 0,
@@ -10841,7 +10867,7 @@
     {
       "date_bin_start": "2024-02-16",
       "n_landings": 14,
-      "prop_landings_woman": 0.1429,
+      "prop_landings_woman": 0.1667,
       "fuel": 8.1111,
       "n_tracks": 4,
       "n_matched": 0,
@@ -10854,7 +10880,7 @@
     {
       "date_bin_start": "2024-02-15",
       "n_landings": 12,
-      "prop_landings_woman": 0.0833,
+      "prop_landings_woman": 0.1,
       "fuel": 8.3333,
       "n_tracks": 3,
       "n_matched": 0,
@@ -10867,7 +10893,7 @@
     {
       "date_bin_start": "2024-02-14",
       "n_landings": 16,
-      "prop_landings_woman": 0.25,
+      "prop_landings_woman": 0.2857,
       "fuel": 7.1111,
       "n_tracks": 2,
       "n_matched": 0,
@@ -10880,7 +10906,7 @@
     {
       "date_bin_start": "2024-02-13",
       "n_landings": 16,
-      "prop_landings_woman": 0.125,
+      "prop_landings_woman": 0.1333,
       "fuel": 6.6154,
       "n_tracks": 2,
       "n_matched": 0,
@@ -10893,7 +10919,7 @@
     {
       "date_bin_start": "2024-02-12",
       "n_landings": 15,
-      "prop_landings_woman": 0.1333,
+      "prop_landings_woman": 0.1429,
       "fuel": 8,
       "n_tracks": 0,
       "n_matched": 0,
@@ -10951,7 +10977,7 @@
     {
       "date_bin_start": "2024-02-06",
       "n_landings": 18,
-      "prop_landings_woman": 0.2222,
+      "prop_landings_woman": 0.2353,
       "fuel": 7.5556,
       "n_tracks": 6,
       "n_matched": 0,
@@ -10986,7 +11012,7 @@
     {
       "date_bin_start": "2024-02-03",
       "n_landings": 24,
-      "prop_landings_woman": 0.125,
+      "prop_landings_woman": 0.1304,
       "fuel": 6.95,
       "n_tracks": 7,
       "n_matched": 0,
@@ -11414,7 +11440,7 @@
     {
       "date_bin_start": "2023-12-26",
       "n_landings": 17,
-      "prop_landings_woman": 0.1875,
+      "prop_landings_woman": 0.2143,
       "fuel": 7.4286,
       "n_tracks": 4,
       "n_matched": 0,
@@ -11545,7 +11571,7 @@
     {
       "date_bin_start": "2023-12-15",
       "n_landings": 15,
-      "prop_landings_woman": 0.1429,
+      "prop_landings_woman": 0.1538,
       "fuel": 8,
       "n_tracks": 4,
       "n_matched": 0,
@@ -11558,7 +11584,7 @@
     {
       "date_bin_start": "2023-12-14",
       "n_landings": 28,
-      "prop_landings_woman": 0.1852,
+      "prop_landings_woman": 0.2,
       "fuel": 6.6364,
       "n_tracks": 2,
       "n_matched": 0,
@@ -16055,7 +16081,7 @@
     {
       "date_bin_start": "2022-12-16",
       "n_landings": 26,
-      "prop_landings_woman": 0.0417,
+      "prop_landings_woman": 0.0435,
       "fuel": 10.1111,
       "n_tracks": 12,
       "n_matched": 1,
@@ -18836,7 +18862,7 @@
     {
       "date_bin_start": "2022-05-10",
       "n_landings": 40,
-      "prop_landings_woman": 0.0588,
+      "prop_landings_woman": 0.0606,
       "fuel": 10.4783,
       "n_tracks": 21,
       "n_matched": 0,
@@ -19829,7 +19855,7 @@
     {
       "date_bin_start": "2022-02-22",
       "n_landings": 46,
-      "prop_landings_woman": 0.0263,
+      "prop_landings_woman": 0.027,
       "fuel": 10.931,
       "n_tracks": 13,
       "n_matched": 0,
@@ -20440,7 +20466,7 @@
     {
       "date_bin_start": "2022-01-06",
       "n_landings": 88,
-      "prop_landings_woman": 0.0455,
+      "prop_landings_woman": 0.046,
       "fuel": 6.2292,
       "n_tracks": 24,
       "n_matched": 3,
@@ -20879,7 +20905,7 @@
     {
       "date_bin_start": "2021-12-02",
       "n_landings": 107,
-      "prop_landings_woman": 0.028,
+      "prop_landings_woman": 0.0283,
       "fuel": 5.7581,
       "n_tracks": 44,
       "n_matched": 7,
@@ -20918,7 +20944,7 @@
     {
       "date_bin_start": "2021-11-29",
       "n_landings": 92,
-      "prop_landings_woman": 0.0116,
+      "prop_landings_woman": 0.0118,
       "fuel": 6.3333,
       "n_tracks": 39,
       "n_matched": 5,
@@ -20966,7 +20992,7 @@
     {
       "date_bin_start": "2021-11-25",
       "n_landings": 99,
-      "prop_landings_woman": 0.0102,
+      "prop_landings_woman": 0.0103,
       "fuel": 6.4333,
       "n_tracks": 48,
       "n_matched": 6,
@@ -20979,7 +21005,7 @@
     {
       "date_bin_start": "2021-11-24",
       "n_landings": 85,
-      "prop_landings_woman": 0.0595,
+      "prop_landings_woman": 0.0602,
       "fuel": 5.6047,
       "n_tracks": 41,
       "n_matched": 7,
@@ -21226,7 +21252,7 @@
     {
       "date_bin_start": "2021-11-05",
       "n_landings": 88,
-      "prop_landings_woman": 0.0235,
+      "prop_landings_woman": 0.0238,
       "fuel": 5.4222,
       "n_tracks": 43,
       "n_matched": 3,
@@ -21433,7 +21459,7 @@
     {
       "date_bin_start": "2021-10-20",
       "n_landings": 91,
-      "prop_landings_woman": 0.023,
+      "prop_landings_woman": 0.0233,
       "fuel": 7.0364,
       "n_tracks": 40,
       "n_matched": 2,
@@ -21719,7 +21745,7 @@
     {
       "date_bin_start": "2021-09-28",
       "n_landings": 96,
-      "prop_landings_woman": 0.0213,
+      "prop_landings_woman": 0.0215,
       "fuel": 5.6226,
       "n_tracks": 33,
       "n_matched": 9,
@@ -21888,7 +21914,7 @@
     {
       "date_bin_start": "2021-09-15",
       "n_landings": 91,
-      "prop_landings_woman": 0.0227,
+      "prop_landings_woman": 0.023,
       "fuel": 5.119,
       "n_tracks": 27,
       "n_matched": 10,
@@ -23640,7 +23666,7 @@
     {
       "date_bin_start": "2021-05-03",
       "n_landings": 60,
-      "prop_landings_woman": 0.0175,
+      "prop_landings_woman": 0.0179,
       "fuel": 5.8125,
       "n_tracks": 37,
       "n_matched": 5,
@@ -25138,7 +25164,7 @@
     {
       "date_bin_start": "2021-01-07",
       "n_landings": 101,
-      "prop_landings_woman": 0.0505,
+      "prop_landings_woman": 0.051,
       "fuel": 4.2075,
       "n_tracks": 86,
       "n_matched": 15,
@@ -25589,7 +25615,7 @@
     {
       "date_bin_start": "2020-12-03",
       "n_landings": 88,
-      "prop_landings_woman": 0.023,
+      "prop_landings_woman": 0.0233,
       "fuel": 4.6923,
       "n_tracks": 74,
       "n_matched": 14,
@@ -25797,7 +25823,7 @@
     {
       "date_bin_start": "2020-11-17",
       "n_landings": 86,
-      "prop_landings_woman": 0.0714,
+      "prop_landings_woman": 0.0723,
       "fuel": 5.2381,
       "n_tracks": 45,
       "n_matched": 8,
@@ -25810,7 +25836,7 @@
     {
       "date_bin_start": "2020-11-16",
       "n_landings": 80,
-      "prop_landings_woman": 0.0519,
+      "prop_landings_woman": 0.0526,
       "fuel": 4.8667,
       "n_tracks": 49,
       "n_matched": 6,
@@ -25979,7 +26005,7 @@
     {
       "date_bin_start": "2020-11-03",
       "n_landings": 70,
-      "prop_landings_woman": 0.0299,
+      "prop_landings_woman": 0.0303,
       "fuel": 5.4815,
       "n_tracks": 69,
       "n_matched": 10,
@@ -26421,7 +26447,7 @@
     {
       "date_bin_start": "2020-09-30",
       "n_landings": 93,
-      "prop_landings_woman": 0.0217,
+      "prop_landings_woman": 0.022,
       "fuel": 4.9545,
       "n_tracks": 52,
       "n_matched": 13,
@@ -26512,7 +26538,7 @@
     {
       "date_bin_start": "2020-09-23",
       "n_landings": 84,
-      "prop_landings_woman": 0.0897,
+      "prop_landings_woman": 0.0909,
       "fuel": 3.814,
       "n_tracks": 59,
       "n_matched": 12,
@@ -26525,7 +26551,7 @@
     {
       "date_bin_start": "2020-09-22",
       "n_landings": 82,
-      "prop_landings_woman": 0.0741,
+      "prop_landings_woman": 0.075,
       "fuel": 4.3158,
       "n_tracks": 69,
       "n_matched": 13,
@@ -26538,7 +26564,7 @@
     {
       "date_bin_start": "2020-09-21",
       "n_landings": 101,
-      "prop_landings_woman": 0.0792,
+      "prop_landings_woman": 0.08,
       "fuel": 4.413,
       "n_tracks": 63,
       "n_matched": 12,
@@ -26603,7 +26629,7 @@
     {
       "date_bin_start": "2020-09-16",
       "n_landings": 98,
-      "prop_landings_woman": 0.0426,
+      "prop_landings_woman": 0.0435,
       "fuel": 4.9545,
       "n_tracks": 46,
       "n_matched": 16,
@@ -26616,7 +26642,7 @@
     {
       "date_bin_start": "2020-09-15",
       "n_landings": 98,
-      "prop_landings_woman": 0.0421,
+      "prop_landings_woman": 0.043,
       "fuel": 4.5778,
       "n_tracks": 44,
       "n_matched": 16,
@@ -27118,7 +27144,7 @@
     {
       "date_bin_start": "2020-08-07",
       "n_landings": 48,
-      "prop_landings_woman": 0.0426,
+      "prop_landings_woman": 0.0435,
       "fuel": 4.3611,
       "n_tracks": 52,
       "n_matched": 6,
@@ -28720,7 +28746,7 @@
     {
       "date_bin_start": "2020-04-02",
       "n_landings": 53,
-      "prop_landings_woman": 0.0377,
+      "prop_landings_woman": 0.0385,
       "fuel": 4.4103,
       "n_tracks": 124,
       "n_matched": 9,
@@ -28987,7 +29013,7 @@
     {
       "date_bin_start": "2020-03-12",
       "n_landings": 49,
-      "prop_landings_woman": 0.0444,
+      "prop_landings_woman": 0.0455,
       "fuel": 3.2,
       "n_tracks": 157,
       "n_matched": 17,
@@ -29026,7 +29052,7 @@
     {
       "date_bin_start": "2020-03-09",
       "n_landings": 57,
-      "prop_landings_woman": 0.0526,
+      "prop_landings_woman": 0.0536,
       "fuel": 2.9455,
       "n_tracks": 111,
       "n_matched": 17,
@@ -29091,7 +29117,7 @@
     {
       "date_bin_start": "2020-03-04",
       "n_landings": 63,
-      "prop_landings_woman": 0.0323,
+      "prop_landings_woman": 0.0328,
       "fuel": 4.1091,
       "n_tracks": 106,
       "n_matched": 16,
@@ -29208,7 +29234,7 @@
     {
       "date_bin_start": "2020-02-24",
       "n_landings": 54,
-      "prop_landings_woman": 0.0556,
+      "prop_landings_woman": 0.0566,
       "fuel": 2.8913,
       "n_tracks": 145,
       "n_matched": 18,
@@ -29336,7 +29362,7 @@
     {
       "date_bin_start": "2020-02-14",
       "n_landings": 49,
-      "prop_landings_woman": 0.0638,
+      "prop_landings_woman": 0.0652,
       "fuel": 2.617,
       "n_tracks": 143,
       "n_matched": 23,
@@ -29697,7 +29723,7 @@
     {
       "date_bin_start": "2020-01-17",
       "n_landings": 41,
-      "prop_landings_woman": 0.0263,
+      "prop_landings_woman": 0.027,
       "fuel": 3.3438,
       "n_tracks": 127,
       "n_matched": 12,
@@ -29723,7 +29749,7 @@
     {
       "date_bin_start": "2020-01-15",
       "n_landings": 60,
-      "prop_landings_woman": 0.0517,
+      "prop_landings_woman": 0.0526,
       "fuel": 2.9615,
       "n_tracks": 110,
       "n_matched": 18,
@@ -30058,7 +30084,7 @@
     {
       "date_bin_start": "2019-12-19",
       "n_landings": 63,
-      "prop_landings_woman": 0.0484,
+      "prop_landings_woman": 0.0492,
       "fuel": 3.0385,
       "n_tracks": 124,
       "n_matched": 18,
@@ -30097,7 +30123,7 @@
     {
       "date_bin_start": "2019-12-16",
       "n_landings": 60,
-      "prop_landings_woman": 0.0667,
+      "prop_landings_woman": 0.0678,
       "fuel": 2.3125,
       "n_tracks": 113,
       "n_matched": 19,
@@ -30266,7 +30292,7 @@
     {
       "date_bin_start": "2019-12-03",
       "n_landings": 62,
-      "prop_landings_woman": 0.0161,
+      "prop_landings_woman": 0.0164,
       "fuel": 2.9623,
       "n_tracks": 100,
       "n_matched": 14,
@@ -30318,7 +30344,7 @@
     {
       "date_bin_start": "2019-11-29",
       "n_landings": 32,
-      "prop_landings_woman": 0.0312,
+      "prop_landings_woman": 0.0323,
       "fuel": 3.1875,
       "n_tracks": 140,
       "n_matched": 11,
@@ -30422,7 +30448,7 @@
     {
       "date_bin_start": "2019-11-21",
       "n_landings": 63,
-      "prop_landings_woman": 0.0317,
+      "prop_landings_woman": 0.0323,
       "fuel": 2.1731,
       "n_tracks": 122,
       "n_matched": 12,
@@ -30448,7 +30474,7 @@
     {
       "date_bin_start": "2019-11-19",
       "n_landings": 60,
-      "prop_landings_woman": 0.0667,
+      "prop_landings_woman": 0.0678,
       "fuel": 2.62,
       "n_tracks": 117,
       "n_matched": 15,
@@ -30500,7 +30526,7 @@
     {
       "date_bin_start": "2019-11-15",
       "n_landings": 43,
-      "prop_landings_woman": 0.0233,
+      "prop_landings_woman": 0.0238,
       "fuel": 3.3714,
       "n_tracks": 123,
       "n_matched": 10,
@@ -30513,7 +30539,7 @@
     {
       "date_bin_start": "2019-11-14",
       "n_landings": 55,
-      "prop_landings_woman": 0.0545,
+      "prop_landings_woman": 0.0556,
       "fuel": 2.2889,
       "n_tracks": 107,
       "n_matched": 20,
@@ -30679,7 +30705,7 @@
     {
       "date_bin_start": "2019-11-01",
       "n_landings": 10,
-      "prop_landings_woman": 0.2,
+      "prop_landings_woman": 0.2222,
       "fuel": 0.4,
       "n_tracks": 99,
       "n_matched": 1,
@@ -30705,7 +30731,7 @@
     {
       "date_bin_start": "2019-10-30",
       "n_landings": 29,
-      "prop_landings_woman": 0.0769,
+      "prop_landings_woman": 0.08,
       "fuel": 2.4231,
       "n_tracks": 71,
       "n_matched": 9,
@@ -30853,7 +30879,7 @@
     {
       "date_bin_start": "2019-10-18",
       "n_landings": 40,
-      "prop_landings_woman": 0.0769,
+      "prop_landings_woman": 0.0789,
       "fuel": 1.2308,
       "n_tracks": 86,
       "n_matched": 13,
@@ -30892,7 +30918,7 @@
     {
       "date_bin_start": "2019-10-15",
       "n_landings": 56,
-      "prop_landings_woman": 0.0357,
+      "prop_landings_woman": 0.0364,
       "fuel": 2.1633,
       "n_tracks": 101,
       "n_matched": 12,
@@ -30953,7 +30979,7 @@
     {
       "date_bin_start": "2019-10-10",
       "n_landings": 50,
-      "prop_landings_woman": 0.02,
+      "prop_landings_woman": 0.0204,
       "fuel": 3.4889,
       "n_tracks": 106,
       "n_matched": 9,
@@ -31044,7 +31070,7 @@
     {
       "date_bin_start": "2019-10-03",
       "n_landings": 49,
-      "prop_landings_woman": 0.1429,
+      "prop_landings_woman": 0.1458,
       "fuel": 1.2381,
       "n_tracks": 92,
       "n_matched": 10,
@@ -31249,7 +31275,7 @@
     {
       "date_bin_start": "2019-09-17",
       "n_landings": 60,
-      "prop_landings_woman": 0.0167,
+      "prop_landings_woman": 0.0169,
       "fuel": 2.434,
       "n_tracks": 24,
       "n_matched": 4,
@@ -31298,7 +31324,7 @@
     {
       "date_bin_start": "2019-09-13",
       "n_landings": 37,
-      "prop_landings_woman": 0.0286,
+      "prop_landings_woman": 0.0303,
       "fuel": 1.9259,
       "n_tracks": 26,
       "n_matched": 6,
@@ -31376,7 +31402,7 @@
     {
       "date_bin_start": "2019-09-07",
       "n_landings": 16,
-      "prop_landings_woman": 0.125,
+      "prop_landings_woman": 0.1333,
       "fuel": 2,
       "n_tracks": 66,
       "n_matched": 0,
@@ -31402,7 +31428,7 @@
     {
       "date_bin_start": "2019-09-05",
       "n_landings": 54,
-      "prop_landings_woman": 0.0556,
+      "prop_landings_woman": 0.0566,
       "fuel": 1.5333,
       "n_tracks": 63,
       "n_matched": 15,
@@ -31415,7 +31441,7 @@
     {
       "date_bin_start": "2019-09-04",
       "n_landings": 47,
-      "prop_landings_woman": 0.0652,
+      "prop_landings_woman": 0.0667,
       "fuel": 1.4167,
       "n_tracks": 74,
       "n_matched": 13,
@@ -31428,7 +31454,7 @@
     {
       "date_bin_start": "2019-09-03",
       "n_landings": 46,
-      "prop_landings_woman": 0.0455,
+      "prop_landings_woman": 0.0465,
       "fuel": 1.4286,
       "n_tracks": 74,
       "n_matched": 11,
@@ -31441,7 +31467,7 @@
     {
       "date_bin_start": "2019-09-02",
       "n_landings": 50,
-      "prop_landings_woman": 0.02,
+      "prop_landings_woman": 0.0204,
       "fuel": 1.6667,
       "n_tracks": 84,
       "n_matched": 18,
@@ -31493,7 +31519,7 @@
     {
       "date_bin_start": "2019-08-29",
       "n_landings": 40,
-      "prop_landings_woman": 0.05,
+      "prop_landings_woman": 0.0526,
       "fuel": 1,
       "n_tracks": 49,
       "n_matched": 14,
@@ -31711,7 +31737,6 @@
     {
       "date_bin_start": "2019-08-12",
       "n_landings": 6,
-      "prop_landings_woman": 0,
       "n_tracks": 38,
       "n_matched": 0,
       "prop_matched": 0,
@@ -32134,7 +32159,7 @@
     {
       "date_bin_start": "2019-07-07",
       "n_landings": 28,
-      "prop_landings_woman": 0.04,
+      "prop_landings_woman": 0.0417,
       "n_tracks": 59,
       "n_matched": 11,
       "prop_matched": 0.1447,
@@ -32852,7 +32877,7 @@
     {
       "date_bin_start": "2019-05-08",
       "n_landings": 35,
-      "prop_landings_woman": 0.0769,
+      "prop_landings_woman": 0.08,
       "n_tracks": 44,
       "n_matched": 11,
       "prop_matched": 0.1618,
@@ -35007,7 +35032,7 @@
     {
       "date_bin_start": "2018-11-06",
       "n_landings": 27,
-      "prop_landings_woman": 0.125,
+      "prop_landings_woman": 0.1304,
       "n_tracks": 19,
       "n_matched": 0,
       "prop_matched": 0,
@@ -35583,7 +35608,7 @@
     {
       "date_bin_start": "2018-09-19",
       "n_landings": 49,
-      "prop_landings_woman": 0.0638,
+      "prop_landings_woman": 0.0652,
       "n_tracks": 26,
       "n_matched": 0,
       "prop_matched": 0,
@@ -35667,7 +35692,7 @@
     {
       "date_bin_start": "2018-09-12",
       "n_landings": 40,
-      "prop_landings_woman": 0.175,
+      "prop_landings_woman": 0.1795,
       "n_tracks": 29,
       "n_matched": 0,
       "prop_matched": 0,
@@ -35727,7 +35752,7 @@
     {
       "date_bin_start": "2018-09-07",
       "n_landings": 30,
-      "prop_landings_woman": 0.2222,
+      "prop_landings_woman": 0.2308,
       "n_tracks": 28,
       "n_matched": 0,
       "prop_matched": 0,
@@ -36432,7 +36457,7 @@
     {
       "date_bin_start": "2018-07-10",
       "n_landings": 30,
-      "prop_landings_woman": 0.3077,
+      "prop_landings_woman": 0.32,
       "n_tracks": 15,
       "n_matched": 0,
       "prop_matched": 0,
@@ -38444,7 +38469,7 @@
     {
       "date_bin_start": "2018-01-04",
       "n_landings": 31,
-      "prop_landings_woman": 0.0645,
+      "prop_landings_woman": 0.0667,
       "n_tracks": 0,
       "n_matched": 0,
       "prop_matched": 0,
@@ -38490,15 +38515,28 @@
       "week": "20 Sep 26"
     },
     {
+      "date_bin_start": "2026-09-13",
+      "n_landings": 14,
+      "prop_landings_woman": 0.0714,
+      "fuel": 10,
+      "n_tracks": 0,
+      "n_matched": 0,
+      "prop_matched": 0,
+      "recorded_revenue": 590,
+      "recorded_catch": 132.8867,
+      "n_boats": 3796,
+      "week": "13 Sep 26"
+    },
+    {
       "date_bin_start": "2026-09-06",
-      "n_landings": 98,
-      "prop_landings_woman": 0.0938,
-      "fuel": 8.44,
+      "n_landings": 108,
+      "prop_landings_woman": 0.0943,
+      "fuel": 8.3077,
       "n_tracks": 3,
       "n_matched": 0,
       "prop_matched": 0,
-      "recorded_revenue": 5011,
-      "recorded_catch": 1402.4131,
+      "recorded_revenue": 5389,
+      "recorded_catch": 1525.5267,
       "n_boats": 3796,
       "week": "06 Sep 26"
     },
@@ -38518,7 +38556,7 @@
     {
       "date_bin_start": "2026-08-23",
       "n_landings": 113,
-      "prop_landings_woman": 0.0909,
+      "prop_landings_woman": 0.0926,
       "fuel": 10.7812,
       "n_tracks": 0,
       "n_matched": 0,
@@ -38557,7 +38595,7 @@
     {
       "date_bin_start": "2026-08-02",
       "n_landings": 102,
-      "prop_landings_woman": 0.0532,
+      "prop_landings_woman": 0.0556,
       "fuel": 8.3077,
       "n_tracks": 0,
       "n_matched": 0,
@@ -38635,7 +38673,7 @@
     {
       "date_bin_start": "2026-06-21",
       "n_landings": 91,
-      "prop_landings_woman": 0.0899,
+      "prop_landings_woman": 0.0909,
       "fuel": 9.2326,
       "n_tracks": 0,
       "n_matched": 0,
@@ -38661,7 +38699,7 @@
     {
       "date_bin_start": "2026-06-07",
       "n_landings": 105,
-      "prop_landings_woman": 0.0196,
+      "prop_landings_woman": 0.0198,
       "fuel": 9.5636,
       "n_tracks": 0,
       "n_matched": 0,
@@ -38687,7 +38725,7 @@
     {
       "date_bin_start": "2026-05-24",
       "n_landings": 141,
-      "prop_landings_woman": 0.0593,
+      "prop_landings_woman": 0.0602,
       "fuel": 6.4487,
       "n_tracks": 0,
       "n_matched": 0,
@@ -38726,7 +38764,7 @@
     {
       "date_bin_start": "2026-05-03",
       "n_landings": 133,
-      "prop_landings_woman": 0.042,
+      "prop_landings_woman": 0.0431,
       "fuel": 6.7101,
       "n_tracks": 1,
       "n_matched": 0,
@@ -38778,7 +38816,7 @@
     {
       "date_bin_start": "2026-04-05",
       "n_landings": 158,
-      "prop_landings_woman": 0.0637,
+      "prop_landings_woman": 0.0641,
       "fuel": 5.7553,
       "n_tracks": 3,
       "n_matched": 0,
@@ -38791,7 +38829,7 @@
     {
       "date_bin_start": "2026-03-29",
       "n_landings": 87,
-      "prop_landings_woman": 0.1098,
+      "prop_landings_woman": 0.1111,
       "fuel": 5.3158,
       "n_tracks": 6,
       "n_matched": 0,
@@ -38804,7 +38842,7 @@
     {
       "date_bin_start": "2026-03-22",
       "n_landings": 143,
-      "prop_landings_woman": 0.0725,
+      "prop_landings_woman": 0.0758,
       "fuel": 6.4045,
       "n_tracks": 2,
       "n_matched": 0,
@@ -38817,7 +38855,7 @@
     {
       "date_bin_start": "2026-03-15",
       "n_landings": 44,
-      "prop_landings_woman": 0.0833,
+      "prop_landings_woman": 0.0857,
       "fuel": 8.3,
       "n_tracks": 4,
       "n_matched": 0,
@@ -38901,7 +38939,7 @@
     {
       "date_bin_start": "2026-01-18",
       "n_landings": 54,
-      "prop_landings_woman": 0.1852,
+      "prop_landings_woman": 0.2,
       "fuel": 8.3333,
       "n_tracks": 4,
       "n_matched": 0,
@@ -38914,7 +38952,7 @@
     {
       "date_bin_start": "2026-01-11",
       "n_landings": 31,
-      "prop_landings_woman": 0.2258,
+      "prop_landings_woman": 0.2414,
       "fuel": 7.4167,
       "n_tracks": 9,
       "n_matched": 0,
@@ -38927,7 +38965,7 @@
     {
       "date_bin_start": "2026-01-04",
       "n_landings": 44,
-      "prop_landings_woman": 0.1395,
+      "prop_landings_woman": 0.15,
       "fuel": 7.8182,
       "n_tracks": 5,
       "n_matched": 0,
@@ -38979,7 +39017,7 @@
     {
       "date_bin_start": "2025-12-07",
       "n_landings": 132,
-      "prop_landings_woman": 0.1154,
+      "prop_landings_woman": 0.121,
       "fuel": 7.5556,
       "n_tracks": 7,
       "n_matched": 0,
@@ -38992,7 +39030,7 @@
     {
       "date_bin_start": "2025-11-30",
       "n_landings": 159,
-      "prop_landings_woman": 0.1132,
+      "prop_landings_woman": 0.1161,
       "fuel": 7.859,
       "n_tracks": 4,
       "n_matched": 0,
@@ -39005,7 +39043,7 @@
     {
       "date_bin_start": "2025-11-23",
       "n_landings": 123,
-      "prop_landings_woman": 0.113,
+      "prop_landings_woman": 0.1171,
       "fuel": 8.3137,
       "n_tracks": 4,
       "n_matched": 0,
@@ -39018,7 +39056,7 @@
     {
       "date_bin_start": "2025-11-16",
       "n_landings": 186,
-      "prop_landings_woman": 0.073,
+      "prop_landings_woman": 0.076,
       "fuel": 6.055,
       "n_tracks": 14,
       "n_matched": 0,
@@ -39031,7 +39069,7 @@
     {
       "date_bin_start": "2025-11-09",
       "n_landings": 192,
-      "prop_landings_woman": 0.1111,
+      "prop_landings_woman": 0.1154,
       "fuel": 6.3565,
       "n_tracks": 8,
       "n_matched": 0,
@@ -39044,7 +39082,7 @@
     {
       "date_bin_start": "2025-11-02",
       "n_landings": 240,
-      "prop_landings_woman": 0.0504,
+      "prop_landings_woman": 0.0515,
       "fuel": 5.55,
       "n_tracks": 13,
       "n_matched": 0,
@@ -39057,7 +39095,7 @@
     {
       "date_bin_start": "2025-10-26",
       "n_landings": 201,
-      "prop_landings_woman": 0.0406,
+      "prop_landings_woman": 0.0412,
       "fuel": 5.9023,
       "n_tracks": 17,
       "n_matched": 0,
@@ -39083,7 +39121,7 @@
     {
       "date_bin_start": "2025-10-12",
       "n_landings": 135,
-      "prop_landings_woman": 0.0945,
+      "prop_landings_woman": 0.096,
       "fuel": 7.6406,
       "n_tracks": 9,
       "n_matched": 0,
@@ -39096,7 +39134,7 @@
     {
       "date_bin_start": "2025-10-05",
       "n_landings": 201,
-      "prop_landings_woman": 0.0758,
+      "prop_landings_woman": 0.0761,
       "fuel": 5.6609,
       "n_tracks": 9,
       "n_matched": 0,
@@ -39109,7 +39147,7 @@
     {
       "date_bin_start": "2025-09-28",
       "n_landings": 236,
-      "prop_landings_woman": 0.0601,
+      "prop_landings_woman": 0.0609,
       "fuel": 5.7097,
       "n_tracks": 6,
       "n_matched": 0,
@@ -39122,7 +39160,7 @@
     {
       "date_bin_start": "2025-09-21",
       "n_landings": 186,
-      "prop_landings_woman": 0.0934,
+      "prop_landings_woman": 0.0944,
       "fuel": 6.4299,
       "n_tracks": 8,
       "n_matched": 0,
@@ -39135,7 +39173,7 @@
     {
       "date_bin_start": "2025-09-14",
       "n_landings": 179,
-      "prop_landings_woman": 0.0455,
+      "prop_landings_woman": 0.0462,
       "fuel": 6.0859,
       "n_tracks": 6,
       "n_matched": 0,
@@ -39148,7 +39186,7 @@
     {
       "date_bin_start": "2025-09-07",
       "n_landings": 196,
-      "prop_landings_woman": 0.0518,
+      "prop_landings_woman": 0.0521,
       "fuel": 5.8623,
       "n_tracks": 0,
       "n_matched": 0,
@@ -39369,7 +39407,7 @@
     {
       "date_bin_start": "2025-05-11",
       "n_landings": 182,
-      "prop_landings_woman": 0.0632,
+      "prop_landings_woman": 0.0636,
       "fuel": 6.314,
       "n_tracks": 15,
       "n_matched": 0,
@@ -39382,7 +39420,7 @@
     {
       "date_bin_start": "2025-05-04",
       "n_landings": 167,
-      "prop_landings_woman": 0.0523,
+      "prop_landings_woman": 0.0533,
       "fuel": 5.7722,
       "n_tracks": 5,
       "n_matched": 0,
@@ -39395,7 +39433,7 @@
     {
       "date_bin_start": "2025-04-27",
       "n_landings": 194,
-      "prop_landings_woman": 0.0608,
+      "prop_landings_woman": 0.0611,
       "fuel": 5.89,
       "n_tracks": 11,
       "n_matched": 0,
@@ -39408,7 +39446,7 @@
     {
       "date_bin_start": "2025-04-20",
       "n_landings": 183,
-      "prop_landings_woman": 0.0618,
+      "prop_landings_woman": 0.0629,
       "fuel": 6.9583,
       "n_tracks": 21,
       "n_matched": 0,
@@ -39460,7 +39498,7 @@
     {
       "date_bin_start": "2025-03-23",
       "n_landings": 201,
-      "prop_landings_woman": 0.0505,
+      "prop_landings_woman": 0.051,
       "fuel": 5.9147,
       "n_tracks": 9,
       "n_matched": 0,
@@ -39473,7 +39511,7 @@
     {
       "date_bin_start": "2025-03-16",
       "n_landings": 197,
-      "prop_landings_woman": 0.0567,
+      "prop_landings_woman": 0.0588,
       "fuel": 5.5935,
       "n_tracks": 17,
       "n_matched": 0,
@@ -39486,7 +39524,7 @@
     {
       "date_bin_start": "2025-03-09",
       "n_landings": 74,
-      "prop_landings_woman": 0.0563,
+      "prop_landings_woman": 0.0588,
       "fuel": 6.119,
       "n_tracks": 25,
       "n_matched": 0,
@@ -39499,7 +39537,7 @@
     {
       "date_bin_start": "2025-03-02",
       "n_landings": 109,
-      "prop_landings_woman": 0.0467,
+      "prop_landings_woman": 0.0485,
       "fuel": 6.1053,
       "n_tracks": 27,
       "n_matched": 0,
@@ -39512,7 +39550,7 @@
     {
       "date_bin_start": "2025-02-23",
       "n_landings": 73,
-      "prop_landings_woman": 0.0278,
+      "prop_landings_woman": 0.0282,
       "fuel": 7.3226,
       "n_tracks": 29,
       "n_matched": 0,
@@ -39551,7 +39589,7 @@
     {
       "date_bin_start": "2025-02-02",
       "n_landings": 47,
-      "prop_landings_woman": 0.0476,
+      "prop_landings_woman": 0.0513,
       "fuel": 9.4118,
       "n_tracks": 14,
       "n_matched": 0,
@@ -39564,7 +39602,7 @@
     {
       "date_bin_start": "2025-01-26",
       "n_landings": 110,
-      "prop_landings_woman": 0.055,
+      "prop_landings_woman": 0.0561,
       "fuel": 7.6452,
       "n_tracks": 22,
       "n_matched": 0,
@@ -39577,7 +39615,7 @@
     {
       "date_bin_start": "2025-01-19",
       "n_landings": 105,
-      "prop_landings_woman": 0.0381,
+      "prop_landings_woman": 0.0396,
       "fuel": 7.5846,
       "n_tracks": 28,
       "n_matched": 0,
@@ -39590,7 +39628,7 @@
     {
       "date_bin_start": "2025-01-12",
       "n_landings": 98,
-      "prop_landings_woman": 0.0928,
+      "prop_landings_woman": 0.0938,
       "fuel": 6.8276,
       "n_tracks": 21,
       "n_matched": 0,
@@ -39603,7 +39641,7 @@
     {
       "date_bin_start": "2025-01-05",
       "n_landings": 160,
-      "prop_landings_woman": 0.0127,
+      "prop_landings_woman": 0.013,
       "fuel": 6.9341,
       "n_tracks": 27,
       "n_matched": 0,
@@ -39616,7 +39654,7 @@
     {
       "date_bin_start": "2024-12-29",
       "n_landings": 74,
-      "prop_landings_woman": 0.0411,
+      "prop_landings_woman": 0.0435,
       "fuel": 7.3529,
       "n_tracks": 36,
       "n_matched": 0,
@@ -39629,7 +39667,7 @@
     {
       "date_bin_start": "2024-12-22",
       "n_landings": 111,
-      "prop_landings_woman": 0.1509,
+      "prop_landings_woman": 0.1553,
       "fuel": 7.1111,
       "n_tracks": 38,
       "n_matched": 0,
@@ -39642,7 +39680,7 @@
     {
       "date_bin_start": "2024-12-15",
       "n_landings": 128,
-      "prop_landings_woman": 0.072,
+      "prop_landings_woman": 0.075,
       "fuel": 7.5823,
       "n_tracks": 30,
       "n_matched": 0,
@@ -39655,7 +39693,7 @@
     {
       "date_bin_start": "2024-12-08",
       "n_landings": 192,
-      "prop_landings_woman": 0.0628,
+      "prop_landings_woman": 0.0642,
       "fuel": 7.3788,
       "n_tracks": 18,
       "n_matched": 0,
@@ -39668,7 +39706,7 @@
     {
       "date_bin_start": "2024-12-01",
       "n_landings": 181,
-      "prop_landings_woman": 0.046,
+      "prop_landings_woman": 0.0491,
       "fuel": 7.3246,
       "n_tracks": 22,
       "n_matched": 0,
@@ -39681,7 +39719,7 @@
     {
       "date_bin_start": "2024-11-24",
       "n_landings": 223,
-      "prop_landings_woman": 0.0691,
+      "prop_landings_woman": 0.0701,
       "fuel": 6.1931,
       "n_tracks": 22,
       "n_matched": 0,
@@ -39694,7 +39732,7 @@
     {
       "date_bin_start": "2024-11-17",
       "n_landings": 254,
-      "prop_landings_woman": 0.036,
+      "prop_landings_woman": 0.0366,
       "fuel": 5.6923,
       "n_tracks": 23,
       "n_matched": 0,
@@ -39707,7 +39745,7 @@
     {
       "date_bin_start": "2024-11-10",
       "n_landings": 238,
-      "prop_landings_woman": 0.0258,
+      "prop_landings_woman": 0.0259,
       "fuel": 5.7843,
       "n_tracks": 22,
       "n_matched": 0,
@@ -39720,7 +39758,7 @@
     {
       "date_bin_start": "2024-11-03",
       "n_landings": 230,
-      "prop_landings_woman": 0.0307,
+      "prop_landings_woman": 0.0308,
       "fuel": 4.9091,
       "n_tracks": 22,
       "n_matched": 0,
@@ -40097,7 +40135,7 @@
     {
       "date_bin_start": "2024-04-14",
       "n_landings": 301,
-      "prop_landings_woman": 0.0712,
+      "prop_landings_woman": 0.0717,
       "fuel": 5.0208,
       "n_tracks": 22,
       "n_matched": 0,
@@ -40110,7 +40148,7 @@
     {
       "date_bin_start": "2024-04-07",
       "n_landings": 148,
-      "prop_landings_woman": 0.0476,
+      "prop_landings_woman": 0.049,
       "fuel": 6.1633,
       "n_tracks": 34,
       "n_matched": 0,
@@ -40169,7 +40207,7 @@
     {
       "date_bin_start": "2024-03-03",
       "n_landings": 62,
-      "prop_landings_woman": 0.0806,
+      "prop_landings_woman": 0.0847,
       "fuel": 7.1064,
       "n_tracks": 35,
       "n_matched": 0,
@@ -40182,7 +40220,7 @@
     {
       "date_bin_start": "2024-02-25",
       "n_landings": 19,
-      "prop_landings_woman": 0.1053,
+      "prop_landings_woman": 0.1111,
       "fuel": 7.3571,
       "n_tracks": 30,
       "n_matched": 0,
@@ -40195,7 +40233,7 @@
     {
       "date_bin_start": "2024-02-18",
       "n_landings": 60,
-      "prop_landings_woman": 0.0667,
+      "prop_landings_woman": 0.0714,
       "fuel": 7.1489,
       "n_tracks": 38,
       "n_matched": 0,
@@ -40208,7 +40246,7 @@
     {
       "date_bin_start": "2024-02-11",
       "n_landings": 76,
-      "prop_landings_woman": 0.1447,
+      "prop_landings_woman": 0.1642,
       "fuel": 7.6731,
       "n_tracks": 21,
       "n_matched": 0,
@@ -40221,7 +40259,7 @@
     {
       "date_bin_start": "2024-02-04",
       "n_landings": 20,
-      "prop_landings_woman": 0.2,
+      "prop_landings_woman": 0.2105,
       "fuel": 6.7273,
       "n_tracks": 37,
       "n_matched": 0,
@@ -40234,7 +40272,7 @@
     {
       "date_bin_start": "2024-01-28",
       "n_landings": 24,
-      "prop_landings_woman": 0.125,
+      "prop_landings_woman": 0.1304,
       "fuel": 6.95,
       "n_tracks": 32,
       "n_matched": 0,
@@ -40299,7 +40337,7 @@
     {
       "date_bin_start": "2023-12-24",
       "n_landings": 83,
-      "prop_landings_woman": 0.141,
+      "prop_landings_woman": 0.1447,
       "fuel": 5.9574,
       "n_tracks": 28,
       "n_matched": 0,
@@ -40312,7 +40350,7 @@
     {
       "date_bin_start": "2023-12-17",
       "n_landings": 82,
-      "prop_landings_woman": 0.1096,
+      "prop_landings_woman": 0.1127,
       "fuel": 6.2,
       "n_tracks": 27,
       "n_matched": 0,
@@ -40325,7 +40363,7 @@
     {
       "date_bin_start": "2023-12-10",
       "n_landings": 146,
-      "prop_landings_woman": 0.0942,
+      "prop_landings_woman": 0.0963,
       "fuel": 6.3409,
       "n_tracks": 24,
       "n_matched": 0,
@@ -40754,7 +40792,7 @@
     {
       "date_bin_start": "2023-04-23",
       "n_landings": 159,
-      "prop_landings_woman": 0.014,
+      "prop_landings_woman": 0.0141,
       "fuel": 7.6036,
       "n_tracks": 37,
       "n_matched": 0,
@@ -40780,7 +40818,7 @@
     {
       "date_bin_start": "2023-04-09",
       "n_landings": 164,
-      "prop_landings_woman": 0.0533,
+      "prop_landings_woman": 0.0537,
       "fuel": 8.1273,
       "n_tracks": 48,
       "n_matched": 0,
@@ -41001,7 +41039,7 @@
     {
       "date_bin_start": "2022-12-11",
       "n_landings": 138,
-      "prop_landings_woman": 0.0159,
+      "prop_landings_woman": 0.016,
       "fuel": 10.2414,
       "n_tracks": 70,
       "n_matched": 1,
@@ -41118,7 +41156,7 @@
     {
       "date_bin_start": "2022-10-09",
       "n_landings": 166,
-      "prop_landings_woman": 0.0331,
+      "prop_landings_woman": 0.0333,
       "fuel": 9.596,
       "n_tracks": 65,
       "n_matched": 0,
@@ -41404,7 +41442,7 @@
     {
       "date_bin_start": "2022-05-08",
       "n_landings": 331,
-      "prop_landings_woman": 0.0361,
+      "prop_landings_woman": 0.0362,
       "fuel": 7.0412,
       "n_tracks": 121,
       "n_matched": 5,
@@ -41547,7 +41585,7 @@
     {
       "date_bin_start": "2022-02-20",
       "n_landings": 291,
-      "prop_landings_woman": 0.025,
+      "prop_landings_woman": 0.0251,
       "fuel": 9.4968,
       "n_tracks": 101,
       "n_matched": 1,
@@ -41638,7 +41676,7 @@
     {
       "date_bin_start": "2022-01-02",
       "n_landings": 433,
-      "prop_landings_woman": 0.0343,
+      "prop_landings_woman": 0.0344,
       "fuel": 6.5234,
       "n_tracks": 165,
       "n_matched": 27,
@@ -41716,7 +41754,7 @@
     {
       "date_bin_start": "2021-11-21",
       "n_landings": 541,
-      "prop_landings_woman": 0.0301,
+      "prop_landings_woman": 0.0302,
       "fuel": 6.1319,
       "n_tracks": 300,
       "n_matched": 29,
@@ -41755,7 +41793,7 @@
     {
       "date_bin_start": "2021-10-31",
       "n_landings": 367,
-      "prop_landings_woman": 0.0203,
+      "prop_landings_woman": 0.0204,
       "fuel": 7.4629,
       "n_tracks": 240,
       "n_matched": 13,
@@ -41846,7 +41884,7 @@
     {
       "date_bin_start": "2021-09-12",
       "n_landings": 543,
-      "prop_landings_woman": 0.0302,
+      "prop_landings_woman": 0.0303,
       "fuel": 4.6266,
       "n_tracks": 155,
       "n_matched": 43,
@@ -42093,7 +42131,7 @@
     {
       "date_bin_start": "2021-05-02",
       "n_landings": 352,
-      "prop_landings_woman": 0.0151,
+      "prop_landings_woman": 0.0152,
       "fuel": 6.7143,
       "n_tracks": 255,
       "n_matched": 23,
@@ -42314,7 +42352,7 @@
     {
       "date_bin_start": "2021-01-03",
       "n_landings": 569,
-      "prop_landings_woman": 0.0304,
+      "prop_landings_woman": 0.0305,
       "fuel": 4.7507,
       "n_tracks": 686,
       "n_matched": 96,
@@ -42379,7 +42417,7 @@
     {
       "date_bin_start": "2020-11-29",
       "n_landings": 455,
-      "prop_landings_woman": 0.0345,
+      "prop_landings_woman": 0.0346,
       "fuel": 5.3333,
       "n_tracks": 529,
       "n_matched": 70,
@@ -42405,7 +42443,7 @@
     {
       "date_bin_start": "2020-11-15",
       "n_landings": 461,
-      "prop_landings_woman": 0.0404,
+      "prop_landings_woman": 0.0406,
       "fuel": 5.8052,
       "n_tracks": 398,
       "n_matched": 55,
@@ -42431,7 +42469,7 @@
     {
       "date_bin_start": "2020-11-01",
       "n_landings": 508,
-      "prop_landings_woman": 0.0203,
+      "prop_landings_woman": 0.0204,
       "fuel": 5.5758,
       "n_tracks": 515,
       "n_matched": 62,
@@ -42496,7 +42534,7 @@
     {
       "date_bin_start": "2020-09-27",
       "n_landings": 487,
-      "prop_landings_woman": 0.0442,
+      "prop_landings_woman": 0.0443,
       "fuel": 5.0648,
       "n_tracks": 354,
       "n_matched": 60,
@@ -42509,7 +42547,7 @@
     {
       "date_bin_start": "2020-09-20",
       "n_landings": 478,
-      "prop_landings_woman": 0.0601,
+      "prop_landings_woman": 0.0605,
       "fuel": 4.75,
       "n_tracks": 451,
       "n_matched": 65,
@@ -42522,7 +42560,7 @@
     {
       "date_bin_start": "2020-09-13",
       "n_landings": 533,
-      "prop_landings_woman": 0.039,
+      "prop_landings_woman": 0.0393,
       "fuel": 4.6639,
       "n_tracks": 350,
       "n_matched": 84,
@@ -42600,7 +42638,7 @@
     {
       "date_bin_start": "2020-08-02",
       "n_landings": 280,
-      "prop_landings_woman": 0.0489,
+      "prop_landings_woman": 0.0491,
       "fuel": 4.0826,
       "n_tracks": 343,
       "n_matched": 37,
@@ -42834,7 +42872,7 @@
     {
       "date_bin_start": "2020-03-29",
       "n_landings": 276,
-      "prop_landings_woman": 0.0632,
+      "prop_landings_woman": 0.0634,
       "fuel": 3.4831,
       "n_tracks": 846,
       "n_matched": 54,
@@ -42873,7 +42911,7 @@
     {
       "date_bin_start": "2020-03-08",
       "n_landings": 300,
-      "prop_landings_woman": 0.0484,
+      "prop_landings_woman": 0.0488,
       "fuel": 3.26,
       "n_tracks": 921,
       "n_matched": 86,
@@ -42886,7 +42924,7 @@
     {
       "date_bin_start": "2020-03-01",
       "n_landings": 289,
-      "prop_landings_woman": 0.0249,
+      "prop_landings_woman": 0.025,
       "fuel": 3.8589,
       "n_tracks": 795,
       "n_matched": 69,
@@ -42899,7 +42937,7 @@
     {
       "date_bin_start": "2020-02-23",
       "n_landings": 245,
-      "prop_landings_woman": 0.0638,
+      "prop_landings_woman": 0.0641,
       "fuel": 3.4333,
       "n_tracks": 784,
       "n_matched": 65,
@@ -42925,7 +42963,7 @@
     {
       "date_bin_start": "2020-02-09",
       "n_landings": 307,
-      "prop_landings_woman": 0.047,
+      "prop_landings_woman": 0.0471,
       "fuel": 2.7519,
       "n_tracks": 833,
       "n_matched": 108,
@@ -42951,7 +42989,7 @@
     {
       "date_bin_start": "2020-01-26",
       "n_landings": 296,
-      "prop_landings_woman": 0.0207,
+      "prop_landings_woman": 0.0208,
       "fuel": 3.3083,
       "n_tracks": 852,
       "n_matched": 95,
@@ -42977,7 +43015,7 @@
     {
       "date_bin_start": "2020-01-12",
       "n_landings": 281,
-      "prop_landings_woman": 0.0491,
+      "prop_landings_woman": 0.0494,
       "fuel": 3.3542,
       "n_tracks": 722,
       "n_matched": 83,
@@ -43029,7 +43067,7 @@
     {
       "date_bin_start": "2019-12-15",
       "n_landings": 314,
-      "prop_landings_woman": 0.055,
+      "prop_landings_woman": 0.0554,
       "fuel": 2.9498,
       "n_tracks": 787,
       "n_matched": 83,
@@ -43055,7 +43093,7 @@
     {
       "date_bin_start": "2019-12-01",
       "n_landings": 329,
-      "prop_landings_woman": 0.0275,
+      "prop_landings_woman": 0.0276,
       "fuel": 2.8877,
       "n_tracks": 806,
       "n_matched": 79,
@@ -43068,7 +43106,7 @@
     {
       "date_bin_start": "2019-11-24",
       "n_landings": 284,
-      "prop_landings_woman": 0.0745,
+      "prop_landings_woman": 0.0747,
       "fuel": 3.2974,
       "n_tracks": 765,
       "n_matched": 58,
@@ -43081,7 +43119,7 @@
     {
       "date_bin_start": "2019-11-17",
       "n_landings": 309,
-      "prop_landings_woman": 0.0519,
+      "prop_landings_woman": 0.0523,
       "fuel": 2.7305,
       "n_tracks": 811,
       "n_matched": 63,
@@ -43094,7 +43132,7 @@
     {
       "date_bin_start": "2019-11-10",
       "n_landings": 238,
-      "prop_landings_woman": 0.0342,
+      "prop_landings_woman": 0.0345,
       "fuel": 3.6462,
       "n_tracks": 722,
       "n_matched": 68,
@@ -43120,7 +43158,7 @@
     {
       "date_bin_start": "2019-10-27",
       "n_landings": 149,
-      "prop_landings_woman": 0.0699,
+      "prop_landings_woman": 0.0709,
       "fuel": 2.08,
       "n_tracks": 574,
       "n_matched": 33,
@@ -43146,7 +43184,7 @@
     {
       "date_bin_start": "2019-10-13",
       "n_landings": 236,
-      "prop_landings_woman": 0.0388,
+      "prop_landings_woman": 0.0393,
       "fuel": 3.1912,
       "n_tracks": 660,
       "n_matched": 51,
@@ -43159,7 +43197,7 @@
     {
       "date_bin_start": "2019-10-06",
       "n_landings": 265,
-      "prop_landings_woman": 0.0228,
+      "prop_landings_woman": 0.0229,
       "fuel": 3.7237,
       "n_tracks": 705,
       "n_matched": 59,
@@ -43172,7 +43210,7 @@
     {
       "date_bin_start": "2019-09-29",
       "n_landings": 246,
-      "prop_landings_woman": 0.0864,
+      "prop_landings_woman": 0.0868,
       "fuel": 1.9091,
       "n_tracks": 631,
       "n_matched": 57,
@@ -43185,7 +43223,7 @@
     {
       "date_bin_start": "2019-09-22",
       "n_landings": 244,
-      "prop_landings_woman": 0.0041,
+      "prop_landings_woman": 0.0042,
       "fuel": 3.2464,
       "n_tracks": 617,
       "n_matched": 60,
@@ -43198,7 +43236,7 @@
     {
       "date_bin_start": "2019-09-15",
       "n_landings": 268,
-      "prop_landings_woman": 0.0231,
+      "prop_landings_woman": 0.0232,
       "fuel": 2.4675,
       "n_tracks": 398,
       "n_matched": 43,
@@ -43211,7 +43249,7 @@
     {
       "date_bin_start": "2019-09-08",
       "n_landings": 223,
-      "prop_landings_woman": 0.049,
+      "prop_landings_woman": 0.0495,
       "fuel": 2.4645,
       "n_tracks": 355,
       "n_matched": 51,
@@ -43224,7 +43262,7 @@
     {
       "date_bin_start": "2019-09-01",
       "n_landings": 267,
-      "prop_landings_woman": 0.042,
+      "prop_landings_woman": 0.0431,
       "fuel": 1.6854,
       "n_tracks": 503,
       "n_matched": 68,
@@ -43237,7 +43275,7 @@
     {
       "date_bin_start": "2019-08-25",
       "n_landings": 241,
-      "prop_landings_woman": 0.0687,
+      "prop_landings_woman": 0.0696,
       "fuel": 2.1793,
       "n_tracks": 399,
       "n_matched": 62,
@@ -43263,7 +43301,7 @@
     {
       "date_bin_start": "2019-08-11",
       "n_landings": 186,
-      "prop_landings_woman": 0.0476,
+      "prop_landings_woman": 0.0479,
       "fuel": 2.1286,
       "n_tracks": 355,
       "n_matched": 34,
@@ -43325,7 +43363,7 @@
     {
       "date_bin_start": "2019-07-07",
       "n_landings": 323,
-      "prop_landings_woman": 0.0417,
+      "prop_landings_woman": 0.0418,
       "n_tracks": 566,
       "n_matched": 116,
       "prop_matched": 0.1501,
@@ -43433,7 +43471,7 @@
     {
       "date_bin_start": "2019-05-05",
       "n_landings": 231,
-      "prop_landings_woman": 0.0561,
+      "prop_landings_woman": 0.0564,
       "n_tracks": 359,
       "n_matched": 50,
       "prop_matched": 0.0926,
@@ -43745,7 +43783,7 @@
     {
       "date_bin_start": "2018-11-04",
       "n_landings": 186,
-      "prop_landings_woman": 0.1786,
+      "prop_landings_woman": 0.1796,
       "n_tracks": 158,
       "n_matched": 0,
       "prop_matched": 0,
@@ -43829,7 +43867,7 @@
     {
       "date_bin_start": "2018-09-16",
       "n_landings": 284,
-      "prop_landings_woman": 0.0618,
+      "prop_landings_woman": 0.062,
       "n_tracks": 142,
       "n_matched": 0,
       "prop_matched": 0,
@@ -43841,7 +43879,7 @@
     {
       "date_bin_start": "2018-09-09",
       "n_landings": 215,
-      "prop_landings_woman": 0.0693,
+      "prop_landings_woman": 0.0697,
       "n_tracks": 152,
       "n_matched": 0,
       "prop_matched": 0,
@@ -43853,7 +43891,7 @@
     {
       "date_bin_start": "2018-09-02",
       "n_landings": 210,
-      "prop_landings_woman": 0.1302,
+      "prop_landings_woman": 0.1309,
       "n_tracks": 159,
       "n_matched": 0,
       "prop_matched": 0,
@@ -43949,7 +43987,7 @@
     {
       "date_bin_start": "2018-07-08",
       "n_landings": 208,
-      "prop_landings_woman": 0.262,
+      "prop_landings_woman": 0.2634,
       "n_tracks": 103,
       "n_matched": 0,
       "prop_matched": 0,
@@ -44140,7 +44178,7 @@
     {
       "date_bin_start": "2018-03-18",
       "n_landings": 46,
-      "prop_landings_woman": 0.0217,
+      "prop_landings_woman": 0.0222,
       "n_tracks": 244,
       "n_matched": 0,
       "prop_matched": 0,
@@ -44264,7 +44302,7 @@
     {
       "date_bin_start": "2017-12-31",
       "n_landings": 77,
-      "prop_landings_woman": 0.026,
+      "prop_landings_woman": 0.0263,
       "n_tracks": 0,
       "n_matched": 0,
       "prop_matched": 0,
@@ -44276,20 +44314,20 @@
   "month": [
     {
       "date_bin_start": "2026-09-01",
-      "n_landings": 142,
-      "prop_landings_woman": 0.0935,
-      "fuel": 8.3226,
+      "n_landings": 166,
+      "prop_landings_woman": 0.092,
+      "fuel": 8.2727,
       "n_tracks": 4,
       "n_matched": 0,
       "prop_matched": 0,
-      "landing_revenue": 43.6849,
-      "landing_weight": 13.4883,
-      "n_landings_per_boat": 4.5128,
-      "revenue": 831532.3754,
-      "catch": 241381.4668,
-      "price_kg": 3.4712,
-      "recorded_revenue": 6683,
-      "recorded_catch": 1996.508,
+      "landing_revenue": 43.6655,
+      "landing_weight": 13.464,
+      "n_landings_per_boat": 5.2035,
+      "revenue": 958458.0371,
+      "catch": 277880.4442,
+      "price_kg": 3.5011,
+      "recorded_revenue": 7651,
+      "recorded_catch": 2252.5082,
       "n_boats": 3796,
       "month": "September 2026",
       "year": "2026"
@@ -44297,7 +44335,7 @@
     {
       "date_bin_start": "2026-08-01",
       "n_landings": 403,
-      "prop_landings_woman": 0.089,
+      "prop_landings_woman": 0.0904,
       "fuel": 8.7869,
       "n_tracks": 3,
       "n_matched": 0,
@@ -44305,8 +44343,8 @@
       "landing_revenue": 43.4781,
       "landing_weight": 11.1362,
       "n_landings_per_boat": 10.8359,
-      "revenue": 1981607.3913,
-      "catch": 452691.7438,
+      "revenue": 1981607.3637,
+      "catch": 452691.7348,
       "price_kg": 4.4634,
       "recorded_revenue": 19029,
       "recorded_catch": 5260.5013,
@@ -44325,8 +44363,8 @@
       "landing_revenue": 45.4029,
       "landing_weight": 10.4376,
       "n_landings_per_boat": 10.916,
-      "revenue": 2034632.9342,
-      "catch": 435159.8444,
+      "revenue": 2034633.1722,
+      "catch": 435159.9175,
       "price_kg": 4.3083,
       "recorded_revenue": 15541,
       "recorded_catch": 4105.7803,
@@ -44337,7 +44375,7 @@
     {
       "date_bin_start": "2026-06-01",
       "n_landings": 399,
-      "prop_landings_woman": 0.0521,
+      "prop_landings_woman": 0.0524,
       "fuel": 8.2905,
       "n_tracks": 1,
       "n_matched": 0,
@@ -44345,8 +44383,8 @@
       "landing_revenue": 50.82,
       "landing_weight": 13.6165,
       "n_landings_per_boat": 10.4668,
-      "revenue": 2138622.4847,
-      "catch": 560316.0933,
+      "revenue": 2138622.6785,
+      "catch": 560316.1488,
       "price_kg": 3.6135,
       "recorded_revenue": 19689,
       "recorded_catch": 5311.0413,
@@ -44357,7 +44395,7 @@
     {
       "date_bin_start": "2026-05-01",
       "n_landings": 503,
-      "prop_landings_woman": 0.0364,
+      "prop_landings_woman": 0.0371,
       "fuel": 7.4163,
       "n_tracks": 1,
       "n_matched": 0,
@@ -44365,8 +44403,8 @@
       "landing_revenue": 40.2773,
       "landing_weight": 11.5408,
       "n_landings_per_boat": 10.7035,
-      "revenue": 1839361.7491,
-      "catch": 506074.8198,
+      "revenue": 1839361.6504,
+      "catch": 506074.7909,
       "price_kg": 3.5143,
       "recorded_revenue": 21229,
       "recorded_catch": 6041.0526,
@@ -44377,7 +44415,7 @@
     {
       "date_bin_start": "2026-04-01",
       "n_landings": 595,
-      "prop_landings_woman": 0.0698,
+      "prop_landings_woman": 0.0699,
       "fuel": 6.3811,
       "n_tracks": 12,
       "n_matched": 0,
@@ -44385,8 +44423,8 @@
       "landing_revenue": 43.0917,
       "landing_weight": 11.6749,
       "n_landings_per_boat": 11.1862,
-      "revenue": 1956342.4265,
-      "catch": 496454.7762,
+      "revenue": 1956342.26,
+      "catch": 496454.7229,
       "price_kg": 3.6847,
       "recorded_revenue": 23770,
       "recorded_catch": 6617.1701,
@@ -44397,7 +44435,7 @@
     {
       "date_bin_start": "2026-03-01",
       "n_landings": 312,
-      "prop_landings_woman": 0.0623,
+      "prop_landings_woman": 0.0641,
       "fuel": 6.1429,
       "n_tracks": 13,
       "n_matched": 0,
@@ -44405,8 +44443,8 @@
       "landing_revenue": 59.2011,
       "landing_weight": 15.9192,
       "n_landings_per_boat": 12.19,
-      "revenue": 2926526.8099,
-      "catch": 686236.0313,
+      "revenue": 2926526.3624,
+      "catch": 686235.8878,
       "price_kg": 3.1193,
       "recorded_revenue": 17594,
       "recorded_catch": 4648.1345,
@@ -44423,9 +44461,9 @@
       "landing_revenue": 34.6701,
       "landing_weight": 11.1359,
       "n_landings_per_boat": 11.7634,
-      "revenue": 1698138.5026,
-      "catch": 554842.2225,
-      "price_kg": 3.3163,
+      "revenue": 1698143.8444,
+      "catch": 554845.27,
+      "price_kg": 3.3162,
       "n_boats": 3796,
       "month": "February 2026",
       "year": "2026"
@@ -44433,7 +44471,7 @@
     {
       "date_bin_start": "2026-01-01",
       "n_landings": 130,
-      "prop_landings_woman": 0.1797,
+      "prop_landings_woman": 0.1933,
       "fuel": 7.9268,
       "n_tracks": 27,
       "n_matched": 0,
@@ -44441,8 +44479,8 @@
       "landing_revenue": 35.5511,
       "landing_weight": 11.4215,
       "n_landings_per_boat": 11.8262,
-      "revenue": 1741413.2278,
-      "catch": 562212.4815,
+      "revenue": 1741412.5058,
+      "catch": 562212.2286,
       "price_kg": 3.4011,
       "recorded_revenue": 5955,
       "recorded_catch": 2093.1991,
@@ -44453,7 +44491,7 @@
     {
       "date_bin_start": "2025-12-01",
       "n_landings": 318,
-      "prop_landings_woman": 0.1051,
+      "prop_landings_woman": 0.1086,
       "fuel": 7.6405,
       "n_tracks": 23,
       "n_matched": 0,
@@ -44461,8 +44499,8 @@
       "landing_revenue": 49.2661,
       "landing_weight": 14.13,
       "n_landings_per_boat": 9.3573,
-      "revenue": 1938693.8055,
-      "catch": 570311.0535,
+      "revenue": 1938693.6304,
+      "catch": 570310.9977,
       "price_kg": 3.1095,
       "recorded_revenue": 17510,
       "recorded_catch": 5532.9357,
@@ -44473,7 +44511,7 @@
     {
       "date_bin_start": "2025-11-01",
       "n_landings": 765,
-      "prop_landings_woman": 0.0808,
+      "prop_landings_woman": 0.0833,
       "fuel": 6.3163,
       "n_tracks": 44,
       "n_matched": 0,
@@ -44481,8 +44519,8 @@
       "landing_revenue": 46.8228,
       "landing_weight": 13.0917,
       "n_landings_per_boat": 9.3576,
-      "revenue": 1699081.0415,
-      "catch": 469019.5574,
+      "revenue": 1699080.9079,
+      "catch": 469019.5149,
       "price_kg": 3.0796,
       "recorded_revenue": 36863,
       "recorded_catch": 11502.8599,
@@ -44493,7 +44531,7 @@
     {
       "date_bin_start": "2025-10-01",
       "n_landings": 907,
-      "prop_landings_woman": 0.0812,
+      "prop_landings_woman": 0.0819,
       "fuel": 5.6479,
       "n_tracks": 47,
       "n_matched": 0,
@@ -44501,8 +44539,8 @@
       "landing_revenue": 40.3666,
       "landing_weight": 10.9577,
       "n_landings_per_boat": 9.72,
-      "revenue": 1517268.0612,
-      "catch": 397328.3631,
+      "revenue": 1517267.8103,
+      "catch": 397328.2765,
       "price_kg": 3.6581,
       "recorded_revenue": 33268,
       "recorded_catch": 10219.487,
@@ -44513,7 +44551,7 @@
     {
       "date_bin_start": "2025-09-01",
       "n_landings": 809,
-      "prop_landings_woman": 0.0642,
+      "prop_landings_woman": 0.0648,
       "fuel": 6.267,
       "n_tracks": 18,
       "n_matched": 0,
@@ -44521,8 +44559,8 @@
       "landing_revenue": 45.1285,
       "landing_weight": 15.7109,
       "n_landings_per_boat": 11.0109,
-      "revenue": 2162180.275,
-      "catch": 726694.0234,
+      "revenue": 2162179.9498,
+      "catch": 726693.9167,
       "price_kg": 3.1918,
       "recorded_revenue": 33903,
       "recorded_catch": 11187.4927,
@@ -44541,8 +44579,8 @@
       "landing_revenue": 39.4258,
       "landing_weight": 11.1651,
       "n_landings_per_boat": 10.487,
-      "revenue": 1837359.8518,
-      "catch": 496415.4055,
+      "revenue": 1837359.8751,
+      "catch": 496415.4136,
       "price_kg": 3.3951,
       "recorded_revenue": 26329,
       "recorded_catch": 8194.5737,
@@ -44561,8 +44599,8 @@
       "landing_revenue": 38.6913,
       "landing_weight": 10.6178,
       "n_landings_per_boat": 10.0058,
-      "revenue": 1614668.0064,
-      "catch": 431750.1343,
+      "revenue": 1614668.1652,
+      "catch": 431750.1853,
       "price_kg": 3.4891,
       "recorded_revenue": 31493,
       "recorded_catch": 9131.639,
@@ -44580,9 +44618,9 @@
       "prop_matched": 0,
       "landing_revenue": 37.0494,
       "landing_weight": 9.9065,
-      "n_landings_per_boat": 10.9554,
-      "revenue": 1743535.3587,
-      "catch": 435168.2341,
+      "n_landings_per_boat": 10.9555,
+      "revenue": 1743535.5169,
+      "catch": 435168.2813,
       "price_kg": 3.5778,
       "recorded_revenue": 22918,
       "recorded_catch": 6615.6303,
@@ -44593,7 +44631,7 @@
     {
       "date_bin_start": "2025-05-01",
       "n_landings": 754,
-      "prop_landings_woman": 0.057,
+      "prop_landings_woman": 0.0573,
       "fuel": 6.8984,
       "n_tracks": 42,
       "n_matched": 0,
@@ -44601,8 +44639,8 @@
       "landing_revenue": 37.5214,
       "landing_weight": 10.213,
       "n_landings_per_boat": 10.8794,
-      "revenue": 1680121.485,
-      "catch": 407138.2293,
+      "revenue": 1680121.2773,
+      "catch": 407138.1585,
       "price_kg": 4.2065,
       "recorded_revenue": 27674,
       "recorded_catch": 8331.7857,
@@ -44613,7 +44651,7 @@
     {
       "date_bin_start": "2025-04-01",
       "n_landings": 823,
-      "prop_landings_woman": 0.0638,
+      "prop_landings_woman": 0.0642,
       "fuel": 5.3072,
       "n_tracks": 57,
       "n_matched": 0,
@@ -44621,8 +44659,8 @@
       "landing_revenue": 36.595,
       "landing_weight": 10.1222,
       "n_landings_per_boat": 11.1488,
-      "revenue": 1717208.0331,
-      "catch": 443964.0584,
+      "revenue": 1717208.0064,
+      "catch": 443964.0499,
       "price_kg": 3.7418,
       "recorded_revenue": 28416,
       "recorded_catch": 8215.6934,
@@ -44633,16 +44671,16 @@
     {
       "date_bin_start": "2025-03-01",
       "n_landings": 624,
-      "prop_landings_woman": 0.049,
+      "prop_landings_woman": 0.0503,
       "fuel": 5.8138,
       "n_tracks": 89,
       "n_matched": 0,
       "prop_matched": 0,
       "landing_revenue": 38.3123,
       "landing_weight": 11.4165,
-      "n_landings_per_boat": 10.9771,
-      "revenue": 1928804.0838,
-      "catch": 566205.4204,
+      "n_landings_per_boat": 10.977,
+      "revenue": 1928803.2612,
+      "catch": 566205.1453,
       "price_kg": 3.4565,
       "recorded_revenue": 25546,
       "recorded_catch": 7251.2918,
@@ -44653,7 +44691,7 @@
     {
       "date_bin_start": "2025-02-01",
       "n_landings": 193,
-      "prop_landings_woman": 0.0376,
+      "prop_landings_woman": 0.0385,
       "fuel": 6.6076,
       "n_tracks": 78,
       "n_matched": 0,
@@ -44661,8 +44699,8 @@
       "landing_revenue": 39.7481,
       "landing_weight": 12.419,
       "n_landings_per_boat": 10.3348,
-      "revenue": 1703661.6611,
-      "catch": 511662.9655,
+      "revenue": 1703661.3377,
+      "catch": 511662.8684,
       "price_kg": 3.559,
       "recorded_revenue": 6827,
       "recorded_catch": 1982.5013,
@@ -44673,7 +44711,7 @@
     {
       "date_bin_start": "2025-01-01",
       "n_landings": 519,
-      "prop_landings_woman": 0.0448,
+      "prop_landings_woman": 0.046,
       "fuel": 7.2509,
       "n_tracks": 115,
       "n_matched": 0,
@@ -44681,8 +44719,8 @@
       "landing_revenue": 44.8618,
       "landing_weight": 13.5035,
       "n_landings_per_boat": 11.2525,
-      "revenue": 2011391.705,
-      "catch": 730669.2285,
+      "revenue": 2011390.5849,
+      "catch": 730668.9,
       "price_kg": 3.4775,
       "recorded_revenue": 29706,
       "recorded_catch": 8582.7654,
@@ -44693,7 +44731,7 @@
     {
       "date_bin_start": "2024-12-01",
       "n_landings": 640,
-      "prop_landings_woman": 0.0737,
+      "prop_landings_woman": 0.0767,
       "fuel": 7.3856,
       "n_tracks": 122,
       "n_matched": 0,
@@ -44701,8 +44739,8 @@
       "landing_revenue": 47.637,
       "landing_weight": 14.0424,
       "n_landings_per_boat": 10.0496,
-      "revenue": 1769013.4658,
-      "catch": 523894.3281,
+      "revenue": 1769012.9315,
+      "catch": 523894.159,
       "price_kg": 3.5277,
       "recorded_revenue": 37961,
       "recorded_catch": 11833.8628,
@@ -44713,7 +44751,7 @@
     {
       "date_bin_start": "2024-11-01",
       "n_landings": 980,
-      "prop_landings_woman": 0.0405,
+      "prop_landings_woman": 0.0409,
       "fuel": 5.7032,
       "n_tracks": 96,
       "n_matched": 0,
@@ -44721,8 +44759,8 @@
       "landing_revenue": 45.9471,
       "landing_weight": 17.0898,
       "n_landings_per_boat": 10.3084,
-      "revenue": 1768435.8645,
-      "catch": 745682.3006,
+      "revenue": 1768435.8062,
+      "catch": 745682.2828,
       "price_kg": 3.2154,
       "recorded_revenue": 41643,
       "recorded_catch": 15096.8061,
@@ -44741,8 +44779,8 @@
       "landing_revenue": 42.4973,
       "landing_weight": 9.1234,
       "n_landings_per_boat": 11.2652,
-      "revenue": 1893316.6853,
-      "catch": 391366.9463,
+      "revenue": 1893316.8583,
+      "catch": 391367.0047,
       "price_kg": 4.3922,
       "recorded_revenue": 25750,
       "recorded_catch": 6356.2512,
@@ -44761,8 +44799,8 @@
       "landing_revenue": 43.8165,
       "landing_weight": 11.8475,
       "n_landings_per_boat": 11.1841,
-      "revenue": 1888072.7553,
-      "catch": 466049.4725,
+      "revenue": 1888072.9928,
+      "catch": 466049.5554,
       "price_kg": 3.2608,
       "recorded_revenue": 19642,
       "recorded_catch": 5178.8255,
@@ -44781,8 +44819,8 @@
       "landing_revenue": 41.4433,
       "landing_weight": 12.7448,
       "n_landings_per_boat": 9.5934,
-      "revenue": 1520044.4348,
-      "catch": 496322.4153,
+      "revenue": 1520044.6139,
+      "catch": 496322.4741,
       "price_kg": 3.3578,
       "recorded_revenue": 29012,
       "recorded_catch": 8037.726,
@@ -44801,8 +44839,8 @@
       "landing_revenue": 40.4042,
       "landing_weight": 12.121,
       "n_landings_per_boat": 10.4087,
-      "revenue": 1643646.1815,
-      "catch": 501109.345,
+      "revenue": 1643646.1248,
+      "catch": 501109.3249,
       "price_kg": 3.2247,
       "recorded_revenue": 26509,
       "recorded_catch": 8316.2197,
@@ -44821,8 +44859,8 @@
       "landing_revenue": 38.6699,
       "landing_weight": 13.1766,
       "n_landings_per_boat": 10.6379,
-      "revenue": 1602377.4205,
-      "catch": 611878.2637,
+      "revenue": 1602377.48,
+      "catch": 611878.2832,
       "price_kg": 3.4264,
       "recorded_revenue": 16485,
       "recorded_catch": 4579.1056,
@@ -44841,8 +44879,8 @@
       "landing_revenue": 43.9723,
       "landing_weight": 10.4349,
       "n_landings_per_boat": 10.0037,
-      "revenue": 1746498.5463,
-      "catch": 390651.9659,
+      "revenue": 1746498.819,
+      "catch": 390652.0508,
       "price_kg": 4.2944,
       "recorded_revenue": 32549,
       "recorded_catch": 8704.17,
@@ -44853,7 +44891,7 @@
     {
       "date_bin_start": "2024-04-01",
       "n_landings": 788,
-      "prop_landings_woman": 0.0661,
+      "prop_landings_woman": 0.0667,
       "fuel": 5.1768,
       "n_tracks": 129,
       "n_matched": 0,
@@ -44861,8 +44899,8 @@
       "landing_revenue": 43.4498,
       "landing_weight": 12.5756,
       "n_landings_per_boat": 13.2987,
-      "revenue": 2509101.9291,
-      "catch": 707461.013,
+      "revenue": 2509101.8232,
+      "catch": 707460.9801,
       "price_kg": 3.2473,
       "recorded_revenue": 29585,
       "recorded_catch": 8983.1772,
@@ -44873,7 +44911,7 @@
     {
       "date_bin_start": "2024-03-01",
       "n_landings": 65,
-      "prop_landings_woman": 0.0923,
+      "prop_landings_woman": 0.0968,
       "fuel": 7,
       "n_tracks": 150,
       "n_matched": 0,
@@ -44881,8 +44919,8 @@
       "landing_revenue": 37.6142,
       "landing_weight": 11.759,
       "n_landings_per_boat": 12.7864,
-      "revenue": 1969151.7544,
-      "catch": 600303.6989,
+      "revenue": 1969150.3713,
+      "catch": 600303.2624,
       "price_kg": 3.7845,
       "recorded_revenue": 4581,
       "recorded_catch": 1436.1233,
@@ -44893,16 +44931,16 @@
     {
       "date_bin_start": "2024-02-01",
       "n_landings": 199,
-      "prop_landings_woman": 0.1206,
+      "prop_landings_woman": 0.1311,
       "fuel": 7.2986,
       "n_tracks": 134,
       "n_matched": 0,
       "prop_matched": 0,
       "landing_revenue": 33.3705,
       "landing_weight": 10.2784,
-      "n_landings_per_boat": 10.3974,
-      "revenue": 1385230.8744,
-      "catch": 412801.96,
+      "n_landings_per_boat": 10.3973,
+      "revenue": 1385229.4755,
+      "catch": 412801.5263,
       "price_kg": 3.843,
       "recorded_revenue": 13890,
       "recorded_catch": 4297.565,
@@ -44921,8 +44959,8 @@
       "landing_revenue": 30.8532,
       "landing_weight": 9.8001,
       "n_landings_per_boat": 11.754,
-      "revenue": 1500390.0395,
-      "catch": 470621.1366,
+      "revenue": 1500389.9307,
+      "catch": 470621.0998,
       "price_kg": 3.3163,
       "recorded_revenue": 5222,
       "recorded_catch": 1727.1881,
@@ -44933,7 +44971,7 @@
     {
       "date_bin_start": "2023-12-01",
       "n_landings": 563,
-      "prop_landings_woman": 0.0734,
+      "prop_landings_woman": 0.0744,
       "fuel": 5.6859,
       "n_tracks": 131,
       "n_matched": 0,
@@ -45093,7 +45131,7 @@
     {
       "date_bin_start": "2023-04-01",
       "n_landings": 700,
-      "prop_landings_woman": 0.0389,
+      "prop_landings_woman": 0.0391,
       "fuel": 8.1796,
       "n_tracks": 207,
       "n_matched": 0,
@@ -45713,7 +45751,7 @@
     {
       "date_bin_start": "2020-09-01",
       "n_landings": 2122,
-      "prop_landings_woman": 0.0467,
+      "prop_landings_woman": 0.0469,
       "fuel": 4.5799,
       "n_tracks": 1510,
       "n_matched": 266,
@@ -45813,7 +45851,7 @@
     {
       "date_bin_start": "2020-04-01",
       "n_landings": 1063,
-      "prop_landings_woman": 0.0396,
+      "prop_landings_woman": 0.0397,
       "fuel": 3.8888,
       "n_tracks": 2614,
       "n_matched": 196,
@@ -45833,7 +45871,7 @@
     {
       "date_bin_start": "2020-03-01",
       "n_landings": 1282,
-      "prop_landings_woman": 0.0426,
+      "prop_landings_woman": 0.0427,
       "fuel": 3.3537,
       "n_tracks": 3802,
       "n_matched": 329,
@@ -45853,7 +45891,7 @@
     {
       "date_bin_start": "2020-02-01",
       "n_landings": 1134,
-      "prop_landings_woman": 0.0429,
+      "prop_landings_woman": 0.043,
       "fuel": 3.0951,
       "n_tracks": 3461,
       "n_matched": 354,
@@ -45873,7 +45911,7 @@
     {
       "date_bin_start": "2020-01-01",
       "n_landings": 1206,
-      "prop_landings_woman": 0.027,
+      "prop_landings_woman": 0.0271,
       "fuel": 3.2517,
       "n_tracks": 3154,
       "n_matched": 355,
@@ -45893,7 +45931,7 @@
     {
       "date_bin_start": "2019-12-01",
       "n_landings": 1223,
-      "prop_landings_woman": 0.0482,
+      "prop_landings_woman": 0.0483,
       "fuel": 3.2162,
       "n_tracks": 3429,
       "n_matched": 302,
@@ -45913,7 +45951,7 @@
     {
       "date_bin_start": "2019-11-01",
       "n_landings": 1116,
-      "prop_landings_woman": 0.047,
+      "prop_landings_woman": 0.0472,
       "fuel": 3.2125,
       "n_tracks": 3222,
       "n_matched": 266,
@@ -45933,7 +45971,7 @@
     {
       "date_bin_start": "2019-10-01",
       "n_landings": 1069,
-      "prop_landings_woman": 0.041,
+      "prop_landings_woman": 0.0412,
       "fuel": 3.0538,
       "n_tracks": 2806,
       "n_matched": 232,
@@ -45953,7 +45991,7 @@
     {
       "date_bin_start": "2019-09-01",
       "n_landings": 1042,
-      "prop_landings_woman": 0.0308,
+      "prop_landings_woman": 0.0312,
       "fuel": 2.4388,
       "n_tracks": 2041,
       "n_matched": 234,
@@ -45973,7 +46011,7 @@
     {
       "date_bin_start": "2019-08-01",
       "n_landings": 836,
-      "prop_landings_woman": 0.058,
+      "prop_landings_woman": 0.0583,
       "fuel": 2.5011,
       "n_tracks": 1792,
       "n_matched": 197,
@@ -45993,7 +46031,7 @@
     {
       "date_bin_start": "2019-07-01",
       "n_landings": 1274,
-      "prop_landings_woman": 0.0394,
+      "prop_landings_woman": 0.0395,
       "n_tracks": 2171,
       "n_matched": 386,
       "prop_matched": 0.1262,
@@ -46031,7 +46069,7 @@
     {
       "date_bin_start": "2019-05-01",
       "n_landings": 1253,
-      "prop_landings_woman": 0.0487,
+      "prop_landings_woman": 0.0488,
       "n_tracks": 2277,
       "n_matched": 423,
       "prop_matched": 0.1361,
@@ -46145,7 +46183,7 @@
     {
       "date_bin_start": "2018-11-01",
       "n_landings": 769,
-      "prop_landings_woman": 0.121,
+      "prop_landings_woman": 0.1212,
       "n_tracks": 1035,
       "n_matched": 0,
       "prop_matched": 0,
@@ -46183,7 +46221,7 @@
     {
       "date_bin_start": "2018-09-01",
       "n_landings": 950,
-      "prop_landings_woman": 0.0802,
+      "prop_landings_woman": 0.0805,
       "n_tracks": 588,
       "n_matched": 0,
       "prop_matched": 0,
@@ -46221,7 +46259,7 @@
     {
       "date_bin_start": "2018-07-01",
       "n_landings": 741,
-      "prop_landings_woman": 0.2292,
+      "prop_landings_woman": 0.2296,
       "n_tracks": 527,
       "n_matched": 0,
       "prop_matched": 0,
@@ -46264,10 +46302,10 @@
       "n_matched": 0,
       "prop_matched": 0,
       "landing_revenue": 22.6999,
-      "landing_weight": 6.724,
+      "landing_weight": 6.7239,
       "n_landings_per_boat": 10.1715,
       "revenue": 835858.2236,
-      "catch": 200078.2807,
+      "catch": 200077.1853,
       "price_kg": 4.0679,
       "recorded_revenue": 388,
       "recorded_catch": 36.1256,
@@ -46283,10 +46321,10 @@
       "n_matched": 0,
       "prop_matched": 0,
       "landing_revenue": 23.9536,
-      "landing_weight": 7.5376,
+      "landing_weight": 7.5377,
       "n_landings_per_boat": 11.121,
       "revenue": 1033266.6016,
-      "catch": 283707.3326,
+      "catch": 283712.8952,
       "price_kg": 3.3374,
       "recorded_revenue": 1804,
       "recorded_catch": 206.1793,
@@ -46297,15 +46335,15 @@
     {
       "date_bin_start": "2018-03-01",
       "n_landings": 308,
-      "prop_landings_woman": 0.0629,
+      "prop_landings_woman": 0.0631,
       "n_tracks": 1139,
       "n_matched": 0,
       "prop_matched": 0,
-      "landing_revenue": 24.4669,
-      "landing_weight": 7.0025,
+      "landing_revenue": 24.4668,
+      "landing_weight": 7.0026,
       "n_landings_per_boat": 12.5271,
-      "revenue": 1222438.8354,
-      "catch": 326759.7121,
+      "revenue": 1222432.8506,
+      "catch": 326767.3246,
       "price_kg": 4.391,
       "recorded_revenue": 206,
       "recorded_catch": 101.8744,
@@ -46321,10 +46359,10 @@
       "n_matched": 0,
       "prop_matched": 0,
       "landing_revenue": 24.3174,
-      "landing_weight": 6.8577,
+      "landing_weight": 6.8578,
       "n_landings_per_boat": 11.0407,
-      "revenue": 1054715.478,
-      "catch": 286267.0791,
+      "revenue": 1054722.4248,
+      "catch": 286272.8593,
       "price_kg": 4.6973,
       "recorded_catch": 170.8762,
       "n_boats": 3796,
@@ -46334,15 +46372,15 @@
     {
       "date_bin_start": "2018-01-01",
       "n_landings": 328,
-      "prop_landings_woman": 0.0152,
+      "prop_landings_woman": 0.0153,
       "n_tracks": 0,
       "n_matched": 0,
       "prop_matched": 0,
-      "landing_revenue": 29.6767,
-      "landing_weight": 9.2314,
-      "n_landings_per_boat": 11.8163,
-      "revenue": 1265940.2594,
-      "catch": 374426.9597,
+      "landing_revenue": 29.6768,
+      "landing_weight": 9.2315,
+      "n_landings_per_boat": 11.8164,
+      "revenue": 1265953.9203,
+      "catch": 374435.8305,
       "price_kg": 3.6164,
       "recorded_catch": 123.8986,
       "n_boats": 3796,
@@ -46353,27 +46391,27 @@
   "year": [
     {
       "date_bin_start": "2026-01-01",
-      "n_landings": 2852,
-      "prop_landings_woman": 0.0709,
+      "n_landings": 2876,
+      "prop_landings_woman": 0.0719,
       "fuel": 7.4989,
       "n_tracks": 88,
       "n_matched": 0,
       "prop_matched": 0,
-      "landing_revenue": 44.0197,
-      "landing_weight": 12.2634,
-      "n_landings_per_boat": 94.4008,
-      "revenue": 17148177.9015,
-      "catch": 4495369.4795,
-      "price_kg": 3.6547,
-      "recorded_revenue": 129490,
-      "recorded_catch": 36073.3871,
+      "landing_revenue": 44.0175,
+      "landing_weight": 12.2607,
+      "n_landings_per_boat": 95.0915,
+      "revenue": 17275107.8746,
+      "catch": 4531871.1455,
+      "price_kg": 3.658,
+      "recorded_revenue": 130458,
+      "recorded_catch": 36329.3874,
       "n_boats": 3796,
       "year": "2026"
     },
     {
       "date_bin_start": "2025-01-01",
       "n_landings": 8066,
-      "prop_landings_woman": 0.0606,
+      "prop_landings_woman": 0.0613,
       "fuel": 6.5138,
       "n_tracks": 593,
       "n_matched": 0,
@@ -46381,8 +46419,8 @@
       "landing_revenue": 41.1491,
       "landing_weight": 11.9378,
       "n_landings_per_boat": 125.4866,
-      "revenue": 21553973.3681,
-      "catch": 6186326.6734,
+      "revenue": 21553970.3232,
+      "catch": 6186325.7082,
       "price_kg": 3.4952,
       "recorded_revenue": 320453,
       "recorded_catch": 96748.6558,
@@ -46392,7 +46430,7 @@
     {
       "date_bin_start": "2024-01-01",
       "n_landings": 7506,
-      "prop_landings_woman": 0.0613,
+      "prop_landings_woman": 0.0619,
       "fuel": 5.5171,
       "n_tracks": 1288,
       "n_matched": 0,
@@ -46400,8 +46438,8 @@
       "landing_revenue": 40.8063,
       "landing_weight": 12.0828,
       "n_landings_per_boat": 131.6874,
-      "revenue": 21195279.9516,
-      "catch": 6318142.8461,
+      "revenue": 21195277.2272,
+      "catch": 6318142.0035,
       "price_kg": 3.5742,
       "recorded_revenue": 282829,
       "recorded_catch": 84547.0203,
@@ -46411,7 +46449,7 @@
     {
       "date_bin_start": "2023-01-01",
       "n_landings": 7833,
-      "prop_landings_woman": 0.0699,
+      "prop_landings_woman": 0.07,
       "fuel": 7.0979,
       "n_tracks": 2001,
       "n_matched": 10,
@@ -46487,7 +46525,7 @@
     {
       "date_bin_start": "2019-01-01",
       "n_landings": 10123,
-      "prop_landings_woman": 0.0487,
+      "prop_landings_woman": 0.0489,
       "fuel": 2.94,
       "n_tracks": 27310,
       "n_matched": 2298,
@@ -46506,15 +46544,15 @@
     {
       "date_bin_start": "2018-01-01",
       "n_landings": 6827,
-      "prop_landings_woman": 0.1149,
+      "prop_landings_woman": 0.1151,
       "n_tracks": 8712,
       "n_matched": 0,
       "prop_matched": 0,
       "landing_revenue": 25.6743,
       "landing_weight": 9.0475,
-      "n_landings_per_boat": 134.3169,
-      "revenue": 13610022.5997,
-      "catch": 4761491.1074,
+      "n_landings_per_boat": 134.317,
+      "revenue": 13610037.2227,
+      "catch": 4761517.8381,
       "price_kg": 3.1987,
       "recorded_revenue": 78864,
       "recorded_catch": 24402.7141,
