@@ -1,80 +1,68 @@
-# Web portal: Peskas - Timor (v2)
+# Peskas Timor-Leste
 
-**Authoritative version**: `peskas.timor.portal.v2` (replaces the original R/Shiny portal)
+The public website for data on Timor-Leste's small-scale fisheries: catch, revenue, prices, the species caught and the nutrition they provide.
 
-A web portal displaying data and insights from small fisheries in East Timor. This project provides a comprehensive dashboard for monitoring fishery indicators, catch trends, revenue, and vessel activity across the country.
+[timor.peskas.org](https://timor.peskas.org)
 
-## About the Project
+![Peskas Timor-Leste home page](.github/images/screenshot.png)
 
-Peskas - Timor is part of a larger ecosystem designed to process and visualize data from small-scale fisheries. The portal aims to provide stakeholders with real-time insights into:
-- **Catch Trends**: Monthly aggregated catch data and composition.
-- **Revenue & Economy**: Estimated revenue, revenue per trip, and price per kg.
-- **Vessel Activity**: Monitoring of fishing tracks and active boat counts.
-- **Nutritional Information**: Nutrient RDI contributions from different fish species.
+## What it is
 
-The content of the dashboard is automatically updated through GitHub Actions, which syncs processed data from the Google Cloud Storage bucket managed by the complementary data processing pipeline.
+Peskas Timor-Leste shows national and municipal figures on small-scale fisheries for fisheries managers, researchers, partners and the public. It is open to everyone without a login, and is available in English, Tetum and Portuguese.
 
-## Key Features
+## What you can do
 
-- **Multilingual Support**: Full support for **English**, **Tetum**, and **Portuguese**.
-- **Interactive Data Visualization**: 
-  - Time series analysis of catch and revenue.
-  - Habitat and taxa composition via Treemaps and Bar charts.
-  - High-performance mapping of vessel tracks using DeckGL and MapLibre.
-- **Performance Optimized**: Built with modern web standards for fast load times and smooth interactions on both desktop and mobile.
-- **Automated Data Sync**: Daily synchronization with the data pipeline ensures the portal always shows the latest available records.
+- Follow catch and revenue month by month, for the whole country or one municipality, and compare habitats and fishing gears.
+- Check fish prices per kilogram over time and by municipality, and how fishers keep their catch on board (Market page).
+- See which fish groups make up the catch in each municipality (Composition page).
+- See how many people's recommended daily intake of protein, iron, zinc, vitamin A, omega-3, vitamin D and calcium the catch could meet (Nutrients page).
+- See on a heatmap where tracked boats fish, filtered by gear and year.
+- Read how the data are collected and processed (About page), and [download the full data report](https://storage.googleapis.com/public-timor/data_report.html).
 
-## Tech Stack
+## Where the data comes from
 
-This version (v2) is a complete rewrite of the original R/Shiny portal, moving to a modern JavaScript/TypeScript architecture for better scalability and performance:
+- **Landing surveys.** Enumerators (trained data collectors) record landings at landing sites around the country using KoboToolbox, a free mobile survey app. A landing is a boat's return to shore with its catch.
+- **GPS trackers (Pelagic Data Systems).** Small solar-powered devices on a sample of boats record where they travel. They feed the fishing heatmap. The gear shown on the heatmap is predicted by a model from how each boat moves, not recorded directly.
 
-- **Frontend**: React 18 with TypeScript
-- **Build Tool**: Vite
-- **Visualizations**: ApexCharts (Charts) and DeckGL (Maps)
-- **Styling**: Tabler UI Framework
-- **Deployment**: Vercel
+The Peskas Timor-Leste data pipeline checks these records and turns them into monthly summaries. When a municipality has too little data in a month, a statistical model fills the gap; when you choose a municipality, the trend charts mark those months as "Estimated". This website copies the latest summaries every day.
 
-## Development
+## Who runs it
 
-### Getting Started
+Peskas Timor-Leste is a partnership, running since 2016, between [WorldFish](https://worldfishcenter.org) and the Timor-Leste Ministry of Agriculture and Fisheries' Department of Fisheries, Aquaculture and Marine Resources. Since 2021 it has been funded by the Government of Timor-Leste, with technical support from WorldFish and Pelagic Data Systems. For questions, write to <peskas.platform@gmail.com>.
 
-1.  **Clone the repository**:
-    ```bash
-    git clone https://github.com/WorldFishCenter/peskas.timor.portal.v2
-    cd peskas.timor.portal.v2
-    ```
+## Part of Peskas
 
-2.  **Install dependencies**:
-    ```bash
-    npm install
-    ```
+Peskas is WorldFish's open-source platform for monitoring small-scale fisheries (https://peskas.org).
 
-3.  **Start development server**:
-    ```bash
-    npm run dev
-    ```
+- [Peskas Zanzibar](https://zanzibar.peskas.org), [Peskas Kenya](https://peskas-dashboard-kenya.vercel.app/en), [Peskas Mozambique](https://peskas-dashboard-mozambique.vercel.app): country dashboards
+- [Peskas Coasts](https://coasts.peskas.org): regional comparison across countries
+- [Peskas Tracks](https://tracks.peskas.org): app for fishers to see their trips and log catches
+- [Peskas Kenya BMU dashboard](https://digitalfisheries.kenya.peskas.org): dashboard for Beach Management Units in Kenya
+- [Peskas Management Platform](https://validation.peskas.org): data review and download for survey teams
+- [Peskas Fishery Data API](https://api.peskas.org/docs): programmatic access to landing data
+- Data pipelines: [Kenya](https://github.com/WorldFishCenter/peskas.kenya.data.pipeline), [Zanzibar](https://github.com/WorldFishCenter/peskas.zanzibar.data.pipeline), [Mozambique](https://github.com/WorldFishCenter/peskas.mozambique.data.pipeline), [Timor-Leste](https://github.com/WorldFishCenter/peskas.timor.data.pipeline), [Coasts](https://github.com/WorldFishCenter/peskas.coasts)
 
-### Data Fetching
+## For developers
 
-To fetch the latest data from Google Cloud Storage locally, you will need to set up a `.env` file with your GCP credentials (see `.env.example`):
+A React 19 + TypeScript single-page app built with Vite and deployed on Vercel. It replaces the earlier R/Shiny portal. There is no backend: the app loads static JSON files from `public/data/`.
+
+**Requirements:** Node.js 20.19 or later.
+
+**Setup**
 
 ```bash
-npm run fetch-data
+npm install
+npm run dev
 ```
 
-## Deployment
+**Data.** `npm run fetch-data` (`scripts/fetchData.js`) downloads the newest `portal-*` files from the Google Cloud Storage bucket `public-timor`, written by the [Timor-Leste data pipeline](https://github.com/WorldFishCenter/peskas.timor.data.pipeline), into `public/data/`. It reads a service account key from `GCP_SERVICE_ACCOUNT_KEY` (see `.env.example`), or else `GOOGLE_APPLICATION_CREDENTIALS` or gcloud default credentials. Fix data problems in the pipeline, not in `public/data/`.
 
-The portal is optimized for deployment on **Vercel**. It includes a `vercel.json` configuration for:
-- SPA routing and redirects.
-- Aggressive caching for static assets.
-- Enhanced security headers.
+**Main commands:** `npm run dev`, `npm run build`, `npm run lint`, `npm run preview`, `npm run fetch-data`.
 
-To deploy, simply push to the `main` or `master` branch.
+**Production.** Vercel deploys `main` to production. `.github/workflows/sync-data.yml` runs the data fetch daily at 00:00 UTC, on every push to `main` and on demand, and commits any changed files in `public/data/`; each such commit redeploys the site. `vercel.json` sends every path to `index.html` and sets cache and security headers.
 
-## Code of Conduct
+**Releases:** there is no NEWS.md or release workflow yet.
 
-Please note that the Peskas Timor Portal project is released with a Contributor Code of Conduct. By contributing to this project, you agree to abide by its terms.
+**Tests:** no automated tests yet.
 
-## License
-
-This project is licensed under the MIT License - see the `LICENSE.md` file for details.
+**AI-assisted work:** see `CLAUDE.md`.
