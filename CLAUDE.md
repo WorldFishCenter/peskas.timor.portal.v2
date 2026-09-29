@@ -1,7 +1,7 @@
 # peskas.timor.portal.v2
 
 Public Timor-Leste fisheries portal (React + Vite + TypeScript, Tabler UI via `@tabler/core`, deployed on Vercel). It replaces the Shiny `peskas.timor.portal` and shows the aggregates that `peskas.timor.data.pipeline` publishes to the `public-timor` GCS bucket.
-Ecosystem context (other repos, data flow, cross-repo contracts): see PESKAS.md, loaded via CLAUDE.local.md.
+Ecosystem context (other repos, data flow, cross-repo contracts): loaded by the `peskas` Claude Code plugin (repo `peskas-context`).
 
 ## Commands
 
