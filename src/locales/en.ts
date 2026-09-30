@@ -260,7 +260,7 @@ export const en = {
     map_note: 'The map displays only the fishing trips for which we have geolocation data, these represent about 5% of the total fishing trips recorded.',
   },
   about: {
-    content: 'PESKAS Timor-Leste — data and methods overview.',
+    content: 'Peskas Timor-Leste — data and methods overview.',
     pretitle: 'Information',
     title: 'About',
     contents_title: 'Contents',

@@ -207,59 +207,12 @@ export interface SummaryData {
   map_center?: [number, number][];
 }
 
-// ============ indicators_grid.json ============
-export interface IndicatorsGridRecord {
-  cell: string;
-  month_date: string;
-  gear_type: string;
-  region: string;
-  Lat: number;
-  Lng: number;
-  region_cpe: number;
-  region_rpe: number;
-  length: number;
-  CPE: number;
-  RPE: number;
-  CPE_log: number;
-  RPE_log: number;
-  catch_taxon: string;
-  fish_group: string;
-}
-
 // ============ predicted_tracks.json ============
 export interface PredictedTrackRecord {
   year: number;
   lat: number;
   lon: number;
   Gear: string;
-}
-
-// ============ taxa_names.json ============
-export interface TaxaName {
-  grouped_taxa: string;
-  grouped_taxa_names: string;
-}
-
-// ============ label_groups_list.json ============
-export interface LabelGroupsList {
-  [group: string]: string[];
-}
-
-// ============ var_dictionary.json ============
-export interface VarDefinition {
-  short_name: string;
-  long_name?: string;
-  description?: string;
-  format: string;
-  methods?: string;
-  problems?: string;
-  quality?: 'low' | 'medium' | 'high';
-  multiplier?: number;
-  suffix?: string;
-}
-
-export interface VarDictionary {
-  [varName: string]: VarDefinition;
 }
 
 // ============ pars.json ============
@@ -477,10 +430,7 @@ export type DataFileName =
   | 'municipal_taxa'
   | 'nutrients_aggregated'
   | 'summary_data'
-  | 'indicators_grid'
   | 'predicted_tracks'
-  | 'label_groups_list'
-  | 'var_dictionary'
   | 'data_last_updated';
 
 export interface DataTypeMap {
@@ -490,9 +440,6 @@ export interface DataTypeMap {
   municipal_taxa: MunicipalTaxaRecord[];
   nutrients_aggregated: NutrientsAggregatedData;
   summary_data: SummaryData;
-  indicators_grid: IndicatorsGridRecord[];
   predicted_tracks: PredictedTrackRecord[];
-  label_groups_list: LabelGroupsList;
-  var_dictionary: VarDictionary;
   data_last_updated: DataLastUpdated;
 }

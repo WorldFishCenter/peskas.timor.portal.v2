@@ -262,7 +262,7 @@ export const tet: typeof en = {
     map_note: 'Mapa hatudu de\'it viajen peska ne\'ebé iha dadus jeolokalizasaun, sira reprezenta aproximadamente 5% husi total viajen peska ne\'ebé registadu.',
   },
   about: {
-    content: 'PESKAS Timor-Leste — dadus no metodu.',
+    content: 'Peskas Timor-Leste — dadus no metodu.',
     pretitle: 'Informasaun',
     title: 'Konaba',
     contents_title: 'Kontiudu',

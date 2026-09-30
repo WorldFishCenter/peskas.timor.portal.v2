@@ -262,7 +262,7 @@ export const pt: typeof en = {
     map_note: 'O mapa exibe apenas as viagens de pesca para as quais temos dados de geolocalização; elas representam cerca de 5% do total de viagens registradas.',
   },
   about: {
-    content: 'PESKAS Timor-Leste — panorama de dados e métodos.',
+    content: 'Peskas Timor-Leste — panorama de dados e métodos.',
     pretitle: 'Informações',
     title: 'Sobre',
     contents_title: 'Conteúdos',
