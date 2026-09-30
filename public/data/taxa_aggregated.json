@@ -8,7 +8,7 @@
       "landing_weight": 0.0065,
       "n_landings_per_boat": 10.3766,
       "revenue": 0,
-      "catch": 858.2275,
+      "catch": 858.2682,
       "n_boats": 3796,
       "month": "January 2018",
       "year": "2018"
@@ -30,7 +30,7 @@
       "landing_weight": 0.1542,
       "n_landings_per_boat": 12.7423,
       "revenue": 0,
-      "catch": 19717.045,
+      "catch": 19718.5288,
       "n_boats": 3796,
       "month": "January 2018",
       "year": "2018"
@@ -63,7 +63,7 @@
       "landing_weight": 0.2247,
       "n_landings_per_boat": 12.2301,
       "revenue": 0,
-      "catch": 16207.7831,
+      "catch": 16208.2531,
       "n_boats": 3796,
       "month": "January 2018",
       "year": "2018"
@@ -96,7 +96,7 @@
       "landing_weight": 0.6127,
       "n_landings_per_boat": 11.7672,
       "revenue": 0,
-      "catch": 56432.1517,
+      "catch": 56434.5355,
       "n_boats": 3796,
       "month": "January 2018",
       "year": "2018"
@@ -129,7 +129,7 @@
       "landing_weight": 0.8313,
       "n_landings_per_boat": 11.7672,
       "revenue": 0,
-      "catch": 19949.5164,
+      "catch": 19949.5765,
       "n_boats": 3796,
       "month": "January 2018",
       "year": "2018"
@@ -151,7 +151,7 @@
       "landing_weight": 0.0084,
       "n_landings_per_boat": 10.2392,
       "revenue": 0,
-      "catch": 7781.6371,
+      "catch": 7782.0109,
       "n_boats": 3796,
       "month": "February 2018",
       "year": "2018"
@@ -162,7 +162,7 @@
       "landing_weight": 1.5654,
       "n_landings_per_boat": 11.3851,
       "revenue": 0,
-      "catch": 33676.7228,
+      "catch": 33676.7353,
       "n_boats": 3796,
       "month": "February 2018",
       "year": "2018"
@@ -173,7 +173,7 @@
       "landing_weight": 0.1232,
       "n_landings_per_boat": 12.4626,
       "revenue": 0,
-      "catch": 8514.8565,
+      "catch": 8515.1601,
       "n_boats": 3796,
       "month": "February 2018",
       "year": "2018"
@@ -193,7 +193,7 @@
       "date_bin_start": "2018-02-01",
       "grouped_taxa": "FLY",
       "landing_weight": 0.3138,
-      "n_landings_per_boat": 12.0601,
+      "n_landings_per_boat": 12.0602,
       "revenue": 0,
       "catch": 35735.9838,
       "n_boats": 3796,
@@ -204,7 +204,7 @@
       "date_bin_start": "2018-02-01",
       "grouped_taxa": "GZP",
       "landing_weight": 0.3244,
-      "n_landings_per_boat": 12.0601,
+      "n_landings_per_boat": 12.0602,
       "revenue": 0,
       "catch": 12031.1341,
       "n_boats": 3796,
@@ -217,7 +217,7 @@
       "landing_weight": 0.0919,
       "n_landings_per_boat": 10.3765,
       "revenue": 0,
-      "catch": 1511.6034,
+      "catch": 1511.6082,
       "n_boats": 3796,
       "month": "February 2018",
       "year": "2018"
@@ -239,7 +239,7 @@
       "landing_weight": 0.8582,
       "n_landings_per_boat": 11.3851,
       "revenue": 0,
-      "catch": 56519.7188,
+      "catch": 56521.3429,
       "n_boats": 3796,
       "month": "February 2018",
       "year": "2018"
@@ -250,7 +250,7 @@
       "landing_weight": 0.1557,
       "n_landings_per_boat": 11.6896,
       "revenue": 0,
-      "catch": 5489.298,
+      "catch": 5489.3452,
       "n_boats": 3796,
       "month": "February 2018",
       "year": "2018"
@@ -261,7 +261,7 @@
       "landing_weight": 0.6457,
       "n_landings_per_boat": 11.3851,
       "revenue": 0,
-      "catch": 22309.016,
+      "catch": 22309.0639,
       "n_boats": 3796,
       "month": "February 2018",
       "year": "2018"
@@ -272,7 +272,7 @@
       "landing_weight": 0.7826,
       "n_landings_per_boat": 11.3851,
       "revenue": 0,
-      "catch": 13764.1133,
+      "catch": 13764.1903,
       "n_boats": 3796,
       "month": "February 2018",
       "year": "2018"
@@ -294,7 +294,7 @@
       "landing_weight": 0.0061,
       "n_landings_per_boat": 12.0149,
       "revenue": 0,
-      "catch": 371.0116,
+      "catch": 371.0122,
       "n_boats": 3796,
       "month": "March 2018",
       "year": "2018"
@@ -316,7 +316,7 @@
       "landing_weight": 0.0757,
       "n_landings_per_boat": 13.9069,
       "revenue": 0,
-      "catch": 4867.2271,
+      "catch": 4867.341,
       "n_boats": 3796,
       "month": "March 2018",
       "year": "2018"
@@ -382,7 +382,7 @@
       "landing_weight": 0.7824,
       "n_landings_per_boat": 12.786,
       "revenue": 0,
-      "catch": 80396.6039,
+      "catch": 80400.9088,
       "n_boats": 3796,
       "month": "March 2018",
       "year": "2018"
@@ -404,7 +404,7 @@
       "landing_weight": 0.6226,
       "n_landings_per_boat": 12.786,
       "revenue": 0,
-      "catch": 40531.7221,
+      "catch": 40533.1956,
       "n_boats": 3796,
       "month": "March 2018",
       "year": "2018"
@@ -437,7 +437,7 @@
       "landing_weight": 0.0079,
       "n_landings_per_boat": 10.7495,
       "revenue": 0,
-      "catch": 559.1174,
+      "catch": 559.1159,
       "n_boats": 3796,
       "month": "April 2018",
       "year": "2018"
@@ -459,7 +459,7 @@
       "landing_weight": 0.0901,
       "n_landings_per_boat": 12.0537,
       "revenue": 0,
-      "catch": 5416.3929,
+      "catch": 5416.0147,
       "n_boats": 3796,
       "month": "April 2018",
       "year": "2018"
@@ -525,7 +525,7 @@
       "landing_weight": 0.7502,
       "n_landings_per_boat": 11.0204,
       "revenue": 0,
-      "catch": 48487.1933,
+      "catch": 48485.36,
       "n_boats": 3796,
       "month": "April 2018",
       "year": "2018"
@@ -547,7 +547,7 @@
       "landing_weight": 0.8356,
       "n_landings_per_boat": 11.0204,
       "revenue": 0,
-      "catch": 30362.2921,
+      "catch": 30362.2743,
       "n_boats": 3796,
       "month": "April 2018",
       "year": "2018"
@@ -602,7 +602,7 @@
       "landing_weight": 0.1007,
       "n_landings_per_boat": 10.7395,
       "revenue": 0,
-      "catch": 10572.2267,
+      "catch": 10570.8026,
       "n_boats": 3796,
       "month": "May 2018",
       "year": "2018"
@@ -668,7 +668,7 @@
       "landing_weight": 0.6133,
       "n_landings_per_boat": 9.7768,
       "revenue": 0,
-      "catch": 45739.6978,
+      "catch": 45738.1304,
       "n_boats": 3796,
       "month": "May 2018",
       "year": "2018"
@@ -679,7 +679,7 @@
       "landing_weight": 0.2045,
       "n_landings_per_boat": 10.159,
       "revenue": 0,
-      "catch": 6139.3431,
+      "catch": 6139.3289,
       "n_boats": 3796,
       "month": "May 2018",
       "year": "2018"
@@ -690,7 +690,7 @@
       "landing_weight": 0.9163,
       "n_landings_per_boat": 9.7768,
       "revenue": 0,
-      "catch": 16557.837,
+      "catch": 16557.505,
       "n_boats": 3796,
       "month": "May 2018",
       "year": "2018"
@@ -701,7 +701,7 @@
       "landing_weight": 0.5755,
       "n_landings_per_boat": 9.7768,
       "revenue": 0,
-      "catch": 6473.01,
+      "catch": 6473.0069,
       "n_boats": 3796,
       "month": "May 2018",
       "year": "2018"
@@ -10302,9 +10302,9 @@
       "date_bin_start": "2024-01-01",
       "grouped_taxa": "BEN",
       "landing_weight": 0.107,
-      "n_landings_per_boat": 10.3649,
+      "n_landings_per_boat": 10.365,
       "revenue": 0,
-      "catch": 3211.1374,
+      "catch": 3211.1472,
       "n_boats": 3796,
       "month": "January 2024",
       "year": "2024"
@@ -10315,7 +10315,7 @@
       "landing_weight": 1.345,
       "n_landings_per_boat": 11.588,
       "revenue": 0,
-      "catch": 46027.881,
+      "catch": 46027.883,
       "n_boats": 3796,
       "month": "January 2024",
       "year": "2024"
@@ -10324,9 +10324,9 @@
       "date_bin_start": "2024-01-01",
       "grouped_taxa": "CJX",
       "landing_weight": 0.4828,
-      "n_landings_per_boat": 12.4219,
+      "n_landings_per_boat": 12.422,
       "revenue": 0,
-      "catch": 14638.5293,
+      "catch": 14638.5937,
       "n_boats": 3796,
       "month": "January 2024",
       "year": "2024"
@@ -10359,7 +10359,7 @@
       "landing_weight": 1.892,
       "n_landings_per_boat": 12.1137,
       "revenue": 0,
-      "catch": 69859.3403,
+      "catch": 69859.3429,
       "n_boats": 3796,
       "month": "January 2024",
       "year": "2024"
@@ -10370,7 +10370,7 @@
       "landing_weight": 0.2544,
       "n_landings_per_boat": 10.6203,
       "revenue": 0,
-      "catch": 4349.9148,
+      "catch": 4349.9217,
       "n_boats": 3796,
       "month": "January 2024",
       "year": "2024"
@@ -10392,7 +10392,7 @@
       "landing_weight": 1.3776,
       "n_landings_per_boat": 11.588,
       "revenue": 0,
-      "catch": 45872.059,
+      "catch": 45872.2016,
       "n_boats": 3796,
       "month": "January 2024",
       "year": "2024"
@@ -10414,7 +10414,7 @@
       "landing_weight": 0.792,
       "n_landings_per_boat": 11.588,
       "revenue": 0,
-      "catch": 42723.4741,
+      "catch": 42723.4788,
       "n_boats": 3796,
       "month": "January 2024",
       "year": "2024"
@@ -10425,7 +10425,7 @@
       "landing_weight": 1.0779,
       "n_landings_per_boat": 11.588,
       "revenue": 0,
-      "catch": 24529.0239,
+      "catch": 24529.0247,
       "n_boats": 3796,
       "month": "January 2024",
       "year": "2024"
@@ -10436,7 +10436,7 @@
       "landing_weight": 1.4,
       "n_landings_per_boat": 11.588,
       "revenue": 0,
-      "catch": 67863.7154,
+      "catch": 67863.7271,
       "n_boats": 3796,
       "month": "January 2024",
       "year": "2024"
@@ -10447,7 +10447,7 @@
       "landing_weight": 0.9487,
       "n_landings_per_boat": 9.1306,
       "revenue": 0,
-      "catch": 32791.7332,
+      "catch": 32791.4695,
       "n_boats": 3796,
       "month": "February 2024",
       "year": "2024"
@@ -10458,7 +10458,7 @@
       "landing_weight": 1.1386,
       "n_landings_per_boat": 10.415,
       "revenue": 0,
-      "catch": 26684.5821,
+      "catch": 26684.581,
       "n_boats": 3796,
       "month": "February 2024",
       "year": "2024"
@@ -10469,7 +10469,7 @@
       "landing_weight": 0.4621,
       "n_landings_per_boat": 11.2992,
       "revenue": 0,
-      "catch": 13728.7022,
+      "catch": 13728.6243,
       "n_boats": 3796,
       "month": "February 2024",
       "year": "2024"
@@ -10502,7 +10502,7 @@
       "landing_weight": 1.1439,
       "n_landings_per_boat": 10.9325,
       "revenue": 0,
-      "catch": 43984.5259,
+      "catch": 43984.4244,
       "n_boats": 3796,
       "month": "February 2024",
       "year": "2024"
@@ -10513,7 +10513,7 @@
       "landing_weight": 0.4161,
       "n_landings_per_boat": 8.7785,
       "revenue": 0,
-      "catch": 8909.0858,
+      "catch": 8909.04,
       "n_boats": 3796,
       "month": "February 2024",
       "year": "2024"
@@ -10535,7 +10535,7 @@
       "landing_weight": 1.1862,
       "n_landings_per_boat": 10.415,
       "revenue": 0,
-      "catch": 37681.6114,
+      "catch": 37681.5132,
       "n_boats": 3796,
       "month": "February 2024",
       "year": "2024"
@@ -10568,7 +10568,7 @@
       "landing_weight": 0.9225,
       "n_landings_per_boat": 10.415,
       "revenue": 0,
-      "catch": 20450.7253,
+      "catch": 20450.724,
       "n_boats": 3796,
       "month": "February 2024",
       "year": "2024"
@@ -10579,7 +10579,7 @@
       "landing_weight": 0.8716,
       "n_landings_per_boat": 10.415,
       "revenue": 0,
-      "catch": 38891.9417,
+      "catch": 38891.9307,
       "n_boats": 3796,
       "month": "February 2024",
       "year": "2024"
@@ -10590,7 +10590,7 @@
       "landing_weight": 1.3509,
       "n_landings_per_boat": 11.9568,
       "revenue": 0,
-      "catch": 39671.3259,
+      "catch": 39670.8922,
       "n_boats": 3796,
       "month": "March 2024",
       "year": "2024"
@@ -10612,7 +10612,7 @@
       "landing_weight": 0.4272,
       "n_landings_per_boat": 14.1406,
       "revenue": 0,
-      "catch": 13180.4802,
+      "catch": 13180.4004,
       "n_boats": 3796,
       "month": "March 2024",
       "year": "2024"
@@ -10645,7 +10645,7 @@
       "landing_weight": 1.4228,
       "n_landings_per_boat": 13.5132,
       "revenue": 0,
-      "catch": 76628.7045,
+      "catch": 76628.6629,
       "n_boats": 3796,
       "month": "March 2024",
       "year": "2024"
@@ -10656,7 +10656,7 @@
       "landing_weight": 0.3709,
       "n_landings_per_boat": 11.4498,
       "revenue": 0,
-      "catch": 7659.1532,
+      "catch": 7659.1184,
       "n_boats": 3796,
       "month": "March 2024",
       "year": "2024"
@@ -10678,7 +10678,7 @@
       "landing_weight": 0.9188,
       "n_landings_per_boat": 12.8151,
       "revenue": 0,
-      "catch": 34760.9117,
+      "catch": 34760.8197,
       "n_boats": 3796,
       "month": "March 2024",
       "year": "2024"
@@ -10700,7 +10700,7 @@
       "landing_weight": 1.1735,
       "n_landings_per_boat": 12.8151,
       "revenue": 0,
-      "catch": 51047.2805,
+      "catch": 51047.2458,
       "n_boats": 3796,
       "month": "March 2024",
       "year": "2024"
@@ -10722,7 +10722,7 @@
       "landing_weight": 1.201,
       "n_landings_per_boat": 12.8151,
       "revenue": 0,
-      "catch": 76242.944,
+      "catch": 76242.9167,
       "n_boats": 3796,
       "month": "March 2024",
       "year": "2024"
@@ -10733,7 +10733,7 @@
       "landing_weight": 0.2202,
       "n_landings_per_boat": 12.2641,
       "revenue": 0,
-      "catch": 7964.4587,
+      "catch": 7964.4636,
       "n_boats": 3796,
       "month": "April 2024",
       "year": "2024"
@@ -10744,7 +10744,7 @@
       "landing_weight": 1.2135,
       "n_landings_per_boat": 13.1908,
       "revenue": 0,
-      "catch": 35020.9028,
+      "catch": 35020.903,
       "n_boats": 3796,
       "month": "April 2024",
       "year": "2024"
@@ -10755,7 +10755,7 @@
       "landing_weight": 0.9741,
       "n_landings_per_boat": 14.2631,
       "revenue": 0,
-      "catch": 36825.8544,
+      "catch": 36825.8631,
       "n_boats": 3796,
       "month": "April 2024",
       "year": "2024"
@@ -10788,7 +10788,7 @@
       "landing_weight": 0.934,
       "n_landings_per_boat": 13.9484,
       "revenue": 0,
-      "catch": 74755.1389,
+      "catch": 74755.1393,
       "n_boats": 3796,
       "month": "April 2024",
       "year": "2024"
@@ -10799,7 +10799,7 @@
       "landing_weight": 0.4642,
       "n_landings_per_boat": 10.7495,
       "revenue": 0,
-      "catch": 9488.0279,
+      "catch": 9488.0304,
       "n_boats": 3796,
       "month": "April 2024",
       "year": "2024"
@@ -10821,7 +10821,7 @@
       "landing_weight": 1.2881,
       "n_landings_per_boat": 13.1908,
       "revenue": 0,
-      "catch": 52336.9271,
+      "catch": 52336.9354,
       "n_boats": 3796,
       "month": "April 2024",
       "year": "2024"
@@ -10843,7 +10843,7 @@
       "landing_weight": 0.5489,
       "n_landings_per_boat": 13.1908,
       "revenue": 0,
-      "catch": 18180.3514,
+      "catch": 18180.354,
       "n_boats": 3796,
       "month": "April 2024",
       "year": "2024"
@@ -10854,7 +10854,7 @@
       "landing_weight": 0.6417,
       "n_landings_per_boat": 13.1908,
       "revenue": 0,
-      "catch": 18749.57,
+      "catch": 18749.5704,
       "n_boats": 3796,
       "month": "April 2024",
       "year": "2024"
@@ -10865,7 +10865,7 @@
       "landing_weight": 2.5272,
       "n_landings_per_boat": 13.1908,
       "revenue": 0,
-      "catch": 142496.4553,
+      "catch": 142496.4582,
       "n_boats": 3796,
       "month": "April 2024",
       "year": "2024"
@@ -10887,7 +10887,7 @@
       "landing_weight": 0.9881,
       "n_landings_per_boat": 10.0085,
       "revenue": 0,
-      "catch": 44684.162,
+      "catch": 44684.1626,
       "n_boats": 3796,
       "month": "May 2024",
       "year": "2024"
@@ -10898,7 +10898,7 @@
       "landing_weight": 0.6367,
       "n_landings_per_boat": 10.6449,
       "revenue": 0,
-      "catch": 21487.957,
+      "catch": 21488.0414,
       "n_boats": 3796,
       "month": "May 2024",
       "year": "2024"
@@ -10931,7 +10931,7 @@
       "landing_weight": 0.3068,
       "n_landings_per_boat": 10.4853,
       "revenue": 0,
-      "catch": 15849.5014,
+      "catch": 15849.5016,
       "n_boats": 3796,
       "month": "May 2024",
       "year": "2024"
@@ -10942,7 +10942,7 @@
       "landing_weight": 0.1088,
       "n_landings_per_boat": 8.9032,
       "revenue": 0,
-      "catch": 2286.4734,
+      "catch": 2286.4862,
       "n_boats": 3796,
       "month": "May 2024",
       "year": "2024"
@@ -10964,7 +10964,7 @@
       "landing_weight": 1.2653,
       "n_landings_per_boat": 10.0085,
       "revenue": 0,
-      "catch": 39606.2831,
+      "catch": 39606.3697,
       "n_boats": 3796,
       "month": "May 2024",
       "year": "2024"
@@ -10997,7 +10997,7 @@
       "landing_weight": 0.5775,
       "n_landings_per_boat": 10.0085,
       "revenue": 0,
-      "catch": 7681.6077,
+      "catch": 7681.6091,
       "n_boats": 3796,
       "month": "May 2024",
       "year": "2024"
@@ -11008,7 +11008,7 @@
       "landing_weight": 0.7236,
       "n_landings_per_boat": 10.0085,
       "revenue": 0,
-      "catch": 28212.9901,
+      "catch": 28213.0189,
       "n_boats": 3796,
       "month": "May 2024",
       "year": "2024"
@@ -11030,7 +11030,7 @@
       "landing_weight": 0.6631,
       "n_landings_per_boat": 10.5988,
       "revenue": 0,
-      "catch": 17781.6102,
+      "catch": 17781.6111,
       "n_boats": 3796,
       "month": "June 2024",
       "year": "2024"
@@ -11041,7 +11041,7 @@
       "landing_weight": 0.6463,
       "n_landings_per_boat": 12.1977,
       "revenue": 0,
-      "catch": 21802.5277,
+      "catch": 21802.5781,
       "n_boats": 3796,
       "month": "June 2024",
       "year": "2024"
@@ -11085,7 +11085,7 @@
       "landing_weight": 0.5425,
       "n_landings_per_boat": 12.0563,
       "revenue": 0,
-      "catch": 8939.5699,
+      "catch": 8939.5701,
       "n_boats": 3796,
       "month": "June 2024",
       "year": "2024"
@@ -11107,7 +11107,7 @@
       "landing_weight": 1.4282,
       "n_landings_per_boat": 10.5988,
       "revenue": 0,
-      "catch": 51388.0306,
+      "catch": 51388.0672,
       "n_boats": 3796,
       "month": "June 2024",
       "year": "2024"
@@ -11140,7 +11140,7 @@
       "landing_weight": 0.8186,
       "n_landings_per_boat": 10.5988,
       "revenue": 0,
-      "catch": 20819.5186,
+      "catch": 20819.5195,
       "n_boats": 3796,
       "month": "June 2024",
       "year": "2024"
@@ -11151,7 +11151,7 @@
       "landing_weight": 6.1979,
       "n_landings_per_boat": 10.5988,
       "revenue": 0,
-      "catch": 377517.2669,
+      "catch": 377517.2892,
       "n_boats": 3796,
       "month": "June 2024",
       "year": "2024"
@@ -11184,7 +11184,7 @@
       "landing_weight": 0.7807,
       "n_landings_per_boat": 11.8677,
       "revenue": 0,
-      "catch": 27768.8391,
+      "catch": 27768.8583,
       "n_boats": 3796,
       "month": "July 2024",
       "year": "2024"
@@ -11228,7 +11228,7 @@
       "landing_weight": 0.142,
       "n_landings_per_boat": 12.0505,
       "revenue": 0,
-      "catch": 2488.5888,
+      "catch": 2488.5892,
       "n_boats": 3796,
       "month": "July 2024",
       "year": "2024"
@@ -11250,7 +11250,7 @@
       "landing_weight": 1.0403,
       "n_landings_per_boat": 10.3933,
       "revenue": 0,
-      "catch": 35135.7471,
+      "catch": 35135.7645,
       "n_boats": 3796,
       "month": "July 2024",
       "year": "2024"
@@ -11272,7 +11272,7 @@
       "landing_weight": 0.9475,
       "n_landings_per_boat": 10.3933,
       "revenue": 0,
-      "catch": 17062.9907,
+      "catch": 17062.9943,
       "n_boats": 3796,
       "month": "July 2024",
       "year": "2024"
@@ -11283,7 +11283,7 @@
       "landing_weight": 0.3005,
       "n_landings_per_boat": 10.3933,
       "revenue": 0,
-      "catch": 5600.9425,
+      "catch": 5600.9427,
       "n_boats": 3796,
       "month": "July 2024",
       "year": "2024"
@@ -11294,7 +11294,7 @@
       "landing_weight": 2.6144,
       "n_landings_per_boat": 10.3933,
       "revenue": 0,
-      "catch": 133929.1744,
+      "catch": 133929.1773,
       "n_boats": 3796,
       "month": "July 2024",
       "year": "2024"
@@ -11316,7 +11316,7 @@
       "landing_weight": 1.1162,
       "n_landings_per_boat": 9.5913,
       "revenue": 0,
-      "catch": 25076.5268,
+      "catch": 25076.5281,
       "n_boats": 3796,
       "month": "August 2024",
       "year": "2024"
@@ -11327,7 +11327,7 @@
       "landing_weight": 0.4848,
       "n_landings_per_boat": 10.8068,
       "revenue": 0,
-      "catch": 15521.5537,
+      "catch": 15521.6108,
       "n_boats": 3796,
       "month": "August 2024",
       "year": "2024"
@@ -11371,7 +11371,7 @@
       "landing_weight": 0.0849,
       "n_landings_per_boat": 9.5119,
       "revenue": 0,
-      "catch": 1326.0447,
+      "catch": 1326.0455,
       "n_boats": 3796,
       "month": "August 2024",
       "year": "2024"
@@ -11393,7 +11393,7 @@
       "landing_weight": 1.2851,
       "n_landings_per_boat": 9.5913,
       "revenue": 0,
-      "catch": 31978.3136,
+      "catch": 31978.3738,
       "n_boats": 3796,
       "month": "August 2024",
       "year": "2024"
@@ -11415,7 +11415,7 @@
       "landing_weight": 1.6484,
       "n_landings_per_boat": 9.5913,
       "revenue": 0,
-      "catch": 37621.5207,
+      "catch": 37621.5409,
       "n_boats": 3796,
       "month": "August 2024",
       "year": "2024"
@@ -11426,7 +11426,7 @@
       "landing_weight": 0.7348,
       "n_landings_per_boat": 9.5913,
       "revenue": 0,
-      "catch": 10384.1958,
+      "catch": 10384.1971,
       "n_boats": 3796,
       "month": "August 2024",
       "year": "2024"
@@ -11437,7 +11437,7 @@
       "landing_weight": 3.3426,
       "n_landings_per_boat": 9.5913,
       "revenue": 0,
-      "catch": 170703.2906,
+      "catch": 170703.3076,
       "n_boats": 3796,
       "month": "August 2024",
       "year": "2024"
@@ -11459,7 +11459,7 @@
       "landing_weight": 0.4118,
       "n_landings_per_boat": 11.2281,
       "revenue": 0,
-      "catch": 10420.1329,
+      "catch": 10420.1331,
       "n_boats": 3796,
       "month": "September 2024",
       "year": "2024"
@@ -11470,7 +11470,7 @@
       "landing_weight": 0.591,
       "n_landings_per_boat": 12.7723,
       "revenue": 0,
-      "catch": 21525.1544,
+      "catch": 21525.2345,
       "n_boats": 3796,
       "month": "September 2024",
       "year": "2024"
@@ -11514,7 +11514,7 @@
       "landing_weight": 0.3369,
       "n_landings_per_boat": 11.4504,
       "revenue": 0,
-      "catch": 9047.9019,
+      "catch": 9047.903,
       "n_boats": 3796,
       "month": "September 2024",
       "year": "2024"
@@ -11536,7 +11536,7 @@
       "landing_weight": 0.6539,
       "n_landings_per_boat": 11.2281,
       "revenue": 0,
-      "catch": 26489.6773,
+      "catch": 26489.7642,
       "n_boats": 3796,
       "month": "September 2024",
       "year": "2024"
@@ -11558,7 +11558,7 @@
       "landing_weight": 2.8188,
       "n_landings_per_boat": 11.2281,
       "revenue": 0,
-      "catch": 45766.312,
+      "catch": 45766.3187,
       "n_boats": 3796,
       "month": "September 2024",
       "year": "2024"
@@ -11569,7 +11569,7 @@
       "landing_weight": 3.1462,
       "n_landings_per_boat": 11.2281,
       "revenue": 0,
-      "catch": 28722.5185,
+      "catch": 28722.519,
       "n_boats": 3796,
       "month": "September 2024",
       "year": "2024"
@@ -11580,7 +11580,7 @@
       "landing_weight": 1.5468,
       "n_landings_per_boat": 11.2281,
       "revenue": 0,
-      "catch": 87076.4126,
+      "catch": 87076.4343,
       "n_boats": 3796,
       "month": "September 2024",
       "year": "2024"
@@ -11591,7 +11591,7 @@
       "landing_weight": 0.0209,
       "n_landings_per_boat": 11.2316,
       "revenue": 0,
-      "catch": 1424.2656,
+      "catch": 1424.2666,
       "n_boats": 3796,
       "month": "October 2024",
       "year": "2024"
@@ -11602,7 +11602,7 @@
       "landing_weight": 0.4883,
       "n_landings_per_boat": 11.2504,
       "revenue": 0,
-      "catch": 15059.5618,
+      "catch": 15059.562,
       "n_boats": 3796,
       "month": "October 2024",
       "year": "2024"
@@ -11613,7 +11613,7 @@
       "landing_weight": 0.8887,
       "n_landings_per_boat": 12.7559,
       "revenue": 0,
-      "catch": 28346.9043,
+      "catch": 28346.9434,
       "n_boats": 3796,
       "month": "October 2024",
       "year": "2024"
@@ -11635,7 +11635,7 @@
       "landing_weight": 1.2171,
       "n_landings_per_boat": 11.9634,
       "revenue": 0,
-      "catch": 109928.3104,
+      "catch": 109928.3112,
       "n_boats": 3796,
       "month": "October 2024",
       "year": "2024"
@@ -11646,7 +11646,7 @@
       "landing_weight": 0.6319,
       "n_landings_per_boat": 11.9634,
       "revenue": 0,
-      "catch": 24737.8488,
+      "catch": 24737.8495,
       "n_boats": 3796,
       "month": "October 2024",
       "year": "2024"
@@ -11657,7 +11657,7 @@
       "landing_weight": 0.124,
       "n_landings_per_boat": 10.9264,
       "revenue": 0,
-      "catch": 2635.5367,
+      "catch": 2635.5378,
       "n_boats": 3796,
       "month": "October 2024",
       "year": "2024"
@@ -11679,7 +11679,7 @@
       "landing_weight": 0.919,
       "n_landings_per_boat": 11.2504,
       "revenue": 0,
-      "catch": 38294.459,
+      "catch": 38294.4828,
       "n_boats": 3796,
       "month": "October 2024",
       "year": "2024"
@@ -11701,7 +11701,7 @@
       "landing_weight": 0.5832,
       "n_landings_per_boat": 11.2504,
       "revenue": 0,
-      "catch": 17145.4343,
+      "catch": 17145.4349,
       "n_boats": 3796,
       "month": "October 2024",
       "year": "2024"
@@ -11712,7 +11712,7 @@
       "landing_weight": 0.7723,
       "n_landings_per_boat": 11.2504,
       "revenue": 0,
-      "catch": 14331.6376,
+      "catch": 14331.6393,
       "n_boats": 3796,
       "month": "October 2024",
       "year": "2024"
@@ -11723,7 +11723,7 @@
       "landing_weight": 1.2824,
       "n_landings_per_boat": 11.2504,
       "revenue": 0,
-      "catch": 50657.8023,
+      "catch": 50657.8098,
       "n_boats": 3796,
       "month": "October 2024",
       "year": "2024"
@@ -11734,7 +11734,7 @@
       "landing_weight": 0.4903,
       "n_landings_per_boat": 9.4141,
       "revenue": 0,
-      "catch": 14813.0386,
+      "catch": 14812.932,
       "n_boats": 3796,
       "month": "November 2024",
       "year": "2024"
@@ -11745,7 +11745,7 @@
       "landing_weight": 0.9721,
       "n_landings_per_boat": 10.2901,
       "revenue": 0,
-      "catch": 17547.6582,
+      "catch": 17547.6567,
       "n_boats": 3796,
       "month": "November 2024",
       "year": "2024"
@@ -11756,7 +11756,7 @@
       "landing_weight": 0.6826,
       "n_landings_per_boat": 11.6334,
       "revenue": 0,
-      "catch": 18425.7408,
+      "catch": 18425.6155,
       "n_boats": 3796,
       "month": "November 2024",
       "year": "2024"
@@ -11778,7 +11778,7 @@
       "landing_weight": 2.7382,
       "n_landings_per_boat": 10.9515,
       "revenue": 0,
-      "catch": 171560.9431,
+      "catch": 171560.9385,
       "n_boats": 3796,
       "month": "November 2024",
       "year": "2024"
@@ -11789,7 +11789,7 @@
       "landing_weight": 1.0225,
       "n_landings_per_boat": 10.9515,
       "revenue": 0,
-      "catch": 45371.2654,
+      "catch": 45371.2414,
       "n_boats": 3796,
       "month": "November 2024",
       "year": "2024"
@@ -11800,7 +11800,7 @@
       "landing_weight": 0.1488,
       "n_landings_per_boat": 11.344,
       "revenue": 0,
-      "catch": 2312.7077,
+      "catch": 2312.6985,
       "n_boats": 3796,
       "month": "November 2024",
       "year": "2024"
@@ -11822,7 +11822,7 @@
       "landing_weight": 1.1192,
       "n_landings_per_boat": 10.2901,
       "revenue": 0,
-      "catch": 30860.445,
+      "catch": 30860.3564,
       "n_boats": 3796,
       "month": "November 2024",
       "year": "2024"
@@ -11844,7 +11844,7 @@
       "landing_weight": 1.0763,
       "n_landings_per_boat": 10.2901,
       "revenue": 0,
-      "catch": 31588.1815,
+      "catch": 31588.1774,
       "n_boats": 3796,
       "month": "November 2024",
       "year": "2024"
@@ -11855,7 +11855,7 @@
       "landing_weight": 0.6204,
       "n_landings_per_boat": 10.2901,
       "revenue": 0,
-      "catch": 9102.0917,
+      "catch": 9102.0902,
       "n_boats": 3796,
       "month": "November 2024",
       "year": "2024"
@@ -11866,7 +11866,7 @@
       "landing_weight": 0.7928,
       "n_landings_per_boat": 10.2901,
       "revenue": 0,
-      "catch": 23487.4079,
+      "catch": 23487.3956,
       "n_boats": 3796,
       "month": "November 2024",
       "year": "2024"
@@ -11877,7 +11877,7 @@
       "landing_weight": 0.7264,
       "n_landings_per_boat": 9.7963,
       "revenue": 0,
-      "catch": 25024.3185,
+      "catch": 25024.0402,
       "n_boats": 3796,
       "month": "December 2024",
       "year": "2024"
@@ -11888,7 +11888,7 @@
       "landing_weight": 1.0478,
       "n_landings_per_boat": 10.036,
       "revenue": 0,
-      "catch": 56202.5959,
+      "catch": 56202.5934,
       "n_boats": 3796,
       "month": "December 2024",
       "year": "2024"
@@ -11899,7 +11899,7 @@
       "landing_weight": 0.5993,
       "n_landings_per_boat": 11.0514,
       "revenue": 0,
-      "catch": 18175.7964,
+      "catch": 18175.6018,
       "n_boats": 3796,
       "month": "December 2024",
       "year": "2024"
@@ -11921,7 +11921,7 @@
       "landing_weight": 0.5536,
       "n_landings_per_boat": 10.6415,
       "revenue": 0,
-      "catch": 20260.6383,
+      "catch": 20260.6231,
       "n_boats": 3796,
       "month": "December 2024",
       "year": "2024"
@@ -11932,7 +11932,7 @@
       "landing_weight": 0.4802,
       "n_landings_per_boat": 10.6415,
       "revenue": 0,
-      "catch": 16415.6258,
+      "catch": 16415.5308,
       "n_boats": 3796,
       "month": "December 2024",
       "year": "2024"
@@ -11943,7 +11943,7 @@
       "landing_weight": 1.2719,
       "n_landings_per_boat": 12.1201,
       "revenue": 0,
-      "catch": 38947.0031,
+      "catch": 38946.9937,
       "n_boats": 3796,
       "month": "December 2024",
       "year": "2024"
@@ -11965,7 +11965,7 @@
       "landing_weight": 1.4054,
       "n_landings_per_boat": 10.036,
       "revenue": 0,
-      "catch": 44501.4547,
+      "catch": 44501.2851,
       "n_boats": 3796,
       "month": "December 2024",
       "year": "2024"
@@ -11987,7 +11987,7 @@
       "landing_weight": 0.5806,
       "n_landings_per_boat": 10.036,
       "revenue": 0,
-      "catch": 18107.0351,
+      "catch": 18107.0152,
       "n_boats": 3796,
       "month": "December 2024",
       "year": "2024"
@@ -11998,7 +11998,7 @@
       "landing_weight": 0.517,
       "n_landings_per_boat": 10.036,
       "revenue": 0,
-      "catch": 9240.6733,
+      "catch": 9240.6699,
       "n_boats": 3796,
       "month": "December 2024",
       "year": "2024"
@@ -12009,7 +12009,7 @@
       "landing_weight": 2.877,
       "n_landings_per_boat": 10.036,
       "revenue": 0,
-      "catch": 129143.0688,
+      "catch": 129143.0512,
       "n_boats": 3796,
       "month": "December 2024",
       "year": "2024"
@@ -12020,7 +12020,7 @@
       "landing_weight": 0.6722,
       "n_landings_per_boat": 9.6266,
       "revenue": 0,
-      "catch": 19689.6422,
+      "catch": 19689.5262,
       "n_boats": 3796,
       "month": "January 2025",
       "year": "2025"
@@ -12031,7 +12031,7 @@
       "landing_weight": 1.3955,
       "n_landings_per_boat": 11.3562,
       "revenue": 0,
-      "catch": 35604.4959,
+      "catch": 35604.4826,
       "n_boats": 3796,
       "month": "January 2025",
       "year": "2025"
@@ -12042,7 +12042,7 @@
       "landing_weight": 0.7909,
       "n_landings_per_boat": 12.8483,
       "revenue": 0,
-      "catch": 20171.1047,
+      "catch": 20171.029,
       "n_boats": 3796,
       "month": "January 2025",
       "year": "2025"
@@ -12064,7 +12064,7 @@
       "landing_weight": 0.3872,
       "n_landings_per_boat": 11.8378,
       "revenue": 0,
-      "catch": 48807.6764,
+      "catch": 48807.6758,
       "n_boats": 3796,
       "month": "January 2025",
       "year": "2025"
@@ -12075,7 +12075,7 @@
       "landing_weight": 1.7552,
       "n_landings_per_boat": 11.8378,
       "revenue": 0,
-      "catch": 91638.5946,
+      "catch": 91638.5709,
       "n_boats": 3796,
       "month": "January 2025",
       "year": "2025"
@@ -12086,7 +12086,7 @@
       "landing_weight": 0.3649,
       "n_landings_per_boat": 8.9434,
       "revenue": 0,
-      "catch": 6015.81,
+      "catch": 6015.7999,
       "n_boats": 3796,
       "month": "January 2025",
       "year": "2025"
@@ -12108,7 +12108,7 @@
       "landing_weight": 1.3227,
       "n_landings_per_boat": 11.3562,
       "revenue": 0,
-      "catch": 42927.564,
+      "catch": 42927.4527,
       "n_boats": 3796,
       "month": "January 2025",
       "year": "2025"
@@ -12141,7 +12141,7 @@
       "landing_weight": 1.9826,
       "n_landings_per_boat": 11.3562,
       "revenue": 0,
-      "catch": 21424.5882,
+      "catch": 21424.576,
       "n_boats": 3796,
       "month": "January 2025",
       "year": "2025"
@@ -12152,7 +12152,7 @@
       "landing_weight": 1.88,
       "n_landings_per_boat": 11.3562,
       "revenue": 0,
-      "catch": 146122.3917,
+      "catch": 146122.3827,
       "n_boats": 3796,
       "month": "January 2025",
       "year": "2025"
@@ -12163,7 +12163,7 @@
       "landing_weight": 0.4066,
       "n_landings_per_boat": 9.3721,
       "revenue": 0,
-      "catch": 11994.3129,
+      "catch": 11994.2938,
       "n_boats": 3796,
       "month": "February 2025",
       "year": "2025"
@@ -12174,7 +12174,7 @@
       "landing_weight": 1.133,
       "n_landings_per_boat": 10.4197,
       "revenue": 0,
-      "catch": 27700.829,
+      "catch": 27700.8285,
       "n_boats": 3796,
       "month": "February 2025",
       "year": "2025"
@@ -12185,7 +12185,7 @@
       "landing_weight": 0.4565,
       "n_landings_per_boat": 10.7305,
       "revenue": 0,
-      "catch": 13250.1195,
+      "catch": 13250.1067,
       "n_boats": 3796,
       "month": "February 2025",
       "year": "2025"
@@ -12218,7 +12218,7 @@
       "landing_weight": 2.0116,
       "n_landings_per_boat": 10.8195,
       "revenue": 0,
-      "catch": 73967.3843,
+      "catch": 73967.3599,
       "n_boats": 3796,
       "month": "February 2025",
       "year": "2025"
@@ -12229,7 +12229,7 @@
       "landing_weight": 0.2393,
       "n_landings_per_boat": 8.565,
       "revenue": 0,
-      "catch": 4600.282,
+      "catch": 4600.2809,
       "n_boats": 3796,
       "month": "February 2025",
       "year": "2025"
@@ -12251,7 +12251,7 @@
       "landing_weight": 1.2084,
       "n_landings_per_boat": 10.4197,
       "revenue": 0,
-      "catch": 36029.2588,
+      "catch": 36029.2313,
       "n_boats": 3796,
       "month": "February 2025",
       "year": "2025"
@@ -12273,7 +12273,7 @@
       "landing_weight": 1.1599,
       "n_landings_per_boat": 10.4197,
       "revenue": 0,
-      "catch": 40159.5224,
+      "catch": 40159.5192,
       "n_boats": 3796,
       "month": "February 2025",
       "year": "2025"
@@ -12295,7 +12295,7 @@
       "landing_weight": 0.9446,
       "n_landings_per_boat": 10.4197,
       "revenue": 0,
-      "catch": 35756.0108,
+      "catch": 35756.0094,
       "n_boats": 3796,
       "month": "February 2025",
       "year": "2025"
@@ -12306,7 +12306,7 @@
       "landing_weight": 0.7055,
       "n_landings_per_boat": 10.0587,
       "revenue": 0,
-      "catch": 24477.8938,
+      "catch": 24477.8206,
       "n_boats": 3796,
       "month": "March 2025",
       "year": "2025"
@@ -12328,7 +12328,7 @@
       "landing_weight": 0.6264,
       "n_landings_per_boat": 12.1348,
       "revenue": 0,
-      "catch": 22896.8561,
+      "catch": 22896.8069,
       "n_boats": 3796,
       "month": "March 2025",
       "year": "2025"
@@ -12361,7 +12361,7 @@
       "landing_weight": 2.0181,
       "n_landings_per_boat": 11.6489,
       "revenue": 0,
-      "catch": 129334.0757,
+      "catch": 129334.0739,
       "n_boats": 3796,
       "month": "March 2025",
       "year": "2025"
@@ -12372,7 +12372,7 @@
       "landing_weight": 0.1096,
       "n_landings_per_boat": 9.7558,
       "revenue": 0,
-      "catch": 2042.7619,
+      "catch": 2042.7603,
       "n_boats": 3796,
       "month": "March 2025",
       "year": "2025"
@@ -12394,7 +12394,7 @@
       "landing_weight": 1.093,
       "n_landings_per_boat": 11.0725,
       "revenue": 0,
-      "catch": 34715.5396,
+      "catch": 34715.4965,
       "n_boats": 3796,
       "month": "March 2025",
       "year": "2025"
@@ -12416,7 +12416,7 @@
       "landing_weight": 0.7686,
       "n_landings_per_boat": 11.0725,
       "revenue": 0,
-      "catch": 29182.1751,
+      "catch": 29182.1707,
       "n_boats": 3796,
       "month": "March 2025",
       "year": "2025"
@@ -12427,7 +12427,7 @@
       "landing_weight": 0.7712,
       "n_landings_per_boat": 11.0725,
       "revenue": 0,
-      "catch": 12913.378,
+      "catch": 12913.3756,
       "n_boats": 3796,
       "month": "March 2025",
       "year": "2025"
@@ -12438,7 +12438,7 @@
       "landing_weight": 1.4161,
       "n_landings_per_boat": 11.0725,
       "revenue": 0,
-      "catch": 75518.2197,
+      "catch": 75518.2111,
       "n_boats": 3796,
       "month": "March 2025",
       "year": "2025"
@@ -12449,7 +12449,7 @@
       "landing_weight": 0.1566,
       "n_landings_per_boat": 10.4291,
       "revenue": 0,
-      "catch": 5547.7496,
+      "catch": 5547.7583,
       "n_boats": 3796,
       "month": "April 2025",
       "year": "2025"
@@ -12460,7 +12460,7 @@
       "landing_weight": 0.4386,
       "n_landings_per_boat": 11.0178,
       "revenue": 0,
-      "catch": 13714.5998,
+      "catch": 13714.5999,
       "n_boats": 3796,
       "month": "April 2025",
       "year": "2025"
@@ -12471,7 +12471,7 @@
       "landing_weight": 0.5306,
       "n_landings_per_boat": 12.08,
       "revenue": 0,
-      "catch": 19326.6589,
+      "catch": 19326.6816,
       "n_boats": 3796,
       "month": "April 2025",
       "year": "2025"
@@ -12493,7 +12493,7 @@
       "landing_weight": 0.23,
       "n_landings_per_boat": 11.7461,
       "revenue": 0,
-      "catch": 22997.4775,
+      "catch": 22997.4777,
       "n_boats": 3796,
       "month": "April 2025",
       "year": "2025"
@@ -12504,7 +12504,7 @@
       "landing_weight": 1.7508,
       "n_landings_per_boat": 11.7461,
       "revenue": 0,
-      "catch": 99444.8242,
+      "catch": 99444.8247,
       "n_boats": 3796,
       "month": "April 2025",
       "year": "2025"
@@ -12515,7 +12515,7 @@
       "landing_weight": 0.1612,
       "n_landings_per_boat": 10.9825,
       "revenue": 0,
-      "catch": 3772.573,
+      "catch": 3772.5735,
       "n_boats": 3796,
       "month": "April 2025",
       "year": "2025"
@@ -12537,7 +12537,7 @@
       "landing_weight": 0.7868,
       "n_landings_per_boat": 11.0178,
       "revenue": 0,
-      "catch": 33832.1652,
+      "catch": 33832.1858,
       "n_boats": 3796,
       "month": "April 2025",
       "year": "2025"
@@ -12559,7 +12559,7 @@
       "landing_weight": 1.1554,
       "n_landings_per_boat": 11.0178,
       "revenue": 0,
-      "catch": 32530.976,
+      "catch": 32530.9856,
       "n_boats": 3796,
       "month": "April 2025",
       "year": "2025"
@@ -12581,7 +12581,7 @@
       "landing_weight": 1.0955,
       "n_landings_per_boat": 11.0178,
       "revenue": 0,
-      "catch": 47436.4481,
+      "catch": 47436.4552,
       "n_boats": 3796,
       "month": "April 2025",
       "year": "2025"
@@ -12603,7 +12603,7 @@
       "landing_weight": 1.1183,
       "n_landings_per_boat": 10.8354,
       "revenue": 0,
-      "catch": 27938.0634,
+      "catch": 27938.0636,
       "n_boats": 3796,
       "month": "May 2025",
       "year": "2025"
@@ -12614,7 +12614,7 @@
       "landing_weight": 0.9084,
       "n_landings_per_boat": 12.0106,
       "revenue": 0,
-      "catch": 33270.0915,
+      "catch": 33270.1175,
       "n_boats": 3796,
       "month": "May 2025",
       "year": "2025"
@@ -12658,7 +12658,7 @@
       "landing_weight": 1.0111,
       "n_landings_per_boat": 11.2295,
       "revenue": 0,
-      "catch": 22671.3194,
+      "catch": 22671.3195,
       "n_boats": 3796,
       "month": "May 2025",
       "year": "2025"
@@ -12680,7 +12680,7 @@
       "landing_weight": 1.2831,
       "n_landings_per_boat": 10.8354,
       "revenue": 0,
-      "catch": 45987.3926,
+      "catch": 45987.4129,
       "n_boats": 3796,
       "month": "May 2025",
       "year": "2025"
@@ -12702,7 +12702,7 @@
       "landing_weight": 0.8234,
       "n_landings_per_boat": 10.8354,
       "revenue": 0,
-      "catch": 23922.1691,
+      "catch": 23922.1697,
       "n_boats": 3796,
       "month": "May 2025",
       "year": "2025"
@@ -12724,7 +12724,7 @@
       "landing_weight": 0.6532,
       "n_landings_per_boat": 10.8354,
       "revenue": 0,
-      "catch": 19125.5911,
+      "catch": 19125.6002,
       "n_boats": 3796,
       "month": "May 2025",
       "year": "2025"
@@ -12746,7 +12746,7 @@
       "landing_weight": 0.8896,
       "n_landings_per_boat": 10.8033,
       "revenue": 0,
-      "catch": 31184.579,
+      "catch": 31184.5792,
       "n_boats": 3796,
       "month": "June 2025",
       "year": "2025"
@@ -12757,7 +12757,7 @@
       "landing_weight": 0.6476,
       "n_landings_per_boat": 11.8221,
       "revenue": 0,
-      "catch": 18501.1677,
+      "catch": 18501.2175,
       "n_boats": 3796,
       "month": "June 2025",
       "year": "2025"
@@ -12779,7 +12779,7 @@
       "landing_weight": 0.3273,
       "n_landings_per_boat": 11.4231,
       "revenue": 0,
-      "catch": 24334.2527,
+      "catch": 24334.2531,
       "n_boats": 3796,
       "month": "June 2025",
       "year": "2025"
@@ -12801,7 +12801,7 @@
       "landing_weight": 0.0797,
       "n_landings_per_boat": 11.5447,
       "revenue": 0,
-      "catch": 1170.4511,
+      "catch": 1170.4518,
       "n_boats": 3796,
       "month": "June 2025",
       "year": "2025"
@@ -12823,7 +12823,7 @@
       "landing_weight": 1.3531,
       "n_landings_per_boat": 10.8033,
       "revenue": 0,
-      "catch": 44607.808,
+      "catch": 44607.8351,
       "n_boats": 3796,
       "month": "June 2025",
       "year": "2025"
@@ -12856,7 +12856,7 @@
       "landing_weight": 0.6186,
       "n_landings_per_boat": 10.8033,
       "revenue": 0,
-      "catch": 9306.4654,
+      "catch": 9306.4655,
       "n_boats": 3796,
       "month": "June 2025",
       "year": "2025"
@@ -12867,7 +12867,7 @@
       "landing_weight": 1.0103,
       "n_landings_per_boat": 10.8033,
       "revenue": 0,
-      "catch": 32717.612,
+      "catch": 32717.6409,
       "n_boats": 3796,
       "month": "June 2025",
       "year": "2025"
@@ -12900,7 +12900,7 @@
       "landing_weight": 0.7056,
       "n_landings_per_boat": 10.8206,
       "revenue": 0,
-      "catch": 21585.2791,
+      "catch": 21585.3158,
       "n_boats": 3796,
       "month": "July 2025",
       "year": "2025"
@@ -12922,7 +12922,7 @@
       "landing_weight": 0.2092,
       "n_landings_per_boat": 10.7795,
       "revenue": 0,
-      "catch": 15858.6428,
+      "catch": 15858.6429,
       "n_boats": 3796,
       "month": "July 2025",
       "year": "2025"
@@ -12944,7 +12944,7 @@
       "landing_weight": 0.1229,
       "n_landings_per_boat": 9.8627,
       "revenue": 0,
-      "catch": 2032.6554,
+      "catch": 2032.6558,
       "n_boats": 3796,
       "month": "July 2025",
       "year": "2025"
@@ -12966,7 +12966,7 @@
       "landing_weight": 1.1739,
       "n_landings_per_boat": 10.1678,
       "revenue": 0,
-      "catch": 31319.9566,
+      "catch": 31319.9792,
       "n_boats": 3796,
       "month": "July 2025",
       "year": "2025"
@@ -13010,7 +13010,7 @@
       "landing_weight": 1.38,
       "n_landings_per_boat": 10.1678,
       "revenue": 0,
-      "catch": 44304.9182,
+      "catch": 44304.9343,
       "n_boats": 3796,
       "month": "July 2025",
       "year": "2025"
@@ -13019,7 +13019,7 @@
       "date_bin_start": "2025-08-01",
       "grouped_taxa": "BEN",
       "landing_weight": 0.0546,
-      "n_landings_per_boat": 9.9596,
+      "n_landings_per_boat": 9.9597,
       "revenue": 0,
       "catch": 3335.1505,
       "n_boats": 3796,
@@ -13043,7 +13043,7 @@
       "landing_weight": 0.5439,
       "n_landings_per_boat": 11.6151,
       "revenue": 0,
-      "catch": 15800.1727,
+      "catch": 15800.1948,
       "n_boats": 3796,
       "month": "August 2025",
       "year": "2025"
@@ -13087,7 +13087,7 @@
       "landing_weight": 0.4875,
       "n_landings_per_boat": 10.4598,
       "revenue": 0,
-      "catch": 10511.5482,
+      "catch": 10511.5488,
       "n_boats": 3796,
       "month": "August 2025",
       "year": "2025"
@@ -13109,7 +13109,7 @@
       "landing_weight": 1.376,
       "n_landings_per_boat": 10.4646,
       "revenue": 0,
-      "catch": 42053.5102,
+      "catch": 42053.5389,
       "n_boats": 3796,
       "month": "August 2025",
       "year": "2025"
@@ -13131,7 +13131,7 @@
       "landing_weight": 1.3292,
       "n_landings_per_boat": 10.4646,
       "revenue": 0,
-      "catch": 34836.8085,
+      "catch": 34836.8097,
       "n_boats": 3796,
       "month": "August 2025",
       "year": "2025"
@@ -13153,7 +13153,7 @@
       "landing_weight": 2.9649,
       "n_landings_per_boat": 10.4646,
       "revenue": 0,
-      "catch": 170623.609,
+      "catch": 170623.6169,
       "n_boats": 3796,
       "month": "August 2025",
       "year": "2025"
@@ -13175,7 +13175,7 @@
       "landing_weight": 1.6196,
       "n_landings_per_boat": 10.9397,
       "revenue": 0,
-      "catch": 37478.2178,
+      "catch": 37478.2144,
       "n_boats": 3796,
       "month": "September 2025",
       "year": "2025"
@@ -13184,9 +13184,9 @@
       "date_bin_start": "2025-09-01",
       "grouped_taxa": "CJX",
       "landing_weight": 1.18,
-      "n_landings_per_boat": 12.0819,
+      "n_landings_per_boat": 12.0818,
       "revenue": 0,
-      "catch": 35810.6326,
+      "catch": 35810.4676,
       "n_boats": 3796,
       "month": "September 2025",
       "year": "2025"
@@ -13230,7 +13230,7 @@
       "landing_weight": 0.075,
       "n_landings_per_boat": 11.4283,
       "revenue": 0,
-      "catch": 1029.8275,
+      "catch": 1029.8254,
       "n_boats": 3796,
       "month": "September 2025",
       "year": "2025"
@@ -13252,7 +13252,7 @@
       "landing_weight": 1.0125,
       "n_landings_per_boat": 10.9397,
       "revenue": 0,
-      "catch": 45298.6247,
+      "catch": 45298.5441,
       "n_boats": 3796,
       "month": "September 2025",
       "year": "2025"
@@ -13296,7 +13296,7 @@
       "landing_weight": 4.6598,
       "n_landings_per_boat": 10.9397,
       "revenue": 0,
-      "catch": 270557.8718,
+      "catch": 270557.8445,
       "n_boats": 3796,
       "month": "September 2025",
       "year": "2025"
@@ -13307,7 +13307,7 @@
       "landing_weight": 0.0854,
       "n_landings_per_boat": 9.3239,
       "revenue": 0,
-      "catch": 3550.9395,
+      "catch": 3550.9297,
       "n_boats": 3796,
       "month": "October 2025",
       "year": "2025"
@@ -13329,7 +13329,7 @@
       "landing_weight": 0.9387,
       "n_landings_per_boat": 11.2882,
       "revenue": 0,
-      "catch": 29721.5737,
+      "catch": 29721.4613,
       "n_boats": 3796,
       "month": "October 2025",
       "year": "2025"
@@ -13373,7 +13373,7 @@
       "landing_weight": 0.1356,
       "n_landings_per_boat": 10.8289,
       "revenue": 0,
-      "catch": 2592.2189,
+      "catch": 2592.2176,
       "n_boats": 3796,
       "month": "October 2025",
       "year": "2025"
@@ -13395,7 +13395,7 @@
       "landing_weight": 1.3711,
       "n_landings_per_boat": 9.7957,
       "revenue": 0,
-      "catch": 60037.6648,
+      "catch": 60037.5874,
       "n_boats": 3796,
       "month": "October 2025",
       "year": "2025"
@@ -13417,7 +13417,7 @@
       "landing_weight": 1.0904,
       "n_landings_per_boat": 9.7957,
       "revenue": 0,
-      "catch": 31450.6891,
+      "catch": 31450.6879,
       "n_boats": 3796,
       "month": "October 2025",
       "year": "2025"
@@ -13439,7 +13439,7 @@
       "landing_weight": 1.0741,
       "n_landings_per_boat": 9.7957,
       "revenue": 0,
-      "catch": 36434.6199,
+      "catch": 36434.6061,
       "n_boats": 3796,
       "month": "October 2025",
       "year": "2025"
@@ -13450,7 +13450,7 @@
       "landing_weight": 0.3848,
       "n_landings_per_boat": 9.0437,
       "revenue": 0,
-      "catch": 12344.2821,
+      "catch": 12344.2115,
       "n_boats": 3796,
       "month": "November 2025",
       "year": "2025"
@@ -13472,7 +13472,7 @@
       "landing_weight": 1.0201,
       "n_landings_per_boat": 10.3601,
       "revenue": 0,
-      "catch": 29739.4136,
+      "catch": 29739.2126,
       "n_boats": 3796,
       "month": "November 2025",
       "year": "2025"
@@ -13492,9 +13492,9 @@
       "date_bin_start": "2025-11-01",
       "grouped_taxa": "FLY",
       "landing_weight": 0.2161,
-      "n_landings_per_boat": 9.9371,
+      "n_landings_per_boat": 9.937,
       "revenue": 0,
-      "catch": 21303.1869,
+      "catch": 21303.1852,
       "n_boats": 3796,
       "month": "November 2025",
       "year": "2025"
@@ -13503,9 +13503,9 @@
       "date_bin_start": "2025-11-01",
       "grouped_taxa": "GZP",
       "landing_weight": 0.3025,
-      "n_landings_per_boat": 9.9371,
+      "n_landings_per_boat": 9.937,
       "revenue": 0,
-      "catch": 11670.0114,
+      "catch": 11669.9983,
       "n_boats": 3796,
       "month": "November 2025",
       "year": "2025"
@@ -13516,7 +13516,7 @@
       "landing_weight": 0.856,
       "n_landings_per_boat": 9.547,
       "revenue": 0,
-      "catch": 24159.9605,
+      "catch": 24159.9566,
       "n_boats": 3796,
       "month": "November 2025",
       "year": "2025"
@@ -13538,7 +13538,7 @@
       "landing_weight": 1.3894,
       "n_landings_per_boat": 9.3807,
       "revenue": 0,
-      "catch": 49272.9705,
+      "catch": 49272.8667,
       "n_boats": 3796,
       "month": "November 2025",
       "year": "2025"
@@ -13560,7 +13560,7 @@
       "landing_weight": 0.8818,
       "n_landings_per_boat": 9.3807,
       "revenue": 0,
-      "catch": 28324.9692,
+      "catch": 28324.9663,
       "n_boats": 3796,
       "month": "November 2025",
       "year": "2025"
@@ -13582,7 +13582,7 @@
       "landing_weight": 2.0349,
       "n_landings_per_boat": 9.3807,
       "revenue": 0,
-      "catch": 98967.1739,
+      "catch": 98967.1554,
       "n_boats": 3796,
       "month": "November 2025",
       "year": "2025"
@@ -13593,7 +13593,7 @@
       "landing_weight": 0.4472,
       "n_landings_per_boat": 9.139,
       "revenue": 0,
-      "catch": 15584.4318,
+      "catch": 15584.3616,
       "n_boats": 3796,
       "month": "December 2025",
       "year": "2025"
@@ -13604,7 +13604,7 @@
       "landing_weight": 0.4637,
       "n_landings_per_boat": 9.3271,
       "revenue": 0,
-      "catch": 12101.1193,
+      "catch": 12101.1188,
       "n_boats": 3796,
       "month": "December 2025",
       "year": "2025"
@@ -13615,7 +13615,7 @@
       "landing_weight": 0.8771,
       "n_landings_per_boat": 10.2859,
       "revenue": 0,
-      "catch": 28418.6804,
+      "catch": 28418.5455,
       "n_boats": 3796,
       "month": "December 2025",
       "year": "2025"
@@ -13637,7 +13637,7 @@
       "landing_weight": 0.7803,
       "n_landings_per_boat": 9.9243,
       "revenue": 0,
-      "catch": 65433.8825,
+      "catch": 65433.8712,
       "n_boats": 3796,
       "month": "December 2025",
       "year": "2025"
@@ -13648,7 +13648,7 @@
       "landing_weight": 0.9897,
       "n_landings_per_boat": 9.9243,
       "revenue": 0,
-      "catch": 41676.9184,
+      "catch": 41676.915,
       "n_boats": 3796,
       "month": "December 2025",
       "year": "2025"
@@ -13659,7 +13659,7 @@
       "landing_weight": 0.2728,
       "n_landings_per_boat": 10.0364,
       "revenue": 0,
-      "catch": 5671.0605,
+      "catch": 5671.0577,
       "n_boats": 3796,
       "month": "December 2025",
       "year": "2025"
@@ -13681,7 +13681,7 @@
       "landing_weight": 1.0391,
       "n_landings_per_boat": 9.3271,
       "revenue": 0,
-      "catch": 39348.718,
+      "catch": 39348.6093,
       "n_boats": 3796,
       "month": "December 2025",
       "year": "2025"
@@ -13690,7 +13690,7 @@
       "date_bin_start": "2025-12-01",
       "grouped_taxa": "RAX",
       "landing_weight": 0.1314,
-      "n_landings_per_boat": 9.6016,
+      "n_landings_per_boat": 9.6015,
       "revenue": 0,
       "catch": 3862.4581,
       "n_boats": 3796,
@@ -13725,7 +13725,7 @@
       "landing_weight": 0.7284,
       "n_landings_per_boat": 9.3271,
       "revenue": 0,
-      "catch": 19019.4771,
+      "catch": 19019.4636,
       "n_boats": 3796,
       "month": "December 2025",
       "year": "2025"
@@ -13736,7 +13736,7 @@
       "landing_weight": 0.6145,
       "n_landings_per_boat": 10.3182,
       "revenue": 0,
-      "catch": 21321.2853,
+      "catch": 21321.2807,
       "n_boats": 3796,
       "month": "January 2026",
       "year": "2026"
@@ -13758,7 +13758,7 @@
       "landing_weight": 0.7561,
       "n_landings_per_boat": 12.8138,
       "revenue": 0,
-      "catch": 24201.6854,
+      "catch": 24201.6811,
       "n_boats": 3796,
       "month": "January 2026",
       "year": "2026"
@@ -13824,7 +13824,7 @@
       "landing_weight": 1.1488,
       "n_landings_per_boat": 11.737,
       "revenue": 0,
-      "catch": 42817.0769,
+      "catch": 42817.0729,
       "n_boats": 3796,
       "month": "January 2026",
       "year": "2026"
@@ -13868,7 +13868,7 @@
       "landing_weight": 1.4029,
       "n_landings_per_boat": 11.737,
       "revenue": 0,
-      "catch": 81326.5047,
+      "catch": 81326.5046,
       "n_boats": 3796,
       "month": "January 2026",
       "year": "2026"
@@ -13879,7 +13879,7 @@
       "landing_weight": 0.3161,
       "n_landings_per_boat": 10.6422,
       "revenue": 0,
-      "catch": 11906.7853,
+      "catch": 11907.3889,
       "n_boats": 3796,
       "month": "February 2026",
       "year": "2026"
@@ -13890,7 +13890,7 @@
       "landing_weight": 1.3912,
       "n_landings_per_boat": 11.9592,
       "revenue": 0,
-      "catch": 34176.3548,
+      "catch": 34176.5221,
       "n_boats": 3796,
       "month": "February 2026",
       "year": "2026"
@@ -13901,7 +13901,7 @@
       "landing_weight": 0.4908,
       "n_landings_per_boat": 13.1164,
       "revenue": 0,
-      "catch": 16664.4275,
+      "catch": 16666.6657,
       "n_boats": 3796,
       "month": "February 2026",
       "year": "2026"
@@ -13912,7 +13912,7 @@
       "landing_weight": 2.3016,
       "n_landings_per_boat": 11.9592,
       "revenue": 0,
-      "catch": 142170.9359,
+      "catch": 142170.9382,
       "n_boats": 3796,
       "month": "February 2026",
       "year": "2026"
@@ -13923,7 +13923,7 @@
       "landing_weight": 0.526,
       "n_landings_per_boat": 12.5589,
       "revenue": 0,
-      "catch": 50372.1768,
+      "catch": 50372.1803,
       "n_boats": 3796,
       "month": "February 2026",
       "year": "2026"
@@ -13934,7 +13934,7 @@
       "landing_weight": 1.5827,
       "n_landings_per_boat": 12.5589,
       "revenue": 0,
-      "catch": 85836.2355,
+      "catch": 85836.3438,
       "n_boats": 3796,
       "month": "February 2026",
       "year": "2026"
@@ -13943,9 +13943,9 @@
       "date_bin_start": "2026-02-01",
       "grouped_taxa": "LWX",
       "landing_weight": 0.2411,
-      "n_landings_per_boat": 11.0931,
+      "n_landings_per_boat": 11.0932,
       "revenue": 0,
-      "catch": 4375.8118,
+      "catch": 4375.9571,
       "n_boats": 3796,
       "month": "February 2026",
       "year": "2026"
@@ -13967,7 +13967,7 @@
       "landing_weight": 1.2746,
       "n_landings_per_boat": 11.9592,
       "revenue": 0,
-      "catch": 44564.1321,
+      "catch": 44564.7496,
       "n_boats": 3796,
       "month": "February 2026",
       "year": "2026"
@@ -13978,7 +13978,7 @@
       "landing_weight": 0.2342,
       "n_landings_per_boat": 12.4115,
       "revenue": 0,
-      "catch": 7949.3782,
+      "catch": 7949.5239,
       "n_boats": 3796,
       "month": "February 2026",
       "year": "2026"
@@ -13989,7 +13989,7 @@
       "landing_weight": 1.1279,
       "n_landings_per_boat": 11.9592,
       "revenue": 0,
-      "catch": 43382.3648,
+      "catch": 43380.2007,
       "n_boats": 3796,
       "month": "February 2026",
       "year": "2026"
@@ -14000,7 +14000,7 @@
       "landing_weight": 0.7443,
       "n_landings_per_boat": 11.9592,
       "revenue": 0,
-      "catch": 17482.8046,
+      "catch": 17482.9159,
       "n_boats": 3796,
       "month": "February 2026",
       "year": "2026"
@@ -14011,7 +14011,7 @@
       "landing_weight": 1.4586,
       "n_landings_per_boat": 11.9592,
       "revenue": 0,
-      "catch": 86240.8157,
+      "catch": 86240.5953,
       "n_boats": 3796,
       "month": "February 2026",
       "year": "2026"
@@ -14022,7 +14022,7 @@
       "landing_weight": 0.255,
       "n_landings_per_boat": 11.2699,
       "revenue": 0,
-      "catch": 8340.3613,
+      "catch": 8340.3484,
       "n_boats": 3796,
       "month": "March 2026",
       "year": "2026"
@@ -14044,7 +14044,7 @@
       "landing_weight": 0.7103,
       "n_landings_per_boat": 13.3917,
       "revenue": 0,
-      "catch": 21065.7822,
+      "catch": 21065.7555,
       "n_boats": 3796,
       "month": "March 2026",
       "year": "2026"
@@ -14077,7 +14077,7 @@
       "landing_weight": 7.5394,
       "n_landings_per_boat": 12.8254,
       "revenue": 0,
-      "catch": 250971.4865,
+      "catch": 250971.4818,
       "n_boats": 3796,
       "month": "March 2026",
       "year": "2026"
@@ -14088,7 +14088,7 @@
       "landing_weight": 0.2555,
       "n_landings_per_boat": 10.3995,
       "revenue": 0,
-      "catch": 4888.1482,
+      "catch": 4888.1422,
       "n_boats": 3796,
       "month": "March 2026",
       "year": "2026"
@@ -14110,7 +14110,7 @@
       "landing_weight": 1.385,
       "n_landings_per_boat": 12.2088,
       "revenue": 0,
-      "catch": 68162.8355,
+      "catch": 68162.8137,
       "n_boats": 3796,
       "month": "March 2026",
       "year": "2026"
@@ -14132,7 +14132,7 @@
       "landing_weight": 0.9363,
       "n_landings_per_boat": 12.2088,
       "revenue": 0,
-      "catch": 43093.0014,
+      "catch": 43093.0006,
       "n_boats": 3796,
       "month": "March 2026",
       "year": "2026"
@@ -14143,7 +14143,7 @@
       "landing_weight": 0.7214,
       "n_landings_per_boat": 12.2088,
       "revenue": 0,
-      "catch": 10188.6103,
+      "catch": 10188.6097,
       "n_boats": 3796,
       "month": "March 2026",
       "year": "2026"
@@ -14154,7 +14154,7 @@
       "landing_weight": 1.0632,
       "n_landings_per_boat": 12.2088,
       "revenue": 0,
-      "catch": 61731.8975,
+      "catch": 61731.8956,
       "n_boats": 3796,
       "month": "March 2026",
       "year": "2026"
@@ -14187,7 +14187,7 @@
       "landing_weight": 1.0459,
       "n_landings_per_boat": 12.0221,
       "revenue": 0,
-      "catch": 35636.4335,
+      "catch": 35636.4308,
       "n_boats": 3796,
       "month": "April 2026",
       "year": "2026"
@@ -14231,7 +14231,7 @@
       "landing_weight": 0.1119,
       "n_landings_per_boat": 10.8976,
       "revenue": 0,
-      "catch": 2417.6522,
+      "catch": 2417.652,
       "n_boats": 3796,
       "month": "April 2026",
       "year": "2026"
@@ -14253,7 +14253,7 @@
       "landing_weight": 1.0112,
       "n_landings_per_boat": 11.0083,
       "revenue": 0,
-      "catch": 35276.6962,
+      "catch": 35276.6947,
       "n_boats": 3796,
       "month": "April 2026",
       "year": "2026"
@@ -14297,7 +14297,7 @@
       "landing_weight": 1.0221,
       "n_landings_per_boat": 11.0083,
       "revenue": 0,
-      "catch": 51934.2598,
+      "catch": 51934.2595,
       "n_boats": 3796,
       "month": "April 2026",
       "year": "2026"
@@ -14330,7 +14330,7 @@
       "landing_weight": 0.6139,
       "n_landings_per_boat": 11.6472,
       "revenue": 0,
-      "catch": 18487.911,
+      "catch": 18487.8749,
       "n_boats": 3796,
       "month": "May 2026",
       "year": "2026"
@@ -14374,7 +14374,7 @@
       "landing_weight": 0.7273,
       "n_landings_per_boat": 10.7613,
       "revenue": 0,
-      "catch": 16474.6279,
+      "catch": 16474.6254,
       "n_boats": 3796,
       "month": "May 2026",
       "year": "2026"
@@ -14396,7 +14396,7 @@
       "landing_weight": 1.0947,
       "n_landings_per_boat": 10.7137,
       "revenue": 0,
-      "catch": 31854.6453,
+      "catch": 31854.6122,
       "n_boats": 3796,
       "month": "May 2026",
       "year": "2026"
@@ -14418,7 +14418,7 @@
       "landing_weight": 1.3025,
       "n_landings_per_boat": 10.7137,
       "revenue": 0,
-      "catch": 40183.0857,
+      "catch": 40183.0393,
       "n_boats": 3796,
       "month": "May 2026",
       "year": "2026"
@@ -14440,7 +14440,7 @@
       "landing_weight": 0.6556,
       "n_landings_per_boat": 10.7137,
       "revenue": 0,
-      "catch": 22077.6905,
+      "catch": 22077.6776,
       "n_boats": 3796,
       "month": "May 2026",
       "year": "2026"
@@ -14473,7 +14473,7 @@
       "landing_weight": 0.4255,
       "n_landings_per_boat": 11.2424,
       "revenue": 0,
-      "catch": 12390.6417,
+      "catch": 12390.6617,
       "n_boats": 3796,
       "month": "June 2026",
       "year": "2026"
@@ -14539,7 +14539,7 @@
       "landing_weight": 0.857,
       "n_landings_per_boat": 10.4252,
       "revenue": 0,
-      "catch": 30934.5279,
+      "catch": 30934.555,
       "n_boats": 3796,
       "month": "June 2026",
       "year": "2026"
@@ -14561,7 +14561,7 @@
       "landing_weight": 1.1678,
       "n_landings_per_boat": 10.4252,
       "revenue": 0,
-      "catch": 40249.86,
+      "catch": 40249.8718,
       "n_boats": 3796,
       "month": "June 2026",
       "year": "2026"
@@ -14572,7 +14572,7 @@
       "landing_weight": 0.5913,
       "n_landings_per_boat": 10.4252,
       "revenue": 0,
-      "catch": 10400.8601,
+      "catch": 10400.8602,
       "n_boats": 3796,
       "month": "June 2026",
       "year": "2026"
@@ -14583,7 +14583,7 @@
       "landing_weight": 0.7699,
       "n_landings_per_boat": 10.4252,
       "revenue": 0,
-      "catch": 28627.6883,
+      "catch": 28627.6959,
       "n_boats": 3796,
       "month": "June 2026",
       "year": "2026"
@@ -14605,7 +14605,7 @@
       "landing_weight": 0.615,
       "n_landings_per_boat": 10.9502,
       "revenue": 0,
-      "catch": 17214.2968,
+      "catch": 17214.2972,
       "n_boats": 3796,
       "month": "July 2026",
       "year": "2026"
@@ -14616,7 +14616,7 @@
       "landing_weight": 0.2341,
       "n_landings_per_boat": 12.1111,
       "revenue": 0,
-      "catch": 7047.7458,
+      "catch": 7047.7699,
       "n_boats": 3796,
       "month": "July 2026",
       "year": "2026"
@@ -14649,7 +14649,7 @@
       "landing_weight": 1.6202,
       "n_landings_per_boat": 11.6106,
       "revenue": 0,
-      "catch": 69789.3937,
+      "catch": 69789.3938,
       "n_boats": 3796,
       "month": "July 2026",
       "year": "2026"
@@ -14660,7 +14660,7 @@
       "landing_weight": 0.1194,
       "n_landings_per_boat": 11.3797,
       "revenue": 0,
-      "catch": 4006.6783,
+      "catch": 4006.6784,
       "n_boats": 3796,
       "month": "July 2026",
       "year": "2026"
@@ -14682,7 +14682,7 @@
       "landing_weight": 1.2611,
       "n_landings_per_boat": 10.9502,
       "revenue": 0,
-      "catch": 63720.0519,
+      "catch": 63720.1206,
       "n_boats": 3796,
       "month": "July 2026",
       "year": "2026"
@@ -14704,7 +14704,7 @@
       "landing_weight": 0.7769,
       "n_landings_per_boat": 10.9502,
       "revenue": 0,
-      "catch": 25911.2589,
+      "catch": 25911.274,
       "n_boats": 3796,
       "month": "July 2026",
       "year": "2026"
@@ -14715,7 +14715,7 @@
       "landing_weight": 0.7497,
       "n_landings_per_boat": 10.9502,
       "revenue": 0,
-      "catch": 13168.1498,
+      "catch": 13168.1507,
       "n_boats": 3796,
       "month": "July 2026",
       "year": "2026"
@@ -14726,7 +14726,7 @@
       "landing_weight": 0.8177,
       "n_landings_per_boat": 10.9502,
       "revenue": 0,
-      "catch": 38681.4667,
+      "catch": 38681.484,
       "n_boats": 3796,
       "month": "July 2026",
       "year": "2026"
@@ -14748,7 +14748,7 @@
       "landing_weight": 1.1249,
       "n_landings_per_boat": 10.7432,
       "revenue": 0,
-      "catch": 18803.0033,
+      "catch": 18803.0032,
       "n_boats": 3796,
       "month": "August 2026",
       "year": "2026"
@@ -14759,7 +14759,7 @@
       "landing_weight": 0.293,
       "n_landings_per_boat": 12.0074,
       "revenue": 0,
-      "catch": 9776.9036,
+      "catch": 9776.899,
       "n_boats": 3796,
       "month": "August 2026",
       "year": "2026"
@@ -14825,7 +14825,7 @@
       "landing_weight": 1.3002,
       "n_landings_per_boat": 10.7432,
       "revenue": 0,
-      "catch": 43601.1249,
+      "catch": 43601.1077,
       "n_boats": 3796,
       "month": "August 2026",
       "year": "2026"
@@ -14847,7 +14847,7 @@
       "landing_weight": 1.2267,
       "n_landings_per_boat": 10.7432,
       "revenue": 0,
-      "catch": 42622.9562,
+      "catch": 42622.9494,
       "n_boats": 3796,
       "month": "August 2026",
       "year": "2026"
@@ -14869,7 +14869,7 @@
       "landing_weight": 2.7156,
       "n_landings_per_boat": 10.7432,
       "revenue": 0,
-      "catch": 125830.26,
+      "catch": 125830.2589,
       "n_boats": 3796,
       "month": "August 2026",
       "year": "2026"
@@ -14878,7 +14878,7 @@
       "date_bin_start": "2026-09-01",
       "grouped_taxa": "BEN",
       "landing_weight": 0.0046,
-      "n_landings_per_boat": 10.1146,
+      "n_landings_per_boat": 10.1148,
       "revenue": 0,
       "catch": 112.9696,
       "n_boats": 3796,
@@ -14889,9 +14889,9 @@
       "date_bin_start": "2026-09-01",
       "grouped_taxa": "CGX",
       "landing_weight": 1.1977,
-      "n_landings_per_boat": 10.3844,
+      "n_landings_per_boat": 10.3846,
       "revenue": 0,
-      "catch": 19814.6477,
+      "catch": 19813.0748,
       "n_boats": 3796,
       "month": "September 2026",
       "year": "2026"
@@ -14899,10 +14899,10 @@
     {
       "date_bin_start": "2026-09-01",
       "grouped_taxa": "CJX",
-      "landing_weight": 0.224,
-      "n_landings_per_boat": 11.4759,
+      "landing_weight": 0.219,
+      "n_landings_per_boat": 11.4761,
       "revenue": 0,
-      "catch": 5747.7456,
+      "catch": 5605.3518,
       "n_boats": 3796,
       "month": "September 2026",
       "year": "2026"
@@ -14911,7 +14911,7 @@
       "date_bin_start": "2026-09-01",
       "grouped_taxa": "CLP",
       "landing_weight": 2.1983,
-      "n_landings_per_boat": 10.3844,
+      "n_landings_per_boat": 10.3846,
       "revenue": 0,
       "catch": 75056.8968,
       "n_boats": 3796,
@@ -14922,7 +14922,7 @@
       "date_bin_start": "2026-09-01",
       "grouped_taxa": "FLY",
       "landing_weight": 0.0858,
-      "n_landings_per_boat": 10.9817,
+      "n_landings_per_boat": 10.9819,
       "revenue": 0,
       "catch": 4685.3015,
       "n_boats": 3796,
@@ -14933,7 +14933,7 @@
       "date_bin_start": "2026-09-01",
       "grouped_taxa": "GZP",
       "landing_weight": 0.5766,
-      "n_landings_per_boat": 10.9817,
+      "n_landings_per_boat": 10.9819,
       "revenue": 0,
       "catch": 21865.1688,
       "n_boats": 3796,
@@ -14943,10 +14943,10 @@
     {
       "date_bin_start": "2026-09-01",
       "grouped_taxa": "LWX",
-      "landing_weight": 0.069,
-      "n_landings_per_boat": 10.549,
+      "landing_weight": 0.0683,
+      "n_landings_per_boat": 10.5493,
       "revenue": 0,
-      "catch": 768.8201,
+      "catch": 754.31,
       "n_boats": 3796,
       "month": "September 2026",
       "year": "2026"
@@ -14965,10 +14965,10 @@
     {
       "date_bin_start": "2026-09-01",
       "grouped_taxa": "MZZ",
-      "landing_weight": 1.1243,
-      "n_landings_per_boat": 10.3844,
+      "landing_weight": 1.1184,
+      "n_landings_per_boat": 10.3846,
       "revenue": 0,
-      "catch": 29980.6489,
+      "catch": 29785.1696,
       "n_boats": 3796,
       "month": "September 2026",
       "year": "2026"
@@ -14977,7 +14977,7 @@
       "date_bin_start": "2026-09-01",
       "grouped_taxa": "RAX",
       "landing_weight": 0.1181,
-      "n_landings_per_boat": 10.7793,
+      "n_landings_per_boat": 10.7795,
       "revenue": 0,
       "catch": 3204.0489,
       "n_boats": 3796,
@@ -14987,10 +14987,10 @@
     {
       "date_bin_start": "2026-09-01",
       "grouped_taxa": "SDX",
-      "landing_weight": 1.3651,
-      "n_landings_per_boat": 10.3844,
+      "landing_weight": 1.3486,
+      "n_landings_per_boat": 10.3846,
       "revenue": 0,
-      "catch": 36071.2352,
+      "catch": 35508.1242,
       "n_boats": 3796,
       "month": "September 2026",
       "year": "2026"
@@ -14999,7 +14999,7 @@
       "date_bin_start": "2026-09-01",
       "grouped_taxa": "SNA",
       "landing_weight": 0.4898,
-      "n_landings_per_boat": 10.3844,
+      "n_landings_per_boat": 10.3846,
       "revenue": 0,
       "catch": 6201.7558,
       "n_boats": 3796,
@@ -15009,10 +15009,10 @@
     {
       "date_bin_start": "2026-09-01",
       "grouped_taxa": "TUN",
-      "landing_weight": 17.826,
-      "n_landings_per_boat": 10.3844,
+      "landing_weight": 17.8287,
+      "n_landings_per_boat": 10.3846,
       "revenue": 0,
-      "catch": 444977.2205,
+      "catch": 445072.7364,
       "n_boats": 3796,
       "month": "September 2026",
       "year": "2026"
@@ -15025,7 +15025,7 @@
       "landing_weight": 0.0421,
       "n_landings_per_boat": 129.4238,
       "revenue": 0,
-      "catch": 31583.7395,
+      "catch": 31584.153,
       "n_boats": 3796,
       "year": "2018"
     },
@@ -15035,7 +15035,7 @@
       "landing_weight": 1.1579,
       "n_landings_per_boat": 134.5653,
       "revenue": 0,
-      "catch": 245891.9071,
+      "catch": 245891.9196,
       "n_boats": 3796,
       "year": "2018"
     },
@@ -15045,7 +15045,7 @@
       "landing_weight": 0.2894,
       "n_landings_per_boat": 148.6279,
       "revenue": 0,
-      "catch": 158713.0071,
+      "catch": 158713.106,
       "n_boats": 3796,
       "year": "2018"
     },
@@ -15075,7 +15075,7 @@
       "landing_weight": 0.6184,
       "n_landings_per_boat": 142.5487,
       "revenue": 0,
-      "catch": 234984.8617,
+      "catch": 234985.3317,
       "n_boats": 3796,
       "year": "2018"
     },
@@ -15085,7 +15085,7 @@
       "landing_weight": 0.0731,
       "n_landings_per_boat": 133.0094,
       "revenue": 0,
-      "catch": 10827.802,
+      "catch": 10827.8068,
       "n_boats": 3796,
       "year": "2018"
     },
@@ -15105,7 +15105,7 @@
       "landing_weight": 0.9084,
       "n_landings_per_boat": 134.5653,
       "revenue": 0,
-      "catch": 559648.9584,
+      "catch": 559653.8704,
       "n_boats": 3796,
       "year": "2018"
     },
@@ -15115,7 +15115,7 @@
       "landing_weight": 0.2386,
       "n_landings_per_boat": 139.366,
       "revenue": 0,
-      "catch": 153789.2337,
+      "catch": 153789.2666,
       "n_boats": 3796,
       "year": "2018"
     },
@@ -15125,7 +15125,7 @@
       "landing_weight": 1.469,
       "n_landings_per_boat": 134.5653,
       "revenue": 0,
-      "catch": 826352.0352,
+      "catch": 826353.2068,
       "n_boats": 3796,
       "year": "2018"
     },
@@ -15135,7 +15135,7 @@
       "landing_weight": 0.6915,
       "n_landings_per_boat": 134.5653,
       "revenue": 0,
-      "catch": 130982.399,
+      "catch": 130982.5328,
       "n_boats": 3796,
       "year": "2018"
     },
@@ -15805,7 +15805,7 @@
       "landing_weight": 0.3569,
       "n_landings_per_boat": 123.5538,
       "revenue": 0,
-      "catch": 143810.2654,
+      "catch": 143809.1987,
       "n_boats": 3796,
       "year": "2024"
     },
@@ -15815,7 +15815,7 @@
       "landing_weight": 1.0038,
       "n_landings_per_boat": 131.4055,
       "revenue": 0,
-      "catch": 368262.8446,
+      "catch": 368262.8447,
       "n_boats": 3796,
       "year": "2024"
     },
@@ -15825,7 +15825,7 @@
       "landing_weight": 0.638,
       "n_landings_per_boat": 145.8549,
       "revenue": 0,
-      "catch": 251428.0397,
+      "catch": 251427.9654,
       "n_boats": 3796,
       "year": "2024"
     },
@@ -15835,7 +15835,7 @@
       "landing_weight": 2.9548,
       "n_landings_per_boat": 131.4055,
       "revenue": 0,
-      "catch": 1591290.1439,
+      "catch": 1591290.144,
       "n_boats": 3796,
       "year": "2024"
     },
@@ -15845,7 +15845,7 @@
       "landing_weight": 0.7321,
       "n_landings_per_boat": 138.9228,
       "revenue": 0,
-      "catch": 675716.3283,
+      "catch": 675716.3092,
       "n_boats": 3796,
       "year": "2024"
     },
@@ -15855,7 +15855,7 @@
       "landing_weight": 1.3049,
       "n_landings_per_boat": 138.9228,
       "revenue": 0,
-      "catch": 695446.9664,
+      "catch": 695446.7081,
       "n_boats": 3796,
       "year": "2024"
     },
@@ -15863,9 +15863,9 @@
       "date_bin_start": "2024-01-01",
       "grouped_taxa": "LWX",
       "landing_weight": 0.3555,
-      "n_landings_per_boat": 129.961,
+      "n_landings_per_boat": 129.9609,
       "revenue": 0,
-      "catch": 98390.008,
+      "catch": 98389.9345,
       "n_boats": 3796,
       "year": "2024"
     },
@@ -15885,7 +15885,7 @@
       "landing_weight": 1.1573,
       "n_landings_per_boat": 131.4055,
       "revenue": 0,
-      "catch": 468905.9194,
+      "catch": 468905.9334,
       "n_boats": 3796,
       "year": "2024"
     },
@@ -15905,7 +15905,7 @@
       "landing_weight": 0.9995,
       "n_landings_per_boat": 131.4055,
       "revenue": 0,
-      "catch": 324589.6647,
+      "catch": 324589.6445,
       "n_boats": 3796,
       "year": "2024"
     },
@@ -15915,7 +15915,7 @@
       "landing_weight": 0.9149,
       "n_landings_per_boat": 131.4055,
       "revenue": 0,
-      "catch": 188104.2411,
+      "catch": 188104.242,
       "n_boats": 3796,
       "year": "2024"
     },
@@ -15925,7 +15925,7 @@
       "landing_weight": 2.1148,
       "n_landings_per_boat": 131.4055,
       "revenue": 0,
-      "catch": 1326222.47,
+      "catch": 1326222.5167,
       "n_boats": 3796,
       "year": "2024"
     },
@@ -15935,7 +15935,7 @@
       "landing_weight": 0.2458,
       "n_landings_per_boat": 118.0211,
       "revenue": 0,
-      "catch": 98717.3057,
+      "catch": 98716.9554,
       "n_boats": 3796,
       "year": "2025"
     },
@@ -15945,7 +15945,7 @@
       "landing_weight": 1.0773,
       "n_landings_per_boat": 125.5804,
       "revenue": 0,
-      "catch": 310167.3369,
+      "catch": 310167.3197,
       "n_boats": 3796,
       "year": "2025"
     },
@@ -15955,7 +15955,7 @@
       "landing_weight": 0.7688,
       "n_landings_per_boat": 138.0781,
       "revenue": 0,
-      "catch": 288491.7505,
+      "catch": 288491.157,
       "n_boats": 3796,
       "year": "2025"
     },
@@ -15975,7 +15975,7 @@
       "landing_weight": 0.525,
       "n_landings_per_boat": 132.7978,
       "revenue": 0,
-      "catch": 529099.1475,
+      "catch": 529099.1348,
       "n_boats": 3796,
       "year": "2025"
     },
@@ -15985,7 +15985,7 @@
       "landing_weight": 1.4233,
       "n_landings_per_boat": 132.7978,
       "revenue": 0,
-      "catch": 859477.8178,
+      "catch": 859477.752,
       "n_boats": 3796,
       "year": "2025"
     },
@@ -15993,9 +15993,9 @@
       "date_bin_start": "2025-01-01",
       "grouped_taxa": "LWX",
       "landing_weight": 0.3263,
-      "n_landings_per_boat": 123.184,
+      "n_landings_per_boat": 123.1839,
       "revenue": 0,
-      "catch": 86270.4685,
+      "catch": 86270.4478,
       "n_boats": 3796,
       "year": "2025"
     },
@@ -16015,7 +16015,7 @@
       "landing_weight": 1.2008,
       "n_landings_per_boat": 125.5804,
       "revenue": 0,
-      "catch": 505431.173,
+      "catch": 505430.7398,
       "n_boats": 3796,
       "year": "2025"
     },
@@ -16035,7 +16035,7 @@
       "landing_weight": 0.9946,
       "n_landings_per_boat": 125.5804,
       "revenue": 0,
-      "catch": 377086.777,
+      "catch": 377086.7767,
       "n_boats": 3796,
       "year": "2025"
     },
@@ -16045,7 +16045,7 @@
       "landing_weight": 0.8529,
       "n_landings_per_boat": 125.5804,
       "revenue": 0,
-      "catch": 208369.4019,
+      "catch": 208369.3875,
       "n_boats": 3796,
       "year": "2025"
     },
@@ -16055,7 +16055,7 @@
       "landing_weight": 1.6535,
       "n_landings_per_boat": 125.5804,
       "revenue": 0,
-      "catch": 996583.9432,
+      "catch": 996583.9205,
       "n_boats": 3796,
       "year": "2025"
     },
@@ -16063,9 +16063,9 @@
       "date_bin_start": "2026-01-01",
       "grouped_taxa": "BEN",
       "landing_weight": 0.1374,
-      "n_landings_per_boat": 93.3706,
+      "n_landings_per_boat": 93.3708,
       "revenue": 0,
-      "catch": 43475.8068,
+      "catch": 43476.3928,
       "n_boats": 3796,
       "year": "2026"
     },
@@ -16073,19 +16073,19 @@
       "date_bin_start": "2026-01-01",
       "grouped_taxa": "CGX",
       "landing_weight": 1.4178,
-      "n_landings_per_boat": 100.13,
+      "n_landings_per_boat": 100.1302,
       "revenue": 0,
-      "catch": 246591.1132,
+      "catch": 246589.708,
       "n_boats": 3796,
       "year": "2026"
     },
     {
       "date_bin_start": "2026-01-01",
       "grouped_taxa": "CJX",
-      "landing_weight": 0.5326,
-      "n_landings_per_boat": 109.8278,
+      "landing_weight": 0.5321,
+      "n_landings_per_boat": 109.8281,
       "revenue": 0,
-      "catch": 151019.2763,
+      "catch": 150879.0903,
       "n_boats": 3796,
       "year": "2026"
     },
@@ -16093,9 +16093,9 @@
       "date_bin_start": "2026-01-01",
       "grouped_taxa": "CLP",
       "landing_weight": 2.3732,
-      "n_landings_per_boat": 100.13,
+      "n_landings_per_boat": 100.1302,
       "revenue": 0,
-      "catch": 1044907.7456,
+      "catch": 1044907.748,
       "n_boats": 3796,
       "year": "2026"
     },
@@ -16103,9 +16103,9 @@
       "date_bin_start": "2026-01-01",
       "grouped_taxa": "FLY",
       "landing_weight": 0.3362,
-      "n_landings_per_boat": 105.3874,
+      "n_landings_per_boat": 105.3876,
       "revenue": 0,
-      "catch": 243538.6918,
+      "catch": 243538.6953,
       "n_boats": 3796,
       "year": "2026"
     },
@@ -16113,19 +16113,19 @@
       "date_bin_start": "2026-01-01",
       "grouped_taxa": "GZP",
       "landing_weight": 1.9046,
-      "n_landings_per_boat": 105.3874,
+      "n_landings_per_boat": 105.3876,
       "revenue": 0,
-      "catch": 689062.891,
+      "catch": 689062.9947,
       "n_boats": 3796,
       "year": "2026"
     },
     {
       "date_bin_start": "2026-01-01",
       "grouped_taxa": "LWX",
-      "landing_weight": 0.263,
-      "n_landings_per_boat": 98.1337,
+      "landing_weight": 0.2629,
+      "n_landings_per_boat": 98.1341,
       "revenue": 0,
-      "catch": 51402.4843,
+      "catch": 51388.1107,
       "n_boats": 3796,
       "year": "2026"
     },
@@ -16142,10 +16142,10 @@
     {
       "date_bin_start": "2026-01-01",
       "grouped_taxa": "MZZ",
-      "landing_weight": 1.1619,
-      "n_landings_per_boat": 100.13,
+      "landing_weight": 1.1612,
+      "n_landings_per_boat": 100.1302,
       "revenue": 0,
-      "catch": 390911.7395,
+      "catch": 390716.8959,
       "n_boats": 3796,
       "year": "2026"
     },
@@ -16153,19 +16153,19 @@
       "date_bin_start": "2026-01-01",
       "grouped_taxa": "RAX",
       "landing_weight": 0.1151,
-      "n_landings_per_boat": 103.6888,
+      "n_landings_per_boat": 103.689,
       "revenue": 0,
-      "catch": 32480.1635,
+      "catch": 32480.3092,
       "n_boats": 3796,
       "year": "2026"
     },
     {
       "date_bin_start": "2026-01-01",
       "grouped_taxa": "SDX",
-      "landing_weight": 1.1159,
-      "n_landings_per_boat": 100.13,
+      "landing_weight": 1.114,
+      "n_landings_per_boat": 100.1302,
       "revenue": 0,
-      "catch": 361953.6292,
+      "catch": 361388.327,
       "n_boats": 3796,
       "year": "2026"
     },
@@ -16173,19 +16173,19 @@
       "date_bin_start": "2026-01-01",
       "grouped_taxa": "SNA",
       "landing_weight": 0.6459,
-      "n_landings_per_boat": 100.13,
+      "n_landings_per_boat": 100.1302,
       "revenue": 0,
-      "catch": 101742.7114,
+      "catch": 101742.8231,
       "n_boats": 3796,
       "year": "2026"
     },
     {
       "date_bin_start": "2026-01-01",
       "grouped_taxa": "TUN",
-      "landing_weight": 3.0813,
-      "n_landings_per_boat": 100.13,
+      "landing_weight": 3.0816,
+      "n_landings_per_boat": 100.1302,
       "revenue": 0,
-      "catch": 941427.8037,
+      "catch": 941523.1077,
       "n_boats": 3796,
       "year": "2026"
     }

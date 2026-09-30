@@ -2,7 +2,7 @@
   "n_surveys": [
     {
       "Area": "Atauro island",
-      "n": 39785
+      "n": 39808
     },
     {
       "Area": "North Coast",
@@ -24,7 +24,7 @@
     },
     {
       "fish_group": "Other",
-      "tons": 4574
+      "tons": 4573
     },
     {
       "fish_group": "Small demersals",
@@ -38,7 +38,7 @@
   "estimated_revenue": [
     {
       "Area": "Atauro island",
-      "Estimated revenue": 13535504
+      "Estimated revenue": 13533236
     },
     {
       "Area": "North Coast",
@@ -55,7 +55,7 @@
       "data": [
         {
           "x": "Spear Gun",
-          "y": 7.179
+          "y": 7.177
         },
         {
           "x": "Gill Net",
@@ -163,7 +163,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 1.362
+          "y": 1.36
         }
       ]
     },
@@ -204,7 +204,7 @@
         },
         {
           "x": "Long Line",
-          "y": 5.403
+          "y": 5.405
         },
         {
           "x": "Seine",
@@ -221,7 +221,7 @@
       "data": [
         {
           "x": "Spear Gun",
-          "y": 10.21
+          "y": 10.215
         },
         {
           "x": "Gill Net",
@@ -304,7 +304,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 3.344
+          "y": 3.343
         }
       ]
     },
@@ -334,31 +334,31 @@
   "nutrients_per_catch": [
     {
       "nutrient_names": "Selenium",
-      "nut_rdi": 195.7639
+      "nut_rdi": 195.7488
     },
     {
       "nutrient_names": "Protein",
-      "nut_rdi": 49.3623
+      "nut_rdi": 49.3599
     },
     {
       "nutrient_names": "Zinc",
-      "nut_rdi": 31.3722
+      "nut_rdi": 31.372
     },
     {
       "nutrient_names": "Calcium",
-      "nut_rdi": 14.4529
+      "nut_rdi": 14.4508
     },
     {
       "nutrient_names": "Vitamin A",
-      "nut_rdi": 13.5937
+      "nut_rdi": 13.5918
     },
     {
       "nutrient_names": "Omega-3",
-      "nut_rdi": 8.7633
+      "nut_rdi": 8.7623
     },
     {
       "nutrient_names": "Iron",
-      "nut_rdi": 5.8391
+      "nut_rdi": 5.8385
     }
   ],
   "nutrients_habitat": [
@@ -383,7 +383,7 @@
         },
         {
           "x": "Deep",
-          "y": 3.986
+          "y": 3.987
         },
         {
           "x": "Beach",
@@ -437,7 +437,7 @@
         },
         {
           "x": "Seagrass",
-          "y": 1.021
+          "y": 1.02
         },
         {
           "x": "Deep",
@@ -596,19 +596,19 @@
       "municipality": "Atauro",
       "catch_preservation": "Box",
       "count": 41,
-      "perc": 0.3361
+      "perc": 0.3355
     },
     {
       "municipality": "Atauro",
       "catch_preservation": "Ice box",
-      "count": 7868,
-      "perc": 64.4971
+      "count": 7886,
+      "perc": 64.523
     },
     {
       "municipality": "Atauro",
       "catch_preservation": "Open",
       "count": 2299,
-      "perc": 18.8458
+      "perc": 18.8103
     },
     {
       "municipality": "Atauro",
@@ -619,8 +619,8 @@
     {
       "municipality": "Atauro",
       "catch_preservation": "Shade",
-      "count": 1989,
-      "perc": 16.3046
+      "count": 1994,
+      "perc": 16.3148
     },
     {
       "municipality": "Baucau",
@@ -972,7 +972,7 @@
     {
       "municipality": "Atauro",
       "gear": "Gill Net",
-      "cpue": 1.9669
+      "cpue": 1.9665
     },
     {
       "municipality": "Atauro",
@@ -987,7 +987,7 @@
     {
       "municipality": "Atauro",
       "gear": "Long Line",
-      "cpue": 2.3522
+      "cpue": 2.3422
     },
     {
       "municipality": "Atauro",
@@ -997,7 +997,7 @@
     {
       "municipality": "Atauro",
       "gear": "Spear Gun",
-      "cpue": 4.6131
+      "cpue": 4.6128
     },
     {
       "municipality": "Atauro",
