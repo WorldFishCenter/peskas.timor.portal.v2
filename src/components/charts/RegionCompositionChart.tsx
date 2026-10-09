@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react'
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
+import { DOWNLOAD_TOOLBAR } from '../../utils/charts/chartBase'
 import { useI18n } from '../../i18n'
 import { useTheme } from '../../hooks/useTheme'
 import type { MunicipalTaxaRecord } from '../../types/data'
@@ -86,7 +87,7 @@ function RegionCompositionChart({
       stacked: true,
       background: 'transparent',
       fontFamily: 'inherit',
-      toolbar: { show: false },
+      toolbar: DOWNLOAD_TOOLBAR,
       animations: {
         enabled: true,
         easing: 'easeinout',

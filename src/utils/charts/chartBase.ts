@@ -29,6 +29,24 @@ export function getBaseChartConfig(theme: Theme): Partial<ApexOptions> {
 }
 
 /**
+ * Toolbar with only the download menu (SVG / PNG / CSV)
+ */
+export const DOWNLOAD_TOOLBAR: NonNullable<ApexOptions['chart']>['toolbar'] = {
+  show: true,
+  tools: { download: true, selection: false, zoom: false, zoomin: false, zoomout: false, pan: false, reset: false },
+  export: {
+    csv: {
+      filename: 'peskas-timor',
+      // datetime x values are ms timestamps; write YYYY-MM-DD instead of ApexCharts' "Mon Jan 01 2024"
+      categoryFormatter: (cat: unknown) =>
+        typeof cat === 'number' && cat > 1e11 ? new Date(cat).toISOString().slice(0, 10) : cat,
+    },
+    png: { filename: 'peskas-timor' },
+    svg: { filename: 'peskas-timor' },
+  },
+}
+
+/**
  * Common label styling based on theme
  */
 export function getLabelStyle(theme: Theme, fontSize: string = '12px') {

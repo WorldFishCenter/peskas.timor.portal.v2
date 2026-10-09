@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react'
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
+import { DOWNLOAD_TOOLBAR } from '../../utils/charts/chartBase'
 import { useI18n } from '../../i18n'
 import { useTheme } from '../../hooks/useTheme'
 import type { MunicipalTaxaRecord, TaxaAggregatedRecord } from '../../types/data'
@@ -109,7 +110,7 @@ function TaxaBarChart({
   const options: ApexOptions = {
     chart: {
       type: 'bar',
-      toolbar: { show: false },
+      toolbar: DOWNLOAD_TOOLBAR,
       background: 'transparent',
       fontFamily: 'inherit',
       animations: {

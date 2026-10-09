@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react'
 import ReactApexChart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
+import { DOWNLOAD_TOOLBAR } from '../../utils/charts/chartBase'
 
 /** Y-axis line annotations (ApexCharts uses this shape; `YAxisAnnotations` is not exported). */
 type ApexYAxisLineAnnotation = NonNullable<NonNullable<ApexOptions['annotations']>['yaxis']>[number]
@@ -235,7 +236,7 @@ function TimeSeriesChart({
             text: `${t('common.max', { defaultValue: 'Max' })}: ${max.toLocaleString()}`,
             position: 'right',
             textAnchor: 'end',
-            offsetX: -10
+            offsetX: -40 // clear the download menu icon
           }
         })
       }
@@ -264,7 +265,7 @@ function TimeSeriesChart({
     chart: {
       type: chartType,
       background: 'transparent',
-      toolbar: { show: false },
+      toolbar: DOWNLOAD_TOOLBAR,
       zoom: { enabled: false },
       fontFamily: 'inherit',
       animations: {
