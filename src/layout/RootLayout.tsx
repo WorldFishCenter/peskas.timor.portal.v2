@@ -2,6 +2,7 @@ import { Link, NavLink, Outlet } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useI18n, type Lang } from '../i18n'
 import { ROUTES } from '../config/routes.config'
+import { PeskasLogo, PeskasMark } from '../components/PeskasLogo'
 
 type ThemeMode = 'light' | 'dark'
 
@@ -54,24 +55,13 @@ export default function RootLayout() {
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label={t('actions.toggle_navigation', { defaultValue: 'Toggle navigation' })}>
             <span className="navbar-toggler-icon"></span>
           </button>
-          <h1 className="navbar-brand navbar-brand-autodark navbar-brand-lockup-root d-none-navbar-horizontal pe-0 pe-md-3 mb-0">
-            <Link to={ROUTES.HOME} className="navbar-brand-lockup text-reset text-decoration-none">
-              <span className="navbar-brand-wordmark">
-                <span className="navbar-brand-title">{t('brand.title')}</span>
-                <span className="navbar-brand-subtitle text-muted">{t('brand.subtitle')}</span>
-              </span>
-              <span className="navbar-brand-flag-slot" aria-hidden="true">
-                <span className="navbar-brand-flag-frame">
-                  <img
-                    src="/images/tl_flag.svg"
-                    alt=""
-                    width={36}
-                    height={18}
-                    decoding="async"
-                    className="navbar-brand-flag-img"
-                  />
-                </span>
-              </span>
+          <h1 className="navbar-brand d-none-navbar-horizontal pe-0 pe-md-3 mb-0">
+            {/* The full logo, or the mark alone below 640px; with the country it reads "Peskas Timor-Leste". */}
+            <Link to={ROUTES.HOME} className="d-flex align-items-center gap-2 text-reset text-decoration-none">
+              <PeskasLogo className="peskas-logo" />
+              <PeskasMark className="peskas-mark" />
+              <span className="peskas-brand-name fs-3 fw-medium text-muted">{t('brand.country')}</span>
+              <img src="/images/tl_flag.svg" alt="" width={32} height={16} decoding="async" className="peskas-brand-flag" />
             </Link>
           </h1>
           <div className="navbar-nav flex-row order-md-last">

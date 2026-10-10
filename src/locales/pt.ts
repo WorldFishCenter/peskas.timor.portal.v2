@@ -2,8 +2,8 @@ import { en } from './en'
 
 export const pt: typeof en = {
   brand: {
-    title: 'PESKAAS | Timor-Leste',
-    subtitle: 'Painel de Gestão',
+    title: 'Peskas Timor-Leste',
+    country: 'Timor-Leste',
   },
   nav: {
     home: 'Início',

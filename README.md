@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/images/peskas-logo-dark.svg">
+  <img src=".github/images/peskas-logo.svg" alt="Peskas" height="48">
+</picture>
+
 # Peskas Timor-Leste
 
 The public website for data on Timor-Leste's small-scale fisheries: catch, revenue, prices, the species caught and the nutrition they provide.

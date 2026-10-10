@@ -1,7 +1,7 @@
 export const en = {
   brand: {
-    title: 'PESKAAS | Timor-Leste',
-    subtitle: 'Management Dashboard',
+    title: 'Peskas Timor-Leste',
+    country: 'Timor-Leste',
   },
   nav: {
     home: 'Home',

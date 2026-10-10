@@ -2,8 +2,8 @@ import { en } from './en'
 
 export const tet: typeof en = {
   brand: {
-    title: 'PESKAAS Timor-Leste',
-    subtitle: 'Dashboard Jestaun',
+    title: 'Peskas Timor-Leste',
+    country: 'Timor-Leste',
   },
   nav: {
     home: 'Uma',
