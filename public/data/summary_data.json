@@ -10,21 +10,21 @@
     },
     {
       "Area": "South Coast",
-      "n": 15746
+      "n": 15760
     }
   ],
   "estimated_tons": [
     {
       "fish_group": "Small pelagics",
-      "tons": 29827
+      "tons": 29837
     },
     {
       "fish_group": "Large pelagics",
-      "tons": 10587
+      "tons": 10588
     },
     {
       "fish_group": "Other",
-      "tons": 4563
+      "tons": 4562
     },
     {
       "fish_group": "Small demersals",
@@ -46,7 +46,7 @@
     },
     {
       "Area": "South Coast",
-      "Estimated revenue": 22754818
+      "Estimated revenue": 22825991
     }
   ],
   "catch_habitat": [
@@ -204,7 +204,7 @@
         },
         {
           "x": "Long Line",
-          "y": 5.414
+          "y": 5.416
         },
         {
           "x": "Seine",
@@ -334,31 +334,31 @@
   "nutrients_per_catch": [
     {
       "nutrient_names": "Selenium",
-      "nut_rdi": 194.4
+      "nut_rdi": 194.4236
     },
     {
       "nutrient_names": "Protein",
-      "nut_rdi": 48.9201
+      "nut_rdi": 48.9221
     },
     {
       "nutrient_names": "Zinc",
-      "nut_rdi": 31.2506
+      "nut_rdi": 31.2518
     },
     {
       "nutrient_names": "Calcium",
-      "nut_rdi": 14.3329
+      "nut_rdi": 14.3359
     },
     {
       "nutrient_names": "Vitamin A",
-      "nut_rdi": 13.371
+      "nut_rdi": 13.3696
     },
     {
       "nutrient_names": "Omega-3",
-      "nut_rdi": 8.693
+      "nut_rdi": 8.6941
     },
     {
       "nutrient_names": "Iron",
-      "nut_rdi": 5.7964
+      "nut_rdi": 5.7978
     }
   ],
   "nutrients_habitat": [
@@ -474,7 +474,7 @@
         },
         {
           "x": "Deep",
-          "y": 1.542
+          "y": 1.543
         },
         {
           "x": "Beach",
@@ -697,7 +697,7 @@
     {
       "municipality": "Covalima",
       "catch_preservation": "Open",
-      "count": 1548,
+      "count": 1556,
       "perc": 100
     },
     {
