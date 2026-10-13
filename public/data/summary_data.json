@@ -6,33 +6,33 @@
     },
     {
       "Area": "North Coast",
-      "n": 33447
+      "n": 33448
     },
     {
       "Area": "South Coast",
-      "n": 15760
+      "n": 15797
     }
   ],
   "estimated_tons": [
     {
       "fish_group": "Small pelagics",
-      "tons": 29837
+      "tons": 29871
     },
     {
       "fish_group": "Large pelagics",
-      "tons": 10588
+      "tons": 10567
     },
     {
       "fish_group": "Other",
-      "tons": 4562
+      "tons": 4566
     },
     {
       "fish_group": "Small demersals",
-      "tons": 2406
+      "tons": 2405
     },
     {
       "fish_group": "Large demersals",
-      "tons": 2197
+      "tons": 2199
     }
   ],
   "estimated_revenue": [
@@ -42,11 +42,11 @@
     },
     {
       "Area": "North Coast",
-      "Estimated revenue": 128641820
+      "Estimated revenue": 128926964
     },
     {
       "Area": "South Coast",
-      "Estimated revenue": 22825991
+      "Estimated revenue": 22803180
     }
   ],
   "catch_habitat": [
@@ -96,7 +96,7 @@
         },
         {
           "x": "Long Line",
-          "y": 1.103
+          "y": 1.102
         },
         {
           "x": "Seine",
@@ -113,7 +113,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 1.389
+          "y": 1.39
         },
         {
           "x": "Beach Seine",
@@ -204,7 +204,7 @@
         },
         {
           "x": "Long Line",
-          "y": 5.416
+          "y": 5.409
         },
         {
           "x": "Seine",
@@ -254,7 +254,7 @@
         },
         {
           "x": "Gill Net",
-          "y": 5.017
+          "y": 5.033
         },
         {
           "x": "Hand Line",
@@ -334,31 +334,31 @@
   "nutrients_per_catch": [
     {
       "nutrient_names": "Selenium",
-      "nut_rdi": 194.4236
+      "nut_rdi": 194.3969
     },
     {
       "nutrient_names": "Protein",
-      "nut_rdi": 48.9221
+      "nut_rdi": 48.9084
     },
     {
       "nutrient_names": "Zinc",
-      "nut_rdi": 31.2518
+      "nut_rdi": 31.2433
     },
     {
       "nutrient_names": "Calcium",
-      "nut_rdi": 14.3359
+      "nut_rdi": 14.3364
     },
     {
       "nutrient_names": "Vitamin A",
-      "nut_rdi": 13.3696
+      "nut_rdi": 13.3641
     },
     {
       "nutrient_names": "Omega-3",
-      "nut_rdi": 8.6941
+      "nut_rdi": 8.6926
     },
     {
       "nutrient_names": "Iron",
-      "nut_rdi": 5.7978
+      "nut_rdi": 5.7973
     }
   ],
   "nutrients_habitat": [
@@ -408,7 +408,7 @@
         },
         {
           "x": "Beach",
-          "y": 2.855
+          "y": 2.856
         },
         {
           "x": "Mangrove",
@@ -441,7 +441,7 @@
         },
         {
           "x": "Deep",
-          "y": 0.903
+          "y": 0.902
         },
         {
           "x": "Mangrove",
@@ -474,7 +474,7 @@
         },
         {
           "x": "Deep",
-          "y": 1.543
+          "y": 1.544
         },
         {
           "x": "Beach",
@@ -540,7 +540,7 @@
         },
         {
           "x": "Deep",
-          "y": 0.546
+          "y": 0.547
         },
         {
           "x": "Beach",
@@ -656,31 +656,31 @@
       "municipality": "Bobonaro",
       "catch_preservation": "Box",
       "count": 1,
-      "perc": 0.1112
+      "perc": 0.1111
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Ice box",
       "count": 9,
-      "perc": 1.0011
+      "perc": 1
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Open",
-      "count": 850,
-      "perc": 94.5495
+      "count": 851,
+      "perc": 94.5556
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Other",
       "count": 2,
-      "perc": 0.2225
+      "perc": 0.2222
     },
     {
       "municipality": "Bobonaro",
       "catch_preservation": "Shade",
       "count": 37,
-      "perc": 4.1157
+      "perc": 4.1111
     },
     {
       "municipality": "Covalima",
@@ -697,7 +697,7 @@
     {
       "municipality": "Covalima",
       "catch_preservation": "Open",
-      "count": 1556,
+      "count": 1593,
       "perc": 100
     },
     {
@@ -1072,7 +1072,7 @@
     {
       "municipality": "Covalima",
       "gear": "Long Line",
-      "cpue": 0.454
+      "cpue": 0.4549
     },
     {
       "municipality": "Dili",
