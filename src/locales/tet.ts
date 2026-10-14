@@ -230,6 +230,9 @@ export const tet: typeof en = {
     MOO: 'Ikan bulan',
     RAX: 'Mackerel bodu badak',
     LWX: 'Jobfishes',
+    EMP: 'Emperors',
+    PWT: 'Parrotfishes',
+    GPX: 'Groupers',
     MZZ: 'Seluk tan',
   },
   nutrients: {

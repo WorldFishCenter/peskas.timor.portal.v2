@@ -35,7 +35,7 @@ export const VARIABLE_CONFIG: Record<string, {
 /**
  * Taxa display order
  */
-export const TAXA_DISPLAY_ORDER = ['CLP', 'FLY', 'TUN', 'SDX', 'GZP', 'SNA', 'CGX', 'CJX', 'BEN', 'MOO', 'RAX', 'LWX', 'MZZ'] as const
+export const TAXA_DISPLAY_ORDER = ['CLP', 'FLY', 'TUN', 'SDX', 'GZP', 'SNA', 'CGX', 'CJX', 'BEN', 'MOO', 'RAX', 'LWX', 'EMP', 'PWT', 'GPX', 'MZZ'] as const
 
 /**
  * Nutrients display order

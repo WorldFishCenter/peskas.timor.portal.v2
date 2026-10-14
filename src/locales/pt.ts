@@ -230,6 +230,9 @@ export const pt: typeof en = {
     MOO: 'Peixes-lua',
     RAX: 'Cavalinhas de corpo curto',
     LWX: 'Peixes-lutjanídeos',
+    EMP: 'Imperadores',
+    PWT: 'Peixes-papagaio',
+    GPX: 'Garoupas',
     MZZ: 'Outros',
   },
   nutrients: {

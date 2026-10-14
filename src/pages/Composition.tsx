@@ -5,6 +5,7 @@ import RegionCompositionChart from '../components/charts/RegionCompositionChart'
 import TaxaBarChart from '../components/charts/TaxaBarChart'
 import VariableDescriptions from '../components/VariableDescriptions'
 import { useI18n } from '../i18n'
+import { TAXA_DISPLAY_ORDER } from '../config/app.config'
 import { interpolateViridis } from 'd3-scale-chromatic'
 
 export default function Composition() {
@@ -30,9 +31,7 @@ export default function Composition() {
   // Create taxa name lookup map from i18n
   const taxaNameMap: Record<string, string> = useMemo(() => {
     const map: Record<string, string> = {}
-    // Use TAXA_DISPLAY_ORDER to get all taxa codes
-    const taxaCodes = ['CLP', 'FLY', 'TUN', 'SDX', 'GZP', 'SNA', 'CGX', 'CJX', 'BEN', 'MOO', 'RAX', 'LWX', 'MZZ'] as const
-    taxaCodes.forEach((code) => {
+    TAXA_DISPLAY_ORDER.forEach((code) => {
       map[code] = t(`taxa.${code}`)
     })
     return map

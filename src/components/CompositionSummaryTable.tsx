@@ -9,6 +9,7 @@ import {
 } from '@tanstack/react-table'
 import { useData } from '../hooks/useData'
 import { useI18n } from '../i18n'
+import { TAXA_DISPLAY_ORDER } from '../config/app.config'
 import { useTheme } from '../hooks/useTheme'
 import { tabPalette } from '../constants/colors'
 import { getHeatmapStyle, biasedNormalize } from '../utils/table'
@@ -36,6 +37,9 @@ const TAXA_IMAGES: Record<string, string> = {
   'BEN': 'https://storage.googleapis.com/public-timor/NEE.svg',      // Needlefishes
   'RAX': 'https://storage.googleapis.com/public-timor/SHM.svg',      // Short bodied mackerels
   'LWX': 'https://storage.googleapis.com/public-timor/JOB.svg',      // Jobfishes
+  'EMP': 'https://storage.googleapis.com/public-timor/EMP.svg',      // Emperors
+  'PWT': 'https://storage.googleapis.com/public-timor/PAR.svg',      // Parrotfishes
+  'GPX': 'https://storage.googleapis.com/public-timor/GRO.svg',      // Groupers
   'MZZ': 'https://storage.googleapis.com/public-timor/OTHR.svg',     // Other
 }
 
@@ -67,9 +71,7 @@ function CompositionSummaryTable() {
   // Create taxa name lookup map from i18n
   const taxaNameMap = useMemo(() => {
     const map: Record<string, string> = {}
-    // Use TAXA_DISPLAY_ORDER to get all taxa codes
-    const taxaCodes = ['CLP', 'FLY', 'TUN', 'SDX', 'GZP', 'SNA', 'CGX', 'CJX', 'BEN', 'MOO', 'RAX', 'LWX', 'MZZ'] as const
-    taxaCodes.forEach((code) => {
+    TAXA_DISPLAY_ORDER.forEach((code) => {
       map[code] = t(`taxa.${code}`)
     })
     return map
@@ -110,7 +112,7 @@ function CompositionSummaryTable() {
       const row: TaxaYearRow = {
         taxaCode,
         taxa: taxaNameMap[taxaCode] || taxaCode,
-        imageUrl: TAXA_IMAGES[taxaCode] || TAXA_IMAGES['OTHR'],
+        imageUrl: TAXA_IMAGES[taxaCode] || TAXA_IMAGES['MZZ'],
         total: 0,
       }
       let total = 0

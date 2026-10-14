@@ -228,6 +228,9 @@ export const en = {
     MOO: 'Moonfishes',
     RAX: 'Short bodied mackerels',
     LWX: 'Jobfishes',
+    EMP: 'Emperors',
+    PWT: 'Parrotfishes',
+    GPX: 'Groupers',
     MZZ: 'Other',
   },
   nutrients: {
