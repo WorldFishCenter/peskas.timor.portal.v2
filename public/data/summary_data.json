@@ -2,7 +2,7 @@
   "n_surveys": [
     {
       "Area": "Atauro island",
-      "n": 37056
+      "n": 37082
     },
     {
       "Area": "North Coast",
@@ -16,7 +16,7 @@
   "estimated_tons": [
     {
       "fish_group": "Small pelagics",
-      "tons": 29871
+      "tons": 29875
     },
     {
       "fish_group": "Large pelagics",
@@ -24,7 +24,7 @@
     },
     {
       "fish_group": "Other",
-      "tons": 4566
+      "tons": 4563
     },
     {
       "fish_group": "Small demersals",
@@ -32,13 +32,13 @@
     },
     {
       "fish_group": "Large demersals",
-      "tons": 2199
+      "tons": 2200
     }
   ],
   "estimated_revenue": [
     {
       "Area": "Atauro island",
-      "Estimated revenue": 13362707
+      "Estimated revenue": 13378340
     },
     {
       "Area": "North Coast",
@@ -55,7 +55,7 @@
       "data": [
         {
           "x": "Spear Gun",
-          "y": 7.179
+          "y": 7.178
         },
         {
           "x": "Gill Net",
@@ -200,11 +200,11 @@
         },
         {
           "x": "Hand Line",
-          "y": 8.931
+          "y": 8.933
         },
         {
           "x": "Long Line",
-          "y": 5.409
+          "y": 5.41
         },
         {
           "x": "Seine",
@@ -221,11 +221,11 @@
       "data": [
         {
           "x": "Spear Gun",
-          "y": 10.233
+          "y": 10.24
         },
         {
           "x": "Gill Net",
-          "y": 5.721
+          "y": 5.723
         },
         {
           "x": "Hand Line",
@@ -334,31 +334,31 @@
   "nutrients_per_catch": [
     {
       "nutrient_names": "Selenium",
-      "nut_rdi": 194.3969
+      "nut_rdi": 194.4789
     },
     {
       "nutrient_names": "Protein",
-      "nut_rdi": 48.9084
+      "nut_rdi": 48.9169
     },
     {
       "nutrient_names": "Zinc",
-      "nut_rdi": 31.2433
+      "nut_rdi": 31.2485
     },
     {
       "nutrient_names": "Calcium",
-      "nut_rdi": 14.3364
+      "nut_rdi": 14.3451
     },
     {
       "nutrient_names": "Vitamin A",
-      "nut_rdi": 13.3641
+      "nut_rdi": 13.3633
     },
     {
       "nutrient_names": "Omega-3",
-      "nut_rdi": 8.6926
+      "nut_rdi": 8.6949
     },
     {
       "nutrient_names": "Iron",
-      "nut_rdi": 5.7973
+      "nut_rdi": 5.7999
     }
   ],
   "nutrients_habitat": [
@@ -433,7 +433,7 @@
       "data": [
         {
           "x": "Reef",
-          "y": 1.222
+          "y": 1.221
         },
         {
           "x": "Seagrass",
@@ -482,7 +482,7 @@
         },
         {
           "x": "Reef",
-          "y": 1.052
+          "y": 1.053
         },
         {
           "x": "Seagrass",
@@ -548,7 +548,7 @@
         },
         {
           "x": "Reef",
-          "y": 0.424
+          "y": 0.425
         },
         {
           "x": "Seagrass",
@@ -596,19 +596,19 @@
       "municipality": "Atauro",
       "catch_preservation": "Box",
       "count": 38,
-      "perc": 0.3232
+      "perc": 0.3224
     },
     {
       "municipality": "Atauro",
       "catch_preservation": "Ice box",
-      "count": 7531,
-      "perc": 64.0446
+      "count": 7549,
+      "perc": 64.056
     },
     {
       "municipality": "Atauro",
       "catch_preservation": "Open",
-      "count": 2237,
-      "perc": 19.0237
+      "count": 2239,
+      "perc": 18.9987
     },
     {
       "municipality": "Atauro",
@@ -619,8 +619,8 @@
     {
       "municipality": "Atauro",
       "catch_preservation": "Shade",
-      "count": 1951,
-      "perc": 16.5915
+      "count": 1957,
+      "perc": 16.6059
     },
     {
       "municipality": "Baucau",
@@ -947,7 +947,7 @@
     {
       "municipality": "Atauro",
       "gear": "Gill Net",
-      "cpue": 1.9632
+      "cpue": 1.9641
     },
     {
       "municipality": "Atauro",
@@ -962,7 +962,7 @@
     {
       "municipality": "Atauro",
       "gear": "Long Line",
-      "cpue": 2.3185
+      "cpue": 2.3099
     },
     {
       "municipality": "Atauro",
@@ -972,7 +972,7 @@
     {
       "municipality": "Atauro",
       "gear": "Spear Gun",
-      "cpue": 4.6248
+      "cpue": 4.6257
     },
     {
       "municipality": "Atauro",
