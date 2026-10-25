@@ -16,23 +16,23 @@
   "estimated_tons": [
     {
       "fish_group": "Small pelagics",
-      "tons": 29936
+      "tons": 29957
     },
     {
       "fish_group": "Large pelagics",
-      "tons": 10671
+      "tons": 10689
     },
     {
       "fish_group": "Small demersals",
-      "tons": 3165
+      "tons": 3166
     },
     {
       "fish_group": "Large demersals",
-      "tons": 3138
+      "tons": 3140
     },
     {
       "fish_group": "Other",
-      "tons": 2877
+      "tons": 2878
     }
   ],
   "estimated_revenue": [
