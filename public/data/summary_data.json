@@ -16,37 +16,37 @@
   "estimated_tons": [
     {
       "fish_group": "Small pelagics",
-      "tons": 30037
+      "tons": 30094
     },
     {
       "fish_group": "Large pelagics",
-      "tons": 10702
+      "tons": 10826
     },
     {
       "fish_group": "Small demersals",
-      "tons": 3170
+      "tons": 3213
     },
     {
       "fish_group": "Large demersals",
-      "tons": 3156
+      "tons": 3117
     },
     {
       "fish_group": "Other",
-      "tons": 2880
+      "tons": 2931
     }
   ],
   "estimated_revenue": [
     {
       "Area": "Atauro island",
-      "Estimated revenue": 13336366
+      "Estimated revenue": 13522312
     },
     {
       "Area": "North Coast",
-      "Estimated revenue": 129362136
+      "Estimated revenue": 131487520
     },
     {
       "Area": "South Coast",
-      "Estimated revenue": 22565408
+      "Estimated revenue": 22753330
     }
   ],
   "catch_habitat": [
